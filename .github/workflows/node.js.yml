@@ -20,8 +20,7 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: Change working directory
-      run: cd frontend/   
+    - name: Change working directory 
       working-directory: /home/ubuntu/myproject/_work/TF23/TF23/frontend
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
