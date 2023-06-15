@@ -21,7 +21,8 @@ jobs:
 
     steps:
     - name: Change working directory
-      run: cd frontend/    
+      run: cd frontend/   
+      working-directory: /home/ubuntu/myproject/_work/TF23/TF23/frontend
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
