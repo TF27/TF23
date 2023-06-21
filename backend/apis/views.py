@@ -30,3 +30,9 @@ def compi_card(request):
         compi = Compi_Cards.objects.all()
         serializer = Compi_CardsSerializer(compi, many=True)
         return Response(serializer.data)
+    
+def compi_reg_form(request):
+    if request.method == 'POST':
+        data = request.POST.get('data')
+        new_data = compi_reg(data=data)
+        new_data.save()
