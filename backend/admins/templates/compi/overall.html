@@ -1,0 +1,20 @@
+{% extends "compi/compi.html" %}
+
+{% block body %}
+  {%for item in data %}
+  <tr>
+      <td>{{item.name}}</td>
+      <td>{{item.compi.name}}</td>
+      <td>{{item.phoneno}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.yearofstudy}}</td>
+      <td>{{item.ca_refral}}</td>
+      <td>{{item.city}}</td>
+      <td>{{item.country}}</td>
+      <td>{{item.gender}}</td>
+      <td>{{item.address}} , {{item.pincode}}</td>
+      <td>{{item.instiname}}</td>
+      <td>{{item.instiaddress}} {{item.instipincode}}</td>
+  </tr>
+  {% endfor %}
+{% endblock %}

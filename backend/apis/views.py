@@ -30,3 +30,14 @@ def compi_card(request):
         compi = Compi_Cards.objects.all()
         serializer = Compi_CardsSerializer(compi, many=True)
         return Response(serializer.data)
+
+@api_view(['POST']) 
+def compi_reg_form(request):
+    if request.method=='POST':
+
+        compi_reg_serializer = Compi_RegSerializer(data=JSONParser().parse(request))
+
+        if compi_reg_serializer.is_valid():
+            compi_reg_serializer.save()
+            return JsonResponse("Added Successfully!!")
+
