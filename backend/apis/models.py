@@ -1,3 +1,4 @@
+from typing import Any
 from django.db import models
 
 # Create your models here.
@@ -16,6 +17,7 @@ class Compi_Cards(models.Model):
     register = models.CharField(max_length=100)
     explore = models.CharField(max_length=100)
     img = models.ImageField(upload_to='compi')
+
 
 
 class compi_reg(models.Model):
