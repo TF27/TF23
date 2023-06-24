@@ -90,10 +90,10 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'main1',
-#         'USER': 'main',
+#         'NAME': 'tfdb',
+#         'USER': 'yatharth',
 #         'PASSWORD': 'imindian',
-#         'HOST': 'main1.cufxluinuzsz.us-east-1.rds.amazonaws.com',
+#         'HOST': 'tfdb.cufxluinuzsz.us-east-1.rds.amazonaws.com',
 #         'PORT': '3306',
 #     }
 # }
@@ -150,3 +150,27 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#Taaki SES Pareshan na karien
+
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'email-smtp.ap-south-1.amazonaws.com'
+# EMAIL_HOST_USER = 'AKIATEUUM33B5ZYQDREC'
+# EMAIL_HOST_PASSWORD = 'BGfZ4WxwU9AOfkVQL7hib9Vwlb5eYFtYE/hcQjYqcLDO'
+# EMAIL_PORT = 587
+
+
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST_USER = 'cuzallis11@gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_HOST_PASSWORD = ''
+
+EMAIL_BACKEND = 'django_ses.SESBackend'
+# AWS_SES_REGION_NAME = 'us-east-1'
+# AWS_SES_REGION_ENDPOINT = 'email-smtp.us-east-1.amazonaws.com'
+AWS_ACCESS_KEY_ID = 'AKIATEUUM33B2WR5KA5P'
+AWS_SECRET_ACCESS_KEY = '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' 
+# EMAIL_HOST_USER = 'noreply@techfest.org'

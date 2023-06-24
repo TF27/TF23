@@ -23,6 +23,16 @@ import json
 import datetime
 from rest_framework.parsers import FileUploadParser, MultiPartParser, FormParser, JSONParser
 
+from django.core.mail import send_mail
+from django.conf import settings
+
+
+def mail_bhejo(request):
+    subject = "Test Mail"
+    message = "kuch nhi bass test kar rha hu django, ignore it"
+    from_email = settings.EMAIL_HOST_USER
+    recipient_list = ['yatharth85204@gmail.com']
+    send_mail(subject, message, from_email, recipient_list)
 
 @api_view(['GET'])
 def compi_card(request):
@@ -41,3 +51,5 @@ def compi_reg_form(request):
             compi_reg_serializer.save()
             return JsonResponse("Added Successfully!!")
 
+def page(request):
+    return render(request, 'index.html')
