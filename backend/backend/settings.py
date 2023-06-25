@@ -90,10 +90,10 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'tfdb',
-#         'USER': 'yatharth',
+#         'NAME': 'main1',
+#         'USER': 'main',
 #         'PASSWORD': 'imindian',
-#         'HOST': 'tfdb.cufxluinuzsz.us-east-1.rds.amazonaws.com',
+#         'HOST': 'main1.cufxluinuzsz.us-east-1.rds.amazonaws.com',
 #         'PORT': '3306',
 #     }
 # }

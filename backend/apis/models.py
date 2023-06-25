@@ -36,7 +36,6 @@ class compi_reg(models.Model):
     ], max_length=1)
     pincode = models.IntegerField()
     address = models.TextField()
-
     # institute details
     instiname = models.CharField(max_length=100)
     instiadress = models.TextField(max_length=200)
