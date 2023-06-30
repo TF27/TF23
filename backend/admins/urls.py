@@ -4,5 +4,5 @@ from . import views
 app_name = 'admins'
 
 urlpatterns = [
-    path('compi/<int:gen>', views.compi, name='compi'),
+    path('<str:compiname>', views.compi, name='compi'),
 ]

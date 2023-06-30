@@ -1,20 +1,24 @@
 # Create your views here.
 from django.shortcuts import render
 from django.contrib.admin.views.decorators import staff_member_required
-from apis.models import compi_reg
+from apis.models import compi_reg, Compi_Cards
+from django.http import HttpResponse
 
 
 @staff_member_required
-def compi(request,gen):
+def compi(request,compiname):
     if request.method == 'GET':
         data = compi_reg.objects.all()
+        compies = Compi_Cards.objects.all()
         context = {
-            'data': data,
-            'gen': str(gen)
-            }
-
-        if(gen>0 and gen<5): 
-            return render(request, 'compi/genre.html', context)
-        else:
+            'reg': data,
+            'compiname': compiname,
+            'compies':compies,
+        }
+        if compiname == "compi":
             return render(request, 'compi/overall.html', context)
+        for reg in data:
+            if reg.compi.name == compiname:
+                return render(request, 'compi/compi.html', context)
+        return HttpResponse("Wrong URL, check agian!!")
     return None
