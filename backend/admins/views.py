@@ -1,7 +1,7 @@
 # Create your views here.
 from django.shortcuts import render
 from django.contrib.admin.views.decorators import staff_member_required
-from apis.models import compi_reg, Compi_Cards
+from apis.models import *
 from django.http import HttpResponse
 
 
@@ -9,7 +9,7 @@ from django.http import HttpResponse
 def compi(request,compiname):
     if request.method == 'GET':
         data = compi_reg.objects.all()
-        compies = Compi_Cards.objects.all()
+        compies = Compi.objects.all()
         context = {
             'reg': data,
             'compiname': compiname,

@@ -24,13 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-a@f*cs+m#hx@2nfd5gqvxiw7wh)-#o!l8sequadt^8^@=26rr6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = ['44.212.59.103', 'techfest.org', 'rain.techfest.org', '127.0.0.1']
-=======
-ALLOWED_HOSTS = ['44.212.59.103', 'techfest.org', 'rain.techfest.org']
->>>>>>> e069a186cc5b17bd3288b9b9709438d5615e8208
+ALLOWED_HOSTS = ['44.212.59.103', 'techfest.org', 'rain.techfest.org', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -59,9 +55,15 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ALLOWED_ORIGINS = ['http://localhost:3000']
+# CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']
+# CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ALLOWED_ORIGINS = ['http://localhost:3000']
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000', 'https://techfest.org', 'https://rain.techfest.org', 
+]
+
+CSRF_TRUSTED_ORIGINS = ['https://rain.techfest.org', 'https://techfest.org', 'http://localhost:3000']
 
 # CORS_ALLOW_HEADERS = [
 #     'x-google-uid', 

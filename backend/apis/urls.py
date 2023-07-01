@@ -8,5 +8,8 @@ urlpatterns = [
     path('compi_reg/', views.compi_reg_form, name='compi_reg_form'),
     path('page/', views.page, name='page'),
     path('mail/', views.mail_bhejo, name='mail_bhejo'),
+    path('profile/', views.ProfileView, name='profile'),
+    path('create_team/', views.create_team, name='create_team'),
+    path('check_reg/', views.check_reg, name='check_reg'),
 ]
 
