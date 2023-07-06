@@ -52,7 +52,7 @@ const handleClick = (e) => {
 return (
     <>
       <header>
-        <nav className="navbar curved" >
+        <nav className="navbar" >
           <span><a href="https://techfest.org/" className='nav-branding' target="_blank" rel="noopener noreferrer">
               <img src='#' className='tflogo' alt="Techfest, IIT Bombay"/>
             </a></span>
@@ -71,7 +71,7 @@ return (
               </Link></li>
               <li className='nav-item'><Link className="nav-link" to="/competitions" onClick={handleClick}>
                 Competitions
-              </Link></li>      
+              </Link></li>     
             </ul>     
             {user?.displayName ? (
               <div>
