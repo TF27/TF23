@@ -42,6 +42,8 @@ const handleClick = (e) => {
   const items = document.querySelectorAll('.nav-link');
   items.forEach(item => {
     item.classList.remove('active');
+    const navMenu = document.querySelector(".nav-menu").classList;
+    navMenu.remove("active")
   });
   
     // e.target.classList.toggle('active')
