@@ -231,12 +231,14 @@ def create_team(request):
 @csrf_exempt
 def join_team(request):
     if request.method == 'PUT':
+        print('here it is')
         team_id = get_team_id(request)
         team = compi_team.objects.get(team_id=team_id)
         if team:
+            print('hi')
             parti_name = request.data['parti_name']
             parti_email = request.data['parti_email']
-
+            print(parti_email, parti_name)
             if(team.parti1_email == parti_email or
                team.parti2_email == parti_email or
                team.parti3_email == parti_email):
@@ -255,7 +257,7 @@ def join_team(request):
             team.save()
             serializer = Compi_TeamSerializer(team)
             return JsonResponse(serializer.data)       
-        
+        print(parti_email, parti_name)
         return JsonResponse({'success': False, 'message': 'Team not found'})
 
 
