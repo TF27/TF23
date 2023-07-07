@@ -4,5 +4,6 @@ from .models import *
 from django.http import HttpResponse
 
 # Register your models here.
-admin.site.register(Compi_Cards)
+admin.site.register(Compi)
 admin.site.register(compi_reg)
+admin.site.register(compi_team)
