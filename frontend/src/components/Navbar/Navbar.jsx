@@ -47,8 +47,6 @@ const handleClick = (e) => {
     const hamburger = document.querySelector(".hamburger").classList;
     hamburger.toggle("active");
   });
-  
-    // e.target.classList.toggle('active')
 }
 
 return (
