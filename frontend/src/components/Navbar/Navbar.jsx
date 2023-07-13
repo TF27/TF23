@@ -44,9 +44,9 @@ const handleClick = (e) => {
     item.classList.remove('active');
     const navMenu = document.querySelector(".nav-menu").classList;
     navMenu.remove("active")
+    const hamburger = document.querySelector(".hamburger").classList;
+    hamburger.toggle("active");
   });
-  
-    // e.target.classList.toggle('active')
 }
 
 return (
