@@ -1,6 +1,6 @@
 .dropdown-menu {
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(0%, 0%);
   border: 1px solid blue;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.3);
@@ -13,8 +13,36 @@
   transition-duration: 1s;
   pointer-events: none; /* Prevent the dropdown menu from blocking hover events */
   max-height: 200px; /* Set a maximum height for the dropdown menu */
-  max-width: 100px;
-  overflow: hidden; /* Enable scrolling when content exceeds the maximum height */
+  max-width: 200px;
+  overflow-y: auto; /* Enable scrolling when content exceeds the maximum height */
+  overflow-x: hidden;
+}
+
+.dropdown-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.3); /* Set the background color of the scrollbar track */
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3); /* Set the color of the scrollbar thumb */
+  border-radius: 3px; /* Set the border radius of the scrollbar thumb */
+}
+
+.dropdown-menu:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5); /* Set the color of the scrollbar thumb on hover */
+}
+
+.mob-text1 p {
+  margin-bottom: 5px; /* Add some margin to the paragraphs inside the dropdown menu */
 }
 
 .city-circle:hover ~ .dropdown-menu,
@@ -37,7 +65,7 @@
   }
   to {
     max-height: 200px;
-    max-width: 100px;
+    max-width: 200px;
   }
 }
 

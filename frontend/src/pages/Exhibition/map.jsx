@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import europe from './europe.jpg' //import whatever images we need and add them in the cityData beside a image tag
 import worldmap from './map.png';
 import './WorldMap.css'; // Import CSS file
 import './DropdownMenu.css';
@@ -7,7 +8,7 @@ const WorldMap = () => {
   const [hoveredCity, setHoveredCity] = useState(null);
 
   const cityData = [
-    { name: 'Europe', x: '45%', y: '37%', info: 'Info About Europe' },
+    { name: 'Europe', x: '45%', y: '37%', info: 'Info About Europe\nufsjhdifubwe\nuyfgwuefiwegfiuwegf\neuehfuigfhuysguiehduee\niuyfhwugfiugfweufgsef\nudhfbywejfbuiwfgbyufgbeuf',image:europe },
     { name: 'West USA', x: '15%', y: '37%', info: 'Info About West USA' },
     { name: 'East USA', x: '25%', y: '42%', info: 'Info About East USA' },
     { name: 'NorthEast Asia', x: '82%', y: '28%', info: 'Info About NorthEast Asia' },
@@ -48,6 +49,7 @@ const WorldMap = () => {
           onMouseLeave={() => handleCityHover(null)}
         >
           <h3>{hoveredCity.name}</h3>
+          <img src={hoveredCity.image} alt={hoveredCity.name} className="dropdown-image" />
           <p>{hoveredCity.info}</p>
         </div>
       )}
