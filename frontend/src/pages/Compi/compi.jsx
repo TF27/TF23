@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom'
 import { UserAuth } from "../../contexts/AuthContext";
-
+import { Frame3 } from "./compi_animation";
 const Compi = () => {
 
   const [data, setData] = useState([]);
@@ -56,9 +56,10 @@ const Compi = () => {
 
   return (
     <div>
-      <div>
-        {card()}
-      </div>
+        {/*card()*/}
+        <Frame3/>
+      
+     
     </div>
   );
 }
