@@ -5,9 +5,9 @@ from django.db import models
 class Compi(models.Model):
     # id = models.AutoField(primary_key=True)
     genre = models.CharField(max_length=50 ,choices=[
-        ('1','first'),
-        ('2','second'),
-        ('3','third'),
+        ('1','Zonals'),
+        ('2','Compis'),
+        ('3','Ideates'),
         ('4','forth'),
     ], default=None)
     tag = models.CharField(max_length=100)
@@ -26,6 +26,7 @@ class Compi(models.Model):
 class compi_reg(models.Model):
     # personal details
     id = models.AutoField(primary_key=True)
+    tf_id = models.CharField(max_length=50, blank=True, null=True)
     compi = models.ForeignKey(Compi, on_delete=models.CASCADE)
     # compi = models.CharField(max_length=50)
     name = models.CharField(max_length=255, null=True, blank=True)

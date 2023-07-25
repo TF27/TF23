@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../contexts/AuthContext';
 import './navbar.css';
+// import {useScroll} from '.../scroll'
+import {useScroll} from './scroll.jsx'
 // import logo from '../../assets/new_logo.png';
 
 const Navbar = () => {
@@ -49,9 +51,23 @@ const handleClick = (e) => {
   });
 }
 
+const styles = {
+  active: {
+    visibility: "visible",
+    transition: "all 0.5s"
+  },
+  hidden: {
+    visibility: "hidden",
+    transition: "all 0.5s",
+    transform: "translateY(-100%)"
+  }
+}
+
+const { y, x, scrollDirection } = useScroll();  
+
 return (
     <>
-      <header>
+      <header style={scrollDirection === "down" ? styles.hidden: styles.active} >
         <nav className="navbar" >
           <span><a href="https://techfest.org/" className='nav-branding' target="_blank" rel="noopener noreferrer">
               <img src='#' className='tflogo' alt="Techfest, IIT Bombay"/>

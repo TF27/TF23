@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-a@f*cs+m#hx@2nfd5gqvxiw7wh)-#o!l8sequadt^8^@=26rr6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
+PASSWORD = 'yatharth.techfest'
 
 ALLOWED_HOSTS = ['44.212.59.103', 'techfest.org', 'rain.techfest.org', '127.0.0.1', 'localhost']
 
@@ -98,10 +98,10 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'main1',
-#         'USER': 'main',
-#         'PASSWORD': 'imindian',
-#         'HOST': 'main1.cufxluinuzsz.us-east-1.rds.amazonaws.com',
+#         'NAME': 'tfdb',
+#         'USER': 'yatharth',
+#         'PASSWORD': PASSWORD,
+#         'HOST': 'tfdb.cufxluinuzsz.us-east-1.rds.amazonaws.com',
 #         'PORT': '3306',
 #     }
 # }
@@ -112,6 +112,9 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -182,3 +185,4 @@ EMAIL_BACKEND = 'django_ses.SESBackend'
 AWS_ACCESS_KEY_ID = 'AKIATEUUM33B2WR5KA5P'
 AWS_SECRET_ACCESS_KEY = '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' 
 # EMAIL_HOST_USER = 'noreply@techfest.org'
+
