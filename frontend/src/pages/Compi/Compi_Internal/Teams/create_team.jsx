@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {useParams, useNavigate} from 'react-router-dom';
-import {UserAuth} from '../../../contexts/AuthContext';
+import {UserAuth} from '../../../../contexts/AuthContext';
 
 const Create_Team = () => {
 

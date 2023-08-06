@@ -5,6 +5,10 @@
   "proxy": "http://127.0.0.1:8000",
   "dependencies": {
     "@aws-sdk/client-ses": "^3.354.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.3",
+    "@mui/material": "^5.14.3",
     "@react-email/render": "^0.0.7",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

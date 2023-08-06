@@ -25,3 +25,137 @@
     width:15vw;
     height: 15vw;
 }
+
+.compi_card{
+    background: #00072999;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Forum;
+    /* max-width: 25%; */
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 1.2vw;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    height: 29vw;
+}
+
+.card_tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_tag h3{
+    font-family: Forum;
+    font-size: 1.1vw;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: #ffffff;
+    padding: 20px;
+    margin-bottom: 0px;
+}
+
+.card_title h3{
+    color: #FFE381;
+    font-family: Forum;
+    letter-spacing: 0.1em;
+    padding-top: 20px;
+    margin-bottom: 0px;
+}
+
+.card_title div{
+    color: #A7E9FF;
+    font-family: Forum;
+    letter-spacing: 0.1em;
+    /* padding: 20px; */
+    margin-bottom: 0px;
+    font-size: 1.4vw;
+}
+
+.card_post{
+    display: None;
+}
+
+.card_regexp{
+    display: flex;
+    border-top: 1px solid #FFE381;
+    flex-direction: row;
+    justify-content: center;
+    /* max-width: 80%; */
+    margin: auto;
+    text-align:center;
+    position: absolute;
+    bottom: 1.2vw;
+    width: 85%;
+}
+
+.card_reg{
+    border-right: 1px solid #FFE381;
+    padding-right: 8%;
+    padding-top: .4vw;
+    padding-left: 8%;
+    padding-bottom: .4vw;
+}
+.card_exp{
+    border-left: 1px solid #FFE381;
+    padding-right: 8%;
+    padding-top: .4vw;
+    padding-left: 8%;
+    padding-bottom: .4vw;
+}
+
+
+.card_reg a{
+    color: #FFE381;
+    font-family: Forum;
+    letter-spacing: 0.1em;
+    font-size:1.2vw;
+}
+
+.card_exp a{
+    color: #BB9564;
+    font-family: Forum;
+    letter-spacing: 0.1em;
+    font-size:1.2vw;
+    margin-bottom: 0px;
+}
+
+.compi_card:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hide image on hover */
+  .compi_card:hover .card_img {
+    display: none;
+  }
+
+  .compi_card:hover .card_post{
+    display: block;
+  }
+
+  .card_desc{
+    font-family: Forum;
+    font-size: 1.4vw;
+  }
+
+  .card_share{
+    position: absolute;
+    left: 5.5vw;
+    margin-top: 1vw;
+    bottom: 8vw;
+  }
+
+  .card_img{
+    border: 1px solid #FFE381;
+    margin:auto;
+  }
+
+.card_rect1{
+    /* border: 1px solid #FFE381; */
+}
+
+.card_rect2{
+    /* border: 1px solid #FFE381; */
+}

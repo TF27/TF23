@@ -1,4 +1,5 @@
 import React from 'react';
+import Border from '../DoubleBorder/doubleborder';
 
 const WhatsappShareButton = () => {
   const handleShare = () => {
@@ -12,7 +13,7 @@ const WhatsappShareButton = () => {
     <div>
       <h3>Whatsapp sharing</h3>
       <button onClick={handleShare} className="mobileShow">
-        Share to Whatsapp
+        <Border Text='Share' width={90} height={40} fontSize={20} />
       </button>
     </div>
   );

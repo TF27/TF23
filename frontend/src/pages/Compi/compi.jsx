@@ -50,7 +50,7 @@ const Compi = () => {
         {/* <Frame3/> */}
         <Technorion />
         
-        {/* {card()} */}
+        {card()}
      
     </div>
   );

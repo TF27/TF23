@@ -1,19 +1,24 @@
-const Border = ({Text, height, width}) => {
+const Border = ({Text, height, width, fontsize, Color, family, fontColor}) => {
 
     const reactangle1 = {
         height: height,
         width: width,
-        border: '1px solid #ffffff',
+        border: '1px solid',
+        borderColor: Color,
         position: 'absolute',
         
     }
     const reactangle2 = {
         height: height,
         width: width,
-        border: '1px solid #ffffff',
+        border: '1px solid',
+        borderColor: Color,
         marginLeft: '10px',
         marginTop: '10px',
         position: 'absolute',
+        fontSize: fontsize,
+        fontFamily: family,
+        color: fontColor,
     }
 
     return ( 
