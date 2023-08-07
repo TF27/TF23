@@ -10,8 +10,22 @@ class Compi_CardsSerializer(serializers.ModelSerializer):
         representation = super().to_representation(instance)
         user = self.context.get('user')
         # modify the representation based on the extra data
-        representation['is_registered'] = compi_reg.objects.filter(google_id=user, compi=instance).exists()
+        is_team_registered = False
+        is_team_leader = False
+        is_parti = False
+        if user is not None:
+            if (compi_team.objects.filter(team_leader_email=user, compi_name=instance).exists() or compi_team.objects.filter(parti1_email=user, compi_name=instance).exists() or compi_team.objects.filter(parti2_email=user, compi_name=instance).exists() or compi_team.objects.filter(parti3_email=user, compi_name=instance).exists()):
+                is_team_registered = True
+                if(compi_team.objects.filter(team_leader_email=user, compi_name=instance).exists()):
+                    is_team_leader = True
+                else:
+                    is_parti = True
+        representation['is_registered'] = compi_reg.objects.filter(email=user, compi=instance).exists()
+        representation['is_team_registered'] = is_team_registered
+        representation['is_team_leader'] = is_team_leader
+        representation['is_parti'] = is_parti
         return representation
+
 
 class Compi_RegSerializer(serializers.ModelSerializer):
     class Meta:

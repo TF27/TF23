@@ -23,7 +23,7 @@ import json
 import datetime
 from rest_framework.parsers import FileUploadParser, MultiPartParser, FormParser, JSONParser
 
-from django.core.mail import send_mail
+from django.core.mail import send_mail, send_mass_mail
 from django.conf import settings
 
 class NotifyView(APIView):
@@ -48,7 +48,7 @@ def mail_bhejo(request):
 def get_user(request):
     try: 
         google_id = request.headers.get('X-Google-UID')
-        # print(google_id)
+        print(google_id)
         users = compi_reg.objects.filter(google_id=google_id)
         if users.exists():
             for user in users:
@@ -61,6 +61,20 @@ def get_user(request):
         user = None
         print(user, 'get user except')
     print(user, 'get user')
+    return user
+
+@parser_classes([JSONParser])
+def get_user_id(request):
+    try:
+        email = request.headers.get('X-Email')
+        users = compi_reg.objects.filter(email=email)
+        if users.exists():
+            for user in users:
+                continue
+        else:
+            user=None
+    except:
+        user = None
     return user
 
 @parser_classes([JSONParser])
@@ -77,7 +91,9 @@ def get_compi(request):
 @parser_classes([JSONParser])
 def get_team_id(request):
     try:
-        team_id = request.headers.get('X-Team-ID')   
+        print(request.headers)
+        team_id = request.headers.get('X-Team-ID') 
+        print(team_id)  
         return team_id
     except:
         team_id = None
@@ -87,28 +103,16 @@ def get_team_id(request):
 def compi_card(request):
     if request.method == 'GET':
         try: 
-            user = get_user(request)
-            google_id = user.google_id if user else None
+            user = get_user_id(request)
+            email = user.email if user else None
             compi = Compi.objects.all()
-            serializer = Compi_CardsSerializer(compi, many=True, context={'user': google_id})
+            serializer = Compi_CardsSerializer(compi, many=True, context={'user': email})
             return Response(serializer.data)
         except:
             compi = Compi.objects.all()
             serializer = Compi_CardsSerializer(compi, many=True, context={'request': request})
             return Response(serializer.data)
 
-# @api_view(['GET'])
-# def compi_card(request):
-#     if request.method == 'GET':
-#         try:
-#             google_id = request.META.get('HTTP_X_GOOGLE_UID')
-#             compi = Compi.objects.all()
-#             serializer = Compi_CardsSerializer(compi, many=True, context={'user': google_id})
-#             return Response(serializer.data)
-#         except:
-#             compi = Compi.objects.all()
-#             serializer = Compi_CardsSerializer(compi, many=True, context={'request': request})
-#             return Response(serializer.data)
 
 @api_view(['GET'])
 def check_reg(request):
@@ -119,19 +123,36 @@ def check_reg(request):
             gotcha = compi_reg.objects.filter(google_id=user)
             # print(gotcha, 'gotcha it is')
             compi_exists = gotcha.filter(compi=compi).exists()
-            return Response(compi_exists)
+            # return Response(compi_exists)
+            return Response(True)
         except:
             return Response(False)
 
 # @csrf_exempt
+# def compi_mail(request):
+
+
+
 @api_view(['POST']) 
 @csrf_exempt
 def compi_reg_form(request):
     if request.method=='POST':
         compi_reg_serializer = Compi_RegSerializer(data=request.data, many=False)
-        print(compi_reg_serializer.is_valid())
+        # print(compi_reg_serializer.is_valid())
         if compi_reg_serializer.is_valid():
-            compi_reg_serializer.save()
+            last_reg = compi_reg.objects.order_by('-tf_id').first()
+            next_tf_id = '0269'
+            if last_reg:
+                last_tf_id = last_reg.tf_id[-4:]
+                next_tf_id = str(int(last_tf_id) + 1).zfill(4)
+            tf_id = f"TF-23{next_tf_id}"
+            compi_reg_serializer.save(tf_id=tf_id)
+            # compi_reg_serializer.save()
+            subject = "Compi Registration"
+            message = f"You have successfully registered for the {compi_reg_serializer.validated_data.get('compi')} with email {compi_reg_serializer.validated_data.get('email')} and name {compi_reg_serializer.validated_data.get('name')}"
+            from_email = 'noreply@techfest.org'
+            recipient_list = [compi_reg_serializer.validated_data.get('email')]
+            send_mail(subject, message, from_email, recipient_list)
             return JsonResponse(compi_reg_serializer.data)
         res = {'success': False}
         print(res)
@@ -142,78 +163,12 @@ def page(request):
     return render(request, 'index.html')
 
 
-# class Profile(APIView):
-#     def get(self, request):
-#         user = get_user(request)
-#         if user is None:
-#             return Response(status=status.HTTP_404_NOT_FOUND)
-#         serializer = Compi_RegSerializer(user, many=False)
-#         return Response(serializer.data)
-#     def post(self, request):
-#         data = request.data
-#         try:
-#             user = compi_reg.objects.create(
-#                 google_id=data['google_id']
-#             )
-#             serializer = Compi_RegSerializer(user, many=False)
-#             return Response(serializer.data)
-#         except:
-#             res = {'success': False}
-#         return Response(res)
-    
-#     def put(self, request):
-#         user = get_user(request)
-#         serializer = Compi_RegSerializer(user, data=request.data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response(serializer.data)
-#         return Response(serializer.errors)
-    
-
-# @api_view(['PUT', 'POST', 'GET']) 
-# @permission_classes([AllowAny])
-# @csrf_exempt
-# def ProfileView(request):
-#     if request.method == 'POST':
-#         data = JSONParser().parse(request)
-#         print(data)
-#         try:
-#             user = compi_reg.objects.create(
-#                 google_id=data['google_id']
-#             )
-#             print(user)
-#             print('im trying')
-#             serializer = Compi_RegSerializer(user, many=False)
-#             print(serializer.is_valid())
-#             return JsonResponse(serializer.data)
-#         except:
-#             res = {'success': False}
-
-#         return JsonResponse(res)
-
-#     elif request.method == 'PUT':
-#         data = JSONParser().parse(request)
-#         try:
-#             ref_res = ''
-#             user = compi_reg.objects.get(google_id=data['google_id'])
-#             if(user.unique_id == None):
-#                 id = 'CA-' + datetime.datetime.now().strftime('%m%d%H%M%S%f')[:-4]
-#                 user.unique_id = id
-#             profile = Compi_RegSerializer(user, data=data)
-#             if profile.is_valid():
-#                 profile.save()
-#         except:
-#             id = 'CA-' + datetime.datetime.now().strftime('%m%d%H%M%S%f')[:-4]
-#             user = compi_reg(google_id=data['google_id'], name=data['name'], email=data['email'],
-#                           phone=data['phone'], college=data['college'], pincode=data['pincode'],
-#                           address=data['address'], city=data['city'], state=data['state'], unique_id=id, points=0)
-#         user.save()
-#         return JsonResponse({'success': True, 'referral': ref_res})
-
-
-
-
 ### For team
+
+def team_reg_check(request):
+    lead = request.team_leader_email
+    pass
+
 
 @api_view(['POST'])
 @csrf_exempt
@@ -222,6 +177,7 @@ def create_team(request):
         compi_team_serializer = Compi_TeamSerializer(data=request.data, many=False)
         print(compi_team_serializer.is_valid())
         if compi_team_serializer.is_valid():
+            # if check_reg(compi_team_serializer) is 
             compi = compi_team_serializer.validated_data.get('compi_name')
             latest_team = compi_team.objects.filter(compi_name=compi).order_by('-team_id').first()
             next_team_id = '0269'
@@ -231,6 +187,14 @@ def create_team(request):
             team_id = f"{compi.name}-23{next_team_id}"
             compi_team_serializer.save(team_id=team_id)
             # compi_team_serializer.save()
+            subject = 'Team Created'
+            message = f'You have successfully created a team'
+            send_mailer = 'noreply@techfest.org'
+            recipient = [compi_team_serializer.validated_data.get('team_leader_email')]
+            send_mail(subject, message, send_mailer, recipient)
+            message2 = f'You have been added to a team'
+            recipient2 = [compi_team_serializer.validated_data.get('parti1_email'), compi_team_serializer.validated_data.get('parti2_email'), compi_team_serializer.validated_data.get('parti3_email')]
+            send_mail(subject, message2, send_mailer, recipient2)
             return JsonResponse(compi_team_serializer.data)
         res = {'success': False}
 
@@ -265,6 +229,11 @@ def join_team(request):
                 return JsonResponse({'success': False, 'message': 'Team is already full'})
             team.save()
             serializer = Compi_TeamSerializer(team)
+            subject = 'Joined Team'
+            message = f'You have successfully joined a team {parti_email} with TeamID {team_id} and with {team.team_leader_email} ({team.team_leader_name}) as the team leader'
+            send_mailer = 'noreply@techfest.org'
+            recipient = [parti_email]
+            send_mail(subject, message, send_mailer, recipient)
             return JsonResponse(serializer.data)       
         print(parti_email, parti_name)
         return JsonResponse({'success': False, 'message': 'Team not found'})
@@ -275,9 +244,10 @@ def join_team(request):
 def leave_team(request):
     if request.method == 'PUT':
         team_id = get_team_id(request)
+        print(request.headers)
         team = compi_team.objects.get(team_id=team_id)
         if team:
-            parti_name = request.data['parti_name']
+            # parti_name = request.data['parti_name']
             parti_email = request.data['parti_email']
             if team.parti1_email == parti_email:
                 team.parti1_name = None
@@ -292,6 +262,12 @@ def leave_team(request):
                 return JsonResponse({'success': False, 'message': 'You are not in the team'})
             team.save()
             serializer = Compi_TeamSerializer(team)
+            subject = 'Left Team'
+            message = f'You have successfully left the team {parti_email} with TeamID {team_id} and with {team.team_leader_email} ({team.team_leader_name}) as the team leader'
+            send_mailer = 'noreply@techfest.org'
+            recipient = [parti_email]
+            print('yaha ka error')
+            send_mail(subject, message, send_mailer, recipient)
             return JsonResponse(serializer.data)       
         
         return JsonResponse({'success': False, 'message': 'Team not found'})
@@ -300,9 +276,13 @@ def leave_team(request):
 @api_view(['DELETE'])
 @csrf_exempt
 def delete_team(request):
+    print('hi')
     if request.method == 'DELETE':
         team_id = get_team_id(request)
+        print(team_id)
         parti_email = request.data['parti_email']
+
+        print(request.data)
         # team = compi_team.objects.get(team_id=team_id)
         try:
             team = compi_team.objects.get(team_id=team_id, team_leader_email=parti_email)
@@ -310,4 +290,9 @@ def delete_team(request):
             return JsonResponse({'success': False, 'message': 'Team not found'})
 
         team.delete()
+        subject = 'Team Dissolved'
+        message = f'You have successfully dissolved the team {team_id} and with {team.team_leader_email} ({team.team_leader_name}) as the team leader'
+        send_mailer = 'noreply@techfest.org'
+        recipient = [team.team_leader_email, team.parti1_email, team.parti2_email, team.parti3_email]
+        send_mass_mail(subject, message, send_mailer, recipient)
         return JsonResponse({'success': True, 'message': 'Team deleted successfully'})
