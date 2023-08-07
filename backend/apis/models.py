@@ -21,6 +21,14 @@ class Compi(models.Model):
 
     def __str__(self):
         return self.name
+    
+class Notifying(models.Model):
+    username = models.CharField(max_length=100)
+    email = models.EmailField()
+    phoneNum = models.IntegerField()
+    
+    def __str__(self):
+        return self.username
 
 
 class compi_reg(models.Model):
