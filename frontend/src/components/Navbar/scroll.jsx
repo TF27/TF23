@@ -5,14 +5,11 @@ export function useScroll() {
   const [bodyOffset, setBodyOffset] = useState(
     document.body.getBoundingClientRect()
   );
-   // the vertical direction
   const [scrollY, setScrollY] = useState(bodyOffset.top);
-   // the horizontal direction
   const [scrollX, setScrollX] = useState(bodyOffset.left);
-   // scroll direction would be either up or down
-  const [scrollDirection, setScrollDirection] = useState();
+  const [scrollDirection, setScrollDirection] = useState("up"); // Default to "up" to make navbar visible initially
 
-  const listener = e => {
+  const listener = (e) => {
     setBodyOffset(document.body.getBoundingClientRect());
     setScrollY(-bodyOffset.top);
     setScrollX(bodyOffset.left);
@@ -25,11 +22,11 @@ export function useScroll() {
     return () => {
       window.removeEventListener("scroll", listener);
     };
-  });
+  }); // Add an empty dependency array to run this effect only once during component mount
 
   return {
     scrollY,
     scrollX,
-    scrollDirection
+    scrollDirection,
   };
 }

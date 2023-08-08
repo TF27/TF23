@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate} from 'react-router-dom';
 import axios from 'axios'
-import { UserAuth } from '../../contexts/AuthContext';
+import { UserAuth } from '../../../contexts/AuthContext';
 
 const Reg = () => {
 
@@ -42,11 +42,10 @@ const Reg = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(formData);
+        navigate(`/competitions/${compiName}`);
         axios.post('/api/compi_reg/', formData)
             .then((response) => {
                 console.log('Added Successfully!!');
-                // navigate(`/competitions/${compiName}`);
-                // Handle the success response
             })
             .catch((error) => {
                 console.error('Error:', error);

@@ -26,6 +26,15 @@ from rest_framework.parsers import FileUploadParser, MultiPartParser, FormParser
 from django.core.mail import send_mail, send_mass_mail
 from django.conf import settings
 
+class NotifyView(APIView):
+    def post(self, request):
+        serializer = NotifyingSerializer(data=request.data)
+        print(serializer)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 def mail_bhejo(request):
     subject = "Test Mail"
@@ -39,7 +48,7 @@ def mail_bhejo(request):
 def get_user(request):
     try: 
         google_id = request.headers.get('X-Google-UID')
-        # print(google_id)
+        print(google_id)
         users = compi_reg.objects.filter(google_id=google_id)
         if users.exists():
             for user in users:
@@ -52,6 +61,20 @@ def get_user(request):
         user = None
         print(user, 'get user except')
     print(user, 'get user')
+    return user
+
+@parser_classes([JSONParser])
+def get_user_id(request):
+    try:
+        email = request.headers.get('X-Email')
+        users = compi_reg.objects.filter(email=email)
+        if users.exists():
+            for user in users:
+                continue
+        else:
+            user=None
+    except:
+        user = None
     return user
 
 @parser_classes([JSONParser])
@@ -68,7 +91,9 @@ def get_compi(request):
 @parser_classes([JSONParser])
 def get_team_id(request):
     try:
-        team_id = request.headers.get('X-Team-ID')   
+        print(request.headers)
+        team_id = request.headers.get('X-Team-ID') 
+        print(team_id)  
         return team_id
     except:
         team_id = None
@@ -78,10 +103,10 @@ def get_team_id(request):
 def compi_card(request):
     if request.method == 'GET':
         try: 
-            user = get_user(request)
-            google_id = user.google_id if user else None
+            user = get_user_id(request)
+            email = user.email if user else None
             compi = Compi.objects.all()
-            serializer = Compi_CardsSerializer(compi, many=True, context={'user': google_id})
+            serializer = Compi_CardsSerializer(compi, many=True, context={'user': email})
             return Response(serializer.data)
         except:
             compi = Compi.objects.all()
@@ -98,7 +123,8 @@ def check_reg(request):
             gotcha = compi_reg.objects.filter(google_id=user)
             # print(gotcha, 'gotcha it is')
             compi_exists = gotcha.filter(compi=compi).exists()
-            return Response(compi_exists)
+            # return Response(compi_exists)
+            return Response(True)
         except:
             return Response(False)
 
@@ -139,6 +165,11 @@ def page(request):
 
 ### For team
 
+def team_reg_check(request):
+    lead = request.team_leader_email
+    pass
+
+
 @api_view(['POST'])
 @csrf_exempt
 def create_team(request):
@@ -146,6 +177,7 @@ def create_team(request):
         compi_team_serializer = Compi_TeamSerializer(data=request.data, many=False)
         print(compi_team_serializer.is_valid())
         if compi_team_serializer.is_valid():
+            # if check_reg(compi_team_serializer) is 
             compi = compi_team_serializer.validated_data.get('compi_name')
             latest_team = compi_team.objects.filter(compi_name=compi).order_by('-team_id').first()
             next_team_id = '0269'
@@ -158,7 +190,7 @@ def create_team(request):
             subject = 'Team Created'
             message = f'You have successfully created a team'
             send_mailer = 'noreply@techfest.org'
-            recipient = compi_team_serializer.validated_data.get('team_leader_email')
+            recipient = [compi_team_serializer.validated_data.get('team_leader_email')]
             send_mail(subject, message, send_mailer, recipient)
             message2 = f'You have been added to a team'
             recipient2 = [compi_team_serializer.validated_data.get('parti1_email'), compi_team_serializer.validated_data.get('parti2_email'), compi_team_serializer.validated_data.get('parti3_email')]
@@ -200,7 +232,7 @@ def join_team(request):
             subject = 'Joined Team'
             message = f'You have successfully joined a team {parti_email} with TeamID {team_id} and with {team.team_leader_email} ({team.team_leader_name}) as the team leader'
             send_mailer = 'noreply@techfest.org'
-            recipient = parti_email
+            recipient = [parti_email]
             send_mail(subject, message, send_mailer, recipient)
             return JsonResponse(serializer.data)       
         print(parti_email, parti_name)
@@ -212,9 +244,10 @@ def join_team(request):
 def leave_team(request):
     if request.method == 'PUT':
         team_id = get_team_id(request)
+        print(request.headers)
         team = compi_team.objects.get(team_id=team_id)
         if team:
-            parti_name = request.data['parti_name']
+            # parti_name = request.data['parti_name']
             parti_email = request.data['parti_email']
             if team.parti1_email == parti_email:
                 team.parti1_name = None
@@ -232,7 +265,8 @@ def leave_team(request):
             subject = 'Left Team'
             message = f'You have successfully left the team {parti_email} with TeamID {team_id} and with {team.team_leader_email} ({team.team_leader_name}) as the team leader'
             send_mailer = 'noreply@techfest.org'
-            recipient = parti_email
+            recipient = [parti_email]
+            print('yaha ka error')
             send_mail(subject, message, send_mailer, recipient)
             return JsonResponse(serializer.data)       
         
@@ -242,9 +276,13 @@ def leave_team(request):
 @api_view(['DELETE'])
 @csrf_exempt
 def delete_team(request):
+    print('hi')
     if request.method == 'DELETE':
         team_id = get_team_id(request)
+        print(team_id)
         parti_email = request.data['parti_email']
+
+        print(request.data)
         # team = compi_team.objects.get(team_id=team_id)
         try:
             team = compi_team.objects.get(team_id=team_id, team_leader_email=parti_email)

@@ -14,5 +14,6 @@ urlpatterns = [
     path('join_team/', views.join_team, name='join_team'),
     path('leave_team/', views.leave_team, name='leave_team'),
     path('delete_team/', views.delete_team, name='delete_team'),
+    path('notify/', views.NotifyView.as_view(), name='notify'),
 ]
 
