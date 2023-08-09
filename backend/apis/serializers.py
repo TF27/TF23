@@ -46,3 +46,20 @@ class NotifyingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Notifying
         fields = '__all__'
+
+
+class WorkshopsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Workshop
+        fields = '__all__'
+    
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        user = self.context.get('user')
+        representation['is_registered'] = workshop_reg.objects.filter(email=user, workshop=instance).exists()
+        return representation
+    
+class WorkshopRegSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = workshop_reg
+        fields = '__all__'

@@ -296,3 +296,44 @@ def delete_team(request):
         recipient = [team.team_leader_email, team.parti1_email, team.parti2_email, team.parti3_email]
         send_mass_mail(subject, message, send_mailer, recipient)
         return JsonResponse({'success': True, 'message': 'Team deleted successfully'})
+
+
+# Workshops     
+@api_view(['GET'])
+def workshop_card(request):
+    if request.method == 'GET':
+        try: 
+            user = get_user_id(request)
+            email = user.email if user else None
+            workshop = Workshop.objects.all()
+            serializer = WorkshopsSerializer(workshop, many=True, context={'user': email})
+            return Response(serializer.data)
+        except:
+            workshop = Workshop.objects.all()
+            serializer = WorkshopsSerializer(workshop, many=True, context={'request': request})
+            return Response(serializer.data)
+        
+@api_view(['POST']) 
+@csrf_exempt
+def workshop_reg_form(request):
+    if request.method=='POST':
+        workshop_reg_serializer = WorkshopRegSerializer(data=request.data, many=False)
+        print(workshop_reg_serializer)
+        if workshop_reg_serializer.is_valid():
+            last_reg = workshop_reg.objects.order_by('-tf_id').first()
+            next_tf_id = '0269'
+            if last_reg:
+                last_tf_id = last_reg.tf_id[-4:]
+                next_tf_id = str(int(last_tf_id) + 1).zfill(4)
+            tf_id = f"TF-W23{next_tf_id}"
+            workshop_reg_serializer.save(tf_id=tf_id)
+            # compi_reg_serializer.save()
+            subject = "Workshop Registration"
+            message = f"You have successfully registered for the {workshop_reg_serializer.validated_data.get('workshop')} with email {workshop_reg_serializer.validated_data.get('email')} and name {workshop_reg_serializer.validated_data.get('name')}"
+            from_email = 'noreply@techfest.org'
+            recipient_list = [workshop_reg_serializer.validated_data.get('email')]
+            send_mail(subject, message, from_email, recipient_list)
+            return JsonResponse(workshop_reg_serializer.data)
+        res = {'success': False}
+        print(res)
+        return JsonResponse(res)
