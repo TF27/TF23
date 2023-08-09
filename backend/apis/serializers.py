@@ -41,3 +41,8 @@ class Compi_InternalSerializer(serializers.ModelSerializer):
     class Meta:
         model = Compi
         fields = '__all__'
+        
+class NotifyingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Notifying
+        fields = '__all__'
