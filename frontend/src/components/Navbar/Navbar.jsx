@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../contexts/AuthContext';
 import './navbar.css';
@@ -54,44 +54,20 @@ const handleClick = (e) => {
 const styles = {
   active: {
     visibility: "visible",
-    transition: "all 0.5s",
+    transition: "all 0.5s"
   },
   hidden: {
     visibility: "hidden",
     transition: "all 0.5s",
-    transform: "translateY(-100%)",
-  },
-};
+    transform: "translateY(-100%)"
+  }
+}
 
-const [scrollDirection, setScrollDirection] = useState("up");
-const ScrollThreshold = 100;
-const [prevScrollY, setPrevScrollY] = useState(0);
-
-const handleScroll = () => {
-  const scrollY = window.scrollY;
-  setPrevScrollY(scrollY);
-  const scrollDirection = prevScrollY < scrollY ? "down" : "up";
-  // console.log(scrollDirection)
-  setScrollDirection(scrollDirection);
-  // console.log(scrollDirection)
-};
-
-
-useEffect(() => {
-  window.addEventListener("scroll", handleScroll);
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-  };
-}, []);
-
-useEffect(() => {
-  handleScroll();
-}, []);
-
+const { y, x, scrollDirection } = useScroll();  
 
 return (
     <>
-      <header  style={scrollDirection === "down" ? styles.hidden : styles.active} id='navbar'>
+      <header style={scrollDirection === "down" ? styles.hidden: styles.active} >
         <nav className="navbar" >
           <span><a href="https://techfest.org/" className='nav-branding' target="_blank" rel="noopener noreferrer">
               <img src='#' className='tflogo' alt="Techfest, IIT Bombay"/>
@@ -108,6 +84,9 @@ return (
               </Link></li>
               <li className='nav-item'><Link className="nav-link" to="/exhibitions" onClick={handleClick}>
                 Exhibition
+              </Link></li>
+              <li className='nav-item'><Link className="nav-link" to="/gallery" onClick={handleClick}>
+                Gallery
               </Link></li>
               <li className='nav-item'><Link className="nav-link" to="/competitions" onClick={handleClick}>
                 Competitions
