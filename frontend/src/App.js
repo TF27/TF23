@@ -11,8 +11,7 @@ import Create_Team from './pages/Compi/Compi_Internal/Teams/create_team';
 import JoinTeam from './pages/Compi/Compi_Internal/Teams/join_team';
 import Gallery from './pages/gallery/gallery';
 import Gallery_prop from './pages/gallery/specific/gallery_prop';
-
-
+import Workshop from './pages/workshop/home';
 
 function App() {
     return (
@@ -24,6 +23,7 @@ function App() {
                         <Route path='/' element={<Home />} />
                         <Route path='/exhibitions' element={<WorldMap/>}/>
                         <Route path='/competitions' element={<Compi />} />
+                        <Route path='/workshops' element={<Workshop/>}/>
                         {/* <Route path={`${data.name}/register`} element={<Compi_Reg />} /> */}
                         {/* <Route path={`${data.name}`} element={<Compi_Int />} /> */}
                         <Route path='competitions/:compiName' element={<Internal />} />
