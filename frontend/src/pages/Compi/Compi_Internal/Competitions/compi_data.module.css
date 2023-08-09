@@ -1,0 +1,83 @@
+.info_head {
+    display: flex;
+    width: 45vw;
+    border-radius: 10px;  
+    justify-content: center;
+}
+
+.bar_item {
+    color: white;
+    font-size: 22px;
+    border: none;
+    background: none;
+    font-family: Forum;
+    cursor: pointer;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 0.5vw;
+    width: 7vw;
+    padding-left: 0.5vw;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+}
+
+.information .hide {
+    display: none;
+}
+
+.info_head .active {
+    background: none;
+    color: white;
+    position: relative;
+    border: none;
+}
+
+.wdata {
+    display: flex;
+    margin: auto;
+    max-width: 90%;
+    justify-content: space-between;
+    position: relative;
+    top: 260px;
+}
+
+.info_tab {
+    white-space: pre;
+}
+
+.baractive{
+    height: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+}
+
+.bar_extra{
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    width: 1vw;
+    height: 39px;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+}
+
+.info_tab{
+    height: 350px;
+    width: 45vw;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    margin-top: 40px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+

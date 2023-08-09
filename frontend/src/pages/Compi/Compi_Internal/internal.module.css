@@ -1,68 +1,32 @@
-/* .explore{
-    background-image: url('.\..\static\img\exp_bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
-
-.info_head {
-    /* background: aqua; */
-    display: flex;
-    /* justify-content: space-around; */
-    width: 45vw;
-
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    /* background: linear-gradient(0deg, #000000, #000000), linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%); */
-}
-
-.bar_item {
-    color: white;
-    font-size: 22px;
-    border: none;
-    background: none;
-    font-family: Forum;
-    cursor: pointer;
-    padding-right: 0.5vw;
-    width: 5vw;
-    padding-left: 0.5vw;
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-}
-
-.information .hide {
-    display: none;
-}
-
-.info_head .active {
-    background: none;
-    color: white;
-    position: relative;
-    top: 5px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
-    /* background: rgb(255, 255, 255); */
-/* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
-/* backdrop-filter: blur( 0px );
--webkit-backdrop-filter: blur( 0px );
-border-radius: 10px; */
-/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
-}
-
 .wdata {
     display: flex;
     margin: auto;
     max-width: 90%;
-    justify-content: space-between;
+    justify-content: space-around;
     position: relative;
     top: 260px;
 }
 
-.info_tab {
-    white-space: pre;
+.overlay{
+    background: rgba(0,0,0,0.3);
+    height: 100vh;
 }
 
-.baractive{
-    height: 2px;
-    background-color: blue;
+.compi_img{
+    width: 21vw;
+    height: 21vw;
+}
+
+.compi_prize{
+    font-family: Forum;
+    letter-spacing: 0.1em;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.heading{
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 100px;
 }
