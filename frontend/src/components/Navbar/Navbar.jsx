@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../contexts/AuthContext';
 import './navbar.css';
+import debounce from 'lodash.debounce';
 // import {useScroll} from '.../scroll'
 import {useScroll} from './scroll.jsx'
 // import logo from '../../assets/new_logo.png';
@@ -59,9 +60,40 @@ const styles = {
   hidden: {
     visibility: "hidden",
     transition: "all 0.5s",
+<<<<<<< HEAD
+    transform: "translateY(-100%)",
+  },
+};
+
+const [scrollDirection, setScrollDirection] = useState("up");
+const [prevScrollY, setPrevScrollY] = useState(0);
+
+const handleScroll = (x) => {
+  const scrollY = window.scrollY;
+  const scrollDirection = prevScrollY < scrollY ? 'down' : 'up';
+  setPrevScrollY(scrollY);
+  setScrollDirection(scrollDirection);
+  console.log('scrollY', scrollY)
+  console.log('prevscrollyh', prevScrollY)
+  console.log(scrollDirection)
+};
+
+
+useEffect(() => {
+  window.addEventListener("scroll", handleScroll);
+  return () => {
+    window.removeEventListener("scroll", handleScroll); 
+  };
+}, []);
+
+useEffect(() => {
+  handleScroll();
+});
+=======
     transform: "translateY(-100%)"
   }
 }
+>>>>>>> 2be606be39bd7385e8e2f01d78494bce148bc171
 
 const { y, x, scrollDirection } = useScroll();  
 
