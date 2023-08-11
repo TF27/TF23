@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../contexts/AuthContext';
 import './navbar.css';
@@ -55,11 +55,12 @@ const handleClick = (e) => {
 const styles = {
   active: {
     visibility: "visible",
-    transition: "all 0.5s",
+    transition: "all 0.5s"
   },
   hidden: {
     visibility: "hidden",
     transition: "all 0.5s",
+<<<<<<< HEAD
     transform: "translateY(-100%)",
   },
 };
@@ -88,11 +89,17 @@ useEffect(() => {
 useEffect(() => {
   handleScroll();
 });
+=======
+    transform: "translateY(-100%)"
+  }
+}
+>>>>>>> 2be606be39bd7385e8e2f01d78494bce148bc171
 
+const { y, x, scrollDirection } = useScroll();  
 
 return (
     <>
-      <header  style={scrollDirection === "down" ? styles.hidden : styles.active} id='navbar'>
+      <header style={scrollDirection === "down" ? styles.hidden: styles.active} >
         <nav className="navbar" >
           <span><a href="https://techfest.org/" className='nav-branding' target="_blank" rel="noopener noreferrer">
               <img src='#' className='tflogo' alt="Techfest, IIT Bombay"/>
@@ -109,6 +116,9 @@ return (
               </Link></li>
               <li className='nav-item'><Link className="nav-link" to="/exhibitions" onClick={handleClick}>
                 Exhibition
+              </Link></li>
+              <li className='nav-item'><Link className="nav-link" to="/gallery" onClick={handleClick}>
+                Gallery
               </Link></li>
               <li className='nav-item'><Link className="nav-link" to="/competitions" onClick={handleClick}>
                 Competitions
