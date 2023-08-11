@@ -29,7 +29,7 @@
   .layer2 {
     background-image: url('../img/WORKSHOP 1.png');
     opacity: 1;
-    z-index: -0.5;
+    z-index: -1;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-y:2rem;
@@ -39,6 +39,7 @@
   .layer3 {
     background-image: url('../img/w1 2.png');
     opacity: 1;
+    z-index: -1;
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
