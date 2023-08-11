@@ -4,9 +4,7 @@ import Carousel from './carousel.jsx'; // Update the path based on your folder s
 const Home = () => {
   return (
     <div>
-      <Carousel /> {/* Render the Carousel component here */}
-      {/* Your other content can go below if needed */}
-      
+      <Carousel />       
     </div>
   );
 };

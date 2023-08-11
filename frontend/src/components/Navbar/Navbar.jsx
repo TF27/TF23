@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../contexts/AuthContext';
 import './navbar.css';
+import debounce from 'lodash.debounce';
 // import {useScroll} from '.../scroll'
 import {useScroll} from './scroll.jsx'
 // import logo from '../../assets/new_logo.png';
@@ -64,29 +65,29 @@ const styles = {
 };
 
 const [scrollDirection, setScrollDirection] = useState("up");
-const ScrollThreshold = 100;
 const [prevScrollY, setPrevScrollY] = useState(0);
 
-const handleScroll = () => {
+const handleScroll = (x) => {
   const scrollY = window.scrollY;
+  const scrollDirection = prevScrollY < scrollY ? 'down' : 'up';
   setPrevScrollY(scrollY);
-  const scrollDirection = prevScrollY < scrollY ? "down" : "up";
-  // console.log(scrollDirection)
   setScrollDirection(scrollDirection);
-  // console.log(scrollDirection)
+  console.log('scrollY', scrollY)
+  console.log('prevscrollyh', prevScrollY)
+  console.log(scrollDirection)
 };
 
 
 useEffect(() => {
   window.addEventListener("scroll", handleScroll);
   return () => {
-    window.removeEventListener("scroll", handleScroll);
+    window.removeEventListener("scroll", handleScroll); 
   };
 }, []);
 
 useEffect(() => {
   handleScroll();
-}, []);
+});
 
 
 return (

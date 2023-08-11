@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import $ from 'jquery';
+import './ourreach.css';
+// import $ from 'jquery';
 const OurReach = () => {
 
   const [counted, setCounted] = useState(false);
@@ -46,7 +47,7 @@ const OurReach = () => {
     <div className="oureachm">
       <div className='our-reach'>OUR REACH</div>
 
-      <div className="flex-container">
+      {/* <div className="flex-container">
         <div className='center-text'>
           <div className="qcircle"></div>
             <div className="circle-text">
@@ -79,14 +80,14 @@ const OurReach = () => {
 
       
         
-      </div>
+      </div> */}
       <div className="text-flex-container">
         <div className="flex-text">COLLEGE AMBASSADORS</div>
         <div className="flex-text">INDIAN COLLEGES</div>
         <div className="flex-text">INTERNATIONAL COLLEGES</div>
       </div>
 
-      {/* <div className="prev-stats" id="counter">
+      <div className="prev-stats" id="counter">
         <div className="skillm">
           <div className="circle">
             <svg className="reach" xmlns="http://www.w3.org/2000/svg" version="1.1" width="300px" height="300px">
@@ -142,7 +143,7 @@ const OurReach = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
