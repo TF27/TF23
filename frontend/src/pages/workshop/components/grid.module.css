@@ -1,6 +1,7 @@
 /* grid.module.css */
 
 .container {
+  margin-top: 2rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -20,7 +21,7 @@
   grid-template-rows: repeat(2, 1fr);    /* 2 rows */
   justify-items: center; /* Center content horizontally */
   row-gap: 0px;
-  column-gap: 0px; /* Gap between cards */
+  column-gap: 13px; /* Gap between cards */
 }
 
 

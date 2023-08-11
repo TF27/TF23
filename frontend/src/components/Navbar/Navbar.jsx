@@ -60,40 +60,9 @@ const styles = {
   hidden: {
     visibility: "hidden",
     transition: "all 0.5s",
-<<<<<<< HEAD
-    transform: "translateY(-100%)",
-  },
-};
-
-const [scrollDirection, setScrollDirection] = useState("up");
-const [prevScrollY, setPrevScrollY] = useState(0);
-
-const handleScroll = (x) => {
-  const scrollY = window.scrollY;
-  const scrollDirection = prevScrollY < scrollY ? 'down' : 'up';
-  setPrevScrollY(scrollY);
-  setScrollDirection(scrollDirection);
-  console.log('scrollY', scrollY)
-  console.log('prevscrollyh', prevScrollY)
-  console.log(scrollDirection)
-};
-
-
-useEffect(() => {
-  window.addEventListener("scroll", handleScroll);
-  return () => {
-    window.removeEventListener("scroll", handleScroll); 
-  };
-}, []);
-
-useEffect(() => {
-  handleScroll();
-});
-=======
     transform: "translateY(-100%)"
   }
 }
->>>>>>> 2be606be39bd7385e8e2f01d78494bce148bc171
 
 const { y, x, scrollDirection } = useScroll();  
 

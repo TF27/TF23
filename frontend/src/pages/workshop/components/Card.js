@@ -11,6 +11,8 @@ const Card = ({card}) => {
   const handleLeave = () => {
     setIsHovered(false);
   };
+
+ 
   return (
     <div
       onMouseEnter={handleHover}
@@ -33,7 +35,10 @@ const Card = ({card}) => {
     <div className={cardview.container}>
     <div className={cardview.two}>
          <div className={cardview.wrapper}>
-             <div className={cardview.bannerimage}></div>
+             <div className={cardview.bannerimage}>
+             <img src={card.img} alt="Description of the image" width="128" height="125"/>
+
+             </div>
              <p>{card.name}</p>
          </div>
          <div className={cardview.buttonwrapper}> 
