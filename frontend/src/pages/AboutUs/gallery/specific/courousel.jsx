@@ -1,16 +1,16 @@
-import img1 from '../../../assets/gallery/link.png'
-import img2 from '../../../assets/gallery/link.png'
-import img3 from '../../../assets/gallery/link.png'
-import img4 from '../../../assets/gallery/link.png'
-import img5 from '../../../assets/gallery/link.png'
-import img6 from '../../../assets/gallery/link.png'
-import img7 from '../../../assets/gallery/link.png'
-import img8 from '../../../assets/gallery/link.png'
-import img9 from '../../../assets/gallery/link.png'
-import img10 from '../../../assets/gallery/link.png'
-import left from "../../../assets/gallery/ArrowLeft.svg"
-import right from "../../../assets/gallery/ArrowRight.svg"
-import back from "../../../assets/gallery/back.svg"
+import img1 from '../../../../assets/gallery/link.png'
+import img2 from '../../../../assets/gallery/link.png'
+import img3 from '../../../../assets/gallery/link.png'
+import img4 from '../../../../assets/gallery/link.png'
+import img5 from '../../../../assets/gallery/link.png'
+import img6 from '../../../../assets/gallery/link.png'
+import img7 from '../../../../assets/gallery/link.png'
+import img8 from '../../../../assets/gallery/link.png'
+import img9 from '../../../../assets/gallery/link.png'
+import img10 from '../../../../assets/gallery/link.png'
+import left from "../../../../assets/gallery/ArrowLeft.svg"
+import right from "../../../../assets/gallery/ArrowRight.svg"
+import back from "../../../../assets/gallery/back.svg"
 import React, { useState } from 'react'
 import './corousel.css'
 import { Link} from 'react-router-dom';

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import europe from './europe.jpg' //import whatever images we need and add them in the cityData beside a image tag
-import worldmap from './map.png';
-import './WorldMap.css'; // Import CSS file
-import './DropdownMenu.css';
+import europe from './assets/europe.jpg' //import whatever images we need and add them in the cityData beside a image tag
+import worldmap from './assets/map.png';
 
 const WorldMap = () => {
   const [hoveredCity, setHoveredCity] = useState(null);

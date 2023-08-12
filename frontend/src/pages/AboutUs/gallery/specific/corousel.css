@@ -5,7 +5,7 @@
   width: 100%;
   height: calc(100vh - 7rem);
 
-  background-image: url(../../../assets/gallery/bg2.png);
+  background-image: url(../../../../assets/gallery/bg2.png);
   background-position: cover;
   background-size: 100% 100%;
 }

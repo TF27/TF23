@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../contexts/AuthContext';
 import './navbar.css';
@@ -60,7 +60,6 @@ const styles = {
   hidden: {
     visibility: "hidden",
     transition: "all 0.5s",
-<<<<<<< HEAD
     transform: "translateY(-100%)",
   },
 };
@@ -89,13 +88,7 @@ useEffect(() => {
 useEffect(() => {
   handleScroll();
 });
-=======
-    transform: "translateY(-100%)"
-  }
-}
->>>>>>> 2be606be39bd7385e8e2f01d78494bce148bc171
 
-const { y, x, scrollDirection } = useScroll();  
 
 return (
     <>
@@ -105,7 +98,7 @@ return (
               <img src='#' className='tflogo' alt="Techfest, IIT Bombay"/>
             </a></span>
             <ul className='nav-menu'>
-              <li className='nav-item'><Link className="nav-link" to="/" onClick={handleClick}>
+              <li className='nav-item'><Link className="nav-link" to="/Media" onClick={handleClick}>
                 Media
               </Link></li>
               <li className='nav-item'><Link className="nav-link" to="/history" onClick={handleClick}>

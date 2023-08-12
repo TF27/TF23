@@ -1,77 +1,52 @@
-.oureachm{
+.oureach {
   position: relative;
-  top: 160px;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-.prev-stats{
+.our-reach {
+  font-size: 40px;
+}
+
+.prev-stats {
   position: relative;
   top: 20px;
 }
-.skillm{
+
+.skill {
   display: flex;
-  /* align-items: flex-start; */
-  justify-content:space-evenly;
-  width: 100vw;
-  
+  justify-content: space-evenly;
 }
 
-.circle{
-    align-items: center;
-    justify-content: center;
-    background-image: radial-gradient(#00000078, #00000000 75%);
-    /*background-image: radial-gradient(#00000075, #00000030 80%);*/
+.circle {
+  margin-bottom: 30px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(#00000078, #00000000 75%);
+  /*background-image: radial-gradient(#00000075, #00000030 80%);*/
 }
-.reach{
-        width: 100%;
-        /* height: 100%; */
-    }
-svg{
-    margin: 0;
-    /* transform: rotate(90deg); */
+
+.reach {
+  width: 100%;
 }
-circle{
-  fill: none;
+
+svg {
+  margin: 0;
+}
+
+circle {
+  /* fill: black; */
   stroke: url(#GradientColor);
   stroke-width: 5px;
   stroke-dasharray: 608;
   stroke-dashoffset: 608;
+  color: white;
 }
 
-.qcircle{
- 
-  width: 20vw;
-  height: 20vw;
-  border: 7.5px solid white;
-  border-left: 7.5px solid transparent;
-  border-right: 7.5px solid transparent;
-
-  border-radius: 50%;
-  animation: circlerotate 3s infinite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@keyframes circlerotate {
-  from{
-    transform: rotate(-360deg);
-  
-  }
-  to{
-    transform: rotate(360deg);
-  }
-}
-.center-text{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.circle-text{
-  position: relative;
-  left: -14vw;
-  font-size: 30px;
-}
-
-svg text{
+svg text {
   /* transform: rotate(270deg); */
   font-size: 36px;
   font-style: normal;
@@ -81,29 +56,12 @@ svg text{
   /* transform: translate(246px,-12px); */
 }
 
-.oureachm{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  /* position: relative;
-  top: 200px; */
-}
-
-.our-reach{
-  font-size: 40px;
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 25px;
-
-}
-
-
 @keyframes anime {
-  100%{
-      stroke-dashoffset: 0;
+  100% {
+    stroke-dashoffset: 0;
   }
 }
 
-.wgat{
-  font-size: 25px;
+.wgat {
+  font-size: 30px;
 }

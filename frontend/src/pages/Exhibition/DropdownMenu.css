@@ -1,4 +1,4 @@
-.dropdown-menu {
+.dropdown-menu76 {
   position: absolute;
   transform: translate(0%, 0%);
   border: 1px solid blue;
@@ -24,20 +24,20 @@
   margin-bottom: 10px;
 }
 
-.dropdown-menu::-webkit-scrollbar {
+.dropdown-menu76::-webkit-scrollbar {
   width: 6px; /* Set the width of the scrollbar */
 }
 
-.dropdown-menu::-webkit-scrollbar-track {
+.dropdown-menu76::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.3); /* Set the background color of the scrollbar track */
 }
 
-.dropdown-menu::-webkit-scrollbar-thumb {
+.dropdown-menu76::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.3); /* Set the color of the scrollbar thumb */
   border-radius: 3px; /* Set the border radius of the scrollbar thumb */
 }
 
-.dropdown-menu:hover::-webkit-scrollbar-thumb {
+.dropdown-menu76:hover::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.5); /* Set the color of the scrollbar thumb on hover */
 }
 
@@ -45,8 +45,8 @@
   margin-bottom: 5px; /* Add some margin to the paragraphs inside the dropdown menu */
 }
 
-.city-circle:hover ~ .dropdown-menu,
-.dropdown-menu:hover {
+.city-circle:hover ~ .dropdown-menu76,
+.dropdown-menu76:hover {
   opacity: 1;
   pointer-events: auto; /* Allow hover events on the dropdown menu */
   animation: animation_popup 2s;

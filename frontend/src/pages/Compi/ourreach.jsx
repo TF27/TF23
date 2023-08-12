@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './ourreach.css';
+
 const OurReach = () => {
   const [counted, setCounted] = useState(false);
   useEffect(() => {

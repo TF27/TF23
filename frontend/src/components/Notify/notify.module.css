@@ -1,0 +1,41 @@
+/* notify.module.css */
+
+.notiContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+.notiLabel {
+    position: absolute;
+    pointer-events: none;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease-out, font-size 0.2s ease-out;
+    font-size: 16px;
+    color: #999;
+}
+
+.floatingLabel {
+    transform: translateY(-190%) scale(1.2);
+    font-size: 12px;
+    background: black;
+    color: #AB8D60;
+}
+
+.notiInputWrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.notiInput {
+    width: 25vw;
+    padding: 10px;
+    border: 2px solid #AB8D60;
+    background: none;
+    outline: none; /* Remove default focus outline */
+    transition: border-color 0.2s ease-in-out;
+}
+
+.notiInput:focus {
+    border-color: #AB8D60; 
+}
