@@ -60,7 +60,6 @@ const styles = {
   hidden: {
     visibility: "hidden",
     transition: "all 0.5s",
-<<<<<<< HEAD
     transform: "translateY(-100%)",
   },
 };
@@ -73,9 +72,9 @@ const handleScroll = (x) => {
   const scrollDirection = prevScrollY < scrollY ? 'down' : 'up';
   setPrevScrollY(scrollY);
   setScrollDirection(scrollDirection);
-  console.log('scrollY', scrollY)
-  console.log('prevscrollyh', prevScrollY)
-  console.log(scrollDirection)
+  // console.log('scrollY', scrollY)
+  // console.log('prevscrollyh', prevScrollY)
+  // console.log(scrollDirection)
 };
 
 
@@ -89,11 +88,6 @@ useEffect(() => {
 useEffect(() => {
   handleScroll();
 });
-=======
-    transform: "translateY(-100%)"
-  }
-}
->>>>>>> 9705736b02f0d6838f1ecb05876b797a5992be59
 
 
 return (

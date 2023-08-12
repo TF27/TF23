@@ -6,9 +6,8 @@ const OurReach = () => {
     const handleScroll = () => {
       const countElements = document.querySelectorAll('.count');
       const animatedCircles = document.querySelectorAll('.animated-circle');
-      const oTop = countElements[0].getBoundingClientRect().top - window.innerHeight;
-
-      if (!counted && window.pageYOffset > oTop) {
+      const scrollY = window.scrollY;
+      if (!counted && scrollY > 500) {
         animatedCircles.forEach(circle => {
           circle.style.animation = `anime 1.3s linear forwards`;
         });
