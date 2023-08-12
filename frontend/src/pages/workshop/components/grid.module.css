@@ -1,19 +1,35 @@
+/* grid.module.css */
+
+.container {
+  margin-top: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure the container takes up at least the viewport height */
+}
+
 .grid {
-    width: 20rem;
-    display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 100px; /* Adjust as needed */
-  margin: 90px; /* Adjust as needed */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-rows: repeat(2, 1fr);    /* 2 rows */
+  justify-items: center; /* Center content horizontally */
+  row-gap: 0px;
+  column-gap: 13px; /* Gap between cards */
+}
 
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
 
-  @media (max-width: 900px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
+@media (max-width: 800px) {
+  /* Adjust for smaller screens, such as tablets */
+  .grid {
+    grid-template-columns: repeat(1, 1fr); /* 2 columns */
+    grid-template-rows: repeat(4, 1fr);    /* 4 rows */
   }
-  }
+}
