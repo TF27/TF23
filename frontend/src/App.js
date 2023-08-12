@@ -22,7 +22,7 @@ function App() {
         <div className="App">
             <Router>
                 <AuthContextProvider>
-                    <Navbar />
+                    {/* <Navbar /> */}
                     <Routes>
                         <Route path='/' element={<Home />} />
                         <Route path='/exhibitions' element={<Exhibition/>}/>

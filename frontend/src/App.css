@@ -37,20 +37,19 @@
   }
 }
 
-<<<<<<< HEAD
+
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button{
   -webkit-appearance: none;
   margin: 0;
 }
-=======
+
 body{
   color: #fff;
   overflow-x: hidden;
   background: #000000;
 }
 
-<<<<<<< HEAD
 
 /* ::-webkit-scrollbar {
   width: 20px;
@@ -69,6 +68,4 @@ body{
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000; 
 } */
-=======
->>>>>>> b76224a0030c07ef3d7f1ac690aad38799866b6d
->>>>>>> c3d184a1da6e5ebd10a977a13635a25eb5caf42a
+
