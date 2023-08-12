@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
-
+/* 
 *{
     padding: 0;
     margin: 0;
@@ -9,18 +9,18 @@
     font-family: 'Poppins', sans-serif;
     /* font-weight: 700; */
     /* scroll-behavior: smooth; */
-}
+/* }
 
 body{
     /* background:url(body.png); */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
-    margin-top: 15%;    
-}
+    /* margin-top: 15%;     */
+
 
 header{
-    background-color: white;
+    background-color: black;
     background-image: linear-gradient(#1D2526, #264138);
     /* position:relative; */
     /* width: 100vb; */
@@ -64,9 +64,42 @@ a{
     justify-content: space-between;
     align-items: center;
     padding: 0 24px;
-    
+    transition: transform 0.3s ease;
     /* position: fixed; */
     overflow: hidden;
+}
+
+.navbar.hide {
+    transform: translateY(-100%);
+    opacity: 0; /* Optionally, you can add opacity to fade out the Navbar */
+    pointer-events: none; /* Hide Navbar elements from interaction when hidden */
+  }
+
+  .hidden{
+    height: 4rem;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    transition: 0.3s linear;
+    display: flex;
+    justify-content:stretch;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    z-index: 40;
+    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .08);
+    /* padding: 0 7%; */
+}
+.active{
+    height: 4rem;
+    width: 100%;
+    z-index: 40;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .08);
+    position: fixed;
+    top: -80px;
+    transition: 0.3s linear;
+
 }
 
 .nav-menu{
@@ -141,4 +174,8 @@ a{
     .nav-menu.active{
         right: 0;
     }
+}
+
+.competitions{
+    background: black;
 }

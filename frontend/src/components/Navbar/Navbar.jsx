@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../contexts/AuthContext';
 import './navbar.css';
+import debounce from 'lodash.debounce';
+// import {useScroll} from '.../scroll'
+import {useScroll} from './scroll.jsx'
 // import logo from '../../assets/new_logo.png';
 
 const Navbar = () => {
@@ -44,20 +47,58 @@ const handleClick = (e) => {
     item.classList.remove('active');
     const navMenu = document.querySelector(".nav-menu").classList;
     navMenu.remove("active")
+    const hamburger = document.querySelector(".hamburger").classList;
+    hamburger.toggle("active");
   });
-  
-    // e.target.classList.toggle('active')
 }
+
+const styles = {
+  active: {
+    visibility: "visible",
+    transition: "all 0.5s"
+  },
+  hidden: {
+    visibility: "hidden",
+    transition: "all 0.5s",
+    transform: "translateY(-100%)",
+  },
+};
+
+const [scrollDirection, setScrollDirection] = useState("up");
+const [prevScrollY, setPrevScrollY] = useState(0);
+
+const handleScroll = (x) => {
+  const scrollY = window.scrollY;
+  const scrollDirection = prevScrollY < scrollY ? 'down' : 'up';
+  setPrevScrollY(scrollY);
+  setScrollDirection(scrollDirection);
+  // console.log('scrollY', scrollY)
+  // console.log('prevscrollyh', prevScrollY)
+  // console.log(scrollDirection)
+};
+
+
+useEffect(() => {
+  window.addEventListener("scroll", handleScroll);
+  return () => {
+    window.removeEventListener("scroll", handleScroll); 
+  };
+}, []);
+
+useEffect(() => {
+  handleScroll();
+});
+
 
 return (
     <>
-      <header>
+      <header style={scrollDirection === "down" ? styles.hidden: styles.active} >
         <nav className="navbar" >
           <span><a href="https://techfest.org/" className='nav-branding' target="_blank" rel="noopener noreferrer">
               <img src='#' className='tflogo' alt="Techfest, IIT Bombay"/>
             </a></span>
             <ul className='nav-menu'>
-              <li className='nav-item'><Link className="nav-link" to="/" onClick={handleClick}>
+              <li className='nav-item'><Link className="nav-link" to="/Media" onClick={handleClick}>
                 Media
               </Link></li>
               <li className='nav-item'><Link className="nav-link" to="/history" onClick={handleClick}>
@@ -68,6 +109,9 @@ return (
               </Link></li>
               <li className='nav-item'><Link className="nav-link" to="/exhibitions" onClick={handleClick}>
                 Exhibition
+              </Link></li>
+              <li className='nav-item'><Link className="nav-link" to="/gallery" onClick={handleClick}>
+                Gallery
               </Link></li>
               <li className='nav-item'><Link className="nav-link" to="/competitions" onClick={handleClick}>
                 Competitions

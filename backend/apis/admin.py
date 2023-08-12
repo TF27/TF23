@@ -7,3 +7,9 @@ from django.http import HttpResponse
 admin.site.register(Compi)
 admin.site.register(compi_reg)
 admin.site.register(compi_team)
+admin.site.register(Notifying)
+
+
+#Workshop
+admin.site.register(Workshop)
+admin.site.register(workshop_reg)

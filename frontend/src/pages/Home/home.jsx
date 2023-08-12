@@ -1,18 +1,12 @@
+import React from 'react';
+import Carousel from './carousel.jsx'; // Update the path based on your folder structure
+
 const Home = () => {
-    return ( 
-        <div>
-            Home <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus nisl, imperdiet a aliquet quis, vestibulum quis felis. Duis hendrerit ultricies quam, at lobortis nulla tempor eget. Sed congue ornare magna, nec commodo enim pellentesque id. Nullam commodo ornare velit, a feugiat lacus commodo non. Integer vel tortor non nunc imperdiet varius non vitae sem. Phasellus laoreet risus nec sem euismod, a blandit felis lobortis. Duis mattis dui id ipsum tincidunt, ut faucibus odio varius. Praesent malesuada consequat felis, at feugiat quam sollicitudin nec. Pellentesque congue, magna ut accumsan lacinia, neque quam auctor arcu, vestibulum pretium justo urna sed lorem. Aenean eu nulla enim. Sed auctor, dolor quis auctor tincidunt, est mi laoreet risus, aliquet posuere lacus quam ut eros.
+  return (
+    <div>
+      <Carousel />       
+    </div>
+  );
+};
 
-Vivamus eros sapien, imperdiet id magna in, tempor pellentesque erat. Donec vitae ex est. Ut pellentesque condimentum lorem, euismod rutrum ligula tristique nec. Maecenas tincidunt purus ut mi convallis varius. In tempor erat quis turpis dictum rutrum. Suspendisse eget leo sit amet erat cursus mattis. Praesent semper, ligula at commodo porttitor, enim sem placerat lectus, in tempor augue dui quis tortor. Donec vitae nisi sodales metus fermentum dapibus quis vitae diam. Aliquam tincidunt, libero id accumsan congue, mi est pulvinar urna, nec condimentum nisi dolor eget tortor. Suspendisse quis lorem fringilla, tincidunt magna vel, condimentum nunc. Sed feugiat iaculis sapien et luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In eu scelerisque turpis. Donec sed velit condimentum, vestibulum nisl in, sodales purus. Aenean eu justo sed ante mollis rhoncus non vitae dolor. Aenean aliquam mi in nunc dictum porttitor.
-
-Curabitur vitae ligula eu metus tempus ornare blandit ut mauris. Mauris congue lacinia dolor, vitae varius turpis finibus vitae. Nam nec egestas enim. Nulla facilisi. Duis feugiat mauris ligula, a feugiat magna interdum vehicula. Maecenas dolor dolor, convallis eu purus id, malesuada blandit elit. Nulla facilisi. Praesent erat purus, auctor at tincidunt vitae, iaculis quis tortor. Nulla in dapibus augue. Curabitur ante elit, gravida a massa at, sodales ullamcorper mauris.
-
-Suspendisse et dignissim metus. Nullam ac facilisis turpis, id pharetra justo. Aenean at mollis nisl, ac varius libero. Suspendisse tellus nisi, fringilla faucibus venenatis commodo, euismod at erat. In ut mattis tortor, lacinia porttitor nulla. Aliquam laoreet maximus lacus ac vehicula. Morbi ipsum eros, malesuada id lobortis vel, fringilla non sapien. Nullam finibus ac justo at fermentum.
-
-Donec sodales varius urna, sed semper nulla mattis sed. Maecenas ultrices velit vitae lorem interdum consectetur. Duis feugiat sodales aliquet. Duis tempus eros id semper sagittis. Proin vel arcu vulputate magna condimentum vulputate. Nullam porttitor id risus at convallis. Aenean nisi urna, scelerisque id tellus eu, aliquet euismod elit. Fusce tincidunt porta sollicitudin. Fusce eleifend nunc ex, at facilisis dui commodo auctor. Nunc eget commodo lacus. Nam ultricies leo mauris, sit amet venenatis dui lobortis id. Integer auctor eros vel nibh iaculis, et interdum arcu hendrerit. Donec pretium dolor vitae ultrices finibus. Nam nisl nulla, volutpat non nibh dapibus, volutpat placerat libero. Cras quis urna nec elit suscipit varius ut ac mi. Donec accumsan non metus at hendrerit.
-        </div>
-     );
-}
- 
 export default Home;

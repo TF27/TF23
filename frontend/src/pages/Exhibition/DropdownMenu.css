@@ -1,0 +1,82 @@
+.dropdown-menu76 {
+  position: absolute;
+  transform: translate(0%, 0%);
+  border: 1px solid blue;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 10px;
+  z-index: 3;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s smooth;
+  transition-duration: 1s;
+  pointer-events: none; /* Prevent the dropdown menu from blocking hover events */
+  max-height: 200px; /* Set a maximum height for the dropdown menu */
+  max-width: 200px;
+  overflow-y: auto; /* Enable scrolling when content exceeds the maximum height */
+  overflow-x: hidden;
+}
+
+.dropdown-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.dropdown-menu76::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+}
+
+.dropdown-menu76::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.3); /* Set the background color of the scrollbar track */
+}
+
+.dropdown-menu76::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3); /* Set the color of the scrollbar thumb */
+  border-radius: 3px; /* Set the border radius of the scrollbar thumb */
+}
+
+.dropdown-menu76:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5); /* Set the color of the scrollbar thumb on hover */
+}
+
+.mob-text1 p {
+  margin-bottom: 5px; /* Add some margin to the paragraphs inside the dropdown menu */
+}
+
+.city-circle:hover ~ .dropdown-menu76,
+.dropdown-menu76:hover {
+  opacity: 1;
+  pointer-events: auto; /* Allow hover events on the dropdown menu */
+  animation: animation_popup 2s;
+}
+
+.city-circle:hover::before {
+  opacity: 0.7;
+  pointer-events: none; /* Prevent the city circle from blocking hover events */
+  animation: hoverblock 4s;
+}
+
+@keyframes animation_popup {
+  from {
+    max-height: 0px;
+    max-width: 0px;
+  }
+  to {
+    max-height: 200px;
+    max-width: 200px;
+  }
+}
+
+@keyframes hoverblock {
+  0% {
+    pointer-events: auto;
+  }
+  50% {
+    pointer-events: auto;
+  }
+  100% {
+    pointer-events: none;
+  }
+}

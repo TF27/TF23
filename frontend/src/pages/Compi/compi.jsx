@@ -2,23 +2,15 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom'
 import { UserAuth } from "../../contexts/AuthContext";
-
+import { Frame3 } from "./compi_animation";
+import Technorion from "./technorion";
+import OurReach from "./ourreach";
 const Compi = () => {
 
   const [data, setData] = useState([]);
   const { user } = UserAuth();
 
   const google_id = user?.uid;
-
-  // useEffect(() => {
-  //   axios.get('/api/compi_card/')
-  //     .then(response => {
-  //       setData(response.data);
-  //     })
-  //     .catch(error => {
-  //       console.error(error);
-  //     });
-  // }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -55,10 +47,12 @@ const Compi = () => {
   };
 
   return (
-    <div>
-      <div>
-        {card()}
-      </div>
+    <div className="competitions">
+        {/* <Frame3/> */}
+        <Technorion />
+        <OurReach />
+        {/* {card()} */}
+     
     </div>
   );
 }
