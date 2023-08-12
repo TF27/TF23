@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import WorldMap from './map';
 import NotifyForm from './notify';
@@ -30,3 +31,20 @@ const Exhibition = () => {
 };
 
 export default Exhibition;
+=======
+import WorldMap from "./map";
+import Notify from "../../components/Notify/notify";
+import OurReach from "./ourreach";
+
+const Exhibition =()=>{
+    
+    return(
+        <div className="Exhibitions">
+            <Notify/>
+            <WorldMap/>
+            <OurReach />
+        </div>
+    )
+}
+export default Exhibition;
+>>>>>>> b76224a0030c07ef3d7f1ac690aad38799866b6d

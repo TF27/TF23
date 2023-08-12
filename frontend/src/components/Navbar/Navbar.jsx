@@ -1,7 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../contexts/AuthContext';
 import './navbar.css';
+import debounce from 'lodash.debounce';
 // import {useScroll} from '.../scroll'
 import {useScroll} from './scroll.jsx'
 // import logo from '../../assets/new_logo.png';
@@ -54,50 +55,56 @@ const handleClick = (e) => {
 const styles = {
   active: {
     visibility: "visible",
-    transition: "all 0.5s",
+    transition: "all 0.5s"
   },
   hidden: {
     visibility: "hidden",
     transition: "all 0.5s",
+<<<<<<< HEAD
     transform: "translateY(-100%)",
   },
 };
 
 const [scrollDirection, setScrollDirection] = useState("up");
-const ScrollThreshold = 100;
 const [prevScrollY, setPrevScrollY] = useState(0);
 
-const handleScroll = () => {
+const handleScroll = (x) => {
   const scrollY = window.scrollY;
+  const scrollDirection = prevScrollY < scrollY ? 'down' : 'up';
   setPrevScrollY(scrollY);
-  const scrollDirection = prevScrollY < scrollY ? "down" : "up";
-  // console.log(scrollDirection)
   setScrollDirection(scrollDirection);
-  // console.log(scrollDirection)
+  console.log('scrollY', scrollY)
+  console.log('prevscrollyh', prevScrollY)
+  console.log(scrollDirection)
 };
 
 
 useEffect(() => {
   window.addEventListener("scroll", handleScroll);
   return () => {
-    window.removeEventListener("scroll", handleScroll);
+    window.removeEventListener("scroll", handleScroll); 
   };
 }, []);
 
 useEffect(() => {
   handleScroll();
-}, []);
+});
+=======
+    transform: "translateY(-100%)"
+  }
+}
+>>>>>>> 9705736b02f0d6838f1ecb05876b797a5992be59
 
 
 return (
     <>
-      <header  style={scrollDirection === "down" ? styles.hidden : styles.active} id='navbar'>
+      <header style={scrollDirection === "down" ? styles.hidden: styles.active} >
         <nav className="navbar" >
           <span><a href="https://techfest.org/" className='nav-branding' target="_blank" rel="noopener noreferrer">
               <img src='#' className='tflogo' alt="Techfest, IIT Bombay"/>
             </a></span>
             <ul className='nav-menu'>
-              <li className='nav-item'><Link className="nav-link" to="/" onClick={handleClick}>
+              <li className='nav-item'><Link className="nav-link" to="/Media" onClick={handleClick}>
                 Media
               </Link></li>
               <li className='nav-item'><Link className="nav-link" to="/history" onClick={handleClick}>
@@ -108,6 +115,9 @@ return (
               </Link></li>
               <li className='nav-item'><Link className="nav-link" to="/exhibitions" onClick={handleClick}>
                 Exhibition
+              </Link></li>
+              <li className='nav-item'><Link className="nav-link" to="/gallery" onClick={handleClick}>
+                Gallery
               </Link></li>
               <li className='nav-item'><Link className="nav-link" to="/competitions" onClick={handleClick}>
                 Competitions

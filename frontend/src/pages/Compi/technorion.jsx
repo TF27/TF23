@@ -79,6 +79,28 @@ const Technorion = () => {
     ));
   };
 
+  const Card1 = () =>{
+    const zonals = data.filter(item => item.genre === '1')
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleHover = () => {
+      setIsHovered(true);
+    }
+
+    const handleLeave = () => {
+      setIsHovered(false);
+    }
+
+
+    return zonals.map(data => (
+      <div key={data.id} className='col-3'>
+        
+      </div>
+      
+
+    ));
+  }
+
   return (
     <div>
       <img src={technorion} alt="technorion" className="technorion" />
@@ -90,6 +112,7 @@ const Technorion = () => {
         <div className='container' style={{ maxWidth: "90%" }}>
           <div className='row'>
             {card()}
+            <Card1 />
           </div>
         </div>
       </div>
