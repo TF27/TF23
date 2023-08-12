@@ -22,8 +22,12 @@ const WorldMap = () => {
   };
 
   return (
+<<<<<<< HEAD
+    <div className="world-map-container" style={{ backgroundColor: '', position: 'absolute' ,top:'600px'}}>
+=======
     <div className="world-map-container" style={{ position: 'relative' }}>
     <div><h1>TOP HIGHLIGHTS </h1></div>
+>>>>>>> b76224a0030c07ef3d7f1ac690aad38799866b6d
       <img src={worldmap} className="mapimage" alt="World Map" />
 
       {cityData.map((city, index) => (
@@ -45,6 +49,7 @@ const WorldMap = () => {
           style={{
             top: hoveredCity.y,
             left: hoveredCity.x,
+            
           }}
           onMouseEnter={() => handleCityHover(hoveredCity)} // Keep the menu open when the cursor is on the dropdown menu
           onMouseLeave={() => handleCityHover(null)}
