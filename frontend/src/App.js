@@ -16,7 +16,7 @@ import Workshop from './pages/workshop/home';
 
 
 import Lecture_gal from './pages/AboutUs/gallery/specific/lecture';
-import Exhibition_gal from './AboutUs/pages/gallery/specific/exhibiton';
+import Exhibition_gal from './pages/AboutUs/gallery/specific/exhibiton';
 import Ozone_gal from './pages/AboutUs/gallery/specific/ozone';
 import Compi_gal from './pages/AboutUs/gallery/specific/compi';
 import Techno_gal from './pages/AboutUs/gallery/specific/techno';

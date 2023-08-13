@@ -1,6 +1,6 @@
 import Gal_base from "./gallery_base"
 import img1 from '../../../../assets/gallery/link.png'
-import img2 from '../../../assets/gallery/link.png'
+import img2 from '../../../../assets/gallery/link.png'
 import img3 from '../../../../assets/gallery/link.png'
 import img4 from '../../../../assets/gallery/link.png'
 import img5 from '../../../../assets/gallery/link.png'
