@@ -26,12 +26,15 @@ SECRET_KEY = 'django-insecure-a@f*cs+m#hx@2nfd5gqvxiw7wh)-#o!l8sequadt^8^@=26rr6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
+=======
 PASSWORD = 'yatharth.techfest'
 
+>>>>>>> ebf728e49cddf0728aaae025045fa1c0c76103a2
 ALLOWED_HOSTS = ['44.212.59.103', 'techfest.org', 'rain.techfest.org', '127.0.0.1', 'localhost']
 
 
-# Application definition
+#Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -95,6 +98,8 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+<<<<<<< HEAD
+=======
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
@@ -106,15 +111,29 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #     }
 # }
 
+>>>>>>> ebf728e49cddf0728aaae025045fa1c0c76103a2
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'tfdb',
+        'USER': 'yatharth',
+        'PASSWORD': 'yathath.techfest',
+        'HOST': 'tfdb.cufxluinuzsz.us-east-1.rds.amazonaws.com',
+        'PORT': '3306',
     }
 }
 
+<<<<<<< HEAD
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
+=======
 
 
+>>>>>>> ebf728e49cddf0728aaae025045fa1c0c76103a2
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -150,8 +169,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+<<<<<<< HEAD
+STATIC_URL = 'apo/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'apo/')
+=======
 STATIC_URL = 'apos/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+>>>>>>> ebf728e49cddf0728aaae025045fa1c0c76103a2
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

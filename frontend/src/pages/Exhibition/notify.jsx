@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import notifyMeImage from './NotifyMe.png'; // Import the image file
 import topHighlightsImage from './TopHigh.png';
+// import Border from '../../components/DoubleBorder/doubleborder';
 
 const NotifyForm = () => {
   const [formData, setFormData] = useState({
@@ -62,16 +63,62 @@ const NotifyForm = () => {
             value={formData.phoneNum}
             onChange={handleChange}
             style={styles.input}
+            pattern="[0-9]*" // Allow only numeric input
+            inputMode="numeric"
           />
         </div>
       </div>
-      <button type="submit" style={styles.button}>Register</button>
+      <button type='submit'><Border Text='Register' width='8vw' height='3vw' fontsize='1.5vw' Color='#DAA520' fontColor='#A7E9FF' family='Forum'/></button>
       <div style={styles.TopHighContainer}>
         <img src={topHighlightsImage} alt="Top Highlights" style={styles.image} />
       </div>
     </form>
   );
 };
+const Border = ({Text, height, width, fontsize, Color, family, fontColor}) => {
+
+    const reactangle1 = {
+        background:'black',
+        height: height,
+        width: width,
+        border: '2px solid #AB8D60',
+        borderColor: Color,
+        position: 'absolute',
+        transform: 'translate(-50%, 0%)',
+        
+    }
+    const reactangle2 = {
+        background:'black',
+        height: height,
+        width: width,
+        border: '2px solid #AB8D60',
+        borderColor: Color,
+        marginLeft: '5px',
+        marginTop: '5px',
+        position: 'absolute',
+        fontSize: fontsize,
+        fontFamily: family,
+        color: fontColor,
+        transform: 'translate(-50%, 0%)',
+    }
+    const reactangle3 = {
+        height: height,
+        width: width,
+        border: '2px solid #AB8D60',
+        borderColor: Color,
+        position: 'absolute',
+        transform: 'translate(-50%, 0%)',
+        zIndex: 2, // Increase the zIndex value to 2
+    }
+
+    return ( 
+        <div className="double_border">
+            <div class="rectangle1" style={reactangle1}></div>
+            <div class="rectangle1" style={reactangle3}></div>
+            <div class="rectangle2" style={reactangle2}>{Text}</div>
+        </div>
+     );
+}
 
 const styles = {
    image: {
@@ -107,7 +154,7 @@ const styles = {
     fontSize: '50px',
     fontWeight: 'bold',
     fontFamily: 'FORUM',
-    color:'#DAA520',
+    color:'#AB8D60',
     textShadow: '0px 0px 10px rgba(218, 165, 32, 0.8)',
   },
   inputContainer: {
@@ -129,24 +176,15 @@ const styles = {
     width: '300px',
     padding: '10px',
     borderRadius: '0px',
-    border: '1.5px solid #DAA520',
+    border: '1.5px solid #AB8D60',
     background: 'black',
     fontSize: '16px',
     color: 'white',
     fontFamily: 'FORUM',
-  },
-  button: {
-    width: '100px',
-    padding: '10px',
-    margin: '5px',
-    borderRadius: '0px',
-    border: '2px solid #DAA520',
-    background: 'black',
-    color: 'white',
-    fontSize: '16px',
-    cursor: 'pointer',
-    fontFamily: 'FORUM',
-  },
+    overflow: 'hidden',
+    /* Hide the increment and decrement buttons */
+    
+},
 };
 
 export default NotifyForm;

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { UserAuth } from "../../contexts/AuthContext";
 import { Frame3 } from "./compi_animation";
 import Technorion from "./technorion";
+import OurReach from "./ourreach";
 const Compi = () => {
 
   const [data, setData] = useState([]);
@@ -46,11 +47,11 @@ const Compi = () => {
   };
 
   return (
-    <div>
+    <div className="competitions">
         {/* <Frame3/> */}
         <Technorion />
-        
-        {card()}
+        <OurReach />
+        {/* {card()} */}
      
     </div>
   );

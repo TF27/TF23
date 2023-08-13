@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../contexts/AuthContext';
 import './navbar.css';
+import debounce from 'lodash.debounce';
 // import {useScroll} from '.../scroll'
 import {useScroll} from './scroll.jsx'
 // import logo from '../../assets/new_logo.png';
@@ -59,11 +60,35 @@ const styles = {
   hidden: {
     visibility: "hidden",
     transition: "all 0.5s",
-    transform: "translateY(-100%)"
-  }
-}
+    transform: "translateY(-100%)",
+  },
+};
 
-const { y, x, scrollDirection } = useScroll();  
+const [scrollDirection, setScrollDirection] = useState("up");
+const [prevScrollY, setPrevScrollY] = useState(0);
+
+const handleScroll = (x) => {
+  const scrollY = window.scrollY;
+  const scrollDirection = prevScrollY < scrollY ? 'down' : 'up';
+  setPrevScrollY(scrollY);
+  setScrollDirection(scrollDirection);
+  // console.log('scrollY', scrollY)
+  // console.log('prevscrollyh', prevScrollY)
+  // console.log(scrollDirection)
+};
+
+
+useEffect(() => {
+  window.addEventListener("scroll", handleScroll);
+  return () => {
+    window.removeEventListener("scroll", handleScroll); 
+  };
+}, []);
+
+useEffect(() => {
+  handleScroll();
+});
+
 
 return (
     <>
@@ -73,7 +98,7 @@ return (
               <img src='#' className='tflogo' alt="Techfest, IIT Bombay"/>
             </a></span>
             <ul className='nav-menu'>
-              <li className='nav-item'><Link className="nav-link" to="/" onClick={handleClick}>
+              <li className='nav-item'><Link className="nav-link" to="/Media" onClick={handleClick}>
                 Media
               </Link></li>
               <li className='nav-item'><Link className="nav-link" to="/history" onClick={handleClick}>

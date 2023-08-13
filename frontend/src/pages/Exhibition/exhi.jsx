@@ -1,12 +1,14 @@
 import WorldMap from "./map";
-import NotifyForm from "./notify"
+import Notify from "../../components/Notify/notify";
+import OurReach from "./ourreach";
 
 const Exhibition =()=>{
     
     return(
-        <div>
-            <NotifyForm/>
+        <div className="Exhibitions">
+            <Notify/>
             <WorldMap/>
+            <OurReach />
         </div>
     )
 }

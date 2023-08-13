@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
-
+/* 
 *{
     padding: 0;
     margin: 0;
@@ -9,18 +9,18 @@
     font-family: 'Poppins', sans-serif;
     /* font-weight: 700; */
     /* scroll-behavior: smooth; */
-}
+/* }
 
 body{
     /* background:url(body.png); */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
-    margin-top: 15%;    
-}
+    /* margin-top: 15%;     */
+
 
 header{
-    background-color: white;
+    background-color: black;
     background-image: linear-gradient(#1D2526, #264138);
     /* position:relative; */
     /* width: 100vb; */
@@ -174,4 +174,8 @@ a{
     .nav-menu.active{
         right: 0;
     }
+}
+
+.competitions{
+    background: black;
 }

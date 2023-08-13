@@ -1,0 +1,67 @@
+.oureach {
+  position: relative;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.our-reach {
+  font-size: 40px;
+}
+
+.prev-stats {
+  position: relative;
+  top: 20px;
+}
+
+.skill {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.circle {
+  margin-bottom: 30px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(#00000078, #00000000 75%);
+  /*background-image: radial-gradient(#00000075, #00000030 80%);*/
+}
+
+.reach {
+  width: 100%;
+}
+
+svg {
+  margin: 0;
+}
+
+circle {
+  /* fill: black; */
+  stroke: url(#GradientColor);
+  stroke-width: 5px;
+  stroke-dasharray: 608;
+  stroke-dashoffset: 608;
+  color: white;
+}
+
+svg text {
+  /* transform: rotate(270deg); */
+  font-size: 36px;
+  font-style: normal;
+  line-height: 36px;
+  width: 74px;
+  height: 36px;
+  /* transform: translate(246px,-12px); */
+}
+
+@keyframes anime {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.wgat {
+  font-size: 30px;
+}
