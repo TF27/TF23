@@ -10,8 +10,14 @@ import Reg from './pages/Compi/Compi_Internal/Reg';
 import Create_Team from './pages/Compi/Compi_Internal/Teams/create_team';
 import JoinTeam from './pages/Compi/Compi_Internal/Teams/join_team';
 import Gallery from './pages/gallery/gallery';
-import Gallery_prop from './pages/gallery/specific/gallery_prop';
 import Workshop from './pages/workshop/home';
+
+import Lecture_gal from './pages/gallery/specific/lecture';
+import Exhibition_gal from './pages/gallery/specific/exhibiton';
+import Ozone_gal from './pages/gallery/specific/ozone';
+import Compi_gal from './pages/gallery/specific/compi';
+import Techno_gal from './pages/gallery/specific/techno';
+import Robowar_gal from './pages/gallery/specific/Robowar';
 
 function App() {
     return (
@@ -32,7 +38,12 @@ function App() {
                         <Route path='competitions/:compiName/joinTeam' element={<JoinTeam  />} />
 
                         <Route path='/gallery' element={<Gallery/>} />
-                        <Route path='/gallery/lectures' element={<Gallery_prop/>} />    
+                        <Route path='/gallery/lectures' element={<Lecture_gal/>} />    
+                        <Route path='/gallery/exhibition' element={<Exhibition_gal/>} /> 
+                        <Route path='/gallery/ozone' element={<Ozone_gal/>} /> 
+                        <Route path='/gallery/compi' element={<Compi_gal/>} /> 
+                        <Route path='/gallery/robowars' element={<Robowar_gal/>} /> 
+                        <Route path='/gallery/technoholix' element={<Techno_gal/>} /> 
                     </Routes>
                 </AuthContextProvider>
             </Router>
