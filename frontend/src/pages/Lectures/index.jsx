@@ -1,7 +1,7 @@
 import Notify from "../../components/Notify/notify";
 import WorldMap from "./map";
 import bf from './assets/lectbg.png';
-import OurReach from "../../components/OurReach/ourreach";
+import OurReach from "../../components/OurReach/ourreach1";
 
 const Lectures = () => {
 

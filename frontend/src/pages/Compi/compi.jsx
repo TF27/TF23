@@ -48,7 +48,7 @@ const Compi = () => {
 
   return (
     <div className="competitions">
-        {/* <Frame3/> */}
+        <Frame3/>
         <Technorion />
         <OurReach />
         {/* {card()} */}

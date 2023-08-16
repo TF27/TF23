@@ -14,6 +14,7 @@ import dot from './static/card/dot.png';
 import chand from './static/card/chand.png';
 import espark from './static/card/espark.png';
 import fspark from './static/card/fspark.png';
+import WhatsappShareButton from '../../components/share/whatsapp';
 
 
 // Here is the code
@@ -45,24 +46,32 @@ const Technorion = () => {
     const zonals = data.filter(item => item.genre === '1')
 
     return zonals.map(data => (
-      <div key={data.id} className='col-3'>
+      <div key={data.id} className='col-lg-3 col-md-4 col-sm-6 col-12'>
   
       <div className={styles.compi_card}>
-        {/* <div className={styles.card_rect1}> */}
-          {/* <div className={styles.card_rect2}> */}
+        <div className={styles.card_rect1}></div>
+          <div className={styles.card_rect2}></div>
             <div className={styles.card_tag}>
               <span><img src={dot} alt='dot'/></span>
               <h3>{data.tag}</h3>
               <span><img src={dot} alt='dot'/></span>
             </div>
-            <div className={styles.card_img}><img src={data.img} className={styles.card_img} alt={data.name}/></div>
+            <div className={styles.card_imgo}><img src={data.img} className={styles.card_img} alt={data.name}/></div>
             <div className={styles.card_title}>
               <h3>{data.name}</h3>
               <div className={styles.card_sustitle}>{data.prize} Prize</div>
             </div>
             <div className={styles.card_post}>
               <div className={styles.card_desc}>{data.desc}</div>
-              <div className={styles.card_share}><Border Text='Share' width='7.2vw' height='2.2vw' fontsize='1.1vw' Color='#A7E9FF' fontColor='#A7E9FF' family='Forum'/></div>  
+              <div className={styles.card_share}>
+                <div className={styles.share_border}>
+                  <div className={styles.share_rect1}>
+                    <div className={styles.share_rect2}>
+                      Share
+                    </div>
+                  </div>
+                </div>
+              </div>  
             </div>
             <div className={styles.card_regexp}>
               {data.is_registered ? (<div className={styles.card_reg}>Registered</div>) : (
@@ -70,9 +79,9 @@ const Technorion = () => {
               )}
               <div className={styles.card_exp}><Link to={data.name}>Explore</Link></div>
             </div>
-          {/* </div> */}
-          {/* </div> */}
           </div>
+          {/* </div>
+          </div> */}
       </div>
       
 
@@ -93,8 +102,18 @@ const Technorion = () => {
 
 
     return zonals.map(data => (
-      <div key={data.id} className='col-3'>
-        
+      <div key={data.id} className='col-lg-3'>
+        <div className={styles.card1_cont} onMouseEnter={handleHover} onMouseLeave={handleLeave}>
+          {isHovered ? 
+            <div>
+
+            </div>
+          :
+          <div>
+          
+          </div>
+          }
+        </div>
       </div>
       
 
@@ -102,8 +121,9 @@ const Technorion = () => {
   }
 
   return (
-    <div>
-      <img src={technorion} alt="technorion" className="technorion" />
+    <div className={styles.Technorion}>
+      <h1>TECHNORION</h1>
+      {/* <img src={technorion} alt="technorion" className="technorion" /> */}
       <div className={styles.desc}>
         <p className={styles.descT}>Welding is a critical activity for manufacturing. The threshold for welding error is the bare minimum. Build an ML model to predict welding defects in the materials by developing algorithms using process parameters such as ambient temperature, welding travel speed, etc.You can also perform advanced analytics on welder performance using machine data and welder details.</p>
       </div>
@@ -112,7 +132,7 @@ const Technorion = () => {
         <div className='container' style={{ maxWidth: "90%" }}>
           <div className='row'>
             {card()}
-            <Card1 />
+            {/* <Card1 /> */}
           </div>
         </div>
       </div>
