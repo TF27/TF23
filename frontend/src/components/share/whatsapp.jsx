@@ -13,7 +13,7 @@ const WhatsappShareButton = () => {
     <div>
       <h3>Whatsapp sharing</h3>
       <button onClick={handleShare} className="mobileShow">
-        <Border Text='Share' width={90} height={40} fontSize={20} />
+        Share
       </button>
     </div>
   );

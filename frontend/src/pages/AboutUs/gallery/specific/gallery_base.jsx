@@ -1,21 +1,23 @@
-import img1 from '../../../../assets/gallery/link.png'
-import img2 from '../../../../assets/gallery/link.png'
-import img3 from '../../../../assets/gallery/link.png'
-import img4 from '../../../../assets/gallery/link.png'
-import img5 from '../../../../assets/gallery/link.png'
-import img6 from '../../../../assets/gallery/link.png'
-import img7 from '../../../../assets/gallery/link.png'
-import img8 from '../../../../assets/gallery/link.png'
-import img9 from '../../../../assets/gallery/link.png'
-import img10 from '../../../../assets/gallery/link.png'
 import left from "../../../../assets/gallery/ArrowLeft.svg"
 import right from "../../../../assets/gallery/ArrowRight.svg"
 import back from "../../../../assets/gallery/back.svg"
+
 import React, { useState } from 'react'
-import './corousel.css'
+import './gallery_base.css'
 import { Link} from 'react-router-dom';
 
-const Slider = () => {
+const Gal_base = ({
+  i1,
+  i2,
+  i3,
+  i4,
+  i5,
+  i6,
+  i7,
+  i8,
+  i9,
+  i10
+}) => {
     const [current, setCurrent] = useState(2);
     const [prev2, setPrev2] = useState(0);
     const [prev, setPrev] = useState(1);
@@ -94,34 +96,34 @@ const Slider = () => {
         <div className="gallery_slider">
             <div className="slides">
                 <div className="slide prev2">
-                    <img src={img1} className="Glimpse" alt="Technoholix stage, Techfest IIT Bombay Asia's Largest Science and Technology Festival" />
+                    <img src={i1} className="Glimpse" alt="Technoholix stage, Techfest IIT Bombay Asia's Largest Science and Technology Festival" />
                 </div>
                 <div className="slide prev">
-                    <img src={img2} className="Glimpse" alt="His Holiness The 14th Dalai Lama at Techfest IIT Bombay" />
+                    <img src={i2} className="Glimpse" alt="His Holiness The 14th Dalai Lama at Techfest IIT Bombay" />
                 </div>
                 <div className="slide active">
-                    <img src={img3} className="Glimpse" alt="Guinness book of world record by Techfest IIT Bombay most LED lights lit Students holding lights" />
+                    <img src={i3} className="Glimpse" alt="Guinness book of world record by Techfest IIT Bombay most LED lights lit Students holding lights" />
                 </div>
                 <div className="slide next">
-                    <img src={img4} className="Glimpse" alt="handling drone at Techfest IIT Bombay platform for Science and Technology enthusiasts" />
+                    <img src={i4} className="Glimpse" alt="handling drone at Techfest IIT Bombay platform for Science and Technology enthusiasts" />
                 </div>
                 <div className="slide next2">
-                    <img src={img5} className="Glimpse" alt="International Robowars arena Techfest IIT Bombay with audience" />
+                    <img src={i5} className="Glimpse" alt="International Robowars arena Techfest IIT Bombay with audience" />
                 </div>
                 <div className="slide ">
-                    <img src={img6} className="Glimpse" alt= "International DJ artists Maddix and Krispie at EDM night of Techfest IIT Bombay" />
+                    <img src={i6} className="Glimpse" alt= "International DJ artists Maddix and Krispie at EDM night of Techfest IIT Bombay" />
                 </div>
                 <div className="slide ">
-                    <img src={img7} className="Glimpse" alt="Social Initiative spread awareness among youth college students by Techfest IIT Bombay on Sanitation Health Education" />
+                    <img src={i7} className="Glimpse" alt="Social Initiative spread awareness among youth college students by Techfest IIT Bombay on Sanitation Health Education" />
                 </div>
                 <div className="slide ">
-                    <img src={img8} className="Glimpse" alt="Battlebots fight International Robowars audience watching" />
+                    <img src={i8} className="Glimpse" alt="Battlebots fight International Robowars audience watching" />
                 </div>
                 <div className="slide ">
-                    <img src={img9} className="Glimpse" alt="International teams participated competitions at Techfest IIT Bombay" />
+                    <img src={i9} className="Glimpse" alt="International teams participated competitions at Techfest IIT Bombay" />
                 </div>
                 <div className="slide ">
-                    <img src={img10} className="Glimpse" alt="Entry or welcome gate ambience in IIT Bombay campus during Techfest" />
+                    <img src={i10} className="Glimpse" alt="Entry or welcome gate ambience in IIT Bombay campus during Techfest" />
                 </div>
             </div>
             <div className="button-container">
@@ -133,4 +135,6 @@ const Slider = () => {
     );
 }
  
-export default Slider;
+export default Gal_base;
+
+
