@@ -13,7 +13,7 @@ import Create_Team from './pages/Compi/Compi_Internal/Teams/create_team';
 import JoinTeam from './pages/Compi/Compi_Internal/Teams/join_team';
 import Gallery from './pages/AboutUs/gallery/gallery';
 import Workshop from './pages/workshop/home';
-import Lectures  from './pages/Lectures/index';
+
 // const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 import Lecture_gal from './pages/AboutUs/gallery/specific/lecture';
 import Exhibition_gal from './pages/AboutUs/gallery/specific/exhibiton';
