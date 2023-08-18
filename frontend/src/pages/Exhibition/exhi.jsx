@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
-import WorldMap from './map';
-import NotifyForm from './notify';
-import backgroundImage from './back.png'; // Import the background image
-
+import backgroundImage from './assets/back.png'; // Import the background image
+import Notify from "../../components/Notify/notify";
+import OurReach from "./ourreach";
+import WorldMap from "./map";
 const Exhibition = () => {
   const styles = {
     container: {
@@ -24,27 +23,11 @@ const Exhibition = () => {
 
   return (
     <div style={styles.container}>
-      <NotifyForm />
+      <Notify />
       <WorldMap />
     </div>
   );
 };
 
 export default Exhibition;
-=======
-import WorldMap from "./map";
-import Notify from "../../components/Notify/notify";
-import OurReach from "./ourreach";
 
-const Exhibition =()=>{
-    
-    return(
-        <div className="Exhibitions">
-            <Notify/>
-            <WorldMap/>
-            <OurReach />
-        </div>
-    )
-}
-export default Exhibition;
->>>>>>> b76224a0030c07ef3d7f1ac690aad38799866b6d

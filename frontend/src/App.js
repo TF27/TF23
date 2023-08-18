@@ -15,7 +15,8 @@ import Gallery_prop from './pages/AboutUs/gallery/specific/gallery_prop';
 import Workshop from './pages/workshop/home';
 // import Lectures  from './pages/Lectures/index';
 const Lectures = React.lazy(() => import('./pages/Lectures/index'));
-const Media = React.lazy(() => import('./pages/AboutUs/Media/index'))
+const Media = React.lazy(() => import('./pages/AboutUs/Media/index'));
+const History = React.lazy(() => import('./pages/AboutUs/history/history'));
 
 function App() {
     return (
@@ -37,6 +38,11 @@ function App() {
                         <Route path='/Media' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <Media/>
+                        </React.Suspense> }/>
+
+                        <Route path='/History' element={
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                        <History/>
                         </React.Suspense> }/>
 
                         <Route path='competitions/:compiName' element={<Internal />} />

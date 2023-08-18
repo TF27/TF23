@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import europe from './europe.jpg' //import whatever images we need and add them in the cityData beside a image tag
-import worldmap from './map.png';
+import europe from './assets/europe.jpg' //import whatever images we need and add them in the cityData beside a image tag
+import worldmap from './assets/map.png';
 import './WorldMap.css'; // Import CSS file
 import './DropdownMenu.css';
 
@@ -22,12 +22,8 @@ const WorldMap = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="world-map-container" style={{ backgroundColor: '', position: 'absolute' ,top:'600px'}}>
-=======
     <div className="world-map-container" style={{ position: 'relative' }}>
     <div><h1>TOP HIGHLIGHTS </h1></div>
->>>>>>> b76224a0030c07ef3d7f1ac690aad38799866b6d
       <img src={worldmap} className="mapimage" alt="World Map" />
 
       {cityData.map((city, index) => (
