@@ -14,6 +14,7 @@ import JoinTeam from './pages/Compi/Compi_Internal/Teams/join_team';
 import Gallery from './pages/AboutUs/gallery/gallery';
 import Workshop from './pages/workshop/home';
 
+
 // const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 import Lecture_gal from './pages/AboutUs/gallery/specific/lecture';
 import Exhibition_gal from './pages/AboutUs/gallery/specific/exhibiton';
@@ -21,6 +22,7 @@ import Ozone_gal from './pages/AboutUs/gallery/specific/ozone';
 import Compi_gal from './pages/AboutUs/gallery/specific/compi';
 import Techno_gal from './pages/AboutUs/gallery/specific/techno';
 import Robowar_gal from './pages/AboutUs/gallery/specific/Robowar';
+import Explore from './pages/workshop/components/Explore';
 
 
 
@@ -43,6 +45,7 @@ function App() {
                         <Route path='/competitions' element={<Compi />} />
                         <Route path='/workshops' element={<Workshop/>}/>
                         <Route path='/lectures' element={<Lectures />} />
+                        <Route path='/explore' element={<Explore/>} />
                         {/* <Route path='/lectures' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <Lectures/>

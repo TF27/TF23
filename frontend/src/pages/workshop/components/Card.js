@@ -1,9 +1,11 @@
 import React,{useState} from 'react';
-import cardview from './cardview.module.css'
+import cardview from './cardview.module.css';
 
 const Card = ({card}) => {
+ 
     const [isHovered, setIsHovered] = useState(false);
-
+    
+   
   const handleHover = () => {
     setIsHovered(true);
   };
@@ -27,7 +29,8 @@ const Card = ({card}) => {
             </div>
             <div className={cardview.buttonwrapper}> 
                 <button className={`${cardview.btn} ${cardview.outline}`}> REGISTER </button>
-                <button className={`${cardview.btn} ${cardview.outline}`}> EXPLORE </button>
+                <button  className={`${cardview.btn} ${cardview.outline}`}>EXPLORE</button>
+                
             </div>
         </div>
     </div>
@@ -43,7 +46,7 @@ const Card = ({card}) => {
          </div>
          <div className={cardview.buttonwrapper}> 
              <button className={`${cardview.btn} ${cardview.outline}`}> REGISTER </button>
-             <button className={`${cardview.btn} ${cardview.outline}`}> EXPLORE </button>
+             <button   className={`${cardview.btn} ${cardview.outline}`}>EXPLORE</button>
          </div>
      </div>
  </div>
