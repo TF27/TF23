@@ -22,14 +22,14 @@ const ImageTwo = () => {
 
   return(
     <div className={parallax.image} style={{ transform: `translateY(-${scrollPosition * 0.8}px)` }}>
-      <div class="row">
+      <div className={parallax.summitRow}>
         {/* <div class="column">
           <img src="img_snow.jpg" alt="Snow" style="width:100%">
         </div> */}
-        <div class="column">
+        <div className={parallax.summitColumn}>
           <img src={sum1} alt="FinTech"  />
         </div>
-        <div class="column">
+        <div className={parallax.summitColumn}>
           <img src={sum2} alt="Industry 4.0" />
         </div>
       </div>

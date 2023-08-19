@@ -59,17 +59,7 @@
     /* display: flex; */
 }
 
-.column {
+.summitRow{
   display: flex;
-  width: 50%;
-  padding: 5px;
 }
 
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-  
