@@ -40,11 +40,13 @@ img{
 
 
 .recog-container{
+    max-width: 80%;
     width: fit-content;
     margin: 0;
 }
 
 .leader-container{
+    max-width: 80%;
     width: fit-content;
     margin: 0;
 }
@@ -54,7 +56,7 @@ img{
 }
 
 .leader-head{
-    scale: 1.54;
+    scale: 1.7;
     width: 30vw;
 }
 
@@ -62,7 +64,6 @@ img{
     display: flex;
     margin-top: -10vw;
     flex-direction: row;
-    /* gap: -1vw; */
 }
 
 .letterpm{
@@ -70,36 +71,35 @@ img{
     width: 35vw;
     height: 48vw;
     flex-shrink: 0;
-    scale: 0.8;
-    /* scale: 1.4; */
-    /* height: 711px; */
+    scale: 0.7;
 }
 
 .guinness{
     width: 35vw;
     height: 48vw;
     flex-shrink: 0;
-    scale: 0.8;
+    scale: 0.7;
     margin-top: -10vw;
 }
 .apjk{
-    margin-top: 2.6vw;
-    margin-bottom: -3vw;
-    scale: 0.8;
+    margin-top: 5vw;
+    margin-bottom: -4vw;
+    scale: 0.75;
     width: 30vw;
-    height: 23vw;
+    height: 21vw;
     flex-shrink: 0;
 }
 
 .twitter{
-    scale: 0.8;
+    scale: 0.75;
     width: 30vw;
-    height: 23vw;
+    height: 21vw;
     flex-shrink: 0;
 }
 
 .horizontal-flex{
-    margin-right: 3vw;
+    /* max-width: 80%; */
+    margin-right: 4vw;
     display: flex;
     /* gap: 30px; */
     flex-direction: column;
