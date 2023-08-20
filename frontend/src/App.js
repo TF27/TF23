@@ -30,7 +30,6 @@ import Explore from './pages/workshop/components/Explore';
 const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 const Media = React.lazy(() => import('./pages/AboutUs/Media/index'));
 const History = React.lazy(() => import('./pages/AboutUs/history/history'));
-const Summit = React.lazy(() => import('./pages/Summit/home'));
 
 
 function App() {
@@ -46,7 +45,7 @@ function App() {
                         <Route path='/competitions' element={<Compi />} />
                         <Route path='/workshops' element={<Workshop/>}/>
                         <Route path='/lectures' element={<Lectures />} />
-                        <Route path='/explore' element={<Explore/>} />
+                        <Route path='/workshops/:cardName' element={<Explore/>} />
                         {/* <Route path='/lectures' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <Lectures/>
@@ -60,11 +59,6 @@ function App() {
                         <Route path='/History' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <History/>
-                        </React.Suspense> }/>
-
-                        <Route path='/summits' element={
-                            <React.Suspense fallback={<div>Loading...</div>}>
-                        <Summit/>
                         </React.Suspense> }/>
 
                         <Route path='competitions/:compiName' element={<Internal />} />

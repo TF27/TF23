@@ -101,7 +101,7 @@ class compi_team(models.Model):
 # Workshops
 
 class Workshop(models.Model):
-    # id = models.AutoField(primary_key=True)
+    #id = models.AutoField(primary_key=True)
     genre = models.CharField(max_length=50 ,choices=[
         ('1','Zonals'),
         ('2','Compis'),

@@ -5,10 +5,9 @@ import ImageTwo from './components/ImageTwo';
 
 function Workshop() {
   return (
-    <div>
+    <div style={{height:'100vh'}} >
       <ImageOne />
       <ImageTwo/>
-     
     </div> 
   );
 }
