@@ -23,6 +23,7 @@ import Compi_gal from './pages/AboutUs/gallery/specific/compi';
 import Techno_gal from './pages/AboutUs/gallery/specific/techno';
 import Robowar_gal from './pages/AboutUs/gallery/specific/Robowar';
 import Explore from './pages/workshop/components/Explore';
+import Recognition from './pages/recognition/Recognition';
 
 
 
@@ -47,6 +48,7 @@ function App() {
                         <Route path='/workshops' element={<Workshop/>}/>
                         <Route path='/lectures' element={<Lectures />} />
                         <Route path='/explore' element={<Explore/>} />
+                        <Route path='/recognition' element={<Recognition/>} />
                         {/* <Route path='/lectures' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <Lectures/>
