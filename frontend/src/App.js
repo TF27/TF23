@@ -25,7 +25,7 @@ import Robowar_gal from './pages/AboutUs/gallery/specific/Robowar';
 
 
 // import Lectures  from './pages/Lectures/index';
-const Lectures = React.lazy(() => import('./pages/Lectures/index'));
+// const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 const Media = React.lazy(() => import('./pages/AboutUs/Media/index'));
 const History = React.lazy(() => import('./pages/AboutUs/history/history'));
 
