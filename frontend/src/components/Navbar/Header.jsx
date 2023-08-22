@@ -1,12 +1,37 @@
 import React, {useState} from "react";
 import {Link} from 'react-router-dom';
 import './Header.css';
+import { UserAuth } from "../../contexts/AuthContext";
 
 const Header = () => {
 
     const [openMenu, setOpenMenu] = useState(false);
     const [scrollDirection, setScrollDirection] = useState('up');
     const [lastScrollTop, setLastScrollTop] = useState(0);
+
+    const { googleSignIn, user, logOut } = UserAuth();
+    const handleGoogleSignIn = async () => {
+        try{
+            await googleSignIn();
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    const handleSignOut = async () => {
+        try{
+            await logOut();
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    const username = user?.displayName;
+    let name = '';
+    if (username != null) {
+      name = username.split(' ')[0];
+    }
+  
 
     const handleScroll = () => {
         const scrollY = window.scrollY;
@@ -44,6 +69,20 @@ const Header = () => {
                     </li>
                     <li onClick={showMenu}>
                         <Link to='/summits'>Summits</Link>
+                    </li>
+                    <li>
+                        {user?.displayName ? (
+                            <div>
+                                <button onClick={handleSignOut} className="item1" onMouseEnter={(e)=> e.target.innerText = "Sign Out"} onMouseLeave={(e)=> e.target.innerText = name}>
+                                Logout
+                                </button>
+                                
+                            </div>
+                            ) : (
+                            <button onClick={handleGoogleSignIn} className="item2">
+                                Sign In
+                            </button>
+                            )}
                     </li>
                 </ul>
             </nav>

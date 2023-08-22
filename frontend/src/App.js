@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './components/Navbar/Header';
 import Navbar from './components/Navbar/Navbar';
 import { AuthContextProvider } from './contexts/AuthContext';
+import Protected from './contexts/Protected';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import Home from './pages/Home/home';
 import Exhibition from './pages/Exhibition/exhi';
@@ -25,7 +26,7 @@ import Robowar_gal from './pages/AboutUs/gallery/specific/Robowar';
 
 
 // import Lectures  from './pages/Lectures/index';
-const Lectures = React.lazy(() => import('./pages/Lectures/index'));
+// const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 const Media = React.lazy(() => import('./pages/AboutUs/Media/index'))
 
 
@@ -53,9 +54,9 @@ function App() {
                         </React.Suspense> }/>
 
                         <Route path='competitions/:compiName' element={<Internal />} />
-                        <Route path='competitions/:compiName/register' element={<Reg />} />
-                        <Route path='competitions/:compiName/createTeam' element={<Create_Team  />} />
-                        <Route path='competitions/:compiName/joinTeam' element={<JoinTeam  />} />
+                        <Route path='competitions/:compiName/register' element={<Protected><Reg /></Protected>} />
+                        <Route path='competitions/:compiName/createTeam' element={<Protected><Create_Team  /></Protected>} />
+                        <Route path='competitions/:compiName/joinTeam' element={<Protected><JoinTeam  /></Protected>} />
 
                         <Route path='/gallery' element={<Gallery/>} />
                         <Route path='/gallery/lectures' element={<Lecture_gal/>} />    

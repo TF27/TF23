@@ -1,0 +1,26 @@
+.dissolveTeam .dis_team{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.dissolveTeam .dis_rect1{
+    height: 40px;
+    width: 190px;
+    border: 1px solid #fff;
+    position: absolute;
+}
+.dissolveTeam .dis_rect2{
+    height: 40px;
+    width: 190px;
+    border: 1px solid #fff;
+    margin-left: 16px;
+    margin-top: 7px;
+    position: absolute;
+    color: #fff;
+    font-family: Forum;
+    letter-spacing: 0.2em;
+    font-size: 18px;
+}
+
+

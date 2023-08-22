@@ -3,15 +3,15 @@ import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import { UserAuth } from '../../../contexts/AuthContext'
 import styles from './internal.module.css';
-import DissolveTeamModal from './Teams/dissolve_team';
-import LeaveTeamModal from './Teams/leave_team';
 import Cozmo from './Competitions/cozmo';
-import Border from '../../../components/DoubleBorder/doubleborder';
-
+import DissolveTeam from './Teams/dissolveTeam';
+import LeaveTeam from './Teams/leaveTeam';
 // Import images
 import backimg1 from './../static/img/exp_bg.png';
 import backimg2 from './../static/img/img7.png';
-import Mesh from './Competitions/mesh';
+import Meshmerize from './Competitions/Meshmerize';
+
+
 
 const Internal = () => {
   const { compiName } = useParams();
@@ -36,45 +36,72 @@ const Internal = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [google_id]);
 
   const information = () => {
     const card_data = data.filter(item => item.name === compiName)
 
     return card_data.map(data => (
 
-      <div className={styles.wdata}>
-        <div>
+      <div className={`container ${styles.wdata}`}>
+      <div className='row'>
+        <div className={`col-12 col-lg-4 ${styles.leftdata}`}>
           <img src={data.img} alt={compiName} className={styles.compi_img}/>
-          <h3 className={styles.compi_prize}>{data.prize} PRIZE</h3>
+          <h3 className={styles.compi_prize}> INR {data.prize} PRIZE</h3>
           <div className={styles.statement}>
-          <a href={ProblemStatements} target='_blank' rel='noopener noreferrer'>Problem Statement</a>
+            <div className={styles.stat_rect1}></div>
+            <div className={styles.stat_rect2}><a href={ProblemStatements} target='_blank' rel='noopener noreferrer'>Problem Statement</a></div>
           </div>
         </div>
-        <div>
+        <div className={`col-12 col-lg-8 ${styles.rightdata}`}>
           <div className={styles.sponsor}>
-            {data.sponsorImg && <h3>Sponsored by <img src={data.sponsorImg} alt='Sponsor' /></h3>}
+            {data.sponsorImg && <h3>Sponsored by <img src={data.sponsorImg} alt='Sponsor' className={styles.sponsorImg} /></h3>}
           </div>
           {compiName === 'Cozmo' && <Cozmo />}
-          {compiName === 'Mesh' && <Mesh />}
+          {compiName === 'Meshmerize' && <Meshmerize />}
           <div className={styles.team_reg}>
-            {data.is_team_registered ? (
+          {data.is_team_leader ? (
               <div>
-                <LeaveTeamModal />
-                <DissolveTeamModal />
+                <DissolveTeam />
               </div>
-            ) : (
-              data.is_registered ? (
+              ) : data.is_parti ? (
                 <div>
-                  <Link to={`createTeam`}>Create Team</Link><br />
-                  <Link to={`joinTeam`}>Join Team</Link><br />
-                  <Link to={`createTeam`}>Single Parti</Link>
+                  <LeaveTeam />
+                </div>
+              ) : data.is_registered ? (
+                <div styles={styles.lolReg}>
+                  You have registered successfully!
+                <div className={styles.compi_team}>
+                  <div className={styles.create_team}>
+                    <div className={styles.create_rect1}></div>
+                    <div className={styles.create_rect2}>
+                      <Link to={`createTeam`}>Create Team</Link>
+                    </div>
+                  </div>
+                  <div className={styles.join_team}>
+                    <div className={styles.join_rect1}></div>
+                    <div className={styles.join_rect2}>
+                      <Link to={`joinTeam`}>Join Team</Link>
+                    </div>
+                  </div>
+                  <div className={styles.single_team}>
+                    <div className={styles.single_rect1}></div>
+                    <div className={styles.single_rect2}>
+                      <Link to={`createTeam`}>Single Participant</Link>
+                    </div>
+                  </div>
+                </div>
                 </div>
               ) : (
-                <p><Link to={`register`}>Register</Link></p>
-              )
-            )}
+                <div className={styles.int_reg}>
+                  <div className={styles.reg_rect1}></div>
+                  <div className={styles.reg_rect2}>
+                    <Link to={`register`}>Register</Link>
+                  </div>
+                </div>
+              )}
           </div>
+        </div>
         </div>
       </div>
     ));
@@ -109,9 +136,11 @@ const Internal = () => {
   return (
     <div className={styles.explore} style={top}>
       <style>{keyframes}</style>
+      <div className={styles.bgitis}>
       <div className={styles.overlay}>
-      <h1 className={styles.heading}> {compiName} </h1>
+        <h1 className={styles.heading}> {compiName} </h1>
         {information()}
+      </div>
       </div>
     </div>
   );
