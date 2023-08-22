@@ -1,0 +1,228 @@
+.background {
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .description {
+    position: absolute;
+    width: 90%; /* Adjust the width as needed */
+    max-width: 56.25rem;
+    height:90%;
+    max-height: 20rem; /* Limit the maximum width */
+    padding: 0px;
+    top: 65%; /* Position relative to the center of the viewport */
+    left: 63%;
+    transform: translate(-50%, -50%); /* Center the element */
+    backdrop-filter: blur(10px);
+    border: 1px solid #000;
+    box-sizing: border-box;
+    
+    border-radius: 6px;
+  }
+  .sponser{
+    position: absolute;
+    width: 90%;
+    max-width: 21rem;
+    height: 90%;
+    max-height: 6rem;
+    padding: 0px;
+    top: 20%;
+    left: 34%;
+    z-index: 4;
+    top: 8rem;
+  }
+  .txt{
+    margin-top: 3rem;
+    font-family: Abhaya Libre SemiBold;
+font-size: 25px;
+font-weight: 400;
+line-height: 42px;
+letter-spacing: 0.1em;
+text-align: left;
+color:#FFF;
+
+  }
+  .desc{
+    font-family: Forum;
+font-size: 30px;
+font-weight: 400;
+line-height: 49px;
+letter-spacing: 0.1em;
+text-align: left;
+color: white;
+margin-top: 2rem;
+margin-left: 2rem;
+margin-right: 1rem;
+margin-bottom: 1rem;
+
+
+
+  }
+  .sponserimage{
+    position: relative;
+    top: -3.5rem;
+    left: 3rem;
+    width: 7rem;
+    height: 3rem;
+  }
+  
+  .image {
+    position: absolute;
+    width: 90%; /* Adjust the width as needed */
+    max-width: 23rem;
+    height:90%;
+    max-height: 23rem; /* Limit the maximum width */
+    padding: 0px;
+    top: 50%; /* Position relative to the center of the viewport */
+    left: 15%;
+    transform: translate(-50%, -50%); /* Center the element */
+    
+    
+  }
+  .imageview{
+    width: 284px;
+    height: 347px;
+    position: absolute;
+    top: 3%;
+    left: 10.5%;
+    border-radius: 26% 26% 0% 0%;
+    z-index: 1;
+  }
+  .imagevie{
+    width: 365px;
+    height: 368px;
+    position: absolute;
+    top: 0%;
+    left: 0.5%;
+    border-radius: 26% 26% 0% 0%;
+    z-index: 2;
+  }
+  
+  .workshop{
+    background-image: url('../img/WORKSHOPS.png');
+    position: relative;
+    
+    top: -33%;
+    width: 100vh;
+    height: 10vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+  }
+  .navbar{
+    position: absolute;
+    width: 90%; /* Adjust the width as needed */
+    max-width: 56.25rem;
+    height:90%;
+    max-height: 3rem; /* Limit the maximum width */
+    padding: 12px;
+    top: 35%; /* Position relative to the center of the viewport */
+    left: 63%;
+    transform: translate(-50%, -50%); /* Center the element */
+    backdrop-filter: blur(10px);
+    border: 1px solid #000;
+    box-sizing: border-box;
+    
+    border-radius: 10px;
+  }
+  .navlinks{
+    list-style: none; /* Remove default list bullet points */
+  padding: 0;
+  }
+  .navlinks li{
+    display: inline-block; /* Display list items horizontally */
+  margin-right: 40px;
+  color: #FFF;
+    font-family: Forum;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.11875rem;
+  }
+  .buttonwrapper1{
+    position: relative;
+    height: 2rem;
+    top: 12rem;
+    left: -40rem;
+}
+.buttonwrapper2{
+    position: relative;
+    height: 2rem;
+    top: 10rem;
+    left: -28rem;
+}
+.buttonwrapper3{
+  position: relative;
+  height: 2rem;
+  top: 10rem;
+  left: -11rem;
+}
+.price{
+  position: relative;
+  height: 2rem;
+  top: 10rem;
+  left: -34rem;
+  
+   
+
+    font-family: Forum;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 53px;
+    letter-spacing: 0em;
+    text-align: left;
+
+
+}
+
+.btn {
+    border:1px #bb9564;
+    padding: 12px 17.9px;
+    font-family: Forum;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 11px;
+    margin-left: 2px;
+    margin-right: 0px;
+    letter-spacing: 0.150em;
+    text-align: left;
+}
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0.292245rem;
+    left: 0.425035rem;
+    right: -0.325035rem;
+    bottom: -0.592245rem;
+    border: 1px solid #bb9564;
+}
+
+
+.outline {
+    background: transparent;
+    color: #bb9564;
+    border: 1px solid #bb9564;
+    transition: all .3s ease;
+}
+
+.outline:hover{
+    transform: scale(1.125);
+    color: #bb9564;
+    border-color: #bb9564;
+    transition: all .3s ease;  
+}
+
+
+
+
+
+
+ 

@@ -1,0 +1,99 @@
+.history-container{
+  background: url('./assets/tv.png');
+  background-repeat: no-repeat;
+  z-index: -1;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+
+.history-item{
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 2s ease-in-out;
+}
+.history-item.visible{
+  opacity: 1;
+}
+.history-image.history {
+  position: absolute;
+  top:0%;
+  width: 100%;
+  height: 75%;
+  background-repeat: no-repeat;
+  transform: translate(0%,0%);
+}
+
+.history-image.edm {
+  position: absolute;
+  top:0%;
+  width: 100%;
+  height: 67%;
+  background-repeat: no-repeat;
+  transform: translate(0%,0%);
+}
+
+.history-image.blurr {
+  position: absolute;
+  top:0%;
+  width: 100%;
+  height: 67%;
+  background-repeat: no-repeat;
+  transform: translate(0%,0%);
+}
+.image-text {
+  position:relative;
+  top:11%;
+  width: 100%;
+  height: 37%;
+  left: -1vw;
+  color: white;
+  font-size: 60px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+  font-family: FORUM;
+  
+}
+.additional-text {
+  position: relative;
+  top:24%;
+  width: 100%;
+  height: 0%;
+  left: 0vw;
+  color: white;
+  font-size: 25px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+  font-family: FORUM;
+}
+
+.history-button {
+  position: absolute;
+  top:80%;
+  width: 100%;
+  height: 6%;
+  background-color:transparent;
+  font-size: 25px;
+  color:white;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  font-family: FORUM;
+  display: flex;
+  justify-content: space-evenly;
+  transform: translate(0%,0%);
+}
+
+.history-image {
+  width: 100%;
+  height: 100vh;
+  background-size: contain;
+  /* background-position: ; */
+  cursor: pointer;
+  position: relative;
+}

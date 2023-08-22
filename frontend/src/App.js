@@ -14,7 +14,8 @@ import Create_Team from './pages/Compi/Compi_Internal/Teams/create_team';
 import JoinTeam from './pages/Compi/Compi_Internal/Teams/join_team';
 import Gallery from './pages/AboutUs/gallery/gallery';
 import Workshop from './pages/workshop/home';
-import Lectures  from './pages/Lectures/index';
+
+
 // const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 import Lecture_gal from './pages/AboutUs/gallery/specific/lecture';
 import Exhibition_gal from './pages/AboutUs/gallery/specific/exhibiton';
@@ -22,12 +23,20 @@ import Ozone_gal from './pages/AboutUs/gallery/specific/ozone';
 import Compi_gal from './pages/AboutUs/gallery/specific/compi';
 import Techno_gal from './pages/AboutUs/gallery/specific/techno';
 import Robowar_gal from './pages/AboutUs/gallery/specific/Robowar';
+import Explore from './pages/workshop/components/Explore';
+import Recognition from './pages/recognition/Recognition';
 
 
 
 // import Lectures  from './pages/Lectures/index';
 // const Lectures = React.lazy(() => import('./pages/Lectures/index'));
+<<<<<<< HEAD
 const Media = React.lazy(() => import('./pages/AboutUs/Media/index'))
+=======
+const Media = React.lazy(() => import('./pages/AboutUs/Media/index'));
+const History = React.lazy(() => import('./pages/AboutUs/history/history'));
+const Summit = React.lazy(() => import('./pages/Summit/home'));
+>>>>>>> db5b767eb19083827a4cd6f3cb7d6c70b609cb7e
 
 
 function App() {
@@ -43,6 +52,8 @@ function App() {
                         <Route path='/competitions' element={<Compi />} />
                         <Route path='/workshops' element={<Workshop/>}/>
                         <Route path='/lectures' element={<Lectures />} />
+                        <Route path='/explore' element={<Explore/>} />
+                        <Route path='/recognition' element={<Recognition/>} />
                         {/* <Route path='/lectures' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <Lectures/>
@@ -51,6 +62,16 @@ function App() {
                         <Route path='/Media' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <Media/>
+                        </React.Suspense> }/>
+
+                        <Route path='/History' element={
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                        <History/>
+                        </React.Suspense> }/>
+
+                        <Route path='/summits' element={
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                        <Summit/>
                         </React.Suspense> }/>
 
                         <Route path='competitions/:compiName' element={<Internal />} />

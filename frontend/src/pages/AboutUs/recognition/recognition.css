@@ -1,0 +1,106 @@
+.recognition{
+    background: url("./Absolutereality.png");
+    /* height: ; */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.recog-header{
+    width: 90vw;    
+}
+
+.recognition-header{
+    height: 20vw;
+    /* width: 40vw !important; */
+    margin: 0;
+    /* padding: -30vw; */
+}
+
+img{
+    margin: 0;
+    padding: 0;
+}
+
+.unesco-cards{
+    /* align-items: center; */
+    justify-content: center;
+    display: flex;
+    gap: 10vw;
+    flex-direction: row;
+}
+
+.recog-frame2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    gap: -1vw;
+}
+
+
+.recog-container{
+    max-width: 80%;
+    width: fit-content;
+    margin: 0;
+}
+
+.leader-container{
+    max-width: 80%;
+    width: fit-content;
+    margin: 0;
+}
+
+.recog-head{
+    width: 30vw;
+}
+
+.leader-head{
+    scale: 1.7;
+    width: 30vw;
+}
+
+.leaders{
+    display: flex;
+    margin-top: -10vw;
+    flex-direction: row;
+}
+
+.letterpm{
+    margin-right: -4vw;
+    width: 35vw;
+    height: 48vw;
+    flex-shrink: 0;
+    scale: 0.7;
+}
+
+.guinness{
+    width: 35vw;
+    height: 48vw;
+    flex-shrink: 0;
+    scale: 0.7;
+    margin-top: -10vw;
+}
+.apjk{
+    margin-top: 5vw;
+    margin-bottom: -4vw;
+    scale: 0.75;
+    width: 30vw;
+    height: 21vw;
+    flex-shrink: 0;
+}
+
+.twitter{
+    scale: 0.75;
+    width: 30vw;
+    height: 21vw;
+    flex-shrink: 0;
+}
+
+.horizontal-flex{
+    /* max-width: 80%; */
+    margin-right: 4vw;
+    display: flex;
+    /* gap: 30px; */
+    flex-direction: column;
+}

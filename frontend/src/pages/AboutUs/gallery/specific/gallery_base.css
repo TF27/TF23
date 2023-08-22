@@ -100,10 +100,63 @@
     right: 40vw;
   }
 
-  .gallery_slider .back-button{
+  .gallery_slider, .gallery_slider .back-button{
     position: fixed;
     top: calc(7rem + 5vh);
     left: 50px;
   }
 
 
+
+  /*================mobile==========================*/
+
+  .gallery_slider_m .slides{
+    display: flex;
+    padding-bottom: 20px;
+  }
+
+  .gallery_slider_m .wrapper{
+    width: 90%;
+    margin: 50px 5% 0 5%;
+  }
+
+  .gallery_slider_m .slides{
+    overflow-x: scroll;
+    scroll-behavior: smooth;  
+  }
+
+  .gallery_slider_m .slides .slide img{
+    max-width: max(25vw, 150px);
+    border-radius: 30% ;
+    height: 60vh;
+    margin: 0 10px 0 10px;
+    transition: .2s ease-in;
+  }
+
+  .gallery_slider_m .slides .active img{
+    max-width: 90vw;
+  }
+
+  .gallery_slider_m .buttons{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+  }
+  .gallery_slider_m .buttons .button{
+    width: 15px;
+    height: 15px;
+    border: 2px white solid;
+    border-radius: 50%;
+    margin: 5px;
+    transition: .2s ease-in;
+  }
+
+  .gallery_slider_m .buttons .active{
+    background-color: white;
+  }
+
+  .gallery_slider_m .back-button{
+    position: absolute;
+    left: 10px;
+    top: 50px;
+  }

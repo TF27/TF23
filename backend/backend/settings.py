@@ -95,6 +95,20 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+<<<<<<< HEAD
+=======
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'tfdb',
+#         'USER': 'yatharth',
+#         'PASSWORD': 'yathath.techfest',
+#         'HOST': 'tfdb.cufxluinuzsz.us-east-1.rds.amazonaws.com',
+#         'PORT': '3306',
+#     }
+# }
+
+>>>>>>> db5b767eb19083827a4cd6f3cb7d6c70b609cb7e
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.sqlite3',
