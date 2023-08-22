@@ -1,11 +1,8 @@
 import React, {useState, useEffect} from "react";
 import {Link} from 'react-router-dom';
 import './Header.css';
-<<<<<<< HEAD
 import { UserAuth } from "../../contexts/AuthContext";
-=======
 import Headroom from 'react-headroom';
->>>>>>> db5b767eb19083827a4cd6f3cb7d6c70b609cb7e
 
 const Header = () => {
 
@@ -13,7 +10,6 @@ const Header = () => {
     // const [scrollDirection, setScrollDirection] = useState('up');
     // const [lastScrollTop, setLastScrollTop] = useState(0);
 
-<<<<<<< HEAD
     const { googleSignIn, user, logOut } = UserAuth();
     const handleGoogleSignIn = async () => {
         try{
@@ -38,20 +34,18 @@ const Header = () => {
     }
   
 
-    const handleScroll = () => {
-        const scrollY = window.scrollY;
-        const scrollDirection = lastScrollTop < scrollY ? 'down' : 'up';
-        setLastScrollTop(scrollY);
-        setScrollDirection(scrollDirection);
-    };
-=======
     // const handleScroll = () => {
     //     const scrollY = window.scrollY;
     //     const scrollDirection = lastScrollTop < scrollY ? 'down' : 'up';
     //     setLastScrollTop(scrollY);
     //     setScrollDirection(scrollDirection);
     // };
->>>>>>> db5b767eb19083827a4cd6f3cb7d6c70b609cb7e
+    // const handleScroll = () => {
+    //     const scrollY = window.scrollY;
+    //     const scrollDirection = lastScrollTop < scrollY ? 'down' : 'up';
+    //     setLastScrollTop(scrollY);
+    //     setScrollDirection(scrollDirection);
+    // };
 
     // Code Added for Navbar Scroll Up
     // useEffect(() => {
