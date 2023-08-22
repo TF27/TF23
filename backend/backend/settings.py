@@ -95,8 +95,6 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-<<<<<<< HEAD
-=======
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
@@ -108,7 +106,6 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #     }
 # }
 
->>>>>>> db5b767eb19083827a4cd6f3cb7d6c70b609cb7e
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.sqlite3',
