@@ -13,7 +13,7 @@ import Create_Team from './pages/Compi/Compi_Internal/Teams/create_team';
 import JoinTeam from './pages/Compi/Compi_Internal/Teams/join_team';
 import Gallery from './pages/AboutUs/gallery/gallery';
 import Workshop from './pages/workshop/home';
-
+import Summit from './pages/Summit/home.js';
 
 // const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 import Lecture_gal from './pages/AboutUs/gallery/specific/lecture';
@@ -31,7 +31,6 @@ import Legals from './pages/AboutUs/legals';
 const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 const Media = React.lazy(() => import('./pages/AboutUs/Media/index'));
 const History = React.lazy(() => import('./pages/AboutUs/history/history'));
-const Summit = React.lazy(() => import('./pages/Summit/home'));
 
 
 function App() {
@@ -47,6 +46,9 @@ function App() {
                         <Route path='/exhibitions' element={<Exhibition/>}/>
                         <Route path='/competitions' element={<Compi />} />
                         <Route path='/workshops' element={<Workshop/>}/>
+                        <Route path='/lectures' element={<Lectures />} />
+                        <Route path='/workshops/:cardName' element={<Explore/>} />
+                        {/* <Route path='/lectures' element={
                         {/* <Route path='/lectures' element={<Lectures />} /> */}
                         <Route path='/explore' element={<Explore/>} />
                         <Route path='/recognition' element={<Recognition/>} />
