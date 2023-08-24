@@ -9,7 +9,7 @@ const Meshmerize = () => {
       setActiveCity(cityName);
     }
 
-        const data = {
+      const data = {
         title: "FAQs",
         rows: [
           {

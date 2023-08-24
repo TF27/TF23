@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
-import { UserAuth } from '../../../contexts/AuthContext'
+import { UserAuth } from '../../../contexts/AuthContext';
 import styles from './internal.module.css';
 import Cozmo from './Competitions/cozmo';
 import DissolveTeam from './Teams/dissolveTeam';

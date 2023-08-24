@@ -168,3 +168,96 @@
     display: none;
 }
 
+.whatuOpen{
+    background: #fff;
+}
+
+.whatu{
+    display: flex;
+    margin-top: 60px;
+}
+.whatu_rect1{
+    height: 40px;
+    width: 120px;
+    border: 1px solid #fff;
+    position: absolute;
+}
+.whatu_rect2{
+    height: 40px;
+    width: 120px;
+    border: 1px solid #fff;
+    margin-left: 8px;
+    margin-top: 7px;
+    position: absolute;
+    color: #fff;
+    font-family: Forum;
+    letter-spacing: 0.2em;
+    font-size: 18px;
+}
+
+.whatd{
+    display: none;
+}
+
+.whatdOpen{
+    display: flex;
+    margin-top: 60px;
+    height: 300px;
+    
+}
+
+.whatd_rect1{
+    height: 300px;
+    width: 88%;
+    border: 1px solid #fff;
+    position: absolute;
+}
+.whatd_rect2{
+    height: 300px;
+    width: 88%;
+    border: 1px solid #fff;
+    margin-left: 8px;
+    margin-top: 7px;
+    position: absolute;
+    color: #fff;
+    font-family: Forum;
+    letter-spacing: 0.2em;
+    font-size: 18px;
+    overflow-y: scroll;
+    padding: 20px 10px;
+    text-align: left;
+}
+.whatd_rect2::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .whatd_rect2::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px none; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  .whatd_rect2::-webkit-scrollbar-thumb {
+    background: none; 
+
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  .whatd_rect2::-webkit-scrollbar-thumb:hover {
+    background: none; 
+  }
+
+  .faq_answer {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.faq_answer_open {
+    max-height: 1000px; /* Adjust this value to a sufficiently large value */
+    opacity: 1;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}

@@ -1,20 +1,19 @@
 import './App.css';
 import React from 'react';
 import Header from './components/Navbar/Header';
-import Navbar from './components/Navbar/Navbar';
 import { AuthContextProvider } from './contexts/AuthContext';
 import Protected from './contexts/Protected';
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Home from './pages/Home/home';
 import Exhibition from './pages/Exhibition/exhi';
 import Compi from './pages/Compi/compi';
-import Internal from './pages/Compi/Compi_Internal/internal';
+import CompiInternal from './pages/Compi/Compi_Internal/index';
 import Reg from './pages/Compi/Compi_Internal/Reg';
 import Create_Team from './pages/Compi/Compi_Internal/Teams/create_team';
 import JoinTeam from './pages/Compi/Compi_Internal/Teams/join_team';
 import Gallery from './pages/AboutUs/gallery/gallery';
 import Workshop from './pages/workshop/home';
-
+import Summit from './pages/Summit/home.js';
 
 // const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 import Lecture_gal from './pages/AboutUs/gallery/specific/lecture';
@@ -25,17 +24,17 @@ import Techno_gal from './pages/AboutUs/gallery/specific/techno';
 import Robowar_gal from './pages/AboutUs/gallery/specific/Robowar';
 import Explore from './pages/workshop/components/Explore';
 import Recognition from './pages/AboutUs/recognition/Recognition';
-
+import Legals from './pages/AboutUs/legals';
 
 
 // import Lectures  from './pages/Lectures/index';
 const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 const Media = React.lazy(() => import('./pages/AboutUs/Media/index'));
 const History = React.lazy(() => import('./pages/AboutUs/history/history'));
-const Summit = React.lazy(() => import('./pages/Summit/home'));
 
 
 function App() {
+
     return (
         <div className="App">
             <Router>
@@ -47,6 +46,9 @@ function App() {
                         <Route path='/exhibitions' element={<Exhibition/>}/>
                         <Route path='/competitions' element={<Compi />} />
                         <Route path='/workshops' element={<Workshop/>}/>
+                        <Route path='/lectures' element={<Lectures />} />
+                        <Route path='/workshops/:cardName' element={<Explore/>} />
+                        {/* <Route path='/lectures' element={
                         {/* <Route path='/lectures' element={<Lectures />} /> */}
                         <Route path='/explore' element={<Explore/>} />
                         <Route path='/recognition' element={<Recognition/>} />
@@ -70,7 +72,10 @@ function App() {
                         <Summit/>
                         </React.Suspense> }/>
 
-                        <Route path='competitions/:compiName' element={<Internal />} />
+                        <Route path='/legals' element={<Legals /> } />
+                        
+
+                        <Route path='competitions/:compiName' element={<CompiInternal />} />
                         <Route path='competitions/:compiName/register' element={<Protected><Reg /></Protected>} />
                         <Route path='competitions/:compiName/createTeam' element={<Protected><Create_Team  /></Protected>} />
                         <Route path='competitions/:compiName/joinTeam' element={<Protected><JoinTeam  /></Protected>} />

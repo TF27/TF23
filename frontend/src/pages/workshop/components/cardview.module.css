@@ -1,7 +1,8 @@
 
 .container {
     background-image: url('../img/image1.png');
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     border-radius: 1px;
     padding: 38px;  
     filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5));
@@ -10,8 +11,8 @@
     align-items: center;
     justify-content:center;
     text-align: center;
-    width: 216.74px;
-    height: 249px;
+    width: 270px;
+    height: 340px;
     transition: transform 0.3s ease;
 }
 
@@ -20,8 +21,9 @@
 }
 
 .overlay{
-    width: 9rem;
-    height: 8rem;
+    width: 12rem;
+    height: 10.5rem;
+    margin-left: 2rem;
     font-family: Forum;
     font-size: 15px;
     color: white;
@@ -42,54 +44,65 @@
 }
 
 .wrapper {
-    width: 8.1rem;
-    height: 11.45rem;
-    margin-top: 2.2rem;
-    margin-left: 2.1rem;
-    margin-right: 2.1rem;
+    width: 11.1rem;
+    height: 12.45rem;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
 }
 
 .bannerimage {
     
-    background-size: cover;
+    background-size: 100% 100%;
     width: 132px;
-    height: 129px;
-    margin-left: 0.18rem;
+    height: 157px;
+    margin-left: 2.9rem;
     margin-top: 0rem;
-    margin-right: 0.18rem;
+    margin-right: 0rem;
     opacity:1;
 }
 
 .two p {
     font-family: Forum;
-    margin-top: 0rem;
-    margin-left: 0rem;
+    margin-top: 0.5rem;
+    margin-left: 2.1rem;
     font-size: 1.1rem;
     font-weight: 200;
     letter-spacing: 0.15em;
     line-height: 1.3rem;
     text-align: center;
     color: #bb9564;
-    width: 133.265px;
+    width: 184.265px;
 }
 
-.buttonwrapper{
-    height: 2rem;
-    margin-top: -1.0rem;
-    margin-left: -0.1rem;
+
+.buttonwrapper1{
+    position: fixed;
+    width: 122.44px;
+    height: 3rem;
+    top: 18.3rem;
+    left: 0.78rem;
+}.buttonwrapper2{
+    position: fixed;
+    width: 122.44px;
+    height: 3rem;
+    top: 18.3rem;
+    left: 8.45rem;
 }
+
 
 .btn {
+    border-right: 1px solid #FFE381;
     border:1px #bb9564;
-    padding: 7.7px 17.9px;
+    padding: 11.7px 17.9px;
     font-family: Forum;
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 11px;
-    margin-left: 2px;
+    margin-left: 0px;
     margin-right: 0px;
     letter-spacing: 0.175em;
-    text-align: left;
+    text-align: center;
 }
 
 .btn + .btn {
@@ -101,13 +114,6 @@
     color: #bb9564;
     border: 1px solid #bb9564;
     transition: all .3s ease;
-}
-
-.outline:hover{
-    transform: scale(1.125);
-    color: #bb9564;
-    border-color: #bb9564;
-    transition: all .3s ease;  
 }
 
 .fill {
@@ -134,15 +140,15 @@
 .container::before {
     content: "";
     position: absolute;
-    top: 0.492245rem;
+    top: 0.692245rem;
     left: 0.425035rem;
     right: 0.425035rem;
-    bottom: 0.492245rem;
+    bottom: 0.692245rem;
     border: 1px solid #bb9564;
 }
 
 .two{
-    width:13rem ;
+    width:16rem ;
     height:15rem ;
 }
 
@@ -150,8 +156,8 @@
     content: "";
     position: absolute;
     top: 0.32185rem;
-    left: 0.69551rem;
-    right: 0.69551rem;
+    left: 0.78551rem;
+    right: 0.78551rem;
     bottom: 0.32185rem;
     border: 1px solid #bb9564;
 }
