@@ -1,0 +1,108 @@
+.bgitis {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+}
+
+.overlay {
+    position: relative;
+    top: 80px;
+}
+
+.reg_head {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.reg_head img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.head_n {
+    position: relative;
+    top: 28px;
+    left: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.reg_head hr {
+    margin: 0;
+    width: 40vw;
+    opacity: 0.75;
+}
+
+.formLabel {
+    position: absolute;
+    pointer-events: none;
+    /* left: 12px; */
+    /* top: 50%; */
+    transform: translate(10px, 10px);
+    transition: transform 0.2s ease-out, font-size 0.2s ease-out;
+    font-size: 16px;
+    color: #999;
+    z-index: 2;
+}
+
+.floatingLabel {
+    transform: translate(50%, -50%) scale(1.2);
+    font-size: 12px;
+    background: #24202b;
+    color: #fff;
+}
+
+.inputWrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.formInput {
+    color: white;
+    width: 50%;
+    padding: 10px;
+    border: 2px solid #b7aeae;
+    border-radius: 8px;
+    background: rgba(71, 65, 65, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.compiReg form{
+    margin-top: 20px;
+}
+
+.genderOps{
+    border-radius: 8px;
+    background: rgba(71, 65, 65, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    color: black;
+}
+
+.multiWrapper{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 52%;
+}
+
+.multiWrapper .formInput{
+    width: 100%;
+}
+
+.formSubmit{
+    font-size: 18px;
+    background: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 5px 25px;
+}

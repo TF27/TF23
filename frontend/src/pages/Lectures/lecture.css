@@ -1,0 +1,31 @@
+.checkThis h1, h2{
+    font-family: Forum;
+}
+
+.checkThis .difPage{
+    display: flex;
+    justify-content: center;
+}
+
+.checkThis .difPage .check_rect1{
+    height: 40px;
+    width: 120px;
+    border: 1px solid #FFE381;
+    position: absolute;
+}
+
+.checkThis .difPage .check_rect2{
+    height: 40px;
+    width: 120px;
+    border: 1px solid #FFE381;
+    margin-left: 17px;
+    margin-top: 5px;
+    position: relative;
+    font-size: 21px;
+}
+
+.checkThis .difPage a{
+    color: #fff;
+    text-decoration: none;
+    font-family: Forum;
+}

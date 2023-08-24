@@ -88,38 +88,6 @@ const Technorion = () => {
     ));
   };
 
-  const Card1 = () =>{
-    const zonals = data.filter(item => item.genre === '1')
-    const [isHovered, setIsHovered] = useState(false);
-
-    const handleHover = () => {
-      setIsHovered(true);
-    }
-
-    const handleLeave = () => {
-      setIsHovered(false);
-    }
-
-
-    return zonals.map(data => (
-      <div key={data.id} className='col-lg-3'>
-        <div className={styles.card1_cont} onMouseEnter={handleHover} onMouseLeave={handleLeave}>
-          {isHovered ? 
-            <div>
-
-            </div>
-          :
-          <div>
-          
-          </div>
-          }
-        </div>
-      </div>
-      
-
-    ));
-  }
-
   return (
     <div className={styles.Technorion}>
       <h1>TECHNORION</h1>

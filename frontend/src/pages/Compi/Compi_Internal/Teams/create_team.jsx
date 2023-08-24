@@ -5,6 +5,9 @@ import {UserAuth} from '../../../../contexts/AuthContext';
 
 const Create_Team = () => {
 
+    axios.defaults.xsrfCookieName = 'csrftoken';
+    axios.defaults.xsrfHeaderName = 'X-CSRFToken';
+
     const { compiName } = useParams();
     const {user} = UserAuth();
     const googleId = user.email;
@@ -30,17 +33,6 @@ const Create_Team = () => {
             [name]: value,
         }));
     };
-
-    // useEffect(() => {
-    //     const refreshFlag = localStorage.getItem('refreshFlag');
-    
-    //     if (refreshFlag) {
-    //       localStorage.removeItem('refreshFlag');
-    //       navigate(`/competition/${compiName}`);
-    //     } else {
-    //       localStorage.setItem('refreshFlag', 'true');
-    //     }
-    //   }, []);
 
 
     const handleSubmit = (event) => {

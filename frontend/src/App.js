@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './components/Navbar/Header';
 import Navbar from './components/Navbar/Navbar';
 import { AuthContextProvider } from './contexts/AuthContext';
+import Protected from './contexts/Protected';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import Home from './pages/Home/home';
 import Exhibition from './pages/Exhibition/exhi';
@@ -23,7 +24,7 @@ import Compi_gal from './pages/AboutUs/gallery/specific/compi';
 import Techno_gal from './pages/AboutUs/gallery/specific/techno';
 import Robowar_gal from './pages/AboutUs/gallery/specific/Robowar';
 import Explore from './pages/workshop/components/Explore';
-import Recognition from './pages/recognition/Recognition';
+import Recognition from './pages/AboutUs/recognition/Recognition';
 
 
 
@@ -48,9 +49,13 @@ function App() {
                         <Route path='/lectures' element={<Lectures />} />
                         <Route path='/workshops/:cardName' element={<Explore/>} />
                         {/* <Route path='/lectures' element={
+                        {/* <Route path='/lectures' element={<Lectures />} /> */}
+                        <Route path='/explore' element={<Explore/>} />
+                        <Route path='/recognition' element={<Recognition/>} />
+                        <Route path='/lectures' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <Lectures/>
-                        </React.Suspense> }/> */}
+                        </React.Suspense> }/>
 
                         <Route path='/Media' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
@@ -63,9 +68,9 @@ function App() {
                         </React.Suspense> }/>
 
                         <Route path='competitions/:compiName' element={<Internal />} />
-                        <Route path='competitions/:compiName/register' element={<Reg />} />
-                        <Route path='competitions/:compiName/createTeam' element={<Create_Team  />} />
-                        <Route path='competitions/:compiName/joinTeam' element={<JoinTeam  />} />
+                        <Route path='competitions/:compiName/register' element={<Protected><Reg /></Protected>} />
+                        <Route path='competitions/:compiName/createTeam' element={<Protected><Create_Team  /></Protected>} />
+                        <Route path='competitions/:compiName/joinTeam' element={<Protected><JoinTeam  /></Protected>} />
 
                         <Route path='/gallery' element={<Gallery/>} />
                         <Route path='/gallery/lectures' element={<Lecture_gal/>} />    

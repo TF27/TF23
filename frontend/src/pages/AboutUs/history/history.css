@@ -1,151 +1,99 @@
-.history-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100vh;
-    background-image: url('./assets/tv.png');
-    background-size: cover;
-    background-position: center;
-  }
-  .history-item {
-    position: absolute;
-    /* top: 0px;
-    left: 15%;
-    width: 70%;
-    height: 100%; */
-    opacity: 0;
-    overflow: hidden;
-    transition: opacity 2s ease-in-out;
-    z-index: 1;
-  }
-  
-  .history-item.visible {
-    opacity: 1;
-  }
-  
-  .history-image {
-    width: 100%;
-    height: 100%;
-    background-size: contain;
-    /* background-position: ; */
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .ripple-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  .ripple {
-    position: absolute;
-    border-radius: 50%;
-    border-color: black;
-    border-width: 5px;
-    transform: scale(0);
-    animation: ripple-animation 5s linear;
-    pointer-events: none;
-    z-index: 10;
-  }
-  
-  
-.overlay-images {
-  position: relative;
+.history-container{
+  background: url('./assets/tv.png');
+  background-repeat: no-repeat;
+  z-index: -1;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  position: absolute;
   width: 100%;
-  height: 100%; /* Set a fixed height to prevent vertical repetition */
-  display: flex;
-  flex-direction: column; /* Use flexbox */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
 }
 
-  .history-image.history {
-    position: fixed;
-    top: 5%;
-    left: 16%;
-    width: 68%;
-    height: 100%;
-    background-repeat: no-repeat;
-  }
+.history-item{
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 2s ease-in-out;
+}
+.history-item.visible{
+  opacity: 1;
+}
+.history-image.history {
+  position: absolute;
+  top:0%;
+  width: 100%;
+  height: 75%;
+  background-repeat: no-repeat;
+  transform: translate(0%,0%);
+}
+
+.history-image.edm {
+  position: absolute;
+  top:0%;
+  width: 100%;
+  height: 67%;
+  background-repeat: no-repeat;
+  transform: translate(0%,0%);
+}
+
+.history-image.blurr {
+  position: absolute;
+  top:0%;
+  width: 100%;
+  height: 67%;
+  background-repeat: no-repeat;
+  transform: translate(0%,0%);
+}
+.image-text {
+  position:relative;
+  top:11%;
+  width: 100%;
+  height: 37%;
+  left: -1vw;
+  color: white;
+  font-size: 60px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+  font-family: FORUM;
   
-  .history-image.edm {
-    position: fixed;
-    top: 23%;
-    left: 33.8%;
-    width: 35%;
-    height: 100%;
-    background-repeat: no-repeat;
-  }
-  
-  .history-image.blurr {
-    position: fixed;
-    top: 23%;
-    left: 33.8%;
-    width: 35%;
-    height: 100%;
-    background-repeat: no-repeat;
-  }
-  .next-button {
-    position: fixed;
-    bottom: 5%;
-    right: 20%;
-    padding: 10px 20px;
-    background-color:transparent;
-    font-size: 25px;
-    color:white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    z-index: 100;
-    font-family: FORUM;
-  }
-  .image-text {
-    position: absolute;
-    bottom: 100vh;
-    left: 12vw;
-    color: white;
-    font-size: 70px;
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 1000;
-    font-family: FORUM;
-  }
-  .additional-text {
-    position: absolute;
-    bottom: 40vh;
-    left: 5vw;
-    color: white;
-    font-size: 20px;
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 1001;
-    font-family: FORUM;
-  }
-  
-  
-  @keyframes ripple-animation {
-    0% {
-      transform: scale(0);
-      opacity: 0.5;
-    }
-    50% {
-      transform: scale(1);
-      opacity: 0.2;
-    }
-    100% {
-      transform: scale(20);
-      opacity: 0;
-    }
-  }
-  @media (max-width: 768px) {
-    .overlay-images {
-      /* Adjust position for smaller screens */
-      top: 50%; /* For example, to vertically center the images */
-      transform: translateY(-50%);
-    }
-  }
-  
+}
+.additional-text {
+  position: relative;
+  top:24%;
+  width: 100%;
+  height: 0%;
+  left: 0vw;
+  color: white;
+  font-size: 25px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+  font-family: FORUM;
+}
+
+.history-button {
+  position: absolute;
+  top:80%;
+  width: 100%;
+  height: 6%;
+  background-color:transparent;
+  font-size: 25px;
+  color:white;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  font-family: FORUM;
+  display: flex;
+  justify-content: space-evenly;
+  transform: translate(0%,0%);
+}
+
+.history-image {
+  width: 100%;
+  height: 100vh;
+  background-size: contain;
+  /* background-position: ; */
+  cursor: pointer;
+  position: relative;
+}
