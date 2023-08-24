@@ -33,29 +33,6 @@ const Header = () => {
       name = username.split(' ')[0];
     }
   
-
-    // const handleScroll = () => {
-    //     const scrollY = window.scrollY;
-    //     const scrollDirection = lastScrollTop < scrollY ? 'down' : 'up';
-    //     setLastScrollTop(scrollY);
-    //     setScrollDirection(scrollDirection);
-    // };
-    // const handleScroll = () => {
-    //     const scrollY = window.scrollY;
-    //     const scrollDirection = lastScrollTop < scrollY ? 'down' : 'up';
-    //     setLastScrollTop(scrollY);
-    //     setScrollDirection(scrollDirection);
-    // };
-
-    // Code Added for Navbar Scroll Up
-    // useEffect(() => {
-    //     window.addEventListener("scroll", handleScroll);
-    //     return () => {
-    //         window.removeEventListener("scroll", handleScroll);
-    //     };
-    // }, [lastScrollTop]);
-
-    // Continued Old Code
     const showMenu = () => {
         setOpenMenu(!openMenu);
     }
