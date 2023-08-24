@@ -1,24 +1,36 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {Link} from 'react-router-dom';
 import './Header.css';
+import Headroom from 'react-headroom';
 
 const Header = () => {
 
     const [openMenu, setOpenMenu] = useState(false);
-    const [scrollDirection, setScrollDirection] = useState('up');
-    const [lastScrollTop, setLastScrollTop] = useState(0);
+    // const [scrollDirection, setScrollDirection] = useState('up');
+    // const [lastScrollTop, setLastScrollTop] = useState(0);
 
-    const handleScroll = () => {
-        const scrollY = window.scrollY;
-        const scrollDirection = lastScrollTop < scrollY ? 'down' : 'up';
-        setLastScrollTop(scrollY);
-        setScrollDirection(scrollDirection);
-    };
+    // const handleScroll = () => {
+    //     const scrollY = window.scrollY;
+    //     const scrollDirection = lastScrollTop < scrollY ? 'down' : 'up';
+    //     setLastScrollTop(scrollY);
+    //     setScrollDirection(scrollDirection);
+    // };
 
+    // Code Added for Navbar Scroll Up
+    // useEffect(() => {
+    //     window.addEventListener("scroll", handleScroll);
+    //     return () => {
+    //         window.removeEventListener("scroll", handleScroll);
+    //     };
+    // }, [lastScrollTop]);
+
+    // Continued Old Code
     const showMenu = () => {
         setOpenMenu(!openMenu);
     }
-    return ( 
+    return (
+        <Headroom>
+
         <div className="header">
             <div className={openMenu ? 'hamburger active_burger': 'hamburger'} onClick={showMenu}>
                 <span className="bar"></span>
@@ -48,6 +60,7 @@ const Header = () => {
                 </ul>
             </nav>
         </div>
+        </Headroom>
      );
 }
  

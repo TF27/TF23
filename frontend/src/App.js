@@ -23,6 +23,7 @@ import Compi_gal from './pages/AboutUs/gallery/specific/compi';
 import Techno_gal from './pages/AboutUs/gallery/specific/techno';
 import Robowar_gal from './pages/AboutUs/gallery/specific/Robowar';
 import Explore from './pages/workshop/components/Explore';
+import Recognition from './pages/recognition/Recognition';
 
 
 

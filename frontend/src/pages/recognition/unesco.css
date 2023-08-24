@@ -1,0 +1,16 @@
+.unesco-card{
+    width: 16vw;
+    height: 22vw;
+    /* display: inline-block;
+    vertical-align: middle; */
+    /* flex-shrink: 0; */
+    background: url("./rectangleRecogi.jpeg") lightgray 50% / cover no-repeat;
+    border-radius: 20px;
+    /* align-items: center; */
+}
+
+.unesco{
+    margin: 5vw 0;
+    width: 12vw;
+    height: 10vw;
+}
