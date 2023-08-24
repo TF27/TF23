@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
+import './x.css';
 
 const Meshmerize = () => {
     const [activeCity, setActiveCity] = useState('About');
@@ -10,7 +11,6 @@ const Meshmerize = () => {
     }
 
       const data = {
-        title: "FAQs",
         rows: [
           {
             title: "What does it mean to be a College Ambassador?",
@@ -45,7 +45,7 @@ const Meshmerize = () => {
       };
 
       const styles1 = {
-        bgColor: '#A2A7AB',
+        bgColor: 'none',
         titleTextColor: 'black',
         rowTitleColor: 'black',
         arrowColor: 'black',
@@ -53,6 +53,7 @@ const Meshmerize = () => {
         marginBottom: '20px',
         maxWidth: '80%',
         margin: 'auto',
+        rowContentMarginBottom: '0',
       }
 
     const lol = {

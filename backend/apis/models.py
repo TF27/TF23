@@ -98,7 +98,7 @@ class compi_team(models.Model):
     parti3_email = models.EmailField(max_length=254, blank=True, null=True)
     team_length = models.IntegerField(blank=True, null=True)
     participants = models.CharField(max_length=500, blank=True, null=True)
-
+    single_parti = models.BooleanField(default=False)
     def save(self, *args, **kwargs):
         self.max_team_length = self.compi_name.max_team_length
         super().save(*args, **kwargs)

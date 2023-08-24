@@ -200,6 +200,23 @@ def create_team(request):
 
         return JsonResponse(res)
 
+@api_view(['POST'])
+@csrf_exempt
+def single_parti(request):
+    if request.method == 'POST':
+        compi_team_serializer = Compi_TeamSerializer(data=request.data, many=False)
+        if compi_team_serializer.is_valid():
+            
+            compi_team_serializer.save()
+            subject = 'Team Created'
+            message = f'You have successfully created a team'
+            send_mailer = 'noreply@techfest.org'
+            recipient = [compi_team_serializer.validated_data.get('team_leader_email')]
+            send_mail(subject, message, send_mailer, recipient)
+            return JsonResponse(compi_team_serializer.data)
+    res = {'success': False}
+    return JsonResponse(res)
+
 @api_view(['PUT'])
 @csrf_exempt
 def join_team(request):
@@ -272,6 +289,9 @@ def leave_team(request):
         
         return JsonResponse({'success': False, 'message': 'Team not found'})
     
+
+
+
 
 @api_view(['DELETE'])
 @csrf_exempt

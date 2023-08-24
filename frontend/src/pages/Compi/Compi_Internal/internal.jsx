@@ -87,7 +87,7 @@ const Internal = () => {
                   <div className={styles.single_team}>
                     <div className={styles.single_rect1}></div>
                     <div className={styles.single_rect2}>
-                      <Link to={`createTeam`}>Single Participant</Link>
+                      <Link to={`singleparticipant`}>Single Participant</Link>
                     </div>
                   </div>
                 </div>
