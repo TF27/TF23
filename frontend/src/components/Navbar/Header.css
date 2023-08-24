@@ -6,9 +6,34 @@
     /* width: 100%; */
     /* fill-opacity: 0; */
     /* background-color: rgb(red, green, blue, 0.1); */
-    z-index: 10;    
+    z-index: 10;   
+    background-color: black; 
+    transition: background-color .5s ease-in-out;
 }
 
+.header_competitions{
+    background-color: blueviolet;
+}
+
+.header_gallery{
+    background-color: chocolate;
+}
+
+.header_lectures{
+    background-color: fuchsia;
+}
+
+.header_summits{
+    background-color: rosybrown;
+}
+
+.header_workshops{
+    background-color: goldenrod;
+}
+
+.header_exhibitions{
+    background-color: brown;
+}
 
 .hamburger{
     display: none;

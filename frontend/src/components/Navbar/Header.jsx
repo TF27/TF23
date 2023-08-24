@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import './Header.css';
 import { UserAuth } from "../../contexts/AuthContext";
 import Headroom from 'react-headroom';
@@ -34,6 +34,40 @@ const Header = () => {
     }
   
 
+//==========================================theme================================
+    const location = useLocation().pathname;
+    const locations = location.split('/').filter(segment => segment !== '');
+    const parent = locations[0] 
+    var navbarClassName
+
+    if(parent=="competitions"){      
+        navbarClassName = "header header_competitions"
+    }
+    else if(parent=="lectures"){
+        navbarClassName = "header header_lectures"
+    }
+    else if(parent=="gallery"){      
+        navbarClassName = "header header_gallery"
+    }
+    else if(parent=="exhibitions"){
+        navbarClassName = "header header_exhibtions"
+    }
+    else if(parent=="workshops"){      
+        navbarClassName = "header header_workshops"
+    }
+    else if(parent=="summits"){
+        navbarClassName = "header header_summits"
+    }
+    else if(parent=="exhibitions"){
+        navbarClassName = "header header_exhibitions"
+    }
+    else{
+        navbarClassName = "header"
+    }
+
+
+//===============================================================================
+
     // const handleScroll = () => {
     //     const scrollY = window.scrollY;
     //     const scrollDirection = lastScrollTop < scrollY ? 'down' : 'up';
@@ -62,7 +96,7 @@ const Header = () => {
     return (
         <Headroom>
 
-        <div className="header">
+        <div className={navbarClassName}>
             <div className={openMenu ? 'hamburger active_burger': 'hamburger'} onClick={showMenu}>
                 <span className="bar"></span>
                 <span className="bar"></span>
