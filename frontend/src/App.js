@@ -46,7 +46,7 @@ function App() {
                         <Route path='/exhibitions' element={<Exhibition/>}/>
                         <Route path='/competitions' element={<Compi />} />
                         <Route path='/workshops' element={<Workshop/>}/>
-                        <Route path='/lectures' element={<Lectures />} />
+                        {/* <Route path='/lectures' element={<Lectures />} /> */}
                         <Route path='/workshops/:cardName' element={<Explore/>} />
                         {/* <Route path='/lectures' element={
                         {/* <Route path='/lectures' element={<Lectures />} /> */}
