@@ -13,17 +13,23 @@ class Compi_CardsSerializer(serializers.ModelSerializer):
         is_team_registered = False
         is_team_leader = False
         is_parti = False
+        team_id1 = None
         if user is not None:
             if (compi_team.objects.filter(team_leader_email=user, compi_name=instance).exists() or compi_team.objects.filter(parti1_email=user, compi_name=instance).exists() or compi_team.objects.filter(parti2_email=user, compi_name=instance).exists() or compi_team.objects.filter(parti3_email=user, compi_name=instance).exists()):
                 is_team_registered = True
                 if(compi_team.objects.filter(team_leader_email=user, compi_name=instance).exists()):
                     is_team_leader = True
+                    team = compi_team.objects.get(team_leader_email=user, compi_name=instance)
+                    team_id1 = team.team_id
                 else:
+                    team = compi_team.objects.get(Q(parti1_email=user) | Q(parti2_email=user) | Q(parti3_email=user), compi_name=instance)
+                    team_id1 = team.team_id
                     is_parti = True
         representation['is_registered'] = compi_reg.objects.filter(email=user, compi=instance).exists()
         representation['is_team_registered'] = is_team_registered
         representation['is_team_leader'] = is_team_leader
         representation['is_parti'] = is_parti
+        representation['team_id'] = team_id1
         return representation
 
 

@@ -62,7 +62,15 @@ const Internal = () => {
           <div className={styles.team_reg}>
           {data.is_team_leader ? (
               <div>
+              <div className={styles.compi_team}>
+                <div className={styles.single_team} style={{marginTop: '20px'}}>
+                    <div className={styles.single_rect1}></div>
+                    <div className={styles.single_rect2}>
+                      <Link to={`addparticipant`}>Add Participant</Link>
+                    </div>
+                  </div>
                 <DissolveTeam />
+              </div>
               </div>
               ) : data.is_parti ? (
                 <div>

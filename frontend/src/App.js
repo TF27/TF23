@@ -25,7 +25,7 @@ import Explore from './pages/workshop/components/Explore';
 import Recognition from './pages/AboutUs/recognition/Recognition';
 import Legals from './pages/AboutUs/legals';
 import SingleParti from './pages/Compi/Compi_Internal/Teams/single_parti';
-
+import AddParti from './pages/Compi/Compi_Internal/Teams/add_parti';
 
 const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 const Media = React.lazy(() => import('./pages/AboutUs/Media/index'));
@@ -45,7 +45,7 @@ function App() {
                         <Route path='/exhibitions' element={<Exhibition/>}/>
                         <Route path='/competitions' element={<Compi />} />
                         <Route path='/workshops' element={<Workshop/>}/>
-                        <Route path='/lectures' element={<Lectures />} />
+                        {/* <Route path='/lectures' element={<Lectures />} /> */}
                         <Route path='/workshops/:cardName' element={<Explore/>} />
                         {/* <Route path='/lectures' element={
                         {/* <Route path='/lectures' element={<Lectures />} /> */}
@@ -79,7 +79,7 @@ function App() {
                         <Route path='competitions/:compiName/createTeam' element={<Protected><Create_Team  /></Protected>} />
                         <Route path='competitions/:compiName/singleparticipant' element={<Protected><SingleParti /></Protected>} />
                         <Route path='competitions/:compiName/joinTeam' element={<Protected><JoinTeam  /></Protected>} />
-
+                        <Route path='competitions/:compiName/addparticipant' element={<Protected><AddParti /></Protected>} />
                         <Route path='/gallery' element={<Gallery/>} />
                         <Route path='/gallery/lectures' element={<Lecture_gal/>} />    
                         <Route path='/gallery/exhibition' element={<Exhibition_gal/>} /> 
