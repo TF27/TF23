@@ -28,7 +28,7 @@ import Recognition from './pages/recognition/Recognition';
 
 
 // import Lectures  from './pages/Lectures/index';
-// const Lectures = React.lazy(() => import('./pages/Lectures/index'));
+const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 const Media = React.lazy(() => import('./pages/AboutUs/Media/index'));
 const History = React.lazy(() => import('./pages/AboutUs/history/history'));
 const Summit = React.lazy(() => import('./pages/Summit/home'));
@@ -46,13 +46,13 @@ function App() {
                         <Route path='/exhibitions' element={<Exhibition/>}/>
                         <Route path='/competitions' element={<Compi />} />
                         <Route path='/workshops' element={<Workshop/>}/>
-                        <Route path='/lectures' element={<Lectures />} />
+                        {/* <Route path='/lectures' element={<Lectures />} /> */}
                         <Route path='/explore' element={<Explore/>} />
                         <Route path='/recognition' element={<Recognition/>} />
-                        {/* <Route path='/lectures' element={
+                        <Route path='/lectures' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <Lectures/>
-                        </React.Suspense> }/> */}
+                        </React.Suspense> }/>
 
                         <Route path='/Media' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
