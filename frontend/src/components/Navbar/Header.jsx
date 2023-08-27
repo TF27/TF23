@@ -37,8 +37,8 @@ const Header = () => {
 //==========================================theme================================
     const location = useLocation().pathname;
     const locations = location.split('/').filter(segment => segment !== '');
-    const parent = locations[0] 
-    var navbarClassName
+    const parent = locations[0] // gets parent route from array
+    var navbarClassName //header class variable
 
     if(parent=="competitions"){      
         navbarClassName = "header header_competitions"
