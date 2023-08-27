@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import 'C:\Users\Kaushal\Desktop\TF23\frontend\src\components\NewReach\counter.js';
+import Counter from '../../components/NewReach/counter';
+import mylogo from './static/ourr.png'
+import './ourreach.css'
 function ourReach() {
   return (
     <>
