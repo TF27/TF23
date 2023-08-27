@@ -15,17 +15,9 @@ class Compi(models.Model):
     max_team_length = models.IntegerField(blank=True, null=True)
     prize = models.CharField(max_length=100)
     desc = models.TextField()
-    register = models.CharField(max_length=100)
-    explore = models.CharField(max_length=100)
     img = models.ImageField(upload_to='compi')
     statement = models.FileField(upload_to='ProblemStatements', null=True, blank=True)
     sponsorImg = models.ImageField(upload_to='compi_sponsors', null=True, blank=True)
-    about = models.TextField(null=True, blank=True)
-    stucture = models.TextField(null=True, blank=True)
-    timeline = models.TextField(null=True, blank=True)
-    faqs = models.TextField(null=True, blank=True)
-    rules = models.TextField(null=True, blank=True)
-    contact = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.name
