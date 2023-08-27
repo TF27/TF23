@@ -20,7 +20,7 @@ const Internal = () => {
   const { user } = UserAuth();
 
   const google_id = user?.email;
-  const ProblemStatements = 'http://localhost:8000/media/ProblemStatements/Cozmo.pdf'
+  const ProblemStatements = `https://rain.techfest.org/media/ProblemStatements/${compiName}.pdf`;
 
   useEffect(() => {
     const fetchData = async () => {
