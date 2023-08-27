@@ -20,7 +20,7 @@ const MInternal = () => {
   const { user } = UserAuth();
 
   const google_id = user?.email;
-  const ProblemStatements = 'http://localhost:8000/media/ProblemStatements/Cozmo.pdf'
+  const ProblemStatements = `https://rain.techfest.org/media/ProblemStatements/${compiName}.pdf`;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -61,8 +61,17 @@ const MInternal = () => {
           </div>
           <div className={styles.team_reg}>
             {data.is_team_leader ? (
-              <div>
+              <div className={styles.lol_reg}>
+                <div className={styles.compi_team}>
                 <DissolveTeam />
+                <div className={`${styles.add_parti} ${styles.single_team}`}>
+                    <div className={styles.single_rect1}></div>
+                    <div className={styles.single_rect2}>
+                      <Link to={`addparticipant`}>Add Participant</Link>
+                    </div>
+                  </div>
+                
+              </div>
               </div>
             ) : data.is_parti ? (
               <div>
@@ -87,7 +96,7 @@ const MInternal = () => {
                   <div className={styles.single_team}>
                     <div className={styles.single_rect1}></div>
                     <div className={styles.single_rect2}>
-                      <Link to={`createTeam`}>Single Participant</Link>
+                      <Link to={`singleparticipant`}>Single Participant</Link>
                     </div>
                   </div>
                 </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import CustomPopup from "./../../../../components/Popup/index";
 import { UserAuth } from '../../../../contexts/AuthContext';
@@ -9,7 +10,9 @@ const LeaveTeam = () => {
   axios.defaults.xsrfHeaderName = 'X-CSRFToken';
 
   const { user } = UserAuth();
+  const { compiName } = useParams();
   const [teamId, setTeamId] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,7 +35,7 @@ const LeaveTeam = () => {
       .put('/api/leave_team/', data, config)
       .then((response) => {
         console.log(response.data);
-        setVisibility(false)
+        navigate(`/competitions/${compiName}`)
       })
       .catch((error) => {
         console.error(error);
@@ -46,7 +49,7 @@ const LeaveTeam = () => {
   };
 
   return (
-    <div className="dissolveTeam">
+    <div className="dissolveTeam" style={{zIndex: '3'}}>
       <div onClick={() => setVisibility(!visibility)} className='dis_team'>
         <div className='dis_rect1'></div>
         <div className='dis_rect2'>Leave Team</div>

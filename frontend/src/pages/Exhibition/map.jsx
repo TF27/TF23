@@ -8,12 +8,12 @@ const WorldMap = () => {
   const [hoveredCity, setHoveredCity] = useState(null);
 
   const cityData = [
-    { name: 'Europe', x: '45%', y: '37%', info: 'Info About Europe\nufsjhdifubwe\nuyfgwuefiwegfiuwegf\neuehfuigfhuysguiehduee\niuyfhwugfiugfweufgsef\nudhfbywejfbuiwfgbyufgbeuf',image:europe },
-    { name: 'West USA', x: '15%', y: '37%', info: 'Info About West USA' },
-    { name: 'East USA', x: '25%', y: '42%', info: 'Info About East USA' },
-    { name: 'NorthEast Asia', x: '82%', y: '28%', info: 'Info About NorthEast Asia' },
-    { name: 'Australia', x: '83%', y: '78%', info: 'Info About Australia' },
-    { name: 'SouthEast Asia', x: '66%', y: '50%', info: 'Info About SouthEast Asia' },
+    { name: 'Europe', x: '45%', y: '37%', info: 'Info About Europe\nufsjhdifubwe',image:europe },
+    { name: 'West USA', x: '15%', y: '37%', info: 'Info About West USA',image:europe },
+    { name: 'East USA', x: '25%', y: '42%', info: 'Info About East USA',image:europe },
+    { name: 'NorthEast Asia', x: '82%', y: '28%', info: 'Info About NorthEast Asia' ,image:europe},
+    { name: 'Australia', x: '83%', y: '78%', info: 'Info About Australia',image:europe },
+    { name: 'SouthEast Asia', x: '66%', y: '50%', info: 'Info About SouthEast Asia' ,image:europe},
     // Add more cities and their coordinates here
   ];
 
@@ -50,9 +50,29 @@ const WorldMap = () => {
           onMouseEnter={() => handleCityHover(hoveredCity)} // Keep the menu open when the cursor is on the dropdown menu
           onMouseLeave={() => handleCityHover(null)}
         >
-          <h3>{hoveredCity.name}</h3>
-          <img src={hoveredCity.image} alt={hoveredCity.name} className="dropdown-image" />
-          <p>{hoveredCity.info}</p>
+          
+          <div className="dropdown-content">
+            <div className="city-image-container">
+              <img src={hoveredCity.image} alt={hoveredCity.name} className="dropdown-image" />
+              <p className="city-name-over-image">{hoveredCity.name}</p>
+            </div>
+            <div className='city-info-container'>
+            <img src={hoveredCity.image} alt={hoveredCity.name} className="ddinfo" />
+            <p className='ex-info-styling'>{hoveredCity.info}</p>
+            </div>
+            <div className='city-info-container'>
+            <img src={hoveredCity.image} alt={hoveredCity.name} className="ddinfo" />
+            <p className='ex-info-styling'>{hoveredCity.info}</p>
+            </div>
+            <div className='city-info-container'>
+            <img src={hoveredCity.image} alt={hoveredCity.name} className="ddinfo" />
+            <p className='ex-info-styling'>{hoveredCity.info}</p>
+            </div>
+            <div className='city-info-container'>
+            <img src={hoveredCity.image} alt={hoveredCity.name} className="ddinfo" />
+            <p className='ex-info-styling'>{hoveredCity.info}</p>
+            </div>
+          </div>
         </div>
       )}
     </div>

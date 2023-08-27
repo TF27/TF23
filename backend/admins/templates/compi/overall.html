@@ -1,6 +1,7 @@
 {% extends "compi/base.html" %}
 
 {% block body %}
+  <a name="" id="" class="btn btn-primary" href="{% url "admins:export-csv-all"  %}"> Download </a>
   {%for item in reg %}
   <tr>
       <td>{{item.name}}</td>
