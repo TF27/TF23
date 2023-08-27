@@ -25,6 +25,7 @@ import Techno_gal from './pages/AboutUs/gallery/specific/techno';
 import Robowar_gal from './pages/AboutUs/gallery/specific/Robowar';
 import Explore from './pages/workshop/components/Explore';
 import Recognition from './pages/AboutUs/recognition/Recognition';
+import Legals from './pages/AboutUs/legals/Legals';
 
 
 
@@ -46,7 +47,8 @@ function App() {
                         <Route path='/exhibitions' element={<Exhibition/>}/>
                         <Route path='/competitions' element={<Compi />} />
                         <Route path='/workshops' element={<Workshop/>}/>
-                        <Route path='/lectures' element={<Lectures />} />
+                        <Route path='/legals' element={<Legals/>}/>
+                        {/* <Route path='/lectures' element={<Lectures />} /> */}
                         <Route path='/workshops/:cardName' element={<Explore/>} />
                         {/* <Route path='/lectures' element={
                         {/* <Route path='/lectures' element={<Lectures />} /> */}

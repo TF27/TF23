@@ -1,0 +1,23 @@
+.background{
+    background-image: url('./img/LegalsBackground.png');
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+}
+.privacypolicy{
+    font-family: Forum;
+    font-size: medium;
+}
+.tnc{
+    font-family: Forum;
+    font-size: 30px;
+    width: 30vw;
+    height: 30vh;
+    position: relative;
+    top: 10%;
+    left: 50%
+}
