@@ -5,7 +5,7 @@ import rectangle from '../img/Frame.png';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { UserAuth } from "../../../contexts/AuthContext";
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 
 const Explore = () => {
   const { cardName } = useParams();

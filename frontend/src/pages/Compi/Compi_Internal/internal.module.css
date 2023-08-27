@@ -118,7 +118,6 @@
     margin-left: 16px;
     margin-top: 7px;
     position: absolute;
-
 }
 
 .rightdata{
@@ -186,5 +185,103 @@
     width: 200px;
     margin-left: 7px;
     margin-top: 6px;
+}
+
+@media (max-width: 992){
+    .rightdata{
+        margin-top: 60px;
+    }
+}
+
+
+/* mobile  */
+
+.mImgFrame{
+    width: 365px;
+    height: 319px;
+    position: relative;
+    top: 0%;
+    left: 0.5%;
+    border-radius: 26% 26% 0% 0%;
+    z-index: 2;
+}
+.mImgCompi{
+    width: 284px;
+    height: 300px;
+    position: relative;
+    top: -50%;
+    border-radius: 26% 26% 0% 0%;
+    z-index: 1;
+}
+
+@media (max-width: 768px){
+    .sponsor{
+        justify-content: center;
+    }
+
+    .basicInfo{
+        top: -275px;
+        position: relative;
+    }
+    .compi_prize{
+        margin-top: 0;
+    }
+    .lol_reg{
+        top: -275px;
+        position: relative;
+    }
+    .statement{
+        top: -200px;
+        position: relative;
+    }
+}
+
+@media (max-width: 552px){
+    .compi_team{
+        flex-direction: column;
+        align-items: center;
+    }
+    .join_team{
+        position: relative;
+        /* top: 40px; */
+        margin-top: 60px;
+    }
+    .single_team{
+        position: relative;
+        /* top: 80px; */
+        margin-top :60px;
+    }
+}
+
+.doIt{
+    display: flex;
+    top: -290px;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.share{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.share_rect1{
+    height: 40px;
+    width: 120px;
+    border: 1px solid #fff;
+    position: absolute;
+}
+
+.share_rect2{
+    height: 40px;
+    width: 121px;
+    border: 1px solid #fff;
+    margin-left: 16px;
+    margin-top: 7px;
+    position: absolute;
+    color: #fff;
+    font-family: Forum;
+    letter-spacing: 0.2em;
+    font-size: 18px;
 }
 

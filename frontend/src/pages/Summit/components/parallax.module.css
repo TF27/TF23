@@ -61,5 +61,15 @@
 
 .summitRow{
   display: flex;
+  justify-content:center;
+  padding-top: 30px;
+}
+
+.summitColumn{
+  margin: 30px 60px 30px 60px;
+}
+
+.head{
+  padding-top: 40px;
 }
 
