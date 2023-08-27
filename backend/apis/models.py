@@ -15,17 +15,9 @@ class Compi(models.Model):
     max_team_length = models.IntegerField(blank=True, null=True)
     prize = models.CharField(max_length=100)
     desc = models.TextField()
-    register = models.CharField(max_length=100)
-    explore = models.CharField(max_length=100)
     img = models.ImageField(upload_to='compi')
     statement = models.FileField(upload_to='ProblemStatements', null=True, blank=True)
     sponsorImg = models.ImageField(upload_to='compi_sponsors', null=True, blank=True)
-    about = models.TextField(null=True, blank=True)
-    stucture = models.TextField(null=True, blank=True)
-    timeline = models.TextField(null=True, blank=True)
-    faqs = models.TextField(null=True, blank=True)
-    rules = models.TextField(null=True, blank=True)
-    contact = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -98,7 +90,7 @@ class compi_team(models.Model):
     parti3_email = models.EmailField(max_length=254, blank=True, null=True)
     team_length = models.IntegerField(blank=True, null=True)
     participants = models.CharField(max_length=500, blank=True, null=True)
-
+    single_parti = models.BooleanField(default=False)
     def save(self, *args, **kwargs):
         self.max_team_length = self.compi_name.max_team_length
         super().save(*args, **kwargs)

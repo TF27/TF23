@@ -39,7 +39,7 @@ const ImageTwo = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [google_id]);
    
   return(
     <div className={parallax.image} style={{ transform: `translateY(-${scrollPosition * 0.8}px)` }}>

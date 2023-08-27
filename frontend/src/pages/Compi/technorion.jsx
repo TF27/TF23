@@ -7,7 +7,7 @@ import { UserAuth } from "../../contexts/AuthContext";
 import styles from './compi.module.css';
 import Border from '../../components/DoubleBorder/doubleborder';
 // import WhatsappShareButton from '../../components/share/whatsapp';
-
+import indiamap from './static/img/india.png'
 
 // Images
 import dot from './static/card/dot.png';
@@ -21,7 +21,15 @@ import WhatsappShareButton from '../../components/share/whatsapp';
 const Technorion = () => {
 
   const [data, setData] = useState([]);
-  const { user } = UserAuth();
+  const { googleSignIn, user, logOut } = UserAuth();
+
+  const handleGoogleSignIn = async () => {
+    try{
+        await googleSignIn();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
   const google_id = user?.email;
 
@@ -40,7 +48,7 @@ const Technorion = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [google_id]);
 
   const card = () => {
     const zonals = data.filter(item => item.genre === '1')
@@ -74,8 +82,11 @@ const Technorion = () => {
               </div>  
             </div>
             <div className={styles.card_regexp}>
-              {data.is_registered ? (<div className={styles.card_reg}>Registered</div>) : (
+              {data.is_registered ? (<div className={styles.card_reg}>Registered</div>) 
+              : user ? (
                 <div className={styles.card_reg}><Link to={`${data.name}/register`}>Register</Link></div>
+              ): (
+                <div className={styles.card_reg}><button onClick={handleGoogleSignIn}>Register</button></div>
               )}
               <div className={styles.card_exp}><Link to={data.name}>Explore</Link></div>
             </div>
@@ -90,21 +101,39 @@ const Technorion = () => {
 
   return (
     <div className={styles.Technorion}>
-      <h1>TECHNORION</h1>
-      {/* <img src={technorion} alt="technorion" className="technorion" /> */}
-      <div className={styles.desc}>
-        <p className={styles.descT}>Welding is a critical activity for manufacturing. The threshold for welding error is the bare minimum. Build an ML model to predict welding defects in the materials by developing algorithms using process parameters such as ambient temperature, welding travel speed, etc.You can also perform advanced analytics on welder performance using machine data and welder details.</p>
-      </div>
-      {/* <Border Text="Register" height='36px' width='146px'/> */}
-      <div className='technorion_cards'>
-        <div className='container' style={{ maxWidth: "90%" }}>
-          <div className='row'>
-            {card()}
-            {/* <Card1 /> */}
-          </div>
+    <h1>TECHNORION</h1>
+    <div className={styles.desc}>
+      <p className={styles.descT}>
+        Welding is a critical activity for manufacturing. The threshold for welding error is the bare minimum. Build an ML
+        model to predict welding defects in the materials by developing algorithms using process parameters such as ambient
+        temperature, welding travel speed, etc. You can also perform advanced analytics on welder performance using machine
+        data and welder details.
+      </p>
+      <div className={styles.indiamapContainer}>
+      <div className={styles.imageContainer}>
+          <img src={indiamap} alt="india" className={styles.image} />
+        </div>
+        <div className={styles.textContainer}>
+          <p>
+            Your text here <br />
+            sbjfbskfbnasktydfhyfjyudbjajhcbd <br />
+            sdfdctrgdhjghtxghgfafsaavfd <br />
+            hbfshejbfujsbfsfbfbsh <br />
+            jdhfbauikshfikahsdikuashndjasbfjhsdfbj <br />
+          </p>
         </div>
       </div>
     </div>
+    <div className='technorion_cards'>
+      <div className='container' style={{ maxWidth: "90%" }}>
+        <div className='row'>
+          {card()}
+          {/* <Card1 /> */}
+        </div>
+      </div>
+    </div>
+  </div>
+  
   );
 }
 

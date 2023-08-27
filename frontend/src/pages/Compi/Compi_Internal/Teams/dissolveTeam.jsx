@@ -11,6 +11,8 @@ const DissolveTeam = () => {
 
   const { user } = UserAuth();
   const [teamId, setTeamId] = useState('');
+  const {compiName} = useParams();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,7 +35,7 @@ const DissolveTeam = () => {
       .delete('/api/delete_team/', { data, ...config })
       .then((response) => {
         console.log(response.data);
-        setVisibility(false);
+        navigate(`/competitions/${compiName}`);
       })
       .catch((error) => {
         console.error(error);
@@ -47,7 +49,7 @@ const DissolveTeam = () => {
   };
 
   return (
-    <div className="dissolveTeam">
+    <div className="dissolveTeam" style={{zIndex: '3'}}>
       <div onClick={() => setVisibility(!visibility)} className='dis_team'>
         <div className='dis_rect1'></div>
         <div className='dis_rect2'>Dissolve Team</div>

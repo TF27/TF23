@@ -202,11 +202,11 @@ const Reg = () => {
                                             className={styles.formInput}
                                         >
                                             <option value="" style={{ display: 'none' }} className={styles.genderOps}>Nearby Zonals</option>
-                                            <option value="1" className={styles.genderOps}>Male</option>
-                                            <option value="2" className={styles.genderOps}>Female</option>
-                                            <option value="3" className={styles.genderOps}>Gay</option>
-                                            <option value="4" className={styles.genderOps}>Lesbian</option>
-                                            <option value="5" className={styles.genderOps}>Still Other</option>
+                                            <option value="1" className={styles.genderOps}>Mumbai</option>
+                                            <option value="2" className={styles.genderOps}>Bhopal</option>
+                                            <option value="3" className={styles.genderOps}>Lucknow</option>
+                                            <option value="4" className={styles.genderOps}>Jaipur</option>
+                                            <option value="5" className={styles.genderOps}>Bangalore</option>
                                         </select>
                                     </div>) : <div></div>}
                                 

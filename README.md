@@ -60,11 +60,11 @@ server{
                 alias /home/ubuntu/TF23/frontend/build/static/;
         }
 
-        <!-- location ~^/(apo){
+        {/* location ~^/(apo){
                 root /home/ubuntu/TF23/backend/apo;
                 proxy_pass http://unix:/home/ubuntu/TF23/backend/backend.sock;
                 autoindex on;
-        } -->
+        } */}
 
 
         location ~^/(admin|api|api-home|api-auth|media|static|administrator|apo){
