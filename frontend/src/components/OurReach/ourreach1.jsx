@@ -49,7 +49,7 @@ const OurReach = () => {
       backgroundImage: `url(${nameImg})`,
     }
     return (
-      <div className={`col-lg-4 col-md-6 col-sm-12 ${styles.pastS}`}>
+      <div className={`col-lg-4 col-sm-12 ${styles.pastS}`}>
       <div className={styles.circle} id='circle'>
         <img src={chakkar} alt='Our Reach' className={styles.chakkar} />
         <div className={styles.ourr_text}>

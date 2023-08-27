@@ -18,5 +18,11 @@
 
 .ourr_text{
     position: relative;
-    top: -190px;
+    top: -14vw;
+}
+
+@media (min-width: 576px){
+    .ourr_text{
+        top: -15vw;
+    }
 }

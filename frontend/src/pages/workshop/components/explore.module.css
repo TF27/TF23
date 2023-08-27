@@ -1,56 +1,61 @@
 .background {
-    background-image: url('../img/background.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .description {
-    position: absolute;
-    width: 90%; /* Adjust the width as needed */
-    max-width: 56.25rem;
-    height:90%;
-    max-height: 20rem; /* Limit the maximum width */
-    padding: 0px;
-    top: 65%; /* Position relative to the center of the viewport */
-    left: 63%;
-    transform: translate(-50%, -50%); /* Center the element */
-    backdrop-filter: blur(10px);
-    border: 1px solid #000;
-    box-sizing: border-box;
-    
-    border-radius: 6px;
-  }
-  .sponser{
-    position: absolute;
-    width: 90%;
-    max-width: 21rem;
+  background-image: url('../img/background.png');
+  background-size: cover;
+  background-repeat:repeat-y;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+}
+
+.description {
+  position: relative;
+  width: 90%; /* Adjust the width as needed */
+  max-width: 56.25rem;
+  height:90%;
+  max-height: 20rem; /* Limit the maximum width */
+  padding: 0px;
+  top: 8rem; /* Position relative to the center of the viewport */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the element */
+  backdrop-filter: blur(10px);
+  border: 1px solid #000;
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  font-family: Forum;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 49px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: white;
+}
+.sponser{
+  position: relative;
+    width: 100%;
+    max-width: 23rem;
     height: 90%;
     max-height: 6rem;
     padding: 0px;
-    top: 20%;
-    left: 34%;
-    z-index: 4;
-    top: 8rem;
-  }
-  .txt{
-    margin-top: 3rem;
-    font-family: Abhaya Libre SemiBold;
-font-size: 25px;
-font-weight: 400;
-line-height: 42px;
-letter-spacing: 0.1em;
-text-align: left;
-color:#FFF;
+    left: 7%;
+    top: 0rem;
+}
+.txt{
+  margin-top: 3rem;
+  font-family: Abhaya Libre SemiBold;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color:#FFF;
 
-  }
-  .desc{
-    font-family: Forum;
+}
+/*.desc{
+  font-family: Forum;
 font-size: 30px;
 font-weight: 400;
 line-height: 49px;
@@ -64,160 +69,199 @@ margin-bottom: 1rem;
 
 
 
-  }
-  .sponserimage{
-    position: relative;
-    top: -3.5rem;
-    left: 3rem;
-    width: 7rem;
-    height: 3rem;
-  }
-  
-  .image {
-    position: absolute;
-    width: 90%; /* Adjust the width as needed */
-    max-width: 23rem;
-    height:90%;
-    max-height: 23rem; /* Limit the maximum width */
-    padding: 0px;
-    top: 50%; /* Position relative to the center of the viewport */
-    left: 15%;
-    transform: translate(-50%, -50%); /* Center the element */
-    
-    
-  }
-  .imageview{
-    width: 284px;
-    height: 347px;
-    position: absolute;
-    top: 3%;
-    left: 10.5%;
-    border-radius: 26% 26% 0% 0%;
-    z-index: 1;
-  }
-  .imagevie{
-    width: 365px;
-    height: 368px;
-    position: absolute;
-    top: 0%;
-    left: 0.5%;
-    border-radius: 26% 26% 0% 0%;
-    z-index: 2;
-  }
-  
-  .workshop{
-    background-image: url('../img/WORKSHOPS.png');
-    position: relative;
-    
-    top: -33%;
-    width: 100vh;
-    height: 10vh;
-    background-size: contain;
-    background-repeat: no-repeat;
+}*/
+.sponserimage{
+  position: relative;
+  top: -3.5rem;
+  left: 3rem;
+  width: 7rem;
+  height: 3rem;
+}
 
-  }
-  .navbar{
-    position: absolute;
-    width: 90%; /* Adjust the width as needed */
-    max-width: 56.25rem;
-    height:90%;
-    max-height: 3rem; /* Limit the maximum width */
-    padding: 12px;
-    top: 35%; /* Position relative to the center of the viewport */
-    left: 63%;
-    transform: translate(-50%, -50%); /* Center the element */
-    backdrop-filter: blur(10px);
-    border: 1px solid #000;
-    box-sizing: border-box;
-    
-    border-radius: 10px;
-  }
-  .navlinks{
-    list-style: none; /* Remove default list bullet points */
+.image {
+  position: relative;
+  width: 100%; /* Adjust the width as needed */
+  max-width: 23rem;
+  height:90%;
+  max-height: 23rem; /* Limit the maximum width */
+  padding: 0px;
+  top: 41%; /* Position relative to the center of the viewport */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the element */
+  
+  
+}
+.imageview{
+  width: 284px;
+  height: 347px;
+  position: relative;
+  top: -97%;
+  left: -0.9%;
+  border-radius: 26% 26% 0% 0%;
+  z-index: 1;
+}
+.frame{
+  width: 365px;
+  height: 368px;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  border-radius: 26% 26% 0% 0%;
+  z-index: 2;
+}
+
+.workshopname{
+  position: relative;
+  top: 7%;
+  left: 3%;
+  width: 90vw;
+  height: 10vh;
+  text-align: center;
+  font-family: Abhaya Libre ExtraBold;
+  font-size: 75px;
+  font-weight: 800;
+  line-height: 113px;
+  letter-spacing: 0.1em;
+
+}
+.navbar{
+  position: relative;
+  width: 90%; /* Adjust the width as needed */
+  max-width: 56.25rem;
+  height:90%;
+  max-height: 3rem; /* Limit the maximum width */
+  padding: 12px;
+  top: -2rem; /* Position relative to the center of the viewport */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the element */
+  backdrop-filter: blur(10px);
+  border: 1px solid #000;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.navlinks{
+  list-style: none; /* Remove default list bullet points */
   padding: 0;
-  }
-  .navlinks li{
-    display: inline-block; /* Display list items horizontally */
+}
+.navlinks li{
+  display: inline-block; /* Display list items horizontally */
   margin-right: 40px;
   color: #FFF;
-    font-family: Forum;
-    font-size: 1.375rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.11875rem;
-  }
-  .buttonwrapper1{
-    position: relative;
-    height: 2rem;
-    top: 12rem;
-    left: -40rem;
+  font-family: Forum;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.11875rem;
 }
-.buttonwrapper2{
-    position: relative;
-    height: 2rem;
-    top: 10rem;
-    left: -28rem;
-}
-.buttonwrapper3{
+.btnwrapper1{
   position: relative;
   height: 2rem;
-  top: 10rem;
-  left: -11rem;
+  top: 4rem;
+  left: -7rem;
 }
-.price{
+.btnwrapper2{
   position: relative;
   height: 2rem;
-  top: 10rem;
-  left: -34rem;
-  
-   
-
-    font-family: Forum;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 53px;
-    letter-spacing: 0em;
-    text-align: left;
-
-
+  top: 2rem;
+  left: 5rem;
+}
+.btnwrapper3{
+  position: relative;
+  height: 2rem;
+  top: -0.5rem;
+  left: 65%;
+  width: 23rem;
+}
+.prize{
+  position: relative;
+  height: 2rem;
+  top: 5%;
+  left: 0%;
+  font-family: Forum;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 53px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
 .btn {
-    border:1px #bb9564;
-    padding: 12px 17.9px;
-    font-family: Forum;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 11px;
-    margin-left: 2px;
-    margin-right: 0px;
-    letter-spacing: 0.150em;
-    text-align: left;
+  border:1px #bb9564;
+  padding: 9px 15px;
+  font-family: Forum;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 11px;
+  margin-left: 2px;
+  margin-right: 0px;
+  letter-spacing: 0.130em;
+  text-align: left;
 }
 .btn::before {
-    content: "";
-    position: absolute;
-    top: 0.292245rem;
-    left: 0.425035rem;
-    right: -0.325035rem;
-    bottom: -0.592245rem;
-    border: 1px solid #bb9564;
+  content: "";
+  position: absolute;
+  top: -0.107755rem;
+  left: 7.6rem;
+  right: 6.6rem;
+  bottom: -0.5rem;
+  border: 1px solid #bb9564;
 }
 
 
 .outline {
-    background: transparent;
-    color: #bb9564;
-    border: 1px solid #bb9564;
-    transition: all .3s ease;
+  background: transparent;
+  color: #bb9564;
+  border: 1px solid #bb9564;
+  transition: all .3s ease;
 }
 
 .outline:hover{
-    transform: scale(1.125);
-    color: #bb9564;
-    border-color: #bb9564;
-    transition: all .3s ease;  
+  transform: scale(1.125);
+  color: #bb9564;
+  border-color: #bb9564;
+  transition: all .3s ease;  
+}
+.container{
+  position: relative;
+  width: 100%;
+  height: 70%;
+  top: 10%;
+  left: 0%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 5rem;
+}
+.box1{
+
+}
+.box2{
+
+}
+@media(max-width:1111px){
+
+}
+@media(max-width:768px){
+  .workshopname{
+    top: 76%;
+    left: 4.5%;
+    font-size: 40px;
+  }
+  .sponser{
+    top: -105%;
+    left: 17vw;
+  }
+  .prize{
+    top: 16%;
+  }
+  .btnwrapper1{
+     top: 25%;
+  }
+  .btnwrapper2{
+     top: 18.5%;
+  }
 }
 
 
@@ -225,4 +269,3 @@ margin-bottom: 1rem;
 
 
 
- 

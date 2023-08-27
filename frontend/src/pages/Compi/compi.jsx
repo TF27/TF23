@@ -11,6 +11,7 @@ const Compi = () => {
   const { user } = UserAuth();
 
   const google_id = user?.uid;
+  
 
   useEffect(() => {
     const fetchData = async () => {

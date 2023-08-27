@@ -75,7 +75,13 @@ class compi_reg(models.Model):
         ('21', '11th Standard'),
         ('22', '12th Standard')
     ], max_length=255, blank=True, null=True)
-    ca_refral = models.CharField(default=None, max_length=50, blank=True, null=True)
+    zonals = models.CharField(choices=[
+        ('1', 'Mumbai'),
+        ('2', 'Bhopal'),
+        ('3', 'Lucknow'),
+        ('4', 'Jaipur'),
+        ('5', 'Bangalore'),
+    ], max_length=255, blank=True, null=True)
 
 class compi_team(models.Model):
     compi_name = models.ForeignKey(Compi, default=None, on_delete=models.CASCADE)
@@ -101,7 +107,7 @@ class compi_team(models.Model):
 # Workshops
 
 class Workshop(models.Model):
-    # id = models.AutoField(primary_key=True)
+    #id = models.AutoField(primary_key=True)
     genre = models.CharField(max_length=50 ,choices=[
         ('1','Zonals'),
         ('2','Compis'),

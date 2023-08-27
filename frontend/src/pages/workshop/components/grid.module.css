@@ -21,7 +21,7 @@
   grid-template-rows: repeat(2, 1fr);    /* 2 rows */
   justify-items: center; /* Center content horizontally */
   row-gap: 0px;
-  column-gap: 13px; /* Gap between cards */
+  column-gap: 77px; /* Gap between cards */
 }
 
 
@@ -29,7 +29,31 @@
 @media (max-width: 800px) {
   /* Adjust for smaller screens, such as tablets */
   .grid {
-    grid-template-columns: repeat(1, 1fr); /* 2 columns */
+    grid-template-columns: repeat(3, 1fr); /* 2 columns */
     grid-template-rows: repeat(4, 1fr);    /* 4 rows */
+  }
+}
+@media (max-width: 1000px) {
+  /* Adjust for smaller screens, such as tablets */
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 2 columns */
+    grid-template-rows: repeat(4, 1fr); 
+    row-gap: 20px;   /* 4 rows */
+  }
+}
+@media (max-width: 800px) {
+  /* Adjust for smaller screens, such as tablets */
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(4, 1fr);  
+    row-gap: 20px;  /* 4 rows */
+  }
+}
+@media (max-width: 500px) {
+  /* Adjust for smaller screens, such as tablets */
+  .grid {
+    grid-template-columns: repeat(1, 1fr); /* 2 columns */
+    grid-template-rows: repeat(4, 1fr);  
+    row-gap: 20px;  /* 4 rows */
   }
 }

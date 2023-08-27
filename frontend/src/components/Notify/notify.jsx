@@ -86,8 +86,11 @@ const Notify = () => {
                     </div>
                     </div>
                     <div>
-                    <button type="submit">Submit</button>
+                        <div className={styles.buttondiv}>
+                            <button   button type="submit" className={styles.button }>Submit</button>
+                        </div>
                     </div>
+                    
                 </form>
             </div>
         </div>
