@@ -24,12 +24,8 @@ import Techno_gal from './pages/AboutUs/gallery/specific/techno';
 import Robowar_gal from './pages/AboutUs/gallery/specific/Robowar';
 import Explore from './pages/workshop/components/Explore';
 import Recognition from './pages/AboutUs/recognition/Recognition';
-<<<<<<< HEAD
 import Legals from './pages/AboutUs/legals/Legals';
 
-=======
-import Legals from './pages/AboutUs/legals';
->>>>>>> ee238a9aef2c34f5697559b7c0f87b47c3169dd6
 
 
 // import Lectures  from './pages/Lectures/index';
