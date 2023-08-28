@@ -73,3 +73,28 @@
   padding-top: 40px;
 }
 
+@media only screen and (max-width: 1000px) {
+  .summitColumn{
+    margin: 30px 30px 30px 30px;
+  }
+
+  .summitColumn img{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .summitRow{
+    flex-direction: column;
+  }
+
+  .summitColumn{
+    margin: 10px;
+  }
+  .summitColumn img{
+    width: 50%;
+  }
+
+}
+
