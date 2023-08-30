@@ -6,10 +6,14 @@ import WorldMap from "./map";
 import bf from './assets/lectbg.png';
 import OurReach from "../../components/OurReach/ourreach1";
 import Carousel from "../../components/Carousel/carousel";
+import ContactCard from "../../components/Contact/contact"; 
+
 import img from './assets/europe.jpg';
 import img2 from './assets/lectbg.png';
 import img3 from './assets/map.png';
 import img4 from './assets/NotifyMe.png';
+
+import tiger from "../../components/Contact/test_tiger.jpeg"
 
 const Lectures = () => {
 
@@ -67,10 +71,27 @@ const Lectures = () => {
                         <div className="check_rect1"></div>
                         <div className="check_rect2"><Link to='/lectures'>Explore</Link></div>
                     </div>
+            
                 </div>
+            </div>
+            <div className="tray">
+                <ContactCard
+                    image={tiger}
+                    headText="Contact Us"
+                    emailText="contact@example.com"
+                    phoneNumberText="123-456-7890"
+                />
+                <ContactCard
+                    image=''
+                    headText="Contact Us"
+                    emailText="contact@example.com"
+                    phoneNumberText="123-456-7890"
+                />
+                
             </div>
         </div>
     );
+    
 }
 
 export default Lectures;
