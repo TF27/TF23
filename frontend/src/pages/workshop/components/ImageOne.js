@@ -16,7 +16,7 @@ const ImageOne = () => {
   }, []);
 
   return(
-  <div className={parallax.parallaxcontainer} >
+  <div  className={parallax.parallaxcontainer} >
     <div className={`${parallax.parallaxlayer} ${parallax.layer1}`}/>
     <div className={`${parallax.parallaxlayer} ${parallax.layer2}`} style={{ transform: `translateY(-${scrollPosition * 0.4}px)` }}/>
     <div className={`${parallax.parallaxlayer} ${parallax.layer3}`} style={{ transform: `translateY(-${scrollPosition * 0.8}px)` }}/>

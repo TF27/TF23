@@ -42,7 +42,7 @@ const ImageTwo = () => {
   }, [google_id]);
    
   return(
-    <div style={{ transform: `translateY(-${scrollPosition * 0.8}px)` }} className={parallax.image} >
+    <div  className={parallax.image} >
         <Grid  cards={cards}/>
     </div>
   )
