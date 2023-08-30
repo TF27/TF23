@@ -139,6 +139,16 @@
     text-decoration: none;
 }
 
+.card_reg button{
+    color: #FFE381;
+    font-family: Forum;
+    letter-spacing: 0.1em;
+    font-size:18px;
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+
 .card_exp a{
     color: #BB9564;
     font-family: Forum;

@@ -54,13 +54,18 @@
   background-size: auto 100%;
   max-width: 100%;
   z-index: -1;
-  background-repeat:repeat;
   background-attachment: top center;
   top: -11.5%;
     
 }
 .xyz{
   display: inline-block;
+}
+@media(max-width:748px){
+  .layer2{
+    background-size: 140%;
+    background-position-x: center;
+  }
 }
   
   

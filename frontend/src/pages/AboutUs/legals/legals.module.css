@@ -1,0 +1,98 @@
+.background{
+    background-image: url('./img/LegalsBackground.png');
+    background-size: cover;
+    position:fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    z-index: -1;
+    overflow-y: scroll;
+}
+.privacypolicy{
+  font-family: Forum;
+  font-size: 30px;
+  width: 100vw;
+  height: 20vh;
+  position: relative;
+  top: 7%;
+  left: 0%;
+  text-align: center;
+
+}
+.tnc{
+  font-family: Forum;
+  font-size: 30px;
+  width: 100vw;
+  height: 23vh;
+  position: relative;
+  top: 13%;
+  left: 0%;
+}
+.content1::before {
+    content: "";
+    position: absolute;
+    width: var(--labelOffset);
+    height: var(--labelOffset);
+    background: var(--cardColor);
+    left: 0;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    filter: brightness(0.75);
+  }
+ .content1::after {
+    content: "";
+    position: absolute;
+    height: var(--cardsGap);
+    width: var(--cardsGap);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
+    left: 0;
+    top: 100%;
+  }
+  .transit{
+    transition: 1s;
+  }
+  .drop-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* Smooth transition for max-height property */
+  }
+  
+  /* Style for the visible drop-down content */
+  .drop-content.active {
+    max-height: 500px; /* Adjust as needed */
+  }
+  .tnctxt{
+    font-family: Forum;
+    font-size: 20px;
+    width: 100%;
+    height: 15vh;
+    position: relative;
+    text-align: center;
+    top: 0%;
+  }
+  .privacypolicytxt{
+    font-family: Forum;
+    font-size: 20px;
+    width: 100%;
+    height: 8vh;
+    position: relative;
+    text-align: center;
+    top: -3%;
+  }
+  .whatd{
+    overflow: hidden;
+    margin-top: 0px;
+    margin-bottom: 7px;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.whatdopen{
+    margin-top: 7px;
+    margin-bottom: 7px;
+  max-height: 1000px; /* Adjust this value to a sufficiently large value */
+  height:auto;
+  opacity: 1;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
