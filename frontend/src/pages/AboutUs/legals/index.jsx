@@ -3,7 +3,7 @@ import PrivacyPolicy from "./PrivacyPolicy";
 
 const Legals = () => {
     return ( 
-        <div>
+        <div style={{overflowX: "hidden"}}>
             <TermsAndConditions />
             <PrivacyPolicy />
         </div>

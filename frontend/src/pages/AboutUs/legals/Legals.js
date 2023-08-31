@@ -4,7 +4,7 @@ import legals from './legals.module.css';
 
 const Legals = () => {
   return (
-    <div className={legals.background}>
+    <div className={legals.background} style={{overflowX: 'hidden'}}>
         <div className={legals.tnc}>TERMS AND CONDITIONS</div>
         <div className={legals.tnctxt}>These terms and conditions outline the rules and regulations for the use of the Techfest, IIT Bombay Website, located at https://techfest.org/.</div>
         <TermsAndConditions/>

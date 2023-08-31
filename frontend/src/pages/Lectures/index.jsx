@@ -81,6 +81,7 @@ const Lectures = () => {
                 </div>
             </div>
             <div className="tray">
+                <h2>Contact Us</h2>
                 <ContactCard
                     image={tiger}
                     headText="Contact Us"

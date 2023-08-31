@@ -47,6 +47,10 @@
     overflow: hidden;
 }
 
+.noReg{
+  /* overflow: hidden; */
+}
+
 .card_tag{
     display: flex;
     justify-content: center;
