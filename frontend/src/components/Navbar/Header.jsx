@@ -37,28 +37,28 @@ const Header = () => {
 //==========================================theme================================
     const location = useLocation().pathname;
     const locations = location.split('/').filter(segment => segment !== '');
-    const parent = locations[0] 
-    var navbarClassName
+    const parent = locations[0] // gets parent route from array
+    var navbarClassName //header class variable
 
-    if(parent=="competitions"){      
+    if(parent==="competitions"){      
         navbarClassName = "header header_competitions"
     }
-    else if(parent=="lectures"){
+    else if(parent==="lectures"){
         navbarClassName = "header header_lectures"
     }
-    else if(parent=="gallery"){      
+    else if(parent==="gallery"){      
         navbarClassName = "header header_gallery"
     }
-    else if(parent=="exhibitions"){
+    else if(parent==="exhibitions"){
         navbarClassName = "header header_exhibtions"
     }
-    else if(parent=="workshops"){      
+    else if(parent==="workshops"){      
         navbarClassName = "header header_workshops"
     }
-    else if(parent=="summits"){
+    else if(parent==="summits"){
         navbarClassName = "header header_summits"
     }
-    else if(parent=="exhibitions"){
+    else if(parent==="exhibitions"){
         navbarClassName = "header header_exhibitions"
     }
     else{
