@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import './lecture.css';
+import ImageOne from "./ImageOne";
 
 import Notify from "../../components/Notify/notify";
 import WorldMap from "./map";
@@ -19,6 +20,8 @@ const Lectures = () => {
 
     const style = {
         paddingBottom: '20px',
+        position: 'relative',
+        top:'-13vh',
         background: `url(${bf})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -28,7 +31,10 @@ const Lectures = () => {
         overflowX: 'hidden',
     }
     return (
-        <div className="Lectures" style={style}>
+        <div style={{height:'120vh'}}>
+            <ImageOne/>
+            <div className="Lectures" style={style}>
+            
             <Notify />
             <WorldMap />
             <OurReach />
@@ -89,6 +95,7 @@ const Lectures = () => {
                 />
                 
             </div>
+        </div>
         </div>
     );
     
