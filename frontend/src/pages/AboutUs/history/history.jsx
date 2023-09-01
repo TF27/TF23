@@ -1,54 +1,53 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './history.css';
 import blurr from './assets/blurr.png';
 import edm from './assets/edm.png';
 import historyImage from './assets/history.png';
-import tv from './assets/tv.png';
 
 const images = [
-  { id: 'history', url: historyImage},
-  { id: 'blurr', url: blurr,text: '2021',additionalText:'lorem podem todem afjhsdbfjhvyjhdvbfjsdvbfsdgbfjufyjsd'},
-  { id: 'edm', url: edm,text: '2021',additionalText:'idfhasdiobvsauhfasbfkfhvnoixkhdbaifkihisk' },
-  { id: 'blurr', url: blurr,text: '2099',additionalText:'dsuhiafhisdhfjhsdvfviwegfvhsdghcvjsd'},
-  { id: 'edm', url: edm,text: '2099',additionalText:'hunfksadnufkbsdjfbsudkfbskdjfbs' },
+  { id: 'history', url: historyImage },
+  { id: 'blurr', url: blurr, text: '2021', additionalText: 'lorem podem todem afjhsdbfjhvyjhdvbfjsdvbfsdgbfjufyjsd' },
+  { id: 'edm', url: edm, text: '2021', additionalText: 'idfhasdiobvsauhfasbfkfhvnoixkhdbaifkihisk' },
+  { id: 'blurr', url: blurr, text: '2099', additionalText: 'dsuhiafhisdhfjhsdvfviwegfvhsdghcvjsd' },
+  { id: 'edm', url: edm, text: '2099', additionalText: 'hunfksadnufkbsdjfbsudkfbskdjfbs' },
 ];
 
 const HistoryItem = ({ imageUrl, height, width, isVisible, id, text, additionalText }) => (
   <div className={`history-item ${isVisible ? 'visible' : ''}`} style={{ height, width }}>
     <div className={`history-image ${id}`}>
-    {text && <div className="image-text">{text}</div>}
+      {text && <div className="image-text">{text}</div>}
       <img src={imageUrl} alt={text} className="image" />
       {additionalText && <div className="additional-text">{additionalText}</div>}
     </div>
   </div>
 );
 
-
 const History = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleNextButtonClick = () => {
-    console.log(currentIndex);
+  const handleNextButtonClick = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  const handlePreviousButtonClick = () => {
-    console.log(currentIndex);
-    setCurrentIndex((prevIndex) => (prevIndex - 1 +images.length) % images.length);
-  };
-
-  useEffect(() => {
-    document.body.classList.add('no-scroll');
-
-    return () => {
-      document.body.classList.remove('no-scroll');
-    };
   }, []);
+
+  const handlePreviousButtonClick = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  }, []);
+
+  // Automatic transition for "blurr" images
+  useEffect(() => {
+    let timer;
+    if (images[currentIndex].id === 'blurr') {
+      timer = setInterval(() => {
+        handleNextButtonClick();
+      }, 2000); // Change image every 3 seconds (adjust as needed)
+    }
+    return () => clearInterval(timer);
+  }, [currentIndex, handleNextButtonClick]);
 
   return (
     <div className="history-container">
       <div className="history-overlay" onClick={handleNextButtonClick}>
-        {images.map(({ id, url, height, width, text ,additionalText}, index) => (
+        {images.map(({ id, url, height, width, text, additionalText }, index) => (
           <HistoryItem
             key={index}
             imageUrl={url}
@@ -61,15 +60,15 @@ const History = () => {
           />
         ))}
       </div>
-      <div className="history-button">
-      <button onClick={handlePreviousButtonClick}>
-        Previous
-      </button>
-      <button onClick={handleNextButtonClick}>
-        Click
-      </button>
+        <div className="history-button">
+        <button onClick={handlePreviousButtonClick} >
+          Previous
+        </button>
+        <button onClick={handleNextButtonClick}>
+          Click
+        </button>
       </div>
-    </div>
+      </div>
   );
 };
 
