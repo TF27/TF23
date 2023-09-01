@@ -1,6 +1,7 @@
 .rockRight{
     position: absolute;
     overflow: hidden;
+    right: 0;
 }
 
 .rockUp{
