@@ -5,18 +5,6 @@ import axios from 'axios';
 import { UserAuth } from "../../../contexts/AuthContext";
 
 const ImageTwo = () => {
-  //parallax effect
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    setScrollPosition(window.scrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   //cards
   const [cards,setcards]=useState([]);
@@ -42,8 +30,8 @@ const ImageTwo = () => {
   }, [google_id]);
    
   return(
-    <div className={parallax.image} style={{ transform: `translateY(-${scrollPosition * 0.8}px)` }}>
-        <Grid cards={cards}/>
+    <div  className={parallax.image} >
+        <Grid  cards={cards}/>
     </div>
   )
 };

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import './lecture.css';
+import ImageOne from "./ImageOne";
 
 import Notify from "../../components/Notify/notify";
 import WorldMap from "./map";
@@ -7,15 +8,21 @@ import bf from './assets/lectbg.png';
 // import OurReach from "../../components/OurReach/ourreach1";
 import OurReach from "./ourreach";
 import Carousel from "../../components/Carousel/carousel";
+import ContactCard from "../../components/Contact/contact"; 
+
 import img from './assets/europe.jpg';
 import img2 from './assets/lectbg.png';
 import img3 from './assets/map.png';
 import img4 from './assets/NotifyMe.png';
 
+import tiger from "../../components/Contact/test_tiger.jpeg"
+
 const Lectures = () => {
 
     const style = {
         paddingBottom: '20px',
+        position: 'relative',
+        top:'-13vh',
         background: `url(${bf})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -25,7 +32,10 @@ const Lectures = () => {
         overflowX: 'hidden',
     }
     return (
-        <div className="Lectures" style={style}>
+        <div style={{height:'120vh'}}>
+            <ImageOne/>
+            <div className="Lectures" style={style}>
+            
             <Notify />
             <WorldMap />
             <OurReach />
@@ -68,10 +78,29 @@ const Lectures = () => {
                         <div className="check_rect1"></div>
                         <div className="check_rect2"><Link to='/lectures'>Explore</Link></div>
                     </div>
+            
                 </div>
             </div>
+            <div className="tray">
+                <h2>Contact Us</h2>
+                <ContactCard
+                    image={tiger}
+                    headText="Contact Us"
+                    emailText="contact@example.com"
+                    phoneNumberText="123-456-7890"
+                />
+                <ContactCard
+                    image=''
+                    headText="Contact Us"
+                    emailText="contact@example.com"
+                    phoneNumberText="123-456-7890"
+                />
+                
+            </div>
+        </div>
         </div>
     );
+    
 }
 
 export default Lectures;
