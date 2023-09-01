@@ -18,6 +18,7 @@ class Compi(models.Model):
     img = models.ImageField(upload_to='compi')
     statement = models.FileField(upload_to='ProblemStatements', null=True, blank=True)
     sponsorImg = models.ImageField(upload_to='compi_sponsors', null=True, blank=True)
+    reg_count = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name
