@@ -21,7 +21,15 @@ import WhatsappShareButton from '../../components/share/whatsapp';
 const Technorion = () => {
 
   const [data, setData] = useState([]);
-  const { user } = UserAuth();
+  const { googleSignIn, user, logOut } = UserAuth();
+
+  const handleGoogleSignIn = async () => {
+    try{
+        await googleSignIn();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
   const google_id = user?.email;
 
@@ -40,7 +48,7 @@ const Technorion = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [google_id]);
 
   const card = () => {
     const zonals = data.filter(item => item.genre === '1')
@@ -51,6 +59,7 @@ const Technorion = () => {
       <div className={styles.compi_card}>
         <div className={styles.card_rect1}></div>
           <div className={styles.card_rect2}></div>
+          <div className={styles.noReg}>
             <div className={styles.card_tag}>
               <span><img src={dot} alt='dot'/></span>
               <h3>{data.tag}</h3>
@@ -73,12 +82,18 @@ const Technorion = () => {
                 </div>
               </div>  
             </div>
+          </div>
+          <div>
             <div className={styles.card_regexp}>
-              {data.is_registered ? (<div className={styles.card_reg}>Registered</div>) : (
+              {data.is_registered ? (<div className={styles.card_reg}>Registered</div>) 
+              : user ? (
                 <div className={styles.card_reg}><Link to={`${data.name}/register`}>Register</Link></div>
+              ): (
+                <div className={styles.card_reg}><button onClick={handleGoogleSignIn}>Register</button></div>
               )}
               <div className={styles.card_exp}><Link to={data.name}>Explore</Link></div>
             </div>
+          </div>
           </div>
           {/* </div>
           </div> */}

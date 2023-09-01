@@ -1,67 +1,84 @@
-.oureach {
-  position: relative;
-  top: 90px;
+/* *{
+  scroll-padding-top: 2000px;
+} */
+
+<<<<<<< HEAD
+.ourReach h1{
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.ourReach{
+  margin-bottom: -50px;
+}
+
+.loader{
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+.buffer{
   display: flex;
   flex-direction: column;
-  text-align: center;
-}
-
-.our-reach {
-  font-size: 40px;
-}
-
-.prev-stats {
-  position: relative;
-  top: 20px;
-}
-
-.skill {
+=======
+.loader{
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap; 
+  justify-content: center;
 }
-
-.circle {
-  margin-bottom: 30px;
-  display: grid;
+.buffer{
+  display: flex;
+>>>>>>> ebda60db3476e3af20108ca3d6e78ce2734ce875
   align-items: center;
   justify-content: center;
-  background-image: radial-gradient(#00000078, #00000000 75%);
-  /*background-image: radial-gradient(#00000075, #00000030 80%);*/
+  position: relative;
+  width: calc(33.33vw - 5vw);
+  overflow: hidden;
+  /* margin: 2vw;   */
+}
+#myImg{
+  animation: rotateAnimation 2s infinite linear ;
+
+  /* width: 100%; */
+}
+.Overlay{
+  transform: translateY(-20px);
+  position: absolute;
+  /* color:blueviolet; */
+  /* font-weight: bold; */
+  font-size: 20px;
+  animation: none;
+  /* top: 30%;
+  left:43%; */
 }
 
-.reach {
-  width: 100%;
-}
-
-svg {
-  margin: 0;
-}
-
-circle {
-  /* fill: black; */
-  stroke: url(#GradientColor);
-  stroke-width: 5px;
-  stroke-dasharray: 608;
-  stroke-dashoffset: 608;
-  color: white;
-}
-
-svg text {
-  /* transform: rotate(270deg); */
-  font-size: 36px;
-  font-style: normal;
-  line-height: 36px;
-  width: 74px;
-  height: 36px;
-  /* transform: translate(246px,-12px); */
-}
-
-@keyframes anime {
-  100% {
-    stroke-dashoffset: 0;
+@keyframes rotateAnimation {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
   }
 }
-
-.wgat {
-  font-size: 30px;
+@media (max-width: 768px)
+{
+  .loader{
+    flex-direction: column;
+    align-items: center;
+  }
+  .loader .buffer{
+    width: 50vw;
+    /* height: 25vh; */
+  }
+  #myimg{
+    width: 40vw;
+    height: 20vh;
+  }
+  .Overlay{
+    font-size: 20px;
+  }
 }

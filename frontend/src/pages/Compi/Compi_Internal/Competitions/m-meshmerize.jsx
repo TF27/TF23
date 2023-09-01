@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import styles from './compi_data.module.css';
+import Faq from 'react-faq-component';
+import './x.css';
 
 const Meshmerize = () => {
 
-    const [open, setOpen] = useState('About');
+    const [open, setOpen] = useState(false);
 
-    const handleClickOpen = (open) => {
-        setOpen(open);
+    const handleClickOpen = (openX) => {
+        if(openX === open){
+            setOpen(false);
+        }
+        else{
+            setOpen(openX);
+        }
     }
 
     const [openFaq, setOpenFaq] = useState(false);
@@ -58,10 +65,11 @@ const Meshmerize = () => {
         marginBottom: '20px',
         maxWidth: '80%',
         margin: 'auto',
-    }
+        rowContentMarginBottom: '0',
+      }
 
     return (
-        <div>
+        <div className={styles.mWholeData}>
             <div>
                 <div onClick={() => handleClickOpen('About')} className={`${styles.whatu} ${open === 'About' ? styles.whatuOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatu_rect1}`}></div>
@@ -100,26 +108,7 @@ const Meshmerize = () => {
                 <div className={`${styles.whatd} ${open === 'FAQs' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                        <div>
-                            <div className={styles.faq}>
-                                <div className={styles.faq_container}>
-                                    <div className={styles.faq_list}>
-                                        {faqData.rows.map((row, i) => (
-                                            <div key={i} className={styles.faq_list_item}>
-                                                <div className={styles.faq_question} onClick={() => OpenFaq(i)}>
-                                                    <div className={styles.faq_question_text}>{row.title}</div>
-                                                    
-                                                </div>
-                                                <div className={`${styles.faq_answer} ${openFaq === i ? styles.faq_answer_open : ''}`}>
-                                                    <div className={styles.faq_answer_text}>{row.content}</div>
-                                                </div>
-                                            </div>
-                                        ))}
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <Faq data={faqData} styles={styles1}/>
                     </div>
                 </div>
             </div>

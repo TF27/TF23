@@ -174,7 +174,8 @@
 
 .whatu{
     display: flex;
-    margin-top: 60px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 .whatu_rect1{
     height: 40px;
@@ -196,14 +197,22 @@
 }
 
 .whatd{
-    display: none;
+    display: flex;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease, opacity 0.3s ease;
+    margin-top: 60px;
+    opacity: 0;
 }
 
 .whatdOpen{
     display: flex;
+    flex-direction: column;
+    height: 300px; /* Adjust the height as needed */
+    transition: height 0.3s ease, opacity 0.3s ease;
     margin-top: 60px;
-    height: 300px;
-    
+    margin-bottom: 20px; 
+    opacity: 1;
 }
 
 .whatd_rect1{
@@ -260,4 +269,9 @@
     max-height: 1000px; /* Adjust this value to a sufficiently large value */
     opacity: 1;
     transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.mWholeData{
+    position: relative;
+    top: -140px;
 }
