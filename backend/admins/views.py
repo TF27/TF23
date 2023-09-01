@@ -5,6 +5,26 @@ from apis.models import *
 from django.http import HttpResponse
 import csv
 
+
+def compi_count():
+    data = compi_reg.objects.all()
+    compies = Compi.objects.all()
+
+    for compi in compies:
+        compi.reg_count = 0 
+        print("no")
+
+    for d in data:
+        for compie in compies:
+            if d.compi.name == compie.name :
+                compie.reg_count+=1
+                print("yes")
+    
+        print(d.compi.reg_count)
+    return None
+    
+
+
 @staff_member_required
 def compi(request,compiname):
     if request.method == 'GET':
@@ -15,6 +35,9 @@ def compi(request,compiname):
             'compiname': compiname,
             'compies':compies,
         }
+
+        compi_count()
+
         if compiname == "compi":
             return render(request, 'compi/overall.html', context)
         for reg in data:

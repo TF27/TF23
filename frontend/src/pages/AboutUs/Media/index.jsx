@@ -1,6 +1,115 @@
 import React from 'react';
 import i1 from "./media/2021/media/11.jpg"
 import i2 from "./media/logo/TOI.jpg"
+import i3 from "./media/2020/media/bolt.jpg"
+import i4 from "./media/logo/hindustantimes.jpg"
+import i5 from "./media/media2019/CA portal Launch - Maharashtra Times.jpg"
+import i6 from "./media/logo/Maharashtra_Times.png"
+import i7 from "./media/media2018/Android U - News 18 Hindi.png"
+import i8 from "./media/logo/news18.jpg"
+import i9 from "./media/2021/media/11.jpg" // "./media/media2018/Android U - Zee News.png"
+import i10 from "./media/logo/zee-news-logo.jpg"
+import i11 from "./media/2021/media/11.jpg"  //"./media/media2018/Android U - The Hindu.png"
+import i12 from "./media/logo/The Hindu.jpg"
+import i13 from "./media/media2018/Cyclothon - Times of India.png"
+import i14 from "./media/logo/TOI.jpg"
+import i15 from "./media/media2018/BARC Director-The Hindu.png"
+import i16 from "./media/media2018/India Education Diary - Website and Theme release.png"
+import i17 from "./media/logo/India-education-diary.png"
+import i18 from "./media/media2017/2017 coverage/robowars - Hindustan Times.png"
+import i19 from "./media/logo/hindustantimes.jpg"
+import i20 from "./media/media2018/Maharashtra Times Theme Release.jpg"
+import i21 from "./media/logo/Maharashtra_Times.png"
+import i22 from "./media/media2017/2017 coverage/01-09-16 ADC news.JPG"
+import i23 from "./media/logo/adc.jpeg"
+import i24 from "./media/media2017/2017 coverage/19-07-16 Deccan Herald.jpg"
+import i25 from "./media/logo/Deccan Herald.jpg"
+import i26 from "./media/media2017/2017 coverage/Compi - DNA.PNG"
+import i27 from "./media/logo/DNA.jpg"
+import i28 from "./media/media2017/2017 coverage/CURED - DNA.JPG"
+import i29 from "./media/media2017/2017 coverage/CURED - DNA.JPG"
+import i30 from "./media/media2017/2017 coverage/The Free Press Journal_Mumbai_P-5_29-12-15.jpg"
+import i31 from "./media/media2017/2017 coverage/The The Indian Express_Mumbai_P-7_27-12-15.jpg"
+import i32 from "./media/logo/indian-express-logo.png"
+import i33 from "./media/media2017/2017 coverage/The Times Of India_Mumbai_P-6_27-12-15-2.jpg"
+import i34 from "./media/logo/TOI.jpg" 
+import i35 from "./media/2021/media/12.png"
+import i36 from "./media/logo/hindustantimes.jpg"
+import i37 from "./media/2020/media/einstein.png"
+import i38 from "./media/media2018/Robowars Iran - Times of India.png"
+import i39 from "./media/media2018/SPEAK launch - Maharashtra Times.png"
+import i40 from "./media/logo/Maharashtra_Times.png"
+import i41 from "./media/media2018/SPEAK launch - Mumbai Mirror.png"
+import i42 from "./media/logo/mumbaimirror.png"
+import i43 from "./media/media2018/SPEAK-launch-Bollywood-Hungama.png"
+import i44 from "./media/logo/b_hungama.jpg"
+import i45 from "./media/media2018/SSAP - DNA.png"
+import i46 from "./media/logo/DNA.jpg"
+import i47 from "./media/media2018/SSAP - Maharashtra Times.png"
+import i48 from "./media/logo/Maharashtra_Times.png"
+import i49 from "./media/media2018/VarunGandhi-TheHindu.png"
+import i50 from "./media/logo/The Hindu.jpg"
+import i51 from "./media/media2018/Viral Acharya - Economic Times.png"
+import i52 from "./media/logo/economic times.jpeg"
+import i53 from "./media/media2018/Viral Acharya - CNBC TV 18.png"
+import i54 from "./media/logo/CNBCTV18.jpg"
+import i55 from  "./media/media2018/Viral Acharya - Indian Express.png"
+import i56 from "./media/logo/indian-express-logo.png"
+import i57 from "./media/media2018/Day 3 - Free Press Journal.png"
+import i58 from "./media/logo/freepress.jpeg"
+import i59 from "./media/media2017/2017 coverage/mumbai mirror 4jan.jpg"
+import i60 from "./media/logo/mumbaimirror.png"
+import i61 from "./media/media2017/2017 coverage/Mumbai Mirror_Mumbai_P-12_28-12-15.jpg"
+import i62 from "./media/media2017/2017 coverage/Mumbai Mirror_Mumbai_P-13_28-12-15.jpg"
+import i63 from "./media/media2017/2017 coverage/Navbharat Times_Mumbai_P-6_26-12-15.jpg"
+import i64 from "./media/logo/nbt.jpeg"
+import i65 from "./media/media2017/2017 coverage/The Free Press Journal_Mumbai_P-3_28-12-15.jpg"
+import i66 from "./media/2021/media/3.jpg"
+import i67 from "./media/logo/indian-express-logo.png"
+import i68 from "./media/2020/media/vidyabalan.png"
+import i69 from "./media/logo/The Hindu.jpg"
+import i70 from "./media/media2017/2017 coverage/19-07-16 Deccan Herald.jpg"
+import i71 from "./media/logo/Deccan Herald.jpg"
+import i72 from "./media/media2017/2017 coverage/Compi - DNA.PNG"
+import i73 from "./media/logo/DNA.jpg"
+import i74 from "./media/media2017/2017 coverage/CURED - DNA.JPG"
+import i75 from "./media/media2017/2017 coverage/Cured - The Asian Age.jpg"
+import i76 from "./media/logo/The Asian Age.png"
+import i77 from "./media/media2017/2017 coverage/Exhibitions - DNA.jpg"
+import i78 from "./media/media2017/2017 coverage/Robo - Hindustan Times.jpg"
+import i79 from "./media/media2017/2017 coverage/robowars - Mumbai Mirror.jpg"
+import i80 from "./media/logo/mumbaimirror.png"
+import i81 from "./media/media2017/2017 coverage/The Asian Age robowars.png"
+import i82 from "./media/logo/The Asian Age.png"
+import i83 from "./media/media2018/Viral Acharya Deccan Chronicle.png"
+import i84 from "./media/logo/DeccanChronicle.jpg" 
+import i85 from "./media/media2017/2017 coverage/Modi Smart City.png"
+import i86 from "./media/logo/bs).png"
+import i87 from "./media/2021/media/4.jpeg"
+import i88 from "./media/logo/TOI.jpg"
+import i89 from "./media/2020/media/TOI-Robothespian.PNG"
+import i90 from "./media/media2018/SSAP Launch - India Education Diary.png"
+import i91 from "./media/logo/India-education-diary.png"
+import i92 from "./media/media2018/SSAP - Times of India.png"
+import i93 from "./media/media2018/The Hills Times - SSAP.png"
+import i94 from "./media/logo/hill.jpg"
+import i95 from "./media/media2018/The Hindu - Simon Taufel.png" 
+import i96 from "./media/logo/The Hindu.jpg"
+import i97 from "./media/media2018/The-Pioneer-Zonals.png"
+import i98 from "./media/logo/thepioneer.jpg"
+import i99 from "./media/media2018/Dalai Lama -MidDay.png"
+import i100 from "./media/logo/thepioneer.jpg"
+import i101 from "./media/media2018/Robowars - Mumbai Mirror.png"
+import i102 from "./media/logo/mumbaimirror.png"
+import i103 from "./media/media2017/2017 coverage/Hindustan Times - Google and Microsoft.jpg"
+import i104 from "./media/logo/hindustantimes.jpg"
+import i105 from "./media/media2017/2017 coverage/Hindustan Times - Techfest National Quiz.png"
+import i106 from "./media/media2017/2017 coverage/Hindustan Times Digital Literacy 15-07-17.png"
+import i107 from "./media/media2017/2017 coverage/IMPower Campaign - Hindustan TImes.JPG"
+import i108 from "./media/media2017/2017 coverage/ISMOKE DNA.png"
+import i109 from "./media/media2017/2017 coverage/Lectures - Mumbai Mirror.jpg"
+import i110 from "./media/media2017/2017 coverage/RTI Government - Times Of India.png"
+
 const Media = () => {
     const iframeSources = [
         "https://www.youtube.com/embed/4alBMIq2LXw",
@@ -23,66 +132,66 @@ const Media = () => {
             <div class="row">
                 <div class="col-md-3">
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href={i1}><img class="card-img-top " src={"./media/2021/media/11.jpg"} alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i1}><img class="card-img-top " src={i1} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
                             <img src={i2} alt="" style={{maxHeight: "50px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
                         </div>  
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/2020/media/bolt.jpg"><img class="card-img-top " src="./media/2020/media/bolt.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i3}><img class="card-img-top " src={i3} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body" >
-                            <img src="./media/logo/hindustantimes.jpg" alt="" style={{maxWidth:"80%"}}/>
+                            <img src={i4} alt="" style={{maxWidth:"80%"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Maharashtra Times</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2019/CA portal Launch - Maharashtra Times.jpg"><img class="card-img-top " src="./media/media2019/CA portal Launch - Maharashtra Times.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i5}><img class="card-img-top " src={i5} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body" >
-                            <img src="./media/logo/Maharashtra_Times.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i6} alt="" style={{maxHeight: " 40px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Maharashtra Times</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="https://hindi.news18.com/news/maharashtra/mumbai-n-a-three-day-tech-fest-in-bombay-iit-bombay-a-robot-with-a-man-made-face-was-in-the-discussion-1620587.html"><img class="card-img-top " src="./media/media2018/Android U - News 18 Hindi.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="https://hindi.news18.com/news/maharashtra/mumbai-n-a-three-day-tech-fest-in-bombay-iit-bombay-a-robot-with-a-man-made-face-was-in-the-discussion-1620587.html"><img class="card-img-top " src={i7} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/news18.jpg" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i8} alt="" style={{maxHeight: " 40px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">News 18</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="https://zeenews.india.com/hindi/india/mumbai-android-u-robot-shadowed-in-techfest-talking-like-human-being/479893"><img class="card-img-top " src="./media/media2018/Android U - Zee News hindi.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="https://zeenews.india.com/hindi/india/mumbai-android-u-robot-shadowed-in-techfest-talking-like-human-being/479893"><img class="card-img-top " src={i9} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/zee-news-logo.jpg" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i10} alt="" style={{maxHeight: " 40px"}}/>
 
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Zee News</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="https://www.thehindu.com/news/cities/mumbai/india-should-be-pioneers-of-new-technology-former-barc-director/article25747206.ece"><img class="card-img-top " src="./media/media2018/BARC Director-The Hindu.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="https://www.thehindu.com/news/cities/mumbai/india-should-be-pioneers-of-new-technology-former-barc-director/article25747206.ece"><img class="card-img-top " src={i11} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/The Hindu.jpg" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i12} alt="" style={{maxHeight: " 40px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="https://timesofindia.indiatimes.com/entertainment/events/mumbai/mumbaikars-take-part-in-a-cyclothon-at-iit/articleshow/66118169.cms"><img class="card-img-top " src="./media/media2018/Cyclothon - Times of India.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="https://timesofindia.indiatimes.com/entertainment/events/mumbai/mumbaikars-take-part-in-a-cyclothon-at-iit/articleshow/66118169.cms"><img class="card-img-top " src={i13} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/TOI.jpg" alt="" style={{maxHeight: "50px"}}/>
+                            <img src={i14} alt="" style={{maxHeight: "50px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2018/BARC Director-The Hindu.png"><img class="card-img-top " src="./media/media2018/BARC Director-The Hindu.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i15}><img class="card-img-top " src={i15} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/The Hindu.jpg" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i12} alt="" style={{maxHeight: " 40px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="http://indiaeducationdiary.in/website-theme-launch-iit-bombays-techfest/"><img class="card-img-top" src="./media/media2018/India Education Diary - Website and Theme release.png" alt="Card image" style={{width:"100%"}}/>
+                        <a class="" target="_blank" href="http://indiaeducationdiary.in/website-theme-launch-iit-bombays-techfest/"><img class="card-img-top" src={i16} alt="Card image" style={{width:"100%"}}/>
                             <div class="card-body">
-                                <img src="./media/logo/India-education-diary.png" alt="" style={{maxHeight: " 40px"}}/>
+                                <img src={i17} alt="" style={{maxHeight: " 40px"}}/>
 
                                 {/*							<h4 class="card-title" style={{margin-bottom: 0px;">India Education Diary</h4>*/}
                             </div>
@@ -90,75 +199,75 @@ const Media = () => {
 
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/robowars - Hindustan Times.png"><img class="card-img-top" src="./media/media2017/2017 coverage/robowars - Hindustan Times.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i18}><img class="card-img-top" src={i18} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/hindustantimes.jpg" alt="" style={{maxWidth:"80%"}}/>
+                            <img src={i19} alt="" style={{maxWidth:"80%"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">dfjbndfkjbnkdj</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2018/Maharashtra Times Theme Release.jpg"><img class="card-img-top" src="./media/media2018/Maharashtra Times Theme Release.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i20}><img class="card-img-top" src={i20} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/Maharashtra_Times.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i21} alt="" style={{maxHeight: " 40px"}}/>
 
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Maharashtra Times</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/01-09-16 ADC news.JPG"><img class="card-img-top" src="./media/media2017/2017 coverage/01-09-16 ADC news.JPG" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i22}><img class="card-img-top" src={i22} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/adc.jpeg" alt="" style={{maxHeight:"60px"}}/>
+                            <img src={i23} alt="" style={{maxHeight:"60px"}}/>
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/19-07-16 Deccan Herald.jpg"><img class="card-img-top" src="./media/media2017/2017 coverage/19-07-16 Deccan Herald.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i24}><img class="card-img-top" src={i24} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/Deccan Herald.jpg" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i25} alt="" style={{maxHeight: " 40px"}}/>
 
                             {/*					<img src="./media/logo/DeccanChronicle.jpg" alt="" style={{maxHeight: " 40px"}}/>*/}
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Deccan Herald</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/Compi - DNA.PNG"><img class="card-img-top" src="./media/media2017/2017 coverage/Compi - DNA.PNG" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i26}><img class="card-img-top" src={i26} style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/DNA.jpg" alt="" style={{maxHeight: "55px"}}/>
+                            <img src={i27} alt="" style={{maxHeight: "55px"}}/>
 
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">DNA</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/CURED - DNA.JPG"><img class="card-img-top" src="./media/media2017/2017 coverage/CURED - DNA.JPG" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href="./media/media2017/2017 coverage/CURED - DNA.JPG"><img class="card-img-top" src={i28} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/DNA.jpg" alt="" style={{maxHeight: "55px"}}/>
+                            <img src={i27} alt="" style={{maxHeight: "55px"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">DNA</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href={"./media/media2017/2017 coverage/CURED - DNA.JPG"}><img class="card-img-top" src="./media/media2017/2017 coverage/CURED - DNA.JPG" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={"./media/media2017/2017 coverage/CURED - DNA.JPG"}><img class="card-img-top" src={i29} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/DNA.jpg" alt="" style={{maxHeight: "55px"}}/>
+                            <img src={i27} alt="" style={{maxHeight: "55px"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">DNA</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/CURED - DNA.JPG"><img class="card-img-top" src="./media/media2017/2017 coverage/The Free Press Journal_Mumbai_P-5_29-12-15.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href="./media/media2017/2017 coverage/CURED - DNA.JPG"><img class="card-img-top" src={i30} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
                             <img src={i1} alt="" style={{maxHeight: "55px"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">dfjbndfkjbnkdj</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/The The Indian Express_Mumbai_P-7_27-12-15.jpg"><img class="card-img-top" src="./media/media2017/2017 coverage/The The Indian Express_Mumbai_P-7_27-12-15.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i31}><img class="card-img-top" src={i31} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/indian-express-logo.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i32} alt="" style={{maxHeight: " 40px"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">dfjbndfkjbnkdj</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/The Times Of India_Mumbai_P-6_27-12-15-2.jpg"><img class="card-img-top" src="./media/media2017/2017 coverage/The Times Of India_Mumbai_P-6_27-12-15-2.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i33}><img class="card-img-top" src={i33} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/TOI.jpg" alt="" style={{maxHeight: "50px"}}/>
+                            <img src={i34} alt="" style={{maxHeight: "50px"}}/>
 
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">dfjbndfkjbnkdj</h4>*/}
                         </div>
@@ -168,96 +277,96 @@ const Media = () => {
                 </div>
                 <div class="col-md-3">
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/2021/media/12.png"><img class="card-img-top " src="./media/2021/media/12.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i35}><img class="card-img-top " src={i35} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body" >
-                            <img src="./media/logo/hindustantimes.jpg" alt="" style={{maxWidth:"80%"}}/>
+                            <img src={i36} alt="" style={{maxWidth:"80%"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Maharashtra Times</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/2020/media/einstein.png"><img class="card-img-top " src="./media/2020/media/einstein.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i37}><img class="card-img-top " src={i37} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body" >
-                            <img src="./media/logo/TOI.jpg" alt="" style={{maxHeight: "50px"}}/>
+                            <img src={i14} alt="" style={{maxHeight: "50px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Maharashtra Times</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="https://www.thehindu.com/news/cities/mumbai/robotics-a-big-draw-at-techfest/article25753850.ece"><img class="card-img-top" src="./media/media2018/Robowars Iran - Times of India.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="https://www.thehindu.com/news/cities/mumbai/robotics-a-big-draw-at-techfest/article25753850.ece"><img class="card-img-top" src={i38} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/TOI.jpg" alt="" style={{maxHeight: "50px"}}/>
+                            <img src={i14} alt="" style={{maxHeight: "50px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Times of India</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2018/SPEAK launch - Maharashtra Times.png"><img class="card-img-top" src="./media/media2018/SPEAK launch - Maharashtra Times.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i39}><img class="card-img-top" src={i39} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/Maharashtra_Times.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i40} alt="" style={{maxHeight: " 40px"}}/>
 
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Maharashtra Times</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2018/SPEAK launch - Mumbai Mirror.png"><img class="card-img-top" src="./media/media2018/SPEAK launch - Mumbai Mirror.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i41}><img class="card-img-top" src={i41} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/mumbaimirror.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i42} alt="" style={{maxHeight: " 40px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Mumbai Mirror</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="http://www.bollywoodhungama.com/videos/parties-events/launch-of-techfest-initiative-with-yami-gautam/"><img class="card-img-top" src="./media/media2018/SPEAK-launch-Bollywood-Hungama.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="http://www.bollywoodhungama.com/videos/parties-events/launch-of-techfest-initiative-with-yami-gautam/"><img class="card-img-top" src={i43} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/b_hungama.jpg" alt="" style={{maxHeight: "40px"}}/>
+                            <img src={i44} alt="" style={{maxHeight: "40px"}}/>
 
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Bollywood Hungama</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2018/SSAP - DNA.png"><img class="card-img-top" src="./media/media2018/SSAP - DNA.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i45}><img class="card-img-top" src={i45} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/DNA.jpg" alt="" style={{maxHeight: "55px"}}/>
+                            <img src={i46} alt="" style={{maxHeight: "55px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">DNA</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2018/SSAP - Maharashtra Times.png"><img class="card-img-top" src="./media/media2018/SSAP - Maharashtra Times.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i47}><img class="card-img-top" src={i47} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/Maharashtra_Times.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i48} alt="" style={{maxHeight: " 40px"}}/>
 
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Maharashtra Times</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="https://www.thehindu.com/news/cities/mumbai/inequality-a-key-issue-of-our-times/article25753795.ece"><img class="card-img-top" src="./media/media2018/VarunGandhi-TheHindu.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="https://www.thehindu.com/news/cities/mumbai/inequality-a-key-issue-of-our-times/article25753795.ece"><img class="card-img-top" src={i49} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/The Hindu.jpg" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i50} alt="" style={{maxHeight: " 40px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="https://retail.economictimes.indiatimes.com/news/industry/public-credit-registry-better-for-smes-not-special-norms-viral-acharya/67105185"><img class="card-img-top" src="./media/media2018/Viral Acharya - Economic Times.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="https://retail.economictimes.indiatimes.com/news/industry/public-credit-registry-better-for-smes-not-special-norms-viral-acharya/67105185"><img class="card-img-top" src={i51} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/economic times.jpeg" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i52} alt="" style={{maxHeight: " 40px"}}/>
 
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="https://www.cnbctv18.com/economy/public-credit-registry-better-for-smes-not-special-norms-says-viral-acharya-1706051.htm 	"><img class="card-img-top" src="./media/media2018/Viral Acharya - CNBC TV 18.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="https://www.cnbctv18.com/economy/public-credit-registry-better-for-smes-not-special-norms-says-viral-acharya-1706051.htm 	"><img class="card-img-top" src={i53} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/CNBCTV18.jpg" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i54} alt="" style={{maxHeight: " 40px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">CNBC TV 18</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="https://www.msn.com/en-in/news/other/many-economists-believe-poor-take-best-economic-decisions-rbi-deputy-governor/ar-BBR0yXr"><img class="card-img-top" src="./media/media2018/Viral Acharya - Indian Express.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="https://www.msn.com/en-in/news/other/many-economists-believe-poor-take-best-economic-decisions-rbi-deputy-governor/ar-BBR0yXr"><img class="card-img-top" src={i55} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/indian-express-logo.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i56} alt="" style={{maxHeight: " 40px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Indian Express</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="https://www.freepressjournal.in/mumbai/iit-b-techfeststudents-now-shift-their-interests-towards-robotics-ai"><img class="card-img-top" src="./media/media2018/Day 3 - Free Press Journal.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="https://www.freepressjournal.in/mumbai/iit-b-techfeststudents-now-shift-their-interests-towards-robotics-ai"><img class="card-img-top" src={i57} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/freepress.jpeg" alt="" style={{maxHeight: "55px"}}/>
+                            <img src={i58} alt="" style={{maxHeight: "55px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Free Press Journal</h4>*/}
                         </div>
                     </div>
@@ -269,38 +378,38 @@ const Media = () => {
                     {/*					</div>*/}
                     {/*				</div>*/}
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/mumbai mirror 4jan.jpg"><img class="card-img-top" src="./media/media2017/2017 coverage/mumbai mirror 4jan.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i59}><img class="card-img-top" src={i59} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/mumbaimirror.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i60} alt="" style={{maxHeight: " 40px"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">dfjbndfkjbnkdj</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/Mumbai Mirror_Mumbai_P-12_28-12-15.jpg"><img class="card-img-top" src="./media/media2017/2017 coverage/Mumbai Mirror_Mumbai_P-12_28-12-15.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i61}><img class="card-img-top" src="./media/media2017/2017 coverage/Mumbai Mirror_Mumbai_P-12_28-12-15.jpg" alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/mumbaimirror.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i60} alt="" style={{maxHeight: " 40px"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">dfjbndfkjbnkdj</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/Mumbai Mirror_Mumbai_P-13_28-12-15.jpg"><img class="card-img-top" src="./media/media2017/2017 coverage/Mumbai Mirror_Mumbai_P-13_28-12-15.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i62}><img class="card-img-top" src={i62} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/mumbaimirror.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i60} alt="" style={{maxHeight: " 40px"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">dfjbndfkjbnkdj</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/Navbharat Times_Mumbai_P-6_26-12-15.jpg"><img class="card-img-top" src="./media/media2017/2017 coverage/Navbharat Times_Mumbai_P-6_26-12-15.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i63}><img class="card-img-top" src={i63} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/nbt.jpeg" alt="" style={{maxHeight: "50px"}}/>
+                            <img src={i64} alt="" style={{maxHeight: "50px"}}/>
 
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">dfjbndfkjbnkdj</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/The Free Press Journal_Mumbai_P-3_28-12-15.jpg"><img class="card-img-top" src="./media/media2017/2017 coverage/The Free Press Journal_Mumbai_P-3_28-12-15.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i65}><img class="card-img-top" src={i65} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/freepress.jpeg" alt="" style={{maxHeight: "55px"}}/>
+                            <img src={i58} alt="" style={{maxHeight: "55px"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">dfjbndfkjbnkdj</h4>*/}
                         </div>
                     </div>
@@ -308,92 +417,92 @@ const Media = () => {
                 </div>
                 <div class="col-md-3">
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/2021/media/3.jpg"><img class="card-img-top" src="./media/2021/media/3.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i66}><img class="card-img-top" src={i66} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/indian-express-logo.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i67} alt="" style={{maxHeight: " 40px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Indian Express</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/2020/media/vidyabalan.png"><img class="card-img-top" src="./media/2020/media/vidyabalan.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i68}><img class="card-img-top" src={i68} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/The Hindu.jpg" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i69} alt="" style={{maxHeight: " 40px"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">The Asian Age</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/19-07-16 Deccan Herald.jpg"><img class="card-img-top" src="./media/media2017/2017 coverage/19-07-16 Deccan Herald.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i70}><img class="card-img-top" src={i70} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/Deccan Herald.jpg" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i71} alt="" style={{maxHeight: " 40px"}}/>
 
                             {/*					<img src="./media/logo/DeccanChronicle.jpg" alt="" style={{maxHeight: " 40px"}}/>*/}
                             {/*							<h4 class="card-title" style={{margin-bottom: 0px;">Deccan Herald</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/Compi - DNA.PNG"><img class="card-img-top" src="./media/media2017/2017 coverage/Compi - DNA.PNG" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i72}><img class="card-img-top" src={i72} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/DNA.jpg" alt="" style={{maxHeight: "55px"}}/>
+                            <img src={i73} alt="" style={{maxHeight: "55px"}}/>
 
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">DNA</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/CURED - DNA.JPG"><img class="card-img-top" src="./media/media2017/2017 coverage/CURED - DNA.JPG" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i74}><img class="card-img-top" src={i74} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/DNA.jpg" alt="" style={{maxHeight: "55px"}}/>
+                            <img src={i27} alt="" style={{maxHeight: "55px"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">DNA</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/Cured - The Asian Age.jpg"><img class="card-img-top" src="./media/media2017/2017 coverage/Cured - The Asian Age.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i75}><img class="card-img-top" src={i75} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/The Asian Age.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i76} alt="" style={{maxHeight: " 40px"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">The Asian Age</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/Exhibitions - DNA.jpg"><img class="card-img-top" src="./media/media2017/2017 coverage/Exhibitions - DNA.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i77}><img class="card-img-top" src={i77} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/DNA.jpg" alt="" style={{maxHeight: "55px"}}/>
+                            <img src={i27} alt="" style={{maxHeight: "55px"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">DNA</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/Robo - Hindustan Times.jpg"><img class="card-img-top" src="./media/media2017/2017 coverage/Robo - Hindustan Times.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i78}><img class="card-img-top" src={i78} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/hindustantimes.jpg" alt="" style={{maxWidth:"80%"}}/>
+                            <img src={i36} alt="" style={{maxWidth:"80%"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">dfjbndfkjbnkdj</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/robowars - Mumbai Mirror.jpg"><img class="card-img-top" src="./media/media2017/2017 coverage/robowars - Mumbai Mirror.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i79}><img class="card-img-top" src={i79} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/mumbaimirror.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i80} alt="" style={{maxHeight: " 40px"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">dfjbndfkjbnkdj</h4>*/}
                         </div>
                     </div>
 
 
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/The Asian Age robowars.png"><img class="card-img-top" src="./media/media2017/2017 coverage/The Asian Age robowars.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i81} ><img class="card-img-top" src={i81} style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/The Asian Age.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i82} alt="" style={{maxHeight: " 40px"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">dfjbndfkjbnkdj</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="https://www.deccanchronicle.com/business/economy/151218/public-credit-registry-better-for-smes-not-spl-norms-acharya.html"><img class="card-img-top" src="./media/media2018/Viral Acharya Deccan Chronicle.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="https://www.deccanchronicle.com/business/economy/151218/public-credit-registry-better-for-smes-not-spl-norms-acharya.html"><img class="card-img-top" src={i83} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/DeccanChronicle.jpg" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i84} alt="" style={{maxHeight: " 40px"}}/>
 
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Deccan Chronicle</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/Modi Smart City.png"><img class="card-img-top" src="./media/media2017/2017 coverage/Modi Smart City.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i85}><img class="card-img-top" src={i85} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/bs).png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i86} alt="" style={{maxHeight: " 40px"}}/>
 
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Business Standard</h4>*/}
                         </div>
@@ -402,115 +511,115 @@ const Media = () => {
                 </div>
                 <div class="col-md-3">
                     <div class="card" style={{width: "100%", overflow: "hidden"}} title="Click here to read the full article">
-                        <a class="image-popup"  href="./media/2021/media/4.jpeg"><img class="card-img-top" src="./media/2021/media/4.jpeg" alt="Card image" style={{width: "100%", position: "relative", right: "0.5rem"}}/></a>
+                        <a class="image-popup"  href={i87} ><img class="card-img-top" src={i87} alt="Card image" style={{width: "100%", position: "relative", right: "0.5rem"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/TOI.jpg" alt="" style={{maxHeight: "50px"}}/>
+                            <img src={i88} alt="" style={{maxHeight: "50px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;"> India Education Diary</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width: "100%", overflow: "hidden"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="./media/2020/media/TOI-Robothespian.PNG"><img class="card-img-top" src="./media/2020/media/TOI-Robothespian.PNG" alt="Card image" style={{width: "100%", position: "relative", right: "0.5rem"}}/></a>
+                        <a class="" target="_blank" href={i89}><img class="card-img-top" src={i89} alt="Card image" style={{width: "100%", position: "relative", right: "0.5rem"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/TOI.jpg" alt="" style={{maxHeight: "50px"}}/>
+                            <img src={i88} alt="" style={{maxHeight: "50px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;"> India Education Diary</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="http://indiaeducationdiary.in/student-solar-ambassadors-workshop-150th-birth-anniversary-gandhi-jayanti-2nd-october-2018-1-lakh-students/"><img class="card-img-top" src="./media/media2018/SSAP Launch - India Education Diary.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="http://indiaeducationdiary.in/student-solar-ambassadors-workshop-150th-birth-anniversary-gandhi-jayanti-2nd-october-2018-1-lakh-students/"><img class="card-img-top" src={i90} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/India-education-diary.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i91} alt="" style={{maxHeight: " 40px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;"> India Education Diary</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2018/SSAP - Times of India.png"><img class="card-img-top" src="./media/media2018/SSAP - Times of India.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i92}><img class="card-img-top" src={i92} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/TOI.jpg" alt="" style={{maxHeight: "50px"}}/>
+                            <img src={i88} alt="" style={{maxHeight: "50px"}}/>
 
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Times of India</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="https://www.thehillstimes.in/regional/iit-bombay-trains-15000-students-from-assam-under-souls-initiative/"><img class="card-img-top" src="./media/media2018/The Hills Times - SSAP.png" alt="Card image" style={{width: "100%",    height: "39px"}} /></a>
+                        <a class="" target="_blank" href="https://www.thehillstimes.in/regional/iit-bombay-trains-15000-students-from-assam-under-souls-initiative/"><img class="card-img-top" src={i93} alt="Card image" style={{width: "100%",    height: "39px"}} /></a>
                         <div class="card-body">
-                            <img src="./media/logo/hill.jpg" alt="" style={{maxHeight: "40px"}}/>
+                            <img src={i94} alt="" style={{maxHeight: "40px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hills Times</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="https://www.thehindu.com/news/cities/mumbai/apologise-when-wrong-to-earn-respect/article25767173.ece"><img class="card-img-top" src="./media/media2018/The Hindu - Simon Taufel.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="https://www.thehindu.com/news/cities/mumbai/apologise-when-wrong-to-earn-respect/article25767173.ece"><img class="card-img-top" src={i95} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/The Hindu.jpg" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i96} alt="" style={{maxHeight: " 40px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="https://www.dailypioneer.com/2018/state-editions/state-level-tech-competition-technorion-held.html"><img class="card-img-top" src="./media/media2018/The-Pioneer-Zonals.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="https://www.dailypioneer.com/2018/state-editions/state-level-tech-competition-technorion-held.html"><img class="card-img-top" src={i97} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/thepioneer.jpg" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i98} alt="" style={{maxHeight: " 40px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The-Pioneer</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="https://www.mid-day.com/articles/dalai-lama-to-address-mumbai-students-during-visit/20088164"><img class="card-img-top" src="./media/media2018/Dalai Lama -MidDay.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="https://www.mid-day.com/articles/dalai-lama-to-address-mumbai-students-during-visit/20088164"><img class="card-img-top" src={i99} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/thepioneer.jpg" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i100} alt="" style={{maxHeight: " 40px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The-Pioneer</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href="https://mumbaimirror.indiatimes.com/mumbai/other/witness-the-cutting-edge/articleshow/67100286.cms"><img class="card-img-top" src="./media/media2018/Robowars - Mumbai Mirror.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="" target="_blank" href="https://mumbaimirror.indiatimes.com/mumbai/other/witness-the-cutting-edge/articleshow/67100286.cms"><img class="card-img-top" src={i101} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/mumbaimirror.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i102} alt="" style={{maxHeight: " 40px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Mumbai Mirror</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/Hindustan Times - Google and Microsoft.jpg"><img class="card-img-top" src="./media/media2017/2017 coverage/Hindustan Times - Google and Microsoft.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i103}><img class="card-img-top" src={i103} style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/hindustantimes.jpg" alt="" style={{maxWidth:"80%"}}/>
+                            <img src={i104} alt="" style={{maxWidth:"80%"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">Hindustan Times</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/Hindustan Times - Techfest National Quiz.png"><img class="card-img-top" src="./media/media2017/2017 coverage/Hindustan Times - Techfest National Quiz.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i105}><img class="card-img-top" src={i105} style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/hindustantimes.jpg" alt="" style={{maxWidth:"80%"}}/>
+                            <img src={i104} alt="" style={{maxWidth:"80%"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">Hindustan Times</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/Hindustan Times Digital Literacy 15-07-17.png"><img class="card-img-top" src="./media/media2017/2017 coverage/Hindustan Times Digital Literacy 15-07-17.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i106}><img class="card-img-top" src={i106} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/hindustantimes.jpg" alt="" style={{maxWidth:"80%"}}/>
+                            <img src={i104} alt="" style={{maxWidth:"80%"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">Hindustan Times</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/IMPower Campaign - Hindustan TImes.JPG"><img class="card-img-top" src="./media/media2017/2017 coverage/IMPower Campaign - Hindustan TImes.JPG" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i107}><img class="card-img-top" src={i107} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/hindustantimes.jpg" alt="" style={{maxWidth:"80%"}}/>
+                            <img src={i104} alt="" style={{maxWidth:"80%"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">Hindustan Times</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/ISMOKE DNA.png"><img class="card-img-top" src="./media/media2017/2017 coverage/ISMOKE DNA.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i108}><img class="card-img-top" src={i108} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/DNA.jpg" alt="" style={{maxHeight: "55px"}}/>
+                            <img src={i73} alt="" style={{maxHeight: "55px"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">DNA</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/Lectures - Mumbai Mirror.jpg"><img class="card-img-top" src="./media/media2017/2017 coverage/Lectures - Mumbai Mirror.jpg" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i109}><img class="card-img-top" src={i109} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/mumbaimirror.png" alt="" style={{maxHeight: " 40px"}}/>
+                            <img src={i102} alt="" style={{maxHeight: " 40px"}}/>
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;"> Mumbai Mirror</h4>*/}
                         </div>
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/RTI Government - Times Of India.png"><img class="card-img-top" src="./media/media2017/2017 coverage/RTI Government - Times Of India.png" alt="Card image" style={{width:"100%"}}/></a>
+                        <a class="image-popup" href={i110}><img class="card-img-top" src={i110} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
-                            <img src="./media/logo/TOI.jpg" alt="" style={{maxHeight: "50px"}}/>
+                            <img src={i88} alt="" style={{maxHeight: "50px"}}/>
 
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">dfjbndfkjbnkdj</h4>*/}
                         </div>
