@@ -10,6 +10,7 @@ import LeaveTeam from './Teams/leaveTeam';
 import backimg1 from './../static/img/exp_bg.png';
 import backimg2 from './../static/img/img7.png';
 import Meshmerize from './Competitions/Meshmerize';
+import frame from './../static/card/Frame.png';
 
 
 
@@ -46,7 +47,11 @@ const Internal = () => {
       <div className={`container ${styles.wdata}`}>
       <div className='row'>
         <div className={`col-12 col-lg-4 ${styles.leftdata}`}>
-          <img src={data.img} alt={compiName} className={styles.compi_img}/>
+        {/* <img src={data.img} alt={compiName} className={styles.compi_img}/> */}
+        <div className={styles.wImg}>
+            <img src={frame} alt='Frame' className={styles.imgFrame} />
+            <img src={data.img} alt={compiName} className={styles.imgCompi} />
+          </div>
           <h3 className={styles.compi_prize}> INR {data.prize} PRIZE</h3>
           <div className={styles.statement}>
             <div className={styles.stat_rect1}></div>

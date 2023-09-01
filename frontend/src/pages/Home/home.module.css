@@ -1,0 +1,95 @@
+.rockRight{
+    position: absolute;
+    overflow: hidden;
+}
+
+.rockUp{
+    max-width: 100%;
+    animation: moveUp 5s linear infinite;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%); /* Start position, below the viewport */
+    }
+    100% {
+        transform: translateY(-100%); /* End position, above the viewport */
+    }
+}
+
+.arockUp{
+    max-width: 100%;
+    animation: amoveUp 3s linear infinite;
+}
+
+@keyframes amoveUp {
+    0% {
+        transform: translateY(100%); /* Start position, below the viewport */
+    }
+    100% {
+        transform: translateY(-100%); /* End position, above the viewport */
+    }
+}
+
+.rockLeft{
+    position: absolute;
+    overflow: hidden;
+    /* left: -80%; */
+}
+
+.rockDown {
+    max-width: 100%;
+    animation: rotateAndMoveDown 3s linear infinite; /* Adjust the duration as needed */
+    transform-origin: center center; /* Set the rotation pivot point to the center */
+}
+
+@keyframes rotateAndMoveDown {
+    0% {
+        transform: rotate(180deg) translateY(100%); /* Start with rotation and no vertical movement */
+    }
+    100% {
+        transform: rotate(180deg) translateY(-100%); /* Rotate and move down */
+    }
+}
+
+
+.homeParallax{
+    background: url('./assets/parbg.png');
+    height: 94vh;
+    overflow: hidden;
+    width: 100vw;
+    background-repeat-x: no-repeat;
+    background-size: cover;
+}
+
+/* .fire1{
+    animation: opoc 2s linear infinite;
+}
+
+@keyframes opoc {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fire2{
+    animation: opca 2s linear infinite;
+}
+
+@keyframes opca{
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+} */

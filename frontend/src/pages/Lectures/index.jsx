@@ -81,8 +81,10 @@ const Lectures = () => {
             
                 </div>
             </div>
+            <div>
+            <h2>Contact Us</h2>
             <div className="tray">
-                <h2>Contact Us</h2>
+                
                 <ContactCard
                     image={tiger}
                     headText="Contact Us"
@@ -96,6 +98,7 @@ const Lectures = () => {
                     phoneNumberText="123-456-7890"
                 />
                 
+            </div>
             </div>
         </div>
         </div>
