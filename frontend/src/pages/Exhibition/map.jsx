@@ -1,16 +1,30 @@
 import React, { useState } from 'react';
 import europe from './assets/europe.jpg' //import whatever images we need and add them in the cityData beside a image tag
 import worldmap from './assets/map.png';
+// import im1 from './assets/mapContent/img1.png'
 import './WorldMap.css'; // Import CSS file
 import './DropdownMenu.css';
+
+// importing map content
+// East usa
+import astro from './assets/mapContent/eastusa/astro.png';
+import EASTUSA from './assets/mapContent/eastusa/EASTUSA.png';
+import flir from './assets/mapContent/eastusa/flir.jpg';
+import grammy from './assets/mapContent/eastusa/grammy.jpg';
+// import neurosky from './assets/mapContent/eastusa/neurosky.';
+// import roboti from './assets/mapContent/eastusa/roboti.png';
+// import texas from './assets/mapContent/eastusa/texas.png';
+
+// import astro from './assets/mapContent/eastusa/astro.png';
+// import astro from './assets/mapContent/eastusa/astro.png';
 
 const WorldMap = () => {
   const [hoveredCity, setHoveredCity] = useState(null);
 
   const cityData = [
-    { name: 'Europe', x: '45%', y: '37%', info: 'Info About Europe\nufsjhdifubwe',image:europe },
-    { name: 'West USA', x: '15%', y: '37%', info: 'Info About West USA',image:europe },
-    { name: 'East USA', x: '25%', y: '42%', info: 'Info About East USA',image:europe },
+    { name: 'Europe', x: '45%', y: '37%', info: 'Info About Europe\nufsjhdifubwe',image:europe},
+    { name: 'West USA', x: '15%', y: '37%', info: 'Info About West USA',image:astro },
+    { name: 'East USA', x: '25%', y: '42%', info: 'Info About East USA',image:EASTUSA},
     { name: 'NorthEast Asia', x: '82%', y: '28%', info: 'Info About NorthEast Asia' ,image:europe},
     { name: 'Australia', x: '83%', y: '78%', info: 'Info About Australia',image:europe },
     { name: 'SouthEast Asia', x: '66%', y: '50%', info: 'Info About SouthEast Asia' ,image:europe},

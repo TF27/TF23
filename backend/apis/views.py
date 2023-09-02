@@ -124,6 +124,7 @@ def check_reg(request):
             # print(gotcha, 'gotcha it is')
             compi_exists = gotcha.filter(compi=compi).exists()
             # return Response(compi_exists)
+        
             return Response(True)
         except:
             return Response(False)
@@ -138,6 +139,7 @@ def check_reg(request):
 def compi_reg_form(request):
     if request.method=='POST':
         compi_reg_serializer = Compi_RegSerializer(data=request.data, many=False)
+        print(compi_reg_serializer)
         # print(compi_reg_serializer.is_valid())
         if compi_reg_serializer.is_valid():
             last_reg = compi_reg.objects.order_by('-tf_id').first()

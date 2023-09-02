@@ -59,6 +59,7 @@ const Technorion = () => {
       <div className={styles.compi_card}>
         <div className={styles.card_rect1}></div>
           <div className={styles.card_rect2}></div>
+          <div className={styles.noReg}>
             <div className={styles.card_tag}>
               <span><img src={dot} alt='dot'/></span>
               <h3>{data.tag}</h3>
@@ -81,6 +82,8 @@ const Technorion = () => {
                 </div>
               </div>  
             </div>
+          </div>
+          <div>
             <div className={styles.card_regexp}>
               {data.is_registered ? (<div className={styles.card_reg}>Registered</div>) 
               : user ? (
@@ -90,6 +93,7 @@ const Technorion = () => {
               )}
               <div className={styles.card_exp}><Link to={data.name}>Explore</Link></div>
             </div>
+          </div>
           </div>
           {/* </div>
           </div> */}

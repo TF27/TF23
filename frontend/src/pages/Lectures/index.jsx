@@ -5,7 +5,8 @@ import ImageOne from "./ImageOne";
 import Notify from "../../components/Notify/notify";
 import WorldMap from "./map";
 import bf from './assets/lectbg.png';
-import OurReach from "../../components/OurReach/ourreach1";
+// import OurReach from "../../components/OurReach/ourreach1";
+import OurReach from "./ourreach";
 import Carousel from "../../components/Carousel/carousel";
 import ContactCard from "../../components/Contact/contact"; 
 
@@ -80,7 +81,10 @@ const Lectures = () => {
             
                 </div>
             </div>
+            <div>
+            <h2>Contact Us</h2>
             <div className="tray">
+                
                 <ContactCard
                     image={tiger}
                     headText="Contact Us"
@@ -94,6 +98,7 @@ const Lectures = () => {
                     phoneNumberText="123-456-7890"
                 />
                 
+            </div>
             </div>
         </div>
         </div>

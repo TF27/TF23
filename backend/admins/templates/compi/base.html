@@ -33,6 +33,12 @@
     {% for compi in compies %}
       <a href='{% url "admins:compi" compiname=compi.name %}'>{{compi.name}}</a>
     {% endfor %}
+    <div class="text-left">
+      {% for compi in compies %}
+      {{compi.name}} - {{compi.reg_count}} <br>
+      {% endfor %}
+        
+    </div>
   </div>
     <table>
         <thead>
