@@ -60,3 +60,14 @@
 .button:hover{
     transform: translate(1px,1px);
 }
+@media(max-width:748px){
+    .notiContainer{
+        flex-direction: column; 
+    }
+    .notiLabel{
+        left: 12%;
+    }
+    .notiInput{
+        width: 85vw;
+    }
+}
