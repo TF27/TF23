@@ -34,6 +34,7 @@
     background: rgba(0, 0, 0, 0.4);
     outline: none; /* Remove default focus outline */
     transition: border-color 0.2s ease-in-out;
+    color: white;
 }
 
 .notiInput:focus {

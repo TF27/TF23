@@ -82,6 +82,7 @@
     padding-top: 15px;
     margin-bottom: 0px;
     font-size: 23px;
+    text-transform: capitalize;
 }
 
 @media (max-width: 1400px){

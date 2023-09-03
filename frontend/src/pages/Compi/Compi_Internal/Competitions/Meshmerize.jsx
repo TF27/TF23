@@ -5,7 +5,7 @@ import './x.css';
 
 const Meshmerize = () => {
     const [activeCity, setActiveCity] = useState('About');
-
+    const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {
       setActiveCity(cityName);
     }
@@ -44,12 +44,23 @@ const Meshmerize = () => {
         ],
       };
 
+      const handleClick = (index) => {
+        if (activeIndex === index) {
+          // If the clicked item is already open, close it
+          setActiveIndex(null);
+        } else {
+          // If the clicked item is not open, open it and close any previously open item
+          setActiveIndex(index);
+        }
+      };
+
+
       const styles1 = {
         bgColor: 'none',
-        titleTextColor: 'black',
-        rowTitleColor: 'black',
-        arrowColor: 'black',
-        rowContentColor: 'black',
+        titleTextColor: 'white',
+        rowTitleColor: 'white',
+        arrowColor: 'white',
+        rowContentColor: 'white',
         marginBottom: '20px',
         maxWidth: '80%',
         margin: 'auto',
@@ -65,14 +76,14 @@ const Meshmerize = () => {
     return ( 
       <div className={styles.impdata}>
         <div className={styles.info_head}>
-          <div className={styles.bar_extra}></div>
+          {/* <div className={styles.bar_extra}></div> */}
           <div className={styles.bar_oii}><div className={`${styles.bar} ${activeCity === 'About' ? styles.baractive : ''}`} ></div><div className={`${styles.bar_item} ${activeCity === 'About' ? styles.active : ''}`} onClick={() => openCity('About')}>About</div></div>
           <div className={styles.bar_oii}><div className={`${styles.bar} ${activeCity === 'Structure' ? styles.baractive : ''}`}></div><div className={`${styles.bar_item} ${activeCity === 'Structure' ? styles.active : ''}`} onClick={() => openCity('Structure')}>Structure</div></div>
           <div className={styles.bar_oii}><div className={`${styles.bar} ${activeCity === 'Timeline' ? styles.baractive : ''}`}></div><div className={`${styles.bar_item} ${activeCity === 'Timeline' ? styles.active : ''}`} onClick={() => openCity('Timeline')}>Timeline</div></div>
           <div className={styles.bar_oii}><div className={`${styles.bar} ${activeCity === 'FAQs' ? styles.baractive : ''}`}></div><div className={`${styles.bar_item} ${activeCity === 'FAQs' ? styles.active : ''}`} onClick={() => openCity('FAQs')}>FAQs</div></div>
           <div className={styles.bar_oii}><div className={`${styles.bar} ${activeCity === 'Rules' ? styles.baractive : ''}`}></div><div className={`${styles.bar_item} ${activeCity === 'Rules' ? styles.active : ''}`} onClick={() => openCity('Rules')}>Rules</div></div>
           <div className={styles.bar_oii}><div className={`${styles.bar} ${activeCity === 'Contact' ? styles.baractive : ''}`}></div><div className={`${styles.bar_item} ${activeCity === 'Contact' ? styles.active : ''}`} onClick={() => openCity('Contact')}>Contact</div></div>
-          <div className={styles.bar_extra}></div>
+          {/* <div className={styles.bar_extra}></div> */}
         </div>
         <div className={styles.information}>
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
@@ -99,7 +110,12 @@ const Meshmerize = () => {
           <div id="FAQs" className={`${styles.info} ${activeCity === 'FAQs' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-              <Faq data={data} styles={styles1}/>
+              <Faq 
+                data={data} 
+                styles={styles1} 
+                activeIndex={activeIndex}
+                onToggle={handleClick}
+              />
               </div>
             </div>
           </div>
