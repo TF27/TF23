@@ -27,7 +27,8 @@ function Counter({ targetValue, duration, scrollVal }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= {scrollVal}) {
+      if (window.scrollY >= scrollVal) {
+        
         setShouldAnimate(true);
       }
     };

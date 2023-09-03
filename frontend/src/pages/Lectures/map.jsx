@@ -20,8 +20,8 @@ const WorldMap = () => {
   };
 
   return (
-    <div className="world-map-container" style={{ position: 'relative' }}>
-    <div><h1>TOP HIGHLIGHTS </h1></div>
+    <div className="world-map-container" style={{ position: 'relative',width:'90%',height:'90%' ,left:'5vw' }}>
+    <div><h1 style={{marginTop:'40px',marginBottom:'40px'}} >TOP HIGHLIGHTS </h1></div>
       <img src={worldmap} className="mapimage" alt="World Map" />
 
       {cityData.map((city, index) => (
