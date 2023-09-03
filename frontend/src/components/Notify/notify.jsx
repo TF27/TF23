@@ -49,7 +49,7 @@ const Notify = () => {
     return (
         <div className={styles.notify}>
             <div>
-                <h1 style={{marginTop:'40px', marginBottom:'40px'}} >NOTIFY ME</h1>
+                <h1 style={{ paddingTop:'40px',marginBottom:'40px'}} >NOTIFY ME</h1>
             </div>
             <div>
                 <form onSubmit={handleSubmit} autocomplete="off">

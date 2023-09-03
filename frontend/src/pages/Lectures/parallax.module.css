@@ -36,7 +36,7 @@
   background-image: url('./assets/w1 2.png');
   opacity: 1;
   z-index: -1;
-  background-size: auto 121vh;
+  background-size: auto 122vh;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -49,10 +49,9 @@
   width: 100vw;
   background-attachment: fixed;
   top: -13vh;
-  overflow-x: hidden;
   background-position: center;
   background-repeat: no-repeat;  
-  padding-bottom: 20px, 
+  padding-bottom: 300px;
      
   
 }
@@ -67,7 +66,7 @@
     background-position-y:20%;
   }
   .layer3{
-    background-size: auto 95vh;
+    background-size: auto 100vh;
   }
   .image{
     top: -26vh;
