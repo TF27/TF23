@@ -11,37 +11,43 @@
 
 .main_carousel .slides img{
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 20px;
-  height: 300px;
+  height: 350px;
 }
 
 .main_carousel .slides .slide{
   opacity: 0;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  transition: transform 300ms ease-in-out;
+  transform: translateX(-50%) ;
+  transition: transform 400ms ease-in-out;
+  border: 3px solid #bb9564;
+  border-radius: 20px;
+  filter: drop-shadow(5px 10px 5px  rgb(10, 10, 10));
+  
 }
 
 .main_carousel .slides .slide.active{
   opacity: 1;
   z-index: 99;
-  transition: transform 300ms ease-in-out;
+  
+  transition: transform 400ms ease-in-out;
+  
 }
 
 .main_carousel .slides .slide.next{
   opacity: 1;
   z-index: 98;
-  transform: translateX(-33%);
-  transition: transform 300ms ease-in-out;
+  transform: translateX(-25%) scale(0.9);
+  transition: transform 400ms ease-in-out;
   /* left: 43%; */
 }
 .main_carousel .slides .slide.next2{
   opacity: 1;
   z-index: 97;
-  transform: translateX(-20%);
-  transition: transform 300ms ease-in-out;
+  transform: translateX(-10%) scale(0.8);
+  transition: transform 400ms ease-in-out ;
   /* left: 50%; */
 }
 
@@ -49,26 +55,27 @@
   opacity: 1;
   z-index: 98;
   /* left: 29%; */
-  transform: translateX(-66%);
-  transition: transform 300ms ease-in-out;
+  transform: translateX(-75%) scale(0.9);
+  transition: transform 400ms ease-in-out;
 }
 .main_carousel .slides .slide.prev2{
   opacity: 1;
   z-index: 97;
-  transform: translateX(-80%);
-  transition: transform 300ms ease-in-out;
+  transform: translateX(-90%) scale(0.8) ;
+  transition: transform 400ms ease-in-out;
   /* left: 22%; */
 }
 
 .main_carousel .button-container{
   display: flex;
   justify-content: space-evenly;
-  margin-top: 175px;
-  transition: all 300ms ease-in-out;
+  margin-top: 200px;
+  transition: all 400ms ease-in-out;
 }
 
 .main_carousel .button-container .button{
   cursor: pointer;
 }
+
 
 

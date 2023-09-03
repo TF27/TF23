@@ -40,7 +40,22 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
+.image {
+  background-image: url('./assets/lectbg.png');
+  min-height: 120vh;
+  position: relative;
+  background-size: cover;
+  z-index: -1;
+  width: 100vw;
+  background-attachment: fixed;
+  top: -13vh;
+  overflow-x: hidden;
+  background-position: center;
+  background-repeat: no-repeat;  
+  padding-bottom: 20px, 
+     
+  
+}
 
 .xyz{
   display: inline-block;
@@ -49,6 +64,13 @@
   .layer2{
     background-size: 140%;
     background-position-x: center;
+    background-position-y:20%;
+  }
+  .layer3{
+    background-size: auto 95vh;
+  }
+  .image{
+    top: -26vh;
   }
 }
   

@@ -65,7 +65,7 @@ const OurReach = () => {
   }
   return (
     <div className="oureach">
-      <div className='our-reach'>Our Reach</div>
+      <h1>Our Reach</h1>
       <div className="prev-stats" id="counter">
         <div className="skill">
         <ReachCirlce dataCount='750' name='Viewership' plus='K+' x1='34%' x2='55%'/>

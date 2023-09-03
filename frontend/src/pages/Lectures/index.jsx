@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import './lecture.css';
+import styles from './parallax.module.css';
 import ImageOne from "./ImageOne";
 
 import Notify from "../../components/Notify/notify";
 import WorldMap from "./map";
-import bf from './assets/lectbg.png';
 // import OurReach from "../../components/OurReach/ourreach1";
 import OurReach from "./ourreach";
 import Carousel from "../../components/Carousel/carousel";
@@ -19,39 +19,27 @@ import tiger from "../../components/Contact/test_tiger.jpeg"
 
 const Lectures = () => {
 
-    const style = {
-        paddingBottom: '20px',
-        position: 'relative',
-        top:'-13vh',
-        background: `url(${bf})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-        width: '100vw',
-        overflowX: 'hidden',
-    }
     return (
         <div style={{height:'120vh'}}>
             <ImageOne/>
-            <div className="Lectures" style={style}>
+            <div className={styles.image}>
             
             <Notify />
             <WorldMap />
             <OurReach />
             <div className='checkThis'>
-                <h1>CHECK THIS OUT</h1>
+                <h1 style={{marginTop:'80px',marginBottom:'40px'}}>CHECK THIS OUT</h1>
                 <div>
-                    <h2>Exhibitions</h2>
+                    <h2 style={{marginBottom:'-20px'}}>Exhibitions</h2>
                     <Carousel
                         i1={img}
                         i2={img2}
-                        i3={img3}
-                        i4={img4}
+                        i3={img}
+                        i4={img2}
                         i5={img} 
                         i8={img2}
-                        i6={img3}
-                        i7={img4}
+                        i6={img}
+                        i7={img2}
                         i9={img}
                         i10={img2}
                     />
@@ -61,16 +49,16 @@ const Lectures = () => {
                     </div>
                 </div>
                 <div>
-                    <h2>Lectures</h2>
+                    <h2 style={{marginTop:'40px',marginBottom:'-20px'}}>Lectures</h2>
                     <Carousel
                         i1={img}
                         i2={img2}
-                        i3={img3}
-                        i4={img4}
+                        i3={img}
+                        i4={img2}
                         i5={img} 
                         i8={img2}
-                        i6={img3}
-                        i7={img4}
+                        i6={img}
+                        i7={img2}
                         i9={img}
                         i10={img2}
                     />
@@ -81,24 +69,29 @@ const Lectures = () => {
             
                 </div>
             </div>
-            <div>
-            <h2>Contact Us</h2>
+            <div style={{paddingBottom:'100px'}}>
+            <h1 style={{marginTop:'80px'}}>CONTACT US</h1>
             <div className="tray">
                 
+                <div >
                 <ContactCard
                     image={tiger}
                     headText="Contact Us"
                     emailText="contact@example.com"
                     phoneNumberText="123-456-7890"
                 />
+                </div>
+                <div >
                 <ContactCard
                     image=''
                     headText="Contact Us"
                     emailText="contact@example.com"
                     phoneNumberText="123-456-7890"
                 />
+                </div>
                 
             </div>
+            
             </div>
         </div>
         </div>
