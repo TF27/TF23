@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
+import {useLocation} from 'react-router-dom';
 import axios from 'axios';
 import styles from './notify.module.css';
 
 const Notify = () => {
+
+    axios.defaults.xsrfCookieName = 'csrftoken';
+    axios.defaults.xsrfHeaderName = 'X-CSRFToken';
+
+    const location = useLocation().pathname;
+    const locations = location.split('/').filter(segment => segment !== '');
+    const parent = locations[0] // gets parent route from array
+
     const [formData, setFormData] = useState({
         username: '',
         email: '',
-        phoneNum: ''
+        phoneNum: '',
+        loc: parent,
     });
 
     const handleChange = (e) => {
@@ -42,7 +52,7 @@ const Notify = () => {
                 <h1>NOTIFY ME</h1>
             </div>
             <div>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} autocomplete="off">
                     {/* Custom HTML with floating label effect */}
                     <div className={styles.notiContainer}>
                     <div className={styles.notiInputWrapper}>
@@ -56,6 +66,7 @@ const Notify = () => {
                             onFocus={handleFocus}
                             onBlur={handleBlur}
                             className={styles.notiInput}
+                            autocomplete="off"
                         />
                     </div>
                     <div className={styles.notiInputWrapper}>
@@ -69,6 +80,7 @@ const Notify = () => {
                             onFocus={handleFocus}
                             onBlur={handleBlur}
                             className={styles.notiInput}
+                             autocomplete="off"
                         />
                     </div>
                     <div className={styles.notiInputWrapper}>
@@ -82,6 +94,7 @@ const Notify = () => {
                             onFocus={handleFocus}
                             onBlur={handleBlur}
                             className={styles.notiInput}
+                            autocomplete="off"
                         />
                     </div>
                     </div>

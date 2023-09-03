@@ -12,7 +12,7 @@ function ourReach() {
         <div className="buffer 1">
           <img src={mylogo} alt="buffering" id='myImg'/>
           <div className='Overlay'>
-            <Counter targetValue={1000} duration={2000}/>
+            <Counter targetValue={1000} duration={2000} scrollVal={1000}/>
           </div>
           <div>
             <h1>Happy Clients</h1>

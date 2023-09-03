@@ -60,10 +60,12 @@ const Internal = () => {
         </div>
         <div className={`col-12 col-lg-8 ${styles.rightdata}`}>
           <div className={styles.sponsor}>
-            {data.sponsorImg && <h3>Sponsored by <img src={data.sponsorImg} alt='Sponsor' className={styles.sponsorImg} /></h3>}
+            {data.sponsorImg && <a href={data.sponsorLink}><h3>Sponsored by <img src={data.sponsorImg} alt='Sponsor' className={styles.sponsorImg} /></h3></a>}
           </div>
+          {data.is_team_registered ? <div className={styles.youhave}> You have successfully with your email {user.email} and your team ID is {data.team_id}</div> : <div className={styles.compi_reg}></div>}
           {compiName === 'Cozmo' && <Cozmo />}
           {compiName === 'Meshmerize' && <Meshmerize />}
+          {compiName === 'robowar' && <Meshmerize />}
           <div className={styles.team_reg}>
           {data.is_team_leader ? (
               <div>

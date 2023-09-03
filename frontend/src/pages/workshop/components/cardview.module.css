@@ -161,6 +161,13 @@
     bottom: 0.32185rem;
     border: 1px solid #bb9564;
 }
+@media(max-width:748px){
+    .container,.overlay{
+        padding: 50px;
+    }
+  }
+    
+    
 
 
   

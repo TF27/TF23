@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Counter({ targetValue, duration }) {
+function Counter({ targetValue, duration, scrollVal }) {
   const [counter, setCounter] = useState(0);
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
@@ -27,7 +27,7 @@ function Counter({ targetValue, duration }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 100) {
+      if (window.scrollY >= {scrollVal}) {
         setShouldAnimate(true);
       }
     };
