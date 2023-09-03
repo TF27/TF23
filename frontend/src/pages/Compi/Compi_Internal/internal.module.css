@@ -197,9 +197,14 @@
     height: 319px;
     position: relative;
     top: 0%;
-    left: -8.5%;
+    /* left: -8.5%; */
     border-radius: 26% 26% 0% 0%;
     z-index: 2;
+}
+@media (max-width: 1200px){
+    .imgFrame{
+        left: -8.5%;
+    }
 }
 .imgCompi{
     width: 280px;
@@ -230,6 +235,11 @@
     .imgCompi{
         top: 0%;
     }
+}
+
+.youhave{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* mobile  */

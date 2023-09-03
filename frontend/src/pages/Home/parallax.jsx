@@ -10,19 +10,16 @@ const HomeParallax = () => {
         <div className={styles.homeParallax}>
             <div className={styles.rockLeft}>
                 <img src={rocks} className={styles.rockDown}/>
-                {/* <img src={rocks} className={styles.rockDown}/> */}
+                
             </div>
             <div className={styles.rockRight}>
                 <img src={rocks} className={styles.rockUp}/>
-                {/* <img src={rocks} className={styles.arockUp}/>   */}
+               
             </div>
-            <div>
+            <div className={styles.headU}>
                 <img src={head} className={styles.head}/>
             </div>
-            <div>
-                <img src={fire1} className={styles.fire1} alt='fire'/>
-                <img src={fire2} className={styles.fire2} alt='fire'/>
-            </div>
+            <div className={styles.fires}></div>
         </div>
      );
 }

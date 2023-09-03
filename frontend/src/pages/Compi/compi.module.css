@@ -82,6 +82,7 @@
     padding-top: 15px;
     margin-bottom: 0px;
     font-size: 23px;
+    text-transform: capitalize;
 }
 
 @media (max-width: 1400px){
@@ -218,7 +219,6 @@
 .card1_cont{
 
 }
-
 
 .share_rect1{
     height: 27px;
