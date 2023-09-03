@@ -46,6 +46,7 @@ const History = () => {
 
   return (
     <div className="history-container">
+    {/* <img src={blurr} alt='blurr' className="blurr" /> */}
       <div className="history-overlay" onClick={handleNextButtonClick}>
         {images.map(({ id, url, height, width, text, additionalText }, index) => (
           <HistoryItem

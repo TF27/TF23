@@ -1,11 +1,30 @@
 import React from 'react';
-import img1 from './assets/bg1.png';
+import img1 from './assets/bg.png';
 import spimg from './images/sponsor.png'
 import './home.css';
+import bf from './assets/bg.png'
+import HomeParallax from './parallax';
 
 const Home = () => {
+
+  const style = {
+    paddingBottom: '20px',
+    position: 'relative',
+    height: '100vh',
+    background: `url(${bf})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundAttachment: 'fixed',
+    width: '100vw',
+    overflowX: 'hidden',
+}
+
   return (
-    <div>
+    <div className='home' style={style}>
+      {/* <Carousel />        */}
+      <HomeParallax />
+      <div>
     <div className="sponsor-container">
       <div className='sponsor-buttondiv'>
         <div className='sponsor-button'>Title Sponsor</div>
@@ -32,6 +51,7 @@ const Home = () => {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 };

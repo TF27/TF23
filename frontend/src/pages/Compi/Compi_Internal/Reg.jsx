@@ -58,10 +58,10 @@ const Reg = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(formData);
-        navigate(`/competitions/${compiName}`);
         axios.post('/api/compi_reg/', formData)
             .then((response) => {
                 console.log('Added Successfully!!');
+                navigate(`/competitions/${compiName}`);
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -92,11 +92,11 @@ const Reg = () => {
                         <div className={styles.head_n}>
                             <div><h2>{user?.displayName}</h2></div>
                             <hr></hr>
-                            <div>Register for {compiName}</div>
+                            <div>Every Field is Compulsory</div>
                         </div>
                     </div>
                     <div>
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit} autocomplete="off">
                             <div className={styles.regFormContainer}>
                                 <div className={styles.inputWrapper} style={{ display: 'none' }}>
                                     <label className={`${styles.floatingLabel} ${styles.formLabel}`}>Name</label>
@@ -109,6 +109,8 @@ const Reg = () => {
                                         onBlur={handleBlur}
                                         className={styles.formInput}
                                         disabled
+                                        autocomplete="off"
+                                        
                                     />
                                 </div>
                                 <div className={`row ${styles.multiWrapper}`}>
@@ -123,6 +125,8 @@ const Reg = () => {
                                             onBlur={handleBlur}
                                             className={styles.formInput}
                                             disabled
+                                            autocomplete="off"
+                                            
                                         />
                                     </div>
                                     <div className={`col-md-6 ${styles.inputWrapper}`}>
@@ -135,6 +139,8 @@ const Reg = () => {
                                             onFocus={handleFocus}
                                             onBlur={handleBlur}
                                             className={styles.formInput}
+                                            autocomplete="off"
+                                            required
                                         />
                                     </div>
                                 </div>
@@ -146,6 +152,7 @@ const Reg = () => {
                                         value={formData.gender}
                                         onChange={handleChange}
                                         className={styles.formInput}
+                                        required
                                     >
                                         <option value="" style={{ display: 'none' }} className={styles.genderOps}>Select</option>
                                         <option value="M" className={styles.genderOps}>Male</option>
@@ -163,6 +170,8 @@ const Reg = () => {
                                             className={styles.formInput}
                                             onFocus={handleFocus}
                                             onBlur={handleBlur}
+                                            autocomplete="off"
+                                            required
                                         />
                                     </div>
                                 </div>
@@ -177,6 +186,8 @@ const Reg = () => {
                                         className={styles.formInput}
                                         onFocus={handleFocus}
                                         onBlur={handleBlur}
+                                        required
+                                        autocomplete="off"
                                     />
                                 </div>
                                     <div className={`col-md-6 ${styles.inputWrapper}`}>
@@ -189,6 +200,8 @@ const Reg = () => {
                                             className={styles.formInput}
                                             onFocus={handleFocus}
                                             onBlur={handleBlur}
+                                            autocomplete="off"
+                                            required
                                         />
                                     </div>
                                 </div>
@@ -200,6 +213,7 @@ const Reg = () => {
                                             value={formData.zonals}
                                             onChange={handleChange}
                                             className={styles.formInput}
+                                            required
                                         >
                                             <option value="" style={{ display: 'none' }} className={styles.genderOps}>Nearby Zonals</option>
                                             <option value="1" className={styles.genderOps}>Mumbai</option>
@@ -221,6 +235,8 @@ const Reg = () => {
                                         className={styles.formInput}
                                         onFocus={handleFocus}
                                         onBlur={handleBlur}
+                                        autocomplete="off"
+                                        required
                                     />
                                 </div>
                                 <div className={styles.inputWrapper}>
@@ -233,6 +249,8 @@ const Reg = () => {
                                         className={styles.formInput}
                                         onFocus={handleFocus}
                                         onBlur={handleBlur}
+                                        required
+                                        autocomplete="off"
                                     />
                                 </div>
                                 <div className={styles.inputWrapper}>
@@ -245,6 +263,8 @@ const Reg = () => {
                                         className={styles.formInput}
                                         onFocus={handleFocus}
                                         onBlur={handleBlur}
+                                        autocomplete="off"
+                                        required
                                     />
                                 </div>
                                 <div className={styles.inputWrapper}>
@@ -253,10 +273,13 @@ const Reg = () => {
                                         type="number"
                                         name="instipincode"
                                         value={formData.instipincode}
+                                        required
                                         onChange={handleChange}
                                         className={styles.formInput}
                                         onFocus={handleFocus}
                                         onBlur={handleBlur}
+                                        autocomplete="off"
+                                        
                                     />
                                 </div>
                                 <div className={styles.inputWrapper}>
@@ -266,6 +289,7 @@ const Reg = () => {
                                         value={formData.yearofstudy}
                                         onChange={handleChange}
                                         className={styles.formInput}
+                                        required
                                     >
                                         <option value="" style={{ display: 'none' }} className={styles.genderOps}>Select year of Study</option>
                                         <option value="1" className={styles.genderOps}>1st Year</option>

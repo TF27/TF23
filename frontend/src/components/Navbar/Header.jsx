@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import {Link, useLocation} from 'react-router-dom';
 import './Header.css';
 import { UserAuth } from "../../contexts/AuthContext";
-import Headroom from 'react-headroom';
 
 const Header = () => {
 
@@ -68,34 +67,41 @@ const Header = () => {
 
 //===============================================================================
 
-    // const handleScroll = () => {
-    //     const scrollY = window.scrollY;
-    //     const scrollDirection = lastScrollTop < scrollY ? 'down' : 'up';
-    //     setLastScrollTop(scrollY);
-    //     setScrollDirection(scrollDirection);
-    // };
-    // const handleScroll = () => {
-    //     const scrollY = window.scrollY;
-    //     const scrollDirection = lastScrollTop < scrollY ? 'down' : 'up';
-    //     setLastScrollTop(scrollY);
-    //     setScrollDirection(scrollDirection);
-    // };
-
-    // Code Added for Navbar Scroll Up
-    // useEffect(() => {
-    //     window.addEventListener("scroll", handleScroll);
-    //     return () => {
-    //         window.removeEventListener("scroll", handleScroll);
-    //     };
-    // }, [lastScrollTop]);
-
-    // Continued Old Code
     const showMenu = () => {
         setOpenMenu(!openMenu);
     }
-    return (
-        <Headroom>
 
+    const [showNavbar, setShowNavbar] = useState(true);
+    const [prevScrollY, setPrevScrollY] = useState(0);
+    
+    const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+    
+        if (currentScrollY > prevScrollY) {
+          // Scrolling down, hide the navbar
+          setShowNavbar(false);
+        } else {
+          // Scrolling up, show the navbar
+          setShowNavbar(true);
+        }
+    
+        // Update the previous scroll position
+        setPrevScrollY(currentScrollY);
+        console.log(showNavbar);
+      };
+    
+      useEffect(() => {
+        // Add scroll event listener when the component mounts
+        window.addEventListener('scroll', handleScroll);
+    
+        // Clean up the event listener when the component unmounts
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, [prevScrollY]);
+
+    return (
+        <div  className={`navfunc ${showNavbar ? 'navfuncshow' : 'navfunchide'}`}>
         <div className={navbarClassName}>
             <div className={openMenu ? 'hamburger active_burger': 'hamburger'} onClick={showMenu}>
                 <span className="bar"></span>
@@ -122,6 +128,36 @@ const Header = () => {
                     <li onClick={showMenu}>
                         <Link to='/summits'>Summits</Link>
                     </li>
+                    <li onClick={showMenu}>
+                        <Link to='/summits'>Summits</Link>
+                    </li>
+                    <li onClick={showMenu}>
+                        <Link to='/summits'>Summits</Link>
+                    </li>
+                    <li onClick={showMenu}>
+                        <Link to='/summits'>Summits</Link>
+                    </li>
+                    <li onClick={showMenu}>
+                        <Link to='/summits'>Summits</Link>
+                    </li>
+                    <li onClick={showMenu}>
+                        <Link to='/summits'>Summits</Link>
+                    </li>
+                    <li onClick={showMenu}>
+                        <Link to='/summits'>Summits</Link>
+                    </li>
+                    <li onClick={showMenu}>
+                        <Link to='/summits'>Summits</Link>
+                    </li>
+                    <li onClick={showMenu}>
+                        <Link to='/summits'>Summits</Link>
+                    </li>
+                    <li onClick={showMenu}>
+                        <Link to='/summits'>Summits</Link>
+                    </li>
+                    <li onClick={showMenu}>
+                        <Link to='/summits'>Summits</Link>
+                    </li>
                     <li>
                         {user?.displayName ? (
                             <div>
@@ -139,7 +175,7 @@ const Header = () => {
                 </ul>
             </nav>
         </div>
-        </Headroom>
+        </div>
      );
 }
  

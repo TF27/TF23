@@ -122,6 +122,7 @@ const MInternal = () => {
           </div>
         </div>
           {compiName === 'Meshmerize' && <Meshmerize />}
+          {compiName === 'robowar' && <Meshmerize />}
       </div>
     ));
   }

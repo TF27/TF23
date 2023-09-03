@@ -57,12 +57,12 @@ function App() {
                         <Lectures/>
                         </React.Suspense> }/>
 
-                        <Route path='/Media' element={
+                        <Route path='/aboutus/media' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <Media/>
                         </React.Suspense> }/>
 
-                        <Route path='/History' element={
+                        <Route path='/history' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <History/>
                         </React.Suspense> }/>

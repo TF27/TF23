@@ -1,0 +1,96 @@
+.rockRight{
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+}
+
+.rockUp{
+    max-width: 100%;
+    animation: moveUp 5s linear infinite;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%); /* Start position, below the viewport */
+    }
+    100% {
+        transform: translateY(-100%); /* End position, above the viewport */
+    }
+}
+
+.arockUp{
+    max-width: 100%;
+    animation: amoveUp 3s linear infinite;
+}
+
+@keyframes amoveUp {
+    0% {
+        transform: translateY(100%); /* Start position, below the viewport */
+    }
+    100% {
+        transform: translateY(-100%); /* End position, above the viewport */
+    }
+}
+
+.rockLeft{
+    position: absolute;
+    overflow: hidden;
+    /* left: -80%; */
+}
+
+.rockDown {
+    max-width: 100%;
+    animation: rotateAndMoveDown 3s linear infinite; /* Adjust the duration as needed */
+    transform-origin: center center; /* Set the rotation pivot point to the center */
+}
+
+@keyframes rotateAndMoveDown {
+    0% {
+        transform: rotate(180deg) translateY(100%); /* Start with rotation and no vertical movement */
+    }
+    100% {
+        transform: rotate(180deg) translateY(-100%); /* Rotate and move down */
+    }
+}
+
+
+.homeParallax{
+    background-image: url('./assets/parbg.png');
+    height: 97vh;
+    overflow: hidden;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fires{
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    background-image: url('./assets/fire1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: fire 3s infinite ease-in;
+    /* z-index: 15; */
+    /* top: 7%; */
+}
+
+.headU{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes fire {
+    0%{
+        background-image: url('./assets/fire1.png');
+    }
+    50%{
+        background-image: url('./assets/fire2.png');
+    }
+    100%{
+        background-image: url('./assets/fire1.png');
+    }
+}

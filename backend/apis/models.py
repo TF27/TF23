@@ -18,6 +18,7 @@ class Compi(models.Model):
     img = models.ImageField(upload_to='compi')
     statement = models.FileField(upload_to='ProblemStatements', null=True, blank=True)
     sponsorImg = models.ImageField(upload_to='compi_sponsors', null=True, blank=True)
+    sponsorLink = models.CharField(max_length=250, null=True, blank=True)
     reg_count = models.IntegerField(default=0)
 
     def __str__(self):
@@ -27,6 +28,7 @@ class Notifying(models.Model):
     username = models.CharField(max_length=100)
     email = models.EmailField()
     phoneNum = models.IntegerField()
+    loc = models.CharField(max_length=100)
     
     def __str__(self):
         return self.username

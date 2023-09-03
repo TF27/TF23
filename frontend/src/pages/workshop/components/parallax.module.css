@@ -58,6 +58,13 @@
   .layer2{
     background-size: 140%;
     background-position-x: center;
+    background-position-y:20%;
+  }
+  .layer3{
+    background-size: auto 95vh;
+  }
+  .image{
+    top: -26vh;
   }
 }
   
