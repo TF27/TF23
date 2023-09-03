@@ -76,7 +76,7 @@ const Technorion = () => {
                 <div className={styles.share_border}>
                   <div className={styles.share_rect1}>
                     <div className={styles.share_rect2}>
-                      Share
+                      <WhatsappShareButton />
                     </div>
                   </div>
                 </div>

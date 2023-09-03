@@ -11,7 +11,6 @@ import CompiInternal from './pages/Compi/Compi_Internal/index';
 import Reg from './pages/Compi/Compi_Internal/Reg';
 import Create_Team from './pages/Compi/Compi_Internal/Teams/create_team';
 import JoinTeam from './pages/Compi/Compi_Internal/Teams/join_team';
-import Gallery from './pages/AboutUs/gallery/gallery';
 import Workshop from './pages/workshop/home';
 import Summit from './pages/Summit/home.js';
 
@@ -30,6 +29,7 @@ import AddParti from './pages/Compi/Compi_Internal/Teams/add_parti';
 const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 const Media = React.lazy(() => import('./pages/AboutUs/Media/index'));
 const History = React.lazy(() => import('./pages/AboutUs/history/history'));
+const Gallery = React.lazy(()=> import('./pages/AboutUs/gallery/gallery'));
 
 
 function App() {
@@ -81,13 +81,20 @@ function App() {
                         <Route path='competitions/:compiName/singleparticipant' element={<Protected><SingleParti /></Protected>} />
                         <Route path='competitions/:compiName/joinTeam' element={<Protected><JoinTeam  /></Protected>} />
                         <Route path='competitions/:compiName/addparticipant' element={<Protected><AddParti /></Protected>} />
-                        <Route path='/gallery' element={<Gallery/>} />
+
+
+                        <Route path='/gallery' element={
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                        <Gallery/>
+                            </React.Suspense>} />
                         <Route path='/gallery/lectures' element={<Lecture_gal/>} />    
                         <Route path='/gallery/exhibition' element={<Exhibition_gal/>} /> 
                         <Route path='/gallery/ozone' element={<Ozone_gal/>} /> 
                         <Route path='/gallery/compi' element={<Compi_gal/>} /> 
                         <Route path='/gallery/robowars' element={<Robowar_gal/>} /> 
                         <Route path='/gallery/technoholix' element={<Techno_gal/>} /> 
+
+                        
                     </Routes>
                 </AuthContextProvider>
             </Router>

@@ -206,6 +206,7 @@
     transition: height 0.3s ease, opacity 0.3s ease;
     margin-top: 60px;
     opacity: 0;
+
 }
 
 .whatdOpen{
@@ -223,6 +224,10 @@
     width: 88%;
     border: 1px solid #fff;
     position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    z-index: -1;
 }
 .whatd_rect2{
     height: 300px;
@@ -238,6 +243,10 @@
     overflow-y: scroll;
     padding: 20px 10px;
     text-align: left;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    z-index: -1;
 }
 .whatd_rect2::-webkit-scrollbar {
     width: 10px;
