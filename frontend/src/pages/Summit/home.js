@@ -5,10 +5,10 @@ import ImageTwo from './components/ImageTwo';
 
 function Summit() {
   return (
-    <div>
+    <div style={{height:'120vh',scrollBehavior:'smooth'}}  >
       <ImageOne />
       <ImageTwo/>
-    </div> 
+    </div>  
   );
 }
 

@@ -91,7 +91,7 @@
 .whatdopen{
     margin-top: 7px;
     margin-bottom: 7px;
-  max-height: 1000px; /* Adjust this value to a sufficiently large value */
+  max-height: 2000px; /* Adjust this value to a sufficiently large value */
   height:auto;
   opacity: 1;
   transition: max-height 0.3s ease, opacity 0.3s ease;

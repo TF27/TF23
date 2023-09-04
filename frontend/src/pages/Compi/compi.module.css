@@ -82,6 +82,7 @@
     padding-top: 15px;
     margin-bottom: 0px;
     font-size: 23px;
+    text-transform: capitalize;
 }
 
 @media (max-width: 1400px){
@@ -174,6 +175,19 @@
     opacity: 0;
   }
 
+  .compi_card:hover .espark4{
+    opacity: 0;
+  }
+  .compi_card:hover .espark1{
+    opacity: 0;
+  }
+  .compi_card:hover .fspark4{
+    opacity: 0;
+  }
+  .compi_card:hover .fspark1{
+    opacity: 0;
+  }
+
   .compi_card:hover .card_post{
     display: block;
   }
@@ -189,8 +203,9 @@
   }
 
   .card_share{
-    position: relative;
+    position: absolute;
     left: 37%;
+    bottom: 18%;
   }
 
   .card_img{
@@ -218,7 +233,6 @@
 .card1_cont{
 
 }
-
 
 .share_rect1{
     height: 27px;
@@ -273,7 +287,92 @@
     font-size: 18px;
     font-family: FORUM;
   }
-  
+
+  .chand{
+    position: absolute;
+    left: 80%;
+    bottom: 14%;
+    height: 20px;
+    width: auto;
+  }
+
+  .chand2{
+    position: absolute;
+    left: 10%;
+    bottom: 14%;
+    height: 20px;
+    width: auto;
+  }
+
+  .espark{
+    position: absolute;
+    left: 13%;
+    bottom: 34%;
+    height: 20px;
+    width: auto;
+  }
+
+  .espark2{
+    position: absolute;
+    left: 10%;
+    bottom: 90%;
+    height: 20px;
+    width: auto;
+  }
+
+  .espark3{
+    position: absolute;
+    left: 80%;
+    bottom: 90%;
+    height: 20px;
+    width: auto;
+  }
+
+  .espark4{
+    position: absolute;
+    left:79%;
+    bottom: 34%;
+    height: 20px;
+    width: auto;
+  }
+
+  .fspark{
+    position: absolute;
+    left: 18%;
+    bottom: 36%;
+    height: 20px;
+    width: auto;
+  }
+  .fspark2{
+    position: absolute;
+    left: 18%;
+    bottom: 88%;
+    height: 20px;
+    width: auto;
+  }
+  .fspark3{
+    position: absolute;
+    left: 74%;
+    bottom: 36%;
+    height: 20px;
+    width: auto;
+  }
+  .fspark4{
+    position: absolute;
+    left: 73%;
+    bottom: 88%;
+    height: 20px;
+    width: auto;
+  }
+
+  /* Add hover styles for card_reg and card_exp */
+.card_reg:hover button{
+  color: #A7E9FF; /* Change the color to blue on hover */
+}
+.fspark4:hover {
+  opacity: 0;
+}
+
   /* For Media Queries */
   @media (max-width: 768px) {
     .indiamapContainer {

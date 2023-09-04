@@ -66,9 +66,19 @@ const Technorion = () => {
               <span><img src={dot} alt='dot'/></span>
             </div>
             <div className={styles.card_imgo}><img src={data.img} className={styles.card_img} alt={data.name}/></div>
+            <img className={styles.chand} src={chand} alt='moon' />
+            <img className={styles.espark} src={espark} alt='moon' />
+            <img className={styles.fspark} src={fspark} alt='moon' />
+            <img className={styles.chand2} src={chand} alt='moon' />
+            <img className={styles.espark2} src={espark} alt='moon' />
+            <img className={styles.fspark2} src={fspark} alt='moon' />
+            <img className={styles.espark3} src={espark} alt='moon' />
+            <img className={styles.fspark3} src={fspark} alt='moon' />
+            <img className={styles.espark4} src={espark} alt='moon' />
+            <img className={styles.fspark4} src={fspark} alt='moon' />
             <div className={styles.card_title}>
               <h3>{data.name}</h3>
-              <div className={styles.card_sustitle}>{data.prize} Prize</div>
+              <div className={styles.card_sustitle}>INR {data.prize}0000 Prize</div>
             </div>
             <div className={styles.card_post}>
               <div className={styles.card_desc}>{data.desc}</div>
@@ -76,7 +86,7 @@ const Technorion = () => {
                 <div className={styles.share_border}>
                   <div className={styles.share_rect1}>
                     <div className={styles.share_rect2}>
-                      Share
+                      <WhatsappShareButton />
                     </div>
                   </div>
                 </div>

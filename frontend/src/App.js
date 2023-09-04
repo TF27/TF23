@@ -11,16 +11,9 @@ import CompiInternal from './pages/Compi/Compi_Internal/index';
 import Reg from './pages/Compi/Compi_Internal/Reg';
 import Create_Team from './pages/Compi/Compi_Internal/Teams/create_team';
 import JoinTeam from './pages/Compi/Compi_Internal/Teams/join_team';
-import Gallery from './pages/AboutUs/gallery/gallery';
 import Workshop from './pages/workshop/home';
 import Summit from './pages/Summit/home.js';
 
-import Lecture_gal from './pages/AboutUs/gallery/specific/lecture';
-import Exhibition_gal from './pages/AboutUs/gallery/specific/exhibiton';
-import Ozone_gal from './pages/AboutUs/gallery/specific/ozone';
-import Compi_gal from './pages/AboutUs/gallery/specific/compi';
-import Techno_gal from './pages/AboutUs/gallery/specific/techno';
-import Robowar_gal from './pages/AboutUs/gallery/specific/Robowar';
 import Explore from './pages/workshop/components/Explore';
 import Recognition from './pages/AboutUs/recognition/Recognition';
 import Legals from './pages/AboutUs/legals/Legals';
@@ -30,6 +23,13 @@ import AddParti from './pages/Compi/Compi_Internal/Teams/add_parti';
 const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 const Media = React.lazy(() => import('./pages/AboutUs/Media/index'));
 const History = React.lazy(() => import('./pages/AboutUs/history/history'));
+const Gallery = React.lazy(()=> import('./pages/AboutUs/gallery/gallery'));
+const Lecture_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/lecture'));
+const Exhibition_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/exhibiton'));
+const Ozone_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/ozone'));
+const Compi_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/compi'));
+const Techno_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/techno'));
+const Robowar_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/Robowar'));
 
 
 function App() {
@@ -57,12 +57,12 @@ function App() {
                         <Lectures/>
                         </React.Suspense> }/>
 
-                        <Route path='/Media' element={
+                        <Route path='/aboutus/media' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <Media/>
                         </React.Suspense> }/>
 
-                        <Route path='/History' element={
+                        <Route path='/history' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <History/>
                         </React.Suspense> }/>
@@ -81,13 +81,38 @@ function App() {
                         <Route path='competitions/:compiName/singleparticipant' element={<Protected><SingleParti /></Protected>} />
                         <Route path='competitions/:compiName/joinTeam' element={<Protected><JoinTeam  /></Protected>} />
                         <Route path='competitions/:compiName/addparticipant' element={<Protected><AddParti /></Protected>} />
-                        <Route path='/gallery' element={<Gallery/>} />
-                        <Route path='/gallery/lectures' element={<Lecture_gal/>} />    
-                        <Route path='/gallery/exhibition' element={<Exhibition_gal/>} /> 
-                        <Route path='/gallery/ozone' element={<Ozone_gal/>} /> 
-                        <Route path='/gallery/compi' element={<Compi_gal/>} /> 
-                        <Route path='/gallery/robowars' element={<Robowar_gal/>} /> 
-                        <Route path='/gallery/technoholix' element={<Techno_gal/>} /> 
+
+
+                        <Route path='/gallery' element={
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                        <Gallery/>
+                            </React.Suspense>} />
+                        <Route path='/gallery/lectures' element={
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                        <Lecture_gal/>
+                            </React.Suspense>} /> 
+                        <Route path='/gallery/exhibition' element={
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                        <Exhibition_gal/>
+                            </React.Suspense>} /> 
+                        <Route path='/gallery/ozone' element={
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                        <Ozone_gal/>
+                            </React.Suspense>} /> 
+                        <Route path='/gallery/compi' element={
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                        <Compi_gal/>
+                            </React.Suspense>} /> 
+                        <Route path='/gallery/robowars' element={
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                        <Robowar_gal/>
+                            </React.Suspense>} />
+                        <Route path='/gallery/technoholix' element={
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                        <Techno_gal/>
+                            </React.Suspense>} /> 
+
+                        
                     </Routes>
                 </AuthContextProvider>
             </Router>
