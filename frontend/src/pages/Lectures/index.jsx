@@ -69,7 +69,7 @@ const Lectures = () => {
             
                 </div>
             </div>
-            <div style={{paddingBottom:'100px'}}>
+            <div className="contactus">
             <h1 style={{marginTop:'80px'}}>CONTACT US</h1>
             <div className="tray">
                 

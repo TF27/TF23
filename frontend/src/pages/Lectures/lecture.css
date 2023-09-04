@@ -42,5 +42,13 @@
   flex-wrap: wrap;
   margin-bottom: 40px;
 }
+.contactus{
+    padding-bottom: 100px;
+}
+@media(max-width:500px){
+    .contactus{
+  padding-bottom: 355px;
+    }
+  }
 
  
