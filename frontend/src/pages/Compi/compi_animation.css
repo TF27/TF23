@@ -33,7 +33,7 @@
     position: absolute;
     bottom: 0;
     width: min(100vh,100%);
-    animation: compi_loading_tittle 6s infinite ease-in-out;
+    /* animation: compi_loading_tittle 6s infinite ease-in-out; */
 }
 
 .frame .svg{

@@ -100,7 +100,7 @@ const Carousel = ({
         <div className="main_carousel">
             <div className="slides" ref={slidesRef}>
                 <div className="slide prev2">
-                    <img src={i1} className="Glimpse" alt="Technoholix stage, Techfest IIT Bombay Asia's Largest Science and Technology Festival" />
+                    <img src={i1}  className="Glimpse" alt="Technoholix stage, Techfest IIT Bombay Asia's Largest Science and Technology Festival" />
                 </div>
                 <div className="slide prev">
                     <img src={i2} className="Glimpse" alt="His Holiness The 14th Dalai Lama at Techfest IIT Bombay" />

@@ -53,7 +53,7 @@ const Compi = () => {
         <Technorion />
         <OurReach />
         {/* {card()} */}
-     
+        
     </div>
   );
 }

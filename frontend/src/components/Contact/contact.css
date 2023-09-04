@@ -20,31 +20,33 @@
     flex-direction: column;
     align-items: center;
     background-image: url("./card.png");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     /* width: 14vw;
     height: 25vh; */
-    width: 21%;
-    height: 135%;
+    width: 210px;
+    height: 270px;
     overflow: hidden;
   }
   
   /* Styling for the contact card image */
   .contact-image {
-    width: 50%; /* Adjust image size as needed */
-    height: 50%; /* Adjust image size as needed */
+    width: 53%; /* Adjust image size as needed */
+    height: 56%; /* Adjust image size as needed */
     /* background-image: url("test_tiger.jpeg"); */
     object-fit: cover;
     border-radius: 50%;
     margin: -4%;
-    margin-top: 15%;
+    margin-top: 16%;
   }
   
   /* Styling for the contact card text */
   .contact-head {
+    position: relative;
+    top: 4%;
     /* font-size: 1.5rem; */
-    font-size: 126%;
+    font-size: 170%;
     margin: 0;
   }
   
@@ -53,7 +55,9 @@
     /* font-size: 1rem; */
     /* font-size: 1%;
     margin: 5px 0; */
-    font-size: 51%;
+    font-size: 80%;
     margin: -1px 0;
+    top: 4%;
+    position: relative;
   }
   

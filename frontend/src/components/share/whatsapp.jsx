@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './share.module.css';
 
 const WhatsappShareButton = () => {
   const handleShare = () => {
@@ -10,7 +11,7 @@ const WhatsappShareButton = () => {
 
   return (
     <div className='whatsappShare'>
-      <div onClick={handleShare}>Share</div>
+      <div onClick={handleShare} className={styles.sharebtn}>Share</div>
     </div>
   );
 };
