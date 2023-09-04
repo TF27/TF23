@@ -1,0 +1,52 @@
+.media {
+font-family: Avenir LT Pro ;
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+}
+.media .gradient{
+content:'';
+position:fixed;
+left:0; bottom:0;
+width:100%; height:15%;
+z-index: 1;
+background:  linear-gradient(180deg, rgba(0, 0, 0, 0) 0%,  #000000 100%);
+}
+.media .col-md-4{
+margin-bottom: 20px;
+justify-content: space-evenly;
+/* padding-left: 100px;
+padding-right: 100px; */
+}
+
+.media .container-fluid{
+width: 100%;
+padding-right: 100px;
+padding-left: 100px;
+margin-right: auto;
+margin-left: auto;
+}
+
+.media .card{
+margin-bottom: 15px;
+}
+
+.media .card-body{
+margin-bottom: -15px;
+margin-top: -17px;
+text-align: center;
+}
+
+.media .card-body img{
+vertical-align: middle;
+}
+/*.image-popup {*/
+/*    text-decoration: none;*/
+/*    height: 29px;*/
+/*    font-family: 'Bebas Kai';*/
+/*    font-style: normal;*/
+/*    font-weight: 400;*/
+/*    font-size: 24px;*/
+/*    line-height: 29px;*/
+/*    color: #FFFFFF;*/
+/*}*/
