@@ -2,17 +2,6 @@
   scroll-padding-top: 2000px;
 } */
 
-<<<<<<< HEAD
-.ourReach h1{
-  font-family: Forum;
-  font-style: normal;
-  font-weight: normal;
-}
-
-.ourReach{
-  margin-bottom: -50px;
-}
-
 .loader{
   display: flex;
   flex-wrap: wrap; 
@@ -20,16 +9,6 @@
 }
 .buffer{
   display: flex;
-  flex-direction: column;
-=======
-.loader{
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center;
-}
-.buffer{
-  display: flex;
->>>>>>> ebda60db3476e3af20108ca3d6e78ce2734ce875
   align-items: center;
   justify-content: center;
   position: relative;
