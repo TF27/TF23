@@ -1,4 +1,5 @@
 import React from 'react';
+import './media.css';
 import i1 from "./media/2021/media/11.jpg"
 import i2 from "./media/logo/TOI.jpg"
 import i3 from "./media/2020/media/bolt.jpg"
@@ -126,7 +127,7 @@ const Media = () => {
         "https://www.youtube.com/embed/e1NbKFTnaxI"
     ];
     return ( 
-        <div>
+        <div className='media'>
 
         <section class="container-fluid ftco-gallery ftco-no-pb mb-4" id="Offline-section">
             <div class="row">
@@ -273,8 +274,7 @@ const Media = () => {
                         </div>
                     </div>
 
-                    </div>  
-                </div>
+                </div>  
                 <div class="col-md-3">
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
                         <a class="image-popup" href={i35}><img class="card-img-top " src={i35} alt="Card image" style={{width:"100%"}}/></a>
@@ -625,6 +625,8 @@ const Media = () => {
                         </div>
                     </div>
 
+            
+                </div>
             </div>
         </section>
 
