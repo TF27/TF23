@@ -118,3 +118,83 @@
         background-image: url('./assets/fire1.png');
     }
 }
+
+
+.titSpn{
+    margin-top: 40px;
+}
+
+.titSpn_rect1{
+    border: #AB8D60 2px solid;
+    width: 220px;
+    height: 50px;
+    margin: auto;
+}
+
+.titSpn_rect2{
+    border: #AB8D60 2px solid;
+    width: 220px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    transform: translate(3px, 3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: Forum;
+    color: #AB8D60;
+}
+
+.spnImg{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.spnImg a{
+    text-decoration: none;
+}
+.spnImg a p{
+    text-decoration: none;
+    color: #AB8D60;
+    margin: 10px 0 0 0;
+    font-size: 20px;
+}
+
+.mmcImg{
+    width: 45%;
+}
+
+.themeData{
+    /* display: flex; */
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.themeData img{
+    width: 90%;
+    height: 300px;
+    object-fit: fill;
+}
+
+.themeText{
+    text-align: left;
+    padding-left: 20px;
+}
+
+@media( max-width: 992px){
+    .themeData img{
+        width: 500px;
+    }
+    .themeText{
+        margin-top: 20px;
+    }
+}
+
+@media(max-width: 580px){
+    .themeData img{
+        width: 80%;
+    }
+}
+
+

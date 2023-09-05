@@ -4,7 +4,7 @@
     background-color: black; 
     transition: background-color .5s ease-in-out;
 }
-
+/* 
 .header_competitions{
     background-color: blueviolet;
 }
@@ -27,12 +27,40 @@
 
 .header_exhibitions{
     background-color: brown;
+} */
+
+.navbarClassName{
+    
 }
 
 .hamburger{
     display: none;
 }
 
+.webNav{
+    display: flex;
+}
+.logoDiv{
+    justify-content: center;
+}
+.webNav ul{
+    justify-content: space-around;
+    display: flex;
+    width:100%;
+    margin-top: 10px;
+}
+.webNav ul li{
+    list-style: none;
+}
+.webNav ul li a{
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+    font-family: Landasans;
+    text-transform: uppercase;
+    font-size: 20px;
+}
 .bar{
     display: block;
     width: 25px;
@@ -148,7 +176,9 @@
         color: #fff;
         transition: color 0.3s ease-in-out;
     }
-    
+    .webNav{
+        display: none;
+    }
 }
 
 .navfunc{
@@ -159,10 +189,21 @@
     position: fixed;
     top: -100px;
     transition: top 0.5s ease-in-out;
+    background-image: url('./navimg.png');
+    width: 100%;
+    height: 160px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .navfuncshow{
     position: fixed;
     top: 0px;
     transition: top 0.5s ease-in-out;
+    background-image: url('./navimg.png');
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    width: 100%;
+    height: 170px;
 }

@@ -51,9 +51,6 @@
   top: -13vh;
   background-position: center;
   background-repeat: no-repeat;  
-  padding-bottom: 300px;
-     
-  
 }
 
 .xyz{
@@ -70,6 +67,9 @@
   }
   .image{
     top: -26vh;
+  }
+  .image{
+    padding-bottom: 300px;
   }
 }
   
