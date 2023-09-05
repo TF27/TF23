@@ -130,16 +130,21 @@ const Header = () => {
                     </li>
                     <li>
                         {user?.displayName ? (
-                            <div>
-                                <button onClick={handleSignOut} className="item1" onMouseEnter={(e)=> e.target.innerText = "Sign Out"} onMouseLeave={(e)=> e.target.innerText = name}>
-                                Logout
-                                </button>
-                                
+                            <div onClick={handleSignOut} className='singin'>
+                                <div className='logout_rect1'>
+                                    <div className="logout_rect2" onMouseEnter={(e)=> e.target.innerText = "Sign Out"} onMouseLeave={(e)=> e.target.innerText = name}>
+                                        Logout
+                                    </div>
+                                </div>
                             </div>
                             ) : (
-                            <button onClick={handleGoogleSignIn} className="item2">
-                                Sign In
-                            </button>
+                            <div onClick={handleGoogleSignIn} className='singin'>
+                                <div className='logout_rect1'>
+                                    <div className="logout_rect2">
+                                        Sign in
+                                    </div>
+                                </div>
+                            </div>
                             )}
                     </li>
                 </ul>

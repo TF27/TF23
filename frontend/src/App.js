@@ -19,6 +19,7 @@ import Recognition from './pages/AboutUs/recognition/Recognition';
 import Legals from './pages/AboutUs/legals/Legals';
 import SingleParti from './pages/Compi/Compi_Internal/Teams/single_parti';
 import AddParti from './pages/Compi/Compi_Internal/Teams/add_parti';
+import Footer from './components/Footer/Footer';
 
 const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 const Media = React.lazy(() => import('./pages/AboutUs/Media/index'));
@@ -114,6 +115,7 @@ function App() {
 
                         
                     </Routes>
+                    <Footer />
                 </AuthContextProvider>
             </Router>
         </div>
