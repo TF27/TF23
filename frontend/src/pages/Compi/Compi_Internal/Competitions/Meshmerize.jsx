@@ -13,33 +13,70 @@ const Meshmerize = () => {
       const data = {
         rows: [
           {
-            title: "What does it mean to be a College Ambassador?",
-            content: "As a College Ambassador, seize the opportunity to showcase your college at Techfest, IIT Bombay. Serve as a vital link connecting Techfest with your estemmed college."
+            title: "Why should I participate in the Meshmerize?",
+            content: "The competition provides a platform for students to design and construct their own gripper bot which can drive through an obstacle-filled path and put the objects in the respective target zones. It also provides an opportunity for students to work as a team and test their skills"
           },
           {
-            title: "Am I eligible to be a College Ambassador?",
-            content: 'To be eligible, all you need is a valid student id and a lot of enthusiasm.'
+            title: "How to register?",
+            content: 'Follow this steps for registration : www.techfest.org > Competitions > Meshmerize > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
           },
           {
-            title: "How can I apply for the post of College Ambassador?",
-            content: 'Click on the Google Sign In button to apply now! Once the registration is complete, you will not be able to change your email address. Allow pop-ups if prompted to do so.'
+            title: "How many people can be there in one team?",
+            content: 'One team can have a maximum of 4 members.'
           },
           {
-            title: "What are my responsibilities as a CA?",
-            content: 'As a College Ambassador, you will be engaged in social media managing, analysing trends, organising events/workshops and various other tasks designed to enhance your skills. You will also be instrumental in conducting workshops and sessions under the aegis of Techfest, IIT Bombay on your campus.'
+            title: "Is it free to register for Meshmerize?",
+            content: 'Yes, it is free to register.'
           },
           {
-            title: "How much time and effort would I have to invest?",
-            content: 'You are expected to put in 1-2 hours every week on an average. Consistent commitment and sincerity toward the assigned tasks are imperative.'
+            title: "How can I make my own team (as a team leader)?",
+            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Meshmerize -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
           },
           {
-            title: "Can there be multiple College Ambassadors from a single college?",
-            content: 'Yes, depending on the size of the college, Techfest can appoint multiple College Ambassadors.'
+            title: "What is the Registered Mail ID?",
+            content: 'The Gmail ID which was used to Sign In is the Registered Mail ID. It is a unique identity of any participant. It will be used in adding team members in a team, joining a pre-existing team etc.'
           },
           {
-            title:"How will my progress be monitored?",
-            content: "You will upload proofs of your work on the CA portal; we will verify them and reward you with points that measure your progress. Please feel free to reach out to your mentors if you have any queries."
+            title:"Who can add members in a team?",
+            content: "Only the team leader has the right to add members in a team. However, others can join an existing team by clicking on the Join Team button."
           },
+          {
+            title: "Can I add myself to an existing team?",
+            content: 'Yes, follow these steps to get added to a team. Join team -> Enter required details. You will be added to that team.'
+          },
+          {
+            title: "How can I remove members from my team (as a team leader)?",
+            content: 'Click on the Remove Member button and then select the member you wish to remove.'
+          },
+          {
+            title: "What happens when the team leader leaves their team?",
+            content: 'If the team leader leaves their team, the team will get dissolved. The other members of the team will then have to create a new team.'
+          },
+          {
+            title: "Is it necessary for the team leader to add all the team members at once?",
+            content: 'No, it is not necessary. The team leader can add one member or none, only once, which is while creating the team, but if the team is not full and they want to add more members afterwards, then members (to be added) will have to use the Join Team button to join the team.'
+          },
+          {
+            title: "How can a team member (other than the leader) leave the team?",
+            content: 'Click on the Leave Team button and you will be removed from the registered team.'
+          },
+          {
+            title: "Who can delete a team?",
+            content: 'Only the team leader can delete the team using the Dissolve Team button.'
+          },
+          {
+            title: "Can a team have members from different colleges?",
+            content: 'Yes, students from different colleges can form a team.'
+          },
+          {
+            title: "Can I register for more than one competition?",
+            content: 'Yes, you can participate in more than one competition. However, it is recommended to focus on only one competition as there may be some chances of slot clash.'
+          },
+          {
+            title: "How many teams can I join?",
+            content: 'You can join only one team in one competition. Participating in more than one team will get you DISQUALIFIED.'
+          },
+    
     
         ],
       };
@@ -89,21 +126,24 @@ const Meshmerize = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-                Abouti
+            Teams must build a line follower bot that can keep track of directions while going through a maze. It must analyze the path in the Dry Run and use this information in the Actual Run to traverse the maze to reach the ending point in the minimum possible time.
               </div>
             </div>
           </div>
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-                Structure
+            Top 5 teams from each Zonal Qualifier will qualify for the Grand Finale that will be held during Techfest 2022-23 (Only if they score higher than the minimum cut-off score)
               </div>
             </div>
           </div>
           <div id="Timeline" className={`${styles.info} ${activeCity === 'Timeline' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-                Timeline
+            Round 1:
+            Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.
+            Round 2:
+            Finale will be held at Techfest 2023-24 during 27th - 29th December 2023.
               </div>
             </div>
           </div>
@@ -122,14 +162,21 @@ const Meshmerize = () => {
           <div id="Rules" className={`${styles.info} ${activeCity === 'Rules' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-                Rules
+            Every team has to register online on the official Techfest website for the competition.
+            A Team ID will be allocated to the team on registration which shall be used for future references.
+            The decision of the organizers or judges shall be treated as final and binding on all.
+            No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
+            Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
+            All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
               </div>
             </div>
           </div>
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-                Contact
+              Abhishek Kedare
+              +91 75585 88254
+              abhishek@techfest.org
               </div>
             </div>
           </div>

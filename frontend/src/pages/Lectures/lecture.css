@@ -33,6 +33,10 @@
     text-decoration: none;
     font-family: Forum;
 }
+
+.world-map-container{
+    margin-top: 15px;
+}
 .tray{
     display: flex;   /* 2 rows */
   justify-items: center;
