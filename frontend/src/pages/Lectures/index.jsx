@@ -1,5 +1,7 @@
+import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import './lecture.css';
+import './map2.css';
 import styles from './parallax.module.css';
 import ImageOne from "./ImageOne";
 
@@ -16,8 +18,22 @@ import img3 from './assets/map.png';
 import img4 from './assets/NotifyMe.png';
 
 import tiger from "../../components/Contact/test_tiger.jpeg"
+import MapClick from "./map2";
 
 const Lectures = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+      handleResize();
+      // console.log(window.innerWidth)
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
 
     return (
         <div style={{height:'120vh'}}>
@@ -25,7 +41,11 @@ const Lectures = () => {
             <div className={styles.image}>
             
             <Notify />
-            <WorldMap />
+            <div>
+            {
+                isMobile ? <MapClick/> : <WorldMap />
+            }
+        </div>
             <OurReach />
             <div className='checkThis'>
                 <h1 style={{marginTop:'80px',marginBottom:'40px'}}>CHECK THIS OUT</h1>
@@ -69,7 +89,7 @@ const Lectures = () => {
             
                 </div>
             </div>
-            <div style={{paddingBottom:'100px'}}>
+            <div className="contactus">
             <h1 style={{marginTop:'80px'}}>CONTACT US</h1>
             <div className="tray">
                 

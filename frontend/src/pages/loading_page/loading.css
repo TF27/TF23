@@ -1,0 +1,49 @@
+/* TransparentImageGif.css */
+.container12 {
+    position: relative;
+    width: 100vw; /* Adjust to match your image dimensions */
+    height: 100vh;
+    overflow-y: hidden; 
+    overflow-x: visible; /* Adjust to match your image dimensions */
+  }
+  
+  .image {
+    background-image: url('./img/loadingbgfinal.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    position: relative;
+    height: 100vh;
+    transform: scale(1);
+    transition: transform 3s ease-in-out;
+    transform-origin: 760px 600px;
+    z-index: 214748365;
+  }
+  
+  .gif {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url('./img/gif1.png');
+    background-size: auto 100%;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    z-index: 214748365;
+  }
+  
+  .scale {
+    transform: scale(11.1) ; /* Adjust the scale factor as needed */
+  }
+  
+  .show {
+    opacity: 0;
+  }
+  @media(max-width: 1000px){
+    .image{
+        transform-origin: 50vw 80vh;
+    }
+  }
+  
