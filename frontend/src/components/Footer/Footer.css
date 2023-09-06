@@ -23,7 +23,7 @@
 }
 
 .footfunc{
-    z-index: 2147483647;
+    z-index: 214748364;
 }
 
 .footWeb{
@@ -59,4 +59,32 @@
 .socialMedia{
     width: 35%;
     margin-right: 3%;
+}
+
+@media (max-width: 748px){
+    .footLinkO{
+        display: none;
+    }
+    .footfuncshow{
+        background: none;
+        height: auto;
+    }
+    .footfunchide{
+        background: none;
+        height: auto;
+    }
+    .footWeb ul{
+        padding: 0;
+    }
+    .footWeb{
+        margin-top: 0;
+    }
+    .socialMedia{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;;
+    }
+    .socialMedia img{
+        width: 33px;
+    }
 }

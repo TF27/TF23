@@ -13,7 +13,8 @@
 }
 
 body{
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  overflow-y: scroll;
   background: #000000;
 }
 

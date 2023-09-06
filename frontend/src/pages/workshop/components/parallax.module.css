@@ -1,6 +1,7 @@
 .parallaxcontainer {
   position: relative;
-  height: 100%;
+  height: 109%;
+  width: 100%;
   top: -5rem;
 }
   
@@ -27,9 +28,10 @@
   background-image: url('../img/WORKSHOP 1.png');
   opacity: 1;
   z-index: -1;
-  background-size: 100%;
+  background-size: 70%;
   background-repeat: no-repeat;
-  background-position-y:10%;
+  background-position-y:20%;
+  background-position-x: center;
 }
 
 .layer3 {
@@ -48,7 +50,7 @@
   background-size: cover;
   z-index: -1;
   background-attachment: fixed;
-  top: -13vh;
+  top: -18vh;
   background-repeat: no-repeat;  
 }
 .xyz{
@@ -62,9 +64,10 @@
   }
   .layer3{
     background-size: auto 95vh;
+  
   }
   .image{
-    top: -26vh;
+    top: -31vh;
   }
 }
   
