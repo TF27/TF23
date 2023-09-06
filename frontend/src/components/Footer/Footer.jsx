@@ -50,6 +50,7 @@ const Footer = () => {
     return (
         <div  className={`footfunc ${showNavbar ? 'footfuncshow' : 'footfunchide'}`}>
             <div className="footWeb">
+                <div className="footLinkO"> 
                 <ul clasName='footLink'>
                     <li>
                         <Link to='/history'>History</Link>
@@ -67,24 +68,25 @@ const Footer = () => {
                         <Link to='/legals'>Legals</Link>
                     </li>
                 </ul>
+                </div>
                 <ul className='socialMedia'>
                     <li>
-                        <a href='https://www.instagram.com/techfest_iitbombay/?hl=en'><img src={insta} /></a>
+                        <a href='https://www.instagram.com/techfest_iitbombay/?hl=en' target="_blank"><img src={insta} /></a>
                     </li>
                     <li>
-                        <a href='https://www.facebook.com/iitbombaytechfest/'><img src={fb} /></a>
+                        <a href='https://www.facebook.com/iitbombaytechfest/' target="_blank"><img src={fb} /></a>
                     </li>
                     <li>
-                        <a href='https://twitter.com/Techfest_IITB'><img src={x} /></a>
+                        <a href='https://twitter.com/Techfest_IITB' target="_blank"><img src={x} /></a>
                     </li>
                     <li>
-                        <a href='https://www.youtube.com/user/techfestiitbombay'><img src={yt} /></a>
+                        <a href='https://www.youtube.com/user/techfestiitbombay' target="_blank"><img src={yt} /></a>
                     </li>
                     <li>
-                        <a href='https://in.linkedin.com/company/techfest'><img src={linkedin} /></a>
+                        <a href='https://in.linkedin.com/company/techfest' target="_blank"><img src={linkedin} /></a>
                     </li>
                     <li>
-                        <a href='https://in.pinterest.com/techfestiitbombay/'><img src={pinterest} /></a>
+                        <a href='https://in.pinterest.com/techfestiitbombay/' target="_blank"><img src={pinterest} /></a>
                     </li>
                 </ul>
             </div>
