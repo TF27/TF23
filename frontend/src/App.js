@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React ,{useState,useEffect}from 'react';
 import Header from './components/Navbar/Header';
 import { AuthContextProvider } from './contexts/AuthContext';
 import Protected from './contexts/Protected';
@@ -19,6 +19,8 @@ import Recognition from './pages/AboutUs/recognition/Recognition';
 import Legals from './pages/AboutUs/legals/Legals';
 import SingleParti from './pages/Compi/Compi_Internal/Teams/single_parti';
 import AddParti from './pages/Compi/Compi_Internal/Teams/add_parti';
+import Footer from './components/Footer/Footer';
+import Loading from './pages/loading_page/Loading';
 
 const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 const Media = React.lazy(() => import('./pages/AboutUs/Media/index'));
@@ -33,15 +35,31 @@ const Robowar_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/Robo
 
 
 function App() {
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+      setTimeout(() => {
+        setIsLoading(false);
+      },4000);
+    }, []);
+  
 
     return (
         <div className="App">
-            <Router>
+        <Router>
                 <AuthContextProvider>
                     {/* <Navbar />*/}
-                    <Header />
+                   
+                       <Header />
+                    
                     <Routes>
-                        <Route path='/' element={<Home />} />
+                        <Route path='/' element={
+                        isLoading ? (
+                            <Loading />
+                         ) : (
+                            <Home />
+                         )
+                        } />
                         <Route path='/exhibitions' element={<Exhibition/>}/>
                         <Route path='/competitions' element={<Compi />} />
                         <Route path='/workshops' element={<Workshop/>}/>
@@ -114,8 +132,13 @@ function App() {
 
                         
                     </Routes>
+                    
+                        <Footer />
+                    
+                    
                 </AuthContextProvider>
             </Router>
+            
         </div>
     );
 }
