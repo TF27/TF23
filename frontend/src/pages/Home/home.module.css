@@ -1,120 +1,379 @@
-.rockRight{
-    position: absolute;
-    overflow: hidden;
-    right: 0;
+.rockRight {
+  position: absolute;
+  overflow: hidden;
+  right: 0;
 }
 
-.rockUp{
-    max-width: 100%;
-    animation: moveUp 5s linear infinite;
+.rockUp {
+  max-width: 100%;
+  animation: moveUp 5s linear infinite;
 }
 
 @keyframes moveUp {
-    0% {
-        transform: translateY(100%); /* Start position, below the viewport */
-    }
-    100% {
-        transform: translateY(-100%); /* End position, above the viewport */
-    }
+  0% {
+    transform: translateY(100%); /* Start position, below the viewport */
+  }
+  100% {
+    transform: translateY(-100%); /* End position, above the viewport */
+  }
 }
 
-.arockUp{
-    max-width: 100%;
-    animation: amoveUp 3s linear infinite;
+.arockUp {
+  max-width: 100%;
+  animation: amoveUp 3s linear infinite;
 }
 
 @keyframes amoveUp {
-    0% {
-        transform: translateY(100%); /* Start position, below the viewport */
-    }
-    100% {
-        transform: translateY(-100%); /* End position, above the viewport */
-    }
+  0% {
+    transform: translateY(100%); /* Start position, below the viewport */
+  }
+  100% {
+    transform: translateY(-100%); /* End position, above the viewport */
+  }
 }
 
-.rockLeft{
-    position: absolute;
-    overflow: hidden;
-    /* left: -80%; */
+.rockLeft {
+  position: absolute;
+  overflow: hidden;
+  /* left: -80%; */
 }
 
 .rockDown {
-    max-width: 100%;
-    animation: rotateAndMoveDown 3s linear infinite; /* Adjust the duration as needed */
-    transform-origin: center center; /* Set the rotation pivot point to the center */
+  max-width: 100%;
+  animation: rotateAndMoveDown 3s linear infinite; /* Adjust the duration as needed */
+  transform-origin: center center; /* Set the rotation pivot point to the center */
 }
 
 @keyframes rotateAndMoveDown {
-    0% {
-        transform: rotate(180deg) translateY(100%); /* Start with rotation and no vertical movement */
-    }
-    100% {
-        transform: rotate(180deg) translateY(-100%); /* Rotate and move down */
-    }
+  0% {
+    transform: rotate(180deg) translateY(100%); /* Start with rotation and no vertical movement */
+  }
+  100% {
+    transform: rotate(180deg) translateY(-100%); /* Rotate and move down */
+  }
 }
 
-
-.homeParallax{
-    background-image: url('./assets/parbg.png');
-    height: 97vh;
-    overflow: hidden;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.img1{
-    background: url('./assets/Frame 2.png');
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    top: -6vh;
-    z-index: -0.5;
+.img1 {
+  background: url("./assets/Frame 2.png");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: -6vh;
+  z-index: -0.5;
 }
 @keyframes rotateAnimation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-.img2{
-    animation: rotateAnimation 2s infinite linear;
-    position: relative;
-    top: 20%;
-    left: 0.3%;
-}
-
-.fires{
-    position: relative;
-    width: 100vw;
-    height: 100%;
-    background-image: url('./assets/fire1.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    animation: fire 3s infinite ease-in;
-    /* z-index: 15; */
-    /* top: 7%; */
+.img2 {
+  animation: rotateAnimation 2s infinite linear;
+  position: relative;
+  top: 20%;
+  left: 0.3%;
 }
 
-.headU{
-    width: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
+.fires {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  background-image: url("./assets/fire1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: fire 3s infinite ease-in;
+  /* z-index: 15; */
+  /* top: 7%; */
 }
 
 @keyframes fire {
-    0%{
-        background-image: url('./assets/fire1.png');
-    }
-    50%{
-        background-image: url('./assets/fire2.png');
-    }
-    100%{
-        background-image: url('./assets/fire1.png');
-    }
+  0% {
+    background-image: url("./assets/fire1.png");
+  }
+  50% {
+    background-image: url("./assets/fire2.png");
+  }
+  100% {
+    background-image: url("./assets/fire1.png");
+  }
+}
+
+.homeParallax {
+  /* background-image: url('./assets/parbg.png'); */
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headU {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.clouds {
+  position: relative;
+  height: 100vh;
+}
+.cloud {
+  position: absolute;
+  bottom: 0;
+}
+.cloudL {
+  left: 0;
+}
+.cloudM {
+  transform: translateX(-50%);
+}
+.cloudR {
+  right: 0;
+}
+
+/*==========================Home No parallax====================== */
+
+.titSpn {
+  margin-top: 40px;
+}
+
+.titSpn_rect1 {
+  border: #ab8d60 2px solid;
+  width: 220px;
+  height: 50px;
+  margin: auto;
+}
+
+.titSpn_rect2 {
+  border: #ab8d60 2px solid;
+  width: 220px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  transform: translate(3px, 3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-family: Forum;
+}
+
+.spnImg {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.spnImg a {
+  text-decoration: none;
+}
+.spnImg a p {
+  text-decoration: none;
+  color: #ab8d60;
+  margin: 10px 0 0 0;
+  font-size: 20px;
+}
+
+.mmcImg {
+  width: 45%;
+}
+
+.themeData {
+  /* display: flex; */
+  margin-top: 40px;
+  font-size: 20px;
+}
+.themeImg {
+  border: #ab8d60 2px solid;
+  width: 90%;
+  height: 300px;
+  margin: auto;
+}
+.themeData img {
+  width: 90%;
+  height: 300px;
+  border: #ab8d60 2px solid;
+  object-fit: fill;
+}
+
+.themeText {
+  text-align: left;
+  padding-left: 20px;
+}
+
+@media (max-width: 992px) {
+  .themeImg {
+    width: 500px;
+  }
+  .themeData img {
+    width: 500px;
+  }
+  .themeText {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 580px) {
+  .tehemImg {
+    width: 80%;
+  }
+  .themeData img {
+    width: 80%;
+  }
+}
+
+.cards {
+  margin-top: 30px;
+}
+.card {
+  background: url("./images/cardbg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 21vw;
+  width: 21vw;
+  margin-top: 30px;
+}
+
+/* .card_rect1{
+    border: #AB8D60 2px solid;
+    width: 18vw;
+    height: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_rect1{
+    border: #AB8D60 2px solid;
+    width: 18vw;
+    height: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.card img {
+  width: 10vw;
+  height: 10vw;
+  margin-top: 3vw;
+  object-fit: cover;
+  border: 2px solid #ab8d60;
+}
+
+.homeExplore {
+  max-width: 90%;
+  margin: auto;
+}
+
+.cardText {
+  text-align: center;
+  font-size: 1.3em;
+  font-family: Forum;
+  max-width: 80%;
+  margin: 20px auto 0 auto;
+}
+
+@media (max-width: 1294px) {
+  .cardText {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 991px) {
+  .card {
+    width: 40vw;
+    height: 40vw;
+  }
+  .card img {
+    width: 18vw;
+    height: 18vw;
+    margin-top: 5vw;
+  }
+  .cardText {
+    font-size: 1.3em;
+    margin: 20px auto 0 auto;
+  }
+}
+
+@media (max-width: 734px) {
+  .cardText {
+    font-size: 1.1em;
+  }
+}
+@media (max-width: 623px) {
+  .cardText {
+    font-size: 1em;
+  }
+}
+@media (max-width: 575px) {
+  .card {
+    width: 60vw;
+    height: 60vw;
+    margin: auto;
+  }
+  .card img {
+    width: 28vw;
+    height: 28vw;
+    margin-top: 8vw;
+  }
+  .cardText {
+    font-size: 1.3em;
+  }
+}
+@media (max-width: 490px) {
+  .card {
+    width: 300px;
+    height: 300px;
+  }
+  .card img {
+    width: 140px;
+    height: 140px;
+    margin-top: 40px;
+  }
+  .cardText {
+    font-size: 18px;
+  }
+}
+.exp {
+  margin-top: 20px;
+}
+
+.exp_rect1 {
+  border: #ab8d60 2px solid;
+  width: 120px;
+  height: 40px;
+  margin: auto;
+}
+
+.exp_rect2 {
+  border: #ab8d60 2px solid;
+  width: 120px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: translate(3px, 3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: tranform 0.5s ease-in-out;
+  cursor: pointer;
+}
+.exp_rect2 a {
+  font-size: 20px;
+  font-family: Forum;
+  color: white;
+  text-decoration: none;
+}
+
+.exp_rect1:hover .exp_rect2 {
+  transform: translate(1px, 1px);
+  transition: tranform 0.5s ease-in-out;
+}
+
+.endMargin {
+  margin-bottom: 200px;
 }

@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Forum;
 }
 
 .App{
@@ -12,7 +13,8 @@
 }
 
 body{
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  overflow-y: scroll;
   background: #000000;
 }
 
