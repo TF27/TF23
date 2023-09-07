@@ -121,7 +121,7 @@ const MInternal = () => {
             <div className={styles.stat_rect2}><a href={ProblemStatements} target='_blank' rel='noopener noreferrer'>Problem Statement</a></div>
           </div>
         </div>
-          {compiName === 'Meshmerize' && <Meshmerize />}
+          {compiName === 'meshmerize' && <Meshmerize />}
           {compiName === 'robowar' && <Meshmerize />}
       </div>
     ));
