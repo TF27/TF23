@@ -1,0 +1,14 @@
+@media( max-width: 768px){
+    .contactMail{
+        display: none;
+    }
+    .mainContactUs .row{
+        justify-content: space-around;
+    }
+}
+
+/* .contactNum{
+    flex: auto;
+    justify-content: right;
+    margin-right: 2%;
+} */
