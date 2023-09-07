@@ -17,7 +17,7 @@
     height: 100vh;
     transform: scale(1);
     transition: transform 3s ease-in-out;
-    transform-origin: 760px 600px;
+    transform-origin: 50vw 90vh;
     z-index: 214748365;
   }
   

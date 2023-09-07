@@ -1,13 +1,18 @@
+.outer1{
+  height: calc(60vw + 420px);
+}
 .world_map_container{
     position: relative;
     margin-top: 5%;
+    max-height: 1000px;
 }
 
 .map_image{
     background-image: url('./assets/map.png');
     background-size: cover;
     width: 95%;
-    height: 180px;
+    height: 50vw;
+    background-repeat: no-repeat;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -17,6 +22,7 @@
     height: 16px;
     background-color:rgb(128, 99, 244); 
     border-radius: 50%; 
+    border: 2px#f7f7fb;
     cursor: pointer;
     box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.1);
   }
@@ -25,9 +31,9 @@
     box-shadow: 0 0 30px 20px rgba(255, 255, 255, 0.4);
   }
 
-.dropdown-menu76 {
+.dropdown-menu7 {
   position: absolute;
-  transform: translate(0%, 0%);
+  
   border: 1px solid #f7f7fb;
   border-radius: 5px;
   background-color: rgba(6, 6, 6, 0.3);
@@ -35,18 +41,15 @@
   padding: 10px;
   z-index: 3;
   text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s smooth;
-  transition-duration: 1s;
-  pointer-events: none; /* Prevent the dropdown menu from blocking hover events */
-  max-height: 200px; /* Set a maximum height for the dropdown menu */
-  max-width: 300px;
-  overflow-y: auto; /* Enable scrolling when content exceeds the maximum height */
+ /* Prevent the dropdown menu from blocking hover events */
+  max-height: 400px; /* Set a maximum height for the dropdown menu */
+  width: 90vw;
+  overflow-y: visible; /* Enable scrolling when content exceeds the maximum height */
   overflow-x: auto;
-  margin-left: 17px;
-  margin-right: 17px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 20px;
-  margin-top: -71px;
+  margin-top: 7px;
 }
 
 .city-image-container {
@@ -66,6 +69,7 @@
   border-radius: 5px;
   font-size: xx-large;
   font-family: FORUM;
+  border: #f7f7fb;
 }
 
 .city-info-container{
@@ -87,6 +91,8 @@
   height: auto;
   margin-bottom: 10px;
   margin-left: 0px;
+  border: #f7f7fb;
+  border-width: 1px;
 }
 .dropdown-image {
   width: 100%;
@@ -151,6 +157,20 @@
   }
   100% {
     pointer-events: none;
+  }
+}
+@media(max-width:310px){
+  .dropdown-menu7{
+    width: auto;
+    max-height: 300px;
+    max-width: 300px;
+    left: 10px;
+    right: 10px;
+    transform: none;
+    margin-top: 7px;
+  }
+  .outer1{
+    height: calc(60vw + 320px );
   }
 }
 
