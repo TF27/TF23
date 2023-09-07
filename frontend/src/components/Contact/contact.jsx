@@ -9,8 +9,8 @@ function ContactCard({ image, headText, emailText, phoneNumberText }) {
     <div className="plate">
         <img src={image} alt="Person" className="contact-image" />
         <h2 className="contact-head">{headText}</h2>
-        <p className="contact-email">{emailText}</p>
-        <p className="contact-phone">{phoneNumberText}</p>
+        <a href={`mailto:${emailText}`}><p className="contact-email">{emailText}</p></a>
+        <a href={`tel:${phoneNumberText}`}><p className="contact-phone">{phoneNumberText}</p></a>
       </div>
   );
 }

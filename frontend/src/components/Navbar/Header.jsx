@@ -165,7 +165,7 @@ const Header = () => {
         </div>
         <nav className={openMenu ? "nav_slider active_slide" : "nav_slider"}>
           <ul>
-            {/* <li onClick={showMenu}>
+            <li onClick={showMenu}>
                         <Link to='/'>Home</Link>
                     </li>
                     <li onClick={showMenu}>
@@ -226,7 +226,7 @@ const Header = () => {
                                 Sign In
                             </button>
                             )}
-                    </li> */}
+                    </li>
           </ul>
         </nav>
       </div>
