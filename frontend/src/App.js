@@ -13,7 +13,7 @@ import Create_Team from './pages/Compi/Compi_Internal/Teams/create_team';
 import JoinTeam from './pages/Compi/Compi_Internal/Teams/join_team';
 import Workshop from './pages/workshop/home';
 import Summit from './pages/Summit/home.js';
-
+import Contact from './pages/AboutUs/ContactUs/contact.jsx'
 import Explore from './pages/workshop/components/Explore';
 import Recognition from './pages/AboutUs/recognition/Recognition';
 import Legals from './pages/AboutUs/legals/Legals';
@@ -89,6 +89,8 @@ function App() {
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <Summit/>
                         </React.Suspense> }/>
+
+                        <Route path='/contactus' element={<Contact/> } />
 
                         <Route path='/legals' element={<Legals /> } />
                         

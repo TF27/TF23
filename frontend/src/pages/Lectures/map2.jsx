@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./map2.css";
 import Europe from "./assets copy/europe.jpg";
 import Astro from "./assets copy/europe.jpg";
 
 const MapClick = () => {
-  const [selectedCity, setSelectedCity] = useState();
+  
 
   const cityData = [
     {
@@ -51,12 +51,17 @@ const MapClick = () => {
     },
   ];
 
+  const europeData = cityData[0];
+  const [selectedCity, setSelectedCity] = useState(europeData);
+
   const handleCityClick = (city) => {
     console.log("City clicked:", city);
     setSelectedCity(city);
   };
+
   return (
-    <>
+    
+    <div className="outer1">
       <div className="world_map_container">
         <div>
           <h1>TOP HIGHLIGHTS </h1>
@@ -75,7 +80,7 @@ const MapClick = () => {
         ))}
 
         {selectedCity && (
-          <div className="dropdown-menu76">
+          <div className="dropdown-menu7">
             <div className="dropdown-content">
               <div className="city-image-container">
                 <img
@@ -121,7 +126,7 @@ const MapClick = () => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 
