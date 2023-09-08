@@ -14,7 +14,7 @@ const Meshmerize = () => {
         rows: [
           {
             title: "Why should I participate in the Meshmerize?",
-            content: "The competition provides a platform for students to design and construct their own gripper bot which can drive through an obstacle-filled path and put the objects in the respective target zones. It also provides an opportunity for students to work as a team and test their skills"
+            content: "Teams must build a line follower bot that can keep track of directions while going through a maze. It must analyze the path in the Dry Run and use this information in the Actual Run to traverse the maze to reach the ending point in the minimum possible time."
           },
           {
             title: "How to register?",
