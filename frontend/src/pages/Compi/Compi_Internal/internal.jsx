@@ -12,7 +12,7 @@ import backimg2 from './../static/img/img7.png';
 import Meshmerize from './Competitions/Meshmerize';
 import frame from './../static/card/Frame.png';
 import JoinTeam from './Teams/joinTeam';
-
+import Machanzo from './Competitions/machanzo';
 
 
 const Internal = () => {
@@ -67,6 +67,7 @@ const Internal = () => {
           {compiName === 'Cozmo' && <Cozmo />}
           {compiName === 'meshmerize' && <Meshmerize />}
           {compiName === 'robowar' && <Meshmerize />}
+          {compiName === 'mechanzo league' && <Machanzo />}
           <div className={styles.team_reg}>
           {data.is_team_leader ? (
               <div>

@@ -12,6 +12,7 @@ import frame from './../static/card/Frame.png';
 import WhatsappShareButton from '../../../components/share/whatsapp';
 
 import Meshmerize from './Competitions/m-meshmerize';
+import Machanzo from './Competitions/m-machanzo';
 
 const MInternal = () => {
   const { compiName } = useParams();
@@ -122,7 +123,7 @@ const MInternal = () => {
           </div>
         </div>
           {compiName === 'meshmerize' && <Meshmerize />}
-          {compiName === 'robowar' && <Meshmerize />}
+          {compiName === 'mechanzo league' && <Machanzo />}
       </div>
     ));
   }
