@@ -42,3 +42,24 @@ input::-webkit-outer-spin-button{
   background: #b30000; 
 } */
 
+input:-webkit-autofill {
+  /* Prevent background color change */
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+}
+
+/* You may also want to target the text color */
+input:-webkit-autofill::first-line {
+  color: inherit !important; /* Inherit the text color */
+}
+
+/* Target autofill styles in Microsoft Edge */
+input:-ms-input-placeholder {
+  /* Prevent background color change */
+  background-color: transparent !important;
+}
+
+/* You may also want to target the text color */
+input:-ms-input-placeholder {
+  color: inherit !important; /* Inherit the text color */
+}
