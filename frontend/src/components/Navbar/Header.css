@@ -226,7 +226,7 @@
   position: fixed;
   top: -100px;
   transition: top 0.5s ease-in-out;
-  background-image: url("./navimg.png");
+  background-image: url("./navbar2.png");
   width: 100%;
   height: 160px;
   background-repeat: no-repeat;
@@ -237,7 +237,7 @@
   position: fixed;
   top: 0px;
   transition: top 0.5s ease-in-out;
-  background-image: url("./navimg.png");
+  background-image: url("./navbar2.png");
   background-repeat: no-repeat;
   /* background-position: center; */
   background-size: cover;

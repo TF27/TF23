@@ -3,7 +3,7 @@ import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
 
-const Meshmerize = () => {
+const HackAI = () => {
     const [activeCity, setActiveCity] = useState('About');
     const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {
@@ -13,24 +13,24 @@ const Meshmerize = () => {
       const data = {
         rows: [
           {
-            title: "Why should I participate in the Meshmerize?",
-            content: "Teams must build a line follower bot that can keep track of directions while going through a maze. It must analyze the path in the Dry Run and use this information in the Actual Run to traverse the maze to reach the ending point in the minimum possible time."
+            title: "Why should I participate in the HackAI?",
+            content: "The competition provides the participants with real life problems which they have to solve by building an AI based program. In the final round, participants work together to solve the problems in a specific time."
           },
           {
             title: "How to register?",
-            content: 'Follow this steps for registration : www.techfest.org > Competitions > Meshmerize > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
+            content: 'Follow this steps for registration : www.techfest.org > Competitions > HackAI > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
           },
           {
             title: "How many people can be there in one team?",
             content: 'One team can have a maximum of 4 members.'
           },
           {
-            title: "Is it free to register for Meshmerize?",
+            title: "Is it free to register for HackAI?",
             content: 'Yes, it is free to register.'
           },
           {
             title: "How can I make my own team (as a team leader)?",
-            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Meshmerize -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
+            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> HackAI -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
           },
           {
             title: "What is the Registered Mail ID?",
@@ -126,24 +126,38 @@ const Meshmerize = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Teams must build a line follower bot that can keep track of directions while going through a maze. It must analyze the path in the Dry Run and use this information in the Actual Run to traverse the maze to reach the ending point in the minimum possible time.
+            Get a chance to showcase your coding skills through this fierce and competitive AI based hackathon   
               </div>
             </div>
           </div>
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Top 5 teams from each Zonal Qualifier will qualify for the Grand Finale that will be held during Techfest 2022-23 (Only if they score higher than the minimum cut-off score)
+            Round 1:
+            In this round, the teams will have to solve the Round 1 Problem Statment provided and submit all the relevant files. 
+
+            Mentoring sessions:
+            Online sessions will be held to give the finalist teams some idea of the final Problem Statement
+
+            Final round:
+            Selected finalists will compete in an offline hackathon at IIT Bombay campus. 
               </div>
             </div>
           </div>
           <div id="Timeline" className={`${styles.info} ${activeCity === 'Timeline' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Round 1:
-            Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.
-            Round 2:
-            Finale will be held at Techfest 2023-24 during 27th - 29th December 2023.
+            Last date of registration:
+            2nd October
+
+            Round 1 Submission Deadline:
+            8th October 2023
+
+            Finalist announcement:
+            15th October 2023
+
+            Final Round at IIT Bombay Campus:
+            27th December 2023
               </div>
             </div>
           </div>
@@ -166,17 +180,20 @@ const Meshmerize = () => {
             A Team ID will be allocated to the team on registration which shall be used for future references.
             The decision of the organizers or judges shall be treated as final and binding on all.
             No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
-            Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
             All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
+            Participants have to bring their own laptops during the competition.
+            Teams will be responsible for their devices. It is advised that laptops should be charged before the competition.
+            Mobile phones are not allowed during the competition.
+            The organisers reserve the right to change any or all of the above rules as they deem fit. Change in rules, if any, will be highlighted on the website and notified to the registered teams.
               </div>
             </div>
           </div>
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Abhishek Kedare
-              +91 75585 88254
-              abhishek@techfest.org
+              Atharv Apshinge
+              +91 9324589830
+              atharv@techfest.org
               </div>
             </div>
           </div>
@@ -185,4 +202,4 @@ const Meshmerize = () => {
      );
 }
  
-export default Meshmerize;
+export default HackAI;

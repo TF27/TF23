@@ -3,7 +3,7 @@ import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
 
-const Meshmerize = () => {
+const CozmoClench = () => {
     const [activeCity, setActiveCity] = useState('About');
     const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {
@@ -13,24 +13,24 @@ const Meshmerize = () => {
       const data = {
         rows: [
           {
-            title: "Why should I participate in the Meshmerize?",
-            content: "Teams must build a line follower bot that can keep track of directions while going through a maze. It must analyze the path in the Dry Run and use this information in the Actual Run to traverse the maze to reach the ending point in the minimum possible time."
+            title: "Why should I participate in the CozmoClench?",
+            content: "The competition provides a platform for students to design and construct their own gripper bot which can drive through an obstacle-filled path and put the objects in the respective target zones. It also provides an opportunity for students to work as a team and test their skills"
           },
           {
             title: "How to register?",
-            content: 'Follow this steps for registration : www.techfest.org > Competitions > Meshmerize > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
+            content: 'Follow this steps for registration : www.techfest.org > Competitions > CozmoClench > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
           },
           {
             title: "How many people can be there in one team?",
             content: 'One team can have a maximum of 4 members.'
           },
           {
-            title: "Is it free to register for Meshmerize?",
+            title: "Is it free to register for CozmoClench?",
             content: 'Yes, it is free to register.'
           },
           {
             title: "How can I make my own team (as a team leader)?",
-            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Meshmerize -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
+            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> CozmoClench -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
           },
           {
             title: "What is the Registered Mail ID?",
@@ -126,7 +126,7 @@ const Meshmerize = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Teams must build a line follower bot that can keep track of directions while going through a maze. It must analyze the path in the Dry Run and use this information in the Actual Run to traverse the maze to reach the ending point in the minimum possible time.
+            The competition provides a platform for students to design and construct their own gripper bot which can drive through an obstacle-filled path and put the objects in the respective target zones. It also provides an opportunity for students to work as a team and test their skills
               </div>
             </div>
           </div>
@@ -185,4 +185,4 @@ const Meshmerize = () => {
      );
 }
  
-export default Meshmerize;
+export default CozmoClench;

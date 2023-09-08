@@ -3,7 +3,7 @@ import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
 
-const Meshmerize = () => {
+const TechfestOlympiad = () => {
 
     const [open, setOpen] = useState(false);
 
@@ -25,71 +25,30 @@ const Meshmerize = () => {
 
     const data = {
         rows: [
-          {
-            title: "Why should I participate in the Meshmerize?",
-            content: "Teams must build a line follower bot that can keep track of directions while going through a maze. It must analyze the path in the Dry Run and use this information in the Actual Run to traverse the maze to reach the ending point in the minimum possible time"
-          },
-          {
-            title: "How to register?",
-            content: 'Follow this steps for registration : www.techfest.org > Competitions > Meshmerize > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
-          },
-          {
-            title: "How many people can be there in one team?",
-            content: 'One team can have a maximum of 4 members.'
-          },
-          {
-            title: "Is it free to register for Meshmerize?",
-            content: 'Yes, it is free to register.'
-          },
-          {
-            title: "How can I make my own team (as a team leader)?",
-            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Meshmerize -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
-          },
-          {
-            title: "What is the Registered Mail ID?",
-            content: 'The Gmail ID which was used to Sign In is the Registered Mail ID. It is a unique identity of any participant. It will be used in adding team members in a team, joining a pre-existing team etc.'
-          },
-          {
-            title:"Who can add members in a team?",
-            content: "Only the team leader has the right to add members in a team. However, others can join an existing team by clicking on the Join Team button."
-          },
-          {
-            title: "Can I add myself to an existing team?",
-            content: 'Yes, follow these steps to get added to a team. Join team -> Enter required details. You will be added to that team.'
-          },
-          {
-            title: "How can I remove members from my team (as a team leader)?",
-            content: 'Click on the Remove Member button and then select the member you wish to remove.'
-          },
-          {
-            title: "What happens when the team leader leaves their team?",
-            content: 'If the team leader leaves their team, the team will get dissolved. The other members of the team will then have to create a new team.'
-          },
-          {
-            title: "Is it necessary for the team leader to add all the team members at once?",
-            content: 'No, it is not necessary. The team leader can add one member or none, only once, which is while creating the team, but if the team is not full and they want to add more members afterwards, then members (to be added) will have to use the Join Team button to join the team.'
-          },
-          {
-            title: "How can a team member (other than the leader) leave the team?",
-            content: 'Click on the Leave Team button and you will be removed from the registered team.'
-          },
-          {
-            title: "Who can delete a team?",
-            content: 'Only the team leader can delete the team using the Dissolve Team button.'
-          },
-          {
-            title: "Can a team have members from different colleges?",
-            content: 'Yes, students from different colleges can form a team.'
-          },
-          {
-            title: "Can I register for more than one competition?",
-            content: 'Yes, you can participate in more than one competition. However, it is recommended to focus on only one competition as there may be some chances of slot clash.'
-          },
-          {
-            title: "How many teams can I join?",
-            content: 'You can join only one team in one competition. Participating in more than one team will get you DISQUALIFIED.'
-          },
-    
+            {
+                title: "Why should I participate in the Techfest Olympiad?",
+                content: "The competition provides the participants with real life problems which they have to solve through their practical knowledge and mental aptitude."
+              },
+              {
+                title: "How to register?",
+                content: 'Follow this steps for registration : www.techfest.org > Competitions > Techfest Olympiad > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
+              },
+              {
+                title: "Is this a team-based competition?",
+                content: 'No, this competition is individual-based wherein each individual will have to give separate paper.'
+              },
+              {
+                title: "Is it free to register for Techfest Olympiad?",
+                content: 'Yes, it is free to register.'
+              },
+              {
+                title: "What is the Registered Mail ID?",
+                content: 'The Gmail ID which was used to Sign In is the Registered Mail ID. It is a unique identity of any participant. It will be used in adding team members in a team, joining a pre-existing team etc.'
+              },
+              {
+                title: "Can I register for more than one competition?",
+                content: 'Yes, you can participate in more than one competition. However, it is recommended to focus on only one competition as there may be some chances of slot clash.'
+              },
     
         ],
       };
@@ -115,7 +74,7 @@ const Meshmerize = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'About' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Teams must build a line follower bot that can keep track of directions while going through a maze. It must analyze the path in the Dry Run and use this information in the Actual Run to traverse the maze to reach the ending point in the minimum possible time.</div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Techfest Olympiad presents students with a platform to develop and showcase their scientific and practical life problem-solving skills. All participants have to solve the maximum number of questions in a specified time interval to compete with the brightest minds of the country. Only Standard 8th, 9th, and 10th students are eligible to participate.</div>
                 </div>
             </div>
             <div>
@@ -125,7 +84,14 @@ const Meshmerize = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'Structure' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Top 5 teams from each Zonal Qualifier will qualify for the Grand Finale that will be held during Techfest 2022-23 (Only if they score higher than the minimum cut-off score)</div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Stage 1:
+            This stage will be held at each of the 5 Zonal Qualifiers. Top 3 students will qualify for the STAGE 2 to be held during Techfest 2023-24 (provided their score is more than a minimum cut-off score which will be decided later).
+
+            Stage 2:
+            This stage will be held at IIT Bombay campus during Techfest from 27th to 29th December 2023. These 75 students will go through a screening round and the top 15 students will go ahead to participate in the Grand Finale.
+
+            Stage 3:
+            Personal Interview round to be taken by professional person from IIT Bombay testing critical thinking and pressure handling skills.</div>
                 </div>
             </div>
             <div>
@@ -160,14 +126,14 @@ const Meshmerize = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'Rules' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Every team has to register online on the official Techfest website for the competition.
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
+                </div>
+            </div>Every team has to register online on the official Techfest website for the competition.
             A Team ID will be allocated to the team on registration which shall be used for future references.
             The decision of the organizers or judges shall be treated as final and binding on all.
             No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
             Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
             All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.</div>
-                </div>
-            </div>
             <div>
                 <div onClick={() => handleClickOpen('Contact')} className={`${styles.whatu} ${open === 'Contact' ? styles.whatuOpen : ''}`}>
                     <div className={`${styles.ctc_rect1} ${styles.whatu_rect1}`}></div>
@@ -186,4 +152,4 @@ const Meshmerize = () => {
     );
 }
 
-export default Meshmerize;
+export default TechfestOlympiad;
