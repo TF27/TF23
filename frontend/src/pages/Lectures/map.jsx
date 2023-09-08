@@ -6,12 +6,12 @@ const WorldMap = () => {
   const [hoveredCity, setHoveredCity] = useState(null);
 
   const cityData = [
-    { name: 'Europe', x: '45%', y: '37%', info: 'Info About Europe\nufsjhdifubwe\nuyfgwuefiwegfiuwegf\neuehfuigfhuysguiehduee\niuyfhwugfiugfweufgsef\nudhfbywejfbuiwfgbyufgbeuf',image:europe },
-    { name: 'West USA', x: '15%', y: '37%', info: 'Info About West USA' },
-    { name: 'East USA', x: '25%', y: '42%', info: 'Info About East USA' },
-    { name: 'NorthEast Asia', x: '82%', y: '28%', info: 'Info About NorthEast Asia' },
-    { name: 'Australia', x: '83%', y: '78%', info: 'Info About Australia' },
-    { name: 'SouthEast Asia', x: '66%', y: '50%', info: 'Info About SouthEast Asia' },
+    { name: 'Europe', x: '48%', y: '39%', info: 'Info About Europe\nufsjhdifubwe\nuyfgwuefiwegfiuwegf\neuehfuigfhuysguiehduee\niuyfhwugfiugfweufgsef\nudhfbywejfbuiwfgbyufgbeuf',image:europe },
+    { name: 'West USA', x: '21%', y: '40%', info: 'Info About West USA' },
+    { name: 'East USA', x: '28%', y: '47%', info: 'Info About East USA' },
+    { name: 'NorthEast Asia', x: '76%', y: '37%', info: 'Info About NorthEast Asia' },
+    { name: 'Australia', x: '77%', y: '78%', info: 'Info About Australia' },
+    { name: 'SouthEast Asia', x: '64%', y: '55%', info: 'Info About SouthEast Asia' },
     // Add more cities and their coordinates here
   ];
 
@@ -21,7 +21,7 @@ const WorldMap = () => {
 
   return (
     <div className="world-map-container" style={{ position: 'relative',width:'90%',height:'90%' ,left:'5vw' }}>
-    <div><h1 style={{marginTop:'40px',marginBottom:'40px'}} >TOP HIGHLIGHTS </h1></div>
+    <div><h1 style={{marginTop:'100px',marginBottom:'10px'}} >TOP HIGHLIGHTS </h1></div>
       <img src={worldmap} className="mapimage" alt="World Map" />
 
       {cityData.map((city, index) => (
