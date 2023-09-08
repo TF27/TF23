@@ -90,14 +90,15 @@
 
 .bar_item{
     transform: scale(1);
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
+    transition: all 0.5s ease;
 }
 .bar_item.active{
     transform: scale(1.2);
     background: #523557;
     /* border-top: 1px solid #fff;
     border-bottom: 1px solid #fff; */
-    /* transition: all 0.5s ease; */
+    transition: all 0.5s ease;
     /* transform: translateX(0%);
     transition: transform 1s ease; */
 }
