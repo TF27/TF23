@@ -15,9 +15,9 @@ const images = [
 const HistoryItem = ({ imageUrl, height, width, isVisible, id, text, additionalText }) => (
   <div className={`history-item ${isVisible ? 'visible' : ''}`} style={{ height, width }}>
     <div className={`history-image ${id}`}>
-      {text && <div className="image-text">{text}</div>}
-      <img src={imageUrl} alt={text} className="image" />
-      {additionalText && <div className="additional-text">{additionalText}</div>}
+      {text && <div className="himage-text">{text}</div>}
+      <img src={imageUrl} alt={text} />
+      {additionalText && <div className="hadditional-text">{additionalText}</div>}
     </div>
   </div>
 );
