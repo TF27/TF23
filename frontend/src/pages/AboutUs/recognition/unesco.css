@@ -11,6 +11,19 @@
 
 .unesco{
     margin: 5vw 0;
-    width: 12vw;
+    width: 10vw;
     height: 10vw;
+}
+
+@media (max-width:550px) {
+    .unesco-card{
+        display: flex;
+        height: 55vw;
+        width: auto;
+    }
+    .unesco{
+        margin: 5vw 0;
+        width: 42vw;
+        height: 36vw;
+    }
 }
