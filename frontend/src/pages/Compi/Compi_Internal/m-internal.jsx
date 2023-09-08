@@ -15,6 +15,7 @@ import Meshmerize from './Competitions/m-meshmerize';
 import Machanzo from './Competitions/m-machanzo';
 import HackAI from './Competitions/m-HackAI';
 import CozmoClench from './Competitions/m-CozmoClench';
+import TechfestOlympiad from './Competitions/m-TechfestOlympiad';
 
 const MInternal = () => {
   const { compiName } = useParams();
@@ -128,6 +129,7 @@ const MInternal = () => {
           {compiName === 'mechanzo league' && <Machanzo />}
           {compiName === 'hackai' && <HackAI/>}
           {compiName === 'cozmoclench' && <CozmoClench/>}
+          {compiName === 'techfest olympiad' && <TechfestOlympiad/>}
       </div>
     ));
   }

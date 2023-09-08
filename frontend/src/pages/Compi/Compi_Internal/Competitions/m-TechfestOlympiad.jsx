@@ -84,13 +84,13 @@ const TechfestOlympiad = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'Structure' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Stage 1:
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Stage 1:<br/>
             This stage will be held at each of the 5 Zonal Qualifiers. Top 3 students will qualify for the STAGE 2 to be held during Techfest 2023-24 (provided their score is more than a minimum cut-off score which will be decided later).
-
-            Stage 2:
+            <br/><br/>
+            Stage 2:<br/>
             This stage will be held at IIT Bombay campus during Techfest from 27th to 29th December 2023. These 75 students will go through a screening round and the top 15 students will go ahead to participate in the Grand Finale.
-
-            Stage 3:
+            <br/><br/>
+            Stage 3:<br/>
             Personal Interview round to be taken by professional person from IIT Bombay testing critical thinking and pressure handling skills.</div>
                 </div>
             </div>
@@ -101,10 +101,11 @@ const TechfestOlympiad = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'Timeline' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Round 1:
-            Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.
-            Round 2:
-            Finale will be held at Techfest 2023-24 during 27th - 29th December 2023.</div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
+                        Round 1:
+                        <br/>Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.
+                        <br/><br/>Round 2:
+                        <br/>Finale will be held at Techfest 2023-24 during 27th - 29th December 2023.</div>
                 </div>
             </div>
             <div>
@@ -127,13 +128,14 @@ const TechfestOlympiad = () => {
                 <div className={`${styles.whatd} ${open === 'Rules' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
+                    1. Every team has to register online on the official Techfest website for the competition.
+            <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references.
+            <br/>3. The decision of the organizers or judges shall be treated as final and binding on all.
+            <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
+            <br/>5. Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
+            <br/>6. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
                 </div>
-            </div>Every team has to register online on the official Techfest website for the competition.
-            A Team ID will be allocated to the team on registration which shall be used for future references.
-            The decision of the organizers or judges shall be treated as final and binding on all.
-            No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
-            Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
-            All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.</div>
+            </div></div>
             <div>
                 <div onClick={() => handleClickOpen('Contact')} className={`${styles.whatu} ${open === 'Contact' ? styles.whatuOpen : ''}`}>
                     <div className={`${styles.ctc_rect1} ${styles.whatu_rect1}`}></div>
@@ -142,9 +144,9 @@ const TechfestOlympiad = () => {
                 <div className={`${styles.whatd} ${open === 'Contact' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                    Abhishek
-                    +91 75585 88254
-                    abhishek@techfest.org
+                    Akshat Gupta<br/>
+                    +91 96196 78850<br/>    
+                    akshat@techfest.org
                     </div>
                 </div>
             </div>
