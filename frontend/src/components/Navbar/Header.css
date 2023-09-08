@@ -74,7 +74,7 @@
 .nav_slider ul {
   width: 100%;
   transition: 1s ease;
-  display: flex;
+  display: none;
 }
 
 .nav_slider ul li {
@@ -177,11 +177,13 @@
     background: black;
     transition: 1s ease;
     z-index: 99;
+    margin-top: 90px;
   }
   .nav_slider.active_slide {
     right: 0;
     transition: 1s ease;
     overflow-y: scroll;
+    margin-top: 90px;
   }
 
   .nav_slider.active_slide::-webkit-scrollbar {
@@ -224,7 +226,7 @@
 }
 .navfunchide {
   position: fixed;
-  top: -100px;
+  top: -200px;
   transition: top 0.5s ease-in-out;
   background-image: url("./navimg.png");
   width: 100%;

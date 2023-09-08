@@ -177,26 +177,42 @@ def team_reg_check(request):
 def create_team(request):
     if request.method=='POST':
         compi_team_serializer = Compi_TeamSerializer(data=request.data, many=False)
-        # print(compi_team_serializer.is_valid())
         if compi_team_serializer.is_valid():
             # if check_reg(compi_team_serializer) is 
             compi = compi_team_serializer.validated_data.get('compi_name')
+            compi_reg_instances = compi_reg.objects.filter(compi=compi)
+            team_leader_email = compi_team_serializer.validated_data.get('team_leader_email')
+            parti_email1 = compi_team_serializer.validated_data.get('parti1_email')
+            parti_email2 = compi_team_serializer.validated_data.get('parti2_email')
+            parti_email3 = compi_team_serializer.validated_data.get('parti3_email')
+            if not compi_reg_instances.filter(email=team_leader_email).exists():
+                res = {'success': False, 'error': 'User not registered'}
+                return JsonResponse(res, status=400)
+            if parti_email1 and not compi_reg_instances.filter(email=parti_email1).exists():
+                res = {'success': False, 'error': 'User not registered'}
+                return JsonResponse(res, status=400)
+            if parti_email2 and not compi_reg_instances.filter(email=parti_email2).exists():
+                res = {'success': False, 'error': 'User not registered'}
+                return JsonResponse(res, status=400)
+            if parti_email3 and not compi_reg_instances.filter(email=parti_email3).exists():
+                res = {'success': False, 'error': 'User not registered'}
+                return JsonResponse(res, status=400)
             latest_team = compi_team.objects.filter(compi_name=compi).order_by('-team_id').first()
             next_team_id = '0269'
             if latest_team:
                 last_team_id = latest_team.team_id[-4:]
                 next_team_id = str(int(last_team_id) + 1).zfill(4)
-            team_id = f"{compi.name}-23{next_team_id}"
+            team_id = f"{compi.name.capitalize()[:4]}-23{next_team_id}"
             compi_team_serializer.save(team_id=team_id)
             # compi_team_serializer.save()
             subject = 'Team Created'
             message = f'You have successfully created a team'
             send_mailer = 'noreply@techfest.org'
             recipient = [compi_team_serializer.validated_data.get('team_leader_email')]
-            send_mail(subject, message, send_mailer, recipient)
+            # send_mail(subject, message, send_mailer, recipient)
             message2 = f'You have been added to a team'
             recipient2 = [compi_team_serializer.validated_data.get('parti1_email'), compi_team_serializer.validated_data.get('parti2_email'), compi_team_serializer.validated_data.get('parti3_email')]
-            send_mail(subject, message2, send_mailer, recipient2)
+            # send_mail(subject, message2, send_mailer, recipient2)
             return JsonResponse(compi_team_serializer.data)
         res = {'success': False}
 
@@ -211,12 +227,17 @@ def single_parti(request):
         if compi_team_serializer.is_valid():
             # if check_reg(compi_team_serializer) is 
             compi = compi_team_serializer.validated_data.get('compi_name')
+            compi_reg_instances = compi_reg.objects.filter(compi=compi)
+            team_leader_email = compi_team_serializer.validated_data.get('team_leader_email')
+            if not compi_reg_instances.filter(email=team_leader_email).exists():
+                res = {'success': False, 'error': 'User not registered'}
+                return JsonResponse(res)
             latest_team = compi_team.objects.filter(compi_name=compi).order_by('-team_id').first()
             next_team_id = '0269'
             if latest_team:
                 last_team_id = latest_team.team_id[-4:]
                 next_team_id = str(int(last_team_id) + 1).zfill(4)
-            team_id = f"{compi.name}-23{next_team_id}"
+            team_id = f"{compi.name.capitalize()[:4]}-23{next_team_id}"
             compi_team_serializer.save(team_id=team_id, single_parti=True)
             # compi_team_serializer.save()
             subject = 'Team Created'
@@ -224,9 +245,6 @@ def single_parti(request):
             send_mailer = 'noreply@techfest.org'
             recipient = [compi_team_serializer.validated_data.get('team_leader_email')]
             send_mail(subject, message, send_mailer, recipient)
-            message2 = f'You have been added to a team'
-            recipient2 = [compi_team_serializer.validated_data.get('parti1_email'), compi_team_serializer.validated_data.get('parti2_email'), compi_team_serializer.validated_data.get('parti3_email')]
-            send_mail(subject, message2, send_mailer, recipient2)
             return JsonResponse(compi_team_serializer.data)
         res = {'success': False}
         return JsonResponse(res)
@@ -361,13 +379,12 @@ def delete_team(request):
             team = compi_team.objects.get(team_id=team_id, team_leader_email=parti_email)
         except compi_team.DoesNotExist:
             return JsonResponse({'success': False, 'message': 'Team not found'})
-
-        team.delete()
         subject = 'Team Dissolved'
         message = f'You have successfully dissolved the team {team_id} and with {team.team_leader_email} ({team.team_leader_name}) as the team leader'
         send_mailer = 'noreply@techfest.org'
         recipient = [team.team_leader_email, team.parti1_email, team.parti2_email, team.parti3_email]
         send_mass_mail(subject, message, send_mailer, recipient)
+        team.delete()
         return JsonResponse({'success': True, 'message': 'Team deleted successfully'})
 
 

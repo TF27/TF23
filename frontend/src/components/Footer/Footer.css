@@ -1,6 +1,6 @@
 .footfunchide{
     position: fixed;
-    bottom: -100px;
+    bottom: -200px;
     transition: bottom 0.5s ease-in-out;
     background-image: url('./footimg.png');
     width: 100%;

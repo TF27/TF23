@@ -38,18 +38,24 @@ const Create_Team = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(formData);
         axios.post('/api/create_team/', formData)
             .then((response) => {
-                console.log('Formed succesfully!!');
+                console.log('Formed successfully!!');
                 navigate(`/competitions/${compiName}`);
                 // Handle the success response
+                console.log(response)
             })
             .catch((error) => {
                 console.error('Error:', error);
-                // Handle the error
+                if (error.response && error.response.data && error.response.data.error === 'User not registered') {
+                    // User is not registered, show an alert or take appropriate action
+                    alert('One of the user is not registered. Please register before creating a team.');
+                } else {
+                    // Handle other errors
+                }
             });
     }
+    
 
     const handleFocus = (e) => {
         const label = e.target.previousSibling;

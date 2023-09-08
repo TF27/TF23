@@ -120,7 +120,7 @@
 }
 
 .clouds {
-  position: relative;
+  position: fixed;
   height: 100vh;
 }
 .cloud {

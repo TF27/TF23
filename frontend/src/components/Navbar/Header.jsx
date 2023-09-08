@@ -86,7 +86,7 @@ const Header = () => {
 
     // Update the previous scroll position
     setPrevScrollY(currentScrollY);
-    console.log(showNavbar);
+    // console.log(showNavbar);
   };
 
   useEffect(() => {
