@@ -26,7 +26,7 @@ import Loading1 from './pages/loading_page/Loading1'
 // const Home= React.lazy(() => import('./pages/Home/home'));
 const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 const Media = React.lazy(() => import('./pages/AboutUs/Media/index'));
-const History = React.lazy(() => import('./pages/AboutUs/history/history'));
+const HISTORY = React.lazy(() => import('./pages/AboutUs/history/index'));
 const Gallery = React.lazy(()=> import('./pages/AboutUs/gallery/gallery'));
 const Lecture_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/lecture'));
 const Exhibition_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/exhibiton'));
@@ -90,7 +90,7 @@ function App() {
 
                         <Route path='/history' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
-                        <History/>
+                        <HISTORY/>
                         </React.Suspense> }/>
 
                         <Route path='/summits' element={

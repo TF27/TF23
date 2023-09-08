@@ -12,6 +12,7 @@ export const Frame3 = () => {
         <img src={img1} alt="competition" className="tittle"/>
         </div>
       </div>
+      <div className='blackGradient-to-top'/>
     </div>
   );  
 };

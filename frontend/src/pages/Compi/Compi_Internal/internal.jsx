@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import { UserAuth } from '../../../contexts/AuthContext';
 import styles from './internal.module.css';
-import Cozmo from './Competitions/cozmo';
+import CozmoClench from './Competitions/CozmoClench';
 import DissolveTeam from './Teams/dissolveTeam';
 import LeaveTeam from './Teams/leaveTeam';
 // Import images
@@ -11,6 +11,8 @@ import backimg1 from './../static/img/exp_bg.png';
 import backimg2 from './../static/img/img7.png';
 import Meshmerize from './Competitions/Meshmerize';
 import frame from './../static/card/Frame.png';
+import HackAI from './Competitions/HackAI'
+
 import JoinTeam from './Teams/joinTeam';
 import Machanzo from './Competitions/machanzo';
 
@@ -64,10 +66,11 @@ const Internal = () => {
             {data.sponsorImg && <a href={data.sponsorLink}><h3>Sponsored by <img src={data.sponsorImg} alt='Sponsor' className={styles.sponsorImg} /></h3></a>}
           </div>
           {data.is_team_registered ? <div className={styles.youhave}> You have successfully with your email {user.email} and your team ID is {data.team_id}</div> : <div className={styles.compi_reg}></div>}
-          {compiName === 'Cozmo' && <Cozmo />}
+          {compiName === 'cozmoclench' && <CozmoClench />}
           {compiName === 'meshmerize' && <Meshmerize />}
           {compiName === 'robowar' && <Meshmerize />}
           {compiName === 'mechanzo league' && <Machanzo />}
+          {compiName === 'hackai' && <HackAI/>}
           <div className={styles.team_reg}>
           {data.is_team_leader ? (
               <div>

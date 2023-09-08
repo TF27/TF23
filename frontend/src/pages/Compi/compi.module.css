@@ -1,19 +1,52 @@
 .Technorion{
     font-family: 'Forum', sans-serif;
     margin-top: 60px;
+    padding-top: 100px;
 }
-
+/*================map + zonals========================================================*/
 .desc {
-    background:  rgba(54, 1, 123, 0.49);
+    background:  rgba(0,0,0,.3);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 2px solid #8D7654;
     margin: auto;
-    width: 70%;
+    width: 80%;
     /* margin-top: -220px; */
     margin-bottom: 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+}
+
+.desc_cont{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.mapContainer{
+  width: 40%;
+}
+
+@media screen and (max-width: 800px) {
+  .desc {
+    flex-direction: column;
+    width: 90%;
+  }
+  .desc_cont{
+    width: 100%;
+  }
+  .mapContainer{
+    width: 70%;
+    margin: 0 auto;
+  }  
+}
+
+.descimage{
+  width: 100%;
 }
 
 .descT{
@@ -22,10 +55,24 @@
     letter-spacing: 0.1em;
     text-align: left;
     color: #ffffff;
-    padding: 20px;
+    padding: 20px 0 15px 20px;
     margin-bottom: 0px;
 }
+.textContainer table {
+  width: 80%;
+  margin: 10px auto;
+  border: none;
+}
+.textContainer th{
+  border-bottom: 1px solid #BB9564;
+}
+.textContainer th, .textContainer td {
+  padding: 5px;
+  font-size: 18px;
+  text-align: left;
+}
 
+/*==========================================================cards=============================================================*/
 .card_img{
     width:74%;
     aspect-ratio: 1/1.2;
