@@ -5,17 +5,18 @@
     position: relative;
     margin-top: 5%;
     max-height: 1000px;
-}
 
+}
 .map_image{
     background-image: url('./assets/map.png');
     background-size: cover;
-    width: 95%;
+    width: 80%;
     height: 50vw;
     background-repeat: no-repeat;
     margin-top: 5%;
     margin-bottom: 5%;
 }
+
 .city-circle {
     position: absolute;
     width: 16px; 
