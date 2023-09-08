@@ -65,7 +65,7 @@ const Compi = () => {
       <Technorion />
       <OurReach />
       {/* {card()} */}
-      <div className="checkThis">
+      {/* <div className="checkThis">
         <h1 style={{ marginTop: "80px", marginBottom: "40px" }}>
           CHECK THIS OUT
         </h1>
@@ -132,7 +132,7 @@ const Compi = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

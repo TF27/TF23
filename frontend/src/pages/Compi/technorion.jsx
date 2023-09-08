@@ -264,27 +264,28 @@ const Technorion = () => {
             <tr>
                 <td>Indian Institute of Technology Bombay</td>
                 <td>Mumbai</td>
-                <td>09/10/22</td>
+                <td>08/10/23</td>
+            </tr>
+            
+            <tr>
+                <td>People's University</td>
+                <td>Bhopal</td>
+                <td>15/10/23</td>
+            </tr>
+            <tr>
+                <td>Shri Ramswaroop Memorial University</td>
+                <td>Lucknow</td>
+                <td>15/10/23</td>
             </tr>
             <tr>
                 <td>Swami Keshavanand Institute of Technology, M&G</td>
                 <td>Jaipur</td>
-                <td>09/10/22</td>
-            </tr>
-            <tr>
-                <td>Oriental College of Technology</td>
-                <td>Bhopal</td>
-                <td>09/10/22</td>
-            </tr>
-            <tr>
-                <td>St. Vincent Pallotti College of Engineering and Technology</td>
-                <td>Nagpur</td>
-                <td>08/10/22</td>
+                <td>15/10/23</td>
             </tr>
             <tr>
                 <td>Global Academy of Technology, Bangalore</td>
                 <td>Bengaluru</td>
-                <td>15/10/22</td>
+                <td>28/10/23</td>
             </tr>
           </table>
         </div>
