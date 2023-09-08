@@ -12,12 +12,9 @@ import frame from './../static/card/Frame.png';
 import WhatsappShareButton from '../../../components/share/whatsapp';
 
 import Meshmerize from './Competitions/m-meshmerize';
-<<<<<<< HEAD
 import Machanzo from './Competitions/m-machanzo';
-=======
 import HackAI from './Competitions/m-HackAI';
 import CozmoClench from './Competitions/m-CozmoClench';
->>>>>>> 2a4606865bdae9d2354481756cc73bd2a1e22407
 
 const MInternal = () => {
   const { compiName } = useParams();
