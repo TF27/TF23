@@ -1,0 +1,27 @@
+.loading {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+  }
+  
+.loading img{
+    max-width: 50vw;
+}
+.sideR{
+    /* rotate: 180deg; */
+    transform: scaleX(-1);
+    
+}
+.tf{
+    position:absolute;
+}
+
+.moveLeft {
+    transform: translateX(-100%); 
+    transition: transform 2s linear;/* Move the image to the left by 100% of its own width */
+  }
+
+.moveRight{
+    transform: translateX(100%);
+    transition: transform 2s linear;
+}

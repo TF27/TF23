@@ -42,7 +42,7 @@
 }
 
 .wdata{
-    font-family: 'Forum', sans-serif;
+    font-family: Forum;
 }
 
 .sponsor{
@@ -51,12 +51,12 @@
 
 .sponsor h3{
     font-size: 20px;
-    font-family: 'Forum', sans-serif;
+    font-family: Forum;
     letter-spacing: .1em;
 }
 
 .compi_prize{
-    font-family: 'Forum', sans-serif;
+    font-family: Forum;
     letter-spacing: 0.2em;
     font-size: 24px;
     margin-top: 15px;
@@ -70,7 +70,7 @@
 .statement a{
     text-decoration: none;
     color: #fff;
-    font-family: 'Forum', sans-serif;
+    font-family: Forum;
     letter-spacing: 0.2em;
     font-size: 18px;
 }
@@ -99,7 +99,7 @@
 .int_reg a{
     text-decoration: none;
     color: #fff;
-    font-family: 'Forum', sans-serif;
+    font-family: Forum;
     letter-spacing: 0.2em;
     font-size: 18px;
 }
@@ -134,7 +134,7 @@
 .compi_team a{
     text-decoration: none;
     color: #fff;
-    font-family: 'Forum', sans-serif;
+    font-family: Forum;
     letter-spacing: 0.1em;
     font-size: 18px;
 }
@@ -211,7 +211,7 @@
     height: 300px;
     /* position: absolute; */
     position: relative;
-    top: -86%;
+    top: -88%;
     border-radius: 26% 26% 0% 0%;
     z-index: 1;
 }
@@ -229,7 +229,7 @@
 
     .imgFrame{
         position: absolute;
-        top: 6%;
+        top: 11%;
         left: auto;
     }
     .imgCompi{
@@ -245,7 +245,7 @@
 /* mobile  */
 
 .mImgFrame{
-    width: 365px;
+    width: 80%;
     height: 319px;
     position: relative;
     top: 0%;
@@ -254,7 +254,7 @@
     z-index: 2;
 }
 .mImgCompi{
-    width: 284px;
+    width: 65%;
     height: 300px;
     position: relative;
     top: -50%;
@@ -329,7 +329,7 @@
     margin-top: 7px;
     position: absolute;
     color: #fff;
-    font-family: 'Forum', sans-serif;
+    font-family: Forum;
     letter-spacing: 0.2em;
     font-size: 18px;
 }

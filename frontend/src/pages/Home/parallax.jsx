@@ -27,7 +27,7 @@ const HomeParallax = () => {
   
     // Calculate the left position of cloudL based on scroll position
     const cloudLeft = `${-scroll}px`;
-    const cloudRight = `${scroll}px`;
+    const cloudRight = `calc(-100vw - ${scroll}px)`;
     const cloudMid = `${-0.3* scroll}px`;
     
 
@@ -61,7 +61,7 @@ const HomeParallax = () => {
           src={cloudR}
           className={`${styles.cloud} ${styles.cloudR}`}
           alt="Cloud on Right"
-          style={{ right: cloudLeft }}
+          style={{ right: cloudRight }}
         />
       </div>
       {/* <div className={styles.fires}></div> */}

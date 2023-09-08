@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Counter from '../../components/NewReach/counter';
 import mylogo from './assets/ourr.png'
 import './ourreach.css'

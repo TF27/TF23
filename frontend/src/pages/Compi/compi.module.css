@@ -1,42 +1,91 @@
 .Technorion{
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     margin-top: 60px;
+    padding-top: 100px;
 }
-
+/*================map + zonals========================================================*/
 .desc {
-    background:  rgba(45, 0, 102, 0.49);
+    background:  rgba(0,0,0,.3);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 2px solid #8D7654;
     margin: auto;
-    width: 70%;
+    width: 80%;
     /* margin-top: -220px; */
     margin-bottom: 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+}
+
+.desc_cont{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.mapContainer{
+  width: 40%;
+}
+
+@media screen and (max-width: 800px) {
+  .desc {
+    flex-direction: column;
+    width: 90%;
+  }
+  .desc_cont{
+    width: 100%;
+  }
+  .mapContainer{
+    width: 70%;
+    margin: 0 auto;
+  }  
+}
+
+.descimage{
+  width: 100%;
 }
 
 .descT{
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     font-size: 18px;
     letter-spacing: 0.1em;
     text-align: left;
     color: #ffffff;
-    padding: 20px;
+    padding: 20px 0 15px 20px;
     margin-bottom: 0px;
 }
+.textContainer table {
+  width: 80%;
+  margin: 10px auto;
+  border: none;
+}
+.textContainer th{
+  border-bottom: 1px solid #BB9564;
+}
+.textContainer th, .textContainer td {
+  padding: 5px;
+  font-size: 18px;
+  text-align: left;
+}
 
+/*==========================================================cards=============================================================*/
 .card_img{
     width:74%;
     aspect-ratio: 1/1.2;
     object-fit: fill;
+    opacity: 1;
+    transition: all 1s ease-in;
 }
 
 .compi_card{
     background:rgba(0, 7, 41);
     margin-top: 20px;
     margin-bottom: 20px;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     /* max-width: 25%; */
     /* margin-right: 20px;
     margin-left: 20px; */
@@ -58,7 +107,9 @@
     font-size: 120%;
     letter-spacing: 0.1em;
     text-align: left;
-    color: #FFE381;
+    color: #BB9564;
+    font-weight: 400;
+    text-transform: uppercase;
     padding: 12px;
     margin-bottom: 0px;
 }
@@ -72,7 +123,7 @@
 }
 .card_title h3{
     color: #BB9564;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     /* letter-spacing: 0.1em; */
     padding-top: 5%;
     margin-bottom: 0px;
@@ -82,12 +133,14 @@
 
 .card_sustitle{
   font-size: 15px;
+
 }
 
-
-
 .card_post{
-    display: None;
+    opacity: 0;
+    transition: opacity .1s linear 0s;
+    width: 80%;
+    margin: 0 auto 0 auto;
 }
 
 .card_regexp{
@@ -124,7 +177,7 @@
 
 .card_reg a{
     color: #BB9564;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     letter-spacing: 0.1em;
     font-size:18px;
     text-decoration: none;
@@ -132,7 +185,7 @@
 
 .card_reg button{
     color: #FFE381;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     letter-spacing: 0.1em;
     font-size:18px;
     text-decoration: none;
@@ -142,11 +195,13 @@
 
 .card_exp a{
     color: #BB9564;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     letter-spacing: 0.1em;
     font-size:18px;
     text-decoration: none;
     margin-bottom: 0px;
+    width: 100%;
+    height: 100%;
 }
 
 .compi_card:hover{
@@ -158,6 +213,7 @@
   .compi_card:hover .card_img {
     /* display: none; */
     opacity: 0;
+    transition: all .1s ease-in;
   }
 
   .compi_card:hover .espark4{
@@ -174,14 +230,15 @@
   }
 
   .compi_card:hover .card_post{
-    display: block;
+    opacity: 1;
+    transition: opacity .1s linear .3s;
   }
 
   .compi_card:hover .card_title{
     margin-top: -200px;
   }
   .card_desc{
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     font-size: 16px;
     max-width: 90%;
     margin: auto;
@@ -220,22 +277,23 @@
 }
 
 .share_rect1{
-    height: 27px;
-    width: 60px;
-    border: 1px solid #A7E9FF;
+    height: 35px;
+    width: 100px;
+    border: 1px solid #BB9564;
     position: relative;
 }
 
 .share_rect2{
-    height: 27px;
-    width: 60px;
-    border: 1px solid #A7E9FF;
-    margin-left: 5px;
-    margin-top: 5px;
+    height: 35px;
+    width: 100px;
+    border: 1px solid #BB9564;
+    margin-left: 3px;
+    margin-top: 3px;
     position: relative;
-    font-size: 14px;
-    font-family: Forum;
-    color: #A7E9FF;
+    font-size: 24px;
+    font-weight: 200;
+    font-family: 'Forum', sans-serif;
+    color: #BB9564;
 }
 
 .indiamapContainer {
@@ -270,7 +328,7 @@
   .textContainer p {
     margin: 0;
     font-size: 18px;
-    font-family: FORUM;
+    font-family: 'Forum', sans-serif;
   }
 
   .chand{
@@ -516,5 +574,3 @@
 }
   
 
-    
-  

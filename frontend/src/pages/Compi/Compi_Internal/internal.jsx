@@ -13,6 +13,7 @@ import Meshmerize from './Competitions/Meshmerize';
 import frame from './../static/card/Frame.png';
 import HackAI from './Competitions/HackAI'
 
+import JoinTeam from './Teams/joinTeam';
 
 
 
@@ -95,11 +96,14 @@ const Internal = () => {
                       <Link to={`createTeam`}>Create Team</Link>
                     </div>
                   </div>
-                  <div className={styles.join_team}>
+                  {/* <div className={styles.join_team}>
                     <div className={styles.join_rect1}></div>
                     <div className={styles.join_rect2}>
                       <Link to={`joinTeam`}>Join Team</Link>
                     </div>
+                  </div> */}
+                  <div>
+                    <JoinTeam />
                   </div>
                   <div className={styles.single_team}>
                     <div className={styles.single_rect1}></div>

@@ -32,7 +32,7 @@ const Reg = () => {
         instiadress: '',
         instipincode: '',
         yearofstudy: '',
-        // ca_refral: '',
+        ca_refral: '',
     });
 
     const handleChange = (e) => {
@@ -96,11 +96,12 @@ const Reg = () => {
                         </div>
                     </div>
                     <div>
-                        <form onSubmit={handleSubmit} autoComplete="off">
+                        <form onSubmit={handleSubmit} autocomplete="false">
                             <div className={styles.regFormContainer}>
                                 <div className={styles.inputWrapper} style={{ display: 'none' }}>
                                     <label className={`${styles.floatingLabel} ${styles.formLabel}`}>Name</label>
                                     <input
+                                        autocomplete="false"
                                         type="text"
                                         name="name"
                                         value={user.displayName}
@@ -109,7 +110,7 @@ const Reg = () => {
                                         onBlur={handleBlur}
                                         className={styles.formInput}
                                         disabled
-                                        autoComplete="off"
+                                        
                                         
                                     />
                                 </div>
@@ -117,6 +118,7 @@ const Reg = () => {
                                     <div className={`col-md-6 ${styles.inputWrapper}`}>
                                         <label className={`${styles.floatingLabel} ${styles.formLabel}`}>Email</label>
                                         <input
+                                            autocomplete="false"
                                             type="email"
                                             name="email"
                                             value={user.email}
@@ -125,13 +127,13 @@ const Reg = () => {
                                             onBlur={handleBlur}
                                             className={styles.formInput}
                                             disabled
-                                            autoComplete="off"
                                             
                                         />
                                     </div>
                                     <div className={`col-md-6 ${styles.inputWrapper}`}>
                                         <label className={styles.formLabel}>Phone No.</label>
                                         <input
+                                            autocomplete="false"
                                             type="number"
                                             name="phoneno"
                                             value={formData.phoneno}
@@ -139,8 +141,6 @@ const Reg = () => {
                                             onFocus={handleFocus}
                                             onBlur={handleBlur}
                                             className={styles.formInput}
-                                            autoComplete="off"
-                                            
                                             required
                                         />
                                     </div>
@@ -149,6 +149,7 @@ const Reg = () => {
                                 <div className={`col-md-6 ${styles.inputWrapper}`}>
                                     <label className={`${styles.floatingLabel} ${styles.formLabel}`}>Gender</label>
                                     <select
+                                        autocomplete="false"
                                         name="gender"
                                         value={formData.gender}
                                         onChange={handleChange}
@@ -164,6 +165,7 @@ const Reg = () => {
                                     <div className={`col-md-6 ${styles.inputWrapper}`}>
                                         <label className={styles.formLabel}>City</label>
                                         <input
+                                            autocomplete="false"
                                             type="text"
                                             name="city"
                                             value={formData.city}
@@ -171,7 +173,6 @@ const Reg = () => {
                                             className={styles.formInput}
                                             onFocus={handleFocus}
                                             onBlur={handleBlur}
-                                            autoComplete="off"
                                             required
                                         />
                                     </div>
@@ -180,6 +181,7 @@ const Reg = () => {
                                     <div className={`col-md-6 ${styles.inputWrapper}`}>
                                     <label className={styles.formLabel}>Pincode</label>
                                     <input
+                                        autocomplete="false"
                                         type="number"
                                         name="pincode"
                                         value={formData.pincode}
@@ -188,12 +190,13 @@ const Reg = () => {
                                         onFocus={handleFocus}
                                         onBlur={handleBlur}
                                         required
-                                        autoComplete="off"
+                                        
                                     />
                                 </div>
                                     <div className={`col-md-6 ${styles.inputWrapper}`}>
                                         <label className={styles.formLabel}>Country</label>
                                         <input
+                                            autocomplete="false"
                                             type="text"
                                             name="country"
                                             value={formData.country}
@@ -201,7 +204,6 @@ const Reg = () => {
                                             className={styles.formInput}
                                             onFocus={handleFocus}
                                             onBlur={handleBlur}
-                                            autoComplete="off"
                                             required
                                         />
                                     </div>
@@ -210,6 +212,7 @@ const Reg = () => {
                                     <div className={styles.inputWrapper}>
                                         <label className={`${styles.floatingLabel} ${styles.formLabel}`}>Nearby Zonal</label>
                                         <select
+                                            autocomplete="false"
                                             name="zonals"
                                             value={formData.zonals}
                                             onChange={handleChange}
@@ -229,6 +232,7 @@ const Reg = () => {
                                 <div className={styles.inputWrapper}>
                                     <label className={styles.formLabel} >Address</label>
                                     <input
+                                        autocomplete="false"
                                         type="text"
                                         name="address"
                                         value={formData.address}
@@ -236,13 +240,13 @@ const Reg = () => {
                                         className={styles.formInput}
                                         onFocus={handleFocus}
                                         onBlur={handleBlur}
-                                        autoComplete="off"
                                         required
                                     />
                                 </div>
                                 <div className={styles.inputWrapper}>
                                     <label className={styles.formLabel} >Institute Name</label>
                                     <input
+                                        autocomplete="false"
                                         type="text"
                                         name="instiname"
                                         value={formData.instiname}
@@ -251,12 +255,12 @@ const Reg = () => {
                                         onFocus={handleFocus}
                                         onBlur={handleBlur}
                                         required
-                                        autoComplete="off"
                                     />
                                 </div>
                                 <div className={styles.inputWrapper}>
                                     <label className={styles.formLabel} >Institute Address</label>
                                     <input
+                                        autocomplete="false"
                                         type="text"
                                         name="instiadress"
                                         value={formData.instiadress}
@@ -264,13 +268,13 @@ const Reg = () => {
                                         className={styles.formInput}
                                         onFocus={handleFocus}
                                         onBlur={handleBlur}
-                                        autoComplete="off"
                                         required
                                     />
                                 </div>
                                 <div className={styles.inputWrapper}>
                                     <label className={styles.formLabel} >Institute Pincode</label>
                                     <input
+                                        autocomplete="false"
                                         type="number"
                                         name="instipincode"
                                         value={formData.instipincode}
@@ -279,13 +283,13 @@ const Reg = () => {
                                         className={styles.formInput}
                                         onFocus={handleFocus}
                                         onBlur={handleBlur}
-                                        autoComplete="off"
                                         
                                     />
                                 </div>
                                 <div className={styles.inputWrapper}>
                                     <label className={`${styles.floatingLabel} ${styles.formLabel}`}>Year of Study </label>
                                     <select
+                                        autocomplete="false"
                                         name="yearofstudy"
                                         value={formData.yearofstudy}
                                         onChange={handleChange}
