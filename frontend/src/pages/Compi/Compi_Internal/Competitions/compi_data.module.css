@@ -10,7 +10,7 @@
     font-size: 18px;
     border: none;
     background: none;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     cursor: pointer;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -129,6 +129,9 @@
 .info_data{
     animation: axisMove 1s cubic-bezier(0.22, 0.61, 0.36, 1);
     color: #fff;
+    text-align: left;
+    margin-left: 10px;
+    font-size: 20px;
 }
 
 .info_tab{
@@ -195,7 +198,7 @@
     margin-top: 7px;
     position: absolute;
     color: #fff;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     letter-spacing: 0.2em;
     font-size: 18px;
 }
@@ -238,16 +241,16 @@
     margin-top: 7px;
     position: absolute;
     color: #fff;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     letter-spacing: 0.2em;
     font-size: 18px;
     overflow-y: scroll;
     padding: 20px 10px;
     text-align: left;
-    background: rgba(255, 255, 255, 0.3);
+    /* background: rgba(255, 255, 255, 0.3); */
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(5.5px);
-    z-index: -1;
+    /* z-index: -1; */
 }
 .whatd_rect2::-webkit-scrollbar {
     width: 10px;
