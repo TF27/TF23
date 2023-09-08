@@ -13,7 +13,7 @@
   transition-duration: 1s;
   pointer-events: none; /* Prevent the dropdown menu from blocking hover events */
   max-height: 200px; /* Set a maximum height for the dropdown menu */
-  max-width: 300px;
+  max-width: 30%;
   overflow-y: auto; /* Enable scrolling when content exceeds the maximum height */
   overflow-x: auto;
 }
@@ -30,7 +30,7 @@
   padding: 5px 10px;
   border-radius: 5px;
   font-size: xx-large;
-  font-family: FORUM;
+  font-family: 'Forum', sans-serif;
 }
 
 .city-info-container{
@@ -41,9 +41,9 @@
 }
 
 .ex-info-styling{
-  width: 50px;
-  font-family: FORUM;
-  font-size: 18px;
+  width: 100%;
+  font-family: 'Forum', sans-serif;
+  font-size: 12px;
   flex: auto;
 }
 
@@ -101,7 +101,7 @@
   }
   to {
     max-height: 200px;
-    max-width: 300px;
+    max-width: 30%;
   }
 }
 
@@ -115,4 +115,21 @@
   100% {
     pointer-events: none;
   }
+}
+
+.mapData{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 5px;
+}
+.mapData p{
+  margin: 0;
+}
+.mapDataName{
+  font-size: 13px;
+}
+.mapDataCont{
+  font-size: 12px;
+
 }

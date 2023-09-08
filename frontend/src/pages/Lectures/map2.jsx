@@ -96,7 +96,7 @@ const MapClick = () => {
                   alt={selectedCity.name}
                   className="ddinfo"
                 />
-                <p className="ex-info-styling">{selectedCity.info}</p>
+                <p className="m-ex-info-styling">{selectedCity.info}</p>
               </div>{" "}
               <div className="city-info-container">
                 <img

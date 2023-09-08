@@ -1,25 +1,32 @@
 import React from 'react'
 import "./recognition.css"
 import UnescoCard from './UnescoCard'
+import makeinindia from './assets/makeinindia.png'
+import unesco from './assets/unesco.png'
+import unicef from './assets/unicef.png'
+import cee from './assets/cee.png'
+import sayen from './assets/sayen.png'
+
 const Recognition = () => {
   return (
     <div className='recognition'>
+      <div className='recogradient'>
         {/* <div className="recog-header"> */}
         <div className="recognition-header">
             <img className='recog-header' src="pat1.png" alt="recognition" />
         </div>
         <div className="cardContainer">
           <div className="unesco-cards">
-              <UnescoCard/>
-              <UnescoCard/>
-              <UnescoCard/>
+              <UnescoCard img={unicef}/>
+              <UnescoCard img={unesco}/>
+              <UnescoCard img={makeinindia} />
               {/* <UnescoCard/> */}
           </div>
           <br />
           <br />
           <div className="unesco-cards">
-              <UnescoCard/>
-              <UnescoCard/>
+              <UnescoCard img={cee}/>
+              <UnescoCard img={sayen}/>
           </div>
           <div className="recog-frame2">
             <div className='recog-container'>
@@ -40,6 +47,7 @@ const Recognition = () => {
             </div>
             </div>
           </div>
+        </div>
         </div>
     </div>
   )

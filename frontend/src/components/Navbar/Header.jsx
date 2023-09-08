@@ -4,11 +4,13 @@ import "./Header.css";
 import { UserAuth } from "../../contexts/AuthContext";
 
 import tf from "./tflogo.png";
+import bg from "./navImg.svg";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   // const [scrollDirection, setScrollDirection] = useState('up');
   // const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [showSignOut, setShowSignOut] = useState(false);
 
   const { googleSignIn, user, logOut } = UserAuth();
   const handleGoogleSignIn = async () => {
@@ -100,55 +102,75 @@ const Header = () => {
   }, [prevScrollY]);
 
   return (
-    <div className={`navfunc ${showNavbar ? "navfuncshow" : "navfunchide"}`}>
-      <nav className="webNav">
-        <ul>
-          <li>
-            <Link to="/competitions">Competitions</Link>
-          </li>
-          <li>
-            <Link to="/summits">Int'l Summit</Link>
-          </li>
-          <li>
-            <Link to="/lectures">Lectures</Link>
-          </li>
-        </ul>
-        <ul className="logoDiv">
-          <li>
-            <Link to="/">
-              <img src={tf} alt="Techfest" />
-            </Link>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <Link to="/exhibitions">Exhibitions</Link>
-          </li>
-          <li>
-            <Link to="/contactus">Contact Us</Link>
-          </li>
-          <li>
-            {user?.displayName ? (
-              <div onClick={handleSignOut} className="singin">
-                <div className="logout_rect1">
-                  <div
-                    className="logout_rect2"
-                    onMouseEnter={(e) => (e.target.innerText = "Sign Out")}
-                    onMouseLeave={(e) => (e.target.innerText = name)}
-                  >
-                    Logout
+    <div>
+      <nav
+        className={`navfunc webNav ${
+          showNavbar ? "navfuncshow" : "navfunchide"
+        }`}
+        style={{ backgroundImage: `url(${bg})` }}
+      >
+        <div className="wnavLeft navRow">
+          <ul>
+            <li>
+              <Link to="/competitions">Competitions</Link>
+            </li>
+            <li>
+              <Link to="/summits">Int'l Summit</Link>
+            </li>
+            <li>
+              <Link to="/lectures">Lectures</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="logoDiv navRow">
+          <ul>
+            <li>
+              <Link to="/">
+                <img src={tf} alt="Techfest" />
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="wnavRight navRow">
+          <ul>
+            <li>
+              <Link to="/exhibitions">Exhibitions</Link>
+            </li>
+            <li>
+              <Link to="/contactus">Contact Us</Link>
+            </li>
+            <li>
+              {user?.displayName ? (
+                <div className="singin">
+                  <div className="logou_rect1">
+                    <div
+                      className="logou_rect2"
+                      onMouseEnter={() => setShowSignOut(true)} // Show the Sign Out div on mouse enter
+                      onMouseLeave={() => setShowSignOut(false)}
+                    >
+                      <img src={user.photoURL} />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ) : (
-              <div onClick={handleGoogleSignIn} className="singin">
-                <div className="logout_rect1">
-                  <div className="logout_rect2">Sign in</div>
+              ) : (
+                <div onClick={handleGoogleSignIn} className="singin">
+                  <div className="logout_rect1">
+                    <div className="logout_rect2">Sign in</div>
+                  </div>
                 </div>
-              </div>
-            )}
-          </li>
-        </ul>
+              )}
+            </li>
+          </ul>
+        </div>
+        {showSignOut && (
+          <div
+            className="sign-out-div"
+            onMouseEnter={() => setShowSignOut(true)} // Show the Sign Out div on mouse enter
+            onMouseLeave={() => setShowSignOut(false)}
+          >
+            <button onClick={handleSignOut}>Sign Out</button>
+          </div>
+        )}
       </nav>
       <div className="navbarClassName">
         <div className={openMenu ? "hamburger active_burger" : "hamburger"}>
@@ -166,67 +188,71 @@ const Header = () => {
         <nav className={openMenu ? "nav_slider active_slide" : "nav_slider"}>
           <ul>
             <li onClick={showMenu}>
-                        <Link to='/'>Home</Link>
-                    </li>
-                    <li onClick={showMenu}>
-                        <Link to='/competitions'>Competitions</Link>
-                    </li>
-                    <li onClick={showMenu}>
-                        <Link to='/lectures'>Lectures</Link>
-                    </li>
-                    <li onClick={showMenu}>
-                        <Link to='/exhibitions'>Exhibitions</Link>
-                    </li>
-                    <li onClick={showMenu}>
-                        <Link to='/workshops'>Workshops</Link>
-                    </li>
-                    <li onClick={showMenu}>
-                        <Link to='/summits'>Summits</Link>
-                    </li>
-                    <li onClick={showMenu}>
-                        <Link to='/summits'>Summits</Link>
-                    </li>
-                    <li onClick={showMenu}>
-                        <Link to='/summits'>Summits</Link>
-                    </li>
-                    <li onClick={showMenu}>
-                        <Link to='/summits'>Summits</Link>
-                    </li>
-                    <li onClick={showMenu}>
-                        <Link to='/summits'>Summits</Link>
-                    </li>
-                    <li onClick={showMenu}>
-                        <Link to='/summits'>Summits</Link>
-                    </li>
-                    <li onClick={showMenu}>
-                        <Link to='/summits'>Summits</Link>
-                    </li>
-                    <li onClick={showMenu}>
-                        <Link to='/summits'>Summits</Link>
-                    </li>
-                    <li onClick={showMenu}>
-                        <Link to='/summits'>Summits</Link>
-                    </li>
-                    <li onClick={showMenu}>
-                        <Link to='/summits'>Summits</Link>
-                    </li>
-                    <li onClick={showMenu}>
-                        <Link to='/summits'>Summits</Link>
-                    </li>
-                    <li>
-                        {user?.displayName ? (
-                            <div>
-                                <button onClick={handleSignOut} className="item1" onMouseEnter={(e)=> e.target.innerText = "Sign Out"} onMouseLeave={(e)=> e.target.innerText = name}>
-                                Logout
-                                </button>
-                                
-                            </div>
-                            ) : (
-                            <button onClick={handleGoogleSignIn} className="item2">
-                                Sign In
-                            </button>
-                            )}
-                    </li>
+              <Link to="/">Home</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/competitions">Competitions</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/lectures">Lectures</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/exhibitions">Exhibitions</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/workshops">Workshops</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/summits">Summits</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/summits">Summits</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/summits">Summits</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/summits">Summits</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/summits">Summits</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/summits">Summits</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/summits">Summits</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/summits">Summits</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/summits">Summits</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/summits">Summits</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/summits">Summits</Link>
+            </li>
+            <li>
+              {user?.displayName ? (
+                <div>
+                  <button
+                    onClick={handleSignOut}
+                    className="item1"
+                    onMouseEnter={(e) => (e.target.innerText = "Sign Out")}
+                    onMouseLeave={(e) => (e.target.innerText = name)}
+                  >
+                    Logout
+                  </button>
+                </div>
+              ) : (
+                <button onClick={handleGoogleSignIn} className="item2">
+                  Sign In
+                </button>
+              )}
+            </li>
           </ul>
         </nav>
       </div>

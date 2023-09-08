@@ -32,7 +32,7 @@ const Reg = () => {
         instiadress: '',
         instipincode: '',
         yearofstudy: '',
-        ca_refral: '',
+        // ca_refral: '',
     });
 
     const handleChange = (e) => {
@@ -96,7 +96,7 @@ const Reg = () => {
                         </div>
                     </div>
                     <div>
-                        <form onSubmit={handleSubmit} autocomplete="off">
+                        <form onSubmit={handleSubmit} autoComplete="off">
                             <div className={styles.regFormContainer}>
                                 <div className={styles.inputWrapper} style={{ display: 'none' }}>
                                     <label className={`${styles.floatingLabel} ${styles.formLabel}`}>Name</label>
@@ -109,7 +109,7 @@ const Reg = () => {
                                         onBlur={handleBlur}
                                         className={styles.formInput}
                                         disabled
-                                        autocomplete="off"
+                                        autoComplete="off"
                                         
                                     />
                                 </div>
@@ -125,7 +125,7 @@ const Reg = () => {
                                             onBlur={handleBlur}
                                             className={styles.formInput}
                                             disabled
-                                            autocomplete="off"
+                                            autoComplete="off"
                                             
                                         />
                                     </div>
@@ -139,7 +139,8 @@ const Reg = () => {
                                             onFocus={handleFocus}
                                             onBlur={handleBlur}
                                             className={styles.formInput}
-                                            autocomplete="off"
+                                            autoComplete="off"
+                                            
                                             required
                                         />
                                     </div>
@@ -170,7 +171,7 @@ const Reg = () => {
                                             className={styles.formInput}
                                             onFocus={handleFocus}
                                             onBlur={handleBlur}
-                                            autocomplete="off"
+                                            autoComplete="off"
                                             required
                                         />
                                     </div>
@@ -187,7 +188,7 @@ const Reg = () => {
                                         onFocus={handleFocus}
                                         onBlur={handleBlur}
                                         required
-                                        autocomplete="off"
+                                        autoComplete="off"
                                     />
                                 </div>
                                     <div className={`col-md-6 ${styles.inputWrapper}`}>
@@ -200,7 +201,7 @@ const Reg = () => {
                                             className={styles.formInput}
                                             onFocus={handleFocus}
                                             onBlur={handleBlur}
-                                            autocomplete="off"
+                                            autoComplete="off"
                                             required
                                         />
                                     </div>
@@ -235,7 +236,7 @@ const Reg = () => {
                                         className={styles.formInput}
                                         onFocus={handleFocus}
                                         onBlur={handleBlur}
-                                        autocomplete="off"
+                                        autoComplete="off"
                                         required
                                     />
                                 </div>
@@ -250,7 +251,7 @@ const Reg = () => {
                                         onFocus={handleFocus}
                                         onBlur={handleBlur}
                                         required
-                                        autocomplete="off"
+                                        autoComplete="off"
                                     />
                                 </div>
                                 <div className={styles.inputWrapper}>
@@ -263,7 +264,7 @@ const Reg = () => {
                                         className={styles.formInput}
                                         onFocus={handleFocus}
                                         onBlur={handleBlur}
-                                        autocomplete="off"
+                                        autoComplete="off"
                                         required
                                     />
                                 </div>
@@ -278,7 +279,7 @@ const Reg = () => {
                                         className={styles.formInput}
                                         onFocus={handleFocus}
                                         onBlur={handleBlur}
-                                        autocomplete="off"
+                                        autoComplete="off"
                                         
                                     />
                                 </div>

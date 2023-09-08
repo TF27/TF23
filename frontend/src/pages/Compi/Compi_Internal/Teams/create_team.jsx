@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../../../contexts/AuthContext';
 import styles from '../reg.module.css';
+import bgimg from '../../static/img/exp_bg.png';
 
 const Create_Team = () => {
 
@@ -68,11 +69,25 @@ const Create_Team = () => {
             label.classList.remove(styles.floatingLabel);
         }
     };
+    const top = {
+        backgroundImage: `url(${bgimg})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '100vh',
+        position: 'absolute',
+        width: '100%',
+        zIndex: '-1',
+        top: '0',
+        backgroundAttachment: 'fixed',
+    }
 
     return (
-        <div>
-            {compiName}
-            <form onSubmit={handleSubmit}>
+        <div style={top}>
+            <div className={styles.bgitis}>
+                <div className={styles.overlay}>
+            {/* {compiName} */}
+            <form className={styles.godhelp} onSubmit={handleSubmit}>
                 <div className={styles.regFormContainer}>
                     <div className={`row ${styles.multiWrapper}`}>
                     <div className={`col-md-6 ${styles.inputWrapper}`}>
@@ -105,7 +120,7 @@ const Create_Team = () => {
 
                     <div className={`row ${styles.multiWrapper}`}>
                     <div className={`col-md-6 ${styles.inputWrapper}`}>
-                        <label className={`${styles.floatingLabel} ${styles.formLabel}`}>Participant 1 Name:</label>
+                        <label className={`${styles.floatingLabel1} ${styles.formLabel}`}>Participant 1 Name:</label>
                         <input 
                             type="text"  
                             name="parti1_name" 
@@ -117,7 +132,7 @@ const Create_Team = () => {
                         />
                     </div>
                     <div className={`col-md-6 ${styles.inputWrapper}`}>
-                        <label className={`${styles.floatingLabel} ${styles.formLabel}`}>Participant 1 Email:</label>
+                        <label className={`${styles.floatingLabel1} ${styles.formLabel}`}>Participant 1 Email:</label>
                         <input 
                             type="email" 
                             name="parti1_email" 
@@ -131,7 +146,7 @@ const Create_Team = () => {
                     </div>
                     <div className={`row ${styles.multiWrapper}`}>
                     <div className={`col-md-6 ${styles.inputWrapper}`}>
-                        <label className={`${styles.floatingLabel} ${styles.formLabel}`}>Participant 2 Name:</label>
+                        <label className={`${styles.floatingLabel1} ${styles.formLabel}`}>Participant 2 Name:</label>
                         <input 
                             type="text"  
                             name="parti2_name" 
@@ -143,7 +158,7 @@ const Create_Team = () => {
                         />
                     </div>
                     <div className={`col-md-6 ${styles.inputWrapper}`}>
-                        <label className={`${styles.floatingLabel} ${styles.formLabel}`}>Participant 2 Email:</label>
+                        <label className={`${styles.floatingLabel1} ${styles.formLabel}`}>Participant 2 Email:</label>
                         <input 
                             type="email" 
                             name="parti2_email" 
@@ -158,7 +173,7 @@ const Create_Team = () => {
 
                 <div className={`row ${styles.multiWrapper}`}>
                 <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label className={`${styles.floatingLabel} ${styles.formLabel}`}>
+                    <label className={`${styles.floatingLabel1} ${styles.formLabel}`}>
                     Participant 3 Name:
                     </label>
                     <input 
@@ -172,7 +187,7 @@ const Create_Team = () => {
                     />   
                 </div>
                 <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label className={`${styles.floatingLabel} ${styles.formLabel}`}>
+                    <label className={`${styles.floatingLabel1} ${styles.formLabel}`}>
                     Participant 3 Email:
                     </label>
                     <input 
@@ -197,8 +212,8 @@ const Create_Team = () => {
                 </div>
             </form >
                     
-                
-            
+            </div>   
+            </div>    
         </div >  
     );
 }

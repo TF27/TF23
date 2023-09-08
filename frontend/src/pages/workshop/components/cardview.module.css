@@ -24,7 +24,7 @@
     width: 12rem;
     height: 10.5rem;
     margin-left: 2rem;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     font-size: 15px;
     color: white;
     font-weight: 400;
@@ -63,7 +63,7 @@
 }
 
 .two p {
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     margin-top: 0.5rem;
     margin-left: 2.1rem;
     font-size: 1.1rem;
@@ -95,7 +95,7 @@
     border-right: 1px solid #FFE381;
     border:1px #bb9564;
     padding: 11.7px 17.9px;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 11px;
