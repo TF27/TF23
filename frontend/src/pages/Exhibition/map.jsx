@@ -46,15 +46,26 @@ import ubiquiti from './assets/mapContent/westusa/ubiquiti.jpg';
 import WU from './assets/mapContent/westusa/WU.jpg';
 
 // Northe East Asia
-// import alter from './assets/mapContent/northeastasia/alter.jpg';
-// import android from './assets/mapContent/northeastasia/android.jpg';
-// import alter from './assets/mapContent/northeastasia/alter.jpg';
-// import alter from './assets/mapContent/northeastasia/alter.jpg';
-// import alter from './assets/mapContent/northeastasia/alter.jpg';
-// import alter from './assets/mapContent/northeastasia/alter.jpg';
-// import alter from './assets/mapContent/northeastasia/alter.jpg';
-// import alter from './assets/mapContent/northeastasia/alter.jpg';
-// import alter from './assets/mapContent/northeastasia/alter.jpg';
+import alter from './assets/mapContent/northeastasia/alter.jpg';
+import android from './assets/mapContent/northeastasia/android.jpg';
+import einstein from './assets/mapContent/northeastasia/einstein.jpg';
+import kebbi from './assets/mapContent/northeastasia/kebbi.jpg';
+import nextage from './assets/mapContent/northeastasia/nextage.jpg';
+import NEA from './assets/mapContent/northeastasia/NEA.jpg';
+import sophia from './assets/mapContent/northeastasia/sophia.jpg';
+import Unitree from './assets/mapContent/northeastasia/Unitree.jpg';
+import vex from './assets/mapContent/northeastasia/vex.jpg';
+
+// South East Asia
+import aerohans from './assets/mapContent/southwestasia/aerohans.jpg';
+import brmohos from './assets/mapContent/southwestasia/brmohos.jpg';
+import ideaforge from './assets/mapContent/southwestasia/ideaforge.jpg';
+import indro from './assets/mapContent/southwestasia/indro.jpg';
+import marksman from './assets/mapContent/southwestasia/marksman.jpg';
+import nadine from './assets/mapContent/southwestasia/nadine.jpg';
+import SWA from './assets/mapContent/southwestasia/SWA.jpg';
+import walle from './assets/mapContent/southwestasia/walle.jpg';
+import zipline from './assets/mapContent/southwestasia/zipline.jpg';
 
 const WorldMap = () => {
   const [hoveredCity, setHoveredCity] = useState(null);
@@ -64,8 +75,8 @@ const WorldMap = () => {
     { name: 'West Europe', x: '47%', y: '37%', info: 'Info About West Europe',in1name: 'Gravity Industries',in2name: 'Nao | Soft Bank Group',in3name: 'Pal V Robotics',in4name: 'Sepios | ETH Zurich',in5name: 'Skelex',in6name: 'UAV works',in7name: 'RAPTOR, ETH Zurich',in8name: 'SpaceHopper, ETH Zurich',in1cont: 'UK',in2cont: 'France',in3cont: 'Netherlands',in4cont: 'Switzerland',in5cont: 'Netherlands',in6cont: 'Spain',in7cont: 'Switzerland',in8cont: 'Switzerland', info1: 'Daedalus, an exoskeleton that enables humans to fly, has an impressive speed of up to 85 miles per hour', info2: 'This humanoid robot welcomes, informs, and entertains visitors at companies and healthcare centers', info3: 'Pal V Robotics, makers of the world\'s first flying car, take inspiration from nature and ensure safety with fun', info4: 'Sepios is an elite nautical vehicle with its omnidirectionality, high maneuverability, and special fins!', info5: 'Skelex, world\'s first upper-body exoskeleton that augments strength while providing complete freedom of motion', info6: 'UAV Works values innovation, development, and research on aerospace engineering in all of its projects', info7: 'A 1.8m wingspan UAV, equipped with advanced sensors, 100 km/h speed, 50 km range, and versatile payload capacity', info8: 'A compact, agile, and autonomous planetary exploration robot with advanced scientific capabilities', image: WE,image1: gravity, image2: nao, image3: pal, image4: sepios, image5: skelex, image6: uav,image7: raptor, image8: spacehopper },
     { name: 'West USA', x: '15%', y: '37%', info: 'Info About West USA',in1name: 'Virgin Hyperloop',in2name: 'Petoi',in3name: 'CyBorg Botany',in4name: 'Synergy Moon',in5name: 'Ubiquity Robotics',in6name: 'Bina 48',in7name: 'Netradyne',in1cont: 'USA',in2cont: 'USA',in3cont: 'USA',in4cont: 'USA',in5cont: 'USA',in6cont: 'USA',in7cont: 'USA',info1: 'Working towards commercializing high-speed transportation, Virgin Hyperloop easily delivers airline speeds',info2: 'Maker of futuristic programmable robotics, Petoii is sophisticated and aims for affordable robotic pets',info3: 'Their aim is to merge and power electronic functionalities with the existing biological functions of living plants',info4: 'Synergy Moon is dedicated to the development of cutting-edge space technologies and related services',info5: 'Ubiquity Robotics believes that robotics, automation, and AI will be key to solving global challenges',info6: 'BINA48 is a robotic face combined with the chatbot functionalities, enabling conversation facilities',info7: 'AI-powered fleet safety solutions for enhanced driver monitoring and road analytics', image: WU, image1: hyper, image2: petoi, image3: botany, image4: synergy, image5: ubiquiti, image6: bina, image7: netradyne},
     { name: 'East USA', x: '25%', y: '42%', info: 'Info About East USA', in1name: 'University of Texas',in2name: 'Neurosky',in3name: 'RoboTiCan',in4name: 'GRAMMY Robot',in5name: 'AstroBee | NASA & ISS',in6name: 'Flir Systems',in1cont: 'USA',in2cont: 'USA',in3cont: 'USA',in4cont: 'USA',in5cont: 'USA',in6cont: 'USA',info1: 'Harmony Exoskeleton is designed for easing upper body movements of subjects with severe disabilities',info2: 'Its colorful visuals provide positive reinforcement while developing skills of attention and mental relaxation',info3: 'RoboTican innovates, develops, and manufactures autonomous UAVs, UGVs, and hybrid systems',info4: 'This is an interactive robot for retail shops and indoor events that can talk to clients and navigate indoors!',info5: 'Astrobee reduces the time astronauts spend on routine duties to focus on things that only humans can do',info6: 'FLIR Machine Vision Cameras have captured HD footage of NASA\'s Perseverance rover landing on Mars', image: EU, image1: texas, image2: neurosky, image3: roboti, image4: grammy, image5: astro, image6: flir},
-    { name: 'NorthEast Asia', x: '82%', y: '28%', info: 'Info About NorthEast Asia', image: europe },
-    { name: 'SouthEast Asia', x: '66%', y: '50%', info: 'Info About SouthEast Asia', image: europe },
+    { name: 'NorthEast Asia', x: '82%', y: '28%', info: 'Info About NorthEast Asia',info1: 'Nextage, an all-in-one Dual Arm Robot, is designed to coexist with people. It finds use in many workplaces',info2: 'Sophia, an advanced human-like robot, is the first robot to be granted the citizenship of a nation',info3: 'Alter 3 explores the future of human communication. It has even conducted Android Opera in Japan!',info4: 'Einstein Robot is an amazing conversationalist with a vast knowledge-base that inspires imagination',info5: 'One of the most sophisticated humanoids, Android U is an intelligent and dynamic Android from Japan!',info6: 'Educational robotics for all, VEX solutions span various levels of education with accessibility and scalablity',info7: 'Quadruped Robot, a first-of-its-kind, four-legged marvel capable of inspecting, constructing, and delivering tasks',info8: 'Kebbi is an AI-powered robot with the integration of AI vision, speech, and sensing abilities',in1name: 'Nextage',in2name: 'Sophia',in3name: 'Alter 3',in4name: 'Einstein Robot',in5name: 'Android U',in6name: 'Vex Robotics',in7name: 'Unitree',in8name: 'Kebbi',in1cont: 'Japan',in2cont: 'Hong Kong',in3cont: 'Japan',in4cont: 'Hong Kong',in5cont: 'Japan',in6cont: 'Hong Kong',in7cont: 'China',in8cont: 'China', image: NEA, image1: nextage, image2: sophia, image3: alter, image4: einstein, image5: android, image6: vex, image7: Unitree, image8: kebbi},
+    { name: 'SouthWest Asia', x: '66%', y: '50%', info: 'Info About SouthWest Asia',info1: 'Nadine is a socially intelligent robot and change her “mood” depending on what is said in response to her',info2: 'A global leader in UAV technologies, Ideaforge develops drone solutions for a wide variety of applications',info3: 'India\'s tallest humanoid robot, INDRO, can carry a payload of more than 150 kilograms under the knee!',info4: 'India\'s first indigenous Air Taxi, AeroHans is aimed at curbing pollution via alternative modes of transport.',info5: 'It is a physical manifestation of the cute and curious WALL-E robot, made by the BRAC University',info6: 'The state-of-the-art technology behind this exhibit has made life-saving drone deliveries possible',info7: 'A supersonic cruise missile with Mach 2.8 speed, 290 km range, and precision strike capabilities',info8: 'India\'s first armored capsule-based bulletproof vehicle protects personnel from small arms and grenades',in1name: 'Nadine Social Robot',in2name: 'Ideaforge',in3name: 'Indro',in4name: 'AeroHans',in5name: 'WALL-E',in6name: 'Zipline',in7name: 'BrahMos',in8name: 'Mahindra, Defence Marksmen',in1cont: 'Singapore',in2cont: 'India',in3cont: 'India',in4cont: 'India',in5cont: 'Bangladesh',in6cont: 'Israel',in7cont: 'India',in8cont: 'India', image: SWA, image1: nadine, image2: ideaforge, image3: indro, image4: aerohans, image5: walle, image6: zipline, image7: brmohos, image8:marksman },
     // Add more cities and their coordinates here
   ];
 
