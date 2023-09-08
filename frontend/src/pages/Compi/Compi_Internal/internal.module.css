@@ -42,7 +42,7 @@
 }
 
 .wdata{
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
 }
 
 .sponsor{
@@ -51,12 +51,12 @@
 
 .sponsor h3{
     font-size: 20px;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     letter-spacing: .1em;
 }
 
 .compi_prize{
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     letter-spacing: 0.2em;
     font-size: 24px;
     margin-top: 15px;
@@ -70,7 +70,7 @@
 .statement a{
     text-decoration: none;
     color: #fff;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     letter-spacing: 0.2em;
     font-size: 18px;
 }
@@ -99,7 +99,7 @@
 .int_reg a{
     text-decoration: none;
     color: #fff;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     letter-spacing: 0.2em;
     font-size: 18px;
 }
@@ -134,7 +134,7 @@
 .compi_team a{
     text-decoration: none;
     color: #fff;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     letter-spacing: 0.1em;
     font-size: 18px;
 }
@@ -329,7 +329,7 @@
     margin-top: 7px;
     position: absolute;
     color: #fff;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     letter-spacing: 0.2em;
     font-size: 18px;
 }
