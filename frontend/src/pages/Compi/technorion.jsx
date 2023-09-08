@@ -63,7 +63,7 @@ const Technorion = () => {
             {/* <Link to={data.name}></Link> */}
             <div className={styles.card_tag}>
               <span><img src={dot} alt='dot'/></span>
-              <h3>{data.tag}</h3>
+              <h3 className={styles.card_tag}>{data.tag}</h3>
               <span><img src={dot} alt='dot'/></span>
             </div>
             <div className={styles.card_imgo}><img src={data.img} className={styles.card_img} alt={data.name}/></div>

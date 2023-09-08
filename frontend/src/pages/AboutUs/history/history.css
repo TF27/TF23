@@ -67,7 +67,7 @@
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
   z-index: 1000;
-  font-family: FORUM;
+  font-family: 'Forum', sans-serif;
   
 }
 .additional-text {
@@ -81,7 +81,7 @@
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
   z-index: 1000;
-  font-family: FORUM;
+  font-family: 'Forum', sans-serif;
 }
 
 .history-button {
@@ -95,7 +95,7 @@
   border: none;
   cursor: pointer;
   z-index: 100;
-  font-family: FORUM;
+  font-family: 'Forum', sans-serif;
   display: flex;
   justify-content: space-evenly;
   transform: translate(0%,0%);

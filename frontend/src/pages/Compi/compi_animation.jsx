@@ -9,7 +9,6 @@ export const Frame3 = () => {
     <div className="frame">
       <div className="compi_background">
         <div className="shade">
-        <img src={svg} alt="fireflies" className="svg" />
         <img src={img1} alt="competition" className="tittle"/>
         </div>
       </div>
