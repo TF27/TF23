@@ -4,6 +4,7 @@ import UnescoCard from './UnescoCard'
 const Recognition = () => {
   return (
     <div className='recognition'>
+      <div className='recogradient'>
         {/* <div className="recog-header"> */}
         <div className="recognition-header">
             <img className='recog-header' src="pat1.png" alt="recognition" />
@@ -40,6 +41,7 @@ const Recognition = () => {
             </div>
             </div>
           </div>
+        </div>
         </div>
     </div>
   )

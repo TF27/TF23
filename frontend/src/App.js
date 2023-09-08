@@ -13,7 +13,7 @@ import Create_Team from './pages/Compi/Compi_Internal/Teams/create_team';
 import JoinTeam from './pages/Compi/Compi_Internal/Teams/join_team';
 import Workshop from './pages/workshop/home';
 import Summit from './pages/Summit/home.js';
-
+import Contact from './pages/AboutUs/ContactUs/contact.jsx'
 import Explore from './pages/workshop/components/Explore';
 import Recognition from './pages/AboutUs/recognition/Recognition';
 import Legals from './pages/AboutUs/legals/Legals';
@@ -21,10 +21,12 @@ import SingleParti from './pages/Compi/Compi_Internal/Teams/single_parti';
 import AddParti from './pages/Compi/Compi_Internal/Teams/add_parti';
 import Footer from './components/Footer/Footer';
 import Loading from './pages/loading_page/Loading';
+import Loading1 from './pages/loading_page/Loading1'
 
+// const Home= React.lazy(() => import('./pages/Home/home'));
 const Lectures = React.lazy(() => import('./pages/Lectures/index'));
 const Media = React.lazy(() => import('./pages/AboutUs/Media/index'));
-const History = React.lazy(() => import('./pages/AboutUs/history/history'));
+const HISTORY = React.lazy(() => import('./pages/AboutUs/history/index'));
 const Gallery = React.lazy(()=> import('./pages/AboutUs/gallery/gallery'));
 const Lecture_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/lecture'));
 const Exhibition_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/exhibiton'));
@@ -40,7 +42,7 @@ function App() {
     useEffect(() => {
       setTimeout(() => {
         setIsLoading(false);
-      },4000);
+      },1);
     }, []);
   
 
@@ -55,11 +57,17 @@ function App() {
                     <Routes>
                         <Route path='/' element={
                         isLoading ? (
-                            <Loading />
+                            <Loading1 />
                          ) : (
                             <Home />
                          )
+                         
                         } />
+                        {/* <Route path='/' element={
+                            <React.Suspense fallback={<div><Loading/></div>}>
+                        <Home/>
+                        </React.Suspense> }/> */}
+                        <Route path='/loading1' element={<Loading1/>} />
                         <Route path='/exhibitions' element={<Exhibition/>}/>
                         <Route path='/competitions' element={<Compi />} />
                         <Route path='/workshops' element={<Workshop/>}/>
@@ -82,13 +90,15 @@ function App() {
 
                         <Route path='/history' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
-                        <History/>
+                        <HISTORY/>
                         </React.Suspense> }/>
 
                         <Route path='/summits' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <Summit/>
                         </React.Suspense> }/>
+
+                        <Route path='/contactus' element={<Contact/> } />
 
                         <Route path='/legals' element={<Legals /> } />
                         

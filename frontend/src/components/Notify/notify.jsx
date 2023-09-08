@@ -40,7 +40,7 @@ const Notify = () => {
 
         try {
             const response = await axios.post("/api/notify/", formData);
-            console.log(response.data); // Handle the API response as needed
+            window.alert("Success: Your data has been submitted!"); // Handle the API response as needed
         } catch (error) {
             console.error(error);
         }

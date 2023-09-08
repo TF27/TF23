@@ -1,54 +1,99 @@
 .Technorion{
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     margin-top: 60px;
+    padding-top: 100px;
 }
-
+/*================map + zonals========================================================*/
 .desc {
-    background: rgba(82, 72, 72, 0.19);
+    background:  rgba(0,0,0,.3);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 2px solid #8D7654;
     margin: auto;
-    width: 70%;
+    width: 80%;
     /* margin-top: -220px; */
     margin-bottom: 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+}
+
+.desc_cont{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.mapContainer{
+  width: 40%;
+}
+
+@media screen and (max-width: 800px) {
+  .desc {
+    flex-direction: column;
+    width: 90%;
+  }
+  .desc_cont{
+    width: 100%;
+  }
+  .mapContainer{
+    width: 70%;
+    margin: 0 auto;
+  }  
+}
+
+.descimage{
+  width: 100%;
 }
 
 .descT{
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     font-size: 18px;
     letter-spacing: 0.1em;
     text-align: left;
     color: #ffffff;
-    padding: 20px;
+    padding: 20px 0 15px 20px;
     margin-bottom: 0px;
 }
+.textContainer table {
+  width: 80%;
+  margin: 10px auto;
+  border: none;
+}
+.textContainer th{
+  border-bottom: 1px solid #BB9564;
+}
+.textContainer th, .textContainer td {
+  padding: 5px;
+  font-size: 18px;
+  text-align: left;
+}
 
+/*==========================================================cards=============================================================*/
 .card_img{
-    width:80%;
-    height: 180px;
+    width:74%;
+    aspect-ratio: 1/1.2;
     object-fit: fill;
+    opacity: 1;
+    transition: all 1s ease-in;
 }
 
 .compi_card{
-    background: #00072999;
+    background:rgba(0, 7, 41);
     margin-top: 20px;
     margin-bottom: 20px;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     /* max-width: 25%; */
     /* margin-right: 20px;
     margin-left: 20px; */
-    padding: 12px;
+    padding: 10px;
     transform: scale(1);
     transition: transform 0.3s ease;
-    height: 400px;
+    aspect-ratio: 1/1.4;
     overflow: hidden;
-}
-
-.noReg{
-  /* overflow: hidden; */
 }
 
 .card_tag{
@@ -58,11 +103,13 @@
 }
 
 .card_tag h3{
-    font-family: Forum;
-    font-size: 12px;
+    font-family: 'Forum', sans-serif;
+    font-size: 120%;
     letter-spacing: 0.1em;
     text-align: left;
-    color: #ffffff;
+    color: #BB9564;
+    font-weight: 400;
+    text-transform: uppercase;
     padding: 12px;
     margin-bottom: 0px;
 }
@@ -72,39 +119,28 @@
     flex-direction: column;
     position: relative;
     bottom: 0;
-    height: 100px;
     transition: 1s ease;
 }
 .card_title h3{
-    color: #FFE381;
-    font-family: Forum;
+    color: #BB9564;
+    font-family: 'Forum', sans-serif;
     /* letter-spacing: 0.1em; */
-    padding-top: 15px;
+    padding-top: 5%;
     margin-bottom: 0px;
-    font-size: 23px;
+    font-size: 20px;
     text-transform: capitalize;
 }
 
-@media (max-width: 1400px){
-    .card_title h3{
-        font-size: 20px;
-    }
-    .card_title div{
-        font-size: 16px;
-    }
-}
+.card_sustitle{
+  font-size: 15px;
 
-.card_title div{
-    color: #A7E9FF;
-    font-family: Forum;
-    letter-spacing: 0.1em;
-    /* padding: 20px; */
-    margin-bottom: 0px;
-    font-size: 20px;
 }
 
 .card_post{
-    display: None;
+    opacity: 0;
+    transition: opacity .1s linear 0s;
+    width: 80%;
+    margin: 0 auto 0 auto;
 }
 
 .card_regexp{
@@ -112,34 +148,36 @@
     left: 8%;
     bottom: 15px;
     display: flex;
-    border-top: 1px solid #FFE381;
+    border-top: 1px solid #BB9564;
     flex-direction: row;
     justify-content: center;
     /* max-width: 80%; */
     margin: auto;
     text-align:center;
     width: 85%;
+    top: 88%;
+    height: 10%;
 }
 
 .card_reg{
-    border-right: 1px solid #FFE381;
+    border-right: 1px solid #BB9564;
     padding-right: 8%;
     padding-top: .4vw;
     padding-left: 8%;
     padding-bottom: .4vw;
 }
 .card_exp{
-    border-left: 1px solid #FFE381;
-    padding-right: 8%;
-    padding-top: .4vw;
+    border-left: 1px solid #BB9564;
+    padding-right: 4%;
+    padding-top: .114vw;
     padding-left: 8%;
     padding-bottom: .4vw;
 }
 
 
 .card_reg a{
-    color: #FFE381;
-    font-family: Forum;
+    color: #BB9564;
+    font-family: 'Forum', sans-serif;
     letter-spacing: 0.1em;
     font-size:18px;
     text-decoration: none;
@@ -147,7 +185,7 @@
 
 .card_reg button{
     color: #FFE381;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     letter-spacing: 0.1em;
     font-size:18px;
     text-decoration: none;
@@ -157,11 +195,13 @@
 
 .card_exp a{
     color: #BB9564;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     letter-spacing: 0.1em;
     font-size:18px;
     text-decoration: none;
     margin-bottom: 0px;
+    width: 100%;
+    height: 100%;
 }
 
 .compi_card:hover{
@@ -173,6 +213,7 @@
   .compi_card:hover .card_img {
     /* display: none; */
     opacity: 0;
+    transition: all .1s ease-in;
   }
 
   .compi_card:hover .espark4{
@@ -189,14 +230,15 @@
   }
 
   .compi_card:hover .card_post{
-    display: block;
+    opacity: 1;
+    transition: opacity .1s linear .3s;
   }
 
   .compi_card:hover .card_title{
     margin-top: -200px;
   }
   .card_desc{
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     font-size: 16px;
     max-width: 90%;
     margin: auto;
@@ -209,24 +251,24 @@
   }
 
   .card_img{
-    border: 1px solid #FFE381;
+    border: 1px solid #BB9564;
     margin:auto;
   }
 
 .card_rect1{
-    border: 1px solid #FFE381;
+    border: 1px solid #BB9564;
     position:absolute;
-    width: 85%;
-    height: 390px;
-    left: 8%;
+    width: 86%;
+    height: 97%;
+    left: 7.5%;
     top: 5px;
 }
 
 .card_rect2{
-    border: 1px solid #FFE381;
+    border: 1px solid #BB9564;
     left: 5.5%;
     width: 90%;
-    height: 374px;
+    height: 95%;
     position: absolute;
 }
 
@@ -235,22 +277,23 @@
 }
 
 .share_rect1{
-    height: 27px;
-    width: 60px;
-    border: 1px solid #A7E9FF;
+    height: 35px;
+    width: 100px;
+    border: 1px solid #BB9564;
     position: relative;
 }
 
 .share_rect2{
-    height: 27px;
-    width: 60px;
-    border: 1px solid #A7E9FF;
-    margin-left: 5px;
-    margin-top: 5px;
+    height: 35px;
+    width: 100px;
+    border: 1px solid #BB9564;
+    margin-left: 3px;
+    margin-top: 3px;
     position: relative;
-    font-size: 14px;
-    font-family: Forum;
-    color: #A7E9FF;
+    font-size: 24px;
+    font-weight: 200;
+    font-family: 'Forum', sans-serif;
+    color: #BB9564;
 }
 
 .indiamapContainer {
@@ -273,7 +316,7 @@
     max-height: 50%;
     width: auto;
     height: auto;
-    border: 1px solid #FFE381;
+    border: 1px solid #BB9564;
     object-fit: contain;
   }
   
@@ -285,82 +328,82 @@
   .textContainer p {
     margin: 0;
     font-size: 18px;
-    font-family: FORUM;
+    font-family: 'Forum', sans-serif;
   }
 
   .chand{
     position: absolute;
-    left: 80%;
-    bottom: 14%;
+    right: 9%;
+    bottom: 55%;
     height: 20px;
     width: auto;
   }
-
+/* 
   .chand2{
     position: absolute;
     left: 10%;
-    bottom: 14%;
+    bottom: 50%;
     height: 20px;
     width: auto;
-  }
+  } */
 
   .espark{
     position: absolute;
-    left: 13%;
-    bottom: 34%;
-    height: 20px;
+    left: 15.5%;
+    bottom: 25%;
+    height: 5px;
     width: auto;
   }
 
   .espark2{
     position: absolute;
-    left: 10%;
-    bottom: 90%;
-    height: 20px;
+    left: 12%;
+    bottom: 89%;
+    height: 25px;
     width: auto;
   }
 
   .espark3{
     position: absolute;
-    left: 80%;
+    left: 88%;
     bottom: 90%;
-    height: 20px;
+    height: 5px;
     width: auto;
   }
 
   .espark4{
     position: absolute;
     left:79%;
-    bottom: 34%;
-    height: 20px;
+    bottom: 20%;
+    height: 25px;
     width: auto;
   }
 
   .fspark{
     position: absolute;
     left: 18%;
-    bottom: 36%;
+    bottom: 20%;
     height: 20px;
     width: auto;
   }
   .fspark2{
     position: absolute;
-    left: 18%;
-    bottom: 88%;
+    left: 10%;
+    bottom: 85%;
     height: 20px;
     width: auto;
   }
   .fspark3{
     position: absolute;
-    left: 74%;
-    bottom: 36%;
+    left: 86%;
+    bottom: 23%;
     height: 20px;
     width: auto;
   }
   .fspark4{
     position: absolute;
-    left: 73%;
-    bottom: 88%;
+    left: 83%;
+    bottom: 90%;
     height: 20px;
     width: auto;
   }
@@ -390,3 +433,144 @@
     }
   }
   
+
+@media screen and (max-width: 576px) {
+      
+  .compi_card:hover {
+    transition: none;
+    transform: scale(1);
+  }
+
+  /* Hide image on hover */
+  .compi_card:hover .card_img {
+    /* display: none; */
+    opacity: 1;
+  }
+
+  .compi_card:hover .card_post{
+    display: none;
+  }
+
+  .compi_card:hover .card_title{
+    margin-top: 0px;
+  }
+
+
+}
+
+@media screen and (max-width: 1400px) {
+  .card_title h3{
+    font-size: 15px;
+  }
+
+  .card_sustitle{
+    font-size: 13px;
+  }
+
+  .card_img{
+    width:72%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .card_title h3{
+    font-size: 15px;
+  }
+  .card_sustitle{
+    font-size: 14px;
+  }
+
+  .card_img{
+    width:65%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .card_title h3{
+    position: relative;
+    top: -2px;
+    font-size: 15px;
+  }
+  .card_sustitle{
+    position: relative;
+    top: -2px;
+    font-size: 12px;
+  }
+
+  .card_img{
+    width:65%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card_title h3{
+    top: 10px;
+    font-size: 20px;
+  }
+  .card_sustitle{
+    top: 20px;
+    font-size: 15px;
+  }
+
+  .card_img{
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .card_title h3{
+    top: 0px;
+    font-size: 15px;
+  }
+  .card_sustitle{
+    top: 0px;
+    font-size: 15px;
+  }
+
+  .card_img{
+    height: 70%;
+  }
+}
+
+.card_title div{
+    color: #A7E9FF;
+    font-family: 'Forum', sans-serif;
+    letter-spacing: 0.1em;
+    margin-bottom: 0px;
+}
+
+@media screen and (max-width: 576px) {
+  .card_title h3{
+    top: 0px;
+    font-size: 25px;
+  }
+  .card_sustitle{
+    top: 0px;
+    font-size: 20px;
+  }
+
+  .card_img{
+    height: 70%;
+  }
+
+  .compi_card{
+    aspect-ratio: 1/1.25;
+}
+}
+@media screen and (max-width: 430px) {
+  .card_title h3{
+    top: 0px;
+    font-size: 20px;
+  }
+  .card_sustitle{
+    top: 0px;
+    font-size: 15px;
+  }
+
+  .compi_card{
+    aspect-ratio: 1/1.4;
+}
+  
+}
+  
+

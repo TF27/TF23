@@ -7,7 +7,7 @@ import { UserAuth } from "../../contexts/AuthContext";
 import styles from './compi.module.css';
 import Border from '../../components/DoubleBorder/doubleborder';
 // import WhatsappShareButton from '../../components/share/whatsapp';
-import indiamap from './static/img/india.png'
+import indiamap from './static/img/map.png'
 
 // Images
 import dot from './static/card/dot.png';
@@ -57,28 +57,29 @@ const Technorion = () => {
       <div key={data.id} className='col-lg-3 col-md-4 col-sm-6 col-12'>
   
       <div className={styles.compi_card}>
-        <div className={styles.card_rect1}></div>
+          <div className={styles.card_rect1}></div>
           <div className={styles.card_rect2}></div>
           <div className={styles.noReg}>
+            {/* <Link to={data.name}></Link> */}
             <div className={styles.card_tag}>
               <span><img src={dot} alt='dot'/></span>
-              <h3>{data.tag}</h3>
+              <h3 className={styles.card_tag}>{data.tag}</h3>
               <span><img src={dot} alt='dot'/></span>
             </div>
             <div className={styles.card_imgo}><img src={data.img} className={styles.card_img} alt={data.name}/></div>
             <img className={styles.chand} src={chand} alt='moon' />
-            <img className={styles.espark} src={espark} alt='moon' />
+            <img className={styles.espark} src={dot} alt='moon' />
             <img className={styles.fspark} src={fspark} alt='moon' />
-            <img className={styles.chand2} src={chand} alt='moon' />
+            {/* <img className={styles.chand2} src={chand} alt='moon' /> */}
             <img className={styles.espark2} src={espark} alt='moon' />
             <img className={styles.fspark2} src={fspark} alt='moon' />
-            <img className={styles.espark3} src={espark} alt='moon' />
+            <img className={styles.espark3} src={dot} alt='moon' />
             <img className={styles.fspark3} src={fspark} alt='moon' />
             <img className={styles.espark4} src={espark} alt='moon' />
-            <img className={styles.fspark4} src={fspark} alt='moon' />
+            <img className={styles.fspark4} src={fspark} alt='moon' /> 
             <div className={styles.card_title}>
               <h3>{data.name}</h3>
-              <div className={styles.card_sustitle}>INR {data.prize}0000 Prize</div>
+              <div className={styles.card_sustitle}>INR {data.prize} Prize</div>
             </div>
             <div className={styles.card_post}>
               <div className={styles.card_desc}>{data.desc}</div>
@@ -94,6 +95,7 @@ const Technorion = () => {
             </div>
           </div>
           <div>
+            
             <div className={styles.card_regexp}>
               {data.is_registered ? (<div className={styles.card_reg}>Registered</div>) 
               : user ? (
@@ -115,27 +117,50 @@ const Technorion = () => {
 
   return (
     <div className={styles.Technorion}>
+    <div className='blackGradient-to-bottom'/>
     <h1>TECHNORION</h1>
     <div className={styles.desc}>
-      <p className={styles.descT}>
-        Welding is a critical activity for manufacturing. The threshold for welding error is the bare minimum. Build an ML
-        model to predict welding defects in the materials by developing algorithms using process parameters such as ambient
-        temperature, welding travel speed, etc. You can also perform advanced analytics on welder performance using machine
-        data and welder details.
-      </p>
-      <div className={styles.indiamapContainer}>
-      <div className={styles.imageContainer}>
-          <img src={indiamap} alt="india" className={styles.image} />
-        </div>
+      <div className={styles.desc_cont}>
+        <p className={styles.descT}>
+        After a gap of 2 years, Techfest is back on the grounds of IIT Bombay, rising greater than ever before. With an aim to promote creative, innovative and technical skills amongst the youth, Techfest is coming to the cities near you through Technorion, our Zonal competitions. We believe everyone should get an equal opportunity to showcase their talents and distance should not create a hindrance. With this underlying spirit, we announce the following Technorion Zonal cities
+        </p>
         <div className={styles.textContainer}>
-          <p>
-            Your text here <br />
-            sbjfbskfbnasktydfhyfjyudbjajhcbd <br />
-            sdfdctrgdhjghtxghgfafsaavfd <br />
-            hbfshejbfujsbfsfbfbsh <br />
-            jdhfbauikshfikahsdikuashndjasbfjhsdfbj <br />
-          </p>
+          <table border="1">
+            <tr>
+                <th>College</th>
+                <th>CITY</th>
+                <th>DATE</th>
+            </tr>
+            <tr>
+                <td>Indian Institute of Technology Bombay</td>
+                <td>Mumbai</td>
+                <td>09/10/22</td>
+            </tr>
+            <tr>
+                <td>Swami Keshavanand Institute of Technology, M&G</td>
+                <td>Jaipur</td>
+                <td>09/10/22</td>
+            </tr>
+            <tr>
+                <td>Oriental College of Technology</td>
+                <td>Bhopal</td>
+                <td>09/10/22</td>
+            </tr>
+            <tr>
+                <td>St. Vincent Pallotti College of Engineering and Technology</td>
+                <td>Nagpur</td>
+                <td>08/10/22</td>
+            </tr>
+            <tr>
+                <td>Global Academy of Technology, Bangalore</td>
+                <td>Bengaluru</td>
+                <td>15/10/22</td>
+            </tr>
+          </table>
         </div>
+      </div>
+      <div className={styles.mapContainer}>
+          <img src={indiamap} alt="india" className={styles.descimage} />
       </div>
     </div>
     <div className='technorion_cards'>

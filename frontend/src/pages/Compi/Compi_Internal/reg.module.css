@@ -107,3 +107,13 @@
     padding: 5px 25px;
 }
 
+.godhelp{
+    /* height: 100vh; */
+}
+
+.formalign{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
