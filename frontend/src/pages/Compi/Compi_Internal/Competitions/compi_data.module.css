@@ -10,7 +10,7 @@
     font-size: 18px;
     border: none;
     background: none;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     cursor: pointer;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -195,7 +195,7 @@
     margin-top: 7px;
     position: absolute;
     color: #fff;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     letter-spacing: 0.2em;
     font-size: 18px;
 }
@@ -238,7 +238,7 @@
     margin-top: 7px;
     position: absolute;
     color: #fff;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     letter-spacing: 0.2em;
     font-size: 18px;
     overflow-y: scroll;
