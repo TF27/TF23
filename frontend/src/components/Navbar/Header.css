@@ -127,13 +127,42 @@
 .navRow{
   position: relative;
   top: 20px;
+  height: 80%;
 }
 
 .wnavLeft{
   width: 30%;
+  overflow-x: hidden;
+  left: -25px;
 }
 .wnavRight{
   width: 30%;
+  overflow-x: hidden;
+}
+
+.sign-out-div {
+  position: absolute;
+  /* top: 100%; Position it below the img */
+  /* left: 0; */
+  right: 2pc;
+  top: 70%;
+  background-color: #000;
+  border: 1px solid #cea167;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999; /* Ensure it's above other content */
+}
+
+.sign-out-div button {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  font-family: Landasans;
 }
 @media (max-width: 768px) {
   .navfunchide {
@@ -250,6 +279,7 @@
   /* height: 160px; */
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .navfuncshow {
@@ -258,8 +288,8 @@
   transition: top 0.5s ease-in-out;
   /* background-image: url("./navimg.png"); */
   background-repeat: no-repeat;
-  /* background-position: center; */
+  background-position: center;
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   /* height: 170px; */
 }

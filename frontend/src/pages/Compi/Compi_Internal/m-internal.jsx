@@ -12,6 +12,7 @@ import frame from './../static/card/Frame.png';
 import WhatsappShareButton from '../../../components/share/whatsapp';
 
 import Meshmerize from './Competitions/m-meshmerize';
+import Machanzo from './Competitions/m-machanzo';
 import HackAI from './Competitions/m-HackAI';
 import CozmoClench from './Competitions/m-CozmoClench';
 
@@ -124,6 +125,7 @@ const MInternal = () => {
           </div>
         </div>
           {compiName === 'meshmerize' && <Meshmerize />}
+          {compiName === 'mechanzo league' && <Machanzo />}
           {compiName === 'hackai' && <HackAI/>}
           {compiName === 'cozmoclench' && <CozmoClench/>}
       </div>

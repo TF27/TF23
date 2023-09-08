@@ -14,7 +14,7 @@ import frame from './../static/card/Frame.png';
 import HackAI from './Competitions/HackAI'
 
 import JoinTeam from './Teams/joinTeam';
-
+import Machanzo from './Competitions/machanzo';
 
 
 const Internal = () => {
@@ -68,6 +68,8 @@ const Internal = () => {
           {data.is_team_registered ? <div className={styles.youhave}> You have successfully with your email {user.email} and your team ID is {data.team_id}</div> : <div className={styles.compi_reg}></div>}
           {compiName === 'cozmoclench' && <CozmoClench />}
           {compiName === 'meshmerize' && <Meshmerize />}
+          {compiName === 'robowar' && <Meshmerize />}
+          {compiName === 'mechanzo league' && <Machanzo />}
           {compiName === 'hackai' && <HackAI/>}
           <div className={styles.team_reg}>
           {data.is_team_leader ? (
