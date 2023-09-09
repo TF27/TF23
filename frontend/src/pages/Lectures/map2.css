@@ -17,6 +17,12 @@
     margin-bottom: 5%;
 }
 
+@media (max-width: 768px) {
+  .map_image{
+    width: 100%;
+  }
+  
+}
 .city-circle {
     position: absolute;
     width: 16px; 

@@ -59,7 +59,7 @@ import vex from './assets/mapContent/northeastasia/vex.jpg';
 // South East Asia
 import aerohans from './assets/mapContent/southwestasia/aerohans.jpg';
 import brmohos from './assets/mapContent/southwestasia/brmohos.jpg';
-import ideaforge from './assets/mapContent/southwestasia/ideaforge.jpg';
+import ideaforge from './assets/mapContent/southwestasia/Ideaforge.jpg';
 import indro from './assets/mapContent/southwestasia/indro.jpg';
 import marksman from './assets/mapContent/southwestasia/marksman.jpg';
 import nadine from './assets/mapContent/southwestasia/nadine.jpg';
