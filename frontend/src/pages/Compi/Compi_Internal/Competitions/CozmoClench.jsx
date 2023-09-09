@@ -101,7 +101,7 @@ const CozmoClench = () => {
         marginBottom: '20px',
         maxWidth: '80%',
         margin: 'auto',
-        rowContentMarginBottom: '0',
+        rowContentMarginBottom: '0',        
       }
 
     const lol = {
@@ -183,8 +183,8 @@ const CozmoClench = () => {
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
               Tarun Kumar<br/>
-              +91 75499 52736<br/>
-              abhishek@techfest.org
+              <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:abhishek@techfest.org`}>abhishek@techfest.org</div>
+                <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7549952736`}>7549952736</div>
               </div>
             </div>
           </div>

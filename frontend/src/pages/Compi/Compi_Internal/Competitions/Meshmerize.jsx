@@ -14,7 +14,7 @@ const Meshmerize = () => {
         rows: [
           {
             title: "Why should I participate in the Meshmerize?",
-            content: "Teams must build a line follower bot that can keep track of directions while going through a maze. It must analyze the path in the Dry Run and use this information in the Actual Run to traverse the maze to reach the ending point in the minimum possible time."
+            content: "The competition provides its participants with a reasonable grasp of important mechanical and programming principles that will take them in the direction of being able to design and construct their own gripping robot. Participants work together to design and build a robotic vehicle that can navigate on an obstacle-filled course while moving blocks from one location to another."
           },
           {
             title: "How to register?",
@@ -104,12 +104,6 @@ const Meshmerize = () => {
         rowContentMarginBottom: '0',
       }
 
-    const lol = {
-        objectFit: 'scale-down', 
-        paddingRight: '8px',
-    }
-
-
     return ( 
       <div className={styles.impdata}>
         <div className={styles.info_head}>
@@ -184,6 +178,8 @@ const Meshmerize = () => {
               Abhishek Kedare<br/>
               +91 75585 88254<br/>
               abhishek@techfest.org
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:abhishek@techfest.org`}>abhishek@techfest.org</div>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7558588254`}>7558588254</div>
               </div>
             </div>
           </div>

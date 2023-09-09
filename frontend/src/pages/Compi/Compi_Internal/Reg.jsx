@@ -37,6 +37,7 @@ const Reg = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
+
         setFormData((prevData) => ({
             ...prevData,
             [name]: value,
@@ -55,6 +56,17 @@ const Reg = () => {
         }
     };
 
+    function checkInputValues() {
+        const inputs = document.querySelectorAll('input');
+      
+        inputs.forEach((input) => {
+            handleFocus({ target: input }); // Call focus event on each input
+            handleBlur({ target: input }); // Call blur event on each input
+        });
+    }
+    setInterval(checkInputValues, 100);
+
+
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(formData);
@@ -69,20 +81,21 @@ const Reg = () => {
             });
     }
 
-    const top = {
+    const fixbg = {
         backgroundImage: `url(${bgimg})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
-        position: 'absolute',
+        position: 'fixed',
         width: '100%',
         zIndex: '-1',
         top: '0',
         backgroundAttachment: 'fixed',
     }
     return (
-        <div style={top} className={styles.compiReg}>
+        <div className={styles.compiReg}>
+            <div style={fixbg}/>
             <div className={styles.bgitis}>
                 <div className={styles.overlay}>
                     <div className={styles.reg_head}>
@@ -105,8 +118,6 @@ const Reg = () => {
                                         name="name"
                                         value={user.displayName}
                                         onChange={handleChange}
-                                        onFocus={handleFocus}
-                                        onBlur={handleBlur}
                                         className={styles.formInput}
                                         disabled
                                         autoComplete="off"
@@ -121,8 +132,6 @@ const Reg = () => {
                                             name="email"
                                             value={user.email}
                                             onChange={handleChange}
-                                            onFocus={handleFocus}
-                                            onBlur={handleBlur}
                                             className={styles.formInput}
                                             disabled
                                             autoComplete="off"
@@ -136,11 +145,9 @@ const Reg = () => {
                                             name="phoneno"
                                             value={formData.phoneno}
                                             onChange={handleChange}
-                                            onFocus={handleFocus}
-                                            onBlur={handleBlur}
                                             className={styles.formInput}
                                             autoComplete="off"
-                                            
+                                            maxLength={6}
                                             required
                                         />
                                     </div>
@@ -169,8 +176,6 @@ const Reg = () => {
                                             value={formData.city}
                                             onChange={handleChange}
                                             className={styles.formInput}
-                                            onFocus={handleFocus}
-                                            onBlur={handleBlur}
                                             autoComplete="off"
                                             required
                                         />
@@ -185,8 +190,6 @@ const Reg = () => {
                                         value={formData.pincode}
                                         onChange={handleChange}
                                         className={styles.formInput}
-                                        onFocus={handleFocus}
-                                        onBlur={handleBlur}
                                         required
                                         autoComplete="off"
                                     />
@@ -199,8 +202,6 @@ const Reg = () => {
                                             value={formData.country}
                                             onChange={handleChange}
                                             className={styles.formInput}
-                                            onFocus={handleFocus}
-                                            onBlur={handleBlur}
                                             autoComplete="off"
                                             required
                                         />
@@ -234,8 +235,6 @@ const Reg = () => {
                                         value={formData.address}
                                         onChange={handleChange}
                                         className={styles.formInput}
-                                        onFocus={handleFocus}
-                                        onBlur={handleBlur}
                                         autoComplete="off"
                                         required
                                     />
@@ -248,8 +247,6 @@ const Reg = () => {
                                         value={formData.instiname}
                                         onChange={handleChange}
                                         className={styles.formInput}
-                                        onFocus={handleFocus}
-                                        onBlur={handleBlur}
                                         required
                                         autoComplete="off"
                                     />
@@ -262,8 +259,6 @@ const Reg = () => {
                                         value={formData.instiadress}
                                         onChange={handleChange}
                                         className={styles.formInput}
-                                        onFocus={handleFocus}
-                                        onBlur={handleBlur}
                                         autoComplete="off"
                                         required
                                     />
@@ -277,8 +272,6 @@ const Reg = () => {
                                         required
                                         onChange={handleChange}
                                         className={styles.formInput}
-                                        onFocus={handleFocus}
-                                        onBlur={handleBlur}
                                         autoComplete="off"
                                         
                                     />

@@ -4,44 +4,76 @@ import HomeParallax from "./parallax";
 import styles from "./home.module.css";
 
 // import images
-import bf from "./images/homebg.png";
+import bf from "./images/homebg.jpg";
 import spimg from "./images/sponsor.png";
-import apj from "./assets/explore/apj.jpg";
+import lec1 from "./assets/explore/Lec1.jpg";
+import lec2 from "./assets/explore/Lec2.jpg";
+import lec3 from "./assets/explore/Lec3.jpg";
+import lec4 from "./assets/explore/Lec4.jpg";
+import exh1 from "./assets/explore/Exh1.jpg";
+import exh2 from "./assets/explore/Exh2.jpg";
+import exh3 from "./assets/explore/Exh3.jpeg";
+import exh4 from "./assets/explore/Exh4.jpg";
 
+const dataCompetitions = [
+  {
+    image: exh1,
+    name: "Sophia (Hong Kong)",
+  },
+  {
+    image: exh2,
+    name: "Gravity Industries (UK)",
+  },
+  {
+    image: exh3,
+    name: "Virgin Hyperloop (USA)",
+  },
+  {
+    image: exh4,
+    name: "AirCar (Turkey)",
+  },
+];
 const dataLectures = [
   {
-    image: apj,
-    name: "His Holiness the 14th Dalai Lama (Nobel Laureate, Peace)",
+    image: lec1,
+    name: "Late Dr. APJ Abdul Kalam",
   },
   {
-    image: apj,
-    name: "His Holiness the 14th Dalai Lama (Nobel Laureate, Peace)",
+    image: lec2,
+    name: "His Holiness the 14th Dalai Lama",
+    posi: "(Nobel Laureate, Peace)",
   },
   {
-    image: apj,
-    name: "His Holiness the 14th Dalai Lama (Nobel Laureate, Peace)",
+    image: lec3,
+    name: "NR Narayana Murty",
+    posi: "( Co-Founder of Infosys)",
   },
   {
-    image: apj,
-    name: "His Holiness the 14th Dalai Lama (Nobel Laureate, Peace)",
+    image: lec4,
+    name: "Zaheer Khan",
+    posi: "(Former Indian Cricketer)",
   },
 ];
 const dataExhibitions = [
   {
-    image: apj,
-    name: "Virgin Hyperloop (USA)",
+    image: exh1,
+    name: "Sophia",
+    posi: "(Hong Kong)",
   },
   {
-    image: apj,
-    name: "Virgin Hyperloop (USA)",
+    image: exh2,
+    name: "Gravity Industries",
+    posi: "(UK)",
   },
   {
-    image: apj,
-    name: "Virgin Hyperloop (USA)",
+    image: exh3,
+    name: "Virgin Hyperloop",
+    posi: "(USA)",
   },
   {
-    image: apj,
-    name: "Virgin Hyperloop (USA)",
+    image: exh4,
+    name: "AirCar",
+    posi: "(Turkey)",
   },
 ];
 
@@ -61,7 +93,7 @@ const Explore = ({ Heading, data, link }) => {
                 <div className={styles.card_rect1}>
                   <div className={styles.card_rect2}>
                     <img src={item.image} alt={item.name} />
-                    <div className={styles.cardText}>{item.name}</div>
+                    <div className={styles.cardText}>{item.name}<br/>{item.posi}</div>
                   </div>
                 </div>
               </div>
@@ -105,9 +137,33 @@ const Home = () => {
           </div>
           <div className={styles.spnImg}>
             <a href="https://www.marshmclennan.com/">
-              <img src={spimg} alt="sponsorimage" className={styles.mmcImg} />
-              <p>Marsh McLennan Global Services India Pvt Ltd</p>
+              <img src={spimg} alt="Marsh McLennan Global Services India Pvt Ltd" className={styles.mmcImg} />
+              {/* <p>Marsh McLennan Global Services India Pvt Ltd</p> */}
             </a>
+          </div>
+        </div>
+        <div className={`${styles.titSpn} ${styles.homeTheme}`}>
+          <div className={styles.titSpn_rect1}>
+            <div className={styles.titSpn_rect2}>Word From Team</div>
+          </div>
+        </div>
+        <div className={`row ${styles.themeData}`}>
+          <div className="col-12 col-lg-4">
+            <div className={styles.themeImg}>
+            <iframe src="https://www.youtube.com/embed/0_FBwJi8VBo?si=yaNM1nKy7nydA1XU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            </div>
+          </div>
+          <div className={`col-12 col-lg-8 ${styles.themeText}`}>
+          Welcome to the Official Website of the 27th Edition of Asia's Largest Science and Technology Festival, Techfest 2023-2024! We at Techfest are students of IIT Bombay, who have been engaged over the past few months to structure Techfest's 27th edition. With the plethora of events planned this year, we are sure you will have an experience of a lifetime - something that you will never forget; a journey that will lift your spirits. And the starting point is this website! Here, you will find complete information about Techfest 2023-24, so make sure you explore all the pathways available to you. Are you ready to unlock a mystical realm?
+            {/*<br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam qui
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+            libero non quidem qui possimus itaque ex molestias doloremque,
+            molestiae nobis excepturi cumque delectus aliquid minus maiores enim
+            debitis numquam fugit? Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Porro nihil expedita reprehenderit voluptas atque
+            ipsum assumenda, unde saepe. Sequi iste facilis eius dolorem vel ad
+            modi aspernatur accusantium fuga sapiente. */}
           </div>
         </div>
         <div className={`${styles.titSpn} ${styles.homeTheme}`}>
@@ -118,21 +174,12 @@ const Home = () => {
         <div className={`row ${styles.themeData}`}>
           <div className="col-12 col-lg-4">
             <div className={styles.themeImg}>
-              <img src={bf} alt="A Mystecal Realm" />
+            <iframe src="https://www.youtube.com/embed/_PJYQDTJQ0E?si=WXO2IsZ9l8fYtcON" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
             </div>
           </div>
           <div className={`col-12 col-lg-8 ${styles.themeText}`}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam qui
-            ea rem iste! Adipisci, nam. Voluptatum, repudiandae quod rerum odit
-            amet fugiat, magni eum iste molestiae accusamus natus, officiis quo.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis
-            tempora reprehenderit, aperiam nihil amet vero quo a ea pariatur
-            esse laborum natus vel expedita iste, sit nostrum dolorum? Debitis,
-            laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ea delectus tempora commodi est optio nihil dolorum, ut odio,
-            corrupti cumque asperiores repudiandae maiores numquam, tenetur
-            reprehenderit at perferendis quod distinctio. <br />
-            <br />
+            Teleport to the 27th Edition of Techfest and celebtrate the interplay between Magic, Science & Technology. Step into the realm of wonders where the frontiers of imagination are translated into real-world possibilities. From ancient mysticism to cutting-edge innovations, explore the endless spectrum of creativity and ingenuity. Get ready for a Techno-Mystical extravaganza and embark on a miraculous journey of discovery into the unknown! <br />
+            {/*<br />
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam qui
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
             libero non quidem qui possimus itaque ex molestias doloremque,
@@ -140,11 +187,20 @@ const Home = () => {
             debitis numquam fugit? Lorem, ipsum dolor sit amet consectetur
             adipisicing elit. Porro nihil expedita reprehenderit voluptas atque
             ipsum assumenda, unde saepe. Sequi iste facilis eius dolorem vel ad
-            modi aspernatur accusantium fuga sapiente.
+            modi aspernatur accusantium fuga sapiente. */}
           </div>
         </div>
       </div>
-      <Explore Heading="Past Lectures" data={dataLectures} link="lectures" />
+      <Explore 
+        Heading="Competitions" 
+        data={dataCompetitions} 
+        link="competitions" 
+      />
+      <Explore 
+        Heading="Past Lectures" 
+        data={dataLectures} 
+        link="lectures" 
+      />
       <Explore
         Heading="Past Exhibitions"
         data={dataExhibitions}

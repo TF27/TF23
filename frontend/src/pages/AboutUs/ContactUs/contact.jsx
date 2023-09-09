@@ -3,99 +3,141 @@ import './contact.css';
 const coordidata = [
   {
     department: "Overall Coordinator",
-    name: "Aashuraj Hassani",
-    email: "aashuraj@techfest.org",
-    phone: "8347347594"
+    name: "Shobhit Aggarwal",
+    email: "shobhit@techfest.org",
+    phone: "-"
   },
   {
     department: "Overall Coordinator",
-    name: "Aashuraj Hassani",
-    email: "aashuraj@techfest.org",
-    phone: "8347347594"
+    name: "Pavithra Pilli",
+    email: "pavithra@techfest.org",
+    phone: "-"
   },
   {
-    department: "Overall Coordinator",
-    name: "Aashuraj Hassani",
-    email: "aashuraj@techfest.org",
-    phone: "8347347594"
+    department: "Competitions Manager",
+    name: "Abhishek Kedare",
+    email: "abhishek@techfest.org",
+    phone: "7558588254"
   },
   {
-    department: "Overall Coordinator",
-    name: "Aashuraj Hassani",
-    email: "aashuraj@techfest.org",
-    phone: "8347347594"
+    department: "Infrastructure Manager",
+    name: "Ajay Agrawal",
+    email: "ajay@techfest.org",
+    phone: "7509759232"
   },
   {
-    department: "Overall Coordinator",
-    name: "Aashuraj Hassani",
-    email: "aashuraj@techfest.org",
-    phone: "8347347594"
+    department: "Exhibitions Manager",
+    name: "Akshat Gupta",
+    email: "akshat@techfest.org",
+    phone: "9619678850"
   },
   {
-    department: "Overall Coordinator",
-    name: "Aashuraj Hassani",
-    email: "aashuraj@techfest.org",
-    phone: "8347347594"
+    department: "Ozone Manager",
+    name: "Anusha Dhakras",
+    email: "anusha@techfest.org",
+    phone: "9004285668"
   },
   {
-    department: "Overall Coordinator",
-    name: "Aashuraj Hassani",
-    email: "aashuraj@techfest.org",
-    phone: "8347347594"
+    department: "Lectures Manager",
+    name: "Arnav Patel",
+    email: "arnav@techfest.org",
+    phone: "9372634701"
   },
   {
-    department: "Overall Coordinator",
-    name: "Aashuraj Hassani",
-    email: "aashuraj@techfest.org",
-    phone: "8347347594"
+    department: "Robowars Manager",
+    name: "Aryan Gupta",
+    email: "aryan@techfest.org",
+    phone: "7317520804"
   },
   {
-    department: "Overall Coordinator",
-    name: "Aashuraj Hassani",
-    email: "aashuraj@techfest.org",
-    phone: "8347347594"
+    department: "Competitions Manager",
+    name: "Atharv Apshinge",
+    email: "atharv@techfest.org",
+    phone: "9324589830"
   },
   {
-    department: "Overall Coordinator",
-    name: "Aashuraj Hassani",
-    email: "aashuraj@techfest.org",
-    phone: "8347347594"
+    department: "Competitions Manager",
+    name: "Chirag Rao",
+    email: "chirag@techfest.org",
+    phone: "8287175335"
   },
   {
-    department: "Overall Coordinator",
-    name: "Aashuraj Hassani",
-    email: "aashuraj@techfest.org",
-    phone: "8347347594"
+    department: "Exhibitions Manager",
+    name: "Gourish Singhal ",
+    email: "gourish@techfest.org",
+    phone: "8928455606"
   },
   {
-    department: "Overall Coordinator",
-    name: "Aashuraj Hassani",
-    email: "aashuraj@techfest.org",
-    phone: "8347347594"
+    department: "Technoholix Manager",
+    name: "Jainam Shah",
+    email: "jainam@techfest.org",
+    phone: "8369504031"
   },
   {
-    department: "Overall Coordinator",
-    name: "Aashuraj Hassani",
-    email: "aashuraj@techfest.org",
-    phone: "8347347594"
+    department: "Marketing Manager",
+    name: "Krishna Rathi ",
+    email: "krishna@techfest.org",
+    phone: "7014036467"
   },
   {
-    department: "Overall Coordinator",
-    name: "Aashuraj Hassani",
-    email: "aashuraj@techfest.org",
-    phone: "8347347594"
+    department: "Robowars Manager",
+    name: "Manas Dadhich",
+    email: "manas@techfest.org",
+    phone: "9981378767"
   },
   {
-    department: "Overall Coordinator",
-    name: "Aashuraj Hassani",
-    email: "aashuraj@techfest.org",
-    phone: "8347347594"
+    department: "Marketing Manager",
+    name: "Mankirat Chawla",
+    email: "mankirat@techfest.org",
+    phone: "9996437175"
   },
   {
-    department: "Overall Coordinator",
-    name: "Aashuraj Hassani",
-    email: "aashuraj@techfest.org",
-    phone: "8347347594"
+    department: "Hospitality Manager",
+    name: "Nivesh Maheshwari ",
+    email: "nivesh@techfest.org",
+    phone: "7357654007"
+  },
+  {
+    department: "Infrastructure Manager",
+    name: "Prathamesh Hatwar",
+    email: "prathamesh@techfest.org",
+    phone: "7387041365"
+  },
+  {
+    department: "Creatives Manager",
+    name: "Sanya Agrawal",
+    email: "sanya@techfest.org",
+    phone: "7588931688"
+  },
+  {
+    department: "Ozone Manager",
+    name: "Sarvesh Bang ",
+    email: "sarvesh@techfest.org",
+    phone: "8766784117"
+  },
+  {
+    department: "Media Manager",
+    name: "Shriya Kajrolkar",
+    email: "shriya@techfest.org",
+    phone: "8828283803"
+  },
+  {
+    department: "Food & Beverages Manager",
+    name: "Utkarsh Daga",
+    email: "utkarsh@techfest.org",
+    phone: "9636509616"
+  },
+  {
+    department: "Publicity Manager",
+    name: "Varun Gupta",
+    email: "varun@techfest.org",
+    phone: "9011909408"
+  },
+  {
+    department: "Web Manager",
+    name: "Yatharth Manchanda",
+    email: "yatharth@techfest.org",
+    phone: "8307139636"
   },
   // Add more coordinator objects as needed
 ];
