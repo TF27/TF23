@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import axios from 'axios';
-import { UserAuth } from '../../../contexts/AuthContext';
-import styles from './internal.module.css';
-import CozmoClench from './Competitions/CozmoClench';
-import DissolveTeam from './Teams/dissolveTeam';
-import LeaveTeam from './Teams/leaveTeam';
+import React, { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import axios from "axios";
+import { UserAuth } from "../../../contexts/AuthContext";
+import styles from "./internal.module.css";
+import CozmoClench from "./Competitions/CozmoClench";
+import DissolveTeam from "./Teams/dissolveTeam";
+import LeaveTeam from "./Teams/leaveTeam";
 // Import images
-import backimg1 from './../static/img/exp_bg.png';
-import backimg2 from './../static/img/img7.png';
-import Meshmerize from './Competitions/Meshmerize';
-import frame from './../static/card/Frame.png';
-import HackAI from './Competitions/HackAI';
-import Codecode from './Competitions/Codecode';
+import backimg1 from "./../static/img/exp_bg.png";
+import backimg2 from "./../static/img/img7.png";
+import Meshmerize from "./Competitions/Meshmerize";
+import frame from "./../static/card/Frame.png";
+import HackAI from "./Competitions/HackAI";
+import Codecode from "./Competitions/Codecode";
 
 import JoinTeam from './Teams/joinTeam';
 import Machanzo from './Competitions/machanzo'
@@ -22,32 +22,39 @@ import SingleParti from './Teams/single_parti';
 
 
 const Internal = () => {
-  const { compiName } = useParams();
+   const { compiName } = useParams();
 
-  const [data, setData] = useState([]);
-  const { user } = UserAuth();
-
-  const google_id = user?.email;
-  const ProblemStatements = `https://rain.techfest.org/media/ProblemStatements/${compiName}.pdf`;
-
-  useEffect(() => {
-    const fetchData = async () => {
+   const [data, setData] = useState([]);
+   const { googleSignIn, user, logOut } = UserAuth();
+   const handleGoogleSignIn = async () => {
       try {
-        const response = await axios.get('/api/compi_card/', {
-          headers: {
-            'X-Email': google_id,
-          },
-        });
-        setData(response.data);
+         await googleSignIn();
       } catch (error) {
-        console.error(error);
+         console.log(error);
       }
-    };
-    fetchData();
-  }, [google_id]);
+   };
 
-  const information = () => {
-    const card_data = data.filter(item => item.name === compiName)
+   const google_id = user?.email;
+   const ProblemStatements = `https://rain.techfest.org/media/ProblemStatements/${compiName}.pdf`;
+
+   useEffect(() => {
+      const fetchData = async () => {
+         try {
+            const response = await axios.get("/api/compi_card/", {
+               headers: {
+                  "X-Email": google_id,
+               },
+            });
+            setData(response.data);
+         } catch (error) {
+            console.error(error);
+         }
+      };
+      fetchData();
+   }, [google_id]);
+
+   const information = () => {
+      const card_data = data.filter((item) => item.name === compiName);
 
     return card_data.map(data => (
 
@@ -130,22 +137,22 @@ const Internal = () => {
     ));
   }
 
-  const imageList = [backimg1, backimg2];
+   const imageList = [backimg1, backimg2];
 
-  const top = {
-    backgroundImage: `url(${imageList[0]})`, // Initial background image
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    height: '100vh',
-    width: '100%',
-    position: 'absolute',
-    top: '0',
-    zIndex: '-1',
-    animation: 'changeImage 5s infinite',
-  }
+   const top = {
+      backgroundImage: `url(${imageList[0]})`, // Initial background image
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      height: "100vh",
+      width: "100%",
+      position: "absolute",
+      top: "0",
+      zIndex: "-1",
+      animation: "changeImage 5s infinite",
+   };
 
-  const keyframes = `
+   const keyframes = `
     @keyframes changeImage {
       0%, 100% {
         background-image: url(${imageList[0]});
@@ -156,17 +163,17 @@ const Internal = () => {
     }
   `;
 
-  return (
-    <div className={styles.explore} style={top}>
-      <style>{keyframes}</style>
-      <div className={styles.bgitis}>
-      <div className={styles.overlay}>
-        <h1 className={styles.heading}> {compiName} </h1>
-        {information()}
+   return (
+      <div className={styles.explore} style={top}>
+         <style>{keyframes}</style>
+         <div className={styles.bgitis}>
+            <div className={styles.overlay}>
+               <h1 className={styles.heading}> {compiName} </h1>
+               {information()}
+            </div>
+         </div>
       </div>
-      </div>
-    </div>
-  );
-}
+   );
+};
 
 export default Internal;
