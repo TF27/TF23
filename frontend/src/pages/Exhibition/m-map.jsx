@@ -105,7 +105,7 @@ const MapClick = () => {
 
         {selectedCity && (
           <div className="dropdown-menu7">
-            <div className="dropdown-content">
+            <div className="m-dropdown-content">
               <div className="city-image-container">
                 <img
                   src={selectedCity.image}
@@ -114,7 +114,7 @@ const MapClick = () => {
                 />
                 {/* <p className="city-name-over-image">{selectedCity.name}</p> */}
               </div>
-              <div className='city-info-container'>
+              <div className='m-city-info-container'>
               <img src={selectedCity.image1} alt={selectedCity.name} className="ddinfo" />
               <div className='mapData'>
                 <p className='mapDataName'>{selectedCity.in1name}</p>
@@ -122,7 +122,7 @@ const MapClick = () => {
                 <p className='ex-info-styling'>{selectedCity.info1}</p>
               </div>
             </div>
-            <div className='city-info-container'>
+            <div className='m-city-info-container'>
               <img src={selectedCity.image2} alt={selectedCity.name} className="ddinfo" />
               <div className='mapData'>
                 <p className='mapDataName'>{selectedCity.in2name}</p>
@@ -130,7 +130,7 @@ const MapClick = () => {
                 <p className='ex-info-styling'>{selectedCity.info2}</p>
               </div>
             </div>
-            <div className='city-info-container'>
+            <div className='m-city-info-container'>
               <img src={selectedCity.image3} alt={selectedCity.name} className="ddinfo" />
               <div className='mapData'>
                 <p className='mapDataName'>{selectedCity.in3name}</p>
@@ -138,7 +138,7 @@ const MapClick = () => {
                 <p className='ex-info-styling'>{selectedCity.info3}</p>
               </div>
             </div>
-            <div className='city-info-container'>
+            <div className='m-city-info-container'>
               <img src={selectedCity.image4} alt={selectedCity.name} className="ddinfo" />
               <div className='mapData'>
                 <p className='mapDataName'>{selectedCity.in4name}</p>
@@ -146,7 +146,7 @@ const MapClick = () => {
                 <p className='ex-info-styling'>{selectedCity.info4}</p>
               </div>
             </div>
-            <div className='city-info-container'>
+            <div className='m-city-info-container'>
               <img src={selectedCity.image5} alt={selectedCity.name} className="ddinfo" />
               <div className='mapData'>
                 <p className='mapDataName'>{selectedCity.in5name}</p>
@@ -154,7 +154,7 @@ const MapClick = () => {
                 <p className='ex-info-styling'>{selectedCity.info5}</p>
               </div>
             </div>
-            <div className='city-info-container'>
+            <div className='m-city-info-container'>
               <img src={selectedCity.image6} alt={selectedCity.name} className="ddinfo" />
               <div className='mapData'>
                 <p className='mapDataName'>{selectedCity.in6name}</p>
@@ -162,7 +162,7 @@ const MapClick = () => {
                 <p className='ex-info-styling'>{selectedCity.info6}</p>
               </div>
             </div>
-            { selectedCity.info7 && <div className='city-info-container'>
+            { selectedCity.info7 && <div className='m-city-info-container'>
               <img src={selectedCity.image7} alt={selectedCity.name} className="ddinfo" />
               <div className='mapData'>
                 <p className='mapDataName'>{selectedCity.in7name}</p>
@@ -172,7 +172,7 @@ const MapClick = () => {
             </div>
             }
             { selectedCity.info8 && 
-            <div className='city-info-container'>
+            <div className='m-city-info-container'>
               <img src={selectedCity.image8} alt={selectedCity.name} className="ddinfo" />
               <div className='mapData'>
                 <p className='mapDataName'>{selectedCity.in8name}</p>
