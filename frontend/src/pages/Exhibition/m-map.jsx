@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../Lectures/map2.css";
+import "../Lectures/m-map.css";
 
 // East europe
 import bhuman from './assets/mapContent/easteurope/bhuman.jpg';
