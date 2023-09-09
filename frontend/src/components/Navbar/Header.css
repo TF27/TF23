@@ -4,62 +4,32 @@
   background-color: black;
   transition: background-color 0.5s ease-in-out;
 }
-/* 
-.header_competitions{
-    background-color: blueviolet;
-}
-
-.header_gallery{
-    background-color: chocolate;
-}
-
-.header_lectures{
-    background-color: fuchsia;
-}
-
-.header_summits{
-    background-color: rosybrown;
-}
-
-.header_workshops{
-    background-color: goldenrod;
-}
-
-.header_exhibitions{
-    background-color: brown;
-} */
-
-.navbarClassName {
-}
 
 .hamburger {
   display: none;
 }
 
-.webNav {
-  display: flex;
-  justify-content: space-between;
-}
 .logoDiv {
   justify-content: center;
 }
-.webNav ul {
-  justify-content: space-around;
+.webNav {
+  justify-content: space-between;
   display: flex;
   width: 100%;
-  margin-top: 14px;
+  /* margin-top: 14px; */
 }
-.webNav ul li {
+.webNav li {
   list-style: none;
 }
-.webNav ul li a {
-  font-size: 1rem;
+.webNav li a {
+  /* font-size: 1rem; */
   text-decoration: none;
   color: #fff;
   transition: color 0.3s ease-in-out;
   font-family: Landasans;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 24px;
+  /* font-weight: bold; */
 }
 .bar {
   display: block;
@@ -70,6 +40,26 @@
   transition: all 0.3s ease-in-out;
   background-color: white;
   /* position: inherit; */
+}
+
+@media (max-width: 1672px){
+  .webNav li a{
+    font-size: 22px;
+  }
+  .logout_rect2{
+    font-size: 19px;
+    height: 40px;
+    width: 90px;
+  }
+  .logout_rect1{
+    height: 40px;
+    width: 90px;
+  }
+}
+@media (max-width: 1550px){
+  .webNav li a{
+    font-size: 20px;
+  }
 }
 
 .nav_slider ul {
@@ -126,18 +116,15 @@
 }
 .navRow{
   position: relative;
-  top: 20px;
-  height: 80%;
+  top: 8px;
+  height: 100%;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: space-around;
 }
 
-.wnavLeft{
-  width: 30%;
-  overflow-x: hidden;
-  left: -25px;
-}
-.wnavRight{
-  width: 30%;
-  overflow-x: hidden;
+.wnavLeft, .wnavRight{
+  width: 35%;
 }
 
 .sign-out-div {
@@ -164,7 +151,7 @@
   cursor: pointer;
   font-family: Landasans;
 }
-@media (max-width: 768px) {
+@media (max-width: 848px) {
   .navfunchide {
     background-image: none !important;
   }
@@ -279,17 +266,86 @@
   /* height: 160px; */
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
 }
 
 .navfuncshow {
   position: fixed;
-  top: -20px;
+  top: 0px;
   transition: top 0.5s ease-in-out;
   /* background-image: url("./navimg.png"); */
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom;
   background-size: cover;
-  width: 100vw;
+  width: 100%;
   /* height: 170px; */
+}
+
+/* @media (max-width: 1524px) {
+  .webNav li a{
+    font-size: 18px;
+  }
+} */
+
+@media (max-width: 1240px){
+  .navSummit{
+    display: block;
+    width: 80%;
+    margin: auto;
+    top: -8px;
+    position: relative;
+  }
+  .logoDiv img{
+    top: 14px;
+  }
+}
+
+.logoDiv img{
+  position: relative;
+}
+@media (max-width: 1120px){
+  .logoDiv img{
+    width: 17vw;
+  }
+  .navContact{
+    display: block;
+    width: 80%;
+    margin: auto;
+    top: -8px;
+    position: relative;
+  }
+}
+@media (max-width: 1040px){
+  .webNav li a{
+    font-size: 18px;
+  }
+  .logout_rect2{
+    height: 32px;
+    width: 80px;
+    font-size: 17px;
+  }
+  .logout_rect1{
+    height: 32px;
+    width: 80px;
+  }
+  .signin{
+    margin-top: -2px;
+  }
+}
+@media (max-width: 878px){
+  .webNav li a{
+    font-size: 17px;
+  }
+  .logout_rect2{
+    height: 32px;
+    width: 80px;
+    font-size: 16px;
+  }
+  .logout_rect1{
+    height: 32px;
+    width: 80px;
+  }
+  .signin{
+    margin-top: -2px;
+  }
 }
