@@ -119,7 +119,7 @@ const WorldMap = () => {
               <img src={hoveredCity.image} alt={hoveredCity.name} className="dropdown-image" />
               {/* <p className="city-name-over-image">{hoveredCity.name}</p> */}
             </div>
-            <div className='city-info-container'>
+            <div className="city-info-container">
               <img src={hoveredCity.image1} alt={hoveredCity.name} className="ddinfo" />
               <div className='mapData'>
                 <p className='mapDataName'>{hoveredCity.in1name}</p>
@@ -127,7 +127,7 @@ const WorldMap = () => {
                 <p className='ex-info-styling'>{hoveredCity.info1}</p>
               </div>
             </div>
-            <div className='city-info-container'>
+            <div className="city-info-container">
               <img src={hoveredCity.image2} alt={hoveredCity.name} className="ddinfo" />
               <div className='mapData'>
                 <p className='mapDataName'>{hoveredCity.in2name}</p>

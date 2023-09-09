@@ -3,6 +3,7 @@
   height: 100vh;
   padding-top: 50vh;
   overflow-x: hidden;
+  top: 0vh;
 }
 
 .main_carousel .slides{
@@ -81,6 +82,11 @@ transition: all 400ms ease-in-out;
 .main_carousel .button-container .button{
 cursor: pointer;
 }
+.back-button{
+  position: relative;
+  top: -115%;
+  left: -46%;
+}
 @media(max-width:748px){
 .main_carousel .slides .slide.next{
   scale: 0;
@@ -116,6 +122,8 @@ cursor: pointer;
 }
 .main_carousel .slides .slide{
   left: 35%;
+  
+  ;
   transition: transform 500ms ease-in-out; 
 }
 .main_carousel .button-container{
@@ -123,11 +131,16 @@ cursor: pointer;
   margin-bottom: 20px;
 }
 .main_carousel{
-  margin-top: 150px;
   overflow-x: hidden;
+  padding-top: 50vh;
+  top: -30vh;
 }
 .slides{
 overflow-x: hidden;
+}
+.back-button{
+  left: -41%;
+  top: -94%;
 }
 }
 
