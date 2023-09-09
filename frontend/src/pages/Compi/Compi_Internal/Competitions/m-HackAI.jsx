@@ -197,7 +197,7 @@ const HackAI = () => {
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
                     Atharv Apshinge<br/>
-                    +91 9324589830<br/>
+                    +91 93245 89830<br/>
                     atharv@techfest.org
                     </div>
                 </div>

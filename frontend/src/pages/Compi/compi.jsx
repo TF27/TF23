@@ -10,6 +10,7 @@ import ContactCard from "../../components/Contact/contact";
 import img from "../Lectures/assets/europe.jpg";
 import img2 from "../Lectures/assets/lectbg.png";
 import "./compi_animation.css";
+import '../Lectures/lecture.css';
 
 const Compi = () => {
   const [data, setData] = useState([]);
@@ -65,7 +66,7 @@ const Compi = () => {
       <Technorion />
       <OurReach />
       {/* {card()} */}
-      {/* <div className="checkThis">
+       <div className="checkThis">
         <h1 style={{ marginTop: "80px", marginBottom: "40px" }}>
           CHECK THIS OUT
         </h1>
@@ -132,7 +133,7 @@ const Compi = () => {
             />
           </div>
         </div>
-      </div> */}
+      </div> 
     </div>
   );
 };

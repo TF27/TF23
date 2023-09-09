@@ -3,7 +3,7 @@ import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
 
-const CozmoClench = () => {
+const Codecode = () => {
 
     const [open, setOpen] = useState(false);
 
@@ -26,19 +26,19 @@ const CozmoClench = () => {
     const data = {
         rows: [
           {
-            title: "Why should I participate in the CozmoClench?",
-            content: "The competition provides a platform for students to design and construct their own gripper bot which can drive through an obstacle-filled path and put the objects in the respective target zones. It also provides an opportunity for students to work as a team and test their skills"
+            title: "Why should I participate in the CoDecode?",
+            content: "The competition provides the participants with real life problems which they have to solve through code using their programming and algorithmic skills. Participants work together to solve the problems in a given time"
           },
           {
             title: "How to register?",
-            content: 'Follow this steps for registration : www.techfest.org > Competitions > CozmoClench > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
+            content: 'Follow this steps for registration : www.techfest.org > Competitions > CoDecode > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
           },
           {
             title: "How many people can be there in one team?",
-            content: 'One team can have a maximum of 4 members.'
+            content: 'One team can have a maximum of 2 members.'
           },
           {
-            title: "Is it free to register for Meshmerize?",
+            title: "Is it free to register for CoDecode?",
             content: 'Yes, it is free to register.'
           },
           {
@@ -59,7 +59,7 @@ const CozmoClench = () => {
           },
           {
             title: "How can I remove members from my team (as a team leader)?",
-            content: 'Click on the Remove Member button and then select the member you wish to remove.'
+            content: 'You cannot remove any team member.'
           },
           {
             title: "What happens when the team leader leaves their team?",
@@ -89,7 +89,22 @@ const CozmoClench = () => {
             title: "How many teams can I join?",
             content: 'You can join only one team in one competition. Participating in more than one team will get you DISQUALIFIED.'
           },
-    
+          {
+            title: "Will any charging facility for our equipment be provided at the venue?",
+            content: 'Charging points for laptops would be provided in case of special requests. There might be a limited number of charging points, so all participants are advised to charge their devices properly before the competition.'
+          },
+          {
+            title: "How many stages does the competition have?",
+            content: 'Two, namely zonal qualifier and finale. Top five teams from Each Zonal Qualifier will qualify for the Grand Finale at Techfest 2023-24.'
+          },
+          {
+            title: "Do we need to carry laptops?",
+            content: 'Yes, each team must have at least one laptop with them.'
+          },
+          {
+            title: "Can we use online compilers for our code compilation?",
+            content: 'Online Compilers are strictly not allowed. Any team found using them, will be disqualified from the competition.'
+          },
     
         ],
       };
@@ -115,7 +130,7 @@ const CozmoClench = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'About' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>The competition provides a platform for students to design and construct their own gripper bot which can drive through an obstacle-filled path and put the objects in the respective target zones. It also provides an opportunity for students to work as a team and test their skills</div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Teams are required to unravel real-life issues through coding. Participants should tackle the most significant conceivable questions in indicated time interim in the most proficient way. The programming aptitudes of members would be tested in this competition.</div>
                 </div>
             </div>
             <div>
@@ -161,12 +176,12 @@ const CozmoClench = () => {
                 <div className={`${styles.whatd} ${open === 'Rules' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                      1. Every team has to register online on the official Techfest website for the competition.
-                      <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references.
-                      <br/>3. The decision of the organizers or judges shall be treated as final and binding on all.
-                      <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
-                      <br/>5. Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
-                      <br/>6. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.</div>
+                    1. Participants have to bring their own laptops during the competition.
+                    <br/>2. Teams will be responsible for their devices. It is advised that laptops should be charged before the competition.
+                    <br/>3. Use of online compilers and the internet is not allowed. Participants have to come with offline compilers pre-installed on their laptops.
+                    <br/>4. Mobile phones are not allowed during the competition.
+                    <br/>5. The organisers reserve the right to change any or all of the above rules as they deem fit. Change in rules, if any, will be highlighted on the website and notified to the registered teams.
+                    <br/>6. Online Compiler is strictly not allowed. Any team found using it will be disqualified from the competition.</div>
                 </div>
             </div>
             <div>
@@ -177,9 +192,9 @@ const CozmoClench = () => {
                 <div className={`${styles.whatd} ${open === 'Contact' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                    Tarun Kumar<br/>
-                    +91 75499 52736<br/>
-                    abhishek@techfest.org
+                    Atharv Apshinger<br/>
+                    +91 93245 89830<br/>
+                    atharv@techfest.org
                     </div>
                 </div>
             </div>
@@ -187,4 +202,4 @@ const CozmoClench = () => {
     );
 }
 
-export default CozmoClench;
+export default Codecode;
