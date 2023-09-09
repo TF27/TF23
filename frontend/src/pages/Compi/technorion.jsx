@@ -336,7 +336,7 @@ const Technorion = () => {
                         <td>15/10/23</td>
                      </tr>
                      <tr>
-                        <td>Swami Keshavanand Institute of Technology, M&G</td>
+                        <td>Swami Keshavanand Institute of Technology</td>
                         <td>Jaipur</td>
                         <td>15/10/23</td>
                      </tr>

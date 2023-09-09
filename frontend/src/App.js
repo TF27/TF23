@@ -114,7 +114,7 @@ function App() {
 
                         <Route path='/legals' element={<Legals /> } />
                         
-
+                        {/* <Route path='/:compiName' element={<CompiInternal />} /> */}
                         <Route path='competitions/:compiName' element={<CompiInternal />} />
                         <Route path='competitions/:compiName/register' element={<Protected><Reg /></Protected>} />
                         <Route path='competitions/:compiName/createTeam' element={<Protected><Create_Team  /></Protected>} />

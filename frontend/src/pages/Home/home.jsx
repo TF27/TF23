@@ -14,33 +14,38 @@ import exh1 from "./assets/explore/Exh1.jpg";
 import exh2 from "./assets/explore/Exh2.jpg";
 import exh3 from "./assets/explore/Exh3.jpeg";
 import exh4 from "./assets/explore/Exh4.jpg";
+import comp1 from "./assets/explore/Compi1.jpeg";
+import comp2 from "./assets/explore/Compi2.jpeg";
+import comp3 from "./assets/explore/Compi3.jpg";
+import comp4 from "./assets/explore/Compi4.jpg";
 
 const dataCompetitions = [
   {
-    image: exh1,
-    name: "Sophia (Hong Kong)",
+    image: comp1,
+    name: "Cozmo Clench",
   },
   {
-    image: exh2,
-    name: "Gravity Industries (UK)",
+    image: comp2,
+    name: "Meshmerize",
   },
   {
-    image: exh3,
-    name: "Virgin Hyperloop (USA)",
+    image: comp3,
+    name: "Techfest Olympiad",
   },
   {
-    image: exh4,
-    name: "AirCar (Turkey)",
+    image: comp4,
+    name: "CoDecode",
   },
 ];
 const dataLectures = [
   {
     image: lec1,
     name: "Late Dr. APJ Abdul Kalam",
+    posi: "(Former President)",
   },
   {
     image: lec2,
-    name: "His Holiness the 14th Dalai Lama",
+    name: "His Holiness - 14th Dalai Lama",
     posi: "(Nobel Laureate, Peace)",
   },
   {
@@ -155,15 +160,6 @@ const Home = () => {
           </div>
           <div className={`col-12 col-lg-8 ${styles.themeText}`}>
           Welcome to the Official Website of the 27th Edition of Asia's Largest Science and Technology Festival, Techfest 2023-2024! We at Techfest are students of IIT Bombay, who have been engaged over the past few months to structure Techfest's 27th edition. With the plethora of events planned this year, we are sure you will have an experience of a lifetime - something that you will never forget; a journey that will lift your spirits. And the starting point is this website! Here, you will find complete information about Techfest 2023-24, so make sure you explore all the pathways available to you. Are you ready to unlock a mystical realm?
-            {/*<br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam qui
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-            libero non quidem qui possimus itaque ex molestias doloremque,
-            molestiae nobis excepturi cumque delectus aliquid minus maiores enim
-            debitis numquam fugit? Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit. Porro nihil expedita reprehenderit voluptas atque
-            ipsum assumenda, unde saepe. Sequi iste facilis eius dolorem vel ad
-            modi aspernatur accusantium fuga sapiente. */}
           </div>
         </div>
         <div className={`${styles.titSpn} ${styles.homeTheme}`}>
@@ -179,15 +175,6 @@ const Home = () => {
           </div>
           <div className={`col-12 col-lg-8 ${styles.themeText}`}>
             Teleport to the 27th Edition of Techfest and celebtrate the interplay between Magic, Science & Technology. Step into the realm of wonders where the frontiers of imagination are translated into real-world possibilities. From ancient mysticism to cutting-edge innovations, explore the endless spectrum of creativity and ingenuity. Get ready for a Techno-Mystical extravaganza and embark on a miraculous journey of discovery into the unknown! <br />
-            {/*<br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam qui
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-            libero non quidem qui possimus itaque ex molestias doloremque,
-            molestiae nobis excepturi cumque delectus aliquid minus maiores enim
-            debitis numquam fugit? Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit. Porro nihil expedita reprehenderit voluptas atque
-            ipsum assumenda, unde saepe. Sequi iste facilis eius dolorem vel ad
-            modi aspernatur accusantium fuga sapiente. */}
           </div>
         </div>
       </div>
