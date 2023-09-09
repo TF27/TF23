@@ -92,13 +92,13 @@ const TechfestOlympiad = () => {
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Stage 1:
+            Stage 1:<br/>
             This stage will be held at each of the 5 Zonal Qualifiers. Top 3 students will qualify for the STAGE 2 to be held during Techfest 2023-24 (provided their score is more than a minimum cut-off score which will be decided later).
-
-            Stage 2:
+            <br/><br/>
+            Stage 2:<br/>
             This stage will be held at IIT Bombay campus during Techfest from 27th to 29th December 2023. These 75 students will go through a screening round and the top 15 students will go ahead to participate in the Grand Finale.
-
-            Stage 3:
+            <br/><br/>
+            Stage 3:<br/>
             Personal Interview round to be taken by professional person from IIT Bombay testing critical thinking and pressure handling skills.
               </div>
             </div>
@@ -106,9 +106,9 @@ const TechfestOlympiad = () => {
           <div id="Timeline" className={`${styles.info} ${activeCity === 'Timeline' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Round 1:
+            Round 1:<br/>
             Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.
-            Round 2:
+            <br/><br/>Round 2:<br/>
             Finale will be held at Techfest 2023-24 during 27th - 29th December 2023.
               </div>
             </div>
@@ -128,21 +128,21 @@ const TechfestOlympiad = () => {
           <div id="Rules" className={`${styles.info} ${activeCity === 'Rules' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Every team has to register online on the official Techfest website for the competition.
-            A Team ID will be allocated to the team on registration which shall be used for future references.
-            The decision of the organizers or judges shall be treated as final and binding on all.
-            No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
-            Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
-            All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
+            1. Every team has to register online on the official Techfest website for the competition.
+            <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references.
+            <br/>3. The decision of the organizers or judges shall be treated as final and binding on all.
+            <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
+            <br/>5. Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
+            <br/>6. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
               </div>
             </div>
           </div>
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Abhishek Kedare
-              +91 75585 88254
-              abhishek@techfest.org
+              Akshat Gupta<br/>
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:akshat@techfest.org`}>akshat@techfest.org</div>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:96196788505`}>9619678850</div>
               </div>
             </div>
           </div>

@@ -1,0 +1,183 @@
+.outer1{
+  height: calc(60vw + 420px);
+}
+.world_map_container{
+    position: relative;
+    margin-top: 5%;
+    max-height: 1000px;
+
+}
+.map_image{
+    background-image: url('./assets/map.png');
+    background-size: cover;
+    width: 80%;
+    height: 50vw;
+    background-repeat: no-repeat;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+@media (max-width: 768px) {
+  .map_image{
+    width: 100%;
+  }
+  
+}
+.city-circle {
+    position: absolute;
+    width: 16px; 
+    height: 16px;
+    background-color:rgb(128, 99, 244); 
+    border-radius: 50%; 
+    border: 2px#f7f7fb;
+    cursor: pointer;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.1);
+  }
+  .city-circle:hover{
+    background-color: rgb(89, 50, 246);
+    box-shadow: 0 0 30px 20px rgba(255, 255, 255, 0.4);
+  }
+
+.dropdown-menu7 {
+  position: absolute;
+  
+  border: 1px solid #f7f7fb;
+  border-radius: 5px;
+  background-color: rgba(6, 6, 6, 0.3);
+  color: white;
+  padding: 10px;
+  z-index: 3;
+  text-align: center;
+ /* Prevent the dropdown menu from blocking hover events */
+  max-height: 400px; /* Set a maximum height for the dropdown menu */
+  width: 90vw;
+  overflow-y: visible; /* Enable scrolling when content exceeds the maximum height */
+  overflow-x: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  margin-top: 7px;
+}
+
+.city-image-container {
+  position: relative;
+  border: #f7f7fb;
+  border-radius: 4px;
+}
+
+.city-name-over-image {
+  position: absolute;
+  top: 50%; /* Adjust to vertically center the text */
+  left: 50%; /* Adjust to horizontally center the text */
+  transform: translate(-50%, -50%);
+  border: #f7f7fb;
+  border-radius: 4px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: xx-large;
+  font-family: 'Forum', sans-serif;
+  border: #f7f7fb;
+}
+
+.city-info-container{
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;;
+}
+
+.m-ex-info-styling{
+  width: 50px;
+  font-family: 'Forum', sans-serif;
+  font-size: 18px;
+  flex: auto;
+}
+
+.ddinfo{
+  width: 50%;
+  height: auto;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  border: #f7f7fb;
+  border-width: 1px;
+}
+.dropdown-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border: #f7f7fb;
+  border-radius: 1px;
+}
+
+.dropdown-menu76::-webkit-scrollbar {
+  width: 6px;
+  height:6px; /* Set the width of the scrollbar */
+}
+
+.dropdown-menu76::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.3); /* Set the background color of the scrollbar track */
+}
+
+.dropdown-menu76::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3); /* Set the color of the scrollbar thumb */
+  border-radius: 3px; /* Set the border radius of the scrollbar thumb */
+}
+
+.dropdown-menu76:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5); /* Set the color of the scrollbar thumb on hover */
+}
+
+.mob-text1 p {
+  margin-bottom: 5px; /* Add some margin to the paragraphs inside the dropdown menu */
+}
+
+.city-circle:hover ~ .dropdown-menu76,
+.dropdown-menu76:hover {
+  opacity: 1;
+  pointer-events: auto; /* Allow hover events on the dropdown menu */
+  animation: animation_popup 2s;
+}
+
+.city-circle:hover::before {
+  opacity: 0.7;
+  pointer-events: none; /* Prevent the city circle from blocking hover events */
+  animation: hoverblock 4s;
+}
+
+@keyframes animation_popup {
+  from {
+    max-height: 0px;
+    max-width: 0px;
+  }
+  to {
+    max-height: 200px;
+    max-width: 300px;
+  }
+}
+
+@keyframes hoverblock {
+  0% {
+    pointer-events: auto;
+  }
+  50% {
+    pointer-events: auto;
+  }
+  100% {
+    pointer-events: none;
+  }
+}
+@media(max-width:310px){
+  .dropdown-menu7{
+    width: auto;
+    max-height: 300px;
+    max-width: 300px;
+    left: 10px;
+    right: 10px;
+    transform: none;
+    margin-top: 7px;
+  }
+  .outer1{
+    height: calc(60vw + 320px );
+  }
+}
+

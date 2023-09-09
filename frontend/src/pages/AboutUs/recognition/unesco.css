@@ -4,13 +4,26 @@
     /* display: inline-block;
     vertical-align: middle; */
     /* flex-shrink: 0; */
-    background: url("./rectangleRecogi.jpeg") lightgray 50% / cover no-repeat;
+    /* background: url("./rectangleRecogi.jpeg") lightgray 50% / cover no-repeat; */
     border-radius: 20px;
     /* align-items: center; */
 }
 
 .unesco{
     margin: 5vw 0;
-    width: 12vw;
-    height: 10vw;
+    width: 24vw;
+    height: 20vw;
+}
+
+@media (max-width:550px) {
+    .unesco-card{
+        display: flex;
+        height: 55vw;
+        width: auto;
+    }
+    .unesco{
+        margin: 5vw 0;
+        width: 42vw;
+        height: 36vw;
+    }
 }

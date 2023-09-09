@@ -31,20 +31,6 @@
   width: 40%;
 }
 
-@media screen and (max-width: 800px) {
-  .desc {
-    flex-direction: column;
-    width: 90%;
-  }
-  .desc_cont{
-    width: 100%;
-  }
-  .mapContainer{
-    width: 70%;
-    margin: 0 auto;
-  }  
-}
-
 .descimage{
   width: 100%;
 }
@@ -70,6 +56,27 @@
   padding: 5px;
   font-size: 18px;
   text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+  .desc {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .descT{
+    font-size: 13px;
+}
+.textContainer th, .textContainer td {
+  font-size: 13px;
+}
+  .desc_cont{
+    width: 100%;
+  }
+  .mapContainer{
+    width: 70%;
+    margin: 0 auto;
+  }  
 }
 
 /*==========================================================cards=============================================================*/
@@ -107,7 +114,7 @@
     font-size: 120%;
     letter-spacing: 0.1em;
     text-align: left;
-    color: #BB9564;
+    color: #FFE381;
     font-weight: 400;
     text-transform: uppercase;
     padding: 12px;
@@ -122,7 +129,7 @@
     transition: 1s ease;
 }
 .card_title h3{
-    color: #BB9564;
+    color:  #FFE381;
     font-family: 'Forum', sans-serif;
     /* letter-spacing: 0.1em; */
     padding-top: 5%;
@@ -165,6 +172,7 @@
     padding-top: .4vw;
     padding-left: 8%;
     padding-bottom: .4vw;
+    color: #FFE381;
 }
 .card_exp{
     border-left: 1px solid #BB9564;
@@ -176,7 +184,7 @@
 
 
 .card_reg a{
-    color: #BB9564;
+    color:  #FFE381;
     font-family: 'Forum', sans-serif;
     letter-spacing: 0.1em;
     font-size:18px;
@@ -295,7 +303,9 @@
     font-family: 'Forum', sans-serif;
     color: #BB9564;
 }
-
+.share_rect2:hover{
+    color:#A7E9FF;
+}
 .indiamapContainer {
     display: flex;
     align-items: center;
@@ -409,7 +419,11 @@
   }
 
   /* Add hover styles for card_reg and card_exp */
-.card_reg:hover button{
+.card_reg:hover a{
+  color: #A7E9FF; /* Change the color to blue on hover */
+}
+
+.card_exp:hover a{
   color: #A7E9FF; /* Change the color to blue on hover */
 }
 .fspark4:hover {
