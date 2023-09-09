@@ -96,7 +96,7 @@ function PrivacyPolicy(){
         <div className="container justify-content-center" style={{margin:'0 auto', marginTop:'40 px', marginBottom: '50px',borderRadius:'10px'}}>
             <ul className="list-group">
         <div className="item" >
-        <li  className=" list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded" onClick={f1}>GENERAL DATA PROTECTION RULES (GDPR)</li>
+        <li  className=" list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded " onClick={f1}>GENERAL DATA PROTECTION RULES (GDPR)</li>
         <div className={`${legals.whatd} ${toggle1 ? legals.whatdopen: ''} drop-content border border-light border-1`} >
             <p style={{transition:'ease-in-out'}}>We are a Data Controller of your information.
 TECHFEST IIT BOMBAY legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Information we collect and the specific context in which we collect the information:

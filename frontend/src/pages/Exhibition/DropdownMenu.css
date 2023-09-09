@@ -1,7 +1,7 @@
 .dropdown-menu76 {
   position: absolute;
-  transform: translate(0%, 0%);
-  border: 1px solid blue;
+  transform: translate(0%,0%);
+  border: 1px solid rgb(253, 253, 253);
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
@@ -12,19 +12,42 @@
   transition: opacity 0.3s smooth;
   transition-duration: 1s;
   pointer-events: none; /* Prevent the dropdown menu from blocking hover events */
-  max-height: 200px; /* Set a maximum height for the dropdown menu */
-  max-width: 30%;
+  height: 400px; /* Set a maximum height for the dropdown menu */
+  width: 400px;
   overflow-y: auto; /* Enable scrolling when content exceeds the maximum height */
   overflow-x: auto;
 }
 
+.dropdown-menu75 {
+  position: absolute;
+  transform: translate(-100%,0%);
+  border: 1px solid rgb(253, 253, 253);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 10px;
+  z-index: 3;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s smooth;
+  transition-duration: 1s;
+  pointer-events: none; /* Prevent the dropdown menu from blocking hover events */
+  height: 400px; /* Set a maximum height for the dropdown menu */
+  width: 400px;
+  overflow-y: auto; /* Enable scrolling when content exceeds the maximum height */
+  overflow-x: auto;
+}
+
+
 .city-image-container {
   position: relative;
+  border: white;
+  border-width: 1px;
 }
 
 .city-name-over-image {
   position: absolute;
-  top: 50%; /* Adjust to vertically center the text */
+  top: 100%; /* Adjust to vertically center the text */
   left: 50%; /* Adjust to horizontally center the text */
   transform: translate(-50%, -50%);
   padding: 5px 10px;
@@ -48,15 +71,18 @@
 }
 
 .ddinfo{
-  width: 50%;
-  height: auto;
+  width: 7vw;
+  height: 5vw;
   margin-bottom: 10px;
   margin-left: 0px;
+  border: 1px solid white;
+  
 }
 .dropdown-image {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
+  border: 1px solid white;
 }
 
 .dropdown-menu76::-webkit-scrollbar {
@@ -69,12 +95,30 @@
 }
 
 .dropdown-menu76::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.3); /* Set the color of the scrollbar thumb */
+  background-color: rgb(255, 255, 255); /* Set the color of the scrollbar thumb */
   border-radius: 3px; /* Set the border radius of the scrollbar thumb */
 }
 
 .dropdown-menu76:hover::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.5); /* Set the color of the scrollbar thumb on hover */
+  background-color: rgba(253, 252, 251, 0.5); /* Set the color of the scrollbar thumb on hover */
+}
+
+.dropdown-menu75::-webkit-scrollbar {
+  width: 6px;
+  height:6px; /* Set the width of the scrollbar */
+}
+
+.dropdown-menu75::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.3); /* Set the background color of the scrollbar track */
+}
+
+.dropdown-menu75::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.696); /* Set the color of the scrollbar thumb */
+  border-radius: 3px; /* Set the border radius of the scrollbar thumb */
+}
+
+.dropdown-menu75:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(253, 252, 251, 0.5); /* Set the color of the scrollbar thumb on hover */
 }
 
 .mob-text1 p {
@@ -85,7 +129,13 @@
 .dropdown-menu76:hover {
   opacity: 1;
   pointer-events: auto; /* Allow hover events on the dropdown menu */
-  animation: animation_popup 2s;
+  animation: animation_popup 0.1s;
+}
+.city-circle:hover ~ .dropdown-menu75,
+.dropdown-menu75:hover {
+  opacity: 1;
+  pointer-events: auto; /* Allow hover events on the dropdown menu */
+  animation: animation_popup 0.1s;
 }
 
 .city-circle:hover::before {
@@ -100,8 +150,8 @@
     max-width: 0px;
   }
   to {
-    max-height: 200px;
-    max-width: 30%;
+    max-height: 400px;
+    max-width: 400px;
   }
 }
 
@@ -122,9 +172,13 @@
   flex-direction: column;
   text-align: left;
   padding-left: 5px;
+  font-family: 'Forum', sans-serif;
+  font-weight: bold;
 }
 .mapData p{
   margin: 0;
+  font-weight: 400;
+  font-family: 'Forum', sans-serif;
 }
 .mapDataName{
   font-size: 13px;
