@@ -3,7 +3,7 @@ import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
 
-const CozmoClench = () => {
+const UrbanFuturism = () => {
     const [activeCity, setActiveCity] = useState('About');
     const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {
@@ -13,24 +13,25 @@ const CozmoClench = () => {
       const data = {
         rows: [
           {
-            title: "Why should I participate in the CozmoClench?",
-            content: "The competition provides a platform for students to design and construct their own gripper bot which can drive through an obstacle-filled path and put the objects in the respective target zones. It also provides an opportunity for students to work as a team and test their skills"
-          },
-          {
             title: "How to register?",
-            content: 'Follow this steps for registration : www.techfest.org > Competitions > CozmoClench > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
+            content: 'Follow this steps for registration : www.techfest.org > Competitions > Urban Futurism: Building Smart Cities > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
           },
           {
             title: "How many people can be there in one team?",
             content: 'One team can have a maximum of 4 members.'
           },
           {
-            title: "Is it free to register for CozmoClench?",
+            title: "Who can participate?",
+            content: 'Any individual with a valid ID card, Early stage startups, Upto 3 years old college passouts can participate in the competition'
+          },
+          
+          {
+            title: "Is it free to register for Urban Futurism: Building Smart Cities",
             content: 'Yes, it is free to register.'
           },
           {
             title: "How can I make my own team (as a team leader)?",
-            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> CozmoClench -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
+            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Urban Futurism: Building Smart Cities -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
           },
           {
             title: "What is the Registered Mail ID?",
@@ -46,7 +47,7 @@ const CozmoClench = () => {
           },
           {
             title: "How can I remove members from my team (as a team leader)?",
-            content: 'You cannot remove a team member.'
+            content: 'You cannot remove a team member. You can dissolve the team and form a new one.'
           },
           {
             title: "What happens when the team leader leaves their team?",
@@ -101,7 +102,7 @@ const CozmoClench = () => {
         marginBottom: '20px',
         maxWidth: '80%',
         margin: 'auto',
-        rowContentMarginBottom: '0',        
+        rowContentMarginBottom: '0',
       }
 
     const lol = {
@@ -126,32 +127,34 @@ const CozmoClench = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            The competition provides a platform for students to design and construct their own gripper bot which can drive through an obstacle-filled path and put the objects in the respective target zones. It also provides an opportunity for students to work as a team and test their skills
-              </div>
+            Smart cities are urban areas that utilise technology and data to improve the quality of life for residents, enhance sustainability, and optimise resource management. They integrate various technologies, such as Internet of Things (IoT), artificial intelligence (AI), big data analytics, and renewable energy systems, to create more efficient and connected urban environments.
+            Urban planning plays a crucial role in the development of smart cities. It involves designing and organising urban spaces to accommodate the needs of the population while considering factors like infrastructure, transportation, housing, public services, and environmental sustainability. In the context of smart cities, urban planning focuses on leveraging technology and data-driven insights to improve city operations and enhance the overall urban experience. </div>
             </div>
           </div>
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Top 5 teams from each Zonal Qualifier will qualify for the Grand Finale that will be held during Techfest 2022-23 (Only if they score higher than the minimum cut-off score)
-              </div>
+            Abstract Submission: <br />
+            Participants have to submit a report based on the work done so far and also consistent with the format mentioned in the problem statement. <br />
+            Final Report Submission: <br />
+            Participants have to submit a final report in which their research, proposed solution, technical aspects, benefit to the users, etc. all should be mentioned as given in the Problem Statement. <br />
+            Final Presentation: <br />
+            The final shortlisted participants would be getting a chance to present and explain their solutions in front of judges during the main fest which will be held in IIT Bombay. <br />          </div>
             </div>
           </div>
           <div id="Timeline" className={`${styles.info} ${activeCity === 'Timeline' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-              <ul>
-                <li>
-                  Round 1:<br/>
-                  Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.
-                </li>
-                <li>
-                Round 2:<br/>
-                Finale will be held at Techfest 2023-24 during 27th - 29th December 2023. 
-                </li>
-              </ul>
-            
-            
+            Last Date of Registration: <br />
+            30th October 2023 <br /> <br />
+            Abstract Report Submission: <br />
+            10th November 2023 <br /> <br />
+            Shortlisting of the Abstracts: <br />
+            20th November,2023 <br /> <br />
+            Final Report Submission: <br />
+            15th December, 2023 <br /> <br />
+            Final Presentation: <br />
+            27th December, 2023 <br />
               </div>
             </div>
           </div>
@@ -182,9 +185,9 @@ const CozmoClench = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Tarun Kumar<br/>
-              <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:abhishek@techfest.org`}>abhishek@techfest.org</div>
-                <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7549952736`}>7549952736</div>
+              Abhishek Kedare<br/>
+              +91 75585 88254<br/>
+              abhishek@techfest.org
               </div>
             </div>
           </div>
@@ -193,4 +196,4 @@ const CozmoClench = () => {
      );
 }
  
-export default CozmoClench;
+export default UrbanFuturism;

@@ -3,7 +3,7 @@ import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
 
-const CozmoClench = () => {
+const TechAid = () => {
     const [activeCity, setActiveCity] = useState('About');
     const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {
@@ -13,24 +13,24 @@ const CozmoClench = () => {
       const data = {
         rows: [
           {
-            title: "Why should I participate in the CozmoClench?",
-            content: "The competition provides a platform for students to design and construct their own gripper bot which can drive through an obstacle-filled path and put the objects in the respective target zones. It also provides an opportunity for students to work as a team and test their skills"
+            title: "How to register?",
+            content: 'Follow this steps for registration : www.techfest.org > Competitions > Tech Aid > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
           },
           {
-            title: "How to register?",
-            content: 'Follow this steps for registration : www.techfest.org > Competitions > CozmoClench > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
+            title: "Who can participate?",
+            content: 'Any individual with a valid ID card, Early stage startups, Upto 3 years old college passouts can participate in the competition.'
           },
           {
             title: "How many people can be there in one team?",
             content: 'One team can have a maximum of 4 members.'
           },
           {
-            title: "Is it free to register for CozmoClench?",
+            title: "Is it free to register for Meshmerize?",
             content: 'Yes, it is free to register.'
           },
           {
             title: "How can I make my own team (as a team leader)?",
-            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> CozmoClench -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
+            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Tech Aid -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
           },
           {
             title: "What is the Registered Mail ID?",
@@ -46,7 +46,7 @@ const CozmoClench = () => {
           },
           {
             title: "How can I remove members from my team (as a team leader)?",
-            content: 'You cannot remove a team member.'
+            content: 'You cannot remove a team member once added, you can dissolve the team and form a new one.'
           },
           {
             title: "What happens when the team leader leaves their team?",
@@ -101,7 +101,7 @@ const CozmoClench = () => {
         marginBottom: '20px',
         maxWidth: '80%',
         margin: 'auto',
-        rowContentMarginBottom: '0',        
+        rowContentMarginBottom: '0',
       }
 
     const lol = {
@@ -126,32 +126,37 @@ const CozmoClench = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            The competition provides a platform for students to design and construct their own gripper bot which can drive through an obstacle-filled path and put the objects in the respective target zones. It also provides an opportunity for students to work as a team and test their skills
-              </div>
+            The aim of TechAid: Innovations for Inclusion is to enhance accessibility, independence, and overall quality of life for people with disabilities. By developing innovative solutions across various verticals, the goal is to address specific challenges and barriers faced by differently-abled individuals in their daily lives. In this competition, we challenge participants to think creatively and develop groundbreaking solutions across a spectrum of verticals              </div>
             </div>
           </div>
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Top 5 teams from each Zonal Qualifier will qualify for the Grand Finale that will be held during Techfest 2022-23 (Only if they score higher than the minimum cut-off score)
-              </div>
+            Abstract Submission: <br/>
+            Participants have to submit a report based on the work done so far and also consistent with the format mentioned in the problem statement. <br/>
+            Final Report Submission: <br />
+            Participants have to submit a final report in which their research, proposed solution, technical aspects, benefit to the users, etc. all should be mentioned as given in the Problem Statement. <br />
+            Final Presentation: <br />
+            The final shortlisted participants would be getting a chance to present and explain their solutions in front of judges during the main fest which will be held in IIT Bombay.              </div>
             </div>
           </div>
           <div id="Timeline" className={`${styles.info} ${activeCity === 'Timeline' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-              <ul>
-                <li>
-                  Round 1:<br/>
-                  Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.
-                </li>
-                <li>
-                Round 2:<br/>
-                Finale will be held at Techfest 2023-24 during 27th - 29th December 2023. 
-                </li>
-              </ul>
-            
-            
+            <li>Last Date of Registration: <br />
+                30th October 2023</li>
+
+            <li>First Project Report Submission: <br />
+            30th October 2023</li>
+
+            <li>Final Project Report Submission: <br />
+            2nd November 2023</li>
+
+            <li>Final presentation & video submission: <br />
+            10th December 2023 </li>
+
+            <li>Presentation Stage & Exhibition: <br />
+            During Techfest 2022-23, in mid december </li>
               </div>
             </div>
           </div>
@@ -174,17 +179,18 @@ const CozmoClench = () => {
             <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references.
             <br/>3. The decision of the organizers or judges shall be treated as final and binding on all.
             <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
-            <br/>5. Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
-            <br/>6. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
+            <br/>5. The idea presented by the teams should be original (not protected by means of patent/copyright/technical publication by anyone).
+            <br/>6. Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
+            <br/>7. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
               </div>
             </div>
           </div>
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Tarun Kumar<br/>
-              <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:abhishek@techfest.org`}>abhishek@techfest.org</div>
-                <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7549952736`}>7549952736</div>
+              Abhishek Kedare<br/>
+              +91 75585 88254<br/>
+              abhishek@techfest.org
               </div>
             </div>
           </div>
@@ -193,4 +199,4 @@ const CozmoClench = () => {
      );
 }
  
-export default CozmoClench;
+export default TechAid;

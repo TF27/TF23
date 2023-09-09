@@ -3,7 +3,7 @@ import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
 
-const HackAI = () => {
+const UrbanFuturism = () => {
 
     const [open, setOpen] = useState(false);
 
@@ -26,24 +26,24 @@ const HackAI = () => {
     const data = {
         rows: [
           {
-            title: "Why should I participate in the HackAI?",
-            content: "The competition provides the participants with real life problems which they have to solve by building an AI based program. In the final round, participants work together to solve the problems in a specific time."
+            title: "How to register?",
+            content: 'Follow this steps for registration : www.techfest.org > Competitions > Urban Futurism > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
           },
           {
-            title: "How to register?",
-            content: 'Follow this steps for registration : www.techfest.org > Competitions > HackAI > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
+            title: "Who can participate?",
+            content: 'Any individual with a valid ID card, Early stage startups, Upto 3 years old college passouts can participate in the competition'
           },
           {
             title: "How many people can be there in one team?",
             content: 'One team can have a maximum of 4 members.'
           },
           {
-            title: "Is it free to register for HackAI?",
+            title: "Is it free to register for Urban Futurism: Building Smart Cities?",
             content: 'Yes, it is free to register.'
           },
           {
             title: "How can I make my own team (as a team leader)?",
-            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> HackAI -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
+            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Urban Futurism -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
           },
           {
             title: "What is the Registered Mail ID?",
@@ -59,7 +59,7 @@ const HackAI = () => {
           },
           {
             title: "How can I remove members from my team (as a team leader)?",
-            content: 'Click on the Remove Member button and then select the member you wish to remove.'
+            content: 'You cannot remove a member of the team. You can dissolve the team and make a new one.'
           },
           {
             title: "What happens when the team leader leaves their team?",
@@ -115,7 +115,8 @@ const HackAI = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'About' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Get a chance to showcase your coding skills through this fierce and competitive AI based hackathon</div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}> Smart cities are urban areas that utilise technology and data to improve the quality of life for residents, enhance sustainability, and optimise resource management. They integrate various technologies, such as Internet of Things (IoT), artificial intelligence (AI), big data analytics, and renewable energy systems, to create more efficient and connected urban environments.
+            Urban planning plays a crucial role in the development of smart cities. It involves designing and organising urban spaces to accommodate the needs of the population while considering factors like infrastructure, transportation, housing, public services, and environmental sustainability. In the context of smart cities, urban planning focuses on leveraging technology and data-driven insights to improve city operations and enhance the overall urban experience.</div>
                 </div>
             </div>
             <div>
@@ -125,15 +126,12 @@ const HackAI = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'Structure' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                      Round 1:<br/>
-                      In this round, the teams will have to solve the Round 1 Problem Statment provided and submit all the relevant files. 
-                      <br/><br/>
-                      Mentoring sessions:<br/>
-                      Online sessions will be held to give the finalist teams some idea of the final Problem Statement
-                      <br/><br/>
-                      Final round:<br/>
-                      Selected finalists will compete in an offline hackathon at IIT Bombay campus.</div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Abstract Submission: <br />
+            Participants have to submit a report based on the work done so far and also consistent with the format mentioned in the problem statement. <br />
+            Final Report Submission: <br />
+            Participants have to submit a final report in which their research, proposed solution, technical aspects, benefit to the users, etc. all should be mentioned as given in the Problem Statement. <br />
+            Final Presentation: <br />
+            The final shortlisted participants would be getting a chance to present and explain their solutions in front of judges during the main fest which will be held in IIT Bombay. <br /></div>
                 </div>
             </div>
             <div>
@@ -143,18 +141,10 @@ const HackAI = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'Timeline' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                    Last date of registration:<br/>
-                    2nd October<br/><br/>
-
-                    Round 1 Submission Deadline:<br/>
-                    8th October 2023<br/><br/>
-
-                    Finalist announcement:<br/>
-                    15th October 2023<br/><br/>
-
-                    Final Round at IIT Bombay Campus:<br/>
-                    27th December 2023</div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Round 1:<br/>
+            Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.<br/><br/>
+            Round 2:<br/>
+            Finale will be held at Techfest 2023-24 during 27th - 29th December 2023.</div>
                 </div>
             </div>
             <div>
@@ -176,16 +166,12 @@ const HackAI = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'Rules' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                      1. Every team has to register online on the official Techfest website for the competition.
-                      <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references.
-                      <br/>3. The decision of the organizers or judges shall be treated as final and binding on all.
-                      <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
-                      <br/>5. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
-                      <br/>6. Participants have to bring their own laptops during the competition.
-                      <br/>7. Teams will be responsible for their devices. It is advised that laptops should be charged before the competition.
-                      <br/>8. Mobile phones are not allowed during the competition.
-                      <br/>9. The organisers reserve the right to change any or all of the above rules as they deem fit. Change in rules, if any, will be highlighted on the website and notified to the registered teams.</div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>1. Every team has to register online on the official Techfest website for the competition.
+                    <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references.
+                    <br/>3. The decision of the organizers or judges shall be treated as final and binding on all.
+                    <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
+                    <br/>5. Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
+                    <br/>6. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.</div>
                 </div>
             </div>
             <div>
@@ -196,9 +182,9 @@ const HackAI = () => {
                 <div className={`${styles.whatd} ${open === 'Contact' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                    Atharv Apshinge<br/>
-                    <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:atharv@techfest.org`}>atharv@techfest.org</div>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9324589830`}>9324589830</div>
+                    Abhishek<br/>
+                    +91 75585 88254<br/>
+                    abhishek@techfest.org
                     </div>
                 </div>
             </div>
@@ -206,4 +192,4 @@ const HackAI = () => {
     );
 }
 
-export default HackAI;
+export default UrbanFuturism;

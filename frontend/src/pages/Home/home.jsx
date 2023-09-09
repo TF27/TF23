@@ -40,33 +40,40 @@ const dataLectures = [
   },
   {
     image: lec2,
-    name: "His Holiness the 14th Dalai Lama (Nobel Laureate, Peace)",
+    name: "His Holiness the 14th Dalai Lama",
+    posi: "(Nobel Laureate, Peace)",
   },
   {
     image: lec3,
-    name: "NR Narayana Murty ( Co-Founder of Infosys)",
+    name: "NR Narayana Murty",
+    posi: "( Co-Founder of Infosys)",
   },
   {
     image: lec4,
-    name: "Zaheer Khan (Former Indian Cricketer)",
+    name: "Zaheer Khan",
+    posi: "(Former Indian Cricketer)",
   },
 ];
 const dataExhibitions = [
   {
     image: exh1,
-    name: "Sophia (Hong Kong)",
+    name: "Sophia",
+    posi: "(Hong Kong)",
   },
   {
     image: exh2,
-    name: "Gravity Industries (UK)",
+    name: "Gravity Industries",
+    posi: "(UK)",
   },
   {
     image: exh3,
-    name: "Virgin Hyperloop (USA)",
+    name: "Virgin Hyperloop",
+    posi: "(USA)",
   },
   {
     image: exh4,
-    name: "AirCar (Turkey)",
+    name: "AirCar",
+    posi: "(Turkey)",
   },
 ];
 
@@ -86,7 +93,7 @@ const Explore = ({ Heading, data, link }) => {
                 <div className={styles.card_rect1}>
                   <div className={styles.card_rect2}>
                     <img src={item.image} alt={item.name} />
-                    <div className={styles.cardText}>{item.name}</div>
+                    <div className={styles.cardText}>{item.name}<br/>{item.posi}</div>
                   </div>
                 </div>
               </div>
@@ -143,7 +150,7 @@ const Home = () => {
         <div className={`row ${styles.themeData}`}>
           <div className="col-12 col-lg-4">
             <div className={styles.themeImg}>
-              <img src={bf} alt="A Mystecal Realm" />
+            <iframe src="https://www.youtube.com/embed/0_FBwJi8VBo?si=yaNM1nKy7nydA1XU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
             </div>
           </div>
           <div className={`col-12 col-lg-8 ${styles.themeText}`}>
