@@ -87,6 +87,27 @@ cursor: pointer;
   top: -115%;
   left: -46%;
 }
+
+/* Add this CSS to your gallery_base.css file */
+.page-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: -45px;
+}
+
+.page-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #aaa; /* Inactive indicator color */
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.page-indicator.active {
+  background-color: #147df6; /* Active indicator color */
+}
+
 @media(max-width:748px){
 .main_carousel .slides .slide.next{
   scale: 0;
@@ -100,6 +121,9 @@ cursor: pointer;
   transform: translateX(100%) scale(0);
   transition: transform 0ms ease-in-out ;
   /* left: 50%; */
+}
+.page-indicators {
+  margin-top: 0px;
 }
 
 .main_carousel .slides .slide.prev{
@@ -133,7 +157,7 @@ cursor: pointer;
 .main_carousel{
   overflow-x: hidden;
   padding-top: 50vh;
-  top: -30vh;
+  top: 0vh;
 }
 .slides{
 overflow-x: hidden;
