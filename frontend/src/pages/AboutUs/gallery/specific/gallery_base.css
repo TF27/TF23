@@ -178,15 +178,12 @@ cursor: pointer;
 }
 .gal_carousel{
   overflow-x: hidden;
-<<<<<<< HEAD
 
   background-image: url(../../../../assets/gallery/bgm.jpg);
   background-position: cover;
   background-size: 100% 100%;
-=======
   padding-top: 50vh;
   top: 0vh;
->>>>>>> e3ea58585d37bcc9f47dc1c8065a847b4e1719b8
 }
 .slides{
 overflow-x: hidden;
