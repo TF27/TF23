@@ -5,10 +5,10 @@ import { UserAuth } from "../../contexts/AuthContext";
 import { Frame3 } from "./compi_animation";
 import Technorion from "./technorion";
 import OurReach from "./ourreach";
-import Carousel from "../../components/Carousel/carousel";
-import ContactCard from "../../components/Contact/contact";
-import img from "../Lectures/assets/europe.jpg";
-import img2 from "../Lectures/assets/lectbg.png";
+// import Carousel from "../../components/Carousel/carousel";
+// import ContactCard from "../../components/Contact/contact";
+// import img from "../Lectures/assets/europe.jpg";
+// import img2 from "../Lectures/assets/lectbg.png";
 import "./compi_animation.css";
 
 const Compi = () => {

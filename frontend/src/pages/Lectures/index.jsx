@@ -12,10 +12,8 @@ import OurReach from "./ourreach";
 import Carousel from "../../components/Carousel/carousel";
 import ContactCard from "../../components/Contact/contact";
 
-import img from "./assets/europe.jpg";
-import img2 from "./assets/lectbg.png";
-import img3 from "./assets/map.png";
-import img4 from "./assets/NotifyMe.png";
+import img from './assets/mapContent/Europe/EUROPE.jpg';
+import img2 from './assets/mapContent/Europe/EUROPE.jpg';
 
 import tiger from "../../components/Contact/test_tiger.jpeg";
 import MapClick from "./map2";
