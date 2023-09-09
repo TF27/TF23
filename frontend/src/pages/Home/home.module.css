@@ -247,7 +247,7 @@
 
 @media (max-width: 992px) {
   .themeImg{
-    height:300px;
+    height:400px;
   }
 }
 
@@ -261,6 +261,7 @@
 @media (max-width: 993px) {
   .themeImg {
     width: 500px;
+    height: auto;
   }
   .themeData img {
     width: 500px;
