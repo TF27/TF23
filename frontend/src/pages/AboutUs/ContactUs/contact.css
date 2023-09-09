@@ -12,3 +12,7 @@
     justify-content: right;
     margin-right: 2%;
 } */
+
+.contactMail:hover ,.contactNum:hover{
+    cursor: pointer;
+}

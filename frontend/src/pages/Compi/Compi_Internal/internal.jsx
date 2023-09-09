@@ -17,6 +17,8 @@ import Codecode from './Competitions/Codecode';
 import JoinTeam from './Teams/joinTeam';
 import Machanzo from './Competitions/machanzo'
 import TechfestOlympiad from './Competitions/TechfestOlympiad';
+import SingleParti from './Teams/single_parti';
+
 
 
 const Internal = () => {
@@ -80,11 +82,8 @@ const Internal = () => {
               <div>
               <div className={styles.compi_team}>
                 <div className={styles.single_team} style={{marginTop: '20px'}}>
-                    <div className={styles.single_rect1}></div>
-                    <div className={styles.single_rect2}>
-                      <Link to={`addparticipant`}>Add Participant</Link>
-                    </div>
-                  </div>
+                  <SingleParti />
+                </div>
                 <DissolveTeam />
               </div>
               </div>
@@ -112,10 +111,7 @@ const Internal = () => {
                     <JoinTeam />
                   </div>
                   <div className={styles.single_team}>
-                    <div className={styles.single_rect1}></div>
-                    <div className={styles.single_rect2}>
-                      <Link to={`singleparticipant`}>Single Participant</Link>
-                    </div>
+                    <SingleParti />
                   </div>
                 </div>
                 </div>

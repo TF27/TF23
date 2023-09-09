@@ -70,19 +70,23 @@ const JoinTeam = () => {
       <CustomPopup
         onClose={() => popupCloseHandler(false)}
         show={visibility}
-        title="Join Team"
+        style={{ 
+          width: "50%" 
+        }}
       >
         <form onSubmit={handleSubmit}>
           <label>
-            Enter team-ID of the team you want to join:
+            Enter team-ID of the team you want to join: <br />
             <input
               type="text"
               name="team_id"
               value={formData.team_id}
               onChange={handleChange}
-            />
-          </label>
-          <input type="submit" value="Submit" />
+              placeholder='Enter team-ID'
+              className='jointeaminput'
+            /> 
+          </label> <br />
+          <input type="submit" value="Submit" className='joinsubmit'/>
         </form>
       </CustomPopup>
     </div>

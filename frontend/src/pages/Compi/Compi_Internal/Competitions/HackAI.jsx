@@ -205,8 +205,8 @@ const HackAI = () => {
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
               Atharv Apshinge <br />
-              +91 9324589830 <br />
-              atharv@techfest.org
+              <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:atharv@techfest.org`}>atharv@techfest.org</div>
+              <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9324589830`}>9324589830</div>
               </div>
             </div>
           </div>

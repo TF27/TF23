@@ -181,8 +181,8 @@ const Machanzo = () => {
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
                     Gourish Singhal<br/>
-              +91 94248 73725<br/>
-              gourish@techfest.org
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:gourish@techfest.org`}>gourish@techfest.org</div>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9424873725`}>9424873725</div>
                     </div>
                 </div>
             </div></div>
