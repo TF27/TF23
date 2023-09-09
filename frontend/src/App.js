@@ -5,12 +5,11 @@ import { AuthContextProvider } from './contexts/AuthContext';
 import Protected from './contexts/Protected';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Home from './pages/Home/home';
-import Exhibition from './pages/Exhibition/exhi';
-import Compi from './pages/Compi/compi';
+// import Exhibition from './pages/Exhibition/exhi';
+// import Compi from './pages/Compi/compi';
 import CompiInternal from './pages/Compi/Compi_Internal/index';
 import Reg from './pages/Compi/Compi_Internal/Reg';
 import Create_Team from './pages/Compi/Compi_Internal/Teams/create_team';
-import JoinTeam from './pages/Compi/Compi_Internal/Teams/join_team';
 import Workshop from './pages/workshop/home';
 import Summit from './pages/Summit/home.js';
 import Contact from './pages/AboutUs/ContactUs/contact.jsx'
@@ -25,6 +24,8 @@ import Loading1 from './pages/loading_page/Loading1'
 
 // const Home= React.lazy(() => import('./pages/Home/home'));
 const Lectures = React.lazy(() => import('./pages/Lectures/index'));
+const Compi = React.lazy(() => import('./pages/Compi/compi'));
+const Exhibition = React.lazy(() => import('./pages/Exhibition/exhi'));
 const Media = React.lazy(() => import('./pages/AboutUs/Media/index'));
 const HISTORY = React.lazy(() => import('./pages/AboutUs/history/index'));
 const Gallery = React.lazy(()=> import('./pages/AboutUs/gallery/gallery'));
@@ -68,8 +69,8 @@ function App() {
                         <Home/>
                         </React.Suspense> }/> */}
                         <Route path='/loading1' element={<Loading1/>} />
-                        <Route path='/exhibitions' element={<Exhibition/>}/>
-                        <Route path='/competitions' element={<Compi />} />
+                        {/* <Route path='/exhibitions' element={<Exhibition/>}/>
+                        <Route path='/competitions' element={<Compi />} /> */}
                         <Route path='/workshops' element={<Workshop/>}/>
                         <Route path='/legals' element={<Legals/>}/>
                         {/* <Route path='/lectures' element={<Lectures />} /> */}
@@ -78,9 +79,20 @@ function App() {
                         {/* <Route path='/lectures' element={<Lectures />} /> */}
                         <Route path='/explore' element={<Explore/>} />
                         <Route path='/recognition' element={<Recognition/>} />
+
                         <Route path='/lectures' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <Lectures/>
+                        </React.Suspense> }/>
+                        
+                        <Route path='/exhibitions' element={
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                        <Exhibition/>
+                        </React.Suspense> }/>
+
+                        <Route path='/competitions' element={
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                        <Compi/>
                         </React.Suspense> }/>
 
                         <Route path='/aboutus/media' element={
@@ -107,7 +119,6 @@ function App() {
                         <Route path='competitions/:compiName/register' element={<Protected><Reg /></Protected>} />
                         <Route path='competitions/:compiName/createTeam' element={<Protected><Create_Team  /></Protected>} />
                         <Route path='competitions/:compiName/singleparticipant' element={<Protected><SingleParti /></Protected>} />
-                        <Route path='competitions/:compiName/joinTeam' element={<Protected><JoinTeam  /></Protected>} />
                         <Route path='competitions/:compiName/addparticipant' element={<Protected><AddParti /></Protected>} />
 
 

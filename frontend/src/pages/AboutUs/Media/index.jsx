@@ -110,6 +110,7 @@ import i107 from "./media/media2017/2017 coverage/IMPower Campaign - Hindustan T
 import i108 from "./media/media2017/2017 coverage/ISMOKE DNA.png"
 import i109 from "./media/media2017/2017 coverage/Lectures - Mumbai Mirror.jpg"
 import i110 from "./media/media2017/2017 coverage/RTI Government - Times Of India.png"
+import "./stars.css"
 
 const Media = () => {
     const iframeSources = [
@@ -128,7 +129,10 @@ const Media = () => {
     ];
     return ( 
         <div className='media'>
-
+            <div id='stars'/>
+            <div id='stars2'/>
+            <div id='stars3'/>'
+        <div className='media_fixedbg'/>
         <section class="container-fluid ftco-gallery ftco-no-pb mb-4" id="Offline-section">
             <div class="row">
                 <div class="col-md-3">

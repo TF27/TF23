@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {useParams, useNavigate} from 'react-router-dom';
 import {UserAuth} from '../../../../contexts/AuthContext';
+import CustomPopup from '../../../../components/Popup/index';
+import styles from '../reg.module.css';
 
 const SingleParti = () => {
 
@@ -51,22 +53,55 @@ const SingleParti = () => {
             });
     }
 
+    const [visibility, setVisibility] = useState(false);
+  
+    const popupCloseHandler = (e) => {
+      setVisibility(e);
+    };
+
     return ( 
-        <div>
-            {compiName}
+<div className="dissolveTeam singleparti" style={{zIndex: '3'}}>
+        <div onClick={() => setVisibility(!visibility)} className='dis_team'>
+          <div className='dis_rect1'></div>
+          <div className='dis_rect2'>Add Participant</div>
+        </div>
+  
+        <CustomPopup
+          onClose={() => popupCloseHandler(false)}
+          show={visibility}
+          style={{ 
+            width: "50%" 
+          }}
+        >
             <form onSubmit={handleSubmit}>
                 <label>
                     Name:
-                    <input type="text" name="team_leader_name" value={user?.displayName} onChange={handleChange} disabled/>
-                </label>
+                    <input 
+                        type="text" 
+                        name="team_leader_name" 
+                        value={user?.displayName} 
+                        onChange={handleChange} 
+                        disabled
+                        className={styles.formInput}
+                    />
+                </label> <br />
                 <label>
                     Email:
-                    <input type="email" name="team_leader_email" value={user?.email} onChange={handleChange} disabled/>
-                </label>  
-                <input type="submit" value="Submit" onChange={handleChange} />
+                    <input 
+                        type="email" 
+                        name="team_leader_email" 
+                        value={user?.email} 
+                        onChange={handleChange} 
+                        disabled
+                        className={styles.formInput}
+                />
+                </label>  <br />
+                <input type="submit" value="Submit" onChange={handleChange} className='joinsubmit'/>
             </form>
-        </div>
+        </CustomPopup>
+      </div>
      );
 }
  
 export default SingleParti;
+
