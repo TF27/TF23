@@ -77,7 +77,7 @@ const Internal = () => {
           <div className={styles.sponsor}>
             {data.sponsorImg && <a href={data.sponsorLink}><h3>Sponsored by <img src={data.sponsorImg} alt='Sponsor' className={styles.sponsorImg} /></h3></a>}
           </div>
-          {data.is_team_registered ? <div className={styles.youhave}> You have successfully with your email {user.email} and your team ID is {data.team_id}</div> : <div className={styles.compi_reg}></div>}
+          {data.is_team_registered ? <div className={styles.youhave}> You have successfully with your email <span>{user.email}</span> and your team ID is <span>{data.team_id}</span></div> : <div className={styles.compi_reg}></div>}
           {compiName === 'cozmoclench' && <CozmoClench />}
           {compiName === 'meshmerize' && <Meshmerize />}
           {compiName === 'mechanzo league' && <Machanzo />}
@@ -91,7 +91,7 @@ const Internal = () => {
           {data.is_team_leader ? (
               <div>
               <div className={styles.compi_team}>
-                <div className={styles.single_team} style={{marginTop: '20px'}}>
+                <div className={styles.single_team}>
                   <SingleParti />
                 </div>
                 <DissolveTeam />
@@ -120,7 +120,7 @@ const Internal = () => {
                   <div>
                     <JoinTeam />
                   </div>
-                  <div className={styles.single_team}>
+                  <div>
                     <SingleParti />
                   </div>
                 </div>

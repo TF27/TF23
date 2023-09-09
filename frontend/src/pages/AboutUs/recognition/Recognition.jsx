@@ -10,6 +10,7 @@ import sayen from './assets/sayen.png'
 const Recognition = () => {
   return (
     <div className='recognition'>
+      <div className='recognition_bg'></div>
       <div className='recogradient'>
         {/* <div className="recog-header"> */}
         <div className="recognition-header">
