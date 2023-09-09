@@ -10,7 +10,6 @@ import Compi from './pages/Compi/compi';
 import CompiInternal from './pages/Compi/Compi_Internal/index';
 import Reg from './pages/Compi/Compi_Internal/Reg';
 import Create_Team from './pages/Compi/Compi_Internal/Teams/create_team';
-import JoinTeam from './pages/Compi/Compi_Internal/Teams/join_team';
 import Workshop from './pages/workshop/home';
 import Summit from './pages/Summit/home.js';
 import Contact from './pages/AboutUs/ContactUs/contact.jsx'
@@ -107,7 +106,6 @@ function App() {
                         <Route path='competitions/:compiName/register' element={<Protected><Reg /></Protected>} />
                         <Route path='competitions/:compiName/createTeam' element={<Protected><Create_Team  /></Protected>} />
                         <Route path='competitions/:compiName/singleparticipant' element={<Protected><SingleParti /></Protected>} />
-                        <Route path='competitions/:compiName/joinTeam' element={<Protected><JoinTeam  /></Protected>} />
                         <Route path='competitions/:compiName/addparticipant' element={<Protected><AddParti /></Protected>} />
 
 

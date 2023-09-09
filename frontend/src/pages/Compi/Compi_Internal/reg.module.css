@@ -1,6 +1,6 @@
 .bgitis {
     background: rgba(0, 0, 0, 0.5);
-    height: max-content;
+    height: 100%;
     padding: 70px 0 150px 0;
 }
 
@@ -48,11 +48,13 @@
     color: #999;
     z-index: 2;
 }
-
+ 
 .floatingLabel {
     transform: translate(50%, -50%) scale(1.2);
     font-size: 12px;
-    background: #24202b;
+    background: rgba(36, 32, 43, .80);
+    border-radius: 20%;
+    padding: 0 10px;
     color: #fff;
 }
 
@@ -109,7 +111,7 @@
 }
 
 .godhelp{
-    /* height: 100vh; */
+    margin-top: 10vh; 
 }
 
 .formalign{

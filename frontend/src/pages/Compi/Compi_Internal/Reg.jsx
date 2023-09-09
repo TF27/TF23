@@ -37,6 +37,7 @@ const Reg = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
+
         setFormData((prevData) => ({
             ...prevData,
             [name]: value,
@@ -80,20 +81,21 @@ const Reg = () => {
             });
     }
 
-    const top = {
+    const fixbg = {
         backgroundImage: `url(${bgimg})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
-        position: 'absolute',
+        position: 'fixed',
         width: '100%',
         zIndex: '-1',
         top: '0',
         backgroundAttachment: 'fixed',
     }
     return (
-        <div style={top} className={styles.compiReg}>
+        <div className={styles.compiReg}>
+            <div style={fixbg}/>
             <div className={styles.bgitis}>
                 <div className={styles.overlay}>
                     <div className={styles.reg_head}>
@@ -145,7 +147,7 @@ const Reg = () => {
                                             onChange={handleChange}
                                             className={styles.formInput}
                                             autoComplete="off"
-                                            
+                                            maxLength={6}
                                             required
                                         />
                                     </div>
