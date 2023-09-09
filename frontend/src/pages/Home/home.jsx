@@ -4,7 +4,7 @@ import HomeParallax from "./parallax";
 import styles from "./home.module.css";
 
 // import images
-import bf from "./images/homebg.png";
+import bf from "./images/homebg.jpg";
 import spimg from "./images/sponsor.png";
 import lec1 from "./assets/explore/Lec1.jpg";
 import lec2 from "./assets/explore/Lec2.jpg";
@@ -15,6 +15,24 @@ import exh2 from "./assets/explore/Exh2.jpg";
 import exh3 from "./assets/explore/Exh3.jpeg";
 import exh4 from "./assets/explore/Exh4.jpg";
 
+const dataCompetitions = [
+  {
+    image: exh1,
+    name: "Sophia (Hong Kong)",
+  },
+  {
+    image: exh2,
+    name: "Gravity Industries (UK)",
+  },
+  {
+    image: exh3,
+    name: "Virgin Hyperloop (USA)",
+  },
+  {
+    image: exh4,
+    name: "AirCar (Turkey)",
+  },
+];
 const dataLectures = [
   {
     image: lec1,
@@ -112,8 +130,8 @@ const Home = () => {
           </div>
           <div className={styles.spnImg}>
             <a href="https://www.marshmclennan.com/">
-              <img src={spimg} alt="sponsorimage" className={styles.mmcImg} />
-              <p>Marsh McLennan Global Services India Pvt Ltd</p>
+              <img src={spimg} alt="Marsh McLennan Global Services India Pvt Ltd" className={styles.mmcImg} />
+              {/* <p>Marsh McLennan Global Services India Pvt Ltd</p> */}
             </a>
           </div>
         </div>
@@ -166,7 +184,16 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Explore Heading="Past Lectures" data={dataLectures} link="lectures" />
+      <Explore 
+        Heading="Competitions" 
+        data={dataCompetitions} 
+        link="competitions" 
+      />
+      <Explore 
+        Heading="Past Lectures" 
+        data={dataLectures} 
+        link="lectures" 
+      />
       <Explore
         Heading="Past Exhibitions"
         data={dataExhibitions}
