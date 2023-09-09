@@ -206,7 +206,7 @@ const Reg = () => {
                                         />
                                     </div>
                                 </div>
-                                {compiName === "Meshmerize" || compiName === "Cozmo" ? (
+                                {compiName === "meshmerize" || compiName === "cozmoclench" || compiName === "codecode" || compiName ==="techfest olympiad" || compiName ==="mechanzo league"? (
                                     <div className={styles.inputWrapper}>
                                         <label className={`${styles.floatingLabel} ${styles.formLabel}`}>Nearby Zonal</label>
                                         <select
