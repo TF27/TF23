@@ -2,14 +2,17 @@ import React, { useState, useEffect, useCallback } from 'react';
 import './history.css';
 import blurr from './assets/blurr.png';
 import edm from './assets/edm.png';
+import i1997 from './assets/1997 1.jpg';
+import i2002 from './assets/2002 1.jpg';
+import i2006 from './assets/2006 1.jpg';
 import historyImage from './assets/history.png';
 
   const images = [
     { id: 'history', url: historyImage },
-    { id: 'blurr', url: blurr, text: '2021', additionalText: 'lorem podem todem afjhsdbfjhvyjhdvbfjsdvbfsdgbfjufyjsd' },
-    { id: 'edm', url: edm, text: '2021', additionalText: 'idfhasdiobvsauhfasbfkfhvnoixkhdbaifkihisk' },
-    { id: 'blurr', url: blurr, text: '2099', additionalText: 'dsuhiafhisdhfjhsdvfviwegfvhsdghcvjsd' },
-    { id: 'edm', url: edm, text: '2099', additionalText: 'hunfksadnufkbsdjfbsudkfbskdjfbs' },
+    { id: 'blurr', url: blurr, text: '1997', additionalText: 'lorem podem todem afjhsdbfjhvyjhdvbfjsdvbfsdgbfjufyjsd' },
+    { id: 'edm', url: i1997, text: '1997', additionalText: 'idfhasdiobvsauhfasbfkfhvnoixkhdbaifkihisk' },
+    { id: 'blurr', url: blurr, text: '2002', additionalText: 'dsuhiafhisdhfjhsdvfviwegfvhsdghcvjsd' },
+    { id: 'edm', url: i2002, text: '2002', additionalText: 'hunfksadnufkbsdjfbsudkfbskdjfbs' },
   ];
 
   const HistoryItem = ({ imageUrl, height, width, isVisible, id, text, additionalText }) => (
