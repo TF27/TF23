@@ -201,63 +201,49 @@ const Header = () => {
               <Link to="/competitions">Competitions</Link>
             </li>
             <li onClick={showMenu}>
+              <Link to="/summits">Int'l Summits</Link>
+            </li>
+            <li onClick={showMenu}>
               <Link to="/lectures">Lectures</Link>
             </li>
             <li onClick={showMenu}>
               <Link to="/exhibitions">Exhibitions</Link>
             </li>
-            <li onClick={showMenu}>
-              <Link to="/workshops">Workshops</Link>
+            <li>
+              <Link to="/history">History</Link>
             </li>
-            <li onClick={showMenu}>
-              <Link to="/summits">Summits</Link>
+            <li>
+              <Link to="/aboutus/media">Media</Link>
             </li>
-            <li onClick={showMenu}>
-              <Link to="/summits">Summits</Link>
+            <li>
+              <Link to="/gallery">Gallery</Link>
             </li>
-            <li onClick={showMenu}>
-              <Link to="/summits">Summits</Link>
+            <li>
+              <Link to="/recognition">Recognition</Link>
             </li>
-            <li onClick={showMenu}>
-              <Link to="/summits">Summits</Link>
+            <li>
+              <Link to="/legals">Legals</Link>
             </li>
-            <li onClick={showMenu}>
-              <Link to="/summits">Summits</Link>
-            </li>
-            <li onClick={showMenu}>
-              <Link to="/summits">Summits</Link>
-            </li>
-            <li onClick={showMenu}>
-              <Link to="/summits">Summits</Link>
-            </li>
-            <li onClick={showMenu}>
-              <Link to="/summits">Summits</Link>
-            </li>
-            <li onClick={showMenu}>
-              <Link to="/summits">Summits</Link>
-            </li>
-            <li onClick={showMenu}>
-              <Link to="/summits">Summits</Link>
-            </li>
-            <li onClick={showMenu}>
-              <Link to="/summits">Summits</Link>
+            <li>
+              <Link to="/contactus" >Contact Us</Link>
             </li>
             <li>
               {user?.displayName ? (
-                <div>
-                  <button
-                    onClick={handleSignOut}
-                    className="item1"
-                    onMouseEnter={(e) => (e.target.innerText = "Sign Out")}
-                    onMouseLeave={(e) => (e.target.innerText = name)}
-                  >
-                    Logout
-                  </button>
+                <div className="singin">
+                  <div className="logout_rect1">
+                    <div
+                      className="logout_rect2"
+                    >
+                     Sing Out
+                    </div>
+                  </div>
                 </div>
               ) : (
-                <button onClick={handleGoogleSignIn} className="item2">
-                  Sign In
-                </button>
+                <div onClick={handleGoogleSignIn} className="singin">
+                  <div className="logout_rect1 llll">
+                    <div className="logout_rect2 lllll">Sign in</div>
+                  </div>
+                </div>
               )}
             </li>
           </ul>
