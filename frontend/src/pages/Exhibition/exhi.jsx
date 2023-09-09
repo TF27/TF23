@@ -27,6 +27,7 @@ const Exhibition =()=>{
         <div style={{height:'120vh'}}>
             <ImageOne/>
            <div className={parallax.exhi}>
+           <div className={parallax.blackGradienttop}/>  
             <Notify/>
             <div>{isMobile ? <MapClick /> : <WorldMap />}</div>
             <OurReach />

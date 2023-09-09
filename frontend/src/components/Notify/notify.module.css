@@ -72,3 +72,17 @@
         width: 85vw;
     }
 }
+
+
+.blackGradientbottom{
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Adjust the height of the gradient */
+    background: linear-gradient(to top,rgba(0, 0, 0, 1), rgba(0, 0, 0, .6),transparent);
+    pointer-events: none;
+    z-index: 1000;
+}
+
