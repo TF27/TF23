@@ -252,8 +252,7 @@ const Technorion = () => {
     <div className={styles.desc}>
       <div className={styles.desc_cont}>
         <p className={styles.descT}>
-        After a gap of 2 years, Techfest is back on the grounds of IIT Bombay, rising greater than ever before. With an aim to promote creative, innovative and technical skills amongst the youth, Techfest is coming to the cities near you through Technorion, our Zonal competitions. We believe everyone should get an equal opportunity to showcase their talents and distance should not create a hindrance. With this underlying spirit, we announce the following Technorion Zonal cities
-        </p>
+        After a successful revamp last year, Techfest is back on the grounds of IIT Bombay, rising greater than ever before. With an aim to promote creative, innovative and technical skills amongst the youth, Techfest is coming to the cities near you through Technorion, our Zonal competitions. We believe everyone should get an equal opportunity to showcase their talents and distance should not create a hindrance. With this underlying spirit, we announce the following Technorion Zonal cities.        </p>
         <div className={styles.textContainer}>
           <table border="1">
             <tr>

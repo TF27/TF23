@@ -11,7 +11,8 @@ import backimg1 from './../static/img/exp_bg.png';
 import backimg2 from './../static/img/img7.png';
 import Meshmerize from './Competitions/Meshmerize';
 import frame from './../static/card/Frame.png';
-import HackAI from './Competitions/HackAI'
+import HackAI from './Competitions/HackAI';
+import Codecode from './Competitions/Codecode';
 
 import JoinTeam from './Teams/joinTeam';
 import Machanzo from './Competitions/machanzo'
@@ -73,6 +74,7 @@ const Internal = () => {
           {compiName === 'mechanzo league' && <Machanzo />}
           {compiName === 'hackai' && <HackAI/>}
           {compiName === 'techfest olympiad' && <TechfestOlympiad />}
+          {compiName === 'codecode' && <Codecode />}
           <div className={styles.team_reg}>
           {data.is_team_leader ? (
               <div>

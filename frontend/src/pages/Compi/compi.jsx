@@ -10,6 +10,7 @@ import ContactCard from "../../components/Contact/contact";
 import img from "../Lectures/assets/europe.jpg";
 import img2 from "../Lectures/assets/lectbg.png";
 import "./compi_animation.css";
+import '../Lectures/lecture.css';
 
 const Compi = () => {
   const [data, setData] = useState([]);
@@ -66,7 +67,7 @@ const Compi = () => {
       <OurReach />
       <br /><br /><br /><br />
       {/* {card()} */}
-      {/* <div className="checkThis">
+       <div className="checkThis">
         <h1 style={{ marginTop: "80px", marginBottom: "40px" }}>
           CHECK THIS OUT
         </h1>
@@ -91,7 +92,7 @@ const Compi = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div style={{marginBottom: '150px'}}>
           <h2 style={{ marginTop: "40px", marginBottom: "-20px" }}>Lectures</h2>
           <Carousel
             i1={img}
@@ -113,7 +114,7 @@ const Compi = () => {
           </div>
         </div>
       </div>
-      <div className="contactus">
+      {/* <div className="contactus">
         <h1 style={{ marginTop: "80px" }}>CONTACT US</h1>
         <div className="tray">
           <div>
@@ -133,7 +134,7 @@ const Compi = () => {
             />
           </div>
         </div>
-      </div> */}
+      </div>  */}
     </div>
   );
 };
