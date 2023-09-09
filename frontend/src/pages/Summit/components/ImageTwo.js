@@ -8,7 +8,9 @@ import sum2 from "../assets/sum2.png";
 const ImageTwo = () => {
  
   return(
-    <div className={parallax.image}>        
+    <div className={parallax.image}>      
+    <div className={parallax.blackGradienttop}/>  
+    <div className={parallax.blackGradienttop}/>  
     <h1 className={parallax.head}>Agenda</h1>
       <div className={parallax.summitRow}>
         <div className={parallax.summitColumn}>
