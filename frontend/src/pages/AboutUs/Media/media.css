@@ -3,6 +3,7 @@ font-family: Avenir LT Pro ;
 background-attachment: fixed;
 background-position: center;
 background-size: cover;
+padding: 120px 0 50px 0;
 }
 .media .gradient{
 content:'';

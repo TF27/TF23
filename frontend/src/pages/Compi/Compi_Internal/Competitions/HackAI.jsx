@@ -133,31 +133,44 @@ const HackAI = () => {
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Round 1:
-            In this round, the teams will have to solve the Round 1 Problem Statment provided and submit all the relevant files. 
-
-            Mentoring sessions:
-            Online sessions will be held to give the finalist teams some idea of the final Problem Statement
-
-            Final round:
-            Selected finalists will compete in an offline hackathon at IIT Bombay campus. 
+              <ul>
+                <li>
+                  Round 1: <br />
+                  In this round, the teams will have to solve the Round 1 Problem Statment provided and submit all the relevant files. 
+                </li>
+                <li>
+                  Mentoring sessions: <br />
+                  Online sessions will be held to give the finalist teams some idea of the final Problem Statement
+                </li>
+                <li>
+                  Final round: <br />
+                  Selected finalists will compete in an offline hackathon at IIT Bombay campus. 
+                </li>
+              </ul>
               </div>
             </div>
           </div>
           <div id="Timeline" className={`${styles.info} ${activeCity === 'Timeline' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Last date of registration:
-            2nd October
-
-            Round 1 Submission Deadline:
-            8th October 2023
-
-            Finalist announcement:
-            15th October 2023
-
-            Final Round at IIT Bombay Campus:
-            27th December 2023
+              <ul>
+                <li>
+                  Last date of registration: <br />
+                  2nd October
+                </li>
+                <li>
+                  Round 1 Submission Deadline: <br />
+                  8th October 2023
+                </li>
+                <li>
+                  Finalist announcement: <br />
+                  15th October 2023
+                </li>
+                <li>
+                  Final Round at IIT Bombay Campus: <br />
+                  27th December 2023
+                </li>
+              </ul>
               </div>
             </div>
           </div>
@@ -191,8 +204,8 @@ const HackAI = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Atharv Apshinge
-              +91 9324589830
+              Atharv Apshinge <br />
+              +91 9324589830 <br />
               atharv@techfest.org
               </div>
             </div>

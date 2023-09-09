@@ -161,14 +161,17 @@ const Machanzo = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'Rules' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}> 1. Every team has to register online on the official Techfest website for the competition.
-            <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references.
-            <br/>3. The decision of the organizers or judges shall be treated as final and binding on all.
-            <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
-            <br/>5. Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
-            <br/>6. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}> 
+                      <ul>
+                        <li>1. Every team has to register online on the official Techfest website for the competition.</li>
+                        <li>2. A Team ID will be allocated to the team on registration which shall be used for future references.</li>
+                        <li>3. The decision of the organizers or judges shall be treated as final and binding on all.</li>
+                        <li>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.</li>
+                        <li>5. Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.</li>
+                        <li>6. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.</li>
+                      </ul>
+                      </div>
                 </div>
-            </div>
             <div>
                 <div onClick={() => handleClickOpen('Contact')} className={`${styles.whatu} ${open === 'Contact' ? styles.whatuOpen : ''}`}>
                     <div className={`${styles.ctc_rect1} ${styles.whatu_rect1}`}></div>

@@ -9,6 +9,10 @@
     
 } */
 
+.wdata{
+    margin-top: 30px;
+}
+
 .sponsor img{
     width: 100px;
     height: 50px;
@@ -304,6 +308,7 @@
 
 .doIt{
     display: flex;
+    flex-wrap: wrap;
     top: -290px;
     justify-content: space-evenly;
     position: relative;
@@ -334,3 +339,8 @@
     font-size: 18px;
 }
 
+@media screen and (max-width: 450px){
+    .doIt{
+        justify-content: space-around;
+    }
+}
