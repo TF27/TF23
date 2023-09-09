@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Counter({ targetValue, duration, scrollVal }) {
+function Counter({ targetValue, duration, scrollVal, plus }) {
   const [counter, setCounter] = useState(0);
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
@@ -41,7 +41,7 @@ function Counter({ targetValue, duration, scrollVal }) {
 
   return (
     <div>
-      <p>{counter}+</p>
+      <p>{counter}{plus}</p>
     </div>
   );
 }

@@ -92,7 +92,7 @@ const Compi = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div style={{marginBottom: '150px'}}>
           <h2 style={{ marginTop: "40px", marginBottom: "-20px" }}>Lectures</h2>
           <Carousel
             i1={img}
@@ -114,7 +114,7 @@ const Compi = () => {
           </div>
         </div>
       </div>
-      <div className="contactus">
+      {/* <div className="contactus">
         <h1 style={{ marginTop: "80px" }}>CONTACT US</h1>
         <div className="tray">
           <div>
@@ -134,7 +134,7 @@ const Compi = () => {
             />
           </div>
         </div>
-      </div> 
+      </div>  */}
     </div>
   );
 };
