@@ -65,6 +65,7 @@ const Compi = () => {
       <Frame3 />
       <Technorion />
       <OurReach />
+      <br /><br /><br /><br />
       {/* {card()} */}
        <div className="checkThis">
         <h1 style={{ marginTop: "80px", marginBottom: "40px" }}>

@@ -140,10 +140,17 @@ const Meshmerize = () => {
           <div id="Timeline" className={`${styles.info} ${activeCity === 'Timeline' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Round 1:<br/>
-            Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.<br/><br/>
-            Round 2:<br/>
-            Finale will be held at Techfest 2023-24 during 27th - 29th December 2023.
+              <ul>
+                <li>
+                  Round 1: <br />
+                  Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.
+                </li>
+                <li>
+                  Round 2: <br />
+                  Finale will be held at Techfest 2023-24 during 27th - 29th December 2023.
+
+                </li>
+              </ul>
               </div>
             </div>
           </div>

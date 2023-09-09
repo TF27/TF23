@@ -8,7 +8,6 @@ import historyImage from './assets/history.png';
     { id: 'history', url: historyImage },
     { id: 'blurr', url: blurr, text: '2021', additionalText: 'lorem podem todem afjhsdbfjhvyjhdvbfjsdvbfsdgbfjufyjsd' },
     { id: 'edm', url: edm, text: '2021', additionalText: 'idfhasdiobvsauhfasbfkfhvnoixkhdbaifkihisk' },
-    { id: 'blurr', url: blurr, text: '2099', additionalText: 'dsuhiafhisdhfjhsdvfviwegfvhsdghcvjsd' },
     { id: 'edm', url: edm, text: '2099', additionalText: 'hunfksadnufkbsdjfbsudkfbskdjfbs' },
   ];
 
