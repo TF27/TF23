@@ -18,29 +18,30 @@ import exh4 from "./assets/explore/Exh4.jpg";
 const dataCompetitions = [
   {
     image: exh1,
-    name: "Sophia (Hong Kong)",
+    name: "Cozmo Clench",
   },
   {
     image: exh2,
-    name: "Gravity Industries (UK)",
+    name: "Meshmerize",
   },
   {
     image: exh3,
-    name: "Virgin Hyperloop (USA)",
+    name: "Techfest Olympiad",
   },
   {
     image: exh4,
-    name: "AirCar (Turkey)",
+    name: "CoDecode",
   },
 ];
 const dataLectures = [
   {
     image: lec1,
     name: "Late Dr. APJ Abdul Kalam",
+    posi: "(Former President)",
   },
   {
     image: lec2,
-    name: "His Holiness the 14th Dalai Lama",
+    name: "His Holiness - 14th Dalai Lama",
     posi: "(Nobel Laureate, Peace)",
   },
   {
