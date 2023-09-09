@@ -11,10 +11,12 @@ import backimg1 from './../static/img/exp_bg.png';
 import backimg2 from './../static/img/img7.png';
 import Meshmerize from './Competitions/Meshmerize';
 import frame from './../static/card/Frame.png';
-import HackAI from './Competitions/HackAI'
+import HackAI from './Competitions/HackAI';
+import Codecode from './Competitions/Codecode';
 
 import JoinTeam from './Teams/joinTeam';
-
+import Machanzo from './Competitions/machanzo'
+import TechfestOlympiad from './Competitions/TechfestOlympiad';
 
 
 const Internal = () => {
@@ -68,7 +70,11 @@ const Internal = () => {
           {data.is_team_registered ? <div className={styles.youhave}> You have successfully with your email {user.email} and your team ID is {data.team_id}</div> : <div className={styles.compi_reg}></div>}
           {compiName === 'cozmoclench' && <CozmoClench />}
           {compiName === 'meshmerize' && <Meshmerize />}
+          {compiName === 'robowar' && <Meshmerize />}
+          {compiName === 'mechanzo league' && <Machanzo />}
           {compiName === 'hackai' && <HackAI/>}
+          {compiName === 'techfest olympiad' && <TechfestOlympiad />}
+          {compiName === 'codecode' && <Codecode />}
           <div className={styles.team_reg}>
           {data.is_team_leader ? (
               <div>

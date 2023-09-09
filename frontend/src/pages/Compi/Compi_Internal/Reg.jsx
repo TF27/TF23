@@ -55,6 +55,17 @@ const Reg = () => {
         }
     };
 
+    function checkInputValues() {
+        const inputs = document.querySelectorAll('input');
+      
+        inputs.forEach((input) => {
+            handleFocus({ target: input }); // Call focus event on each input
+            handleBlur({ target: input }); // Call blur event on each input
+        });
+    }
+    setInterval(checkInputValues, 100);
+
+
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(formData);
@@ -105,8 +116,6 @@ const Reg = () => {
                                         name="name"
                                         value={user.displayName}
                                         onChange={handleChange}
-                                        onFocus={handleFocus}
-                                        onBlur={handleBlur}
                                         className={styles.formInput}
                                         disabled
                                         autoComplete="off"
@@ -121,8 +130,6 @@ const Reg = () => {
                                             name="email"
                                             value={user.email}
                                             onChange={handleChange}
-                                            onFocus={handleFocus}
-                                            onBlur={handleBlur}
                                             className={styles.formInput}
                                             disabled
                                             autoComplete="off"
@@ -136,8 +143,6 @@ const Reg = () => {
                                             name="phoneno"
                                             value={formData.phoneno}
                                             onChange={handleChange}
-                                            onFocus={handleFocus}
-                                            onBlur={handleBlur}
                                             className={styles.formInput}
                                             autoComplete="off"
                                             
@@ -169,8 +174,6 @@ const Reg = () => {
                                             value={formData.city}
                                             onChange={handleChange}
                                             className={styles.formInput}
-                                            onFocus={handleFocus}
-                                            onBlur={handleBlur}
                                             autoComplete="off"
                                             required
                                         />
@@ -185,8 +188,6 @@ const Reg = () => {
                                         value={formData.pincode}
                                         onChange={handleChange}
                                         className={styles.formInput}
-                                        onFocus={handleFocus}
-                                        onBlur={handleBlur}
                                         required
                                         autoComplete="off"
                                     />
@@ -199,14 +200,12 @@ const Reg = () => {
                                             value={formData.country}
                                             onChange={handleChange}
                                             className={styles.formInput}
-                                            onFocus={handleFocus}
-                                            onBlur={handleBlur}
                                             autoComplete="off"
                                             required
                                         />
                                     </div>
                                 </div>
-                                {compiName === "Meshmerize" || compiName === "Cozmo" ? (
+                                {compiName === "meshmerize" || compiName === "cozmoclench" || compiName === "codecode" || compiName ==="techfest olympiad" || compiName ==="mechanzo league"? (
                                     <div className={styles.inputWrapper}>
                                         <label className={`${styles.floatingLabel} ${styles.formLabel}`}>Nearby Zonal</label>
                                         <select
@@ -234,8 +233,6 @@ const Reg = () => {
                                         value={formData.address}
                                         onChange={handleChange}
                                         className={styles.formInput}
-                                        onFocus={handleFocus}
-                                        onBlur={handleBlur}
                                         autoComplete="off"
                                         required
                                     />
@@ -248,8 +245,6 @@ const Reg = () => {
                                         value={formData.instiname}
                                         onChange={handleChange}
                                         className={styles.formInput}
-                                        onFocus={handleFocus}
-                                        onBlur={handleBlur}
                                         required
                                         autoComplete="off"
                                     />
@@ -262,8 +257,6 @@ const Reg = () => {
                                         value={formData.instiadress}
                                         onChange={handleChange}
                                         className={styles.formInput}
-                                        onFocus={handleFocus}
-                                        onBlur={handleBlur}
                                         autoComplete="off"
                                         required
                                     />
@@ -277,8 +270,6 @@ const Reg = () => {
                                         required
                                         onChange={handleChange}
                                         className={styles.formInput}
-                                        onFocus={handleFocus}
-                                        onBlur={handleBlur}
                                         autoComplete="off"
                                         
                                     />
