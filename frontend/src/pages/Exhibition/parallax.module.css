@@ -14,7 +14,7 @@
 }
 
 .layer1 {
-  background-image: url('./assets/w2 without men 1.png');
+  background-image: url('./assets/back.jpg');
   z-index: -1;
   position: relative;
   background-size: cover;
@@ -33,7 +33,7 @@
 }
 
 .layer3 {
-  background-image: url('./assets/w1 2.png');
+  background-image: url('./assets/fore.png');
   opacity: 1;
   z-index: -1;
   background-size: auto 121vh;
@@ -46,7 +46,7 @@
   display: inline-block;
 }
 .exhi{
-  background-image: url('./assets/back.png');
+  background-image: url('./assets/back.jpg');
   min-height: 120vh;
   position: relative;
   background-size: cover;

@@ -3,7 +3,7 @@ import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
 
-const Meshmerize = () => {
+const TechAid = () => {
     const [activeCity, setActiveCity] = useState('About');
     const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {
@@ -13,12 +13,12 @@ const Meshmerize = () => {
       const data = {
         rows: [
           {
-            title: "Why should I participate in the Meshmerize?",
-            content: "The competition provides its participants with a reasonable grasp of important mechanical and programming principles that will take them in the direction of being able to design and construct their own gripping robot. Participants work together to design and build a robotic vehicle that can navigate on an obstacle-filled course while moving blocks from one location to another."
+            title: "How to register?",
+            content: 'Follow this steps for registration : www.techfest.org > Competitions > Tech Aid > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
           },
           {
-            title: "How to register?",
-            content: 'Follow this steps for registration : www.techfest.org > Competitions > Meshmerize > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
+            title: "Who can participate?",
+            content: 'Any individual with a valid ID card, Early stage startups, Upto 3 years old college passouts can participate in the competition.'
           },
           {
             title: "How many people can be there in one team?",
@@ -30,7 +30,7 @@ const Meshmerize = () => {
           },
           {
             title: "How can I make my own team (as a team leader)?",
-            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Meshmerize -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
+            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Tech Aid -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
           },
           {
             title: "What is the Registered Mail ID?",
@@ -46,7 +46,7 @@ const Meshmerize = () => {
           },
           {
             title: "How can I remove members from my team (as a team leader)?",
-            content: 'You cannot remove a team member.'
+            content: 'You cannot remove a team member once added, you can dissolve the team and form a new one.'
           },
           {
             title: "What happens when the team leader leaves their team?",
@@ -104,6 +104,12 @@ const Meshmerize = () => {
         rowContentMarginBottom: '0',
       }
 
+    const lol = {
+        objectFit: 'scale-down', 
+        paddingRight: '8px',
+    }
+
+
     return ( 
       <div className={styles.impdata}>
         <div className={styles.info_head}>
@@ -120,31 +126,37 @@ const Meshmerize = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Teams must build a line follower bot that can keep track of directions while going through a maze. It must analyze the path in the Dry Run and use this information in the Actual Run to traverse the maze to reach the ending point in the minimum possible time.
-              </div>
+            The aim of TechAid: Innovations for Inclusion is to enhance accessibility, independence, and overall quality of life for people with disabilities. By developing innovative solutions across various verticals, the goal is to address specific challenges and barriers faced by differently-abled individuals in their daily lives. In this competition, we challenge participants to think creatively and develop groundbreaking solutions across a spectrum of verticals              </div>
             </div>
           </div>
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Top 5 teams from each Zonal Qualifier will qualify for the Grand Finale that will be held during Techfest 2022-23 (Only if they score higher than the minimum cut-off score)
-              </div>
+            Abstract Submission: <br/>
+            Participants have to submit a report based on the work done so far and also consistent with the format mentioned in the problem statement. <br/>
+            Final Report Submission: <br />
+            Participants have to submit a final report in which their research, proposed solution, technical aspects, benefit to the users, etc. all should be mentioned as given in the Problem Statement. <br />
+            Final Presentation: <br />
+            The final shortlisted participants would be getting a chance to present and explain their solutions in front of judges during the main fest which will be held in IIT Bombay.              </div>
             </div>
           </div>
           <div id="Timeline" className={`${styles.info} ${activeCity === 'Timeline' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-              <ul>
-                <li>
-                  Round 1: <br />
-                  Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.
-                </li>
-                <li>
-                  Round 2: <br />
-                  Finale will be held at Techfest 2023-24 during 27th - 29th December 2023.
+            <li>Last Date of Registration: <br />
+                30th October 2023</li>
 
-                </li>
-              </ul>
+            <li>First Project Report Submission: <br />
+            30th October 2023</li>
+
+            <li>Final Project Report Submission: <br />
+            2nd November 2023</li>
+
+            <li>Final presentation & video submission: <br />
+            10th December 2023 </li>
+
+            <li>Presentation Stage & Exhibition: <br />
+            During Techfest 2022-23, in mid december </li>
               </div>
             </div>
           </div>
@@ -167,8 +179,9 @@ const Meshmerize = () => {
             <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references.
             <br/>3. The decision of the organizers or judges shall be treated as final and binding on all.
             <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
-            <br/>5. Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
-            <br/>6. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
+            <br/>5. The idea presented by the teams should be original (not protected by means of patent/copyright/technical publication by anyone).
+            <br/>6. Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
+            <br/>7. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
               </div>
             </div>
           </div>
@@ -178,8 +191,6 @@ const Meshmerize = () => {
               Abhishek Kedare<br/>
               +91 75585 88254<br/>
               abhishek@techfest.org
-                    <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:abhishek@techfest.org`}>abhishek@techfest.org</div>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7558588254`}>7558588254</div>
               </div>
             </div>
           </div>
@@ -188,4 +199,4 @@ const Meshmerize = () => {
      );
 }
  
-export default Meshmerize;
+export default TechAid;
