@@ -1,5 +1,5 @@
 .background{
-    background-image: url('./img/LegalsBackground.png');
+    background-image: url('./img/Legals1.jpg');
     background-size: cover;
     position:fixed;
     height: 100vh;
@@ -81,8 +81,8 @@
   }
   .whatd{
     overflow: hidden;
-    margin-top: 0px;
-    margin-bottom: 7px;
+    margin-top: -16px;
+    margin-bottom: 0px;
     max-height: 0;
     opacity: 0;
     transition: max-height 0.3s ease, opacity 0.3s ease;
