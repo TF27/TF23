@@ -68,7 +68,8 @@ class compi_reg(models.Model):
         ('19', '9th Standard'),
         ('20', '10th Standard'),
         ('21', '11th Standard'),
-        ('22', '12th Standard')
+        ('22', '12th Standard'),
+        ('23', 'Graduated'),
     ], max_length=255, blank=True, null=True)
     zonals = models.CharField(choices=[
         ('1', 'Mumbai'),
