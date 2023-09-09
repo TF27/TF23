@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import '../Exhibition/DropdownMenu.css';
+import '../Exhibition/WorldMap.css';
+
+
 import europe from './assets/mapContent/Europe/EUROPE.jpg'; //import whatever images we need and add them in the cityData beside a image tag
 import worldmap from './assets/map.png';
 import EastUSA from './assets/mapContent/East USA/EASTUSA.jpg';
