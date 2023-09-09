@@ -1,6 +1,13 @@
 import React from 'react'
 import "./recognition.css"
 import UnescoCard from './UnescoCard'
+import makeinindia from './assets/makeinindia.png'
+import unesco from './assets/unesco.png'
+import unicef from './assets/unicef.png'
+import cee from './assets/cee.png'
+import sayen from './assets/sayen.png'
+import { Height } from '@material-ui/icons'
+
 const Recognition = () => {
   return (
     <div className='recognition'>
@@ -11,16 +18,16 @@ const Recognition = () => {
         </div>
         <div className="cardContainer">
           <div className="unesco-cards">
-              <UnescoCard/>
-              <UnescoCard/>
-              <UnescoCard/>
+              <UnescoCard img={unesco}/>
+              <UnescoCard img={unicef}/>
+              <UnescoCard img={makeinindia} />
               {/* <UnescoCard/> */}
           </div>
           <br />
           <br />
           <div className="unesco-cards">
-              <UnescoCard/>
-              <UnescoCard/>
+              <UnescoCard img={cee} style={{ height: '100px' }}/>
+              <UnescoCard img={sayen}/>
           </div>
           <div className="recog-frame2">
             <div className='recog-container'>

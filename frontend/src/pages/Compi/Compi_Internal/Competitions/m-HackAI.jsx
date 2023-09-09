@@ -126,13 +126,13 @@ const HackAI = () => {
                 <div className={`${styles.whatd} ${open === 'Structure' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                      Round 1:
+                      Round 1:<br/>
                       In this round, the teams will have to solve the Round 1 Problem Statment provided and submit all the relevant files. 
-
-                      Mentoring sessions:
+                      <br/><br/>
+                      Mentoring sessions:<br/>
                       Online sessions will be held to give the finalist teams some idea of the final Problem Statement
-
-                      Final round:
+                      <br/><br/>
+                      Final round:<br/>
                       Selected finalists will compete in an offline hackathon at IIT Bombay campus.</div>
                 </div>
             </div>
@@ -144,16 +144,16 @@ const HackAI = () => {
                 <div className={`${styles.whatd} ${open === 'Timeline' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                    Last date of registration:
-                    2nd October
+                    Last date of registration:<br/>
+                    2nd October<br/><br/>
 
-                    Round 1 Submission Deadline
-                    8th October 2023
+                    Round 1 Submission Deadline:<br/>
+                    8th October 2023<br/><br/>
 
-                    Finalist announcement
-                    15th October 2023
+                    Finalist announcement:<br/>
+                    15th October 2023<br/><br/>
 
-                    Final Round at IIT Bombay Campus
+                    Final Round at IIT Bombay Campus:<br/>
                     27th December 2023</div>
                 </div>
             </div>
@@ -176,15 +176,16 @@ const HackAI = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'Rules' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Every team has to register online on the official Techfest website for the competition.
-            A Team ID will be allocated to the team on registration which shall be used for future references.
-            The decision of the organizers or judges shall be treated as final and binding on all.
-            No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
-            All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
-            Participants have to bring their own laptops during the competition.
-            Teams will be responsible for their devices. It is advised that laptops should be charged before the competition.
-            Mobile phones are not allowed during the competition.
-            The organisers reserve the right to change any or all of the above rules as they deem fit. Change in rules, if any, will be highlighted on the website and notified to the registered teams.</div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
+                      1. Every team has to register online on the official Techfest website for the competition.
+                      <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references.
+                      <br/>3. The decision of the organizers or judges shall be treated as final and binding on all.
+                      <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
+                      <br/>5. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
+                      <br/>6. Participants have to bring their own laptops during the competition.
+                      <br/>7. Teams will be responsible for their devices. It is advised that laptops should be charged before the competition.
+                      <br/>8. Mobile phones are not allowed during the competition.
+                      <br/>9. The organisers reserve the right to change any or all of the above rules as they deem fit. Change in rules, if any, will be highlighted on the website and notified to the registered teams.</div>
                 </div>
             </div>
             <div>
@@ -195,8 +196,8 @@ const HackAI = () => {
                 <div className={`${styles.whatd} ${open === 'Contact' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                    Atharv Apshinge
-                    +91 9324589830
+                    Atharv Apshinge<br/>
+                    +91 9324589830<br/>
                     atharv@techfest.org
                     </div>
                 </div>
