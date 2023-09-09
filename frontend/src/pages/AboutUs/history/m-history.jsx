@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './history.css';
-import blurr from './assets/blurr.png';
 import edm from './assets/edm.png';
 import historyImage from './assets/history.png';
 import mars from './assets/mars.png'
+import blurr from './assets/blurr.png';
+
 
 const Mimages = [
   { id: 'history', url: historyImage },
   { id: 'blurr', url: blurr, text: '2021', additionalText: 'lorem podem todem afjhsdbfjhvyjhdvbfjsdvbfsdgbfjufyjsd' },
   { id: 'mars', url: mars, text: '2021', additionalText: 'idfhasdiobvsauhfasbfkfhvnoixkhdbaifkihisk' },
-  { id: 'blurr', url: blurr, text: '2099', additionalText: 'dsuhiafhisdhfjhsdvfviwegfvhsdghcvjsd' },
   { id: 'mars', url: mars, text: '2099', additionalText: 'hunfksadnufkbsdjfbsudkfbskdjfbs' },
 ];
 

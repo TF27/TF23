@@ -15,7 +15,7 @@
 }
 
 .layer1 {
-  background-image: url('./assets/w2 without men 1.png');
+  background-image: url('./assets/Lec_back.jpg');
   z-index: -1;
   position: relative;
   background-size: cover;
@@ -25,19 +25,20 @@
 }
 
 .layer2 {
-  background-image: url('./assets/WORKSHOP 1.png');
+  background-image: url('./assets/Lec_mid.png');
   opacity: 1;
-  z-index: -1;
-  background-size: 70%;
+  z-index: 0;
+  background-size: 40%;
   background-repeat: no-repeat;
-  background-position-y:20%;
+  background-position-y:30%;
   background-position-x: center;
 }
 
 .layer3 {
-  background-image: url('./assets/w1 2.png');
+  background-image: url('./assets/fore\ 2.png');
   opacity: 1;
   z-index: -1;
+  margin-top: 55pt;
   background-size: auto 121vh;
   background-repeat: no-repeat;
   background-position: center;

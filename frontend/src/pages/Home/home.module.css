@@ -131,7 +131,7 @@
   left: 0;
 }
 .cloudM {
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
 }
 .cloudR {
   right: 0;

@@ -10,6 +10,7 @@ const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   // const [scrollDirection, setScrollDirection] = useState('up');
   // const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [showSignOut, setShowSignOut] = useState(false);
 
   const { googleSignIn, user, logOut } = UserAuth();
   const handleGoogleSignIn = async () => {
@@ -103,7 +104,9 @@ const Header = () => {
   return (
     <div>
       <nav
-        className={`navfunc webNav ${showNavbar ? "navfuncshow" : "navfunchide"}`}
+        className={`navfunc webNav ${
+          showNavbar ? "navfuncshow" : "navfunchide"
+        }`}
         style={{ backgroundImage: `url(${bg})` }}
       >
         <div className="wnavLeft navRow">
@@ -138,12 +141,12 @@ const Header = () => {
             </li>
             <li>
               {user?.displayName ? (
-                <div onClick={handleSignOut} className="singin">
+                <div className="singin">
                   <div className="logou_rect1">
                     <div
                       className="logou_rect2"
-                      // onMouseEnter={(e) => (e.target.innerText = "Sign Out")}
-                      // onMouseLeave={(e) => (e.target.innerText = name)}
+                      onMouseEnter={() => setShowSignOut(true)} // Show the Sign Out div on mouse enter
+                      onMouseLeave={() => setShowSignOut(false)}
                     >
                       <img src={user.photoURL} />
                     </div>
@@ -159,6 +162,15 @@ const Header = () => {
             </li>
           </ul>
         </div>
+        {showSignOut && (
+          <div
+            className="sign-out-div"
+            onMouseEnter={() => setShowSignOut(true)} // Show the Sign Out div on mouse enter
+            onMouseLeave={() => setShowSignOut(false)}
+          >
+            <button onClick={handleSignOut}>Sign Out</button>
+          </div>
+        )}
       </nav>
       <div className="navbarClassName">
         <div className={openMenu ? "hamburger active_burger" : "hamburger"}>

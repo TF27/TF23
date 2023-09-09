@@ -13,6 +13,7 @@ import historyImage from './assets/history.png';
     { id: 'edm', url: i1997, text: '1997', additionalText: 'idfhasdiobvsauhfasbfkfhvnoixkhdbaifkihisk' },
     { id: 'blurr', url: blurr, text: '2002', additionalText: 'dsuhiafhisdhfjhsdvfviwegfvhsdghcvjsd' },
     { id: 'edm', url: i2002, text: '2002', additionalText: 'hunfksadnufkbsdjfbsudkfbskdjfbs' },
+
   ];
 
   const HistoryItem = ({ imageUrl, height, width, isVisible, id, text, additionalText }) => (
