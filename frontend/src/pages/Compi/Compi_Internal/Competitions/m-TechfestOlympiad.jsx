@@ -103,9 +103,9 @@ const TechfestOlympiad = () => {
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
                         Round 1:
-                        <br/>Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.
+                        <br/>Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023
                         <br/><br/>Round 2:
-                        <br/>Finale will be held at Techfest 2023-24 during 27th - 29th December 2023.</div>
+                        <br/>Finale will be held at Techfest 2023-24 during 27th - 29th December 2023</div>
                 </div>
             </div>
             <div>
@@ -128,12 +128,12 @@ const TechfestOlympiad = () => {
                 <div className={`${styles.whatd} ${open === 'Rules' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                    1. Every team has to register online on the official Techfest website for the competition.
-            <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references.
-            <br/>3. The decision of the organizers or judges shall be treated as final and binding on all.
-            <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
-            <br/>5. Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
-            <br/>6. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
+                    1. Every team has to register online on the official Techfest website for the competition
+            <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references
+            <br/>3. The decision of the organizers or judges shall be treated as final and binding on all
+            <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries
+            <br/>5. Note that at any point of time the latest information will be that which is on the website; However, registered participants will be informed through mail about any changes
+            <br/>6. All modes of official communication will be through the Techfest e-mail, participants are advised to keep track of all folders in their e-mail accounts
                 </div>
             </div></div>
             <div>

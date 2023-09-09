@@ -309,6 +309,7 @@ const Reg = () => {
                                         <option value="20" className={styles.genderOps}>10th Standard</option>
                                         <option value="21" className={styles.genderOps}>11th Standard</option>
                                         <option value="22" className={styles.genderOps}>12th Standard</option>
+                                        <option value="22" className={styles.genderOps}>Graduated</option>
                                     </select>
                                 </div>
                                 <div>
