@@ -150,11 +150,11 @@ const UrbanFuturism = () => {
             Abstract Report Submission: <br />
             10th November 2023 <br /> <br />
             Shortlisting of the Abstracts: <br />
-            20th November,2023 <br /> <br />
+            20th November 2023 <br /> <br />
             Final Report Submission: <br />
-            15th December, 2023 <br /> <br />
+            15th December 2023 <br /> <br />
             Final Presentation: <br />
-            27th December, 2023 <br />
+            27th December 2023 <br />
               </div>
             </div>
           </div>
@@ -173,12 +173,12 @@ const UrbanFuturism = () => {
           <div id="Rules" className={`${styles.info} ${activeCity === 'Rules' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            1. Every team has to register online on the official Techfest website for the competition.
-            <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references.
-            <br/>3. The decision of the organizers or judges shall be treated as final and binding on all.
-            <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
-            <br/>5. Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
-            <br/>6. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
+            1. Every team has to register online on the official Techfest website for the competition
+            <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references
+            <br/>3. The decision of the organizers or judges shall be treated as final and binding on all
+            <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries
+            <br/>5. Note that at any point of time the latest information will be that which is on the website; however, registered participants will be informed through mail about any changes
+            <br/>6. All modes of official communication will be through the Techfest e-mail, participants are advised to keep track of all folders in their e-mail accounts
               </div>
             </div>
           </div>

@@ -36,7 +36,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("./static/img/img8.png");
+    background-image: url("./static/img/img8.jpg");
     animation: compi_loading_base 6s infinite ease-in;
 }
 
@@ -61,9 +61,9 @@
 }
 
 @keyframes compi_loading_base{
-    0%,100%{background-image: url("static/img/img8.png");}
-    35%{background-image: url("static/img/img6.png");}
-    70%{background-image: url("static/img/img7.png");}
+    0%,100%{background-image: url("static/img/img8.jpg");}
+    35%{background-image: url("static/img/img6.jpg");}
+    70%{background-image: url("static/img/img7.jpg");}
 }
 
 @keyframes compi_loading_svg{

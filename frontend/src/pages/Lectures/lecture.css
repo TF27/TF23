@@ -49,11 +49,11 @@
 .contactus{
     padding-bottom: 100px;
 }
-@media(max-width:500px){
+/* @media(max-width:500px){
     .contactus{
   padding-bottom: 355px;
     }
-  }
+  } */
 .difPage{
     margin-top: 10pt;
 }

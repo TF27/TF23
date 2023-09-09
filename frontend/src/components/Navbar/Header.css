@@ -4,62 +4,32 @@
   background-color: black;
   transition: background-color 0.5s ease-in-out;
 }
-/* 
-.header_competitions{
-    background-color: blueviolet;
-}
-
-.header_gallery{
-    background-color: chocolate;
-}
-
-.header_lectures{
-    background-color: fuchsia;
-}
-
-.header_summits{
-    background-color: rosybrown;
-}
-
-.header_workshops{
-    background-color: goldenrod;
-}
-
-.header_exhibitions{
-    background-color: brown;
-} */
-
-.navbarClassName {
-}
 
 .hamburger {
   display: none;
 }
 
-.webNav {
-  display: flex;
-  justify-content: space-between;
-}
 .logoDiv {
   justify-content: center;
 }
-.webNav ul {
-  justify-content: space-around;
+.webNav {
+  justify-content: space-between;
   display: flex;
   width: 100%;
-  margin-top: 14px;
+  /* margin-top: 14px; */
 }
-.webNav ul li {
+.webNav li {
   list-style: none;
 }
-.webNav ul li a {
-  font-size: 1rem;
+.webNav li a {
+  /* font-size: 1rem; */
   text-decoration: none;
   color: #fff;
   transition: color 0.3s ease-in-out;
   font-family: Landasans;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 24px;
+  /* font-weight: bold; */
 }
 .bar {
   display: block;
@@ -70,6 +40,26 @@
   transition: all 0.3s ease-in-out;
   background-color: white;
   /* position: inherit; */
+}
+
+@media (max-width: 1672px){
+  .webNav li a{
+    font-size: 22px;
+  }
+  .logout_rect2{
+    font-size: 19px;
+    height: 40px;
+    width: 90px;
+  }
+  .logout_rect1{
+    height: 40px;
+    width: 90px;
+  }
+}
+@media (max-width: 1550px){
+  .webNav li a{
+    font-size: 20px;
+  }
 }
 
 .nav_slider ul {
@@ -126,18 +116,15 @@
 }
 .navRow{
   position: relative;
-  top: 20px;
-  height: 80%;
+  top: 8px;
+  height: 100%;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: space-around;
 }
 
-.wnavLeft{
-  width: 30%;
-  overflow-x: hidden;
-  left: -25px;
-}
-.wnavRight{
-  width: 30%;
-  overflow-x: hidden;
+.wnavLeft, .wnavRight{
+  width: 35%;
 }
 
 .sign-out-div {
@@ -160,29 +147,114 @@
   color: white;
   border: none;
   padding: 5px 10px;
-  margin-top: 5px;
+  /* margin-top: 5px; */
   cursor: pointer;
   font-family: Landasans;
 }
-@media (max-width: 768px) {
+
+.navfunc {
+  z-index: 2147483647;
+  width: 100%;
+}
+.navfunchide {
+  position: fixed;
+  top: -200px;
+  transition: top 0.5s ease-in-out;
+  /* background-image: url("./navimg.png"); */
+  width: 100%;
+  /* height: 160px; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.navfuncshow {
+  position: fixed;
+  top: 0px;
+  transition: top 0.5s ease-in-out;
+  /* background-image: url("./navimg.png"); */
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  width: 100%;
+  /* height: 170px; */
+}
+
+/* @media (max-width: 1524px) {
+  .webNav li a{
+    font-size: 18px;
+  }
+} */
+
+@media (max-width: 1240px){
+  .navSummit{
+    display: block;
+    width: 80%;
+    margin: auto;
+    top: -8px;
+    position: relative;
+  }
+  .logoDiv img{
+    top: 14px;
+  }
+}
+
+.logoDiv img{
+  position: relative;
+}
+@media (max-width: 1120px){
+  .logoDiv img{
+    width: 17vw;
+  }
+  .navContact{
+    display: block;
+    width: 80%;
+    margin: auto;
+    top: -8px;
+    position: relative;
+  }
+}
+@media (max-width: 1040px){
+  .webNav li a{
+    font-size: 18px;
+  }
+  .logout_rect2{
+    height: 32px;
+    width: 80px;
+    font-size: 17px;
+  }
+  .logout_rect1{
+    height: 32px;
+    width: 80px;
+  }
+  .signin{
+    margin-top: -2px;
+  }
+}
+@media (max-width: 878px){
+  .webNav li a{
+    font-size: 17px;
+  }
+  .logout_rect2{
+    height: 32px;
+    width: 80px;
+    font-size: 16px;
+  }
+  .logout_rect1{
+    height: 32px;
+    width: 80px;
+  }
+  .signin{
+    margin-top: -2px;
+  }
+}
+
+@media (max-width: 848px) {
   .navfunchide {
     background-image: none !important;
   }
   .navfuncshow {
     background-image: none !important;
-  }
-  .hamburger {
-    display: flex;
-    overflow: auto;
-    scroll-behavior: smooth;
-    align-content: flex-end;
-    flex-wrap: wrap;
-    margin-top: 12px;
-    position: relative;
-    z-index: 100;
-    transition: 1s ease;
-    align-items: center;
-    justify-content: space-between;
   }
   .headLogo{
     width:280px;
@@ -190,6 +262,7 @@
   .headHam{
     width: 58px;
     margin-top:-18px;
+    cursor: pointer;
   }
   .hamburger.active_burger .bar:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
@@ -223,13 +296,13 @@
     background: black;
     transition: 1s ease;
     z-index: 99;
-    margin-top: 90px;
+    /* margin-top: 90px; */
   }
   .nav_slider.active_slide {
     right: 0;
     transition: 1s ease;
     overflow-y: scroll;
-    margin-top: 90px;
+    /* margin-top: 90px; */
   }
 
   .nav_slider.active_slide::-webkit-scrollbar {
@@ -245,6 +318,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    top: 75px;
+    position: relative;
   }
 
   .nav_slider ul li {
@@ -264,32 +339,40 @@
   .webNav {
     display: none;
   }
-}
-
-.navfunc {
-  z-index: 2147483647;
-  width: 100%;
-}
-.navfunchide {
-  position: fixed;
-  top: -200px;
-  transition: top 0.5s ease-in-out;
-  /* background-image: url("./navimg.png"); */
-  width: 100%;
-  /* height: 160px; */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.navfuncshow {
-  position: fixed;
-  top: -20px;
-  transition: top 0.5s ease-in-out;
-  /* background-image: url("./navimg.png"); */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100vw;
-  /* height: 170px; */
+  .mnavfunchide {
+    position: fixed;
+    top: 0px;
+    transition: top 0.5s ease-in-out;
+    /* background-image: url("./navimg.png"); */
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    width: 100%;
+    /* height: 170px; */
+  }
+  
+  .mnavfuncshow {
+    position: fixed;
+    top: 0px;
+    transition: top 0.5s ease-in-out;
+    /* background-image: url("./navimg.png"); */
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    width: 100%;
+    /* height: 170px; */
+  }
+  .hamburger {
+    display: flex;
+    overflow: auto;
+    scroll-behavior: smooth;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    position: relative;
+    z-index: 100;
+    transition: 1s ease;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
