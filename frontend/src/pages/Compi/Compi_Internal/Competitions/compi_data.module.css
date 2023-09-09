@@ -130,7 +130,7 @@
     animation: axisMove 1s cubic-bezier(0.22, 0.61, 0.36, 1);
     color: #fff;
     text-align: left;
-    margin-left: 10px;
+    margin-left: 30px;
     font-size: 20px;
 }
 
@@ -297,4 +297,6 @@ ul li{
     margin-bottom: 12px;
     margin-top: 8px;
     list-style: none;
+    position: relative;
+    left: -30px;
 }
