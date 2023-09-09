@@ -273,6 +273,7 @@
 @media (max-width: 580px) {
   .themeImg {
     width: 300px;
+    height: auto;
   }
   .themeData img {
     width: 300px;
