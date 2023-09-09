@@ -177,8 +177,8 @@ const Header = () => {
           </div>
         )}
       </nav>
-      <div className={`navfunc webNav ${
-          showNavbar ? "navfuncshow" : "navfunchide"
+      <div className={`mobNav navfunc ${
+          showNavbar ? "mnavfuncshow" : "mnavfunchide"
         }`}>
         <div className={openMenu ? "hamburger active_burger" : "hamburger"}>
           <div className="headLogo">
@@ -194,9 +194,9 @@ const Header = () => {
         </div>
         <nav className={openMenu ? "nav_slider active_slide" : "nav_slider"}>
           <ul>
-            <li onClick={showMenu}>
+            {/* <li onClick={showMenu}>
               <Link to="/">Home</Link>
-            </li>
+            </li> */}
             <li onClick={showMenu}>
               <Link to="/competitions">Competitions</Link>
             </li>
