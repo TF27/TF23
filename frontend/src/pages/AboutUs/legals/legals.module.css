@@ -51,6 +51,9 @@
     left: 0;
     top: 100%;
   }
+  .pointer{
+    cursor: pointer;
+  }
   .transit{
     transition: 1s;
   }
