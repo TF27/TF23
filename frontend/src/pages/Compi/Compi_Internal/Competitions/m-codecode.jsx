@@ -151,9 +151,9 @@ const Codecode = () => {
                 <div className={`${styles.whatd} ${open === 'Timeline' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Round 1:<br/>
-            Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.<br/><br/>
+            Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023<br/><br/>
             Round 2:<br/>
-            Finale will be held at Techfest 2023-24 during 27th - 29th December 2023.</div>
+            Finale will be held at Techfest 2023-24 during 27th - 29th December 2023</div>
                 </div>
             </div>
             <div>
@@ -176,12 +176,12 @@ const Codecode = () => {
                 <div className={`${styles.whatd} ${open === 'Rules' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                    1. Participants have to bring their own laptops during the competition.
-                    <br/>2. Teams will be responsible for their devices. It is advised that laptops should be charged before the competition.
-                    <br/>3. Use of online compilers and the internet is not allowed. Participants have to come with offline compilers pre-installed on their laptops.
-                    <br/>4. Mobile phones are not allowed during the competition.
-                    <br/>5. The organisers reserve the right to change any or all of the above rules as they deem fit. Change in rules, if any, will be highlighted on the website and notified to the registered teams.
-                    <br/>6. Online Compiler is strictly not allowed. Any team found using it will be disqualified from the competition.</div>
+                    1. Participants have to bring their own laptops during the competition
+                    <br/>2. Teams will be responsible for their devices, it is advised that laptops should be charged before the competition
+                    <br/>3. Use of online compilers and the internet is not allowed, participants have to come with offline compilers pre-installed on their laptops
+                    <br/>4. Mobile phones are not allowed during the competition
+                    <br/>5. The organisers reserve the right to change any or all of the above rules as they deem fit. Change in rules, if any, will be highlighted on the website and notified to the registered teams
+                    <br/>6. Online Compiler is strictly not allowed, any team found using it will be disqualified from the competition</div>
                 </div>
             </div>
             <div>
