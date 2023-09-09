@@ -6,17 +6,22 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.3);
     transition: opacity 500ms;
   }
   .popup {
-    margin: 70px auto;
+    margin: 0 auto;
     padding: 20px;
-    background: #000;
+    background:rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(5.5px);
+    backdrop-filter: blur(5.5px);
+    border: 1px solid rgba(0,0,0,1);
     border-radius: 5px;
     width: 30%;
-    position: relative;
-    transition: all 5s ease-in-out;
+    position: fixed;
+    top: 30%;
+    left: 35%;
+    transition: all .5s ease-in-out;
   }
   
   .popup h2 {

@@ -17,15 +17,15 @@ const Recognition = () => {
         </div>
         <div className="cardContainer">
           <div className="unesco-cards">
-              <UnescoCard img={unicef}/>
               <UnescoCard img={unesco}/>
+              <UnescoCard img={unicef}/>
               <UnescoCard img={makeinindia} />
               {/* <UnescoCard/> */}
           </div>
           <br />
           <br />
           <div className="unesco-cards">
-              <UnescoCard img={cee}/>
+              <UnescoCard img={cee} style={{ height: '100px' }}/>
               <UnescoCard img={sayen}/>
           </div>
           <div className="recog-frame2">

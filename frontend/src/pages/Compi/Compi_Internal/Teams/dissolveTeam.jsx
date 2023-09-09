@@ -68,9 +68,10 @@ const DissolveTeam = () => {
               name="teamId"
               value={teamId}
               onChange={handleChange}
+              className='jointeaminput'
             />
           </label>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" className='joinsubmit'/>
         </form>
       </CustomPopup>
     </div>

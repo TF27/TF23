@@ -40,11 +40,11 @@
   /* width: 100%; */
 }
 .Overlay{
-  transform: translateY(-20px);
+  transform: translateY(-30px) translateX(10px);
   position: absolute;
   /* color:blueviolet; */
   /* font-weight: bold; */
-  font-size: 20px;
+  font-size: 40px;
   animation: none;
   /* top: 30%;
   left:43%; */

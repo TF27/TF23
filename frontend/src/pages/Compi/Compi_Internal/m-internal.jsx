@@ -15,6 +15,11 @@ import Meshmerize from './Competitions/m-meshmerize';
 import Machanzo from './Competitions/m-machanzo';
 import HackAI from './Competitions/m-HackAI';
 import CozmoClench from './Competitions/m-CozmoClench';
+import TechfestOlympiad from './Competitions/m-TechfestOlympiad';
+import Codecode from './Competitions/m-codecode';
+import UrbanFuturism from './Competitions/UrbanFuturism';
+import TechAid from './Competitions/TechAid';
+
 
 const MInternal = () => {
   const { compiName } = useParams();
@@ -128,6 +133,10 @@ const MInternal = () => {
           {compiName === 'mechanzo league' && <Machanzo />}
           {compiName === 'hackai' && <HackAI/>}
           {compiName === 'cozmoclench' && <CozmoClench/>}
+          {compiName === 'techfest olympiad' && <TechfestOlympiad/>}
+          {compiName === 'codecode' && <Codecode/>}
+          {compiName === 'urban furturism' && <UrbanFuturism/>}
+          {compiName === 'tech aid' && <TechAid/>}
       </div>
     ));
   }

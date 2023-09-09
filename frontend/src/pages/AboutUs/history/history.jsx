@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './history.css';
 import blurr from './assets/blurr.png';
-import edm from './assets/edm.png';
+// import edm from './assets/edm.png';
 import historyImage from './assets/history.png';
+import edm from './assets/2014.png'
 
   const images = [
     { id: 'history', url: historyImage },
     { id: 'blurr', url: blurr, text: '2021', additionalText: 'lorem podem todem afjhsdbfjhvyjhdvbfjsdvbfsdgbfjufyjsd' },
     { id: 'edm', url: edm, text: '2021', additionalText: 'idfhasdiobvsauhfasbfkfhvnoixkhdbaifkihisk' },
-    { id: 'blurr', url: blurr, text: '2099', additionalText: 'dsuhiafhisdhfjhsdvfviwegfvhsdghcvjsd' },
-    { id: 'edm', url: edm, text: '2099', additionalText: 'hunfksadnufkbsdjfbsudkfbskdjfbs' },
+    { id: 'edm', url: edm , text: '2099', additionalText: 'hunfksadnufkbsdjfbsudkfbskdjfbs' },
   ];
 
   const HistoryItem = ({ imageUrl, height, width, isVisible, id, text, additionalText }) => (

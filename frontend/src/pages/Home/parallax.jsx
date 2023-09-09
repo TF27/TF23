@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import styles from "./home.module.css";
 import rocks from "./assets/rocks.png";
-import head from "./assets/tap.png";
+import head from "./images/tap.png";
 import fire1 from "./assets/fire1.png";
 import fire2 from "./assets/fire2.png";
 import cloudR from "./images/cloudR.png";

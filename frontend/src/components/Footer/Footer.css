@@ -3,22 +3,22 @@
     bottom: -200px;
     transition: bottom 0.5s ease-in-out;
     /* background-image: url('./footimg.png'); */
-    width: 100%;
+    width: 100vw;
     /* height: 160px; */
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
+    background-position: center bottom;
 }
 
 .footfuncshow{
     position: fixed;
-    bottom: 0px;
+    bottom: 14px;
     transition: bottom 0.5s ease-in-out;
     /* background-image: url('./footimg.png'); */
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center bottom;
     background-size: cover;
-    width: 100%;
+    width: 100vw;
     /* height: 160px; */
 }
 
@@ -29,11 +29,11 @@
 .footWeb{
     display: flex;
     justify-content: space-between;
-    bottom: 0;
+    /* bottom: 0; */
     /* margin-top: 95px; */
 }
 
-.footWeb ul{
+.footWeb{
     display: flex;
 }
 
@@ -47,21 +47,27 @@
 .footWeb li a{
     color: white;
     font-family: Landasans;
-    font-size: 20px;
+    font-size: 23px;
     text-decoration: none;
     text-transform: uppercase;
+    /* font-weight: 300; */
 }
 
 .footLink{
     width: 35%;
+    display:flex;
 }
 
 .socialMedia{
     width: 35%;
+    display: flex;;
     /* margin-right: 3%; */
 }
+.footMulti{
+    display: flex;
+}
 
-@media (max-width: 748px){
+@media (max-width: 848px){
     .footLinkO{
         display: none;
     }
@@ -73,7 +79,7 @@
         background: none;
         height: auto;
     }
-    .footWeb ul{
+    .footWeb{
         padding: 0;
     }
     .footWeb{
@@ -86,5 +92,45 @@
     }
     .socialMedia img{
         width: 33px;
+    }
+}
+
+@media (max-width: 1720px){
+    .footWeb li a{
+        font-size: 1.2em;
+    }
+}
+@media (max-width: 1500px){
+    .footWeb li a{
+        font-size: 1.1em;
+    }
+}
+@media (max-width: 1360px){
+    .footWeb li a{
+        font-size: 1em;
+    }
+}
+@media (max-width: 1200px){
+    .footWeb li a{
+        font-size: 0.9em;
+    }
+}
+@media (max-width: 1000px){
+    .footLink {
+        align-items: flex-end;
+    }
+    .footMulti{
+        display: block;
+    }
+    .footMulti li{
+        margin: 0 auto;
+        padding: 0;
+    }
+    .footWeb li{
+        margin: 0;
+        /* padding: 0; */
+    }
+    .footLink{
+        justify-content: space-around;
     }
 }

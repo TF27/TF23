@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./lecture.css";
-import "./map2.css";
 import styles from "./parallax.module.css";
 import ImageOne from "./ImageOne";
 
@@ -16,7 +15,7 @@ import img from './assets/mapContent/Europe/EUROPE.jpg';
 import img2 from './assets/mapContent/Europe/EUROPE.jpg';
 
 import tiger from "../../components/Contact/test_tiger.jpeg";
-import MapClick from "./map2";
+import MapClick from "./m-map";
 
 const Lectures = () => {
   const [isMobile, setIsMobile] = useState(false);

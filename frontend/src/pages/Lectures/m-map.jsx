@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./map2.css";
-import Europe from './assets/mapContent/Europe/EUROPE.jpg';
-import Astro from './assets/mapContent/Europe/EUROPE.jpg';
+import "./m-map.css";
+import Europe from "./assets copy/europe.jpg";
+import Astro from "./assets copy/europe.jpg";
 
 const MapClick = () => {
   
