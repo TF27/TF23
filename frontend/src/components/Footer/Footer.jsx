@@ -55,26 +55,28 @@ const Footer = () => {
         }`}
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <div className="footLinkO">
-          <ul clasName="footLink">
+        <div className="footLinkO footLink">
+          <div className="footMulti">
             <li>
               <Link to="/history">History</Link>
             </li>
             <li>
               <Link to="/gallery">Gallery</Link>
             </li>
+          </div>
             <li>
               <Link to="/recognition">Recognition</Link>
             </li>
+          <div className="footMulti">
             <li>
               <Link to="/aboutus/media">Media</Link>
             </li>
             <li>
               <Link to="/legals">Legals</Link>
             </li>
-          </ul>
+          </div>
         </div>
-        <ul className="socialMedia">
+        <div className="socialMedia">
           <li>
             <a
               href="https://www.instagram.com/techfest_iitbombay/?hl=en"
@@ -117,7 +119,7 @@ const Footer = () => {
               <img src={pinterest} />
             </a>
           </li>
-        </ul>
+        </div>
       </div>
     </div>
   );

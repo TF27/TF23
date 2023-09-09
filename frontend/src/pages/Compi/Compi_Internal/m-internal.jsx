@@ -1,206 +1,162 @@
-import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import axios from "axios";
-import { UserAuth } from "../../../contexts/AuthContext";
-import styles from "./internal.module.css";
-import DissolveTeam from "./Teams/dissolveTeam";
-import LeaveTeam from "./Teams/leaveTeam";
+import React, { useState, useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import axios from 'axios';
+import { UserAuth } from '../../../contexts/AuthContext';
+import styles from './internal.module.css';
+import DissolveTeam from './Teams/dissolveTeam';
+import LeaveTeam from './Teams/leaveTeam';
 // import images
-import backimg1 from "./../static/img/exp_bg.png";
-import backimg2 from "./../static/img/img7.png";
-import frame from "./../static/card/Frame.png";
-import WhatsappShareButton from "../../../components/share/whatsapp";
+import backimg1 from './../static/img/exp_bg.png';
+import backimg2 from './../static/img/img7.png';
+import frame from './../static/card/Frame.png';
+import WhatsappShareButton from '../../../components/share/whatsapp';
 
-import Meshmerize from "./Competitions/m-meshmerize";
-import Machanzo from "./Competitions/m-machanzo";
-import HackAI from "./Competitions/m-HackAI";
-import CozmoClench from "./Competitions/m-CozmoClench";
-import TechfestOlympiad from "./Competitions/m-TechfestOlympiad";
-import Codecode from "./Competitions/m-codecode";
+import Meshmerize from './Competitions/m-meshmerize';
+import Machanzo from './Competitions/m-machanzo';
+import HackAI from './Competitions/m-HackAI';
+import CozmoClench from './Competitions/m-CozmoClench';
+import TechfestOlympiad from './Competitions/m-TechfestOlympiad';
+import Codecode from './Competitions/m-codecode';
+import UrbanFuturism from './Competitions/UrbanFuturism';
+import TechAid from './Competitions/TechAid';
+
 
 const MInternal = () => {
-   const { compiName } = useParams();
+  const { compiName } = useParams();
 
-   const [data, setData] = useState([]);
-   const { googleSignIn, user, logOut } = UserAuth();
-   const handleGoogleSignIn = async () => {
+  const [data, setData] = useState([]);
+  const { user } = UserAuth();
+
+  const google_id = user?.email;
+  const ProblemStatements = `https://rain.techfest.org/media/ProblemStatements/${compiName}.pdf`;
+
+  useEffect(() => {
+    const fetchData = async () => {
       try {
-         await googleSignIn();
+        const response = await axios.get('/api/compi_card/', {
+          headers: {
+            'X-Email': google_id,
+          },
+        });
+        setData(response.data);
       } catch (error) {
-         console.log(error);
+        console.error(error);
       }
-   };
-   const google_id = user?.email;
-   const ProblemStatements = `https://rain.techfest.org/media/ProblemStatements/${compiName}.pdf`;
+    };
+    fetchData();
+  }, [google_id]);
 
-   useEffect(() => {
-      const fetchData = async () => {
-         try {
-            const response = await axios.get("/api/compi_card/", {
-               headers: {
-                  "X-Email": google_id,
-               },
-            });
-            setData(response.data);
-         } catch (error) {
-            console.error(error);
-         }
-      };
-      fetchData();
-   }, [google_id]);
 
-   const information = () => {
-      const card_data = data.filter((item) => item.name === compiName);
 
-      return card_data.map((data) => (
-         <div className={`container ${styles.wdata}`}>
-            <div className="row">
-               <div className={styles.sponsor}>
-                  {data.sponsorImg && (
-                     <h3>
-                        Sponsored by{" "}
-                        <img
-                           src={data.sponsorImg}
-                           alt="Sponsor"
-                           className={styles.sponsorImg}
-                        />
-                     </h3>
-                  )}
-               </div>
-               <div className={styles.mImg}>
-                  <img src={frame} alt="Frame" className={styles.mImgFrame} />
-                  <img
-                     src={data.img}
-                     alt={compiName}
-                     className={styles.mImgCompi}
-                  />
-               </div>
-               <div className={styles.basicInfo}>
-                  <h1 className={styles.heading}>{compiName}</h1>
-                  <h3 className={styles.compi_prize}>
-                     {" "}
-                     INR {data.prize} PRIZE
-                  </h3>
-               </div>
-               <div className={styles.team_reg}>
-                  {data.is_team_leader ? (
-                     <div className={styles.lol_reg}>
-                        <div className={styles.compi_team}>
-                           <DissolveTeam />
-                           <div
-                              className={`${styles.add_parti} ${styles.single_team}`}
-                           >
-                              <div className={styles.single_rect1}></div>
-                              <div className={styles.single_rect2}>
-                                 <Link to={`addparticipant`}>
-                                    Add Participant
-                                 </Link>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  ) : data.is_parti ? (
-                     <div>
-                        <LeaveTeam />
-                     </div>
-                  ) : data.is_registered ? (
-                     <div className={styles.lol_reg}>
-                        You have registered successfully!
-                        <div className={styles.compi_team}>
-                           <div className={styles.create_team}>
-                              <div className={styles.create_rect1}></div>
-                              <div className={styles.create_rect2}>
-                                 <Link to={`createTeam`}>Create Team</Link>
-                              </div>
-                           </div>
-                           <div className={styles.join_team}>
-                              <div className={styles.join_rect1}></div>
-                              <div className={styles.join_rect2}>
-                                 <Link to={`joinTeam`}>Join Team</Link>
-                              </div>
-                           </div>
-                           <div className={styles.single_team}>
-                              <div className={styles.single_rect1}></div>
-                              <div className={styles.single_rect2}>
-                                 <Link to={`singleparticipant`}>
-                                    Single Participant
-                                 </Link>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  ) : (
-                     <div className={styles.doIt}>
-                        <div className={styles.int_reg}>
-                           {/* <div className={styles.reg_rect1}></div>
-                           <div className={styles.reg_rect2}>
-                              <Link to={`register`}>Register</Link>
-                           </div> */}
-                           <div className={styles.reg_rect1}></div>
-                           {data.is_registered ? (
-                              <div className={styles.reg_rect2}>Registered</div>
-                           ) : user ? (
-                              <div className={styles.reg_rect2}>
-                                 <Link to={`${data.name}/register`}>
-                                    Register
-                                 </Link>
-                              </div>
-                           ) : (
-                              <div className={styles.reg_rect2}>
-                                 <button onClick={handleGoogleSignIn}>
-                                    Register
-                                 </button>
-                              </div>
-                           )}
-                        </div>
-                        <div className={styles.share}>
-                           <div className={styles.share_rect1}></div>
-                           <div className={styles.share_rect2}>
-                              <WhatsappShareButton />
-                           </div>
-                        </div>
-                     </div>
-                  )}
-               </div>
-               <div className={styles.statement}>
-                  <div className={styles.stat_rect1}></div>
-                  <div className={styles.stat_rect2}>
-                     <a
-                        href={ProblemStatements}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                     >
-                        Problem Statement
-                     </a>
+  const information = () => {
+    const card_data = data.filter(item => item.name === compiName)
+
+    
+
+    return card_data.map(data => (
+      <div className={`container ${styles.wdata}`}>
+        <div className='row'>
+          <div className={styles.sponsor}>
+            {data.sponsorImg && <h3>Sponsored by <img src={data.sponsorImg} alt='Sponsor' className={styles.sponsorImg} /></h3>}
+          </div>
+          <div className={styles.mImg}>
+            <img src={frame} alt='Frame' className={styles.mImgFrame} />
+            <img src={data.img} alt={compiName} className={styles.mImgCompi} />
+          </div>
+          <div className={styles.basicInfo}>
+            <h1 className={styles.heading}>{compiName}</h1>
+            <h3 className={styles.compi_prize}> INR {data.prize} PRIZE</h3>
+          </div>
+          <div className={styles.team_reg}>
+            {data.is_team_leader ? (
+              <div className={styles.lol_reg}>
+                <div className={styles.compi_team}>
+                <DissolveTeam />
+                <div className={`${styles.add_parti} ${styles.single_team}`}>
+                    <div className={styles.single_rect1}></div>
+                    <div className={styles.single_rect2}>
+                      <Link to={`addparticipant`}>Add Participant</Link>
+                    </div>
                   </div>
-               </div>
-            </div>
-            {compiName === "meshmerize" && <Meshmerize />}
-            {compiName === "mechanzo league" && <Machanzo />}
-            {compiName === "hackai" && <HackAI />}
-            {compiName === "cozmoclench" && <CozmoClench />}
-            {compiName === "techfest olympiad" && <TechfestOlympiad />}
-            {compiName === "codecode" && <Codecode />}
-         </div>
-      ));
-   };
+                
+              </div>
+              </div>
+            ) : data.is_parti ? (
+              <div>
+                <LeaveTeam />
+              </div>
+            ) : data.is_registered ? (
+              <div className={styles.lol_reg}>
+                You have registered successfully!
+                <div className={styles.compi_team}>
+                  <div className={styles.create_team}>
+                    <div className={styles.create_rect1}></div>
+                    <div className={styles.create_rect2}>
+                      <Link to={`createTeam`}>Create Team</Link>
+                    </div>
+                  </div>
+                  <div className={styles.join_team}>
+                    <div className={styles.join_rect1}></div>
+                    <div className={styles.join_rect2}>
+                      <Link to={`joinTeam`}>Join Team</Link>
+                    </div>
+                  </div>
+                  <div className={styles.single_team}>
+                    <div className={styles.single_rect1}></div>
+                    <div className={styles.single_rect2}>
+                      <Link to={`singleparticipant`}>Single Participant</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className={styles.doIt}>
+                <div className={styles.int_reg}>
+                  <div className={styles.reg_rect1}></div>
+                  <div className={styles.reg_rect2}>
+                    <Link to={`register`}>Register</Link>
+                  </div>
+                </div>
+                <div className={styles.share}>
+                  <div className={styles.share_rect1}></div>
+                  <div className={styles.share_rect2}><WhatsappShareButton /></div>
+                </div>
+              </div>
+            )}
+          </div>
+          <div className={styles.statement}>
+            <div className={styles.stat_rect1}></div>
+            <div className={styles.stat_rect2}><a href={ProblemStatements} target='_blank' rel='noopener noreferrer'>Problem Statement</a></div>
+          </div>
+        </div>
+          {compiName === 'meshmerize' && <Meshmerize />}
+          {compiName === 'mechanzo league' && <Machanzo />}
+          {compiName === 'hackai' && <HackAI/>}
+          {compiName === 'cozmoclench' && <CozmoClench/>}
+          {compiName === 'techfest olympiad' && <TechfestOlympiad/>}
+          {compiName === 'codecode' && <Codecode/>}
+          {compiName === 'urban furturism' && <UrbanFuturism/>}
+          {compiName === 'tech aid' && <TechAid/>}
+      </div>
+    ));
+  }
 
-   const imageList = [backimg1, backimg2];
+  const imageList = [backimg1, backimg2];
 
-   const top = {
-      backgroundImage: `url(${imageList[0]})`, // Initial background image
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
-      height: "100vh",
-      width: "100%",
-      position: "absolute",
-      top: "0",
-      zIndex: "-1",
-      animation: "changeImage 5s infinite",
-   };
+  const top = {
+    backgroundImage: `url(${imageList[0]})`, // Initial background image
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    height: '100vh',
+    width: '100%',
+    position: 'absolute',
+    top: '0',
+    zIndex: '-1',
+    animation: 'changeImage 5s infinite',
+  }
 
-   const keyframes = `
+  const keyframes = `
       @keyframes changeImage {
         0%, 100% {
           background-image: url(${imageList[0]});
@@ -211,14 +167,16 @@ const MInternal = () => {
       }
     `;
 
-   return (
-      <div className={styles.explore} style={top}>
-         <style>{keyframes}</style>
-         <div className={styles.bgitis}>
-            <div className={styles.overlay}>{information()}</div>
-         </div>
+  return (
+    <div className={styles.explore} style={top}>
+      <style>{keyframes}</style>
+      <div className={styles.bgitis}>
+        <div className={styles.overlay}>
+          {information()}
+        </div>
       </div>
-   );
-};
+    </div>
+  );
+}
 
 export default MInternal;
