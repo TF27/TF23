@@ -3,7 +3,21 @@
   height: 100vh;
   padding-top: 50vh;
   overflow-x: hidden;
+
+  background-image: url(../../../../assets/gallery/bg.jpg);
+  background-position: cover;
+  background-size: 100% 100%;
 }
+
+/* .main_carousel{
+  position: fixed;
+  top: 7rem;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 7rem);
+
+  
+} */
 
 .main_carousel .slides{
 display: flex;
