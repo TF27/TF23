@@ -4,7 +4,7 @@ import HomeParallax from "./parallax";
 import styles from "./home.module.css";
 
 // import images
-import bf from "./images/homebg.png";
+import bf from "./images/homebg.jpg";
 import spimg from "./images/sponsor.png";
 import lec1 from "./assets/explore/Lec1.jpg";
 import lec2 from "./assets/explore/Lec2.jpg";
@@ -15,25 +15,7 @@ import exh2 from "./assets/explore/Exh2.jpg";
 import exh3 from "./assets/explore/Exh3.jpeg";
 import exh4 from "./assets/explore/Exh4.jpg";
 
-const dataLectures = [
-  {
-    image: lec1,
-    name: "Late Dr. APJ Abdul Kalam",
-  },
-  {
-    image: lec2,
-    name: "His Holiness the 14th Dalai Lama (Nobel Laureate, Peace)",
-  },
-  {
-    image: lec3,
-    name: "NR Narayana Murty ( Co-Founder of Infosys)",
-  },
-  {
-    image: lec4,
-    name: "Zaheer Khan (Former Indian Cricketer)",
-  },
-];
-const dataExhibitions = [
+const dataCompetitions = [
   {
     image: exh1,
     name: "Sophia (Hong Kong)",
@@ -49,6 +31,49 @@ const dataExhibitions = [
   {
     image: exh4,
     name: "AirCar (Turkey)",
+  },
+];
+const dataLectures = [
+  {
+    image: lec1,
+    name: "Late Dr. APJ Abdul Kalam",
+  },
+  {
+    image: lec2,
+    name: "His Holiness the 14th Dalai Lama",
+    posi: "(Nobel Laureate, Peace)",
+  },
+  {
+    image: lec3,
+    name: "NR Narayana Murty",
+    posi: "( Co-Founder of Infosys)",
+  },
+  {
+    image: lec4,
+    name: "Zaheer Khan",
+    posi: "(Former Indian Cricketer)",
+  },
+];
+const dataExhibitions = [
+  {
+    image: exh1,
+    name: "Sophia",
+    posi: "(Hong Kong)",
+  },
+  {
+    image: exh2,
+    name: "Gravity Industries",
+    posi: "(UK)",
+  },
+  {
+    image: exh3,
+    name: "Virgin Hyperloop",
+    posi: "(USA)",
+  },
+  {
+    image: exh4,
+    name: "AirCar",
+    posi: "(Turkey)",
   },
 ];
 
@@ -68,7 +93,7 @@ const Explore = ({ Heading, data, link }) => {
                 <div className={styles.card_rect1}>
                   <div className={styles.card_rect2}>
                     <img src={item.image} alt={item.name} />
-                    <div className={styles.cardText}>{item.name}</div>
+                    <div className={styles.cardText}>{item.name}<br/>{item.posi}</div>
                   </div>
                 </div>
               </div>
@@ -112,8 +137,8 @@ const Home = () => {
           </div>
           <div className={styles.spnImg}>
             <a href="https://www.marshmclennan.com/">
-              <img src={spimg} alt="sponsorimage" className={styles.mmcImg} />
-              <p>Marsh McLennan Global Services India Pvt Ltd</p>
+              <img src={spimg} alt="Marsh McLennan Global Services India Pvt Ltd" className={styles.mmcImg} />
+              {/* <p>Marsh McLennan Global Services India Pvt Ltd</p> */}
             </a>
           </div>
         </div>
@@ -125,7 +150,7 @@ const Home = () => {
         <div className={`row ${styles.themeData}`}>
           <div className="col-12 col-lg-4">
             <div className={styles.themeImg}>
-              <img src={bf} alt="A Mystecal Realm" />
+            <iframe src="https://www.youtube.com/embed/0_FBwJi8VBo?si=yaNM1nKy7nydA1XU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
             </div>
           </div>
           <div className={`col-12 col-lg-8 ${styles.themeText}`}>
@@ -166,7 +191,16 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Explore Heading="Past Lectures" data={dataLectures} link="lectures" />
+      <Explore 
+        Heading="Competitions" 
+        data={dataCompetitions} 
+        link="competitions" 
+      />
+      <Explore 
+        Heading="Past Lectures" 
+        data={dataLectures} 
+        link="lectures" 
+      />
       <Explore
         Heading="Past Exhibitions"
         data={dataExhibitions}

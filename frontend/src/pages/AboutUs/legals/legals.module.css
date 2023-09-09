@@ -89,7 +89,7 @@
     max-height: 0;
     opacity: 0;
     transition: max-height 0.3s ease, opacity 0.3s ease;
-}
+  }
 
 .whatdopen{
     margin-top: 7px;
