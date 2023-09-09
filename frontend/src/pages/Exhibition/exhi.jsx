@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import WorldMap from "./map";
 import MapClick from "./m-map";
@@ -27,7 +28,7 @@ const Exhibition =()=>{
             <ImageOne/>
            <div className={parallax.exhi}>
             <Notify/>
-            {isMobile ? <MapClick /> : <WorldMap />}
+            <div>{isMobile ? <MapClick /> : <WorldMap />}</div>
             <OurReach />
         </div>
         </div>
