@@ -33,13 +33,13 @@ const Carousel = ({
 
     const gotoPrev = () => {
       console.log('jaa rha hai piche')
-      const newPrev = current > 0 ? current - 1 : 9;
+      const newPrev = current > 0 ? current - 1 : 4;
       gotoNum(newPrev);
     };
   
     const gotoNext = () => {
       console.log('jaa rha hai aage')
-      const newNext = current < 9 ? current + 1 : 0;
+      const newNext = current < 4 ? current + 1 : 0;
       gotoNum(newNext);
     };
     
@@ -53,26 +53,26 @@ const Carousel = ({
 
       
       if (newPrev2 === -2) {
-        newPrev2 = 8;
+        newPrev2 = 3;
       }
 
       if (newPrev2 === -1) {
-        newPrev2 = 9;
+        newPrev2 = 4;
       }
   
       if (newPrev === -1) {
-        newPrev = 9;
+        newPrev = 4;
       }  
 
-      if (newNext === 10) {
+      if (newNext === 5) {
         newNext = 0;
       }
 
-      if (newNext2 === 10) {
+      if (newNext2 === 5) {
         newNext2 = 0;
       }
 
-      if (newNext2 === 11) {
+      if (newNext2 === 6) {
         newNext2 = 1;
       }
       

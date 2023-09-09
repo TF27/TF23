@@ -145,7 +145,7 @@ const HackAI = () => {
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
                     Last date of registration:<br/>
-                    2nd October<br/><br/>
+                    2nd October 2023<br/><br/>
 
                     Round 1 Submission Deadline:<br/>
                     8th October 2023<br/><br/>
@@ -177,15 +177,15 @@ const HackAI = () => {
                 <div className={`${styles.whatd} ${open === 'Rules' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                      1. Every team has to register online on the official Techfest website for the competition.
-                      <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references.
-                      <br/>3. The decision of the organizers or judges shall be treated as final and binding on all.
-                      <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
-                      <br/>5. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
-                      <br/>6. Participants have to bring their own laptops during the competition.
-                      <br/>7. Teams will be responsible for their devices. It is advised that laptops should be charged before the competition.
-                      <br/>8. Mobile phones are not allowed during the competition.
-                      <br/>9. The organisers reserve the right to change any or all of the above rules as they deem fit. Change in rules, if any, will be highlighted on the website and notified to the registered teams.</div>
+                      1. Every team has to register online on the official Techfest website for the competition
+                      <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references
+                      <br/>3. The decision of the organizers or judges shall be treated as final and binding on all
+                      <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries
+                      <br/>5. All modes of official communication will be through the Techfest e-mail, participants are advised to keep track of all folders in their e-mail accounts
+                      <br/>6. Participants have to bring their own laptops during the competition
+                      <br/>7. Teams will be responsible for their devices, it is advised that laptops should be charged before the competition
+                      <br/>8. Mobile phones are not allowed during the competition
+                      <br/>9. The organisers reserve the right to change any or all of the above rules as they deem fit; Change in rules, if any, will be highlighted on the website and notified to the registered teams</div>
                 </div>
             </div>
             <div>

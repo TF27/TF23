@@ -110,34 +110,32 @@ const Header = () => {
         style={{ backgroundImage: `url(${bg})` }}
       >
         <div className="wnavLeft navRow">
-          <ul>
             <li>
               <Link to="/competitions">Competitions</Link>
             </li>
             <li>
-              <Link to="/summits">Int'l Summit</Link>
+              <Link to="/summits" className='navSummit'>Int'l Summit</Link>
             </li>
             <li>
               <Link to="/lectures">Lectures</Link>
             </li>
-          </ul>
         </div>
         <div className="logoDiv navRow">
-          <ul>
+          {/* <ul> */}
             <li>
               <Link to="/">
                 <img src={tf} alt="Techfest" />
               </Link>
             </li>
-          </ul>
+          {/* </ul> */}
         </div>
         <div className="wnavRight navRow">
-          <ul>
+          {/* <ul> */}
             <li>
               <Link to="/exhibitions">Exhibitions</Link>
             </li>
             <li>
-              <Link to="/contactus">Contact Us</Link>
+              <Link to="/contactus" className="navContact">Contact Us</Link>
             </li>
             <li>
               {user?.displayName ? (
@@ -160,19 +158,28 @@ const Header = () => {
                 </div>
               )}
             </li>
-          </ul>
+          {/* </ul> */}
         </div>
-        {showSignOut && (
+        {showSignOut && user.displayName && (
           <div
             className="sign-out-div"
             onMouseEnter={() => setShowSignOut(true)} // Show the Sign Out div on mouse enter
             onMouseLeave={() => setShowSignOut(false)}
           >
-            <button onClick={handleSignOut}>Sign Out</button>
+            <button
+              onClick={() => {
+                handleSignOut();
+                setShowSignOut(false); // Hide the Sign Out div
+              }}
+            >
+              Sign Out
+            </button>
           </div>
         )}
       </nav>
-      <div className="navbarClassName">
+      <div className={`mobNav navfunc ${
+          showNavbar ? "mnavfuncshow" : "mnavfunchide"
+        }`}>
         <div className={openMenu ? "hamburger active_burger" : "hamburger"}>
           <div className="headLogo">
             <Link to="/">
@@ -187,9 +194,9 @@ const Header = () => {
         </div>
         <nav className={openMenu ? "nav_slider active_slide" : "nav_slider"}>
           <ul>
-            <li onClick={showMenu}>
+            {/* <li onClick={showMenu}>
               <Link to="/">Home</Link>
-            </li>
+            </li> */}
             <li onClick={showMenu}>
               <Link to="/competitions">Competitions</Link>
             </li>
