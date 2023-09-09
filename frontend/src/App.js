@@ -123,7 +123,7 @@ function App() {
 
 
                         <Route path='/gallery' element={
-                            <React.Suspense fallback={<div>Loading...</div>}>
+                            <React.Suspense fallback={<div>Loading..    .</div>}>
                         <Gallery/>
                             </React.Suspense>} />
                         <Route path='/gallery/lectures' element={
