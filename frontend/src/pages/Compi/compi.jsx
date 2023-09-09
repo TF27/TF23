@@ -5,8 +5,7 @@ import { UserAuth } from "../../contexts/AuthContext";
 import { Frame3 } from "./compi_animation";
 import Technorion from "./technorion";
 import OurReach from "./ourreach";
-// import Carousel from "../../components/Carousel/carousel";
-// import ContactCard from "../../components/Contact/contact";
+import Carousel from "../../components/Carousel/carousel";
 // import img from "../Lectures/assets/europe.jpg";
 // import img2 from "../Lectures/assets/lectbg.png";
 import "./compi_animation.css";
@@ -67,7 +66,7 @@ const Compi = () => {
       <OurReach />
       <br /><br /><br /><br />
       {/* {card()} */}
-       <div className="checkThis">
+       {/* <div className="checkThis">
         <h1 style={{ marginTop: "80px", marginBottom: "40px" }}>
           CHECK THIS OUT
         </h1>
@@ -113,7 +112,7 @@ const Compi = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* <div className="contactus">
         <h1 style={{ marginTop: "80px" }}>CONTACT US</h1>
         <div className="tray">

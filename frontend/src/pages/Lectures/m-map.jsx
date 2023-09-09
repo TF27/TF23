@@ -1,54 +1,54 @@
 import React, { useState, useEffect } from "react";
 import "./m-map.css";
-import Europe from "./assets copy/europe.jpg";
-import Astro from "./assets copy/europe.jpg";
+// import Europe from "./assets copy/europe.jpg";
+// import Astro from "./assets copy/europe.jpg";
 
 const MapClick = () => {
   
 
   const cityData = [
-    {
-      name: "Europe",
-      x: "45%",
-      y: "37%",
-      info: "Info About Europe",
-      image: Europe,
-    },
-    {
-      name: "West USA",
-      x: "15%",
-      y: "37%",
-      info: "Info About West USA",
-      image: Astro,
-    },
-    {
-      name: "East USA",
-      x: "25%",
-      y: "42%",
-      info: "Info About East USA",
-      image: Europe,
-    },
-    {
-      name: "NorthEast Asia",
-      x: "82%",
-      y: "28%",
-      info: "Info About NorthEast Asia",
-      image: Europe,
-    },
-    {
-      name: "Australia",
-      x: "83%",
-      y: "78%",
-      info: "Info About Australia",
-      image: Europe,
-    },
-    {
-      name: "SouthEast Asia",
-      x: "66%",
-      y: "50%",
-      info: "Info About SouthEast Asia",
-      image: Europe,
-    },
+    // {
+    //   name: "Europe",
+    //   x: "45%",
+    //   y: "37%",
+    //   info: "Info About Europe",
+    //   image: Europe,
+    // },
+    // {
+    //   name: "West USA",
+    //   x: "15%",
+    //   y: "37%",
+    //   info: "Info About West USA",
+    //   image: Astro,
+    // },
+    // {
+    //   name: "East USA",
+    //   x: "25%",
+    //   y: "42%",
+    //   info: "Info About East USA",
+    //   image: Europe,
+    // },
+    // {
+    //   name: "NorthEast Asia",
+    //   x: "82%",
+    //   y: "28%",
+    //   info: "Info About NorthEast Asia",
+    //   image: Europe,
+    // },
+    // {
+    //   name: "Australia",
+    //   x: "83%",
+    //   y: "78%",
+    //   info: "Info About Australia",
+    //   image: Europe,
+    // },
+    // {
+    //   name: "SouthEast Asia",
+    //   x: "66%",
+    //   y: "50%",
+    //   info: "Info About SouthEast Asia",
+    //   image: Europe,
+    // },
   ];
 
   const europeData = cityData[0];

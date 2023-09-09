@@ -12,7 +12,7 @@
 
 .footfuncshow{
     position: fixed;
-    bottom: 14px;
+    bottom: 0px;
     transition: bottom 0.5s ease-in-out;
     /* background-image: url('./footimg.png'); */
     background-repeat: no-repeat;
