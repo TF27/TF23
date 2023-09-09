@@ -30,6 +30,7 @@ const ImageOne = () => {
       />
       <div className={`${parallax.parallaxlayer} ${parallax.layer3}`} />
       <div className={parallax.blackGradient}/>
+      <div className={parallax.blackGradient}/>
     </div>
   );
 };

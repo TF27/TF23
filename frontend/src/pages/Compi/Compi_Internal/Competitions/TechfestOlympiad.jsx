@@ -141,8 +141,8 @@ const TechfestOlympiad = () => {
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
               Akshat Gupta<br/>
-              +91 96196 78850<br/>
-              akshat@techfest.org
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:akshat@techfest.org`}>akshat@techfest.org</div>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:96196788505`}>9619678850</div>
               </div>
             </div>
           </div>

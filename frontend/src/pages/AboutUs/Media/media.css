@@ -1,8 +1,18 @@
 .media {
 font-family: Avenir LT Pro ;
-background-attachment: fixed;
-background-position: center;
-background-size: cover;
+padding: 120px 0 50px 0;
+}
+
+.media_fixedbg{
+    /* background-image: url("./media/bg.jpg"); */
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0;
 }
 .media .gradient{
 content:'';

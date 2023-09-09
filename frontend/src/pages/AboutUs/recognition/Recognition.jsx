@@ -6,7 +6,6 @@ import unesco from './assets/unesco.png'
 import unicef from './assets/unicef.png'
 import cee from './assets/cee.png'
 import sayen from './assets/sayen.png'
-import { Height } from '@material-ui/icons'
 
 const Recognition = () => {
   return (

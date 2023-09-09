@@ -101,7 +101,7 @@ const CozmoClench = () => {
         marginBottom: '20px',
         maxWidth: '80%',
         margin: 'auto',
-        rowContentMarginBottom: '0',
+        rowContentMarginBottom: '0',        
       }
 
     const lol = {
@@ -140,10 +140,18 @@ const CozmoClench = () => {
           <div id="Timeline" className={`${styles.info} ${activeCity === 'Timeline' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Round 1:<br/>
-            Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.<br/><br/>
-            Round 2:<br/>
-            Finale will be held at Techfest 2023-24 during 27th - 29th December 2023.
+              <ul>
+                <li>
+                  Round 1:<br/>
+                  Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.
+                </li>
+                <li>
+                Round 2:<br/>
+                Finale will be held at Techfest 2023-24 during 27th - 29th December 2023. 
+                </li>
+              </ul>
+            
+            
               </div>
             </div>
           </div>
@@ -175,8 +183,8 @@ const CozmoClench = () => {
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
               Tarun Kumar<br/>
-              +91 75499 52736<br/>
-              abhishek@techfest.org
+              <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:abhishek@techfest.org`}>abhishek@techfest.org</div>
+                <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7549952736`}>7549952736</div>
               </div>
             </div>
           </div>
