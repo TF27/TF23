@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Animales'; /* Choose a name for your font family */
+    src: url('../ContactUs/assets/Animales Fantastic.otf') format('otf');
+}
+
 @media( max-width: 768px){
     .contactMail{
         display: none;
@@ -6,9 +11,11 @@
         justify-content: space-around;
     }
 }
+.container{
+    font-family: 'Animales'; }
 
 .background{
-    background-image: url('./assets/bg.png');
+    background-image: url('./assets/bgweb.jpg');
     background-size: cover;
     position:fixed;
     height: 100vh;
