@@ -35,7 +35,7 @@ import c10 from '../../pages/Compi/assets/c10.jpg';
 
 import exhi_image from './assets/exhi.png'
 
-const Exhibition =()=>{
+const Exhibition =()=> {
 
     const [isMobile, setIsMobile] = useState(false);
 
@@ -51,7 +51,7 @@ const Exhibition =()=>{
       };
     }, []);
     
-    return(
+    return (
         <div style={{height:'120vh'}}>
           <div className={parallax.exhiImage}>
               <img src={exhi_image} alt="Exhibition"/>
@@ -64,53 +64,61 @@ const Exhibition =()=>{
             <Notify/>
             <div>{isMobile ? <MapClick /> : <WorldMap />}</div>
             <OurReach />
+            <div className="checkThis">
+          <h1 style={{ marginTop: "100px", marginBottom: "40px" }}>
+            CHECK THIS OUT
+          </h1>
           <div>
-            <h2 style={{ marginBottom: "-20px" }}>Competitions</h2>
-          <Carousel
-            i1={im1}
-            i2={im2}
-            i3={im3}
-            i4={im4}
-            i5={im5}
-            i8={im8}
-            i6={im6}
-            i7={im7}
-            i9={im9}
-            i10={im10}
-          />
-           <div className="difPage">
-            <div className="check_rect1"></div>
-            <div className="check_rect2">
-              <Link to="/lectures">Explore</Link>
-            </div>
-          </div>
-        </div>
-        <div>
-            <h2 style={{ marginTop: "40px", marginBottom: "-10px" }}>
-              Exhibitions
-            </h2>
+            <h2 style={{ marginBottom: "-10px" }}>Competitions</h2>
             <Carousel
-            i1={c1}
-            i2={c2}
-            i3={c3}
-            i4={c4}
-            i5={c5}
-            i8={c6}
-            i6={c7}
-            i7={c8}
-            i9={c9}
-            i10={c10}
-          />
+              i1={c1}
+              i2={c2}
+              i3={c3}
+              i4={c4}
+              i5={c5}
+              i8={c6}
+              i6={c7}
+              i7={c8}
+              i9={c9}
+              i10={c10}
+            />
+            
             <div className="difPage">
               <div className="check_rect1"></div>
               <div className="check_rect2">
-                <Link to="/exhibitions">Explore</Link>
+                <Link to="/competitions">Explore</Link>
+              </div>
+              <br /><br /><br /><br /><br /><br /><br /><br />
+            </div>
+          </div>
+          <div>
+            <h2 style={{ marginTop: "0px", marginBottom: "-10px" }}>
+              Lectures
+            </h2>
+            <Carousel
+              i1={im1}
+              i2={im2}
+              i3={im3}
+              i4={im4}
+              i5={im5}
+              i8={im6}
+              i6={im7}
+              i7={im8}
+              i9={im9}
+              i10={im10}
+            />
+            <div className="difPage">
+              <div className="check_rect1"></div>
+              <div className="check_rect2">
+                <Link to="/lectures">Explore</Link>
               </div>
             </div>
           </div>
         </div>
+
+         
         <div className="contactus">
-          <h1 style={{ marginTop: "-100px", marginBottom: "40px"}}>CONTACT US</h1>
+          <h1 style={{ marginTop: "80px", marginBottom: "40px"}}>CONTACT US</h1>
           {/* <div className="tray">
 
             <div>
@@ -137,23 +145,22 @@ const Exhibition =()=>{
 
        <div className='Contactbox1'>
         
-               Arnav Patel<br></br>
-               arnav@techfest.org<br></br>
-               <div onClick={() => window.location.href = `tel:${9372634701}`}>{9372634701}</div>
+               Gourish Singhal<br></br>
+               gourish@techfest.org<br></br>
+               <div onClick={() => window.location.href = `tel:${8928455606}`}>{8928455606}</div>
              
         </div>
          <div className='Contactbox1'>
-           Manas Dadhich<br></br>
-           manas@techfest.org<br></br>
+           Akshat Gupta<br></br>
+           akshat@techfest.org<br></br>
            {/* <div onClick={() => window.location.href = `mailto:manas@techfest.org`}>{manas@techfest.org}</div><br></br> */}
-           <div onClick={() => window.location.href = `tel:${9981378767}`}>{9981378767}</div>
+           <div onClick={() => window.location.href = `tel:${9619678850}`}>{9619678850}</div>
            </div>  
        </div>
         </div>
         </div>
-        
-    )
+        </div>
+  );
   
-    
-}
+};
 export default Exhibition;

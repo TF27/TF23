@@ -113,6 +113,8 @@ const Lectures = () => {
 
          <div className="contactus">
           <h1 style={{ marginTop: "100px", marginBottom: "40px"}}>CONTACT US</h1>
+
+
           {/* <div className="tray">
 
             <div>
@@ -133,16 +135,14 @@ const Lectures = () => {
               />
             </div>
           </div> */}
-          <div className="Contactbox">
+      <div className="Contactbox">
        
       
 
-       <div className='Contactbox1'>
-        
+        <div className='Contactbox1'>        
                Arnav Patel<br></br>
                arnav@techfest.org<br></br>
                <div onClick={() => window.location.href = `tel:${9372634701}`}>{9372634701}</div>
-             
         </div>
          <div className='Contactbox1'>
            Manas Dadhich<br></br>

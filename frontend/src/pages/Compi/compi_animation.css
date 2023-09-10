@@ -6,6 +6,8 @@
     left: 0;
     background-image: url("static/img/Compi_back.jpg");
     z-index: -100;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
