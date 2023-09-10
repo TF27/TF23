@@ -1,7 +1,7 @@
 import React from "react";
 import "./compi_animation.css";
 import img1 from "./static/img/img1.png"
-import svg from "./static/img/svg.svg"
+
 
 
 export const Frame3 = () => {

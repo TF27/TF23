@@ -163,7 +163,9 @@ const Home = () => {
             </div>
           </div>
           <div className={`col-12 col-lg-8 ${styles.themeText}`}>
-          Welcome to the Official Website of the 27th Edition of Asia's Largest Science and Technology Festival, Techfest 2023-2024! We at Techfest are students of IIT Bombay, who have been engaged over the past few months to structure Techfest's 27th edition. With the plethora of events planned this year, we are sure you will have an experience of a lifetime - something that you will never forget; a journey that will lift your spirits. And the starting point is this website! Here, you will find complete information about Techfest 2023-24, so make sure you explore all the pathways available to you. Are you ready to unlock a mystical realm?
+          Welcome to the Official Website of the 27th Edition of Asia's Largest Science and Technology Festival, Techfest 2023-2024! We at Techfest are students of IIT Bombay who have been engaged over the past few months to structure Techfest's 27th edition. With the plethora of events planned this year, we are sure you will have an experience of a lifetime - something that you will never forget, a journey that will lift your spirits. And the starting point is this website! Here, you will find complete information about Techfest 2023-24, so make sure to explore all the pathways available to you. Are you ready to unlock The Mystical Realm?
+
+
           </div>
         </div>
         <div className={`${styles.titSpn} ${styles.homeTheme}`}>
@@ -178,7 +180,7 @@ const Home = () => {
             </div>
           </div>
           <div className={`col-12 col-lg-8 ${styles.themeText}`}>
-            Teleport to the 27th Edition of Techfest and celebtrate the interplay between Magic, Science & Technology. Step into the realm of wonders where the frontiers of imagination are translated into real-world possibilities. From ancient mysticism to cutting-edge innovations, explore the endless spectrum of creativity and ingenuity. Get ready for a Techno-Mystical extravaganza and embark on a miraculous journey of discovery into the unknown! <br />
+          Teleport to the 27th Edition of Techfest and celebrate the interplay between Magic, Science & Technology. Step into the realm of wonders where the frontiers of imagination are translated into real-world possibilities. From ancient mysticism to cutting-edge innovations, explore the endless spectrum of creativity and ingenuity. Get ready for a Techno-Mystical extravaganza and embark on a miraculous journey of discovery into the unknown!
           </div>
         </div>
       </div>

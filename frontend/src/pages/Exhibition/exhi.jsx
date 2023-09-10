@@ -69,7 +69,7 @@ const Exhibition =()=> {
             CHECK THIS OUT
           </h1>
           <div>
-            <h2 style={{ marginBottom: "-10px" }}>Competitions</h2>
+            <h2 style={{ marginBottom: "0px" }}>Competitions</h2>
             <Carousel
               i1={c1}
               i2={c2}
@@ -92,7 +92,7 @@ const Exhibition =()=> {
             </div>
           </div>
           <div>
-            <h2 style={{ marginTop: "0px", marginBottom: "-10px" }}>
+            <h2 style={{ marginTop: "50px", marginBottom: "0px" }}>
               Lectures
             </h2>
             <Carousel
@@ -118,7 +118,7 @@ const Exhibition =()=> {
 
          
         <div className="contactus">
-          <h1 style={{ marginTop: "80px", marginBottom: "40px"}}>CONTACT US</h1>
+          <h1 style={{ marginTop: "40px", marginBottom: "40px"}}>CONTACT US</h1>
           {/* <div className="tray">
 
             <div>
