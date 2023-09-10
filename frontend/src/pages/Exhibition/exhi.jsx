@@ -155,8 +155,14 @@ const Exhibition =()=> {
            akshat@techfest.org<br></br>
            {/* <div onClick={() => window.location.href = `mailto:manas@techfest.org`}>{manas@techfest.org}</div><br></br> */}
            <div onClick={() => window.location.href = `tel:${9619678850}`}>{9619678850}</div>
-           </div>  
-       </div>
+          </div>  
+          <div className='Contactbox1'>
+           Aryan Gupta<br></br>
+           aryan@techfest.org<br></br>
+           {/* <div onClick={() => window.location.href = `mailto:manas@techfest.org`}>{manas@techfest.org}</div><br></br> */}
+           <div onClick={() => window.location.href = `tel:${7317520804}`}>{7317520804}</div>
+          </div>  
+        </div>
         </div>
         </div>
         </div>

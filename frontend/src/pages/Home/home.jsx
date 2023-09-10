@@ -5,6 +5,7 @@ import styles from "./home.module.css";
 
 // import images
 import bf from "./images/homebg.jpg";
+import bfm from "./images/homebgm.jpg";
 import spimg from "./images/sponsor.png";
 import lec1 from "./assets/explore/Lec1.jpg";
 import lec2 from "./assets/explore/Lec2.jpg";
@@ -178,7 +179,7 @@ const Home = () => {
             </div>
           </div>
           <div className={`col-12 col-lg-8 ${styles.themeText}`}>
-            Teleport to the 27th Edition of Techfest and celebtrate the interplay between Magic, Science & Technology. Step into the realm of wonders where the frontiers of imagination are translated into real-world possibilities. From ancient mysticism to cutting-edge innovations, explore the endless spectrum of creativity and ingenuity. Get ready for a Techno-Mystical extravaganza and embark on a miraculous journey of discovery into the unknown! <br />
+            Teleport to the 27th Edition of Techfest and celebrate the interplay between Magic, Science & Technology. Step into the realm of wonders where the frontiers of imagination are translated into real-world possibilities. From ancient mysticism to cutting-edge innovations, explore the endless spectrum of creativity and ingenuity. Get ready for a Techno-Mystical extravaganza and embark on a miraculous journey of discovery into the unknown! <br />
           </div>
         </div>
       </div>
