@@ -22,7 +22,7 @@ import bjarne from '../Lectures/assets/mapContent/Europe/bjarne.jpg';
 import bruce from '../Lectures/assets/mapContent/Europe/bruce.jpg';
 import jurgen from '../Lectures/assets/mapContent/Europe/jurgen.jpg';
 import kurt from '../Lectures/assets/mapContent/Europe/kurt.jpg';
-import lars from '../Lectures/assets/mapContent/Europe/Lars.jpg';
+import lars from '../Lectures/assets/Lars.jpg';
 import lyn from '../Lectures/assets/mapContent/Europe/lyn.jpg'; 
 import serge from '../Lectures/assets/mapContent/Europe/serge.jpg';
 import tarja from '../Lectures/assets/mapContent/Europe/Tarja-Photo.jpg';
