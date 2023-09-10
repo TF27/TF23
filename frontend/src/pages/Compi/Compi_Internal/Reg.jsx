@@ -46,16 +46,17 @@ const Reg = () => {
 
     const handleFocus = (e) => {
         const label = e.target.previousSibling;
-        label.classList.add(styles.floatingLabel);
+        if (label) {
+            label.classList.add(styles.floatingLabel);
+        }
     };
-
+    
     const handleBlur = (e) => {
-        if (e.target.value === '') {
-            const label = e.target.previousSibling;
+        const label = e.target.previousSibling;
+        if (label && e.target.value === '') {
             label.classList.remove(styles.floatingLabel);
         }
     };
-
     function checkInputValues() {
         const inputs = document.querySelectorAll('input');
       
