@@ -34,7 +34,7 @@ const Ozone_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/ozone'
 const Compi_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/compi'));
 const Techno_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/techno'));
 const Robowar_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/Robowar'));
-
+// const CompiInternal = React.lazy(()=> import('/pages/Compi/Compi_Internal/index'))
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
@@ -42,7 +42,7 @@ function App() {
     useEffect(() => {
       setTimeout(() => {
         setIsLoading(false);
-      },1);
+      },4000);
     }, []);
   
 
@@ -67,7 +67,7 @@ function App() {
                             <React.Suspense fallback={<div><Loading/></div>}>
                         <Home/>
                         </React.Suspense> }/> */}
-                        <Route path='/loading1' element={<Loading1/>} />
+                        {/* <Route path='/loading1' element={<Loading1/>} /> */}
                         {/* <Route path='/exhibitions' element={<Exhibition/>}/>
                         <Route path='/competitions' element={<Compi />} /> */}
                         {/* <Route path='/workshops' element={<Workshop/>}/> */}
@@ -113,7 +113,12 @@ function App() {
 
                         <Route path='/legals' element={<Legals /> } />
                         
-                        {/* <Route path='/:compiName' element={<CompiInternal />} /> */}
+                        <Route path='/:compiName' element={<CompiInternal />} />
+
+                        {/* <Route path='competitions/:compiName' element={
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                        <CompiInternal/>
+                        </React.Suspense> }/> */}
                         <Route path='competitions/:compiName' element={<CompiInternal />} />
                         <Route path='competitions/:compiName/register' element={<Protected><Reg /></Protected>} />
                         <Route path='competitions/:compiName/createTeam' element={<Protected><Create_Team  /></Protected>} />

@@ -2,7 +2,8 @@
     display: flex;
     align-items: center; /* Center vertically */
     justify-content: center;
-    z-index: 2147483647; /* Center horizontally */
+    z-index: 2147483647; 
+    background-color: none;/* Center horizontally */
 }
   
 .loading img{

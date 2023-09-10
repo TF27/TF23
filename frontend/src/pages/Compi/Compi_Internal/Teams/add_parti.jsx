@@ -43,7 +43,7 @@ const AddParti = () => {
         console.log(formData);
         axios.post('/api/single_parti/', formData)
             .then((response) => {
-                alert('Formed succesfully!!');
+                alert('Added Successfully!!');
                 navigate(`/competitions/${compiName}`);
                 // Handle the success response
             })

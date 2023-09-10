@@ -41,7 +41,7 @@ const Create_Team = () => {
         event.preventDefault();
         axios.post('/api/create_team/', formData)
             .then((response) => {
-                console.log('Formed successfully!!');
+                alert('Formed succesfully!!');
                 navigate(`/competitions/${compiName}`);
                 // Handle the success response
                 console.log(response)
