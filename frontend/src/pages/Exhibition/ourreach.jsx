@@ -1,6 +1,7 @@
 import React from 'react';
 import Counter from '../../components/NewReach/counter';
 import mylogo from '../Lectures/assets/ourr.png'
+import '../Lectures/ourreach.css'
 function ourReach() {
   return (
     <>
