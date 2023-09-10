@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
-import whatsapplink from '../../../../components/whatsapp/link';
+import Whatsapplink from '../../../../components/whatsapp/link';
 
 
 const TechfestOlympiad = () => {
@@ -66,11 +66,12 @@ const TechfestOlympiad = () => {
         margin: 'auto',
         rowContentMarginBottom: '0',
       }
-
+      const walink1 = "https://chat.whatsapp.com/DEcldsnp4LYC0Kp8DMg42G";
+      const dslink1 = "https://chat.whatsapp.com/DEcldsnp4LYC0Kp8DMg42G";
     return (
         <div className={styles.mWholeData}>
             <div className={styles.grouplink}>
-            <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
+            <div className={styles.wabutton }><Whatsapplink walink={walink1} dslink={dslink1} target="_blank"/></div>
             </div>
             <div>
                 <div onClick={() => handleClickOpen('About')} className={`${styles.whatu} ${open === 'About' ? styles.whatuOpen : ''}`}>
