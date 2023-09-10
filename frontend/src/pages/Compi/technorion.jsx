@@ -57,7 +57,7 @@ const Technorion = () => {
                <div className={styles.card_rect1}></div>
                <div className={styles.card_rect2}></div>
                <div className={styles.noReg}>
-                  {/* <Link to={data.name}></Link> */}
+                  <Link to={data.name}></Link>
                   <div className={styles.card_tag}>
                      <span>
                         <img src={dot} alt="dot" />
@@ -354,19 +354,19 @@ const Technorion = () => {
          </div>
          <div className="technorion_cards">
             <div className="container" style={{ maxWidth: "90%" }}>
-               <div className="row">{card()} {markiCompi()} {ideatesCard()}</div>
+               <div className="row">{card()} {markiCompi()}</div>
             </div>
          </div>
          {/* <div className="technorion_cards">
             <div className="container" style={{ maxWidth: "90%" }}>
                <div className="row">{markiCompi()}</div>
             </div>
-         </div>
+         </div> */}
          <div className="technorion_cards">
             <div className="container" style={{ maxWidth: "90%" }}>
                <div className="row">{ideatesCard()}</div>
             </div>
-         </div> */}
+         </div>
       </div>
    );
 };

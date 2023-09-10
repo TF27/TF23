@@ -1,6 +1,7 @@
 import React from 'react';
 import Counter from '../../components/NewReach/counter';
 import mylogo from '../Lectures/assets/ourr.png'
+import '../Lectures/ourreach.css'
 function ourReach() {
   return (
     <>
@@ -11,28 +12,28 @@ function ourReach() {
         <div className="buffer">
           <img src={mylogo} alt="buffering" id='myImg'/>
           <div className='Overlay'>
-            <Counter targetValue={1000} duration={2000} scrollVal={500}/>
+            <Counter targetValue={50} duration={2000} scrollVal={500} plus='+'/>
           </div>
           <div>
-            <h2>Happy Clients</h2>
+            <h2>International Exhibits</h2>
           </div>
         </div>
         <div className="buffer">
           <img src={mylogo} alt="buffering" id='myImg'/>
           <div className='Overlay'>
-            <Counter targetValue={2500} duration={2000} scrollVal={500}/>
+            <Counter targetValue={500} duration={2000} scrollVal={500} plus='+'/>
           </div>
           <div>
-            <h2>Projects</h2>
+            <h2>International Universities</h2>
           </div>
         </div>
         <div className="buffer">
           <img src={mylogo} alt="buffering" id='myImg'/>
           <div className='Overlay'>
-            <Counter targetValue={180} duration={2000} scrollVal={500}/>
+            <Counter targetValue={60} duration={2000} scrollVal={500} plus='K+'/>
           </div>
           <div>
-            <h2>Team Members</h2>
+            <h2>Footfall</h2>
           </div>
         </div>
       </div>

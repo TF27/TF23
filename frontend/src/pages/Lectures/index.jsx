@@ -9,10 +9,7 @@ import WorldMap from "./map";
 // import OurReach from "../../components/OurReach/ourreach1";
 import OurReach from "./ourreach";
 import Carousel from "../../components/Carousel/carousel";
-import ContactCard from "../../components/Contact/contact";
 
-import img from './assets/mapContent/Europe/EUROPE.jpg';
-import img2 from './assets/mapContent/Europe/EUROPE.jpg';
 import i1 from '../../pages/Exhibition/assets/i1.jpg';
 import i2 from '../../pages/Exhibition/assets/i2.jpg';
 import i3 from '../../pages/Exhibition/assets/i3.png';
@@ -35,7 +32,6 @@ import c8 from '../../pages/Compi/assets/c8.jpg';
 import c9 from '../../pages/Compi/assets/c9.jpg';
 import c10 from '../../pages/Compi/assets/c10.jpg';
 
-import tiger from "../../components/Contact/test_tiger.jpeg";
 import MapClick from "./m-map";
 
 const Lectures = () => {
@@ -66,7 +62,7 @@ const Lectures = () => {
             CHECK THIS OUT
           </h1>
           <div>
-            <h2 style={{ marginBottom: "-10px" }}>Exhibitions</h2>
+            <h2 style={{ marginBottom: "-10px" }}>Competitions</h2>
             <Carousel
               i1={c1}
               i2={c2}
@@ -83,14 +79,14 @@ const Lectures = () => {
             <div className="difPage">
               <div className="check_rect1"></div>
               <div className="check_rect2">
-                <Link to="/competitions">Competitions</Link>
+                <Link to="/competitions">Explore</Link>
               </div>
               <br /><br /><br /><br /><br /><br /><br /><br />
             </div>
           </div>
           <div>
             <h2 style={{ marginTop: "40px", marginBottom: "-10px" }}>
-              Lectures
+              Exhibitions
             </h2>
             <Carousel
               i1={i1}
@@ -107,14 +103,20 @@ const Lectures = () => {
             <div className="difPage">
               <div className="check_rect1"></div>
               <div className="check_rect2">
-                <Link to="/exhibitions">Exhibitions</Link>
+                <Link to="/exhibitions">Explore</Link>
               </div>
             </div>
           </div>
         </div>
-        <div className="contactus">
+
+        
+
+         <div className="contactus">
           <h1 style={{ marginTop: "100px", marginBottom: "40px"}}>CONTACT US</h1>
-          <div className="tray">
+
+
+          {/* <div className="tray">
+
             <div>
               <ContactCard
                 image={tiger}
@@ -123,6 +125,7 @@ const Lectures = () => {
                 phoneNumberText="123-456-7890"
               />
             </div>
+           
             <div>
               <ContactCard
                 image=""
@@ -131,7 +134,24 @@ const Lectures = () => {
                 phoneNumberText="123-456-7890"
               />
             </div>
-          </div>
+          </div> */}
+      <div className="Contactbox">
+       
+      
+
+        <div className='Contactbox1'>        
+               Arnav Patel<br></br>
+               arnav@techfest.org<br></br>
+               <div onClick={() => window.location.href = `tel:${9372634701}`}>{9372634701}</div>
+        </div>
+         <div className='Contactbox1'>
+           Manas Dadhich<br></br>
+           manas@techfest.org<br></br>
+           {/* <div onClick={() => window.location.href = `mailto:manas@techfest.org`}>{manas@techfest.org}</div><br></br> */}
+           <div onClick={() => window.location.href = `tel:${9981378767}`}>{9981378767}</div>
+           </div>  
+           
+       </div>
         </div>
       </div>
     </div>

@@ -33,7 +33,9 @@ import c8 from '../../pages/Compi/assets/c8.jpg';
 import c9 from '../../pages/Compi/assets/c9.jpg';
 import c10 from '../../pages/Compi/assets/c10.jpg';
 
-const Exhibition =()=>{
+import exhi_image from './assets/exhi.png'
+
+const Exhibition =()=> {
 
     const [isMobile, setIsMobile] = useState(false);
 
@@ -49,50 +51,116 @@ const Exhibition =()=>{
       };
     }, []);
     
-    return(
+    return (
         <div style={{height:'120vh'}}>
+          <div className={parallax.exhiImage}>
+              <img src={exhi_image} alt="Exhibition"/>
+            </div>
+           
+
             <ImageOne/>
            <div className={parallax.exhi}>
            <div className={parallax.blackGradienttop}/>  
             <Notify/>
             <div>{isMobile ? <MapClick /> : <WorldMap />}</div>
             <OurReach />
-            <br /><br /><br /><br /><br /><br /><br /><br />
-            <h2 style={{ marginBottom: "-20px" }}>Competitions</h2>
-          <Carousel
-            i1={im1}
-            i2={im2}
-            i3={im3}
-            i4={im4}
-            i5={im5}
-            i8={im8}
-            i6={im6}
-            i7={im7}
-            i9={im9}
-            i10={im10}
-          />
-           <div className="difPage">
-            <div className="check_rect1"></div>
-            <div className="check_rect2">
-              <Link to="/lectures">Lectures</Link>
+            <div className="checkThis">
+          <h1 style={{ marginTop: "100px", marginBottom: "40px" }}>
+            CHECK THIS OUT
+          </h1>
+          <div>
+            <h2 style={{ marginBottom: "-10px" }}>Competitions</h2>
+            <Carousel
+              i1={c1}
+              i2={c2}
+              i3={c3}
+              i4={c4}
+              i5={c5}
+              i8={c6}
+              i6={c7}
+              i7={c8}
+              i9={c9}
+              i10={c10}
+            />
+            
+            <div className="difPage">
+              <div className="check_rect1"></div>
+              <div className="check_rect2">
+                <Link to="/competitions">Explore</Link>
+              </div>
+              <br /><br /><br /><br /><br /><br /><br /><br />
+            </div>
+          </div>
+          <div>
+            <h2 style={{ marginTop: "0px", marginBottom: "-10px" }}>
+              Lectures
+            </h2>
+            <Carousel
+              i1={im1}
+              i2={im2}
+              i3={im3}
+              i4={im4}
+              i5={im5}
+              i8={im6}
+              i6={im7}
+              i7={im8}
+              i9={im9}
+              i10={im10}
+            />
+            <div className="difPage">
+              <div className="check_rect1"></div>
+              <div className="check_rect2">
+                <Link to="/lectures">Explore</Link>
+              </div>
             </div>
           </div>
         </div>
-<br /><br /><br /><br /><br /><br /><br /><br />
-<Carousel
-            i1={c1}
-            i2={c2}
-            i3={c3}
-            i4={c4}
-            i5={c5}
-            i8={c6}
-            i6={c7}
-            i7={c8}
-            i9={c9}
-            i10={c10}
-          />
-        </div>
+
+         
+        <div className="contactus">
+          <h1 style={{ marginTop: "80px", marginBottom: "40px"}}>CONTACT US</h1>
+          {/* <div className="tray">
+
+            <div>
+              <ContactCard
+                image={tiger}
+                headText="Contact Us"
+                emailText="contact@example.com"
+                phoneNumberText="123-456-7890"
+              />
+            </div>
+           
+            <div>
+              <ContactCard
+                image=""
+                headText="Contact Us"
+                emailText="contact@example.com"
+                phoneNumberText="123-456-7890"
+              />
+            </div>
+          </div> */}
+          <div className="Contactbox">
+       
+      
+
+       <div className='Contactbox1'>
         
-    )
-}
+               Gourish Singhal<br></br>
+               gourish@techfest.org<br></br>
+               <div onClick={() => window.location.href = `tel:${8928455606}`}>{8928455606}</div>
+             
+        </div>
+         <div className='Contactbox1'>
+           Akshat Gupta<br></br>
+           akshat@techfest.org<br></br>
+           {/* <div onClick={() => window.location.href = `mailto:manas@techfest.org`}>{manas@techfest.org}</div><br></br> */}
+           <div onClick={() => window.location.href = `tel:${9619678850}`}>{9619678850}</div>
+           </div>  
+       </div>
+        </div>
+        </div>
+        </div>
+  );
+  
+};
 export default Exhibition;

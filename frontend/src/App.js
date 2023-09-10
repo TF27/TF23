@@ -10,10 +10,10 @@ import Home from './pages/Home/home';
 import CompiInternal from './pages/Compi/Compi_Internal/index';
 import Reg from './pages/Compi/Compi_Internal/Reg';
 import Create_Team from './pages/Compi/Compi_Internal/Teams/create_team';
-import Workshop from './pages/workshop/home';
+// import Workshop from './pages/workshop/home';
 import Summit from './pages/Summit/home.js';
 import Contact from './pages/AboutUs/ContactUs/contact.jsx'
-import Explore from './pages/workshop/components/Explore';
+// import Explore from './pages/workshop/components/Explore';
 import Recognition from './pages/AboutUs/recognition/Recognition';
 import Legals from './pages/AboutUs/legals/Legals';
 import SingleParti from './pages/Compi/Compi_Internal/Teams/single_parti';
@@ -71,13 +71,13 @@ function App() {
                         <Route path='/loading1' element={<Loading1/>} />
                         {/* <Route path='/exhibitions' element={<Exhibition/>}/>
                         <Route path='/competitions' element={<Compi />} /> */}
-                        <Route path='/workshops' element={<Workshop/>}/>
+                        {/* <Route path='/workshops' element={<Workshop/>}/> */}
                         <Route path='/legals' element={<Legals/>}/>
                         {/* <Route path='/lectures' element={<Lectures />} /> */}
-                        <Route path='/workshops/:cardName' element={<Explore/>} />
+                        {/* <Route path='/workshops/:cardName' element={<Explore/>} /> */}
                         {/* <Route path='/lectures' element={
                         {/* <Route path='/lectures' element={<Lectures />} /> */}
-                        <Route path='/explore' element={<Explore/>} />
+                        {/* <Route path='/expasaaaaaaaaaaaaalore' element={<Explore/>} /> */}
                         <Route path='/recognition' element={<Recognition/>} />
 
                         <Route path='/lectures' element={
