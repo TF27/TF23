@@ -15,6 +15,7 @@ overflow: hidden;
 
 .gal_carousel .slides img{
 width: 100%;
+height:100%;
 object-fit: cover;
 border-radius: 20px;
 height: 350px;
@@ -133,6 +134,7 @@ cursor: pointer;
   scale: 0;
   transform: translateX(100%);
   transition: transform 500ms ease-in-out;
+  
   /* left: 43%; */
 }
 .gal_carousel .slides .slide.next2{
@@ -176,6 +178,10 @@ cursor: pointer;
 }
 .gal_carousel{
   overflow-x: hidden;
+
+  background-image: url(../../../../assets/gallery/bgm.jpg);
+  background-position: cover;
+  background-size: 100% 100%;
   padding-top: 50vh;
   top: 0vh;
 }

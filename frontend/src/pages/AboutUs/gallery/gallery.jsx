@@ -7,24 +7,25 @@ export class Gallery extends Component {
   render() {
     return (
         <div className='gal-main'>
-                <div className='gal-text'><Link className="nav-link" to="/gallery/lectures">
-                    Lectures
+                <div className='gal-text'><Link className="nav-link" to="/gallery/ozone">
+                    ---Ozone---                        
                 </Link></div>
                 <div className='gal-text'><Link className="nav-link" to="/gallery/exhibition">
-                    Exhibition
+                    ---Exhibition---
                 </Link></div>
-                <div className='gal-text'><Link className="nav-link" to="/gallery/ozone">
-                    Ozone
-                </Link></div>
-                <div className='gal-text'><Link className="nav-link" to="/gallery/compi">
-                    Competitions
-                </Link></div>
-                <div className='gal-text'><Link className="nav-link" to="/gallery/technoholix">
-                    Technoholix
+                <div className='gal-text'><Link className="nav-link" to="/gallery/lectures">
+                    ---Lecture---
                 </Link></div>
                 <div className='gal-text'><Link className="nav-link" to="/gallery/robowars">
-                    Robowars
+                    ---Robowars---
                 </Link>   </div>
+                <div className='gal-text'><Link className="nav-link" to="/gallery/compi">
+                    ---Competitions---
+                </Link></div>
+                <div className='gal-text'><Link className="nav-link" to="/gallery/technoholix">
+                    ---Technoholix---
+                </Link></div>
+                
         </div>
     )
   }
