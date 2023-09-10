@@ -9,15 +9,15 @@
 
 .city-circle {
   position: absolute;
-  width: 1.1rem; /* Adjust size as needed */
-  height: 1.1rem; /* Adjust size as needed */
+  width: 1.1rem;
+  height: 1.1rem;
   background-color: rgb(128, 99, 244);
   border-radius: 50%;
   cursor: pointer;
-  z-index: 2; /* Ensure the city circles are above the map image */
+  z-index: 2; 
   animation: ripple 2s infinite ease-in-out;
   transition: opacity 0.3s ease-in-out;
-}
+} 
 
 
 

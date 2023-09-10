@@ -267,6 +267,11 @@
    margin-bottom: 20px;
 }
 
+.youhave span {
+   color: rgb(218, 135, 0);
+   font-weight: bolder;
+}
+
 /* mobile  */
 
 .mImgFrame {
@@ -363,4 +368,8 @@
    .doIt {
       justify-content: space-around;
    }
+}
+.grouplink{
+   display:flex;
+   /* flex-direction: row; */
 }

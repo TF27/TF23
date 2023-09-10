@@ -28,7 +28,7 @@
   background-image: url('./assets/Lec_mid.png');
   opacity: 1;
   z-index: 0;
-  background-size: 40%;
+  background-size: 600px;
   background-repeat: no-repeat;
   background-position-y:30%;
   background-position-x: center;
@@ -59,9 +59,9 @@
 }
 
 
-@media(max-width:748px){
+@media(max-width:548px){
   .layer2{
-    background-size: 140%;
+    background-size: 100%;
     background-position-x: center;
     background-position-y:20%;
   }
@@ -73,6 +73,29 @@
     top: -31vh;
   }
  
+}
+
+.blackGradientbottom::after{
+  content: '';
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Adjust the height of the gradient */
+  background: linear-gradient(to top,rgba(0, 0, 0, 1), rgba(0, 0, 0, .6),transparent);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.blackGradienttop::after{
+  content: '';
+  position: absolute;
+  /* bottom: 0; */
+  left: 0;
+  width: 100%;
+  height: 150px; /* Adjust the height of the gradient */
+  background: linear-gradient(to top,transparent, rgba(0, 0, 0, .6    ), rgba(0, 0, 0, 1));
+  pointer-events: none;
 }
 
   

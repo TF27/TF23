@@ -14,18 +14,22 @@
 .checkThis .difPage .check_rect1{
     height: 40px;
     width: 120px;
-    border: 1px solid #FFE381;
+    border: 1px solid #BB9564;
     position: absolute;
 }
 
 .checkThis .difPage .check_rect2{
     height: 40px;
     width: 120px;
-    border: 1px solid #FFE381;
+    border: 1px solid #BB9564;
     margin-left: 17px;
     margin-top: 5px;
     position: relative;
     font-size: 21px;
+}
+
+.checkThis .difPage .check_rect2 *{
+    color: #FFE381;
 }
 
 .checkThis .difPage a{
@@ -49,37 +53,11 @@
 .contactus{
     padding-bottom: 100px;
 }
-@media(max-width:500px){
+/* @media(max-width:500px){
     .contactus{
   padding-bottom: 355px;
     }
-  }
+  } */
 .difPage{
     margin-top: 10pt;
 }
-/* .leftContactbox{
-    text-align: left;
-    margin-left: 300pt;
-    font-size:large;
-    margin-top: 45pt;
-} */
-/* .RightContactbox{
-    text-align: right;
-    margin-right: 300pt;
-    font-size: large;
-    margin-top: -65pt;
-} */
-.Contactbox{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    /*width: 80%; */
-    /* border-width: 2px ; */
-    /* border-color: white; */
-    border-radius: 5px;
-    margin-top: 15pt;
-    border:2px solid #fff ;
-    margin-left:15vw;
-    margin-right: 15vw;
-    font-size:1.2em
-  }

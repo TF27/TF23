@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
+import whatsapplink from '../../../../components/whatsapp/link';
+
 
 const CozmoClench = () => {
     const [activeCity, setActiveCity] = useState('About');
@@ -111,6 +113,7 @@ const CozmoClench = () => {
 
 
     return ( 
+      <div>
       <div className={styles.impdata}>
         <div className={styles.info_head}>
           {/* <div className={styles.bar_extra}></div> */}
@@ -143,11 +146,11 @@ const CozmoClench = () => {
               <ul>
                 <li>
                   Round 1:<br/>
-                  Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.
+                  Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023
                 </li>
                 <li>
                 Round 2:<br/>
-                Finale will be held at Techfest 2023-24 during 27th - 29th December 2023. 
+                Finale will be held at Techfest 2023-24 during 27th - 29th December 2023
                 </li>
               </ul>
             
@@ -170,12 +173,12 @@ const CozmoClench = () => {
           <div id="Rules" className={`${styles.info} ${activeCity === 'Rules' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            1. Every team has to register online on the official Techfest website for the competition.
-            <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references.
-            <br/>3. The decision of the organizers or judges shall be treated as final and binding on all.
-            <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.
-            <br/>5. Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.
-            <br/>6. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.
+            1. Every team has to register online on the official Techfest website for the competition
+            <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references
+            <br/>3. The decision of the organizers or judges shall be treated as final and binding on all
+            <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries
+            <br/>5. Note that at any point of time the latest information will be that which is on the website; However, registered participants will be informed through mail about any changes
+            <br/>6. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts
               </div>
             </div>
           </div>
@@ -183,13 +186,16 @@ const CozmoClench = () => {
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
               Tarun Kumar<br/>
-              <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:abhishek@techfest.org`}>abhishek@techfest.org</div>
-                <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7549952736`}>7549952736</div>
+                  <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:tarun01.techfest@gmail.com`}>tarun01.techfest@gmail.com</div>
+                  <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7549952736`}>7549952736</div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div className={styles.grouplink}>
+      <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
+    </div></div>
      );
 }
  

@@ -6,7 +6,7 @@ function ourReach() {
   return (
     <>
       <div className='ourReach'>
-        <h1 style={{marginTop:'100px',marginBottom:'10px'}}>OUR REACH</h1>
+        <h1 style={{marginTop:'50px',marginBottom:'10px'}}>OUR REACH</h1>
       </div>
       <div className='loader'>
         <div className="buffer">

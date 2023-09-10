@@ -23,22 +23,39 @@ const Carousel = ({
     const [next, setNext] = useState(3);
     const [next2, setNext2] = useState(4);
     const slidesRef = useRef(null);
-
+    let intervalId;
+  
+    const handleAutoSlide = () => {
+      intervalId = setInterval(() => {
+        gotoNext();
+      }, 2000);
+    };
+  
     const [slides, setSlides] = useState([]);
-
+  
     useEffect(() => {
-      const slidesArray = slidesRef.current.getElementsByClassName('slide');
-      setSlides(slidesArray);
+      const slidesArray = slidesRef.current?.querySelectorAll('.slide');
+      if (slidesArray) {
+        setSlides(Array.from(slidesArray));
+      }
     }, []);
-
+  
+    useEffect(() => {
+      handleAutoSlide();
+  
+      return () => {
+        clearInterval(intervalId);
+      };
+    }, [slides, current]);
+  
     const gotoPrev = () => {
-      console.log('jaa rha hai piche')
+      clearInterval(intervalId);
       const newPrev = current > 0 ? current - 1 : 9;
       gotoNum(newPrev);
     };
   
     const gotoNext = () => {
-      console.log('jaa rha hai aage')
+      clearInterval(intervalId);
       const newNext = current < 9 ? current + 1 : 0;
       gotoNum(newNext);
     };
@@ -131,13 +148,11 @@ const Carousel = ({
                 </div>
             </div>
             <div className="button-container">
-                <div className="button" onClick={gotoPrev}><img src={left} alt="left"/></div>
-                <div className="button" onClick={gotoNext}><img src={right} alt="right"/></div>
+                <div className="button" onClick={gotoPrev}><img src={left} alt="left" className="left"/></div>
+                <div className="button" onClick={gotoNext}><img src={left} alt="right" className="right"/></div>  
             </div>
         </div>
     );
 }
  
 export default Carousel;
-
-
