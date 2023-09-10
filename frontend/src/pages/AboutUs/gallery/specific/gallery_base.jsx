@@ -102,7 +102,7 @@ const Gal_base = ({ i1, i2, i3, i4, i5 }) => {
   };
 
   return (
-    <div className="main_carousel">
+    <div className="gal_carousel">
       <div className="slides" ref={slidesRef}>
         <div className="slide prev2">
           <img src={i1} className="Glimpse" alt="Technoholix stage, Techfest IIT Bombay Asia's Largest Science and Technology Festival" />
@@ -121,8 +121,8 @@ const Gal_base = ({ i1, i2, i3, i4, i5 }) => {
         </div>
       </div>
       <div className="button-container">
-        <div className="button" onClick={gotoPrev}><img src={left} alt="left" /></div>
-        <div className="button" onClick={gotoNext}><img src={right} alt="right" /></div>
+        <div className="button" onClick={gotoPrev}><img src={left} alt="left" className="left"/></div>
+        <div className="button" onClick={gotoNext}><img src={left} alt="right" className="right"/></div>
       </div>
       <Link className="back-button" to="/gallery"><img src={back} alt="right" /></Link>
       <div className="page-indicators">

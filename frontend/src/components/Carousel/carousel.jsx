@@ -23,23 +23,40 @@ const Carousel = ({
     const [next, setNext] = useState(3);
     const [next2, setNext2] = useState(4);
     const slidesRef = useRef(null);
-
+    let intervalId;
+  
+    const handleAutoSlide = () => {
+      intervalId = setInterval(() => {
+        gotoNext();
+      }, 2000);
+    };
+  
     const [slides, setSlides] = useState([]);
-
+  
     useEffect(() => {
-      const slidesArray = slidesRef.current.getElementsByClassName('slide');
-      setSlides(slidesArray);
+      const slidesArray = slidesRef.current?.querySelectorAll('.slide');
+      if (slidesArray) {
+        setSlides(Array.from(slidesArray));
+      }
     }, []);
-
+  
+    useEffect(() => {
+      handleAutoSlide();
+  
+      return () => {
+        clearInterval(intervalId);
+      };
+    }, [slides, current]);
+  
     const gotoPrev = () => {
-      console.log('jaa rha hai piche')
-      const newPrev = current > 0 ? current - 1 : 4;
+      clearInterval(intervalId);
+      const newPrev = current > 0 ? current - 1 : 9;
       gotoNum(newPrev);
     };
   
     const gotoNext = () => {
-      console.log('jaa rha hai aage')
-      const newNext = current < 4 ? current + 1 : 0;
+      clearInterval(intervalId);
+      const newNext = current < 9 ? current + 1 : 0;
       gotoNum(newNext);
     };
     
@@ -53,26 +70,26 @@ const Carousel = ({
 
       
       if (newPrev2 === -2) {
-        newPrev2 = 3;
+        newPrev2 = 8;
       }
 
       if (newPrev2 === -1) {
-        newPrev2 = 4;
+        newPrev2 = 9;
       }
   
       if (newPrev === -1) {
-        newPrev = 4;
+        newPrev = 9;
       }  
 
-      if (newNext === 5) {
+      if (newNext === 10) {
         newNext = 0;
       }
 
-      if (newNext2 === 5) {
+      if (newNext2 === 10) {
         newNext2 = 0;
       }
 
-      if (newNext2 === 6) {
+      if (newNext2 === 11) {
         newNext2 = 1;
       }
       
@@ -131,13 +148,11 @@ const Carousel = ({
                 </div>
             </div>
             <div className="button-container">
-                <div className="button" onClick={gotoPrev}><img src={left} alt="left"/></div>
-                <div className="button" onClick={gotoNext}><img src={right} alt="right"/></div>
+                <div className="button" onClick={gotoPrev}><img src={left} alt="left" className="left"/></div>
+                <div className="button" onClick={gotoNext}><img src={left} alt="right" className="right"/></div>  
             </div>
         </div>
     );
 }
  
 export default Carousel;
-
-
