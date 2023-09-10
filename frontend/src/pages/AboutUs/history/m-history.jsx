@@ -4,7 +4,7 @@ import edm from './assets/edm.png';
 import historyImage from './assets/history.png';
 import mars from './assets/mars.png'
 import blurr from './assets/blurr.png';
-
+import tvImage from './assets/mtv 1.png'
 
 const Mimages = [
   { id: 'history', url: historyImage },
@@ -34,6 +34,12 @@ const MHistory = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + Mimages.length) % Mimages.length);
   }, []);
 
+  const TVImage = () => {
+    return (
+        <img className='mtv-image' src={tvImage} alt="TV" />
+      );
+  };
+
   // Automatic transition for "blurr" images
   useEffect(() => {
     let timer;
@@ -47,6 +53,9 @@ const MHistory = () => {
 
   return (
     <div className="mhistory-container">
+      <div className="mtv-container" onClick={handleNextButtonClick}>
+        <TVImage />
+      </div>
     {/* <img src={blurr} alt='blurr' className="blurr" /> */}
       <div className="history-overlay" onClick={handleNextButtonClick}>
         {Mimages.map(({ id, url, height, width, text, additionalText }, index) => (

@@ -12,6 +12,7 @@
 
 
 .history-item{
+  display: flex;
   opacity: 0;
   z-index: 1;
   transition: opacity 2s ease-in-out;
@@ -34,7 +35,7 @@
   transform: translate(0%,0%);
   z-index: 3000; */
   position: absolute;
-  top: 18%;
+  top: 22%;
   left: 26.5%;
   width: 50%;
   height: 55%;
@@ -47,11 +48,21 @@
 
 .himage-text{
   position: inherit;
-  top: 10%;
+  top: 38%;
+  left: -3%;
+  font-weight: bolder;
+  font-size: large;
+  transform: translate(100%,0%);
+  color: black;
+  background-color: white;
+  margin: 8px;
+  border: 10px;
+  border-radius: 17px;
+  padding: 0px 22px;
 }
 
 .himage{
-
+  height: 51vh;
 }
 
 .hadditional-text {
@@ -71,7 +82,7 @@
 
 .tv-container {
   position: absolute;
-  z-index: 2000; /* Set a high z-index to make it appear above other content */
+  z-index: 10; /* Set a high z-index to make it appear above other content */
   /* You can adjust the positioning as needed */
   top: 0;
   left: 0;
@@ -80,6 +91,25 @@
   width:100vw;
   justify-content: center;
   /* Add any other styling you need for the TV container */
+}
+.tv-image{
+  width: 100vw;
+}
+
+.mtv-container {
+  position: absolute;
+  z-index: 10; /* Set a high z-index to make it appear above other content */
+  /* You can adjust the positioning as needed */
+  top: 0;
+  left: 0;
+  display: flex;
+  height:100vh;
+  width:100vw;
+  justify-content: center;
+  /* Add any other styling you need for the TV container */
+}
+.mtv-image{
+  width: 100vw;
 }
 /* .tv-image {
   
@@ -109,9 +139,10 @@
   top: 0;
   background-position: center;
   background-size: cover;
-  height: 100%;
+  height: 100vh;
   position: absolute;
-  width: 100%;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .mhistory-image.history {
@@ -129,14 +160,11 @@
 
 .history-image.edm {
   position: absolute;
-  top: 18%;
-  left: 26.5%;
-  width: 50%;
-  height: 55%;
+  top: 20%;
+  left: auto;
+  width: 49%;
+  height: 100%;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   transform: translate(0%,0%);}
 
 .mhistory-image.mars {
@@ -224,7 +252,7 @@
 
 .history-button {
   position: absolute;
-  top:80%;
+  top:76%;
   width: 100%;
   height: 6%;
   background-color:transparent;
@@ -239,11 +267,23 @@
   transform: translate(0%,0%);
 }
 .history-button button{
-  background: none;
-  color: aqua;
-  border: none;
-  justify-content: space-evenly;
+  /* background-color: brown;
+  justify-content: space-evenly; */
+      /* display: inline-block; */
+      display: flex;
+      padding: 0px 7px 34px 7px;
+      background-color: white;
+      border: 2px solid gold;
+      border-radius: 34px;
+      color: black;
+      text-decoration: none;
+      align-content: center;
+  
+
+
 }
+
+
 
 .history-image {
   width: 100%;
@@ -252,4 +292,21 @@
   /* background-position: ; */
   cursor: pointer;
   position: relative;
+}
+
+#prevButton{
+  display: flex;
+  padding: 0px 9px;
+  background-color: white;
+  border: 2px solid gold;
+  border-radius: 34px;
+  color: black;
+  text-decoration: none;
+  align-content: center;
+
+}
+
+@media screen and (min-aspect-ratio: 766/671){
+  
+  
 }
