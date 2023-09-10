@@ -4,6 +4,9 @@
   padding-top: 50vh;
   overflow-x: hidden;
   top: 0vh;
+  background-image: url(../../../../assets/gallery/bg.jpg);
+  background-position: cover;
+  background-size: 100% 100%;
 }
 
 .gal_carousel .slides{

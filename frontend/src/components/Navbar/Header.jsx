@@ -124,7 +124,7 @@ const Header = () => {
           {/* <ul> */}
             <li>
               <Link to="/">
-                <img src={tf} alt="Techfest" />
+                <img src={tf} alt="Techfest"  />
               </Link>
             </li>
           {/* </ul> */}
