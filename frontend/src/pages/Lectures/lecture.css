@@ -59,7 +59,8 @@
     }
   } */
 .difPage{
-    margin-top: 10pt;
+    margin-top: 0px;
+    height: 50px;
 }
 
 .mobilemap{
@@ -73,9 +74,14 @@ flex-basis: 1.2em;
 border:3px solid white;
 margin-right: 7vw;
 margin-left: 7vw;
-width: auto;
 font-size: large;
 border-radius: 10px;
 height: 100pt;
 align-items: center;
+}
+@media(max-width: 450px) {
+    .Contactbox{
+        height: 200px;
+        flex-direction: column;
+    }
 }

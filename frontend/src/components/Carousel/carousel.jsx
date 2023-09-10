@@ -3,115 +3,102 @@ import right from "./../../assets/gallery/ArrowRight.svg"
 
 import React, { useState, useRef, useEffect } from 'react'
 import './carousel.css'
-import { Link} from 'react-router-dom';
 
-const Carousel = ({
-  i1,
-  i2,
-  i3,
-  i4,
-  i5,
-  i6,
-  i7,
-  i8,
-  i9,
-  i10
-}) => {
-    const [current, setCurrent] = useState(2);
-    const [prev2, setPrev2] = useState(0);
-    const [prev, setPrev] = useState(1);
-    const [next, setNext] = useState(3);
-    const [next2, setNext2] = useState(4);
-    const slidesRef = useRef(null);
-    let intervalId;
-  
-    const handleAutoSlide = () => {
-      intervalId = setInterval(() => {
-        gotoNext();
-      }, 2000);
-    };
-  
-    const [slides, setSlides] = useState([]);
-  
-    useEffect(() => {
-      const slidesArray = slidesRef.current?.querySelectorAll('.slide');
-      if (slidesArray) {
-        setSlides(Array.from(slidesArray));
-      }
-    }, []);
-  
-    useEffect(() => {
-      handleAutoSlide();
-  
-      return () => {
-        clearInterval(intervalId);
-      };
-    }, [slides, current]);
-  
-    const gotoPrev = () => {
+const Carousel = ({ i1, i2, i3, i4, i5 }) => {
+  const [current, setCurrent] = useState(2);
+  const [prev2, setPrev2] = useState(0);
+  const [prev, setPrev] = useState(1);
+  const [next, setNext] = useState(3);
+  const [next2, setNext2] = useState(4);
+  const slidesRef = useRef(null);
+  let intervalId;
+
+  const handleAutoSlide = () => {
+    intervalId = setInterval(() => {
+      gotoNext();
+    }, 2000);
+  };
+
+  const [slides, setSlides] = useState([]);
+
+  useEffect(() => {
+    const slidesArray = slidesRef.current?.querySelectorAll('.slide');
+    if (slidesArray) {
+      setSlides(Array.from(slidesArray));
+    }
+  }, []);
+
+  useEffect(() => {
+    handleAutoSlide();
+
+    return () => {
       clearInterval(intervalId);
-      const newPrev = current > 0 ? current - 1 : 9;
-      gotoNum(newPrev);
     };
-  
-    const gotoNext = () => {
-      clearInterval(intervalId);
-      const newNext = current < 9 ? current + 1 : 0;
-      gotoNum(newNext);
-    };
-    
-    const gotoNum = (number) => {
+  }, [slides, current]);
 
-      const newCurrent = number;
-      let newPrev2 = newCurrent -2;
-      let newPrev = newCurrent - 1;
-      let newNext = newCurrent + 1;
-      let newNext2 = newCurrent +2;
+  const gotoPrev = () => {
+    clearInterval(intervalId); // Stop auto-sliding during manual control
+    const newPrev = current > 0 ? current - 1 : 4;
+    gotoNum(newPrev);
+  };
 
-      
-      if (newPrev2 === -2) {
-        newPrev2 = 8;
-      }
+  const gotoNext = () => {
+    clearInterval(intervalId); // Stop auto-sliding during manual control
+    const newNext = current < 4 ? current + 1 : 0;
+    gotoNum(newNext);
+  };
 
-      if (newPrev2 === -1) {
-        newPrev2 = 9;
-      }
-  
-      if (newPrev === -1) {
-        newPrev = 9;
-      }  
+  const gotoNum = (number) => {
+    const newCurrent = number;
+    let newPrev2 = newCurrent - 2;
+    let newPrev = newCurrent - 1;
+    let newNext = newCurrent + 1;
+    let newNext2 = newCurrent + 2;
 
-      if (newNext === 10) {
-        newNext = 0;
-      }
+    if (newPrev2 === -2) {
+      newPrev2 = 3;
+    }
 
-      if (newNext2 === 10) {
-        newNext2 = 0;
-      }
+    if (newPrev2 === -1) {
+      newPrev2 = 4;
+    }
 
-      if (newNext2 === 11) {
-        newNext2 = 1;
-      }
-      
-      console.log(newPrev2);
-      console.log(newNext2);
+    if (newPrev === -1) {
+      newPrev = 4;
+    }
 
-      for (let index = 0; index < slides.length; index++) {
-          slides[index].className = "slide ";
-      }
+    if (newNext === 5) {
+      newNext = 0;
+    }
 
-      slides[newPrev2].className = slides[newPrev2].className.replace(" " , " prev2")
-      slides[newPrev].className = slides[newPrev].className.replace(" " , " prev")
-      slides[newCurrent].className = slides[newCurrent].className.replace(" " , " active")
-      slides[newNext].className = slides[newNext].className.replace(" " , " next")
-      slides[newNext2].className = slides[newNext2].className.replace(" " , " next2")
+    if (newNext2 === 5) {
+      newNext2 = 0;
+    }
 
-      setPrev2(newPrev2);
-      setPrev(newPrev);
-      setCurrent(newCurrent);
-      setNext(newNext);
-      setNext2(newNext2);
-    };
+    if (newNext2 === 6) {
+      newNext2 = 1;
+    }
+
+    for (let index = 0; index < slides.length; index++) {
+      slides[index].className = 'slide ';
+    }
+
+    slides[newPrev2].className = slides[newPrev2].className.replace(' ', ' prev2');
+    slides[newPrev].className = slides[newPrev].className.replace(' ', ' prev');
+    slides[newCurrent].className = slides[newCurrent].className.replace(' ', ' active');
+    slides[newNext].className = slides[newNext].className.replace(' ', ' next');
+    slides[newNext2].className = slides[newNext2].className.replace(' ', ' next2');
+
+    setPrev2(newPrev2);
+    setPrev(newPrev);
+    setCurrent(newCurrent);
+    setNext(newNext);
+    setNext2(newNext2);
+
+    // Restart auto-sliding after manual control
+    handleAutoSlide();
+  };
+
     
     return (  
         <div className="main_carousel">
@@ -131,26 +118,20 @@ const Carousel = ({
                 <div className="slide next2">
                     <img src={i5} className="Glimpse" alt="International Robowars arena Techfest IIT Bombay with audience" />
                 </div>
-                <div className="slide ">
-                    <img src={i6} className="Glimpse" alt= "International DJ artists Maddix and Krispie at EDM night of Techfest IIT Bombay" />
-                </div>
-                <div className="slide ">
-                    <img src={i7} className="Glimpse" alt="Social Initiative spread awareness among youth college students by Techfest IIT Bombay on Sanitation Health Education" />
-                </div>
-                <div className="slide ">
-                    <img src={i8} className="Glimpse" alt="Battlebots fight International Robowars audience watching" />
-                </div>
-                <div className="slide ">
-                    <img src={i9} className="Glimpse" alt="International teams participated competitions at Techfest IIT Bombay" />
-                </div>
-                <div className="slide ">
-                    <img src={i10} className="Glimpse" alt="Entry or welcome gate ambience in IIT Bombay campus during Techfest" />
-                </div>
             </div>
             <div className="button-container">
                 <div className="button" onClick={gotoPrev}><img src={left} alt="left" className="left"/></div>
                 <div className="button" onClick={gotoNext}><img src={left} alt="right" className="right"/></div>  
             </div>
+            <div className="page-indicators">
+            {Array.from({ length: '5' }).map((_, index) => (
+              <div
+                key={index}
+                className={`page-indicator ${index === current ? 'active' : ''}`}
+                onClick={() => gotoNum(index)}
+              />
+            ))}
+      </div>
         </div>
     );
 }

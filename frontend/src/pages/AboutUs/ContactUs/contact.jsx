@@ -137,7 +137,7 @@ const coordidata = [
     department: "Web Manager",
     name: "Yatharth Manchanda",
     email: "yatharth@techfest.org",
-    phone: "8307139636"
+    phone: "8168921833"
   },
   // Add more coordinator objects as needed
 ];
