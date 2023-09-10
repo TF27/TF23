@@ -1,0 +1,28 @@
+.groupl{
+    display: flex;
+}
+#wabuttonw{
+    border: solid white 1px;
+    background-color: #0c8639;
+    border-radius: 5px;
+    margin-right: 0.5vw;
+    padding: 0.5vw;
+    font-family: "Forum", sans-serif;
+    color: white;
+    width: 10vw;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+#wabuttond{
+    border: solid white 1px;
+    background-color: #7289da;
+    margin-left: 0.5vw;
+    border-radius: 5px;
+    padding: 0.5vw;
+    font-family: "Forum", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+}

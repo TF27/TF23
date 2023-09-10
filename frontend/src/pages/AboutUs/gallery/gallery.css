@@ -1,9 +1,9 @@
 .gal-main{
     position: fixed;
-    top: 7rem;
+    /* top: 7rem; */
     left: 0;
     width: 100%;
-    height: calc(100vh - 7rem);
+    height: calc(100vh);
 
     background-image: url(../../../assets/gallery/gallery.jpg);
     background-position: cover;
@@ -13,29 +13,36 @@
 .gal-main .gal-text{
     writing-mode: vertical-lr;
     position: fixed;
+    font-size: 300%;
+    /* size: 100px; */
 }
 
 .gal-main :nth-child(1){
-    left: 13vw;
-    top: calc(73vh - 7rem);
+    left: 11%;
+    top: calc(43%);
+    /* opacity: 0;  */
 }
 .gal-main :nth-child(2){
-    left: 28vw;
-    top: calc(72.5vh - 7rem);
+    left: 26.3%;
+    top: calc(36%);
 }
 .gal-main :nth-child(3){
-    left: 43vw;
-    top: calc(72vh - 7rem);
+    left: 40.6%;
+    top: calc(38% );
 }
 .gal-main :nth-child(4){
-    left: 57vw;
-    top: calc(70vh - 7rem);
+    left: 55%;
+    top: calc(36%);
 }
 .gal-main :nth-child(5){
-    left: 72.5vw;
-    top: calc(71vh - 7rem);
+    left: 69.3%;
+    top: calc(34%);
 }
 .gal-main :nth-child(6){
-    left: 88vw;
-    top: calc(73vh - 7rem);
+    left: 84.3%;
+    top: calc(36%);
+}
+
+.gal-main .nav-link{
+    opacity: 0;
 }

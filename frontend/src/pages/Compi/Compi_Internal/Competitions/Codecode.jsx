@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
+import whatsapplink from '../../../../components/whatsapp/link';
 
 const Codecode = () => {
     const [activeCity, setActiveCity] = useState('About');
@@ -125,8 +126,8 @@ const Codecode = () => {
         paddingRight: '8px',
     }
 
-
     return ( 
+    <div>
       <div className={styles.impdata}>
         <div className={styles.info_head}>
           {/* <div className={styles.bar_extra}></div> */}
@@ -149,10 +150,42 @@ const Codecode = () => {
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Round 1:<br/>
-            Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023.<br/><br/>
-            Round 2:<br/>
-            Finale will be held at Techfest 2023-24 during 27th - 29th December 2023. 
+              Description of Competition:<br/>
+              1. It is a 3-hour coding contest.<br/>
+              2. Teams will use coding to solve extremely tricky mathematical problems that can't be solved by using a calculator.<br/>
+              3. Problems will revolve around mathematical intricacies, statistical predictions, physics, seepage, real-life scenarios, and much more.<br/>
+
+              Scoring:<br/>
+              The exact marking scheme will be disclosed later. There would be some tie-breaker questions in the paper in case of a tie. The person with more correct answers to the tie-breaker questions would be given a higher position.<br/>
+
+              Eligibility:<br/>
+              All students with a valid identity card from their respective educational institutes are eligible to participate in the event.<br/>
+
+              Programming Languages Allowed:<br/>
+              1. C<br/>
+              2. C++<br/>
+              3. Java<br/>
+              4. Python<br/>
+              5. Perl<br/>
+
+              Example of a problem:<br/>
+              Given n numbers such that their sum is not divisible by 4, remove k numbers such that after every removal, the sum of the remaining numbers is not divisible by 4. Find the maximal sum of n-k remaining numbers.<br/>
+              Solution:<br/>
+              Divide the initial n numbers into four separate arrays corresponding to the 4 different remainders they leave when divided by 4. Now, sort them. Let's call these arrays a0, a1, a2, and a3. Now, say the sum of n numbers is divisible by 4.<br/>
+              f(k, a0, a1, a2, a3) = max {'{f(k-1, a0, a1+1,a2,a3), f(k-1,a0,a1,a2+1,a3), f(k-1,a0,a1,a2,a3+1)}'}<br/>
+              If the sum upon dividing by 4 gives a remainder of 1, we would have considered the arrays a0, a2 and a3.<br/>
+              Test case: n = 10 {'{44, 12, 45, 23, 22, 34, 47, 37, 50, 31}'}, Sum = 345<br/>
+              Answers:<br/>
+              k = 1, 333<br/>
+              k = 2, 311<br/>
+              k = 3, 279<br/>
+              k = 4, 257<br/>
+              k = 5, 223<br/>
+              k = 6, 186<br/>
+              k = 7, 142<br/>
+              k = 8, 97<br/>
+              k = 9, 50<br/>
+              k = 10, 0 <br/>
               </div>
             </div>
           </div>
@@ -202,6 +235,10 @@ const Codecode = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className={styles.grouplink}>
+        <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
+      </div>
       </div>
      );
 }

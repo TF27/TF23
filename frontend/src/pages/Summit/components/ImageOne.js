@@ -29,8 +29,8 @@ const ImageOne = () => {
         style={{ transform: `translateY(${scrollPosition * 0.3}px)` }}
       />
       <div className={`${parallax.parallaxlayer} ${parallax.layer3}`} />
-      <div className={parallax.blackGradient}/>
-      <div className={parallax.blackGradient}/>
+      <div className={parallax.blackGradientbottom}/>
+      <div className={parallax.blackGradientbottom}/>
     </div>
   );
 };
