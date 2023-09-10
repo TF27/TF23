@@ -1,4 +1,5 @@
-import React, { useState } from "react";  
+import React, { useState } from "react";
+ //import whatever images we need and add them in the cityData beside a image tag
 import worldmap from "./assets/map.png";
 // import im1 from "./assets/mapContent/img1.png"
 import "./WorldMap.css"; // Import CSS file
@@ -110,7 +111,7 @@ const WorldMap = () => {
 
           }}
           onMouseEnter={() => handleCityHover(hoveredCity)} // Keep the menu open when the cursor is on the dropdown menu
-          onMouseLeave={() => handleCityHover(hoveredCity)}
+          onMouseLeave={() => handleCityHover(null)}
         >
 
           <div className="dropdown-content">
