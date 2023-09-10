@@ -95,7 +95,7 @@ function PrivacyPolicy(){
     return (
         <div className="container justify-content-center" style={{margin:'0 auto', marginTop:'40 px', marginBottom: '50px',borderRadius:'10px'}}>
             <ul className="list-group">
-        <div className="item" >
+        <div className={`item ${legals.itemuoi}`} >
         <li  className=" list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded " onClick={f1}>GENERAL DATA PROTECTION RULES (GDPR)</li>
         <div className={`${legals.whatd} ${toggle1 ? legals.whatdopen: ''} drop-content border border-light border-1`} >
             <p style={{transition:'ease-in-out'}}>We are a Data Controller of your information.
@@ -115,19 +115,19 @@ The right to data portability
 The right to withdraw consent</p>
         </div>
         </div>
-        <div className="item" >
+        <div className={`item ${legals.itemuoi}`} >
         <li   className="list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded" onClick={f2}>LOG FILES</li>
         <div className={`${legals.whatd} ${toggle2 ? legals.whatdopen: ''} drop-content border border-light border-1`}>
             <p>Techfest IIT Bombay follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and are a part of hosting services' analytics. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any personally identifiable information. The information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>
         </div>
         </div>
-        <div className="item">
+        <div className={`item ${legals.itemuoi}`}>
         <li   className="list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded" onClick={f3}>COOKIES AND WEB BEACONS</li>
         <div className={`${legals.whatd} ${toggle3 ? legals.whatdopen: ''} drop-content border border-light border-1`}>
             <p>Like any other website, techfest.org uses 'cookies.' These cookies store information, including visitors' preferences and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors browser type and/or other information.</p>
         </div>
         </div>
-        <div className="item">
+        <div className={`item ${legals.itemuoi}`}>
         <li   className="list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded" onClick={f4}>PRIVACY POLICIES</li>
         <div className={`${legals.whatd} ${toggle4 ? legals.whatdopen: ''} drop-content border border-light border-1`}>
             <p>You may consult this list to find the Privacy Policy for each of the advertising partners of Techfest IIT Bombay.
@@ -136,27 +136,27 @@ They automatically receive your IP address when this occurs. These technologies 
 Note that Techfest IIT Bombay has no access to or control over third-party advertisers' cookies.</p>
         </div>
         </div>
-        <div className="item">
+        <div className={`item ${legals.itemuoi}`}>
         <li   className="list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded" onClick={f5}>THIRD-PARTY PRIVACY POLICIES</li>
         <div className={`${legals.whatd} ${toggle5 ? legals.whatdopen: ''} drop-content border border-light border-1`}>
             <p>Techfest IIT Bombay's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.
 You can choose to disable cookies through your individual browser options. It can be found on the browsers' respective websites to know more detailed information about cookie management with specific web browsers.</p>
         </div>
         </div>
-        <div className="item">
+        <div className={`item ${legals.itemuoi}`}>
         <li   className="list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded" onClick={f6}>CHILDREN'S INFORMATION</li>
         <div className={`${legals.whatd} ${toggle6 ? legals.whatdopen: ''} drop-content border border-light border-1`}>
             <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.
 Techfest IIT Bombay does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately, and we will do our best efforts to remove such information from our records promptly.</p>
         </div>
         </div>
-        <div className="item">
+        <div className={`item ${legals.itemuoi}`}>
         <li   className="list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded" onClick={f7}>ONLINE PRIVACY POLICY</li>
        <div className={`${legals.whatd} ${toggle7 ? legals.whatdopen: ''} drop-content border border-light border-1`}>
             <p>Our Privacy Policy created at GDPRPrivacyPolicy.net) applies only to our online activities and is valid for visitors to our website regarding the information they shared and/or collected in Techfest IIT Bombay. This policy does not apply to any information collected offline or via channels other than this website.</p>
         </div>
         </div>
-        <div className="item">
+        <div className={`item ${legals.itemuoi}`}>
         <li   className="list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded" onClick={f8}>CONSENT</li>
         <div className={`${legals.whatd} ${toggle8 ? legals.whatdopen: ''} drop-content border border-light border-1`}>
             <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
