@@ -243,7 +243,7 @@ const Codecode = () => {
         </div>
       </div>
       <div className={styles.grouplink}>
-        <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
+        <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/', 'https://www.youtube.com/')}</div>
       </div>
       </div>
      );
