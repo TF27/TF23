@@ -131,6 +131,25 @@ import n18 from "./media/2022/18.jpg"
 import n19 from "./media/2022/19.jpg"
 import n20 from "./media/2022/20.jpg"
 
+import i21a from "./media/2022/21.jpg"
+
+import i22_1 from "./media/2022/22_1.jpg"
+import i22_2 from "./media/2022/22_2.jpg"
+import i22_3 from "./media/2022/22_3.jpg"
+import i22_4 from "./media/2022/22_4.jpg"
+import i22_5 from "./media/2022/22_5.jpg"
+import i22_6 from "./media/2022/22_6.jpg"
+import i22_7 from "./media/2022/22_7.jpg"
+import i22_8 from "./media/2022/22_8.jpg"
+import i22_9 from "./media/2022/22_9.jpg"
+import i22_10 from "./media/2022/22_10.jpg"
+import i22_11 from "./media/2022/22_11.jpg"
+import i22_12 from "./media/2022/22_12.jpg"
+import i22_13 from "./media/2022/22_13.jpg"
+import i22_14 from "./media/2022/22_14.jpg"
+import i22_15 from "./media/2022/22_15.jpg"
+
+
 import "./stars.css"
 
 const Media = () => {
@@ -157,6 +176,39 @@ const Media = () => {
         <section class="container-fluid ftco-gallery ftco-no-pb mb-4" id="Offline-section">
             <div class="row">
                 <div class="col-md-3">
+
+                <div class="card" style={{width:"100%"}} title="Click here to read the full article">
+                        <a class="image-popup" href={i22_1}><img class="card-img-top " src={i22_1} alt="Card image" style={{width:"100%"}}/></a>
+                        <div class="card-body">
+                            <img src={""} alt="" style={{maxHeight: " 40px"}}/>
+                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
+                        </div>
+                    </div>
+
+                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
+                        <a class="image-popup" href={i22_2}><img class="card-img-top " src={i22_2} alt="Card image" style={{width:"100%"}}/></a>
+                        <div class="card-body">
+                            <img src={""} alt="" style={{maxHeight: " 40px"}}/>
+                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
+                        </div>
+                    </div>
+
+                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
+                        <a class="image-popup" href={i22_3}><img class="card-img-top " src={i22_3} alt="Card image" style={{width:"100%"}}/></a>
+                        <div class="card-body">
+                            <img src={""} alt="" style={{maxHeight: " 40px"}}/>
+                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
+                        </div>
+                    </div>
+
+                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
+                        <a class="image-popup" href={i22_4}><img class="card-img-top " src={i22_4} alt="Card image" style={{width:"100%"}}/></a>
+                        <div class="card-body">
+                            <img src={""} alt="" style={{maxHeight: " 40px"}}/>
+                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
+                        </div>
+                    </div>
+
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
                         <a class="image-popup" href={i1}><img class="card-img-top " src={i1} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
@@ -170,13 +222,7 @@ const Media = () => {
                             <img src={i4} alt="" style={{maxWidth:"80%"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Maharashtra Times</h4>*/}
                         </div>
-                    </div>
-                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href={""}><img class="card-img-top " src={""} alt="Card image" style={{width:"100%"}}/></a>
-                        <div class="card-body" >
-                            <img src={i6} alt="" style={{maxHeight: " 40px"}}/>
-                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Maharashtra Times</h4>*/}
-                        </div>
+                    
                     </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
                         <a class="" target="_blank" href="https://hindi.news18.com/news/maharashtra/mumbai-n-a-three-day-tech-fest-in-bombay-iit-bombay-a-robot-with-a-man-made-face-was-in-the-discussion-1620587.html"><img class="card-img-top " src={i7} alt="Card image" style={{width:"100%"}}/></a>
@@ -222,8 +268,8 @@ const Media = () => {
                                 {/*							<h4 class="card-title" style={{margin-bottom: 0px;">India Education Diary</h4>*/}
                             </div>
                         </a>
-
                     </div>
+
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
                         <a class="image-popup" href={i18}><img class="card-img-top" src={i18} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
@@ -245,37 +291,9 @@ const Media = () => {
                             <img src={i23} alt="" style={{maxHeight:"60px"}}/>
                         </div>
                     </div>
-                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href={""}><img class="card-img-top" src={""} alt="Card image" style={{width:"100%"}}/></a>
-                        <div class="card-body">
-                            <img src={i25} alt="" style={{maxHeight: " 40px"}}/>
-
-                            {/*					<img src="./media/logo/DeccanChronicle.jpg" alt="" style={{maxHeight: " 40px"}}/>*/}
-                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Deccan Herald</h4>*/}
-                        </div>
-                    </div>
-                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href={""}><img class="card-img-top" src={""} style={{width:"100%"}}/></a>
-                        <div class="card-body">
-                            <img src={i27} alt="" style={{maxHeight: "55px"}}/>
-
-                            {/*					<h4 class="card-title" style={{margin-bottom: 0px;">DNA</h4>*/}
-                        </div>
-                    </div>
-                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href="./media/media2017/2017 coverage/CURED - DNA.JPG"><img class="card-img-top" src={""} alt="Card image" style={{width:"100%"}}/></a>
-                        <div class="card-body">
-                            <img src={i27} alt="" style={{maxHeight: "55px"}}/>
-                            {/*					<h4 class="card-title" style={{margin-bottom: 0px;">DNA</h4>*/}
-                        </div>
-                    </div>
-                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href={"./media/media2017/2017 coverage/CURED - DNA.JPG"}><img class="card-img-top" src={""} alt="Card image" style={{width:"100%"}}/></a>
-                        <div class="card-body">
-                            <img src={i27} alt="" style={{maxHeight: "55px"}}/>
-                            {/*					<h4 class="card-title" style={{margin-bottom: 0px;">DNA</h4>*/}
-                        </div>
-                    </div>
+                   
+        
+                
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
                         <a class="image-popup" href="./media/media2017/2017 coverage/CURED - DNA.JPG"><img class="card-img-top" src={i30} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
@@ -301,6 +319,41 @@ const Media = () => {
 
                 </div>  
                 <div class="col-md-3">
+
+                <div class="card" style={{width:"100%"}} title="Click here to read the full article">
+                        <a class="image-popup" href={i22_5}><img class="card-img-top " src={i22_5} alt="Card image" style={{width:"100%"}}/></a>
+                        <div class="card-body">
+                            <img src={""} alt="" style={{maxHeight: " 40px"}}/>
+                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
+                        </div>
+                    </div>
+
+
+                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
+                        <a class="image-popup" href={i22_6}><img class="card-img-top " src={i22_6} alt="Card image" style={{width:"100%"}}/></a>
+                        <div class="card-body">
+                            <img src={""} alt="" style={{maxHeight: " 40px"}}/>
+                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
+                        </div>
+                    </div>
+
+                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
+                        <a class="image-popup" href={i22_7}><img class="card-img-top " src={i22_7} alt="Card image" style={{width:"100%"}}/></a>
+                        <div class="card-body">
+                            <img src={""} alt="" style={{maxHeight: " 40px"}}/>
+                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
+                        </div>
+                    </div>
+
+                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
+                        <a class="image-popup" href={i22_8}><img class="card-img-top " src={i22_8} alt="Card image" style={{width:"100%"}}/></a>
+                        <div class="card-body">
+                            <img src={""} alt="" style={{maxHeight: " 40px"}}/>
+                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
+                        </div>
+                    </div>
+
+
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
                         <a class="image-popup" href={i35}><img class="card-img-top " src={i35} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body" >
@@ -441,6 +494,40 @@ const Media = () => {
 
                 </div>
                 <div class="col-md-3">
+
+                <div class="card" style={{width:"100%"}} title="Click here to read the full article">
+                        <a class="image-popup" href={i22_9}><img class="card-img-top " src={i22_9} alt="Card image" style={{width:"100%"}}/></a>
+                        <div class="card-body">
+                            <img src={""} alt="" style={{maxHeight: " 40px"}}/>
+                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
+                        </div>
+                    </div>
+
+                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
+                        <a class="image-popup" href={i22_10}><img class="card-img-top " src={i22_10} alt="Card image" style={{width:"100%"}}/></a>
+                        <div class="card-body">
+                            <img src={""} alt="" style={{maxHeight: " 40px"}}/>
+                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
+                        </div>
+                    </div>
+
+                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
+                        <a class="image-popup" href={i22_11}><img class="card-img-top " src={i22_11} alt="Card image" style={{width:"100%"}}/></a>
+                        <div class="card-body">
+                            <img src={""} alt="" style={{maxHeight: " 40px"}}/>
+                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
+                        </div>
+                    </div>
+
+                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
+                        <a class="image-popup" href={i22_12}><img class="card-img-top " src={i22_12} alt="Card image" style={{width:"100%"}}/></a>
+                        <div class="card-body">
+                            <img src={""} alt="" style={{maxHeight: " 40px"}}/>
+                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
+                        </div>
+                    </div>
+
+
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
                         <a class="image-popup" href={i66}><img class="card-img-top" src={i66} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
@@ -516,14 +603,7 @@ const Media = () => {
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">dfjbndfkjbnkdj</h4>*/}
                         </div>
                     </div>
-                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="" target="_blank" href=""><img class="card-img-top" src={""} alt="Card image" style={{width:"100%"}}/></a>
-                        <div class="card-body">
-                            <img src={""} alt="" style={{maxHeight: " 40px"}}/>
 
-                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Deccan Chronicle</h4>*/}
-                        </div>
-                    </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
                         <a class="image-popup" href={i85}><img class="card-img-top" src={i85} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
@@ -535,13 +615,32 @@ const Media = () => {
 
                 </div>
                 <div class="col-md-3">  
-                    <div class="card" style={{width: "100%", overflow: "hidden"}} title="Click here to read the full article">
-                        <a class="image-popup"  href={""} ><img class="card-img-top" src={""} alt="Card image" style={{width: "100%", position: "relative", right: "0.5rem"}}/></a>
+
+                <div class="card" style={{width:"100%"}} title="Click here to read the full article">
+                        <a class="image-popup" href={i22_13}><img class="card-img-top " src={i22_13} alt="Card image" style={{width:"100%", height:"100%"}}/></a>
                         <div class="card-body">
-                            <img src={i88} alt="" style={{maxHeight: "50px"}}/>
-                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;"> India Education Diary</h4>*/}
+                            <img src={""} alt="" style={{Height: " 0px"}}/>
+                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
                         </div>
                     </div>
+
+                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
+                        <a class="image-popup" href={i22_15}><img class="card-img-top " src={i22_15} alt="Card image" style={{width:"100%", height:"100%"}}/></a>
+                        <div class="card-body">
+                            <img src={""} alt="" style={{maxHeight: " 40px"}}/>
+                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
+                        </div>
+                    </div>
+
+                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
+                        <a class="image-popup" href={i22_14}><img class="card-img-top " src={i22_14} alt="Card image" style={{width:"100%"}}/></a>
+                        <div class="card-body">
+                            <img src={""} alt="" style={{maxHeight: " 40px"}}/>
+                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">The Hindu</h4>*/}
+                        </div>
+                    </div>
+
+
                     <div class="card" style={{width: "100%", overflow: "hidden"}} title="Click here to read the full article">
                         <a class="" target="_blank" href={i89}><img class="card-img-top" src={i89} alt="Card image" style={{width: "100%", position: "relative", right: "0.5rem"}}/></a>
                         <div class="card-body">
@@ -606,13 +705,7 @@ const Media = () => {
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;">Hindustan Times</h4>*/}
                         </div>
                     </div>
-                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href={""}><img class="card-img-top" src={""} style={{width:"100%"}}/></a>
-                        <div class="card-body">
-                            <img src={i104} alt="" style={{maxWidth:"80%"}}/>
-                            {/*					<h4 class="card-title" style={{margin-bottom: 0px;">Hindustan Times</h4>*/}
-                        </div>
-                    </div>
+
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
                         <a class="image-popup" href={i106}><img class="card-img-top" src={i106} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
@@ -641,22 +734,10 @@ const Media = () => {
                             {/*					<h4 class="card-title" style={{margin-bottom: 0px;"> Mumbai Mirror</h4>*/}
                         </div>
                     </div>
-                    <div class="card" style={{width:"100%"}} title="Click here to read the full article">
-                        <a class="image-popup" href={""}><img class="card-img-top" src={""} alt="Card image" style={{width:"100%"}}/></a>
-                        <div class="card-body">
-                            <img src={i88} alt="" style={{maxHeight: "50px"}}/>
-
-                            {/*					<h4 class="card-title" style={{margin-bottom: 0px;">dfjbndfkjbnkdj</h4>*/}
-                        </div>
-                    </div>
-
             
                 </div>
             </div>
         </section>
-
-
-
 
             <section style={{ marginBottom: '3vw' }} id="tv-section">
                 <br />
