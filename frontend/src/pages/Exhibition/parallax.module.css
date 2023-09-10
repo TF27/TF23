@@ -1,6 +1,7 @@
 .parallaxcontainer {
   position: relative;
   height: 100%;
+  width:100%;
   top: -5rem;
 }
   
@@ -14,7 +15,7 @@
 }
 
 .layer1 {
-  background-image: url('./assets/exhi.png');
+  background-image: url('./assets/back.jpg');
   z-index: -1;
   position: relative;
   background-size: cover;
@@ -24,12 +25,14 @@
 }
 
 .layer2 {
-  background-image: url('./assets/back.jpg');
+  background-image: url('./assets/exhi.png');
   opacity: 1;
-  z-index: -1;
-  background-size: 100%;
+  z-index: 0;
+  background-size: 60%;
   background-repeat: no-repeat;
-  background-position-y:10%;
+  background-position-x:50%;
+
+  height: 130vh;
 }
 
 .layer3 {
