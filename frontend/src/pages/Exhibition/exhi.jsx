@@ -35,7 +35,6 @@ import c10 from '../../pages/Compi/assets/c10.jpg';
 
 import exhi_image from './assets/exhi.png'
 
-import exhi_image from './assets/exhi.png'
 
 const Exhibition =()=> {
 
