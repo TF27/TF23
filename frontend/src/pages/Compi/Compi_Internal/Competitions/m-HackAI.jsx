@@ -108,8 +108,10 @@ const HackAI = () => {
       }
 
     return (
-      <div>
         <div className={styles.mWholeData}>
+        <div className={styles.grouplink}>
+        <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
+        </div>  
             <div>
                 <div onClick={() => handleClickOpen('About')} className={`${styles.whatu} ${open === 'About' ? styles.whatuOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatu_rect1}`}></div>
@@ -199,16 +201,14 @@ const HackAI = () => {
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
                     Atharv Apshinge<br/>
+                    +91 93245 89830 <br />
+                    atharv@techfest.org
                     <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:atharv@techfest.org`}>atharv@techfest.org</div>
                     <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9324589830`}>9324589830</div>
                     </div>
                 </div>
             </div>
         </div>
-        <div className={styles.grouplink}>
-        <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
-      </div>
-      </div>
     );
 }
 

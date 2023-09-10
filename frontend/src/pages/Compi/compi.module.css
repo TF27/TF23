@@ -32,7 +32,10 @@
 }
 
 .descimage{
-  width: 100%;
+  /* height: 100%; */
+  width: 120%;
+  margin-left: -15%;
+  
 }
 
 .descT{
@@ -58,14 +61,15 @@
   text-align: left;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 920px) {
   .desc {
     flex-direction: column;
-    width: 90%;
+    width: 95%;
+    height: 140%;
   }
 
   .descT{
-    font-size: 13px;
+    font-size: 14px;
 }
 .textContainer th, .textContainer td {
   font-size: 13px;
@@ -75,6 +79,7 @@
   }
   .mapContainer{
     width: 70%;
+  
     margin: 0 auto;
   }  
 }

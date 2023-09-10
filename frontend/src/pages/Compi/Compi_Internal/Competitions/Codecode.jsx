@@ -193,7 +193,13 @@ const Codecode = () => {
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
             Round 1:<br/>
-            Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023<br/><br/>
+            Zonals Round will be held at 5 major cities, namely <br />
+            1. Mumbai - 8th October<br />
+            2. Bangalore - 28th October <br />
+            3. Jaipur - 15th October <br />
+            4. Bhopal - 15th October <br />
+            5. Lucknow - 15th October <br />
+            <br />
             Round 2:<br/>
             Finale will be held at Techfest 2023-24 during 27th - 29th December 2023
               </div>
@@ -228,16 +234,16 @@ const Codecode = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Atharv Apshinge<br/>
-              +91 93245 89830<br/>
-              atharv@techfest.org
+              Mrutyunjaya Sahu<br/>
+              +91 96923 76527<br/>
+              sahumrutyunjaya.techfest@gmail.com
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className={styles.grouplink}>
-        <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
+        <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/', 'https://www.youtube.com/')}</div>
       </div>
       </div>
      );

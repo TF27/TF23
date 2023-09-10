@@ -185,8 +185,9 @@ cursor: pointer;
   margin-bottom: 20px;
 }
 .main_carousel{
-  height: 325px;
+  height: 367px;
   overflow-x: hidden;
+  overflow-y: hidden;
   background-position: cover;
   background-size: 100% 100%;
   padding-top: 21vh;

@@ -143,16 +143,16 @@ const CozmoClench = () => {
           <div id="Timeline" className={`${styles.info} ${activeCity === 'Timeline' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-              <ul>
-                <li>
-                  Round 1:<br/>
-                  Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023
-                </li>
-                <li>
-                Round 2:<br/>
-                Finale will be held at Techfest 2023-24 during 27th - 29th December 2023
-                </li>
-              </ul>
+            Round 1:<br/>
+            Zonals Round will be held at 5 major cities, namely <br />
+            1. Mumbai - 8th October<br />
+            2. Bangalore - 28th October <br />
+            3. Jaipur - 15th October <br />
+            4. Bhopal - 15th October <br />
+            5. Lucknow - 15th October<br />
+             <br />
+            Round 2:<br/>
+            Finale will be held at Techfest 2023-24 during 27th - 29th December 2023
             
             
               </div>
