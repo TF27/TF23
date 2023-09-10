@@ -28,7 +28,7 @@
   background-image: url('./assets/Lec_mid.png');
   opacity: 1;
   z-index: 0;
-  background-size: 40%;
+  background-size: 600px;
   background-repeat: no-repeat;
   background-position-y:30%;
   background-position-x: center;
@@ -59,9 +59,9 @@
 }
 
 
-@media(max-width:748px){
+@media(max-width:548px){
   .layer2{
-    background-size: 140%;
+    background-size: 100%;
     background-position-x: center;
     background-position-y:20%;
   }
