@@ -1,5 +1,6 @@
 import React from 'react';
 import './contact.css';
+import Animales from '../ContactUs/assets/Animales Fantastic.otf';
 const coordidata = [
   {
     department: "Overall Coordinator",
@@ -147,7 +148,7 @@ const Contact = () => {
     <div className='contBackground'>
 
       <div className="container contContainer">
-        <h1 className="text-center" style={{ fontSize: '7vw', fontFamily: 'Forum' }}>
+        <h1 className="text-center" style={{ fontSize: '7vw', fontFamily: 'Forum',fontFamily:'Animales'}}>
           Contact Us
         </h1>
 

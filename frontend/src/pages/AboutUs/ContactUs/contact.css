@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Animales'; /* Choose a name for your font family */
+    src: url('../ContactUs/assets/Animales Fantastic.otf') format('otf');
+}
+
 @media( max-width: 768px){
     .contactMail{
         display: none;
@@ -6,13 +11,15 @@
         justify-content: space-around;
     }
 }
+.container{
+    font-family: 'Animales'; }
 
 .contBackground{
     background-image: url('./assets/museum-corridor-4-1.jpg');
-    background-size: cover;
+    /* background-size: cover; */
     background-attachment: fixed;
-    height: auto;
-    width: 100vw;
+    height: 210vh;
+    width: auto;
     top: 0px;
     z-index: -1;
     background-repeat: no-repeat;
@@ -32,4 +39,11 @@
 .contContainer{
     position: relative;
     top: 6em;
+    /* margin-bottom: 300px; */
+}
+
+@media (max-width: 768px){
+    .contBackground{
+        height: 280px;
+    }
 }
