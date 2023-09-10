@@ -231,6 +231,7 @@
       left: -8.5%;
    }
 }
+
 .imgCompi {
    width: 280px;
    height: 300px;
@@ -254,7 +255,7 @@
 
    .imgFrame {
       position: absolute;
-      top: 6%;
+      top: 9%;
       left: auto;
    }
    .imgCompi {
@@ -372,4 +373,25 @@
 .grouplink{
    display:flex;
    /* flex-direction: row; */
+}
+@media (max-width: 450px)
+{
+   .mImgFrame{
+      width: 350px;
+      height: 322px;
+   }
+   .mImgCompi{
+      width: 284px;
+      height: 301px;
+   }
+}
+
+@media(max-width : 364px)
+{
+   .mImgFrame{
+      width: 300px;
+   }
+   .mImgCompi{
+      width: 249px;
+   }
 }

@@ -40,13 +40,21 @@
     background-repeat: no-repeat;
     background-image: url("./static/img/img8.jpg");
     animation: compi_loading_base 6s infinite ease-in;
+    /* background-position: fixed; */
 }
 
 .frame .tittle{
     position: absolute;
     bottom: 20px;
     width: min(100vh,100%);
+    z-index: auto;
     /* animation: compi_loading_tittle 6s infinite ease-in-out; */
+}
+@media(max-width: 768px)
+{
+    .frame .tittle{
+        bottom: 69px;   
+    }
 }
 
 .frame .svg{
@@ -80,7 +88,7 @@
     left: 0;
     width: 100%;
     height: 150px; /* Adjust the height of the gradient */
-    background: linear-gradient(to top,transparent, rgba(0, 0, 0, .6    ), rgba(0, 0, 0, 1));
+    background: linear-gradient(to top,transparent, rgba(0, 0, 0, .6 ), rgba(0, 0, 0, 1));
     pointer-events: none;
   }
 
@@ -90,7 +98,7 @@
     bottom: 50px;
     left: 0;
     width: 100%;
-    height: 50px; /* Adjust the height of the gradient */
+    /* height: 50px; Adjust the height of the gradient */
     background: linear-gradient(to top,rgba(0, 0, 0, 1), rgba(0, 0, 0, .6),transparent);
     pointer-events: none;
 }
