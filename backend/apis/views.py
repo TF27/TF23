@@ -142,6 +142,11 @@ def compi_reg_form(request):
         print(compi_reg_serializer)
         # print(compi_reg_serializer.is_valid())
         if compi_reg_serializer.is_valid():
+            email = compi_reg_serializer.validated_data.get('email')
+            compi = compi_reg_serializer.validated_data.get('compi')
+            if compi_reg.objects.filter(email=email, compi=compi).exists():
+                return JsonResponse({'error': 'A registration with this email for this compi already exists.'}, status=400)
+
             last_reg = compi_reg.objects.order_by('-tf_id').first()
             next_tf_id = '0269'
             if last_reg:

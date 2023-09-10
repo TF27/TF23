@@ -33,7 +33,7 @@ const CustomPopup = (props) => {
 };
 
 CustomPopup.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   show: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired
 };

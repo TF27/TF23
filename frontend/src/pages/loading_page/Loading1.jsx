@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './loading.module.css';
-import side from '../Home/images/cloudL.png';
+import side from './img/gate.png';
 import tf from '../../components/Navbar/tflogo.png';
 
 const Loading1 = () => {
