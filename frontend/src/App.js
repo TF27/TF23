@@ -19,7 +19,6 @@ import Legals from './pages/AboutUs/legals/Legals';
 import SingleParti from './pages/Compi/Compi_Internal/Teams/single_parti';
 import AddParti from './pages/Compi/Compi_Internal/Teams/add_parti';
 import Footer from './components/Footer/Footer';
-import Loading from './pages/loading_page/Loading';
 import Loading1 from './pages/loading_page/Loading1'
 
 // const Home= React.lazy(() => import('./pages/Home/home'));
