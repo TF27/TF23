@@ -209,22 +209,22 @@ const Header = () => {
             <li onClick={showMenu}>
               <Link to="/exhibitions">Exhibitions</Link>
             </li>
-            <li>
+            <li onClick={showMenu}>
               <Link to="/history">History</Link>
             </li>
-            <li>
+            <li onClick={showMenu}>
               <Link to="/aboutus/media">Media</Link>
             </li>
-            <li>
+            <li onClick={showMenu}>
               <Link to="/gallery">Gallery</Link>
             </li>
-            <li>
+            <li onClick={showMenu}>
               <Link to="/recognition">Recognition</Link>
             </li>
-            <li>
+            <li onClick={showMenu}>
               <Link to="/legals">Legals</Link>
             </li>
-            <li>
+            <li onClick={showMenu}>
               <Link to="/contactus" >Contact Us</Link>
             </li>
             <li>
