@@ -6,7 +6,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import './gallery_base.css';
 import { Link } from 'react-router-dom';
 
-const Gal_base = ({ i1, i2, i3, i4, i5 }) => {
+const Gal_base = ({ i1, i2, i3, i4, i5,i6,i7,i8,i9,i10,txt1 }) => {
   const [current, setCurrent] = useState(2);
   const [prev2, setPrev2] = useState(0);
   const [prev, setPrev] = useState(1);
@@ -40,13 +40,13 @@ const Gal_base = ({ i1, i2, i3, i4, i5 }) => {
 
   const gotoPrev = () => {
     clearInterval(intervalId); // Stop auto-sliding during manual control
-    const newPrev = current > 0 ? current - 1 : 4;
+    const newPrev = current > 0 ? current - 1 : 9;
     gotoNum(newPrev);
   };
 
   const gotoNext = () => {
     clearInterval(intervalId); // Stop auto-sliding during manual control
-    const newNext = current < 4 ? current + 1 : 0;
+    const newNext = current < 9 ? current + 1 : 0;
     gotoNum(newNext);
   };
 
@@ -58,26 +58,26 @@ const Gal_base = ({ i1, i2, i3, i4, i5 }) => {
     let newNext2 = newCurrent + 2;
 
     if (newPrev2 === -2) {
-      newPrev2 = 3;
+      newPrev2 = 8;
     }
 
     if (newPrev2 === -1) {
-      newPrev2 = 4;
+      newPrev2 = 9;
     }
 
     if (newPrev === -1) {
-      newPrev = 4;
+      newPrev = 9;
     }
 
-    if (newNext === 5) {
+    if (newNext === 10) {
       newNext = 0;
     }
 
-    if (newNext2 === 5) {
+    if (newNext2 === 10) {
       newNext2 = 0;
     }
 
-    if (newNext2 === 6) {
+    if (newNext2 === 11) {
       newNext2 = 1;
     }
 
@@ -106,6 +106,7 @@ const Gal_base = ({ i1, i2, i3, i4, i5 }) => {
       <div className="slides" ref={slidesRef}>
         <div className="slide prev2">
           <img src={i1} className="Glimpse" alt="Technoholix stage, Techfest IIT Bombay Asia's Largest Science and Technology Festival" />
+          <h1>{txt1}</h1>
         </div>
         <div className="slide prev">
           <img src={i2} className="Glimpse" alt="His Holiness The 14th Dalai Lama at Techfest IIT Bombay" />
@@ -119,6 +120,21 @@ const Gal_base = ({ i1, i2, i3, i4, i5 }) => {
         <div className="slide next2">
           <img src={i5} className="Glimpse" alt="International Robowars arena Techfest IIT Bombay with audience" />
         </div>
+        <div className="slide prev2">
+          <img src={i6} className="Glimpse" alt="Technoholix stage, Techfest IIT Bombay Asia's Largest Science and Technology Festival" />
+        </div>
+        <div className="slide prev">
+          <img src={i7} className="Glimpse" alt="His Holiness The 14th Dalai Lama at Techfest IIT Bombay" />
+        </div>
+        <div className="slide active">
+          <img src={i8} className="Glimpse" alt="Guinness book of world record by Techfest IIT Bombay most LED lights lit Students holding lights" />
+        </div>
+        <div className="slide next">
+          <img src={i9} className="Glimpse" alt="handling drone at Techfest IIT Bombay platform for Science and Technology enthusiasts" />
+        </div>
+        <div className="slide next2">
+          <img src={i10} className="Glimpse" alt="International Robowars arena Techfest IIT Bombay with audience" />
+        </div>
       </div>
       <div className="button-container">
         <div className="button" onClick={gotoPrev}><img src={left} alt="left" className="left"/></div>
@@ -126,7 +142,7 @@ const Gal_base = ({ i1, i2, i3, i4, i5 }) => {
       </div>
       <Link className="back-button" to="/gallery"><img src={back} alt="right" /></Link>
       <div className="page-indicators">
-        {Array.from({ length: '5' }).map((_, index) => (
+        {Array.from({ length: '10' }).map((_, index) => (
           <div
             key={index}
             className={`page-indicator ${index === current ? 'active' : ''}`}
