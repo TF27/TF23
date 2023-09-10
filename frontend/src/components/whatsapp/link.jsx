@@ -12,3 +12,4 @@ function Whatsapplink({walink, dslink}){
 }
 
 export default Whatsapplink;
+
