@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
+import whatsapplink from '../../../../components/whatsapp/link';
 
 const HackAI = () => {
 
@@ -107,6 +108,7 @@ const HackAI = () => {
       }
 
     return (
+      <div>
         <div className={styles.mWholeData}>
             <div>
                 <div onClick={() => handleClickOpen('About')} className={`${styles.whatu} ${open === 'About' ? styles.whatuOpen : ''}`}>
@@ -203,6 +205,10 @@ const HackAI = () => {
                 </div>
             </div>
         </div>
+        <div className={styles.grouplink}>
+        <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
+      </div>
+      </div>
     );
 }
 

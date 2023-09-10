@@ -15,7 +15,7 @@ import HackAI from './Competitions/HackAI';
 import Codecode from './Competitions/Codecode';
 import TechAid from './Competitions/TechAid';
 import JoinTeam from './Teams/joinTeam';
-import Machanzo from './Competitions/machanzo';
+import Machanzo from './Competitions/mechanzo';
 import TechfestOlympiad from './Competitions/TechfestOlympiad';
 import UrbanFuturism from './Competitions/UrbanFuturism'
 import SingleParti from './Teams/single_parti';
@@ -70,7 +70,7 @@ const Internal = () => {
           <h3 className={styles.compi_prize}> INR {data.prize} PRIZE</h3>
           <div className={styles.statement}>
             <div className={styles.stat_rect1}></div>
-            <div className={styles.stat_rect2}><a href={ProblemStatements} target='_blank' rel='noopener noreferrer'>Problem Statement</a></div>
+            <div className={styles.stat_rect2}><a href={data.statement} target='_blank' rel='noopener noreferrer'>Problem Statement</a></div>
           </div>
         </div>
         <div className={`col-12 col-lg-8 ${styles.rightdata}`}>
@@ -81,7 +81,7 @@ const Internal = () => {
           {compiName === 'cozmoclench' && <CozmoClench />}
           {compiName === 'meshmerize' && <Meshmerize />}
           {compiName === 'mechanzo league' && <Machanzo />}
-          {compiName === 'hackai' && <HackAI/>}
+          {compiName === 'hack-aI' && <HackAI/>}
           {compiName === 'techfest olympiad' && <TechfestOlympiad />}
           {compiName === 'codecode' && <Codecode />}
           {compiName === 'tech aid' && <TechAid />}
