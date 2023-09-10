@@ -54,8 +54,10 @@ const Exhibition =()=>{
     return(
         <div style={{height:'120vh'}}>
           <div className={parallax.exhiImage}>
-              <img src={exhi_image} alt="Exhibition" />
+              <img src={exhi_image} alt="Exhibition"/>
             </div>
+           
+
             <ImageOne/>
            <div className={parallax.exhi}>
            <div className={parallax.blackGradienttop}/>  

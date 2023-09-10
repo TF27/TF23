@@ -15,7 +15,7 @@ import HackAI from './Competitions/HackAI';
 import Codecode from './Competitions/Codecode';
 import TechAid from './Competitions/TechAid';
 import JoinTeam from './Teams/joinTeam';
-import Mechanzo from './Competitions/Mechanzo';
+import Mechanzo from './Competitions/mechanzo';
 import TechfestOlympiad from './Competitions/TechfestOlympiad';
 import UrbanFuturism from './Competitions/UrbanFuturism'
 import SingleParti from './Teams/single_parti';

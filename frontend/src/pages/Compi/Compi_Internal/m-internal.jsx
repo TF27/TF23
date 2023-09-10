@@ -18,7 +18,7 @@ import TechfestOlympiad from './Competitions/m-TechfestOlympiad';
 import Codecode from './Competitions/m-codecode';
 import UrbanFuturism from './Competitions/m-UrbanFuturism';
 import TechAid from './Competitions/m-TechAid';
-import Mechanzo from './Competitions/m-Mechanzo';
+import Mechanzo from './Competitions/m-mechanzo';
 
 
 const MInternal = () => {
