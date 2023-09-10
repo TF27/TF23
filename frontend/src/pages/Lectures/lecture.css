@@ -57,3 +57,29 @@
 .difPage{
     margin-top: 10pt;
 }
+/* .leftContactbox{
+    text-align: left;
+    margin-left: 300pt;
+    font-size:large;
+    margin-top: 45pt;
+} */
+/* .RightContactbox{
+    text-align: right;
+    margin-right: 300pt;
+    font-size: large;
+    margin-top: -65pt;
+} */
+.Contactbox{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /*width: 80%; */
+    /* border-width: 2px ; */
+    /* border-color: white; */
+    border-radius: 5px;
+    margin-top: 15pt;
+    border:2px solid #fff ;
+    margin-left:15vw;
+    margin-right: 15vw;
+    font-size:1.2em
+  }
