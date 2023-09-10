@@ -112,15 +112,24 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+  .headU {
+    width: 100%;
+    height:auto;
+    max-width: 100vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+  }
 
-.headU {
+@media (max-width:848px) {
+.headU img {
   width: 100%;
-  max-width: 100vw;
-  position: absolute;
+  height:auto;
   display: flex;
   justify-content: center;
-}
 
+}
+}
 .clouds {
   position: fixed;
   height: 100vh;
