@@ -132,7 +132,7 @@ const coordidata = [
     department: "Publicity Manager",
     name: "Varun Gupta",
     email: "varun@techfest.org",
-    phone: "9011909408"
+    phone: "8655015054"
   },
   {
     department: "Web Manager",

@@ -40,9 +40,9 @@ const HomeParallax = () => {
                 <img src={rocks} className={styles.rockUp}/>
                
             </div> */}
-      <div className="headU" >
-        {/* <img src={head} className={styles.head} /> */}
-        {/* <img src={headm} className={styles.headm}/> */}
+      <div className={styles.headU} >
+        <img src={head} className={styles.head} />
+        <img src={headm} className={styles.headm}/>
       </div>
       <div className={styles.clouds}>
         <img
