@@ -126,10 +126,12 @@ const Internal = () => {
                 </div>
                 </div>
               ) : (
-                <div className={styles.int_reg}>
-                  <div className={styles.reg_rect1}></div>
-                  <div className={styles.reg_rect2}>
-                    <Link to={`register`}>Register</Link>
+                <div>
+                  <div className={styles.int_reg}>
+                    <div className={styles.reg_rect1}></div>
+                    <div className={styles.reg_rect2}>
+                      <Link to={`register`}>Register</Link>
+                    </div>
                   </div>
                 </div>
               )}
