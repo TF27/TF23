@@ -30,3 +30,8 @@
     height: 100vh;
     width: 100vw;
 }
+
+.badaKaro{
+    transform: scale(1.3);
+    transition: transform 1s linear;
+}

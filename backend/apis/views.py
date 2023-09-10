@@ -406,7 +406,8 @@ def delete_team(request):
         message = f'The Team has been successfully dissolved with team id {team_id} and with the team leader name ({team.team_leader_name}) and his mail id {team.team_leader_email}. You can check our website for exploring other competitions.'
         send_mailer = 'noreply@techfest.org'
         recipient = [team.team_leader_email, team.parti1_email, team.parti2_email, team.parti3_email]
-        send_mass_mail(subject, message, send_mailer, recipient)
+        recipient = [email for email in recipient if email is not None]
+        send_mail(subject, message, send_mailer, recipient)
         team.delete()
         return JsonResponse({'success': True, 'message': 'Team deleted successfully'})
 
