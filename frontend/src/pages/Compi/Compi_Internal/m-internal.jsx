@@ -12,7 +12,7 @@ import frame from './../static/card/Frame.png';
 import WhatsappShareButton from '../../../components/share/whatsapp';
 
 import Meshmerize from './Competitions/m-meshmerize';
-import Machanzo from './Competitions/m-machanzo';
+import Machanzo from './Competitions/m-mechanzo';
 import HackAI from './Competitions/m-HackAI';
 import CozmoClench from './Competitions/m-CozmoClench';
 import TechfestOlympiad from './Competitions/m-TechfestOlympiad';
@@ -126,12 +126,12 @@ const MInternal = () => {
           </div>
           <div className={styles.statement}>
             <div className={styles.stat_rect1}></div>
-            <div className={styles.stat_rect2}><a href={ProblemStatements} target='_blank' rel='noopener noreferrer'>Problem Statement</a></div>
+            <div className={styles.stat_rect2}><a href={data.statement} target='_blank' rel='noopener noreferrer'>Problem Statement</a></div>
           </div>
         </div>
           {compiName === 'meshmerize' && <Meshmerize />}
           {compiName === 'mechanzo league' && <Machanzo />}
-          {compiName === 'hackai' && <HackAI/>}
+          {compiName === 'hack-aI' && <HackAI/>}
           {compiName === 'cozmoclench' && <CozmoClench/>}
           {compiName === 'techfest olympiad' && <TechfestOlympiad/>}
           {compiName === 'codecode' && <Codecode/>}
