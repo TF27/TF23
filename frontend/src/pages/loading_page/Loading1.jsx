@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './loading.module.css';
 import side from './img/gate.png';
-import tf from '../../components/Navbar/tflogo.png';
+import tf from './img/tfLoogo.png';
 
 const Loading1 = () => {
   const [moveToSide, setMoveToSide] = useState(false);
@@ -18,6 +18,17 @@ const Loading1 = () => {
     };
   }, []);
 
+  const [badaHai, setBadaHai] = useState(false);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setBadaHai(true);
+    }, 1000);
+    return () => {
+      clearTimeout(timeoutId);
+    }
+  }, [])
+
   return (
     <div className={styles.loading}>
       <img
@@ -25,8 +36,8 @@ const Loading1 = () => {
         alt='Gate'
         className={`${styles.sideL} ${moveToSide && styles.moveLeft}`}
       />
-      <img src={tf} alt='Techfest' className={styles.tf} />
-      
+      <img src={tf} alt='Techfest' className={`${styles.tf} ${badaHai && styles.badaKaro}`} />
+        
       <img
         src={side}
         alt='Gate'

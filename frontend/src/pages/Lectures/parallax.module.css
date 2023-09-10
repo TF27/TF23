@@ -32,6 +32,7 @@
   background-repeat: no-repeat;
   background-position-y:30%;
   background-position-x: center;
+  height: 100vh;
 }
 
 .layer3 {
@@ -110,6 +111,10 @@
     background: linear-gradient(to top,transparent, rgba(0, 0, 0, .6    ), rgba(0, 0, 0, 1));
     pointer-events: none;
   }
+
+.notify{
+  z-index: 1000;
+}
 
   
   

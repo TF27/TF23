@@ -10,6 +10,15 @@
     background-size: cover;
 
 }
+.gap{
+    margin-top: 200px;
+    margin-bottom: 0px;
+}
+@media(max-width:748px){
+    .gap{
+        margin-top: 70px;
+    }
+}
 
 .frame{
     background-color: black;
