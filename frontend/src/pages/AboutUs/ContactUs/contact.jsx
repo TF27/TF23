@@ -1,17 +1,18 @@
 import React from 'react';
 import './contact.css';
+import Animales from '../ContactUs/assets/Animales Fantastic.otf';
 const coordidata = [
   {
     department: "Overall Coordinator",
     name: "Shobhit Aggarwal",
     email: "shobhit@techfest.org",
-    phone: "-"
+    phone: "9780151043"
   },
   {
     department: "Overall Coordinator",
     name: "Pavithra Pilli",
     email: "pavithra@techfest.org",
-    phone: "-"
+    phone: "9892571526"
   },
   {
     department: "Competitions Manager",
@@ -131,7 +132,7 @@ const coordidata = [
     department: "Publicity Manager",
     name: "Varun Gupta",
     email: "varun@techfest.org",
-    phone: "9011909408"
+    phone: "8655015054"
   },
   {
     department: "Web Manager",
@@ -144,15 +145,12 @@ const coordidata = [
 
 const Contact = () => {
   return (
-    <div>
-      <nav>
-        {/* Include your navigation component here */}
-      </nav>
+    <div className='contBackground'>
 
-      <div className="container" style={{ marginTop: '8rem', marginBottom:'10rem'}}>
-        <p className="text-center" style={{ fontSize: '10vw', fontWeight: '1000' }}>
+      <div className="container contContainer">
+        <h1 className="text-center" style={{ fontSize: '7vw', fontFamily: 'Forum',fontFamily:'Animales'}}>
           Contact Us
-        </p>
+        </h1>
 
         <div className='mainContactUs'>
           <div className="row label justify-content-space-between" style={{ marginTop: '5vh', marginBottom: '1.5vw' }}>
@@ -168,7 +166,7 @@ const Contact = () => {
            style={{
              border: '1px solid white',
              borderRadius: '10px',
-            //  padding: '10px',
+             // padding: '10px',
              marginBottom: '1rem',
              backgroundColor: 'transparent',
              transition: 'background-color 0.3s ease', // Add transition for smooth effect

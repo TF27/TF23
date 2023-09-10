@@ -19,6 +19,7 @@ import Mechanzo from './Competitions/mechanzo';
 import TechfestOlympiad from './Competitions/TechfestOlympiad';
 import UrbanFuturism from './Competitions/UrbanFuturism'
 import SingleParti from './Teams/single_parti';
+import AddParti from "./Teams/add_parti";
 
 
 
@@ -92,7 +93,7 @@ const Internal = () => {
               <div>
               <div className={styles.compi_team}>
                 <div className={styles.single_team}>
-                  <SingleParti />
+                  <AddParti />
                 </div>
                 <DissolveTeam />
               </div>
@@ -125,7 +126,7 @@ const Internal = () => {
                   </div>
                 </div>
                 </div>
-              ) : (
+              ) : user ? (
                 <div>
                   <div className={styles.int_reg}>
                     <div className={styles.reg_rect1}></div>
@@ -134,6 +135,15 @@ const Internal = () => {
                     </div>
                   </div>
                 </div>
+              ) : (
+                <div>
+                <div className={styles.int_reg} onClick={handleGoogleSignIn}>
+                  <div className={styles.reg_rect1}></div>
+                  <div className={styles.reg_rect2}>
+                    <Link to={`register`}>Register</Link>
+                  </div>
+                </div>
+              </div>
               )}
           </div>
         </div>

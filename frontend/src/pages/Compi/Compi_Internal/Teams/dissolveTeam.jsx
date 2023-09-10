@@ -34,7 +34,7 @@ const DissolveTeam = () => {
     axios
       .delete('/api/delete_team/', { data, ...config })
       .then((response) => {
-        console.log(response.data);
+        alert('Dissolved succesfully!!');
         navigate(`/competitions/${compiName}`);
       })
       .catch((error) => {

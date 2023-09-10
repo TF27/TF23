@@ -1,6 +1,7 @@
 .parallaxcontainer {
   position: relative;
   height: 100%;
+  width:100%;
   top: -5rem;
 }
   
@@ -24,12 +25,14 @@
 }
 
 .layer2 {
-  background-image: url('./assets/back1.jpg');
+  background-image: url('./assets/exhi.png');
   opacity: 1;
-  z-index: -1;
-  background-size: 100%;
+  z-index: 0;
+  background-size: 60%;
   background-repeat: no-repeat;
-  background-position-y:10%;
+  background-position-x:50%;
+
+  height: 130vh;
 }
 
 .layer3 {
@@ -54,14 +57,19 @@
   background-attachment: fixed;
   top: -13vh;
   background-repeat: no-repeat; 
-}
-@media(max-width:748px){
-  .layer3{
-    background-size: 100%;
-    background-position-x: center;
-  }
+  opacity: 0.8 ;
 }
 
+@media(max-width:748px){
+  .layer3{
+    background-size: auto 100vh;
+  }
+
+  .layer2 {
+    background-size: 110%;
+    background-position-y: 20%;
+  }  
+}
 
 .blackGradientbottom::after{
   content: '';
@@ -84,6 +92,16 @@
   height: 100px; /* Adjust the height of the gradient */
   background: linear-gradient(to top,transparent, rgba(0, 0, 0, .7),rgba(0, 0, 0, .9), rgba(0, 0, 0, 1));
   pointer-events: none;
+}
+
+@media screen and (max-width: 934px) {
+  .blackGradienttop:after{
+    top: -60px;
+    height: 100px;
+  }
+  .blackGradientbottom:after{
+    display: none;
+  }
 }
 
 .exhiImage{

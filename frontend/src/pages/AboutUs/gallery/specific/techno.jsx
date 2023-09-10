@@ -15,7 +15,7 @@ import React from 'react'
 function Techno_gal() {
   return (
     <Gal_base
-        i1={img1}
+        i1={img1} 
         i2={img2}
         i3={img3}
         i4={img4}
