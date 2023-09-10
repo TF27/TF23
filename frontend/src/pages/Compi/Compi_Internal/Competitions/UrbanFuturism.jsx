@@ -187,9 +187,9 @@ const UrbanFuturism = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Abhishek Kedare<br/>
-              +91 75585 88254<br/>
-              abhishek@techfest.org
+              Chirag Rao<br/>
+              +91 82871 75335<br/>
+              chirag@techfest.org
               </div>
             </div>
           </div>

@@ -28,7 +28,7 @@ const Compi = React.lazy(() => import('./pages/Compi/compi'));
 const Exhibition = React.lazy(() => import('./pages/Exhibition/exhi'));
 const Media = React.lazy(() => import('./pages/AboutUs/Media/index'));
 const HISTORY = React.lazy(() => import('./pages/AboutUs/history/index'));
-const Gallery = React.lazy(()=> import('./pages/AboutUs/gallery/gallery'));
+const Gallery = React.lazy(()=> import('./pages/AboutUs/gallery/index'));
 const Lecture_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/lecture'));
 const Exhibition_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/exhibiton'));
 const Ozone_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/ozone'));

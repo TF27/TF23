@@ -58,11 +58,11 @@ const Lectures = () => {
         <div>{isMobile ? <MapClick /> : <WorldMap />}</div>
         <OurReach />
         <div className="checkThis">
-          <h1 style={{ marginTop: "100px", marginBottom: "40px" }}>
+          <h1 style={{ marginTop: "10px", marginBottom: "40px" }}>
             CHECK THIS OUT
           </h1>
           <div>
-            <h2 style={{ marginBottom: "-10px" }}>Competitions</h2>
+            <h2 style={{ marginBottom: "0px" }}>Competitions</h2>
             <Carousel
               i1={c1}
               i2={c2}
@@ -85,7 +85,7 @@ const Lectures = () => {
             </div>
           </div>
           <div>
-            <h2 style={{ marginTop: "40px", marginBottom: "-10px" }}>
+            <h2 style={{ marginTop: "40px", marginBottom: "0px" }}>
               Exhibitions
             </h2>
             <Carousel
@@ -112,7 +112,7 @@ const Lectures = () => {
         
 
          <div className="contactus">
-          <h1 style={{ marginTop: "100px", marginBottom: "40px"}}>CONTACT US</h1>
+          <h1 style={{ marginTop: "60px", marginBottom: "40px"}}>CONTACT US</h1>
 
 
           {/* <div className="tray">

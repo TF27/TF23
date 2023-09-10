@@ -2,7 +2,7 @@ import React, { Component, link } from 'react'
 import "./gallery.css"
 import { Link, useNavigate } from 'react-router-dom';
 
-export class Gallery extends Component {
+export class WGallery extends Component {
 
   render() {
     return (
@@ -31,4 +31,4 @@ export class Gallery extends Component {
   }
 }
 
-export default Gallery
+export default WGallery

@@ -46,3 +46,52 @@
 .gal-main .nav-link{
     opacity: 0;
 }
+
+
+.gal-mob{
+    position: fixed;
+    /* top: 7rem; */
+    left: 0;
+    width: 100%;
+    height: calc(100vh);
+
+    background-image: url(../../../assets/gallery/bg_m.jpg);
+    background-position: cover;
+    background-size: 100% 100%;    
+}
+
+.gal-mob .gal-text{
+    position: fixed;
+    font-size: 200%;
+    /* size: 100px; */
+}
+
+.gal-mob :nth-child(1){
+    left: 10%;
+    top: calc(62%);
+    /* opacity: 0;  */
+}
+.gal-mob :nth-child(2){
+    right: 10%;
+    top: calc(38%);
+}
+.gal-mob :nth-child(3){
+    left: 10.6%;
+    top: calc(49% );
+}
+.gal-mob :nth-child(4){
+    left: 10%;
+    top: calc(38%);
+}
+.gal-mob :nth-child(5){
+    right: 5%;
+    top: calc(61%);
+}
+.gal-mob :nth-child(6){
+    right: 7%;
+    top: calc(48.5%);
+}
+
+.gal-mob .nav-link{
+    opacity: 0;
+}
