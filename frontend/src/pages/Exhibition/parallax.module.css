@@ -56,8 +56,8 @@
   background-repeat: no-repeat; 
 }
 @media(max-width:748px){
-  .layer2{
-    background-size: 140%;
+  .layer3{
+    background-size: 100%;
     background-position-x: center;
   }
 }

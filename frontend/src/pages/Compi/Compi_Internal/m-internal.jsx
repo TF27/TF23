@@ -12,13 +12,13 @@ import frame from './../static/card/Frame.png';
 import WhatsappShareButton from '../../../components/share/whatsapp';
 
 import Meshmerize from './Competitions/m-meshmerize';
-import Machanzo from './Competitions/m-machanzo';
 import HackAI from './Competitions/m-HackAI';
 import CozmoClench from './Competitions/m-CozmoClench';
 import TechfestOlympiad from './Competitions/m-TechfestOlympiad';
 import Codecode from './Competitions/m-codecode';
-import UrbanFuturism from './Competitions/UrbanFuturism';
-import TechAid from './Competitions/TechAid';
+import UrbanFuturism from './Competitions/m-UrbanFuturism';
+import TechAid from './Competitions/m-TechAid';
+import Mechanzo from './Competitions/m-Mechanzo';
 
 
 const MInternal = () => {
@@ -126,17 +126,17 @@ const MInternal = () => {
           </div>
           <div className={styles.statement}>
             <div className={styles.stat_rect1}></div>
-            <div className={styles.stat_rect2}><a href={ProblemStatements} target='_blank' rel='noopener noreferrer'>Problem Statement</a></div>
+            <div className={styles.stat_rect2}><a href={data.statement} target='_blank' rel='noopener noreferrer'>Problem Statement</a></div>
           </div>
         </div>
           {compiName === 'meshmerize' && <Meshmerize />}
-          {compiName === 'mechanzo league' && <Machanzo />}
-          {compiName === 'hackai' && <HackAI/>}
+          {compiName === 'mechanzo-league' && <Mechanzo />}
+          {compiName === 'hack-aI' && <HackAI/>}
           {compiName === 'cozmoclench' && <CozmoClench/>}
           {compiName === 'techfest olympiad' && <TechfestOlympiad/>}
           {compiName === 'codecode' && <Codecode/>}
-          {compiName === 'urban furturism' && <UrbanFuturism/>}
-          {compiName === 'tech aid' && <TechAid/>}
+          {compiName === 'urban-furturism' && <UrbanFuturism/>}
+          {compiName === 'tech-aid' && <TechAid/>}
       </div>
     ));
   }

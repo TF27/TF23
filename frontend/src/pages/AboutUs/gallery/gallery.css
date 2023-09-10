@@ -42,3 +42,7 @@
     left: 84.3%;
     top: calc(36%);
 }
+
+.gal-main .nav-link{
+    opacity: 0;
+}

@@ -4,7 +4,7 @@ import Faq from 'react-faq-component';
 import './x.css';
 import whatsapplink from '../../../../components/whatsapp/link';
 
-const Machanzo = () => {
+const Mechanzo = () => {
     const [activeCity, setActiveCity] = useState('About');
     const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {
@@ -190,4 +190,4 @@ const Machanzo = () => {
      );
 }
  
-export default Machanzo;
+export default Mechanzo;
