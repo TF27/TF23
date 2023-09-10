@@ -35,8 +35,6 @@ import c10 from '../../pages/Compi/assets/c10.jpg';
 
 import exhi_image from './assets/exhi.png'
 
-import exhi_image from './assets/exhi.png'
-
 const Exhibition =()=> {
 
     const [isMobile, setIsMobile] = useState(false);
@@ -66,9 +64,61 @@ const Exhibition =()=> {
             <Notify/>
             <div>{isMobile ? <MapClick /> : <WorldMap />}</div>
             <OurReach />
+            <div className="checkThis">
+          <h1 style={{ marginTop: "100px", marginBottom: "40px" }}>
+            CHECK THIS OUT
+          </h1>
+          <div>
+            <h2 style={{ marginBottom: "-10px" }}>Competitions</h2>
+            <Carousel
+              i1={c1}
+              i2={c2}
+              i3={c3}
+              i4={c4}
+              i5={c5}
+              i8={c6}
+              i6={c7}
+              i7={c8}
+              i9={c9}
+              i10={c10}
+            />
+            
+            <div className="difPage">
+              <div className="check_rect1"></div>
+              <div className="check_rect2">
+                <Link to="/competitions">Explore</Link>
+              </div>
+              <br /><br /><br /><br /><br /><br /><br /><br />
+            </div>
+          </div>
+          <div>
+            <h2 style={{ marginTop: "0px", marginBottom: "-10px" }}>
+              Lectures
+            </h2>
+            <Carousel
+              i1={im1}
+              i2={im2}
+              i3={im3}
+              i4={im4}
+              i5={im5}
+              i8={im6}
+              i6={im7}
+              i7={im8}
+              i9={im9}
+              i10={im10}
+            />
+            <div className="difPage">
+              <div className="check_rect1"></div>
+              <div className="check_rect2">
+                <Link to="/lectures">Explore</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
          
         <div className="contactus">
-          <h1 style={{ marginTop: "-100px", marginBottom: "40px"}}>CONTACT US</h1>
+          <h1 style={{ marginTop: "80px", marginBottom: "40px"}}>CONTACT US</h1>
           {/* <div className="tray">
 
             <div>
