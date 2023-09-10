@@ -354,19 +354,19 @@ const Technorion = () => {
          </div>
          <div className="technorion_cards">
             <div className="container" style={{ maxWidth: "90%" }}>
-               <div className="row">{card()} {markiCompi()} {ideatesCard()}</div>
+               <div className="row">{card()} {markiCompi()}</div>
             </div>
          </div>
          {/* <div className="technorion_cards">
             <div className="container" style={{ maxWidth: "90%" }}>
                <div className="row">{markiCompi()}</div>
             </div>
-         </div>
+         </div> */}
          <div className="technorion_cards">
             <div className="container" style={{ maxWidth: "90%" }}>
                <div className="row">{ideatesCard()}</div>
             </div>
-         </div> */}
+         </div>
       </div>
    );
 };
