@@ -130,11 +130,16 @@ import n17 from "./media/2022/17.jpg"
 import n18 from "./media/2022/18.jpg"
 import n19 from "./media/2022/19.jpg"
 import n20 from "./media/2022/20.jpg"
+import n21 from "./media/2022/21.png"
+import n22 from "./media/2022/22.png"
 
 import "./stars.css"
 
 const Media = () => {
     const iframeSources = [
+        "https://www.youtube.com/embed/ZhY6tKMR-yE?si=ebxXQE0gwVMjxrqe",
+        "https://www.youtube.com/embed/Azg7qOAvLwA?si=XxJ4ehip9yHSs8Xe",
+        "https://www.youtube.com/embed/-DPF8Hx6haw?si=yAt7Avq5TAYLuolR",
         "https://www.youtube.com/embed/4alBMIq2LXw",
         "https://www.youtube.com/embed/As-AE4aSwKk",
         "https://www.youtube.com/embed/ZEbs-RwVguw",
@@ -441,6 +446,13 @@ const Media = () => {
 
                 </div>
                 <div class="col-md-3">
+                <div class="card" style={{width:"100%"}} title="Click here to read the full article">
+                        <a class="image-popup" href={n2}><img class="card-img-top" src={n2} alt="Card image" style={{width:"100%"}}/></a>
+                        <div class="card-body">
+                            <img src={i67} alt="" style={{maxHeight: " 40px"}}/>
+                            {/*						<h4 class="card-title" style={{margin-bottom: 0px;">Indian Express</h4>*/}
+                        </div>
+                    </div>
                     <div class="card" style={{width:"100%"}} title="Click here to read the full article">
                         <a class="image-popup" href={i66}><img class="card-img-top" src={i66} alt="Card image" style={{width:"100%"}}/></a>
                         <div class="card-body">
@@ -536,7 +548,7 @@ const Media = () => {
                 </div>
                 <div class="col-md-3">  
                     <div class="card" style={{width: "100%", overflow: "hidden"}} title="Click here to read the full article">
-                        <a class="image-popup"  href={""} ><img class="card-img-top" src={""} alt="Card image" style={{width: "100%", position: "relative", right: "0.5rem"}}/></a>
+                        <a class="image-popup"  href={n1} ><img class="card-img-top" src={n1} alt="Card image" style={{width: "100%", position: "relative", right: "0.5rem"}}/></a>
                         <div class="card-body">
                             <img src={i88} alt="" style={{maxHeight: "50px"}}/>
                             {/*						<h4 class="card-title" style={{margin-bottom: 0px;"> India Education Diary</h4>*/}

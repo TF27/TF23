@@ -61,3 +61,16 @@
 .difPage{
     margin-top: 10pt;
 }
+.Contactbox{
+display: flex;
+justify-content: space-around;
+flex-basis: 1.2em;
+border:3px solid white;
+margin-right: 7vw;
+margin-left: 7vw;
+width: auto;
+font-size: large;
+border-radius: 10px;
+height: 100pt;
+align-items: center;
+}

@@ -52,7 +52,8 @@
   z-index: -1;
   background-attachment: fixed;
   top: -18vh;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat; 
+  background-position: center;
 }
 .xyz{
   display: inline-block;
@@ -85,6 +86,18 @@
   background: linear-gradient(to top,rgba(0, 0, 0, 1), rgba(0, 0, 0, .6),transparent);
   pointer-events: none;
   z-index: 1000;
+}
+
+@media screen and (max-width: 934px) {
+  .blackGradientbottom::after{
+    bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .blackGradientbottom::after{
+    bottom: 100px;
+  }
 }
 
 .blackGradienttop::after{
