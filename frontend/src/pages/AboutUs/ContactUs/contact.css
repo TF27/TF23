@@ -7,15 +7,16 @@
     }
 }
 
-.background{
-    background-image: url('./assets/bg.png');
+.contBackground{
+    background-image: url('./assets/museum-corridor-4-1.jpg');
     background-size: cover;
-    position:fixed;
-    height: 100vh;
+    background-attachment: fixed;
+    height: auto;
     width: 100vw;
     top: 0px;
     z-index: -1;
-    overflow-y: scroll;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* .contactNum{
@@ -26,4 +27,9 @@
 
 .contactMail:hover ,.contactNum:hover{
     cursor: pointer;
+}
+
+.contContainer{
+    position: relative;
+    top: 6em;
 }

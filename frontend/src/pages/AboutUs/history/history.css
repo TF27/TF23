@@ -84,7 +84,7 @@
   position: absolute;
   z-index: 10; /* Set a high z-index to make it appear above other content */
   /* You can adjust the positioning as needed */
-  top: 0;
+  top: 0%;
   left: 0;
   display: flex;
   height:100vh;
