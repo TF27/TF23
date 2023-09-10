@@ -173,9 +173,7 @@ const Create_Team = () => {
 
                 <div className={`row ${styles.multiWrapper}`}>
                 <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label className={`${styles.floatingLabel1} ${styles.formLabel}`}>
-                    Participant 3 Name:
-                    </label>
+                    <label className={`${styles.floatingLabel1} ${styles.formLabel}`}>Participant 3 Name:</label>
                     <input 
                         type="text" 
                         name="parti3_name" 

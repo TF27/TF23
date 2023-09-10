@@ -320,13 +320,13 @@ const Technorion = () => {
                         <th>DATE</th>
                      </tr>
                      <tr>
-                        <td>Indian Institute of Technology Bombay</td>
+                        <td>Indian Institute of Technology</td>
                         <td>Mumbai</td>
                         <td>08/10/23</td>
                      </tr>
 
                      <tr>
-                        <td>School of Research and Technology, People's University</td>
+                        <td>School of Research and Technology</td>
                         <td>Bhopal</td>
                         <td>15/10/23</td>
                      </tr>
