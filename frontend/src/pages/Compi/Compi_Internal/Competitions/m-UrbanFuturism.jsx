@@ -108,8 +108,10 @@ const UrbanFuturism = () => {
       }
 
     return (
-      <div>
         <div className={styles.mWholeData}>
+            <div className={styles.grouplink}>
+            <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
+            </div>
             <div>
                 <div onClick={() => handleClickOpen('About')} className={`${styles.whatu} ${open === 'About' ? styles.whatuOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatu_rect1}`}></div>
@@ -191,10 +193,6 @@ const UrbanFuturism = () => {
                 </div>
             </div>
         </div>
-        <div className={styles.grouplink}>
-        <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
-      </div>
-      </div>
     );
 }
 

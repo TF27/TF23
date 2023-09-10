@@ -168,7 +168,7 @@ const Internal = () => {
     }
   `;
 
-   return (
+   return ( 
       <div className={styles.explore} style={top}>
          <style>{keyframes}</style>
          <div className={styles.bgitis}>

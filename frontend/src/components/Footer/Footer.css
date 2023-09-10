@@ -60,7 +60,9 @@
 
 .socialMedia{
     width: 35%;
-    display: flex;;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
     /* margin-right: 3%; */
 }
 .footMulti{
@@ -101,19 +103,41 @@
         font-size: 1.2em;
     }
 }
-@media (max-width: 1500px){
+@media (max-width: 1520px){
     .footWeb li a{
         font-size: 1.1em;
     }
 }
-@media (max-width: 1360px){
+@media (max-width: 1420px){
     .footWeb li a{
         font-size: 1em;
     }
 }
-@media (max-width: 1200px){
+@media (max-width: 1300px){
     .footWeb li a{
         font-size: 0.9em;
+    }
+}
+@media (max-width: 1170px){
+    .footWeb li a{
+        font-size: 0.8em;
+    }
+    .footLink {
+        align-items: flex-end;
+    }
+    .footMulti{
+        display: block;
+    }
+    .footMulti li{
+        margin: 0 auto;
+        padding: 0;
+    }
+    .footWeb li{
+        margin-top: 1px;
+        /* padding: 0; */
+    }
+    .footLink{
+        justify-content: space-around;
     }
 }
 @media (max-width: 1000px){
