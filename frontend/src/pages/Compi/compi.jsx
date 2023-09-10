@@ -86,11 +86,11 @@ const Compi = () => {
       <br /><br /><br /><br />
       {/* {card()} */}
        <div className="checkThis">
-        <h1 style={{ marginTop: "80px", marginBottom: "40px" }}>
+        <h1 style={{ marginTop: "0px", marginBottom: "40px" }}>
           CHECK THIS OUT
         </h1>
-        <div>
-          <h2 style={{ marginBottom: "-20px" }}>Exhibition</h2>
+        <div style={{ height: "390px" }}>
+          <h2 style={{ marginBottom: "0px" }}>Exhibition</h2>
           <Carousel
             i1={i1}
             i2={i2}
@@ -112,7 +112,7 @@ const Compi = () => {
           <br /><br /><br /><br /><br /><br /><br /><br />
         </div>
         <div style={{marginBottom: '150px'}}>
-          <h2 style={{ marginTop: "40px", marginBottom: "-20px" }}>Lectures</h2>
+          <h2 className="gap" >Lectures</h2>
           <Carousel
             i1={im1}
             i2={im2}
