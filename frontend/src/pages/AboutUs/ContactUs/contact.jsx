@@ -65,7 +65,7 @@ const coordidata = [
     department: "Exhibitions Manager",
     name: "Gourish Singhal ",
     email: "gourish@techfest.org",
-    phone: "8928455606"
+    phone: "9424873725"
   },
   {
     department: "Technoholix Manager",

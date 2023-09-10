@@ -49,12 +49,12 @@ const dataLectures = [
   },
   {
     image: lec2,
-    name: "His Holiness - 14th Dalai Lama",
+    name: "The 14th Dalai Lama",
     posi: "(Nobel Laureate, Peace)",
   },
   {
     image: lec3,
-    name: "NR Narayana Murty",
+    name: "N R Narayana Murty",
     posi: "( Co-Founder of Infosys)",
   },
   {
@@ -198,6 +198,9 @@ const Home = () => {
         link="exhibitions"
       />
       <div className={styles.endMargin}></div>
+      <footer>
+        <p> &copy; Techfest, IIT Bombay </p>
+      </footer>
     </div>
   );
 };

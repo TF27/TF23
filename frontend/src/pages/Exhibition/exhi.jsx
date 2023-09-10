@@ -147,7 +147,7 @@ const Exhibition =()=> {
         
                Gourish Singhal<br></br>
                gourish@techfest.org<br></br>
-               <div onClick={() => window.location.href = `tel:${8928455606}`}>{8928455606}</div>
+               <div onClick={() => window.location.href = `tel:${9424873725}`}>{9424873725}</div>
              
         </div>
          <div className='Contactbox1'>

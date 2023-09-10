@@ -61,6 +61,11 @@
 .difPage{
     margin-top: 10pt;
 }
+
+.mobilemap{
+    padding-bottom: 20px;
+}
+
 .Contactbox{
 display: flex;
 justify-content: space-around;
