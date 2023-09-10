@@ -179,8 +179,6 @@ const Meshmerize = () => {
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
               Abhishek Kedare<br/>
-              +91 75585 88254<br/>
-              abhishek@techfest.org
                     <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:abhishek@techfest.org`}>abhishek@techfest.org</div>
                     <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7558588254`}>7558588254</div>
               </div>

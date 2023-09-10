@@ -53,7 +53,7 @@
   }
 }
 
-.img1 {
+/* .img1 {
   background: url("./assets/Frame 2.png");
   background-size: cover;
   background-position: center;
@@ -62,7 +62,7 @@
   position: relative;
   top: -6vh;
   z-index: -0.5;
-}
+} */
 @keyframes rotateAnimation {
   0% {
     transform: rotate(0deg);
@@ -77,7 +77,7 @@
   top: 20%;
   left: 0.3%;
 }
-
+/* 
 .fires {
   position: relative;
   width: 100vw;
@@ -87,11 +87,12 @@
   background-repeat: no-repeat;
   background-position: center;
   animation: fire 3s infinite ease-in;
+} */
   /* z-index: 15; */
   /* top: 7%; */
-}
+ 
 
-@keyframes fire {
+/* @keyframes fire {
   0% {
     background-image: url("./assets/fire1.png");
   }
@@ -101,7 +102,7 @@
   100% {
     background-image: url("./assets/fire1.png");
   }
-}
+} */
 
 .homeParallax {
   /* background-image: url('./assets/parbg.png'); */

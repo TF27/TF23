@@ -8,7 +8,7 @@ import blurr from './assets/blurr.png';
 
 const Mimages = [
   { id: 'history', url: historyImage },
-  { id: 'blurr', url: blurr, text: '2021', additionalText: 'lorem podem todem afjhsdbfjhvyjhdvbfjsdvbfsdgbfjufyjsd' },
+  { id: 'blurr', url: blurr},
   { id: 'mars', url: mars, text: '2021', additionalText: 'idfhasdiobvsauhfasbfkfhvnoixkhdbaifkihisk' },
   { id: 'mars', url: mars, text: '2099', additionalText: 'hunfksadnufkbsdjfbsudkfbskdjfbs' },
 ];
@@ -17,7 +17,7 @@ const MHistoryItem = ({ imageUrl, height, width, isVisible, id, text, additional
   <div className={`history-item ${isVisible ? 'visible' : ''}`} style={{ height, width }}>
     <div className={`mhistory-image ${id}`}>
       {text && <div className="himage-text">{text}</div>}
-      <img src={imageUrl} alt={text} />
+      <img src={imageUrl} alt={text}  />
       {additionalText && <div className="hadditional-text">{additionalText}</div>}
     </div>
   </div>
