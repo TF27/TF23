@@ -1,12 +1,12 @@
 import React, { Component, link } from 'react'
-import "./gallery.css"
+import style from "./gallery.css"
 import { Link, useNavigate } from 'react-router-dom';
 
-export class WGallery extends Component {
+export class MGallery extends Component {
 
   render() {
     return (
-        <div className='gal-main'>
+        <div className='gal-mob'>
                 <div className='gal-text'><Link className="nav-link" to="/gallery/ozone">
                     ---Ozone---                        
                 </Link></div>
@@ -31,4 +31,4 @@ export class WGallery extends Component {
   }
 }
 
-export default WGallery
+export default MGallery

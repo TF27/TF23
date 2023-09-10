@@ -82,7 +82,7 @@ justify-content: space-evenly;
 margin-top: 200px;
 transition: all 400ms ease-in-out;
 position: relative;
-top: -60%;
+top: 0%;
 z-index: 100;
 }
 
@@ -100,6 +100,12 @@ cursor: pointer;
 
 .gal_carousel .button-container .button .right{
   transform: rotate(180deg);
+  right: -14vw;
+  position: relative;
+}
+.gal_carousel .button-container .button .left{
+  right: 14vw;
+  position: relative;
 }
 
 .gal_carousel .button-container .button img :hover{
@@ -148,7 +154,7 @@ cursor: pointer;
   /* left: 50%; */
 }
 .page-indicators {
-  margin-top: 0px;
+  margin-top: -75px;
 }
 
 .gal_carousel .slides .slide.prev{
@@ -193,7 +199,7 @@ overflow-x: hidden;
 }
 .back-button{
   left: -41%;
-  top: -94%;
+  top: -119%;
 }
 }
 

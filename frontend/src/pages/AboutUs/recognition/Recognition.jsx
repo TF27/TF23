@@ -18,7 +18,7 @@ const Recognition = () => {
         </div>
         <div className="cardContainer">
           <div className="unesco-cards">
-              <UnescoCard img={unesco}/>
+              <UnescoCard img={unesco} />
               <UnescoCard img={unicef}/>
               <UnescoCard img={makeinindia} />
               {/* <UnescoCard/> */}
@@ -26,7 +26,7 @@ const Recognition = () => {
           <br />
           <br />
           <div className="unesco-cards">
-              <UnescoCard img={cee} style={{ height: '100px' }}/>
+              <UnescoCard img={cee} />
               <UnescoCard img={sayen}/>
           </div>
           <div className="recog-frame2">
