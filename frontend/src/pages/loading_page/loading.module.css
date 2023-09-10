@@ -1,29 +1,51 @@
 .loading {
     display: flex;
     align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-  }
+    justify-content: center;
+    z-index: 2147483647; /* Center horizontally */
+}
   
 .loading img{
-    /* max-width: 50vw; */
+    z-index: 2147483647; 
 }
-.sideR{
-    /* rotate: 180deg; */
+
+.sideL{
     transform: scaleX(-1);
-    
 }
+
+.sideR{
+    transform: scaleX(-1);
+}
+
 .tf{
-    position:absolute;
+    position: fixed;
+    width: 26vw;
+    left: 37vw;
+}
+
+.tfbg{
+    position: fixed;
+    width: 32vw;
+}
+.bgspined{
+    animation: spin 1.5s linear forwards;
+    transform: scale(2);
+    transition: transform 1s ease-in;
+}
+
+@keyframes spin {
+    0% { rotate : 0deg; }
+    100% { rotate: 350deg; }
 }
 
 .moveLeft {
-    transform: translateX(-100%); 
-    transition: transform 1.5s linear;
+    transform: scaleX(-1) translateX(100%);
+    transition: transform 1.3s ease-in;
   }
 
 .moveRight{
     transform: scaleX(-1) translateX(-100%);
-    transition: transform 1.5s linear;
+    transition: transform 1.3s ease-in;
 }
 
 .sideL, .sideR{
@@ -32,6 +54,37 @@
 }
 
 .badaKaro{
-    transform: scale(1.3);
-    transition: transform 1s linear;
+    transform: scale(2);
+    transition: transform 1000ms ease-in;
+}
+
+.cloud2{
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.cloud1{
+    position: fixed;   
+    left: -20px;
+    top: 0;
+}
+
+.cloundmoveleft{
+    transform: translateX(100%);
+    transition: transform 2.5s ease-in;
+}
+
+.cloudmoveright{
+    transform: translateX(-100%);
+    transition: transform 2.5s ease-in;
+}
+
+.loaderremove{
+    animation: remove 1s ease-in .5s forwards;
+}
+
+@keyframes remove {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }
