@@ -369,3 +369,7 @@
       justify-content: space-around;
    }
 }
+.grouplink{
+   display:flex;
+   /* flex-direction: row; */
+}

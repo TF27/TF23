@@ -33,6 +33,8 @@ import c8 from '../../pages/Compi/assets/c8.jpg';
 import c9 from '../../pages/Compi/assets/c9.jpg';
 import c10 from '../../pages/Compi/assets/c10.jpg';
 
+import exhi_image from './assets/exhi.png'
+
 const Exhibition =()=>{
 
     const [isMobile, setIsMobile] = useState(false);
@@ -51,13 +53,18 @@ const Exhibition =()=>{
     
     return(
         <div style={{height:'120vh'}}>
+          <div className={parallax.exhiImage}>
+              <img src={exhi_image} alt="Exhibition"/>
+            </div>
+           
+
             <ImageOne/>
            <div className={parallax.exhi}>
            <div className={parallax.blackGradienttop}/>  
             <Notify/>
             <div>{isMobile ? <MapClick /> : <WorldMap />}</div>
             <OurReach />
-            <br /><br /><br /><br /><br /><br /><br /><br />
+          <div>
             <h2 style={{ marginBottom: "-20px" }}>Competitions</h2>
           <Carousel
             i1={im1}
@@ -74,12 +81,15 @@ const Exhibition =()=>{
            <div className="difPage">
             <div className="check_rect1"></div>
             <div className="check_rect2">
-              <Link to="/lectures">Lectures</Link>
+              <Link to="/lectures">Explore</Link>
             </div>
           </div>
         </div>
-<br /><br /><br /><br /><br /><br /><br /><br />
-<Carousel
+        <div>
+            <h2 style={{ marginTop: "40px", marginBottom: "-10px" }}>
+              Exhibitions
+            </h2>
+            <Carousel
             i1={c1}
             i2={c2}
             i3={c3}
@@ -91,8 +101,59 @@ const Exhibition =()=>{
             i9={c9}
             i10={c10}
           />
+            <div className="difPage">
+              <div className="check_rect1"></div>
+              <div className="check_rect2">
+                <Link to="/exhibitions">Explore</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="contactus">
+          <h1 style={{ marginTop: "-100px", marginBottom: "40px"}}>CONTACT US</h1>
+          {/* <div className="tray">
+
+            <div>
+              <ContactCard
+                image={tiger}
+                headText="Contact Us"
+                emailText="contact@example.com"
+                phoneNumberText="123-456-7890"
+              />
+            </div>
+           
+            <div>
+              <ContactCard
+                image=""
+                headText="Contact Us"
+                emailText="contact@example.com"
+                phoneNumberText="123-456-7890"
+              />
+            </div>
+          </div> */}
+          <div className="Contactbox">
+       
+      
+
+       <div className='Contactbox1'>
+        
+               Arnav Patel<br></br>
+               arnav@techfest.org<br></br>
+               <div onClick={() => window.location.href = `tel:${9372634701}`}>{9372634701}</div>
+             
+        </div>
+         <div className='Contactbox1'>
+           Manas Dadhich<br></br>
+           manas@techfest.org<br></br>
+           {/* <div onClick={() => window.location.href = `mailto:manas@techfest.org`}>{manas@techfest.org}</div><br></br> */}
+           <div onClick={() => window.location.href = `tel:${9981378767}`}>{9981378767}</div>
+           </div>  
+       </div>
+        </div>
         </div>
         
     )
+  
+    
 }
 export default Exhibition;

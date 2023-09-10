@@ -22,19 +22,23 @@ import comp4 from "./assets/explore/Compi4.jpg";
 const dataCompetitions = [
   {
     image: comp1,
-    name: "Cozmo Clench",
+    name: "Cozmoclench",
+    posi: "( INR 1,00,000 )",
   },
   {
     image: comp2,
     name: "Meshmerize",
+    posi: "( INR 1,00,000 )",
   },
   {
     image: comp3,
     name: "Techfest Olympiad",
+    posi: "( INR 40,000 )",
   },
   {
     image: comp4,
     name: "CoDecode",
+    posi: "( INR 40,000 )",
   },
 ];
 const dataLectures = [
