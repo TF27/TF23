@@ -9,7 +9,7 @@ export const Frame3 = () => {
     <div className="frame">
       <div className="compi_background">
         <div className="shade">
-        <img src={img1} alt="competition" className="tittle"/>
+        <img src={img1} alt="competition techfest trophy" className="tittle"/>
         </div>
       </div>
       <div className='blackGradient-to-top'/>
