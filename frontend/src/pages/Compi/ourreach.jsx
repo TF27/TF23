@@ -12,7 +12,7 @@ function ourReach() {
         <div className="buffer">
           <img src={mylogo} alt="buffering" id='myImg'/>
           <div className='Overlay'>
-            <Counter targetValue={65} duration={2000} scrollVal={500} plus='L+'/>
+            <Counter targetValue={65} duration={2000} scrollVal={2200} plus='L+'/>
           </div>
           <div>
             <h2>Prize Money</h2>
@@ -21,7 +21,7 @@ function ourReach() {
         <div className="buffer">
           <img src={mylogo} alt="buffering" id='myImg'/>
           <div className='Overlay'>
-            <Counter targetValue={25} duration={2000} scrollVal={500} plus='+'/>
+            <Counter targetValue={25} duration={2000} scrollVal={2200} plus='+'/>
           </div>
           <div>
             <h2>Competitions</h2>
@@ -30,7 +30,7 @@ function ourReach() {
         <div className="buffer">
           <img src={mylogo} alt="buffering" id='myImg'/>
           <div className='Overlay'>
-            <Counter targetValue={35} duration={2000} scrollVal={500} plus='K+'/>
+            <Counter targetValue={35} duration={2000} scrollVal={2200} plus='K+'/>
           </div>
           <div>
             <h2>Participants</h2>

@@ -25,6 +25,7 @@ function Compi_gal() {
         i8={img8}
         i9={img9}
         i10={img10}
+        txt1='praveen'
     />
   )
 }

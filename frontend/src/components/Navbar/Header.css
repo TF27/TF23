@@ -118,6 +118,7 @@
   position: relative;
   top: 8px;
   height: 100%;
+  padding-bottom: 4px;
   /* overflow: hidden; */
   display: flex;
   justify-content: space-around;
@@ -186,6 +187,10 @@
   }
 } */
 
+.logout_rect2{
+  font-size: small;
+}
+
 @media (max-width: 1240px){
   .navSummit{
     display: block;
@@ -216,7 +221,7 @@
 }
 @media (max-width: 1040px){
   .webNav li a{
-    font-size: 18px;
+    font-size: 17px;
   }
   .logout_rect2{
     height: 32px;
@@ -233,7 +238,7 @@
 }
 @media (max-width: 878px){
   .webNav li a{
-    font-size: 17px;
+    font-size: 16px;
   }
   .logout_rect2{
     height: 32px;

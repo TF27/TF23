@@ -40,6 +40,7 @@ img{
     display: flex;
     gap: 10vw;
     flex-direction: row;
+    margin: auto;
 }
 
 .recog-frame2{
@@ -140,9 +141,10 @@ img{
         width: auto;
     }
     .cardContainer{
-        width: 20%;
+        width: 80%;
         display: flex;
         flex-direction: column;
+        margin: auto;
     }
     .recog-header{
         width: 100vw;   

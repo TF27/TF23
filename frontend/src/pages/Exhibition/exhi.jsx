@@ -54,7 +54,7 @@ const Exhibition =()=> {
     return (
         <div style={{height:'120vh'}}>
           <div className={parallax.exhiImage}>
-              <img src={exhi_image} alt="Exhibition"/>
+              {/* <img src={exhi_image} alt="Exhibition"/> */}
             </div>
            
 
@@ -147,7 +147,7 @@ const Exhibition =()=> {
         
                Gourish Singhal<br></br>
                gourish@techfest.org<br></br>
-               <div onClick={() => window.location.href = `tel:${8928455606}`}>{8928455606}</div>
+               <div onClick={() => window.location.href = `tel:${9424873725}`}>{9424873725}</div>
              
         </div>
          <div className='Contactbox1'>
@@ -155,8 +155,14 @@ const Exhibition =()=> {
            akshat@techfest.org<br></br>
            {/* <div onClick={() => window.location.href = `mailto:manas@techfest.org`}>{manas@techfest.org}</div><br></br> */}
            <div onClick={() => window.location.href = `tel:${9619678850}`}>{9619678850}</div>
-           </div>  
-       </div>
+          </div>  
+          <div className='Contactbox1'>
+           Aryan Gupta<br></br>
+           aryan@techfest.org<br></br>
+           {/* <div onClick={() => window.location.href = `mailto:manas@techfest.org`}>{manas@techfest.org}</div><br></br> */}
+           <div onClick={() => window.location.href = `tel:${7317520804}`}>{7317520804}</div>
+          </div>  
+        </div>
         </div>
         </div>
         </div>

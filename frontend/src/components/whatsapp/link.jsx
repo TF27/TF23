@@ -2,13 +2,13 @@ import React from 'react';
 import './link.css';
 // import Border from '../DoubleBorder'; 
 import styles from '../../pages/Compi/Compi_Internal/internal.module.css';
-const whatsapplink = ({walink}) => {
+function Whatsapplink({walink, dslink}){
     return(
     <div className={styles.groupl}> 
-        <a id='wabuttonw' href='https://www.youtube.com/'>Whatsapp</a>
-        <a id='wabuttond' href='https://www.youtube.com/'>Discord</a>
+        <a id='wabuttonw' href={walink}>Whatsapp</a>
+        <a id='wabuttond' href={dslink}>Discord</a>
     </div>
     );
 }
 
-export default whatsapplink;
+export default Whatsapplink;

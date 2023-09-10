@@ -104,8 +104,10 @@ const Mechanzo = () => {
       }
 
     return (
-      <div>
         <div className={styles.mWholeData}>
+            <div className={styles.grouplink}>
+            <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
+            </div>
             <div>
                 <div onClick={() => handleClickOpen('About')} className={`${styles.whatu} ${open === 'About' ? styles.whatuOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatu_rect1}`}></div>
@@ -137,8 +139,14 @@ const Mechanzo = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'Timeline' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Round 1: <br/>
-            Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023<br/><br/>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Round 1:<br/>
+            Zonals Round will be held at 5 major cities, namely <br />
+            1. Mumbai - 8th October<br />
+            2. Bangalore - 28th October <br />
+            3. Jaipur - 15th October <br />
+            4. Bhopal - 15th October <br />
+            5. Lucknow - 15th October<br />
+             <br />
             Round 2:<br/>
             Finale will be held at Techfest 2023-24 during 27th - 29th December 2023
 </div>
@@ -189,10 +197,6 @@ const Mechanzo = () => {
                 </div>
             </div></div>
         </div>
-        <div className={styles.grouplink}>
-        <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
-      </div>
-      </div>
     );
 }
 

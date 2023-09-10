@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import styles from "./home.module.css";
-import head from "./images/tap.png";
+import head from "./images/themename.png";
+import headm from "./images/themenamem.png";
 
 import cloudR from "./images/cloudR.png";
 import cloudL from "./images/cloudL.png";
@@ -39,8 +40,9 @@ const HomeParallax = () => {
                 <img src={rocks} className={styles.rockUp}/>
                
             </div> */}
-      <div className={styles.headU}>
-        <img src={head} className={styles.head} />
+      <div className="headU" >
+        {/* <img src={head} className={styles.head} /> */}
+        {/* <img src={headm} className={styles.headm}/> */}
       </div>
       <div className={styles.clouds}>
         <img

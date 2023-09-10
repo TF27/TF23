@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
-import whatsapplink from '../../../../components/whatsapp/link';
+import Whatsapplink from '../../../../components/whatsapp/link';
 
 const Mechanzo = () => {
     const [activeCity, setActiveCity] = useState('About');
@@ -106,7 +106,8 @@ const Mechanzo = () => {
         objectFit: 'scale-down', 
         paddingRight: '8px',
     }
-
+    const walink1 = "https://chat.whatsapp.com/FMwMsbJwiI89JnjqwOWbE8";
+    const dslink1 = "https://chat.whatsapp.com/FMwMsbJwiI89JnjqwOWbE8";
 
     return ( 
       <div>
@@ -141,8 +142,14 @@ const Mechanzo = () => {
           <div id="Timeline" className={`${styles.info} ${activeCity === 'Timeline' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Round 1: <br/>
-            Zonals Round will be held at Techfest 2023-24 during 27th - 29th December 2023<br/><br/>
+            Round 1:<br/>
+            Zonals Round will be held at 5 major cities, namely <br />
+            1. Mumbai - 8th October<br />
+            2. Bangalore - 28th October <br />
+            3. Jaipur - 15th October <br />
+            4. Bhopal - 15th October <br />
+            5. Lucknow - 15th October<br />
+             <br />
             Round 2:<br/>
             Finale will be held at Techfest 2023-24 during 27th - 29th December 2023
               </div>
@@ -184,7 +191,8 @@ const Mechanzo = () => {
         </div>
       </div>
       <div className={styles.grouplink}>
-      <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
+      <div className={styles.wabutton }><Whatsapplink walink={walink1} dslink={dslink1} target="_blank"/>
+</div>
     </div>
     </div>
      );
