@@ -54,7 +54,7 @@
   background-attachment: fixed;
   top: -13vh;
   background-repeat: no-repeat; 
-  opacity: 1 ;
+  opacity: 0.8 ;
 }
 @media(max-width:748px){
   .layer3{
