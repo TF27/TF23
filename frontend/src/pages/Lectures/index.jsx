@@ -57,6 +57,7 @@ const Lectures = () => {
     <div style={{ height: "120vh" }}>
       <ImageOne />
       <div className={styles.image}>
+      <div className={styles.blackGradienttop}/>
         <Notify />
         <div>{isMobile ? <MapClick /> : <WorldMap />}</div>
         <OurReach />

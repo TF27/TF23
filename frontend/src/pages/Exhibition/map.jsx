@@ -1,5 +1,4 @@
-import React, { useState } from "react";
- //import whatever images we need and add them in the cityData beside a image tag
+import React, { useState } from "react";  
 import worldmap from "./assets/map.png";
 // import im1 from "./assets/mapContent/img1.png"
 import "./WorldMap.css"; // Import CSS file
