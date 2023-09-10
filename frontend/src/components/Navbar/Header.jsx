@@ -209,9 +209,9 @@ const Header = () => {
             <li onClick={showMenu}>
               <Link to="/exhibitions">Exhibitions</Link>
             </li>
-            <li onClick={showMenu}>
+            {/* <li onClick={showMenu}>
               <Link to="/history">History</Link>
-            </li>
+            </li> */}
             <li onClick={showMenu}>
               <Link to="/aboutus/media">Media</Link>
             </li>
