@@ -102,7 +102,7 @@ const Internal = () => {
                   <LeaveTeam />
                 </div>
               ) : data.is_registered ? (
-                <div styles={styles.lolReg}>
+                <div className={styles.lolReg} style={{marginTop: '20px'}}>
                   You have registered successfully!
                 <div className={styles.compi_team}>
                   <div className={styles.create_team}>

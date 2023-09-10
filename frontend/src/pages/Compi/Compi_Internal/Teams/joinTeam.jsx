@@ -65,7 +65,7 @@ const JoinTeam = () => {
       <div className="dissolveTeam" style={{ zIndex: "3" }}>
          <div
             onClick={() => setVisibility(!visibility)}
-            className={styles.join_team} 
+            className={styles.join_team}  style={{cursor: 'pointer'}}
          >
             <div className={styles.join_rect1}></div>
             <div className={styles.join_rect2}>Join Team</div>
