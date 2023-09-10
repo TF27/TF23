@@ -191,7 +191,7 @@ const CozmoClench = () => {
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
                     Tarun Kumar<br/>
                     <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:tarun01.techfest@gmail.com`}>tarun01.techfest@gmail.com</div>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7549952736`}>7549952736</div>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7549952736`}>+91 75499 52736</div>
                     </div>
                 </div>
             </div>

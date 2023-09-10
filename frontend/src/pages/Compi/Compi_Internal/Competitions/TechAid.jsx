@@ -192,9 +192,9 @@ const TechAid = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Chirag Rao<br/>
-              +91 82871 75335<br/>
-              chirag@techfest.org
+              Aditya Sisodiya<br/>
+              +91 79991 57905<br/>
+              adityasisodiya.techfest@gmail.com
               </div>
             </div>
           </div>
