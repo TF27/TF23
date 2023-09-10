@@ -194,9 +194,9 @@ const TechAid = () => {
                 <div className={`${styles.whatd} ${open === 'Contact' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                    Abhishek<br/>
-                    +91 75585 88254<br/>
-                    abhishek@techfest.org
+                    Aditya Sisodiya<br/>
+                    +91 79991 57905<br/>
+                    adityasisodiya.techfest@gmail.com
                     </div>
                 </div>
             </div>

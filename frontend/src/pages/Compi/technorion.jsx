@@ -326,7 +326,7 @@ const Technorion = () => {
                      </tr>
 
                      <tr>
-                        <td>People's University</td>
+                        <td>School of Research and Technology, People's University</td>
                         <td>Bhopal</td>
                         <td>15/10/23</td>
                      </tr>
@@ -341,8 +341,8 @@ const Technorion = () => {
                         <td>15/10/23</td>
                      </tr>
                      <tr>
-                        <td>Global Academy of Technology, Bangalore</td>
-                        <td>Bengaluru</td>
+                        <td>Global Academy of Technology</td>
+                        <td>Bangalore</td>
                         <td>28/10/23</td>
                      </tr>
                   </table>

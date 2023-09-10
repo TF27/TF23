@@ -178,9 +178,10 @@ const Meshmerize = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Abhishek Kedare<br/>
-                    <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:abhishek@techfest.org`}>abhishek@techfest.org</div>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7558588254`}>7558588254</div>
+              Rishu Bhadani<br/>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8709397909`}>+91 87093 97909</div>
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `rishu.techfest.iitb@gmail.com`}>rishu.techfest.iitb@gmail.com</div>
+                    
               </div>
             </div>
           </div>

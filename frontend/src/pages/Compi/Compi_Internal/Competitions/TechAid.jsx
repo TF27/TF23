@@ -191,9 +191,9 @@ const TechAid = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Abhishek Kedare<br/>
-              +91 75585 88254<br/>
-              abhishek@techfest.org
+              Aditya Sisodiya<br/>
+              +91 79991 57905<br/>
+              adityasisodiya.techfest@gmail.com
               </div>
             </div>
           </div>

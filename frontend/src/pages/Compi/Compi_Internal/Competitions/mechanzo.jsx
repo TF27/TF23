@@ -177,14 +177,14 @@ const Mechanzo = () => {
               <div className={styles.info_data}>
                     Gourish Singhal<br/>
                     <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:gourish@techfest.org`}>gourish@techfest.org</div>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9424873725`}>9424873725</div>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9424873725`}>+91 94248 73725</div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className={styles.grouplink}>
-      <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
+      <div className={styles.wabutton }>{whatsapplink('https://chat.whatsapp.com/FMwMsbJwiI89JnjqwOWbE8')}</div>
     </div>
     </div>
      );

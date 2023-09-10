@@ -184,9 +184,9 @@ const UrbanFuturism = () => {
                 <div className={`${styles.whatd} ${open === 'Contact' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                    Abhishek<br/>
-                    +91 75585 88254<br/>
-                    abhishek@techfest.org
+                    Satyam Gupta<br/>
+                    +91 80033 98039<br/>
+                    satyam2004.techfest@gmail.com
                     </div>
                 </div>
             </div>
