@@ -35,6 +35,7 @@ img{
 
 .unesco-cards{
     /* align-items: center; */
+    width: 90%;
     justify-content: center;
     display: flex;
     gap: 10vw;
@@ -139,6 +140,7 @@ img{
         width: auto;
     }
     .cardContainer{
+        width: 20%;
         display: flex;
         flex-direction: column;
     }
