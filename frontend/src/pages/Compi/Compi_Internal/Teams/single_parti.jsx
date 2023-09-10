@@ -12,8 +12,8 @@ const SingleParti = () => {
 
     const { compiName } = useParams();
     const {user} = UserAuth();
-    const googleId = user.email;
-    const name = user.displayName;
+    // const googleId = user.email;
+    // const name = user.displayName;
     const navigate = useNavigate();
 
 
