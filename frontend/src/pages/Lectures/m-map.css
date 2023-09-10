@@ -9,9 +9,8 @@
 }
 .map_image{
     background-image: url('./assets/map.png');
-    background-size: cover;
     width: 80%;
-    height: 50vw;
+    height: 400px;
     background-repeat: no-repeat;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -19,7 +18,9 @@
 
 @media (max-width: 768px) {
   .map_image{
-    width: 100%;
+    background-size: contain;
+    width: 100vw;
+    height: 60vw;
   }
   
 }
@@ -50,13 +51,13 @@
   text-align: center;
  /* Prevent the dropdown menu from blocking hover events */
   max-height: 400px; /* Set a maximum height for the dropdown menu */
-  width: 90vw;
+  width: 60vw;
   overflow-y: visible; /* Enable scrolling when content exceeds the maximum height */
   overflow-x: auto;
   left: 50%;
   transform: translateX(-50%);
   padding: 20px;
-  margin-top: 7px;
+  margin-top: -76px;
 }
 
 .city-image-container {
@@ -76,10 +77,11 @@
   border-radius: 5px;
   font-size: xx-large;
   font-family: 'Forum', sans-serif;
+  font-weight: bold;
   border: #f7f7fb;
 }
 
-.city-info-container{
+.m-city-info-container{
   position: relative;
   flex: 1 1 auto;
   display: flex;
@@ -89,24 +91,25 @@
 .m-ex-info-styling{
   width: 50px;
   font-family: 'Forum', sans-serif;
+  font-weight: bold;
   font-size: 18px;
   flex: auto;
 }
 
 .ddinfo{
-  width: 50%;
-  height: auto;
+  width: 150px;
+  height: 150px;
   margin-bottom: 10px;
   margin-left: 0px;
-  border: #f7f7fb;
-  border-width: 1px;
+  border: 1px solid white;
+  border-radius: 2px;
+  object-fit: cover;
 }
 .dropdown-image {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
-  border: #f7f7fb;
-  border-radius: 1px;
+  border: 1px white solid;
 }
 
 .dropdown-menu76::-webkit-scrollbar {
@@ -131,20 +134,9 @@
   margin-bottom: 5px; /* Add some margin to the paragraphs inside the dropdown menu */
 }
 
-.city-circle:hover ~ .dropdown-menu76,
-.dropdown-menu76:hover {
-  opacity: 1;
-  pointer-events: auto; /* Allow hover events on the dropdown menu */
-  animation: animation_popup 2s;
-}
 
-.city-circle:hover::before {
-  opacity: 0.7;
-  pointer-events: none; /* Prevent the city circle from blocking hover events */
-  animation: hoverblock 4s;
-}
 
-@keyframes animation_popup {
+/* @keyframes animation_popup {
   from {
     max-height: 0px;
     max-width: 0px;
@@ -153,31 +145,15 @@
     max-height: 200px;
     max-width: 300px;
   }
+} */
+
+
+@media(max-width:550px){
+  .dropdown-menu7 {
+    width: 90vw;
+    margin-top: -7px;
+  }
+ 
 }
 
-@keyframes hoverblock {
-  0% {
-    pointer-events: auto;
-  }
-  50% {
-    pointer-events: auto;
-  }
-  100% {
-    pointer-events: none;
-  }
-}
-@media(max-width:310px){
-  .dropdown-menu7{
-    width: auto;
-    max-height: 300px;
-    max-width: 300px;
-    left: 10px;
-    right: 10px;
-    transform: none;
-    margin-top: 7px;
-  }
-  .outer1{
-    height: calc(60vw + 320px );
-  }
-}
 

@@ -7,7 +7,7 @@ import DissolveTeam from './Teams/dissolveTeam';
 import LeaveTeam from './Teams/leaveTeam';
 // import images
 import backimg1 from './../static/img/exp_bg.png';
-import backimg2 from './../static/img/img7.png';
+import backimg2 from './../static/img/img7.jpg';
 import frame from './../static/card/Frame.png';
 import WhatsappShareButton from '../../../components/share/whatsapp';
 

@@ -336,7 +336,7 @@ const Technorion = () => {
                         <td>15/10/23</td>
                      </tr>
                      <tr>
-                        <td>Swami Keshavanand Institute of Technology, M&G</td>
+                        <td>Swami Keshavanand Institute of Technology</td>
                         <td>Jaipur</td>
                         <td>15/10/23</td>
                      </tr>
@@ -354,14 +354,14 @@ const Technorion = () => {
          </div>
          <div className="technorion_cards">
             <div className="container" style={{ maxWidth: "90%" }}>
-               <div className="row">{card()}</div>
+               <div className="row">{card()} {markiCompi()}</div>
             </div>
          </div>
-         <div className="technorion_cards">
+         {/* <div className="technorion_cards">
             <div className="container" style={{ maxWidth: "90%" }}>
                <div className="row">{markiCompi()}</div>
             </div>
-         </div>
+         </div> */}
          <div className="technorion_cards">
             <div className="container" style={{ maxWidth: "90%" }}>
                <div className="row">{ideatesCard()}</div>

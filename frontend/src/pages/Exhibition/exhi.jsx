@@ -6,6 +6,32 @@ import Notify from "../../components/Notify/notify";
 import OurReach from "./ourreach";
 import ImageOne from "./ImageOne";
 import parallax from './parallax.module.css';
+import Carousel from "../../components/Carousel/carousel";
+import { Link } from "react-router-dom";
+import '../Lectures/lecture.css';
+import "../../pages/Compi/compi_animation.css";
+
+import im1 from '../Lectures/assets/l1.jpg';
+import im2 from '../Lectures/assets/l2.jpg';
+import im3 from '../Lectures/assets/l3.jpg';
+import im4 from '../Lectures/assets/l4.jpg';
+import im5 from '../Lectures/assets/l5.jpg';
+import im6 from '../Lectures/assets/l6.JPG';
+import im7 from '../Lectures/assets/l7.jpg';
+import im8 from '../Lectures/assets/l8.jpg';
+import im9 from '../Lectures/assets/l9.jpg';
+import im10 from '../Lectures/assets/l10.jpg';
+
+import c1 from '../../pages/Compi/assets/c1.jpg';
+import c2 from '../../pages/Compi/assets/c2.jpg';
+import c3 from '../../pages/Compi/assets/c3.jpg';
+import c4 from '../../pages/Compi/assets/c4.jpg';
+import c5 from '../../pages/Compi/assets/c5.jpg';
+import c6 from '../../pages/Compi/assets/c6.jpg';
+import c7 from '../../pages/Compi/assets/c7.jpg';
+import c8 from '../../pages/Compi/assets/c8.jpg';
+import c9 from '../../pages/Compi/assets/c9.jpg';
+import c10 from '../../pages/Compi/assets/c10.jpg';
 
 const Exhibition =()=>{
 
@@ -27,11 +53,46 @@ const Exhibition =()=>{
         <div style={{height:'120vh'}}>
             <ImageOne/>
            <div className={parallax.exhi}>
+           <div className={parallax.blackGradienttop}/>  
             <Notify/>
             <div>{isMobile ? <MapClick /> : <WorldMap />}</div>
             <OurReach />
+            <br /><br /><br /><br /><br /><br /><br /><br />
+            <h2 style={{ marginBottom: "-20px" }}>Competitions</h2>
+          <Carousel
+            i1={im1}
+            i2={im2}
+            i3={im3}
+            i4={im4}
+            i5={im5}
+            i8={im8}
+            i6={im6}
+            i7={im7}
+            i9={im9}
+            i10={im10}
+          />
+           <div className="difPage">
+            <div className="check_rect1"></div>
+            <div className="check_rect2">
+              <Link to="/lectures">Lectures</Link>
+            </div>
+          </div>
         </div>
+<br /><br /><br /><br /><br /><br /><br /><br />
+<Carousel
+            i1={c1}
+            i2={c2}
+            i3={c3}
+            i4={c4}
+            i5={c5}
+            i8={c6}
+            i6={c7}
+            i7={c8}
+            i9={c9}
+            i10={c10}
+          />
         </div>
+        
     )
 }
 export default Exhibition;
