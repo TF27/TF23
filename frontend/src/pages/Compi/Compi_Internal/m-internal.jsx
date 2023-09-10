@@ -136,7 +136,7 @@ const MInternal = () => {
           {compiName === 'techfest olympiad' && <TechfestOlympiad/>}
           {compiName === 'codecode' && <Codecode/>}
           {compiName === 'urban furturism' && <UrbanFuturism/>}
-          {compiName === 'tech aid' && <TechAid/>}
+          {compiName === 'tech-aid' && <TechAid/>}
       </div>
     ));
   }

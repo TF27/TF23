@@ -84,7 +84,7 @@ const Internal = () => {
           {compiName === 'hack-aI' && <HackAI/>}
           {compiName === 'techfest olympiad' && <TechfestOlympiad />}
           {compiName === 'codecode' && <Codecode />}
-          {compiName === 'tech aid' && <TechAid />}
+          {compiName === 'tech-aid' && <TechAid />}
           {compiName === 'urban futurism' && <UrbanFuturism />}
 
           <div className={styles.team_reg}>
