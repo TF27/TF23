@@ -27,6 +27,7 @@
   position: relative;
   top: 13%;
   left: 0%;
+  text-align: center;
 }
 .content1::before {
     content: "";
@@ -34,7 +35,7 @@
     width: var(--labelOffset);
     height: var(--labelOffset);
     background: var(--cardColor);
-    left: 0;
+    margin-left: 0;
     bottom: 0;
     clip-path: polygon(0 0, 100% 0, 0 100%);
     filter: brightness(0.75);
@@ -103,4 +104,12 @@
   height:auto;
   opacity: 1;
   transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+.list-group-item{
+  margin-left: 2vw;
+  width: 72vw;
+}
+
+.itemuoi{
+  margin-bottom: 25px;
 }

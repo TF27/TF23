@@ -4,8 +4,6 @@ import HomeParallax from "./parallax";
 import styles from "./home.module.css";
 
 // import images
-import bf from "./images/homebg.jpg";
-import bfm from "./images/homebgm.jpg";
 import spimg from "./images/sponsor.png";
 import lec1 from "./assets/explore/Lec1.jpg";
 import lec2 from "./assets/explore/Lec2.jpg";
@@ -22,21 +20,25 @@ import comp4 from "./assets/explore/Compi4.jpg";
 
 const dataCompetitions = [
   {
+    perLink: 'cozmoclench',
     image: comp1,
     name: "Cozmoclench",
     posi: "( INR 1,00,000 )",
   },
   {
+    perLink: 'meshmerize',
     image: comp2,
     name: "Meshmerize",
     posi: "( INR 1,00,000 )",
   },
   {
+    perLink: 'techfest olympiad',
     image: comp3,
     name: "Techfest Olympiad",
     posi: "( INR 40,000 )",
   },
   {
+    perLink: 'codecode',
     image: comp4,
     name: "CoDecode",
     posi: "( INR 40,000 )",
@@ -98,15 +100,18 @@ const Explore = ({ Heading, data, link }) => {
       <div className={`row ${styles.cards}`}>
         {data.map((item, index) => {
           return (
-            <div className="col-lg-3 col-sm-6 col-12" key={index}>
+            
+            <div className={`col-lg-3 col-sm-6 col-12 ${styles.oooo}`} key={index}>
+              <Link to={`/competitions/${item.perLink}`} >
               <div className={styles.card}>
                 <div className={styles.card_rect1}>
                   <div className={styles.card_rect2}>
-                    <img src={item.image} alt={item.name} />
+                    <img src={item.image} alt={item.name}loading="lazy" />
                     <div className={styles.cardText}>{item.name}<br/>{item.posi}</div>
                   </div>
                 </div>
               </div>
+              </Link>
             </div>
           );
         })}
@@ -127,7 +132,7 @@ const Home = () => {
     paddingBottom: "20px",
     position: "relative",
     // height: "100vh",
-    background: `url(${bf})`,
+    // background: `url(${bf})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
@@ -138,7 +143,7 @@ const Home = () => {
   };
 
   return (
-    <div className="home" style={style}>
+    <div className={styles.home} style={style}>
       <HomeParallax />
       <div style={{ maxWidth: "90%", margin: "auto" }}>
         <div className={styles.titSpn}>
@@ -160,7 +165,7 @@ const Home = () => {
         <div className={`row ${styles.themeData}`}>
           <div className="col-12 col-lg-4">
             <div className={styles.themeImg}>
-            <iframe src="https://www.youtube.com/embed/0_FBwJi8VBo?si=yaNM1nKy7nydA1XU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            <iframe src="https://www.youtube.com/embed/0_FBwJi8VBo?si=yaNM1nKy7nydA1XU" title="YouTube video player" frameborder="0" loading="lazy"></iframe>
             </div>
           </div>
           <div className={`col-12 col-lg-8 ${styles.themeText}`}>

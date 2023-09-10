@@ -476,3 +476,19 @@
 .endMargin {
   margin-bottom: 200px;
 }
+@media (min-width:848px){
+  .home{
+    background: url('./images/homebg.jpg')
+  }
+}
+@media (max-width:848px){
+  .home{
+    background: url('./images/homebgm.jpg');
+    /* height:100vh; */
+  }
+}
+
+.oooo a{
+  text-decoration: none;
+  color: white;
+}

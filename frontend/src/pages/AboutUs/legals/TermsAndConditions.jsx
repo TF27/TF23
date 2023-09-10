@@ -97,7 +97,7 @@ function TermsAndConditions(){
       <div className="container justify-container-center" >
         <ul className="list-group">
         
-        <div className="item">
+        <div className={`item ${legals.itemuoi}`}>
             <li  className="list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded" onClick={f1}>GENERAL DATA PROTECTION REGULATIONS(GDPR)</li>
             
                 <div  className={`${legals.whatd} ${toggle1 ? legals.whatdopen: ''} drop-content border border-light border-1`}>
@@ -107,13 +107,13 @@ function TermsAndConditions(){
             
         </div>
 
-        <div className="item">
+        <div className={`item ${legals.itemuoi}`}>
         <li   className="list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded" onClick={f2}>COOKIES</li>
         <div  className={`${legals.whatd} ${toggle2 ? legals.whatdopen: ''} drop-content border border-light border-1`}>
             <p>We employ the use of cookies. By accessing Techfest, IIT Bombay, you agreed to use cookies in agreement with Techfest IIT Bombay’s Privacy Policy.Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>
         </div>
         </div>
-        <div className="item">
+        <div className={`item ${legals.itemuoi}`}>
         <li   className="list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded" onClick={f3}>PRIVACY POLICIES</li>
         <div className={`${legals.whatd} ${toggle3 ? legals.whatdopen: ''} drop-content border border-light border-1`}><p>Unless otherwise stated, Techfest, IIT Bombay and/or its licensors own the intellectual property rights for all material on Techfest IIT Bombay. All intellectual property rights are reserved. You may access this from Techfest, IIT Bombay for your own personal use subjected to restrictions set in these terms and conditions.</p>
         <p>You must not:</p>
@@ -130,7 +130,7 @@ The Comments will not be used to solicit or promote business or custom or presen
 You hereby grant Techfest, IIT Bombay a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats, or media.</p>
         </div>
         </div>
-        <div className="item">
+        <div className={`item ${legals.itemuoi}`}>
         <li   className="list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded " onClick={f4}>HYPERLINKING TO OUR CONTENT</li>
         <div className={`${legals.whatd} ${toggle4 ? legals.whatdopen: ''} drop-content border border-light border-1`}>
             <p>The following organizations may link to our Website without prior written approval:</p>
@@ -167,25 +167,25 @@ By use of any other description of our Website being linked to that makes sense 
             <p>No use of Techfest, IIT Bombay's logo, or other artwork will be allowed for linking absent a trademark license agreement.</p>
         </div>
         </div>
-        <div className="item">
+        <div className={`item ${legals.itemuoi}`}>
         <li  className="list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded" onClick={f5}>FRAMES</li>
         <div className={`${legals.whatd} ${toggle5 ? legals.whatdopen: ''} drop-content border border-light border-1`}>
             <p>Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.</p>
         </div>
         </div>
-        <div className="item">
+        <div className={`item ${legals.itemuoi}`}>
         <li   className="list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded" onClick={f6}>CONTENT LIABILITY</li>
         <div className={`${legals.whatd} ${toggle6 ? legals.whatdopen: ''} drop-content border border-light border-1`}>
             <p>We shall not be held responsible for any content that appears on your Website. You agree to protect and defend us against all claims that are rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene, or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.</p>
         </div>
         </div>
-        <div className="item">
+        <div className={`item ${legals.itemuoi}`}>
         <li  className="list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded" onClick={f7}>RESERVATION OF RIGHTS</li>
         <div className={`${legals.whatd} ${toggle7 ? legals.whatdopen: ''} drop-content border border-light border-1`}>
             <p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amend these terms and conditions and its linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
         </div>
         </div>
-        <div className="item">
+        <div className={`item ${legals.itemuoi}`}>
         <li   className="list-group-item text-light bg-dark bg-opacity-50 border border-light border-1 rounded" onClick={f8}>DISCLAIMER</li>
         <div className={`${legals.whatd} ${toggle8 ? legals.whatdopen: ''} drop-content border border-light border-1`}>
             <p>To the maximum extent permitted by applicable law, we exclude all representations, warranties, and conditions relating to our website and the use of this website. Nothing in this disclaimer will:</p>
