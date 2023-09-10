@@ -6,13 +6,13 @@ const coordidata = [
     department: "Overall Coordinator",
     name: "Shobhit Aggarwal",
     email: "shobhit@techfest.org",
-    phone: "-"
+    phone: "9780151043"
   },
   {
     department: "Overall Coordinator",
     name: "Pavithra Pilli",
     email: "pavithra@techfest.org",
-    phone: "-"
+    phone: "9892571526"
   },
   {
     department: "Competitions Manager",
@@ -66,7 +66,7 @@ const coordidata = [
     department: "Exhibitions Manager",
     name: "Gourish Singhal ",
     email: "gourish@techfest.org",
-    phone: "8928455606"
+    phone: "9424873725"
   },
   {
     department: "Technoholix Manager",
@@ -138,22 +138,19 @@ const coordidata = [
     department: "Web Manager",
     name: "Yatharth Manchanda",
     email: "yatharth@techfest.org",
-    phone: "8307139636"
+    phone: "8168921833"
   },
   // Add more coordinator objects as needed
 ];
 
 const Contact = () => {
   return (
-    <div>
-      <nav>
-        {/* Include your navigation component here */}
-      </nav>
+    <div className='contBackground'>
 
-      <div className="container" style={{ marginTop: '8rem', marginBottom:'10rem'}}>
-        <p className="text-center" style={{ fontSize: '10vw', fontWeight: '1000',fontFamily:'Animales'}}>
+      <div className="container contContainer">
+        <h1 className="text-center" style={{ fontSize: '7vw', fontFamily: 'Forum',fontFamily:'Animales'}}>
           Contact Us
-        </p>
+        </h1>
 
         <div className='mainContactUs'>
           <div className="row label justify-content-space-between" style={{ marginTop: '5vh', marginBottom: '1.5vw' }}>
@@ -169,7 +166,7 @@ const Contact = () => {
            style={{
              border: '1px solid white',
              borderRadius: '10px',
-            //  padding: '10px',
+             // padding: '10px',
              marginBottom: '1rem',
              backgroundColor: 'transparent',
              transition: 'background-color 0.3s ease', // Add transition for smooth effect

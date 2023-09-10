@@ -14,15 +14,16 @@
 .container{
     font-family: 'Animales'; }
 
-.background{
-    background-image: url('./assets/bgweb.jpg');
-    background-size: cover;
-    position:fixed;
-    height: 100vh;
-    width: 100vw;
+.contBackground{
+    background-image: url('./assets/museum-corridor-4-1.jpg');
+    /* background-size: cover; */
+    background-attachment: fixed;
+    height: 210vh;
+    width: auto;
     top: 0px;
     z-index: -1;
-    overflow-y: scroll;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* .contactNum{
@@ -33,4 +34,16 @@
 
 .contactMail:hover ,.contactNum:hover{
     cursor: pointer;
+}
+
+.contContainer{
+    position: relative;
+    top: 6em;
+    /* margin-bottom: 300px; */
+}
+
+@media (max-width: 768px){
+    .contBackground{
+        height: 280px;
+    }
 }

@@ -22,7 +22,7 @@ import bjarne from '../Lectures/assets/mapContent/Europe/bjarne.jpg';
 import bruce from '../Lectures/assets/mapContent/Europe/bruce.jpg';
 import jurgen from '../Lectures/assets/mapContent/Europe/jurgen.jpg';
 import kurt from '../Lectures/assets/mapContent/Europe/kurt.jpg';
-import lars from '../Lectures/assets/mapContent/Europe/Lars.jpg';
+import lars from '../Lectures/assets/Lars.jpg';
 import lyn from '../Lectures/assets/mapContent/Europe/lyn.jpg'; 
 import serge from '../Lectures/assets/mapContent/Europe/serge.jpg';
 import tarja from '../Lectures/assets/mapContent/Europe/Tarja-Photo.jpg';
@@ -144,7 +144,7 @@ const WorldMap = () => {
               {/* <p className="city-name-over-image">{hoveredCity.name}</p> */}
             </div>
             {hoveredCity.info1 && <div className="city-info-container">
-              <img src={hoveredCity.image1} alt={hoveredCity.name} className="ddinfo" />
+              <img src={hoveredCity.image1} alt={hoveredCity.in1name} className="ddinfo" />
               <div className="mapData">
                 <p className="mapDataName">{hoveredCity.in1name}</p>
                 <p className="mapDataCont">{hoveredCity.in1cont}</p>
@@ -153,7 +153,7 @@ const WorldMap = () => {
             </div>
 }
            {hoveredCity.info2 && <div className="city-info-container">
-              <img src={hoveredCity.image2} alt={hoveredCity.name} className="ddinfo" />
+              <img src={hoveredCity.image2} alt={hoveredCity.in2name} className="ddinfo" />
               <div className="mapData">
                 <p className="mapDataName">{hoveredCity.in2name}</p>
                 <p className="mapDataCont">{hoveredCity.in2cont}</p>
@@ -162,7 +162,7 @@ const WorldMap = () => {
             </div>
 }
             {hoveredCity.info3 && <div className="city-info-container">
-              <img src={hoveredCity.image3} alt={hoveredCity.name} className="ddinfo" />
+              <img src={hoveredCity.image3} alt={hoveredCity.in3name} className="ddinfo" />
               <div className="mapData">
                 <p className="mapDataName">{hoveredCity.in3name}</p>
                 <p className="mapDataCont">{hoveredCity.in3cont}</p>
@@ -171,7 +171,7 @@ const WorldMap = () => {
             </div>
 }
             {hoveredCity.info4 && <div className="city-info-container">
-              <img src={hoveredCity.image4} alt={hoveredCity.name} className="ddinfo" />
+              <img src={hoveredCity.image4} alt={hoveredCity.in4name} className="ddinfo" />
               <div className="mapData">
                 <p className="mapDataName">{hoveredCity.in4name}</p>
                 <p className="mapDataCont">{hoveredCity.in4cont}</p>
@@ -180,7 +180,7 @@ const WorldMap = () => {
             </div>
 }
             {hoveredCity.info5 && <div className="city-info-container">
-              <img src={hoveredCity.image5} alt={hoveredCity.name} className="ddinfo" />
+              <img src={hoveredCity.image5} alt={hoveredCity.in5name} className="ddinfo" />
               <div className="mapData">
                 <p className="mapDataName">{hoveredCity.in5name}</p>
                 <p className="mapDataCont">{hoveredCity.in5cont}</p>
@@ -189,7 +189,7 @@ const WorldMap = () => {
             </div>
 }
             { hoveredCity.info6 && <div className="city-info-container">
-              <img src={hoveredCity.image6} alt={hoveredCity.name} className="ddinfo" />
+              <img src={hoveredCity.image6} alt={hoveredCity.in6name} className="ddinfo" />
               <div className="mapData">
                 <p className="mapDataName">{hoveredCity.in6name}</p>
                 <p className="mapDataCont">{hoveredCity.in6cont}</p>
@@ -198,7 +198,7 @@ const WorldMap = () => {
             </div>
 }
             { hoveredCity.info7 && <div className="city-info-container">
-              <img src={hoveredCity.image7} alt={hoveredCity.name} className="ddinfo" />
+              <img src={hoveredCity.image7} alt={hoveredCity.in7name} className="ddinfo" />
               <div className="mapData">
                 <p className="mapDataName">{hoveredCity.in7name}</p>
                 <p className="mapDataCont">{hoveredCity.in7cont}</p>
@@ -208,7 +208,7 @@ const WorldMap = () => {
             }
             { hoveredCity.info8 && 
             <div className="city-info-container">
-              <img src={hoveredCity.image8} alt={hoveredCity.name} className="ddinfo" />
+              <img src={hoveredCity.image8} alt={hoveredCity.in8name} className="ddinfo" />
               <div className="mapData">
                 <p className="mapDataName">{hoveredCity.in8name}</p>
                 <p className="mapDataCont">{hoveredCity.in8cont}</p>
@@ -218,7 +218,7 @@ const WorldMap = () => {
           }
           { hoveredCity.info9 && 
             <div className="city-info-container">
-              <img src={hoveredCity.image9} alt={hoveredCity.name} className="ddinfo" />
+              <img src={hoveredCity.image9} alt={hoveredCity.in9name} className="ddinfo" />
               <div className="mapData">
                 <p className="mapDataName">{hoveredCity.in9name}</p>
                 <p className="mapDataCont">{hoveredCity.in9cont}</p>
@@ -228,7 +228,7 @@ const WorldMap = () => {
           }
           { hoveredCity.info10 && 
             <div className="city-info-container">
-              <img src={hoveredCity.image10} alt={hoveredCity.name} className="ddinfo" />
+              <img src={hoveredCity.image10} alt={hoveredCity.in10name} className="ddinfo" />
               <div className="mapData">
                 <p className="mapDataName">{hoveredCity.in10name}</p>
                 <p className="mapDataCont">{hoveredCity.in10cont}</p>
@@ -238,7 +238,7 @@ const WorldMap = () => {
           }
           { hoveredCity.info11 && 
             <div className="city-info-container">
-              <img src={hoveredCity.image11} alt={hoveredCity.name} className="ddinfo" />
+              <img src={hoveredCity.image11} alt={hoveredCity.in11name} className="ddinfo" />
               <div className="mapData">
                 <p className="mapDataName">{hoveredCity.in11name}</p>
                 <p className="mapDataCont">{hoveredCity.in11cont}</p>
@@ -248,7 +248,7 @@ const WorldMap = () => {
           }
           { hoveredCity.info12 && 
             <div className="city-info-container">
-              <img src={hoveredCity.image12} alt={hoveredCity.name} className="ddinfo" />
+              <img src={hoveredCity.image12} alt={hoveredCity.in12name} className="ddinfo" />
               <div className="mapData">
                 <p className="mapDataName">{hoveredCity.in12name}</p>
                 <p className="mapDataCont">{hoveredCity.in12cont}</p>
@@ -258,7 +258,7 @@ const WorldMap = () => {
           }
           { hoveredCity.info13 && 
             <div className="city-info-container">
-              <img src={hoveredCity.image13} alt={hoveredCity.name} className="ddinfo" />
+              <img src={hoveredCity.image13} alt={hoveredCity.in13name} className="ddinfo" />
               <div className="mapData">
                 <p className="mapDataName">{hoveredCity.in13name}</p>
                 <p className="mapDataCont">{hoveredCity.in13cont}</p>
@@ -268,7 +268,7 @@ const WorldMap = () => {
           }
           { hoveredCity.info14 && 
             <div className="city-info-container">
-              <img src={hoveredCity.image14} alt={hoveredCity.name} className="ddinfo" />
+              <img src={hoveredCity.image14} alt={hoveredCity.in14name} className="ddinfo" />
               <div className="mapData">
                 <p className="mapDataName">{hoveredCity.in14name}</p>
                 <p className="mapDataCont">{hoveredCity.in14cont}</p>
@@ -278,7 +278,7 @@ const WorldMap = () => {
           }
           { hoveredCity.info15 && 
             <div className="city-info-container">
-              <img src={hoveredCity.image15} alt={hoveredCity.name} className="ddinfo" />
+              <img src={hoveredCity.image15} alt={hoveredCity.in15name} className="ddinfo" />
               <div className="mapData">
                 <p className="mapDataName">{hoveredCity.in15name}</p>
                 <p className="mapDataCont">{hoveredCity.in15cont}</p>
