@@ -48,6 +48,7 @@ const JoinTeam = () => {
          .put("/api/join_team/", data, config)
          .then((response) => {
             console.log(response.data);
+            alert('Joined succesfully!!');
             navigate(`/competitions/${compiName}`);
          })
          .catch((error) => {

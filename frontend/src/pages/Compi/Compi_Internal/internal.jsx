@@ -126,7 +126,7 @@ const Internal = () => {
                   </div>
                 </div>
                 </div>
-              ) : (
+              ) : user ? (
                 <div>
                   <div className={styles.int_reg}>
                     <div className={styles.reg_rect1}></div>
@@ -135,6 +135,15 @@ const Internal = () => {
                     </div>
                   </div>
                 </div>
+              ) : (
+                <div>
+                <div className={styles.int_reg} onClick={handleGoogleSignIn}>
+                  <div className={styles.reg_rect1}></div>
+                  <div className={styles.reg_rect2}>
+                    <Link to={`register`}>Register</Link>
+                  </div>
+                </div>
+              </div>
               )}
           </div>
         </div>

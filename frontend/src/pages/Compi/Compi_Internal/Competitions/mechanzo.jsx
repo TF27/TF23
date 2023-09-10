@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
-import whatsapplink from '../../../../components/whatsapp/link';
+import Whatsapplink from '../../../../components/whatsapp/link';
 
 const Mechanzo = () => {
     const [activeCity, setActiveCity] = useState('About');
@@ -106,7 +106,8 @@ const Mechanzo = () => {
         objectFit: 'scale-down', 
         paddingRight: '8px',
     }
-
+    const walink1 = "https://chat.whatsapp.com/FMwMsbJwiI89JnjqwOWbE8";
+    const dslink1 = "https://chat.whatsapp.com/FMwMsbJwiI89JnjqwOWbE8";
 
     return ( 
       <div>
@@ -183,14 +184,15 @@ const Mechanzo = () => {
               <div className={styles.info_data}>
                     Gourish Singhal<br/>
                     <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:gourish@techfest.org`}>gourish@techfest.org</div>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9424873725`}>9424873725</div>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9424873725`}>+91 94248 73725</div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className={styles.grouplink}>
-      <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
+      <div className={styles.wabutton }><Whatsapplink walink={walink1} dslink={dslink1} target="_blank"/>
+</div>
     </div>
     </div>
      );

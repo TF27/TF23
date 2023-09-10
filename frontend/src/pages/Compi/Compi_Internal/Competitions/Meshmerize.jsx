@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
-import whatsapplink from '../../../../components/whatsapp/link';
+import Whatsapplink from '../../../../components/whatsapp/link';
 
 
 const Meshmerize = () => {
@@ -105,7 +105,8 @@ const Meshmerize = () => {
         margin: 'auto',
         rowContentMarginBottom: '0',
       }
-
+      const walink1 = "https://chat.whatsapp.com/CYpCpfezIEf09EtiY591Y5";
+      const dslink1 = "https://chat.whatsapp.com/CYpCpfezIEf09EtiY591Y5";
     return ( 
       <div>
       <div className={styles.impdata}>
@@ -177,16 +178,17 @@ const Meshmerize = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Abhishek Kedare<br/>
-                    <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:abhishek@techfest.org`}>abhishek@techfest.org</div>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7558588254`}>7558588254</div>
+              Rishu Bhadani<br/>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8709397909`}>+91 87093 97909</div>
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `rishu.techfest.iitb@gmail.com`}>rishu.techfest.iitb@gmail.com</div>
+                    
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className={styles.grouplink}>
-      <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
+      <div className={styles.wabutton }><Whatsapplink walink={walink1} dslink={dslink1} target="_blank"/></div>
     </div>
     </div>
      );

@@ -35,6 +35,7 @@ const LeaveTeam = () => {
       .put('/api/leave_team/', data, config)
       .then((response) => {
         console.log(response.data);
+        alert('Left succesfully!!');
         navigate(`/competitions/${compiName}`)
       })
       .catch((error) => {

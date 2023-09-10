@@ -35,7 +35,12 @@
 
 .bgitis {
    background: rgba(0, 0, 0, 0.5);
-   height: 100vh;
+   height: 120vh;
+}
+@media (max-screen: 992px){
+   .bgitis{
+      height: 210vh;
+   }
 }
 
 .overlay {

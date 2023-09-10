@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
-import whatsapplink from '../../../../components/whatsapp/link';
+import Whatsapplink from '../../../../components/whatsapp/link';
 import './x.css';
 
 const UrbanFuturism = () => {
@@ -106,11 +106,12 @@ const UrbanFuturism = () => {
         margin: 'auto',
         rowContentMarginBottom: '0',
       }
-
+      const walink1 = "https://chat.whatsapp.com/EngkWnlETos8hTxMMkpmbE";
+      const dslink1 = "https://chat.whatsapp.com/EngkWnlETos8hTxMMkpmbE";
     return (
         <div className={styles.mWholeData}>
             <div className={styles.grouplink}>
-            <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
+            <div className={styles.wabutton }><Whatsapplink walink={walink1} dslink={dslink1} target="_blank"/></div>
             </div>
             <div>
                 <div onClick={() => handleClickOpen('About')} className={`${styles.whatu} ${open === 'About' ? styles.whatuOpen : ''}`}>
@@ -186,9 +187,9 @@ const UrbanFuturism = () => {
                 <div className={`${styles.whatd} ${open === 'Contact' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                    Abhishek<br/>
-                    +91 75585 88254<br/>
-                    abhishek@techfest.org
+                    Satyam Gupta<br/>
+                    +91 80033 98039<br/>
+                    satyam2004.techfest@gmail.com
                     </div>
                 </div>
             </div>

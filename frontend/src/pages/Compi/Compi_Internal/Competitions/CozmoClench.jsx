@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
-import whatsapplink from '../../../../components/whatsapp/link';
+import Whatsapplink from '../../../../components/whatsapp/link';
 
 
 const CozmoClench = () => {
@@ -110,7 +110,8 @@ const CozmoClench = () => {
         objectFit: 'scale-down', 
         paddingRight: '8px',
     }
-
+    const walink1 = "https://chat.whatsapp.com/J5ne9cb7TvM5gdOrmhIqcc";
+    const dslink1 = "https://chat.whatsapp.com/J5ne9cb7TvM5gdOrmhIqcc";
 
     return ( 
       <div>
@@ -187,14 +188,14 @@ const CozmoClench = () => {
               <div className={styles.info_data}>
               Tarun Kumar<br/>
                   <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:tarun01.techfest@gmail.com`}>tarun01.techfest@gmail.com</div>
-                  <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7549952736`}>7549952736</div>
+                  <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7549952736`}>+91 75499 52736</div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className={styles.grouplink}>
-      <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
+      <div className={styles.wabutton }><Whatsapplink walink={walink1} dslink={dslink1} target="_blank"/></div>
     </div></div>
      );
 }
