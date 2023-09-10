@@ -33,6 +33,8 @@ import c8 from '../../pages/Compi/assets/c8.jpg';
 import c9 from '../../pages/Compi/assets/c9.jpg';
 import c10 from '../../pages/Compi/assets/c10.jpg';
 
+import exhi_image from './assets/exhi.png'
+
 const Exhibition =()=>{
 
     const [isMobile, setIsMobile] = useState(false);
@@ -51,6 +53,11 @@ const Exhibition =()=>{
     
     return(
         <div style={{height:'120vh'}}>
+          <div className={parallax.exhiImage}>
+              <img src={exhi_image} alt="Exhibition"/>
+            </div>
+           
+
             <ImageOne/>
            <div className={parallax.exhi}>
            <div className={parallax.blackGradienttop}/>  

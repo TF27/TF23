@@ -12,13 +12,13 @@ import frame from './../static/card/Frame.png';
 import WhatsappShareButton from '../../../components/share/whatsapp';
 
 import Meshmerize from './Competitions/m-meshmerize';
-import Machanzo from './Competitions/m-mechanzo';
 import HackAI from './Competitions/m-HackAI';
 import CozmoClench from './Competitions/m-CozmoClench';
 import TechfestOlympiad from './Competitions/m-TechfestOlympiad';
 import Codecode from './Competitions/m-codecode';
-import UrbanFuturism from './Competitions/UrbanFuturism';
-import TechAid from './Competitions/TechAid';
+import UrbanFuturism from './Competitions/m-UrbanFuturism';
+import TechAid from './Competitions/m-TechAid';
+import Mechanzo from './Competitions/m-mechanzo';
 
 
 const MInternal = () => {
@@ -130,13 +130,13 @@ const MInternal = () => {
           </div>
         </div>
           {compiName === 'meshmerize' && <Meshmerize />}
-          {compiName === 'mechanzo league' && <Machanzo />}
+          {compiName === 'mechanzo-league' && <Mechanzo />}
           {compiName === 'hack-aI' && <HackAI/>}
           {compiName === 'cozmoclench' && <CozmoClench/>}
           {compiName === 'techfest olympiad' && <TechfestOlympiad/>}
           {compiName === 'codecode' && <Codecode/>}
-          {compiName === 'urban furturism' && <UrbanFuturism/>}
-          {compiName === 'tech aid' && <TechAid/>}
+          {compiName === 'urban-furturism' && <UrbanFuturism/>}
+          {compiName === 'tech-aid' && <TechAid/>}
       </div>
     ));
   }

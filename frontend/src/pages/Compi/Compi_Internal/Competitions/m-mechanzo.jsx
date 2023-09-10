@@ -4,7 +4,7 @@ import Faq from 'react-faq-component';
 import whatsapplink from '../../../../components/whatsapp/link';
 import './x.css';
 
-const Machanzo = () => {
+const Mechanzo = () => {
 
     const [open, setOpen] = useState(false);
 
@@ -196,4 +196,4 @@ const Machanzo = () => {
     );
 }
 
-export default Machanzo;
+export default Mechanzo;

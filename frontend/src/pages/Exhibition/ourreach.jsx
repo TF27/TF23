@@ -15,7 +15,7 @@ function ourReach() {
             <Counter targetValue={50} duration={2000} scrollVal={500} plus='+'/>
           </div>
           <div>
-            <h2>International Universities</h2>
+            <h2>International Exhibits Universities</h2>
           </div>
         </div>
         <div className="buffer">
@@ -24,7 +24,7 @@ function ourReach() {
             <Counter targetValue={500} duration={2000} scrollVal={500} plus='+'/>
           </div>
           <div>
-            <h2>International Exhibits</h2>
+            <h2>International</h2>
           </div>
         </div>
         <div className="buffer">
