@@ -150,7 +150,7 @@ def compi_reg_form(request):
             tf_id = f"TF-23{next_tf_id}"
             compi_reg_serializer.save(tf_id=tf_id)
             # compi_reg_serializer.save()
-            subject = "Compi Registration"
+            subject = f"Compi Registration"
             message = f"You have successfully registered for the {compi_reg_serializer.validated_data.get('compi')} with email {compi_reg_serializer.validated_data.get('email')} and name {compi_reg_serializer.validated_data.get('name')}"
             from_email = 'noreply@techfest.org'
             recipient_list = [compi_reg_serializer.validated_data.get('email')]
