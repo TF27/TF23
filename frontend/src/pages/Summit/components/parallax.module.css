@@ -14,7 +14,7 @@
   }
   
   .layer1 {
-    background-image: url('../assets/summit_bg.png');
+    background-image: url('../assets/summit_bg.jpg');
     z-index: -1;
   position: relative;
   background-size: cover;
@@ -44,7 +44,7 @@
   }
 
   .image {
-  background-image: url('../assets/summit_bg.png');
+  background-image: url('../assets/summit_bg.jpg');
   min-height: 10vh;
   position: relative;
   background-size: cover;

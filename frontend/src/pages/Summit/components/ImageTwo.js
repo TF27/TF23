@@ -1,8 +1,8 @@
 import React from 'react';
 import parallax from './parallax.module.css';
 import Notify from "../../../components/Notify/notify";
-import sum1 from "../assets/sum1.png";
-import sum2 from "../assets/sum2.png";
+import sum1 from "../assets/sum1.jpg";
+import sum2 from "../assets/sum2.jpg";
 //import Grid from './Grid';
 
 const ImageTwo = () => {

@@ -10,6 +10,7 @@ import i2013 from './assets/2013.jpg'
 import i2014 from './assets/2014.jpg'
 import i2017 from './assets/2017.jpg'
 import i2018 from './assets/2018.jpg'
+import i2021 from './assets/2021.jpg'
 import i2022 from './assets/2022.jpg'
 
   const images = [
@@ -23,6 +24,7 @@ import i2022 from './assets/2022.jpg'
     { id: 'edm', url: i2014 , text: '2014', additionalText: 'hunfksadnufkbsdjfbsudkfbskdjfbs' },
     { id: 'edm', url: i2017 , text: '2017', additionalText: 'hunfksadnufkbsdjfbsudkfbskdjfbs' },
     { id: 'edm', url: i2018 , text: '2018', additionalText: 'hunfksadnufkbsdjfbsudkfbskdjfbs' },
+    { id: 'edm', url: i2021 , text: '2021', additionalText: 'hunfksadnufkbsdjfbsudkfbskdjfbs' },
     { id: 'edm', url: i2022 , text: '2022', additionalText: 'hunfksadnufkbsdjfbsudkfbskdjfbs' },
   ];
 
@@ -31,7 +33,7 @@ import i2022 from './assets/2022.jpg'
       <div className={`history-image ${id}`}>
         {text && <div className="himage-text">{text}</div>}
         <img src={imageUrl} alt={text} className='himage'/>
-        {additionalText && <div className="hadditional-text">{additionalText}</div>}
+        {/* {additionalText && <div className="hadditional-text">{additionalText}</div>} */}
       </div>
     </div>
   );
@@ -60,7 +62,7 @@ import i2022 from './assets/2022.jpg'
       if (images[currentIndex].id === 'blurr') {
         timer = setInterval(() => {
           handleNextButtonClick();
-        }, 2000); // Change image every 3 seconds (adjust as needed)
+        }, 1000); // Change image every 3 seconds (adjust as needed)
       }
       return () => clearInterval(timer);
     }, [currentIndex, handleNextButtonClick]);
@@ -86,11 +88,11 @@ import i2022 from './assets/2022.jpg'
           ))}
         </div>
           <div className="history-button">
-          <button onClick={handlePreviousButtonClick} >
+          <button onClick={handlePreviousButtonClick} id='Button' >
             Previous
           </button>
-          <button onClick={handleNextButtonClick}>
-            Click
+          <button onClick={handleNextButtonClick} id='Button'>
+            Next
           </button>
         </div>
         </div>
