@@ -19,23 +19,23 @@ import comp3 from "./assets/explore/Compi3.jpg";
 import comp4 from "./assets/explore/Compi4.jpg";
 import ogimg from "./images/techfestiitb.png";
 
-import MetaTags from 'react-meta-tags';
+// import MetaTags from 'react-meta-tags';
 
-class Component1 extends React.Component {
-  render() {
-    return (
-        <div class="wrapper">
-          <MetaTags>
-            <title>Page 1</title>
-            <meta id="meta-description" name="description" content="Tecfest, IIT Bombay" />
-            <meta id="og-title" property="og:title" content="Homepage" />
-            <meta id="og-image" property="og:image" content="images/techfestiitb.png" />
-          </MetaTags>
-          <div class="content"> Techfest is Asia's Largest Science and Technology Festival </div>
-        </div>
-      )
-  }
-}
+// class Component1 extends React.Component {
+//   render() {
+//     return (
+//         <div class="wrapper">
+//           <MetaTags>
+//             <title>Page 1</title>
+//             <meta id="meta-description" name="description" content="Tecfest, IIT Bombay" />
+//             <meta id="og-title" property="og:title" content="Homepage" />
+//             <meta id="og-image" property="og:image" content="images/techfestiitb.png" />
+//           </MetaTags>
+//           <div class="content"> Techfest is Asia's Largest Science and Technology Festival </div>
+//         </div>
+//       )
+//   }
+// }
 
 const dataCompetitions = [
   {
