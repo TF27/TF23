@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
+import whatsapplink from '../../../../components/whatsapp/link';
+
 
 const TechfestOlympiad = () => {
     const [activeCity, setActiveCity] = useState('About');
@@ -70,6 +72,7 @@ const TechfestOlympiad = () => {
 
 
     return ( 
+      <div>
       <div className={styles.impdata}>
         <div className={styles.info_head}>
           {/* <div className={styles.bar_extra}></div> */}
@@ -148,6 +151,10 @@ const TechfestOlympiad = () => {
           </div>
         </div>
       </div>
+      <div className={styles.grouplink}>
+      <div className={styles.wabutton }>{whatsapplink('https://www.youtube.com/')}</div>
+    </div>
+    </div>
      );
 }
  
