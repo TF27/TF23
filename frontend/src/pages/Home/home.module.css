@@ -112,15 +112,39 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+  .headU {
+    width: 100%;
+    height:auto;
+    max-width: 100vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+  }
 
-.headU {
+  @media (min-width:848px) {
+    .headU head {
+      width: 100%;
+      height:auto;
+      display: flex;
+      justify-content: center;
+    
+    }  
+    .headU headm {
+      opacity: 0;
+    }
+  }
+@media (max-width:848px) {
+.headU headm {
   width: 100%;
-  max-width: 100vw;
-  position: absolute;
+  height:auto;
   display: flex;
   justify-content: center;
-}
 
+}
+.headU head {
+  opacity: 0;
+}
+}
 .clouds {
   position: fixed;
   height: 100vh;
@@ -181,9 +205,24 @@
   font-size: 20px;
 }
 
-.mmcImg {
-  width: 45%;
+@media (max-width:848px) {
+  .mmcImg {
+    width: 65%;
+  } 
 }
+
+@media (min-width:848px) 
+{
+  .mmcImg {
+    width: 45%;
+  } 
+}@media (max-width:535px) 
+{
+  .mmcImg {
+    width: 250px;
+  } 
+}
+
 
 .themeData {
   /* display: flex; */
@@ -283,7 +322,7 @@
   }
   .themeText{
     text-align: center;
-    font-size: small;
+    font-size:medium ;
   }
 }
 

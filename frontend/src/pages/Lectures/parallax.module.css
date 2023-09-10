@@ -32,6 +32,7 @@
   background-repeat: no-repeat;
   background-position-y:30%;
   background-position-x: center;
+  height: 100vh;
 }
 
 .layer3 {
@@ -52,7 +53,8 @@
   z-index: -1;
   background-attachment: fixed;
   top: -18vh;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat; 
+  background-position: center;
 }
 .xyz{
   display: inline-block;
@@ -87,6 +89,18 @@
   z-index: 1000;
 }
 
+@media screen and (max-width: 934px) {
+  .blackGradientbottom::after{
+    bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .blackGradientbottom::after{
+    bottom: 100px;
+  }
+}
+
 .blackGradienttop::after{
     content: '';
     position: absolute;
@@ -97,6 +111,10 @@
     background: linear-gradient(to top,transparent, rgba(0, 0, 0, .6    ), rgba(0, 0, 0, 1));
     pointer-events: none;
   }
+
+.notify{
+  z-index: 1000;
+}
 
   
   

@@ -8,14 +8,14 @@ import DissolveTeam from "./Teams/dissolveTeam";
 import LeaveTeam from "./Teams/leaveTeam";
 // Import images
 import backimg1 from './../static/img/exp_bg.png';
-import backimg2 from './../static/img/img7.jpg';
+import backimg2 from './../static/img/exp_bg2.png';
 import Meshmerize from './Competitions/Meshmerize';
 import frame from './../static/card/Frame.png';
 import HackAI from './Competitions/HackAI';
 import Codecode from './Competitions/Codecode';
 import TechAid from './Competitions/TechAid';
 import JoinTeam from './Teams/joinTeam';
-import Mechanzo from './Competitions/Mechanzo';
+import Mechanzo from './Competitions/mechanzo';
 import TechfestOlympiad from './Competitions/TechfestOlympiad';
 import UrbanFuturism from './Competitions/UrbanFuturism'
 import SingleParti from './Teams/single_parti';
@@ -102,7 +102,7 @@ const Internal = () => {
                   <LeaveTeam />
                 </div>
               ) : data.is_registered ? (
-                <div styles={styles.lolReg}>
+                <div className={styles.lolReg} style={{marginTop: '20px'}}>
                   You have registered successfully!
                 <div className={styles.compi_team}>
                   <div className={styles.create_team}>
@@ -148,9 +148,8 @@ const Internal = () => {
       backgroundImage: `url(${imageList[0]})`, // Initial background image
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
-      height: "100vh",
-      width: "100%",
+      backgroundPosition: "center center",
+      width: "100vw",
       position: "absolute",
       top: "0",
       zIndex: "-1",
@@ -168,7 +167,7 @@ const Internal = () => {
     }
   `;
 
-   return (
+   return ( 
       <div className={styles.explore} style={top}>
          <style>{keyframes}</style>
          <div className={styles.bgitis}>
