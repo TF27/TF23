@@ -66,7 +66,7 @@ const Lectures = () => {
             CHECK THIS OUT
           </h1>
           <div>
-            <h2 style={{ marginBottom: "-10px" }}>Exhibitions</h2>
+            <h2 style={{ marginBottom: "-10px" }}>Competitions</h2>
             <Carousel
               i1={c1}
               i2={c2}
@@ -83,14 +83,14 @@ const Lectures = () => {
             <div className="difPage">
               <div className="check_rect1"></div>
               <div className="check_rect2">
-                <Link to="/competitions">Competitions</Link>
+                <Link to="/competitions">Explore</Link>
               </div>
               <br /><br /><br /><br /><br /><br /><br /><br />
             </div>
           </div>
           <div>
             <h2 style={{ marginTop: "40px", marginBottom: "-10px" }}>
-              Lectures
+              Exhibitions
             </h2>
             <Carousel
               i1={i1}
@@ -107,7 +107,7 @@ const Lectures = () => {
             <div className="difPage">
               <div className="check_rect1"></div>
               <div className="check_rect2">
-                <Link to="/exhibitions">Exhibitions</Link>
+                <Link to="/exhibitions">Explore</Link>
               </div>
             </div>
           </div>

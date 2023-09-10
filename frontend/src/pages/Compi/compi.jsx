@@ -90,7 +90,7 @@ const Compi = () => {
           CHECK THIS OUT
         </h1>
         <div>
-          <h2 style={{ marginBottom: "-20px" }}>Competitions</h2>
+          <h2 style={{ marginBottom: "-20px" }}>Exhibition</h2>
           <Carousel
             i1={i1}
             i2={i2}
@@ -106,7 +106,7 @@ const Compi = () => {
           <div className="difPage">
             <div className="check_rect1"></div>
             <div className="check_rect2">
-              <Link to="/exhibitions">Exhibitions</Link>
+              <Link to="/exhibitions">Explore</Link>
             </div>
           </div>
           <br /><br /><br /><br /><br /><br /><br /><br />
@@ -128,7 +128,7 @@ const Compi = () => {
           <div className="difPage">
             <div className="check_rect1"></div>
             <div className="check_rect2">
-              <Link to="/lectures">Lectures</Link>
+              <Link to="/lectures">Explore</Link>
             </div>
           </div>
         </div>
