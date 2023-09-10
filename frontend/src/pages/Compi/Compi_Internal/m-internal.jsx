@@ -25,7 +25,14 @@ const MInternal = () => {
   const { compiName } = useParams();
 
   const [data, setData] = useState([]);
-  const { user } = UserAuth();
+  const { googleSignIn, user, logOut } = UserAuth();
+  const handleGoogleSignIn = async () => {
+     try {
+        await googleSignIn();
+     } catch (error) {
+        console.log(error);
+     }
+  };
 
   const google_id = user?.email;
   const ProblemStatements = `https://rain.techfest.org/media/ProblemStatements/${compiName}.pdf`;
@@ -109,7 +116,7 @@ const MInternal = () => {
                   </div>
                 </div>
               </div>
-            ) : (
+            ) : user ? (
               <div className={styles.doIt}>
                 <div className={styles.int_reg}>
                   <div className={styles.reg_rect1}></div>
@@ -120,6 +127,15 @@ const MInternal = () => {
                 <div className={styles.share}>
                   <div className={styles.share_rect1}></div>
                   <div className={styles.share_rect2}><WhatsappShareButton /></div>
+                </div>
+              </div>
+            ) : (
+              <div className={styles.doIt}>
+                <div className={styles.int_reg} onClick={handleGoogleSignIn}>
+                  <div className={styles.reg_rect1}></div>
+                  <div className={styles.reg_rect2}>
+                    <Link to={`register`}>Register</Link>
+                  </div>
                 </div>
               </div>
             )}

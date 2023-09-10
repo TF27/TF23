@@ -225,11 +225,11 @@ const Technorion = () => {
                   {/* <Link to={data.name}></Link> */}
                   <div className={styles.card_tag}>
                      <span>
-                        <img src={dot} alt="dot" />
+                        <img src={dot} alt="zonal city" />
                      </span>
                      <h3 className={styles.card_tag}>{data.tag}</h3>
                      <span>
-                        <img src={dot} alt="dot" />
+                        <img src={dot} alt="zonal city" />
                      </span>
                   </div>
                   <div className={styles.card_imgo}>
