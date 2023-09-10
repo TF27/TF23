@@ -55,7 +55,7 @@ const Lectures = () => {
       <div className={styles.image}>
       <div className={styles.blackGradienttop}/>
         <Notify />
-        <div className="mabilemap">{isMobile ? <MapClick /> : <WorldMap />}</div>
+        <div>{isMobile ? <MapClick /> : <WorldMap />}</div>
         <OurReach />
         <div className="checkThis">
           <h1 style={{ marginTop: "100px", marginBottom: "40px" }}>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./compi_animation.css";
 import img1 from "./static/img/img1.png"
-// git
+
 
 
 export const Frame3 = () => {
