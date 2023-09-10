@@ -115,6 +115,7 @@
 
 .headU {
   width: 100%;
+  max-width: 100vw;
   position: absolute;
   display: flex;
   justify-content: center;
