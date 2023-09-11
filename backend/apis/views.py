@@ -67,6 +67,7 @@ def get_user(request):
 def get_user_id(request):
     try:
         email = request.headers.get('X-Email')
+        # print(email)
         users = compi_reg.objects.filter(email=email)
         if users.exists():
             for user in users:
@@ -75,7 +76,7 @@ def get_user_id(request):
             user=None
     except:
         user = None
-    return user
+    return email
 
 @parser_classes([JSONParser])
 def get_compi(request):
@@ -103,13 +104,15 @@ def get_team_id(request):
 def compi_card(request):
     if request.method == 'GET':
         try: 
-            user = get_user_id(request)
-            email = user.email if user else None
+            email = get_user_id(request)
+            # email = user.email if user else None
+            # print(email)
             compi = Compi.objects.all()
             serializer = Compi_CardsSerializer(compi, many=True, context={'user': email})
             return Response(serializer.data)
         except:
             compi = Compi.objects.all()
+            print(compi)
             serializer = Compi_CardsSerializer(compi, many=True, context={'request': request})
             return Response(serializer.data)
 
