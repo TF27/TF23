@@ -6,13 +6,13 @@ const coordidata = [
     department: "Overall Coordinator",
     name: "Shobhit Aggarwal",
     email: "shobhit@techfest.org",
-    phone: "9780151043"
+    phone: "-"
   },
   {
     department: "Overall Coordinator",
     name: "Pavithra Pilli",
     email: "pavithra@techfest.org",
-    phone: "9892571526"
+    phone: "-"
   },
   {
     department: "Competitions Manager",
