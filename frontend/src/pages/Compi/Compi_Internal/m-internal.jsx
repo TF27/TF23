@@ -35,7 +35,7 @@ const MInternal = () => {
      }
   };
 
-  const google_id = user?.email;
+  const google_id = user ? user.email : null;
 
   useLayoutEffect(() => {
     console.log(window.scrollY);

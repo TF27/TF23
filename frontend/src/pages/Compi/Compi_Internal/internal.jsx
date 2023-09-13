@@ -40,7 +40,7 @@ const Internal = () => {
     window.scrollTo(0, 0);
   });
 
-  const google_id = user?.email;
+  const google_id = user ? user.email : null;
 
   useEffect(() => {
     const fetchData = async () => {
