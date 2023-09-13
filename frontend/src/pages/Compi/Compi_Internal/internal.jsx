@@ -101,7 +101,9 @@ const Internal = () => {
                 </a>
               )}
             </div>
-            {data.is_team_registered ? (
+            {user === null ? (
+              <div className={styles.compi_reg}></div>
+            ) : data.is_team_registered ? (
               <div className={styles.youhave}>
                 {" "}
                 You have successfully with your email <span>
@@ -122,14 +124,16 @@ const Internal = () => {
             {compiName === "urban-futurism" && <UrbanFuturism />}
 
             <div className={styles.team_reg}>
-              {user === null ? (<div>
+              {user === null ? (
+                <div>
                   <div className={styles.int_reg} onClick={handleGoogleSignIn}>
                     <div className={styles.reg_rect1}></div>
                     <div className={styles.reg_rect2}>
                       <Link to={`register`}>Register</Link>
                     </div>
                   </div>
-                </div>) : data.is_team_leader ? (
+                </div>
+              ) : data.is_team_leader ? (
                 <div>
                   <div className={styles.compi_team}>
                     <div className={styles.single_team}>
