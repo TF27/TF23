@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import { UserAuth } from '../../../contexts/AuthContext';
@@ -19,13 +19,14 @@ import Codecode from './Competitions/m-codecode';
 import UrbanFuturism from './Competitions/m-UrbanFuturism';
 import TechAid from './Competitions/m-TechAid';
 import Mechanzo from './Competitions/m-mechanzo';
+import JoinTeam from './Teams/joinTeam';
 
 
 const MInternal = () => {
   const { compiName } = useParams();
 
   const [data, setData] = useState([]);
-  const { googleSignIn, user, logOut } = UserAuth();
+  const { googleSignIn, user} = UserAuth();
   const handleGoogleSignIn = async () => {
      try {
         await googleSignIn();
@@ -35,7 +36,11 @@ const MInternal = () => {
   };
 
   const google_id = user?.email;
-  const ProblemStatements = `https://rain.techfest.org/media/ProblemStatements/${compiName}.pdf`;
+
+  useLayoutEffect(() => {
+    console.log(window.scrollY);
+    window.scrollTo(0, 0);
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -75,7 +80,14 @@ const MInternal = () => {
             <h3 className={styles.compi_prize}> INR {data.prize} PRIZE</h3>
           </div>
           <div className={styles.team_reg}>
-            {data.is_team_leader ? (
+            {user===null ? (<div className={styles.doIt}>
+                <div className={styles.int_reg} onClick={handleGoogleSignIn}>
+                  <div className={styles.reg_rect1}></div>
+                  <div className={styles.reg_rect2}>
+                    <Link to={`register`}>Register</Link>
+                  </div>
+                </div>
+              </div>) : data.is_team_leader ? (
               <div className={styles.lol_reg}>
                 <div className={styles.compi_team}>
                 <DissolveTeam />
@@ -102,12 +114,15 @@ const MInternal = () => {
                       <Link to={`createTeam`}>Create Team</Link>
                     </div>
                   </div>
-                  <div className={styles.join_team}>
+                  {/* <div className={styles.join_team}>
                     <div className={styles.join_rect1}></div>
                     <div className={styles.join_rect2}>
                       <Link to={`joinTeam`}>Join Team</Link>
                     </div>
-                  </div>
+                  </div> */}
+                  <div className={styles.join_team}>
+                    <JoinTeam />
+                    </div>
                   <div className={styles.single_team}>
                     <div className={styles.single_rect1}></div>
                     <div className={styles.single_rect2}>
@@ -116,7 +131,7 @@ const MInternal = () => {
                   </div>
                 </div>
               </div>
-            ) : user ? (
+            ) : (
               <div className={styles.doIt}>
                 <div className={styles.int_reg}>
                   <div className={styles.reg_rect1}></div>
@@ -127,15 +142,6 @@ const MInternal = () => {
                 <div className={styles.share}>
                   <div className={styles.share_rect1}></div>
                   <div className={styles.share_rect2}><WhatsappShareButton /></div>
-                </div>
-              </div>
-            ) : (
-              <div className={styles.doIt}>
-                <div className={styles.int_reg} onClick={handleGoogleSignIn}>
-                  <div className={styles.reg_rect1}></div>
-                  <div className={styles.reg_rect2}>
-                    <Link to={`register`}>Register</Link>
-                  </div>
                 </div>
               </div>
             )}

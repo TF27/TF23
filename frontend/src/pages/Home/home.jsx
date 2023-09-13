@@ -17,7 +17,6 @@ import comp1 from "./assets/explore/Compi1.jpeg";
 import comp2 from "./assets/explore/Compi2.jpeg";
 import comp3 from "./assets/explore/Compi3.jpg";
 import comp4 from "./assets/explore/Compi4.jpg";
-import ogimg from "./images/techfestiitb.png";
 
 // import MetaTags from 'react-meta-tags';
 
@@ -65,21 +64,25 @@ const dataCompetitions = [
 ];
 const dataLectures = [
   {
+    perLink: 'cozmoclench',
     image: lec1,
     name: "Late Dr. APJ Abdul Kalam",
     posi: "(Former President)",
   },
   {
+    perLink: 'meshmerize',
     image: lec2,
     name: "The 14th Dalai Lama",
     posi: "(Nobel Laureate, Peace)",
   },
   {
+    perLink: 'techfest olympiad',
     image: lec3,
     name: "N R Narayana Murty",
     posi: "( Co-Founder of Infosys)",
   },
   {
+    perLink: 'codecode',
     image: lec4,
     name: "Zaheer Khan",
     posi: "(Former Indian Cricketer)",
@@ -87,21 +90,25 @@ const dataLectures = [
 ];
 const dataExhibitions = [
   {
+    perLink: 'cozmoclench',
     image: exh1,
     name: "Sophia",
     posi: "(Hong Kong)",
   },
   {
+    perLink: 'meshmerize',
     image: exh2,
     name: "Gravity Industries",
     posi: "(UK)",
   },
   {
+    perLink: 'techfest olympiad',
     image: exh3,
     name: "Virgin Hyperloop",
     posi: "(USA)",
   },
   {
+    perLink: 'codecode',
     image: exh4,
     name: "AirCar",
     posi: "(Turkey)",

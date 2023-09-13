@@ -196,10 +196,9 @@ def create_team(request):
             parti_email2 = compi_team_serializer.validated_data.get('parti2_email')
             parti_email3 = compi_team_serializer.validated_data.get('parti3_email')
             print(request.data.get('parti1_email'))
-            # if not compi_reg_instances.filter(email=compi_team_serializer.validated_data.get('team_leader_email')).exists():
-            #     print(1)
-            #     res = {'success': False, 'error': 'User not registered'}
-            #     return JsonResponse(res, status=400)
+            if compi_team.filter(team_leader_email=team_leader_email, compi=compi).exists():
+                res = {'success': False, 'error': 'Team already formed'}
+                return JsonResponse(res, status=400)
             if parti_email1 and not compi_reg_instances.filter(email=request.data.get('parti1_email')).exists():
                 print(2)
                 res = {'success': False, 'error': 'User not registered'}

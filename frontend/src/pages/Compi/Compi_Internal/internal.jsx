@@ -26,7 +26,7 @@ const Internal = () => {
   const { compiName } = useParams();
 
   const [data, setData] = useState([]);
-  const { googleSignIn, user, logOut } = UserAuth();
+  const { googleSignIn, user } = UserAuth();
   const handleGoogleSignIn = async () => {
     try {
       await googleSignIn();
@@ -41,7 +41,6 @@ const Internal = () => {
   });
 
   const google_id = user?.email;
-  const ProblemStatements = `https://rain.techfest.org/media/ProblemStatements/${compiName}.pdf`;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -123,7 +122,14 @@ const Internal = () => {
             {compiName === "urban-futurism" && <UrbanFuturism />}
 
             <div className={styles.team_reg}>
-              {data.is_team_leader ? (
+              {user === null ? (<div>
+                  <div className={styles.int_reg} onClick={handleGoogleSignIn}>
+                    <div className={styles.reg_rect1}></div>
+                    <div className={styles.reg_rect2}>
+                      <Link to={`register`}>Register</Link>
+                    </div>
+                  </div>
+                </div>) : data.is_team_leader ? (
                 <div>
                   <div className={styles.compi_team}>
                     <div className={styles.single_team}>
@@ -160,18 +166,9 @@ const Internal = () => {
                     </div>
                   </div>
                 </div>
-              ) : user ? (
-                <div>
-                  <div className={styles.int_reg}>
-                    <div className={styles.reg_rect1}></div>
-                    <div className={styles.reg_rect2}>
-                      <Link to={`register`}>Register</Link>
-                    </div>
-                  </div>
-                </div>
               ) : (
                 <div>
-                  <div className={styles.int_reg} onClick={handleGoogleSignIn}>
+                  <div className={styles.int_reg}>
                     <div className={styles.reg_rect1}></div>
                     <div className={styles.reg_rect2}>
                       <Link to={`register`}>Register</Link>

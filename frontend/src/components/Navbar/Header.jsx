@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link} from "react-router-dom";
 import "./Header.css";
 import { UserAuth } from "../../contexts/AuthContext";
 
@@ -29,44 +29,6 @@ const Header = () => {
     }
   };
 
-  const username = user?.displayName;
-  let name = "";
-  if (username != null) {
-    name = username.split(" ")[0];
-  }
-
-  //==========================================theme================================
-  // const location = useLocation().pathname;
-  // const locations = location.split('/').filter(segment => segment !== '');
-  // const parent = locations[0] // gets parent route from array
-  // var navbarClassName //header class variable
-
-  // if(parent==="competitions"){
-  //     navbarClassName = "header header_competitions"
-  // }
-  // else if(parent==="lectures"){
-  //     navbarClassName = "header header_lectures"
-  // }
-  // else if(parent==="gallery"){
-  //     navbarClassName = "header header_gallery"
-  // }
-  // else if(parent==="exhibitions"){
-  //     navbarClassName = "header header_exhibtions"
-  // }
-  // else if(parent==="workshops"){
-  //     navbarClassName = "header header_workshops"
-  // }
-  // else if(parent==="summits"){
-  //     navbarClassName = "header header_summits"
-  // }
-  // else if(parent==="exhibitions"){
-  //     navbarClassName = "header header_exhibitions"
-  // }
-  // else{
-  //     navbarClassName = "header"
-  // }
-
-  //===============================================================================
 
   const showMenu = () => {
     setOpenMenu(!openMenu);
@@ -138,7 +100,7 @@ const Header = () => {
               <Link to="/contactus" className="navContact">Contact Us</Link>
             </li>
             <li>
-              {user?.displayName ? (
+              {user ? (
                 <div className="singin">
                   <div className="logou_rect1">
                     <div
@@ -146,7 +108,7 @@ const Header = () => {
                       onMouseEnter={() => setShowSignOut(true)} // Show the Sign Out div on mouse enter
                       onMouseLeave={() => setShowSignOut(false)}
                     >
-                      <img src={user.photoURL} />
+                      <img src={user.photoURL} alt={user.displayName}/>
                     </div>
                   </div>
                 </div>
@@ -160,7 +122,7 @@ const Header = () => {
             </li>
           {/* </ul> */}
         </div>
-        {showSignOut && user.displayName && (
+        {showSignOut && user && (
           <div
             className="sign-out-div"
             onMouseEnter={() => setShowSignOut(true)} // Show the Sign Out div on mouse enter
