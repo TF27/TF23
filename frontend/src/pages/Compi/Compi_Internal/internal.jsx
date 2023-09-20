@@ -15,6 +15,7 @@ import frame from "./../static/card/Frame.png";
 import HackAI from "./Competitions/HackAI";
 import Codecode from "./Competitions/Codecode";
 import TechAid from "./Competitions/TechAid";
+import AtomQuest from "./Competitions/AtomQuest";
 import JoinTeam from "./Teams/joinTeam";
 import Mechanzo from "./Competitions/mechanzo";
 import TechfestOlympiad from "./Competitions/TechfestOlympiad";
@@ -122,6 +123,7 @@ const Internal = () => {
             {compiName === "codecode" && <Codecode />}
             {compiName === "tech-aid" && <TechAid />}
             {compiName === "urban-futurism" && <UrbanFuturism />}
+            {compiName === "atom-quest" && <AtomQuest />}
 
             <div className={styles.team_reg}>
               {user === null ? (

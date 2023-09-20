@@ -17,6 +17,7 @@ import CozmoClench from './Competitions/m-CozmoClench';
 import TechfestOlympiad from './Competitions/m-TechfestOlympiad';
 import Codecode from './Competitions/m-codecode';
 import UrbanFuturism from './Competitions/m-UrbanFuturism';
+import AtomQuest from './Competitions/m-AtomQuest';
 import TechAid from './Competitions/m-TechAid';
 import Mechanzo from './Competitions/m-mechanzo';
 import JoinTeam from './Teams/joinTeam';
@@ -159,6 +160,7 @@ const MInternal = () => {
           {compiName === 'codecode' && <Codecode/>}
           {compiName === 'urban-furturism' && <UrbanFuturism/>}
           {compiName === 'tech-aid' && <TechAid/>}
+          {compiName === 'atom-quest' && <AtomQuest />}
       </div>
     ));
   }
