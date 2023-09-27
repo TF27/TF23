@@ -52,7 +52,7 @@ const AddParti = () => {
     console.log(data);
 
     axios
-      .put("/api/add_parti", data, config)
+      .put("/api/add_parti/", data, config)
       .then((response) => {
         console.log(response.data);
         alert("Added succesfully!!");
