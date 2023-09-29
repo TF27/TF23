@@ -20,6 +20,7 @@ import SingleParti from './pages/Compi/Compi_Internal/Teams/single_parti';
 import AddParti from './pages/Compi/Compi_Internal/Teams/add_parti';
 import Footer from './components/Footer/Footer';
 import Loading1 from './pages/loading_page/Loading1'
+import WorkReg from './pages/workshop/internal/reg';
 
 // const Home= React.lazy(() => import('./pages/Home/home'));
 const Lectures = React.lazy(() => import('./pages/Lectures/index'));
@@ -34,6 +35,8 @@ const Ozone_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/ozone'
 const Compi_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/compi'));
 const Techno_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/techno'));
 const Robowar_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/Robowar'));
+const Workshop = React.lazy(() => import('./pages/workshop/home'));
+const WorkshopExplore = React.lazy(()=> import('./pages/workshop/internal/index'));
 // const CompiInternal = React.lazy(()=> import('/pages/Compi/Compi_Internal/index'))
 
 function App() {
@@ -63,20 +66,19 @@ function App() {
                          )
                          
                         } />
-                        {/* <Route path='/' element={
-                            <React.Suspense fallback={<div><Loading/></div>}>
-                        <Home/>
-                        </React.Suspense> }/> */}
-                        {/* <Route path='/loading1' element={<Loading1/>} /> */}
-                        {/* <Route path='/exhibitions' element={<Exhibition/>}/>
-                        <Route path='/competitions' element={<Compi />} /> */}
-                        {/* <Route path='/workshops' element={<Workshop/>}/> */}
                         <Route path='/legals' element={<Legals/>}/>
-                        {/* <Route path='/lectures' element={<Lectures />} /> */}
-                        {/* <Route path='/workshops/:cardName' element={<Explore/>} /> */}
-                        {/* <Route path='/lectures' element={
-                        {/* <Route path='/lectures' element={<Lectures />} /> */}
-                        {/* <Route path='/expasaaaaaaaaaaaaalore' element={<Explore/>} /> */}
+                        <Route path='/workshops/' element={
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                            <Workshop/>
+                        </React.Suspense> }/>
+
+                        <Route path='/workshops/:cardName' element={
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                            <WorkshopExplore/>
+                        </React.Suspense>
+                        } />
+                        
+
                         <Route path='/recognition' element={<Recognition/>} />
 
                         <Route path='/lectures' element={
@@ -114,17 +116,12 @@ function App() {
                         <Route path='/legals' element={<Legals /> } />
                         
                         <Route path='/:compiName' element={<CompiInternal />} />
-
-                        {/* <Route path='competitions/:compiName' element={
-                            <React.Suspense fallback={<div>Loading...</div>}>
-                        <CompiInternal/>
-                        </React.Suspense> }/> */}
+                        <Route path='workshops/:cardName/register' element={<Protected><WorkReg /></Protected>} />
                         <Route path='competitions/:compiName' element={<CompiInternal />} />
                         <Route path='competitions/:compiName/register' element={<Protected><Reg /></Protected>} />
                         <Route path='competitions/:compiName/createTeam' element={<Protected><Create_Team  /></Protected>} />
                         <Route path='competitions/:compiName/singleparticipant' element={<Protected><SingleParti /></Protected>} />
                         <Route path='competitions/:compiName/addparticipant' element={<Protected><AddParti /></Protected>} />
-
 
                         <Route path='/gallery' element={
                             <React.Suspense fallback={<div>Loading..    .</div>}>
@@ -154,7 +151,6 @@ function App() {
                             <React.Suspense fallback={<div>Loading...</div>}>
                         <Techno_gal/>
                             </React.Suspense>} /> 
-
                         
                     </Routes>
                     

@@ -153,16 +153,16 @@ const AtomQuest = () => {
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
                     Last Date of Registration:
-            <br/>2nd November 2023
+            <br/>10th October 2023
 
             <br/>First Project Report Submission:
-            <br/>30th September 2023
+            <br/>10th October 2023
 
-            <br/>Final Project Report Submission:
-            <br/>2nd November 2023
+            <br/>Video Submission:
+            <br/>3rd November 2023
 
-            <br/>Final presentation & video submission:
-            <br/>11th December 2023
+            <br/>Final presentation:
+            <br/>10th December 2023
 
             <br/>Presentation Stage & Exhibition:
             <br/>During 27th - 29th December

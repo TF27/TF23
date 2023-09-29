@@ -436,13 +436,17 @@ def workshop_reg_form(request):
         workshop_reg_serializer = WorkshopRegSerializer(data=request.data, many=False)
         # print(workshop_reg_serializer)
         if workshop_reg_serializer.is_valid():
-            last_reg = workshop_reg.objects.order_by('-tf_id').first()
-            next_tf_id = '0269'
+            email = workshop_reg_serializer.validated_data.get('email')
+            workshop = workshop_reg_serializer.validated_data.get('workshop')
+            if workshop_reg.objects.filter(email=email, workshop=workshop).exists():
+                return JsonResponse({'error': 'A registration with this email for this workshop already exists.'}, status=400)
+            last_reg = workshop_reg.objects.order_by('-worksho_id').first()
+            next_tf_id = '3369'
             if last_reg:
-                last_tf_id = last_reg.tf_id[-4:]
+                last_tf_id = last_reg.worksho_id[-4:]
                 next_tf_id = str(int(last_tf_id) + 1).zfill(4)
-            tf_id = f"TF-W23{next_tf_id}"
-            workshop_reg_serializer.save(tf_id=tf_id)
+            worksho_id = f"TF-W23{next_tf_id}"
+            workshop_reg_serializer.save(worksho_id=worksho_id)
             # compi_reg_serializer.save()
             subject = "Workshop Registration"
             message = f"You have successfully registered for the {workshop_reg_serializer.validated_data.get('workshop')} with email {workshop_reg_serializer.validated_data.get('email')} and name {workshop_reg_serializer.validated_data.get('name')}"
@@ -453,3 +457,4 @@ def workshop_reg_form(request):
         res = {'success': False}
         # print(res)
         return JsonResponse(res)
+    

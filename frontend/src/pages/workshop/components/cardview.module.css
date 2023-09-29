@@ -15,10 +15,10 @@
     height: 340px;
     transition: transform 0.3s ease;
 }
-
+/* 
 .container:hover{
     transform: scale(1.2);
-}
+} */
 
 .overlay{
     width: 12rem;
@@ -35,13 +35,13 @@
     transition: opacity 0.3s ease;
 }
 
-.container:hover .bannerimage{
+/* .container:hover .bannerimage{
     opacity:0;
 }
 
 .container:hover .overlay{
     opacity:1;
-}
+} */
 
 .wrapper {
     width: 11.1rem;
@@ -123,13 +123,13 @@
     font-weight: bold;
     transition: all .3s ease; 
 }
-
+/* 
 .fill:hover{
     transform: scale(1.125);  
     border-color: #bb9564;
     filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
     transition: all .3s ease;    
-}
+} */
 
 .one {
     position: relative;

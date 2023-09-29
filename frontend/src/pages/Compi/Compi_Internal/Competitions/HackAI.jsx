@@ -159,11 +159,11 @@ const HackAI = () => {
               <ul>
                 <li>
                   Last date of registration: <br />
-                  2nd October 2023
+                  6th October 2023
                 </li>
                 <li>
                   Round 1 Submission Deadline: <br />
-                  8th October 2023
+                  7th October 2023
                 </li>
                 <li>
                   Finalist announcement: <br />

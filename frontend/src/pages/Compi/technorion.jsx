@@ -131,6 +131,93 @@ const Technorion = () => {
       </div>
     ));
   };
+
+  const othercard = () => {
+    const zonals = data.filter((item) => item.genre === "4");
+
+    return zonals.map((data) => (
+      <div key={data.id} className="col-lg-3 col-md-4 col-sm-6 col-12">
+        <div className={styles.compi_card}>
+          <div className={styles.card_rect1}></div>
+          <div className={styles.card_rect2}></div>
+          <div className={styles.noReg}>
+            <Link to={data.name}></Link>
+            <div className={styles.card_tag}>
+              <span>
+                <img src={dot} alt="dot" />
+              </span>
+              <h3 className={styles.card_tag}>{data.tag}</h3>
+              <span>
+                <img src={dot} alt="dot" />
+              </span>
+            </div>
+            <div className={styles.card_imgo}>
+              <img src={data.img} className={styles.card_img} alt={data.name} />
+            </div>
+            <img className={styles.chand} src={chand} alt="moon" />
+            <img className={styles.espark} src={dot} alt="moon" />
+            <img className={styles.fspark} src={fspark} alt="moon" />
+            {/* <img className={styles.chand2} src={chand} alt='moon' /> */}
+            <img className={styles.espark2} src={espark} alt="moon" />
+            <img className={styles.fspark2} src={fspark} alt="moon" />
+            <img className={styles.espark3} src={dot} alt="moon" />
+            <img className={styles.fspark3} src={fspark} alt="moon" />
+            <img className={styles.espark4} src={espark} alt="moon" />
+            <img className={styles.fspark4} src={fspark} alt="moon" />
+            <div className={styles.card_title}>
+              <h3>{data.name}</h3>
+              <div className={styles.card_sustitle}>INR {data.prize} Prize</div>
+            </div>
+            <div className={styles.card_post}>
+              <div className={styles.card_desc}>{data.desc}</div>
+              <div className={styles.card_share}>
+                <div className={styles.share_border}>
+                  <div className={styles.share_rect1}>
+                    <div className={styles.share_rect2}>
+                      <WhatsappShareButton />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className={styles.card_regexp}>
+              {/* {data.is_registered ? (
+                        <div className={styles.card_reg}>Registered</div>
+                     ) : user ? (
+                        <div className={styles.card_reg}>
+                           <Link to={`${data.name}/register`}>Register</Link>
+                        </div>
+                     ) : (
+                        <div className={styles.card_reg}>
+                           <button onClick={handleGoogleSignIn}>
+                              Register
+                           </button>
+                        </div>
+                     )} */}
+              {user === null ? (
+                <div className={styles.card_reg}>
+                  <button onClick={handleGoogleSignIn}>Register</button>
+                </div>
+              ) : data.is_registered ? (
+                <div className={styles.card_reg}>Registered</div>
+              ) : (
+                <div className={styles.card_reg}>
+                  <Link to={`${data.name}/register`}>Register</Link>
+                </div>
+              )}
+              <div className={styles.card_exp}>
+                <Link to={data.name}>Explore</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* </div>
+          </div> */}
+      </div>
+    ));
+  };
   const markiCompi = () => {
     const zonals = data.filter((item) => item.genre === "2");
 
@@ -338,7 +425,7 @@ const Technorion = () => {
       <div className="technorion_cards">
         <div className="container" style={{ maxWidth: "90%" }}>
           <div className="row">
-            {card()} {markiCompi()}
+            {othercard()}{card()} {markiCompi()}
           </div>
         </div>
       </div>

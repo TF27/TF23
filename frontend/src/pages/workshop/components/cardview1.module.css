@@ -1,0 +1,388 @@
+/*==========================================================cards=============================================================*/
+.card_img{
+    width:74%;
+    aspect-ratio: 1/1;
+    object-fit: fill;
+    opacity: 1;
+    transition: all 1s ease-in;
+}
+
+.compi_card{
+    background:rgba(0, 5, 29, 0.847);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Forum', sans-serif;
+    /* max-width: 25%; */
+    /* margin-right: 20px;
+    margin-left: 20px; */
+    padding: 10px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    aspect-ratio: 1/1.2;
+    overflow: hidden;
+}
+
+.card_tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_tag h3{
+    font-family: 'Forum', sans-serif;
+    font-size: 120%;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: #FFE381;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 12px;
+    margin-bottom: 0px;
+}
+.card_title{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+    bottom: 0;
+    transition: 1s ease;
+}
+.card_title h3{
+    color:  #FFE381;
+    font-family: 'Forum', sans-serif;
+    /* letter-spacing: 0.1em; */
+    padding-top: 5%;
+    margin-bottom: 0px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.card_sustitle{
+  font-size: 15px;
+
+}
+
+.card_post{
+    opacity: 0;
+    transition: opacity .1s linear 0s;
+    width: 80%;
+    margin: 0 auto 0 auto;
+}
+
+.card_regexp{
+    position: absolute;
+    left: 8%;
+    bottom: 15px;
+    display: flex;
+    border-top: 1px solid #BB9564;
+    flex-direction: row;
+    justify-content: center;
+    /* max-width: 80%; */
+    margin: auto;
+    text-align:center;
+    width: 85%;
+    top: 88%;
+    height: 10%;
+}
+
+.card_reg{
+    border-right: 1px solid #BB9564;
+    padding-right: 8%;
+    padding-top: .4vw;
+    padding-left: 8%;
+    padding-bottom: .4vw;
+    color: #FFE381;
+}
+.card_exp{
+    border-left: 1px solid #BB9564;
+    padding-right: 4%;
+    padding-top: .4vw;
+    padding-left: 8%;
+    padding-bottom: .4vw;
+}
+
+@media(max-width: 1100px)
+{
+  .card_exp{
+    padding-left: 4%;
+  }
+}  
+@media(max-width: 991px)
+{
+  .card_exp{
+    padding-left: 8%;
+  }
+}
+@media(max-width: 860px)
+{
+  .card_exp{
+    padding-left: 6%;
+  }
+}
+.card_reg{
+  padding-top: .2vw;
+  padding-left: 1vw;
+  font-size: 20px;
+}
+
+@media(max-width: 576px)
+{
+  .card_exp{
+    padding-left: 12%;
+    padding-top: 1.7vw;
+  }
+  .card_reg{
+    padding-top: 1.2vw;
+    padding-left: 0vw;
+    font-size: 20px;
+    padding-right: 10%;
+    /* font-size:px; */
+  }
+}
+
+
+
+.card_reg a{
+    color:  #FFE381;
+    font-family: 'Forum', sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.card_reg button{
+    color: #FFE381;
+    font-family: 'Forum', sans-serif;
+    letter-spacing: 0.1em;
+    font-size:18px;
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+
+.card_exp a{
+    color: #BB9564;
+    font-family: 'Forum', sans-serif;
+    letter-spacing: 0.1em;
+    font-size:18px;
+    text-decoration: none;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 100%;
+}
+  
+  .card_desc{
+    font-family: 'Forum', sans-serif;
+    font-size: 16px;
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .card_img{
+    border: 1px solid #BB9564;
+    margin:auto;
+  }
+
+.card_rect1{
+    border: 1px solid #BB9564;
+    position:absolute;
+    width: 86%;
+    height: 97%;
+    left: 7.5%;
+    top: 5px;
+}
+
+.card_rect2{
+    border: 1px solid #BB9564;
+    left: 5.5%;
+    width: 90%;
+    height: 95%;
+    position: absolute;
+}
+
+
+  .chand{
+    position: absolute;
+    right: 9%;
+    bottom: 55%;
+    height: 20px;
+    width: auto;
+  }
+  .espark{
+    position: absolute;
+    left: 15.5%;
+    bottom: 25%;
+    height: 5px;
+    width: auto;
+  }
+
+  .espark2{
+    position: absolute;
+    left: 12%;
+    bottom: 89%;
+    height: 25px;
+    width: auto;
+  }
+
+  .espark3{
+    position: absolute;
+    left: 88%;
+    bottom: 90%;
+    height: 5px;
+    width: auto;
+  }
+
+  .espark4{
+    position: absolute;
+    left:79%;
+    bottom: 20%;
+    height: 25px;
+    width: auto;
+  }
+
+  .fspark{
+    position: absolute;
+    left: 18%;
+    bottom: 20%;
+    height: 20px;
+    width: auto;
+  }
+  .fspark2{
+    position: absolute;
+    left: 10%;
+    bottom: 85%;
+    height: 20px;
+    width: auto;
+  }
+  .fspark3{
+    position: absolute;
+    left: 86%;
+    bottom: 23%;
+    height: 20px;
+    width: auto;
+  }
+  .fspark4{
+    position: absolute;
+    left: 83%;
+    bottom: 90%;
+    height: 20px;
+    width: auto;
+  }
+
+
+@media screen and (max-width: 1400px) {
+  .card_title h3{
+    font-size: 15px;
+  }
+
+  .card_sustitle{
+    font-size: 13px;
+  }
+
+  .card_img{
+    width:72%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .card_title h3{
+    font-size: 15px;
+  }
+  .card_sustitle{
+    font-size: 14px;
+  }
+
+  .card_img{
+    width:65%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .card_title h3{
+    position: relative;
+    top: -2px;
+    font-size: 15px;
+  }
+  .card_sustitle{
+    position: relative;
+    top: -2px;
+    font-size: 12px;
+  }
+
+  .card_img{
+    width:65%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card_title h3{
+    top: 10px;
+    font-size: 20px;
+  }
+  .card_sustitle{
+    top: 20px;
+    font-size: 15px;
+  }
+
+  .card_img{
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .card_title h3{
+    top: 0px;
+    font-size: 15px;
+  }
+  .card_sustitle{
+    top: 0px;
+    font-size: 15px;
+  }
+
+  .card_img{
+    height: 70%;
+  }
+}
+
+.card_title div{
+    color: #A7E9FF;
+    font-family: 'Forum', sans-serif;
+    letter-spacing: 0.1em;
+    margin-bottom: 0px;
+}
+
+@media screen and (max-width: 576px) {
+  .card_title h3{
+    top: 0px;
+    font-size: 25px;
+  }
+  .card_sustitle{
+    top: 0px;
+    font-size: 20px;
+  }
+
+  .card_img{
+    height: 70%;
+  }
+
+  .compi_card{
+    aspect-ratio: 1/1.25;
+}
+}
+@media screen and (max-width: 430px) {
+  .card_title h3{
+    top: 0px;
+    font-size: 20px;
+  }
+  .card_sustitle{
+    top: 0px;
+    font-size: 15px;
+  }
+
+  .compi_card{
+    aspect-ratio: 1/1.2;
+}
+  
+}
+  
+
