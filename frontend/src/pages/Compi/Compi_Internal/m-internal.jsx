@@ -26,11 +26,16 @@ import SingleParti from "./Teams/single_parti";
 
 const MInternal = () => {
   const { compiName } = useParams();
-
   const navigate = useNavigate();
-  if (compiName === 'cozmo'){
-    navigate('/competitions/cozmoclench');
-  }
+  useEffect(() => {
+    // Check compiName and perform redirections
+    if (compiName === 'cozmo') {
+        navigate('/competitions/cozmoclench');
+    } else if (compiName === 'mesh') {
+        navigate('/competitions/meshmerize');
+    }
+    // Add more conditions as needed for other compiNames
+}, [navigate, compiName]);
   const [data, setData] = useState([]);
   const { googleSignIn, user } = UserAuth();
   const handleGoogleSignIn = async () => {
