@@ -71,8 +71,10 @@ const Internal = () => {
                     </div>
                   </div>
                 </div>
-              ) : data.is_team_leader ? (
-                <></>
+              ) : data.is_registered ? (
+                <>
+
+                </>
               ) : (
                 <div>
                   <div className={styles.statement}>

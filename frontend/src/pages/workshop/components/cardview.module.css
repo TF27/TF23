@@ -1,4 +1,3 @@
-
 .container {
     background-image: url('../img/image1.png');
     background-repeat: no-repeat;
@@ -15,10 +14,6 @@
     height: 340px;
     transition: transform 0.3s ease;
 }
-/* 
-.container:hover{
-    transform: scale(1.2);
-} */
 
 .overlay{
     width: 12rem;
