@@ -17,7 +17,9 @@ const CustomPopup = (props) => {
     <div
       style={{
         visibility: show ? "visible" : "hidden",
-        opacity: show ? "1" : "0"
+        opacity: show ? "1" : "0",
+        display: "flex",
+        justifyContent: 'center',
       }}
       className={popupStyles.overlay}
     >
