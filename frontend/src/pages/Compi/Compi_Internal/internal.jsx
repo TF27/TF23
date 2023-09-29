@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLayoutEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { UserAuth } from "../../../contexts/AuthContext";
 import styles from "./internal.module.css";
@@ -23,8 +23,14 @@ import UrbanFuturism from "./Competitions/UrbanFuturism";
 import SingleParti from "./Teams/single_parti";
 import AddParti from "./Teams/add_parti";
 
+
 const Internal = () => {
   const { compiName } = useParams();
+
+  const navigate = useNavigate();
+  if (compiName === 'cozmo'){
+    navigate('/competitions/cozmoclench');
+  }
 
   const [data, setData] = useState([]);
   const { googleSignIn, user } = UserAuth();

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { UserAuth } from "../../../contexts/AuthContext";
 import styles from "./internal.module.css";
@@ -27,6 +27,10 @@ import SingleParti from "./Teams/single_parti";
 const MInternal = () => {
   const { compiName } = useParams();
 
+  const navigate = useNavigate();
+  if (compiName === 'cozmo'){
+    navigate('/competitions/cozmoclench');
+  }
   const [data, setData] = useState([]);
   const { googleSignIn, user } = UserAuth();
   const handleGoogleSignIn = async () => {
