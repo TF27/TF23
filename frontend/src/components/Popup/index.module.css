@@ -20,7 +20,7 @@
     width: 30%;
     position: fixed;
     top: 30%;
-    left: 35%;
+    /* left: 35%; */
     transition: all .5s ease-in-out;
   }
   
