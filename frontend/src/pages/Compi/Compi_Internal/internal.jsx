@@ -32,8 +32,12 @@ const Internal = () => {
     // Check compiName and perform redirections
     if (compiName === 'cozmo') {
         navigate('/competitions/cozmoclench');
-    } else if (compiName === 'mesh') {
+    } 
+    else if (compiName === 'mesh') {
         navigate('/competitions/meshmerize');
+    }
+    else if (compiName === 'tfo'){
+        navigate('/competitions/techfest%20olympiad');
     }
     // Add more conditions as needed for other compiNames
 }, [navigate, compiName]);

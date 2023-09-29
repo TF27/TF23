@@ -34,6 +34,9 @@ const MInternal = () => {
     } else if (compiName === 'mesh') {
         navigate('/competitions/meshmerize');
     }
+    else if (compiName === 'tfo'){
+      navigate('/competitions/techfest%20olympiad');
+  }
     // Add more conditions as needed for other compiNames
 }, [navigate, compiName]);
   const [data, setData] = useState([]);
