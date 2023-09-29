@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLayoutEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { UserAuth } from "../../../contexts/AuthContext";
 import styles from "./internal.module.css";
@@ -23,8 +23,24 @@ import UrbanFuturism from "./Competitions/UrbanFuturism";
 import SingleParti from "./Teams/single_parti";
 import AddParti from "./Teams/add_parti";
 
+
 const Internal = () => {
   const { compiName } = useParams();
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    // Check compiName and perform redirections
+    if (compiName === 'cozmo') {
+        navigate('/competitions/cozmoclench');
+    } 
+    else if (compiName === 'mesh') {
+        navigate('/competitions/meshmerize');
+    }
+    else if (compiName === 'tfo'){
+        navigate('/competitions/techfest%20olympiad');
+    }
+    // Add more conditions as needed for other compiNames
+}, [navigate, compiName]);
 
   const [data, setData] = useState([]);
   const { googleSignIn, user } = UserAuth();
