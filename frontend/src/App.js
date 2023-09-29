@@ -21,6 +21,7 @@ import AddParti from './pages/Compi/Compi_Internal/Teams/add_parti';
 import Footer from './components/Footer/Footer';
 import Loading1 from './pages/loading_page/Loading1'
 import WorkReg from './pages/workshop/internal/reg';
+import Header_update from './components/Navbar/Header_update';
 
 // const Home= React.lazy(() => import('./pages/Home/home'));
 const Lectures = React.lazy(() => import('./pages/Lectures/index'));
@@ -56,6 +57,7 @@ function App() {
                     {/* <Navbar />*/}
                    
                        <Header />
+                       {/* <Header_update /> */}
                     
                     <Routes>
                         <Route path='/' element={

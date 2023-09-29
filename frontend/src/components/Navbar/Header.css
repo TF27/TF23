@@ -1,5 +1,5 @@
 .header {
-  font-family: 'Forum', sans-serif;
+  font-family: "Forum", sans-serif;
   z-index: 10;
   background-color: black;
   transition: background-color 0.5s ease-in-out;
@@ -42,22 +42,22 @@
   /* position: inherit; */
 }
 
-@media (max-width: 1672px){
-  .webNav li a{
+@media (max-width: 1672px) {
+  .webNav li a {
     font-size: 22px;
   }
-  .logout_rect2{
+  .logout_rect2 {
     font-size: 19px;
     height: 40px;
     width: 90px;
   }
-  .logout_rect1{
+  .logout_rect1 {
     height: 40px;
     width: 90px;
   }
 }
-@media (max-width: 1550px){
-  .webNav li a{
+@media (max-width: 1550px) {
+  .webNav li a {
     font-size: 20px;
   }
 }
@@ -109,12 +109,12 @@
   text-transform: uppercase;
 }
 
-.logou_rect2 img{
+.logou_rect2 img {
   width: 45px;
   height: 45px;
   border-radius: 50%;
 }
-.navRow{
+.navRow {
   position: relative;
   top: 8px;
   height: 100%;
@@ -124,7 +124,8 @@
   justify-content: space-around;
 }
 
-.wnavLeft, .wnavRight{
+.wnavLeft,
+.wnavRight {
   width: 35%;
 }
 
@@ -187,31 +188,31 @@
   }
 } */
 
-.logout_rect2{
+.logout_rect2 {
   font-size: small;
 }
 
-@media (max-width: 1240px){
-  .navSummit{
+@media (max-width: 1240px) {
+  .navSummit {
     display: block;
     width: 80%;
     margin: auto;
     top: -8px;
     position: relative;
   }
-  .logoDiv img{
+  .logoDiv img {
     top: 14px;
   }
 }
 
-.logoDiv img{
+.logoDiv img {
   position: relative;
 }
-@media (max-width: 1120px){
-  .logoDiv img{
+@media (max-width: 1120px) {
+  .logoDiv img {
     width: 17vw;
   }
-  .navContact{
+  .navContact {
     display: block;
     width: 80%;
     margin: auto;
@@ -219,37 +220,37 @@
     position: relative;
   }
 }
-@media (max-width: 1040px){
-  .webNav li a{
+@media (max-width: 1040px) {
+  .webNav li a {
     font-size: 17px;
   }
-  .logout_rect2{
+  .logout_rect2 {
     height: 32px;
     width: 80px;
     font-size: 17px;
   }
-  .logout_rect1{
+  .logout_rect1 {
     height: 32px;
     width: 80px;
   }
-  .signin{
+  .signin {
     margin-top: -2px;
   }
 }
-@media (max-width: 878px){
-  .webNav li a{
+@media (max-width: 878px) {
+  .webNav li a {
     font-size: 16px;
   }
-  .logout_rect2{
+  .logout_rect2 {
     height: 32px;
     width: 80px;
     font-size: 16px;
   }
-  .logout_rect1{
+  .logout_rect1 {
     height: 32px;
     width: 80px;
   }
-  .signin{
+  .signin {
     margin-top: -2px;
   }
 }
@@ -261,12 +262,12 @@
   .navfuncshow {
     background-image: none !important;
   }
-  .headLogo{
-    width:280px;
+  .headLogo {
+    width: 280px;
   }
-  .headHam{
+  .headHam {
     width: 58px;
-    margin-top:-18px;
+    margin-top: -18px;
     cursor: pointer;
   }
   .hamburger.active_burger .bar:nth-child(1) {
@@ -355,7 +356,7 @@
     width: 100%;
     /* height: 170px; */
   }
-  
+
   .mnavfuncshow {
     position: fixed;
     top: 0px;
@@ -382,7 +383,7 @@
   }
 }
 
-.llll{
+.llll {
   border: #cea167 2px solid;
   width: 150px;
   height: 45px;
@@ -402,4 +403,32 @@
   font-family: Landasans;
   color: #fff;
   text-transform: uppercase;
+}
+
+.evenLoShow {
+  max-height: 300px; /* Adjust the max-height as needed */
+  opacity: 1;
+  visibility: visible;
+  transition: max-height 1s ease, opacity 1s ease, visibility 0s;
+}
+.evenLoNo {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: max-height 1s ease, opacity 1s ease, visibility 0s 1s;
+}
+.tuJhoom {
+  position: absolute;
+  background-color: #000;
+  display: flex;
+  width: 168px;
+  justify-content: center;
+  z-index: 2;
+}
+.tuJhoom ul {
+  padding-left: 0;
+}
+.evenLoNo ul li{
+  display: none;
 }
