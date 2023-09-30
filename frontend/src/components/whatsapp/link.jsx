@@ -6,7 +6,7 @@ function Whatsapplink({walink, dslink}){
     return(
     <div className={styles.groupl}> 
         <a id='wabuttonw' href={walink}>Whatsapp</a>
-        <a id='wabuttond' href={dslink}>Discord</a>
+        {/* <a id='wabuttond' href={dslink}>Discord</a> */}
     </div>
     );
 }

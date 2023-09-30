@@ -22,6 +22,7 @@ import TechfestOlympiad from "./Competitions/TechfestOlympiad";
 import UrbanFuturism from "./Competitions/UrbanFuturism";
 import SingleParti from "./Teams/single_parti";
 import AddParti from "./Teams/add_parti";
+import Robocapleague from "./Competitions/robocapleague";
 
 
 const Internal = () => {
@@ -140,6 +141,7 @@ const Internal = () => {
             {compiName === "tech-aid" && <TechAid />}
             {compiName === "urban-futurism" && <UrbanFuturism />}
             {compiName === "atom-quest" && <AtomQuest />}
+            {compiName === "robocap league" && <Robocapleague />}
 
             <div className={styles.team_reg}>
               {user === null ? (
