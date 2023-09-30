@@ -71,7 +71,7 @@ const MInternal = () => {
                     </div>
                   </div>
                 </div>
-              ) : data.is_team_leader ? (
+              ) : data.is_registered ? (
                 <></>
               ) : (
                 <div>

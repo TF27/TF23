@@ -419,8 +419,8 @@ def delete_team(request):
 def workshop_card(request):
     if request.method == 'GET':
         try: 
-            user = get_user_id(request)
-            email = user.email if user else None
+            email = get_user_id(request)
+            # email = user.email if user else None
             workshop = Workshop.objects.all()
             serializer = WorkshopsSerializer(workshop, many=True, context={'user': email})
             return Response(serializer.data)

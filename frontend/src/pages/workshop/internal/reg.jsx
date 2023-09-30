@@ -59,12 +59,12 @@ const WorkReg = () => {
   const handleSubmit = (event) => {
     setRegsitering(true);
     event.preventDefault();
-    console.log(formData);
+    // console.log(formData);
     axios
       .post("/api/workshop_reg/", formData)
       .then((response) => {
-        console.log("Added Successfully!!");
-        navigate(`/competitions/${cardName}`);
+        alert("Registered succesfully!!");
+        navigate(`/workshops/${cardName}`);
       })
       .catch((error) => {
         console.error("Error:", error);
