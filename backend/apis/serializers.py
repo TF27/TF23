@@ -68,6 +68,9 @@ class WorkshopsSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         representation = super().to_representation(instance)
         user = self.context.get('user')
+        has_paid = False
+        if user:
+            has_paid = workshop_reg.objects.filter(email=user, workshop=instance, paid=True).exists()
         representation['is_registered'] = workshop_reg.objects.filter(email=user, workshop=instance).exists()
         return representation
     
