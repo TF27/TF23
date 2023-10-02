@@ -58,7 +58,7 @@ const MUN = React.lazy(() => import("./pages/MUN/mun"));
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const location = useLocation();
+//   const location = useLocation();
 
   useEffect(() => {
     setTimeout(() => {
