@@ -39,6 +39,7 @@ const Robowar_gal =React.lazy(()=> import('./pages/AboutUs/gallery/specific/Robo
 const Workshop = React.lazy(() => import('./pages/workshop/home'));
 const WorkshopExplore = React.lazy(()=> import('./pages/workshop/internal/index'));
 // const CompiInternal = React.lazy(()=> import('/pages/Compi/Compi_Internal/index'))
+const MUN = React.lazy(()=> import('./pages/MUN/mun'));
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
@@ -56,8 +57,8 @@ function App() {
                 <AuthContextProvider>
                     {/* <Navbar />*/}
                    
-                       {/* <Header /> */}
-                       <Header_update />
+                       <Header />
+                       {/* <Header_update /> */}
                     
                     <Routes>
                         <Route path='/' element={
