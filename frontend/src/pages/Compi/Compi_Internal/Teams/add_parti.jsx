@@ -57,6 +57,7 @@ const AddParti = () => {
         console.log(response.data);
         alert("Added succesfully!!");
         navigate(`/competitions/${compiName}`);
+        window.location.reload(); 
       })
       .catch((error) => {
         console.error(error);
