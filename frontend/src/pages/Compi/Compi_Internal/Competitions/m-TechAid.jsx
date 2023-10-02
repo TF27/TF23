@@ -140,7 +140,12 @@ const TechAid = () => {
             </div>
             <div>
                 <div onClick={() => handleClickOpen('Timeline')} className={`${styles.whatu} ${open === 'Timeline' ? styles.whatuOpen : ''}`}>
-                    <div className={`${styles.time_rect1} ${styles.whatu_rect1}`}><li>Last Date of Registration: <br />
+                    <div className={`${styles.time_rect1} ${styles.whatu_rect1}`}></div>
+                    <div className={`${styles.time_rect2} ${styles.whatu_rect2}`}>Timeline</div>
+                </div>
+                <div className={`${styles.whatd} ${open === 'Timeline' ? styles.whatdOpen : ''}`}>
+                    <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}><li>Last Date of Registration: <br />
                 30th October 2023</li>
 
             <li>First Project Report Submission: <br />
@@ -154,11 +159,6 @@ const TechAid = () => {
 
             <li>Presentation Stage & Exhibition: <br />
             During Techfest 2022-23, in mid december </li></div>
-                    <div className={`${styles.time_rect2} ${styles.whatu_rect2}`}>Timeline</div>
-                </div>
-                <div className={`${styles.whatd} ${open === 'Timeline' ? styles.whatdOpen : ''}`}>
-                    <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}></div>
                 </div>
             </div>
             <div>
