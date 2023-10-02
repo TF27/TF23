@@ -76,19 +76,16 @@ const Header_update = () => {
           onMouseLeave={() => setShowEvents(false)}
         >
           <li>
+            <Link to="/workshops" onMouseEnter={() => setShowEvents(false)}>
+              Workshops
+            </Link>
+          </li>
+          <li>
             <Link to="/competitions" onMouseEnter={() => setShowEvents(false)}>
               Competitions
             </Link>
           </li>
-          <li>
-            <Link
-              to="/summits"
-              className="navSummit"
-              onMouseEnter={() => setShowEvents(false)}
-            >
-              Int'l Summit
-            </Link>
-          </li>
+
           <li
           // onMouseEnter={() => setShowEvents(true)}
           // onMouseLeave={() => setShowEvents(false)}
@@ -127,7 +124,9 @@ const Header_update = () => {
         <div className="wnavRight navRow">
           {/* <ul> */}
           <li>
-            <Link to="/workshops">Workshops</Link>
+            <Link to="/summits" className="navSummit">
+              Int'l Summit
+            </Link>
           </li>
           <li>
             <Link to="/contactus" className="navContact">

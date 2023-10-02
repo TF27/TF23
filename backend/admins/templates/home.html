@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+    <div>
+        <h1>COMPETITIONS</h1>
+        <ul>
+            {% for compi in compies %}
+            <li>
+                <a href='{% url "admins:compi" compiname=compi.name %}'>{{ compi.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
