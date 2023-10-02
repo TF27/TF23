@@ -109,6 +109,7 @@ class Workshop(models.Model):
     img = models.ImageField(upload_to='workshop')
     sponsorImg = models.ImageField(upload_to='workshop_sponsors', null=True, blank=True)
     statement = models.FileField(upload_to='ProblemStatements', null=True, blank=True)
+    paymentLink = models.TextField(null=True, blank=True)
     closed = models.BooleanField(default=False)
     def __str__(self):
         return self.name
@@ -128,3 +129,7 @@ class workshop_reg(models.Model):
         ('O', 'Other'),
     ], max_length=255, null=True, blank=True)
     pincode = models.IntegerField(blank=True, null=True)
+    ca_referral = models.CharField(max_length=255, blank=True, null=True)
+    paid = models.BooleanField(default=False)
+    def __str__(self):
+        return self.name

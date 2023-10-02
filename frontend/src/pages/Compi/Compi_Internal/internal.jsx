@@ -24,24 +24,21 @@ import SingleParti from "./Teams/single_parti";
 import AddParti from "./Teams/add_parti";
 import Robocapleague from "./Competitions/robocapleague";
 
-
 const Internal = () => {
   const { compiName } = useParams();
 
   const navigate = useNavigate();
   useEffect(() => {
     // Check compiName and perform redirections
-    if (compiName === 'cozmo') {
-        navigate('/competitions/cozmoclench');
-    } 
-    else if (compiName === 'mesh') {
-        navigate('/competitions/meshmerize');
-    }
-    else if (compiName === 'tfo'){
-        navigate('/competitions/techfest%20olympiad');
+    if (compiName === "cozmo") {
+      navigate("/competitions/cozmoclench");
+    } else if (compiName === "mesh") {
+      navigate("/competitions/meshmerize");
+    } else if (compiName === "tfo") {
+      navigate("/competitions/techfest%20olympiad");
     }
     // Add more conditions as needed for other compiNames
-}, [navigate, compiName]);
+  }, [navigate, compiName]);
 
   const [data, setData] = useState([]);
   const { googleSignIn, user } = UserAuth();
@@ -168,27 +165,22 @@ const Internal = () => {
                 </div>
               ) : data.is_registered ? (
                 <div className={styles.lolReg} style={{ marginTop: "20px" }}>
-                  You have registered successfully!
-                  <div className={styles.compi_team}>
-                    <div className={styles.create_team}>
-                      <div className={styles.create_rect1}></div>
-                      <div className={styles.create_rect2}>
-                        <Link to={`createTeam`}>Create Team</Link>
+                  You have registered successfully with{" "}
+                  <span>{user?.email}</span>
+                  {data.max_team_length === 1 ? (
+                    <></>
+                  ) : (
+                    <div className={styles.compi_team}>
+                      <div className={styles.create_team}>
+                        <div className={styles.create_rect1}></div>
+                        <div className={styles.create_rect2}>
+                          <Link to={`createTeam`}>Create Team</Link>
+                        </div>
                       </div>
-                    </div>
-                    {/* <div className={styles.join_team}>
-                    <div className={styles.join_rect1}></div>
-                    <div className={styles.join_rect2}>
-                      <Link to={`joinTeam`}>Join Team</Link>
-                    </div>
-                  </div> */}
-                    <div>
                       <JoinTeam />
-                    </div>
-                    <div>
                       <SingleParti />
                     </div>
-                  </div>
+                  )}
                 </div>
               ) : (
                 <div>
@@ -219,6 +211,7 @@ const Internal = () => {
     top: "0",
     zIndex: "-1",
     animation: "changeImage 5s infinite",
+    backgroundAttachment: 'fixed',
   };
 
   const keyframes = `

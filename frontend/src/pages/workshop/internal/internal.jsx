@@ -73,9 +73,16 @@ const Internal = () => {
                   </div>
                 </div>
               ) : data.is_registered ? (
-                <>
-
-                </>
+                <div>
+                  <div className={styles.statement}>
+                    <div className={styles.stat_rect1}></div>
+                    <div className={styles.stat_rect2}>
+                      <a href={data.paymentLink} target="_blank">
+                        Pay Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
               ) : (
                 <div>
                   <div className={styles.statement}>

@@ -22,6 +22,7 @@ const WorkReg = () => {
     city: "",
     gender: "",
     pincode: "",
+    ca_referral: "",
   });
 
   const handleChange = (e) => {
@@ -33,28 +34,34 @@ const WorkReg = () => {
     }));
   };
 
-  const handleFocus = (e) => {
-    const label = e.target.previousSibling;
-    if (label) {
-      label.classList.add(styles.floatingLabel);
-    }
-  };
+  // const handleFocus = (e) => {
+  //   const label = e.target.previousSibling;
+  //   if (romeo) {
+  //   } else {
+  //     if (label) {
+  //       label.classList.add(styles.floatingLabel);
+  //     }
+  //   }
+  // };
 
-  const handleBlur = (e) => {
-    const label = e.target.previousSibling;
-    if (label && e.target.value === "") {
-      label.classList.remove(styles.floatingLabel);
-    }
-  };
-  function checkInputValues() {
-    const inputs = document.querySelectorAll("input");
+  // const handleBlur = (e) => {
+  //   const label = e.target.previousSibling;
+  //   if (romeo) {
+  //   } else {
+  //     if (label && e.target.value === "") {
+  //       label.classList.remove(styles.floatingLabel);
+  //     }
+  //   }
+  // };
+  // function checkInputValues() {
+  //   const inputs = document.querySelectorAll("input");
 
-    inputs.forEach((input) => {
-      handleFocus({ target: input }); // Call focus event on each input
-      handleBlur({ target: input }); // Call blur event on each input
-    });
-  }
-  setInterval(checkInputValues, 100);
+  //   inputs.forEach((input) => {
+  //     handleFocus({ target: input });
+  //     handleBlur({ target: input });
+  //   });
+  // }
+  // setInterval(checkInputValues, 100);
 
   const handleSubmit = (event) => {
     setRegsitering(true);
@@ -142,7 +149,11 @@ const WorkReg = () => {
                     />
                   </div>
                   <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label className={styles.formLabel}>Phone No.</label>
+                    <label
+                      className={`${styles.floatingLabel} ${styles.formLabel}`}
+                    >
+                      Phone No.
+                    </label>
                     <input
                       type="number"
                       name="phoneno"
@@ -188,7 +199,11 @@ const WorkReg = () => {
                     </select>
                   </div>
                   <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label className={styles.formLabel}>City</label>
+                    <label
+                      className={`${styles.floatingLabel} ${styles.formLabel}`}
+                    >
+                      City
+                    </label>
                     <input
                       type="text"
                       name="city"
@@ -202,7 +217,11 @@ const WorkReg = () => {
                 </div>
                 <div className={`row ${styles.multiWrapper}`}>
                   <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label className={styles.formLabel}>Pincode</label>
+                    <label
+                      className={`${styles.floatingLabel} ${styles.formLabel}`}
+                    >
+                      Pincode
+                    </label>
                     <input
                       type="number"
                       name="pincode"
@@ -214,15 +233,18 @@ const WorkReg = () => {
                     />
                   </div>
                   <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label className={styles.formLabel}>Country</label>
+                    <label
+                      className={`${styles.floatingLabel} ${styles.formLabel}`}
+                    >
+                      CA Referral(If any)
+                    </label>
                     <input
                       type="text"
-                      name="country"
-                      value={formData.country}
+                      name="ca_referral"
+                      value={formData.ca_referral}
                       onChange={handleChange}
                       className={styles.formInput}
                       autoComplete="off"
-                      required
                     />
                   </div>
                 </div>
