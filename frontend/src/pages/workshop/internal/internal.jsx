@@ -8,6 +8,7 @@ import backimg1 from "./../img/exp_bg.png";
 import frame from "./../../Compi/static/card/Frame.png";
 
 import Meshmerize from "./Workshops/Meshmerize";
+import Python from "./Workshops/Python";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -139,7 +140,7 @@ const Internal = () => {
             ) : data.is_team_registered ? (
               <div className={styles.youhave}>
                 {" "}
-                You have successfully with your email <span>
+                You have successfully registered with your email <span>
                   {user.email}
                 </span>{" "}
                 and your team ID is <span>{data.team_id}</span>
@@ -148,6 +149,7 @@ const Internal = () => {
               <div className={styles.compi_reg}></div>
             )}
             {cardName === "meshmerize" && <Meshmerize />}
+            {cardName === "python" && <Python />}
           </div>
         </div>
       </div>

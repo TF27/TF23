@@ -25,7 +25,7 @@ const Card = ({ card }) => {
       <div className={styles.compi_card}>
         <div className={styles.card_rect1}></div>
         <div className={styles.card_rect2}></div>
-        <div className={styles.noReg} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0)), url(${card.img})` }}>
+        <div className={styles.noReg} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0)), url(${card.img})` }}>
           <Link to={card.name}>
             <div className={styles.card_title}>
               <h3>{card.name}</h3>

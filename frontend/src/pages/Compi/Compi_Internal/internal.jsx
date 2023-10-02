@@ -121,7 +121,7 @@ const Internal = () => {
             ) : data.is_team_registered ? (
               <div className={styles.youhave}>
                 {" "}
-                You have successfully with your email <span>
+                You have successfully registered with your email <span>
                   {user.email}
                 </span>{" "}
                 and your team ID is <span>{data.team_id}</span>
