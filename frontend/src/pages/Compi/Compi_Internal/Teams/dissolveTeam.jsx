@@ -36,6 +36,7 @@ const DissolveTeam = () => {
       .then((response) => {
         alert('Dissolved succesfully!!');
         navigate(`/competitions/${compiName}`);
+        window.location.reload(); 
       })
       .catch((error) => {
         console.error(error);

@@ -52,8 +52,10 @@ const JoinTeam = () => {
         console.log(response.data);
         alert("Joined succesfully!!");
         navigate(`/competitions/${compiName}`);
+        window.location.reload(); 
       })
       .catch((error) => {
+        alert(error)
         console.error(error);
       });
   };

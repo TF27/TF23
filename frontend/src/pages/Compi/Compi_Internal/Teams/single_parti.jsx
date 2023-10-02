@@ -45,6 +45,7 @@ const SingleParti = () => {
             .then((response) => {
                 alert('Formed succesfully!!');
                 navigate(`/competitions/${compiName}`);
+                window.location.reload(); 
                 // Handle the success response
             })
             .catch((error) => {

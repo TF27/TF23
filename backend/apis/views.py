@@ -259,7 +259,7 @@ def single_parti(request):
             compi_team_serializer.save(team_id=team_id, single_parti=True)
             # compi_team_serializer.save()
             subject = f'Techfest, IIT Bombay | Creation of Team successful for {compi1}'
-            message = f'You have successfully created your Unique ID in the {compi1} competition with email address {team_leader_email}'
+            message = f'You have successfully created your Unique ID {team_id} in the {compi1} competition with email address {team_leader_email}'
             send_mailer = 'noreply@techfest.org'
             recipient = [compi_team_serializer.validated_data.get('team_leader_email')]
             send_mail(subject, message, send_mailer, recipient)
