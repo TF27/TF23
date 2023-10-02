@@ -164,7 +164,7 @@
    position: absolute;
 }
 .create_team {
-   width: 140px;
+   width: 200px;
 }
 .create_rect1 {
    height: 40px;
@@ -229,7 +229,7 @@
 }
 .imgFrame {
    width: 350px;
-   height: 319px;
+   height: 312px;
    position: relative;
    top: 0%;
    /* left: -8.5%; */
@@ -325,20 +325,14 @@
    }
 }
 
-@media (max-width: 552px) {
+@media (max-width: 577px) {
    .compi_team {
       flex-direction: column;
       align-items: center;
    }
-   .join_team {
-      position: relative;
-      /* top: 40px; */
-      margin-top: 60px;
-   }
-   .single_team {
-      position: relative;
-      /* top: 80px; */
-      margin-top: 60px;
+   .create_team{
+      display: flex;
+      justify-content: center;
    }
 }
 

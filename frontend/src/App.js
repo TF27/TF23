@@ -56,8 +56,8 @@ function App() {
                 <AuthContextProvider>
                     {/* <Navbar />*/}
                    
-                       <Header />
-                       {/* <Header_update /> */}
+                       {/* <Header /> */}
+                       <Header_update />
                     
                     <Routes>
                         <Route path='/' element={

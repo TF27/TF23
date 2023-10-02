@@ -60,7 +60,7 @@ const SingleParti = () => {
     };
 
     return ( 
-<div className="dissolveTeam singleparti" style={{zIndex: '3'}}>
+<div className="dissolveTeam singleparti" style={{zIndex: '3', width: '200px'}}>
         <div onClick={() => setVisibility(!visibility)} className='dis_team'>
           <div className='dis_rect1'></div>
           <div className='dis_rect2'>Single Participant</div>

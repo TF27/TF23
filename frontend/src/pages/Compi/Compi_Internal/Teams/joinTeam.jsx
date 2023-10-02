@@ -65,7 +65,7 @@ const JoinTeam = () => {
   };
 
   return (
-    <div className="dissolveTeam" style={{ zIndex: "3" }}>
+    <div className="dissolveTeam jonojono" style={{ zIndex: "3", width: "200px" }}>
       <div
         onClick={() => setVisibility(!visibility)}
         className={styles.join_team}
