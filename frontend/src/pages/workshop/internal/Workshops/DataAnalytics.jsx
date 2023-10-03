@@ -41,7 +41,7 @@ const DataAnalytics = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Master the fundamentals of writing Python scripts and using its libraries</div>
+            Master concepts of Data Analytics and Manipulation using Python!</div>
             </div>
           </div>
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
@@ -50,8 +50,8 @@ const DataAnalytics = () => {
             <b>Register and Pay before 20th October 2023 to avail the workshop at the early bird price</b> <br /><br />
             Group Discounts: <br/>
             Register as a group to avail the following discounts: <br/>
-            2 members Rs. 100 off <br/>
-            3 members Rs. 200 off <br/>
+            2 members Rs. 150 off <br/>
+            3 members Rs. 250 off <br/>
             4 members Rs. 300 off <br/>
             </div>
             </div>
@@ -72,9 +72,9 @@ const DataAnalytics = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-                Gourish Singhal<br/>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8928455606`}>+91 89284 55606</div>
-                    <div className="col-3 contactMail" onClick={() => window.location.href = `gourish@techfest.org`}>gourish@techfest.org</div>
+                Akshat Gupta<br/>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8928455606`}>+91 96196 78850</div>
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `gourish@techfest.org`}>akshat@techfest.org</div>
                     
               </div>
             </div>
