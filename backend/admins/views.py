@@ -5,7 +5,15 @@ from apis.models import *
 from django.http import HttpResponse
 import csv
 
+@staff_member_required
+def home(request):
+    compies = Compi.objects.all()  # Retrieve all competitions
+    context = {
+        'compies': compies,
+    }
+    return render(request, 'home.html', context)
 
+# @staff_member_required
 def compi_count():
     data = compi_reg.objects.all()
     compies = Compi.objects.all()
