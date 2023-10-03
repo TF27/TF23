@@ -24,7 +24,7 @@ const Robocapleague = () => {
             content: 'One team can have a maximum of 4 members.'
           },
           {
-            title: "Is it free to register for Meshmerize?",
+            title: "Is it free to register for Robocap League?",
             content: 'Yes, it is free to register.'
           },
           {
