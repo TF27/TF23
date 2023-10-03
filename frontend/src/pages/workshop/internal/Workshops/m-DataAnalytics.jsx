@@ -139,13 +139,13 @@ const DataAnalytics = () => {
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
             Akshat Gupta
             <div
-              className="col-3 contactNum"
+              className="contactNum"
               onClick={() => (window.location.href = `tel:9619678850`)}
             >
               +91 96196 78850
             </div>
             <div
-              className="col-3 contactMail"
+              className="contactMail"
               onClick={() =>
                 (window.location.href = `mailto:akshat@techfest.org`)
               }

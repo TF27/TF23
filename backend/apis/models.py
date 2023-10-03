@@ -108,6 +108,7 @@ class Workshop(models.Model):
     desc = models.TextField()
     img = models.ImageField(upload_to='workshop')
     sponsorImg = models.ImageField(upload_to='workshop_sponsors', null=True, blank=True)
+    sponsorLink = models.CharField(max_length=250, null=True, blank=True)
     statement = models.FileField(upload_to='ProblemStatements', null=True, blank=True)
     paymentLink = models.TextField(null=True, blank=True)
     closed = models.BooleanField(default=False)

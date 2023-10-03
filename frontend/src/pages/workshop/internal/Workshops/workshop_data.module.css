@@ -237,3 +237,9 @@
         justify-content: center;
     }
 }
+
+@media (max-width: 990px){
+    .info_data{
+       width: 640px;
+    }
+  }

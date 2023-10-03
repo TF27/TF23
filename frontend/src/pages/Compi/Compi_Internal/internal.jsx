@@ -104,7 +104,7 @@ const Internal = () => {
           <div className={`col-12 col-lg-8 ${styles.rightdata}`}>
             <div className={styles.sponsor}>
               {data.sponsorImg && (
-                <a href={data.sponsorLink}>
+                <a href={data.sponsorLink} target="_blank">
                   <h3>
                     Sponsored by{" "}
                     <img

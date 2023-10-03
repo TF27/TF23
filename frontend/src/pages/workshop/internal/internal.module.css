@@ -241,7 +241,7 @@
  }
  @media (max-width: 1200px) {
     .imgFrame {
-       left: -8.5%;
+       /* left: -8.5%; */
     }
  }
  
@@ -271,7 +271,7 @@
  
     .imgFrame {
        position: absolute;
-       top: 1%;
+       top: 2%;
        left: auto;
     }
     .imgCompi {
@@ -417,4 +417,6 @@
        width: 249px;
     }
  }
+
+
  

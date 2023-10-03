@@ -9,6 +9,7 @@ import frame from "./../../Compi/static/card/Frame.png";
 
 import Meshmerize from "./Workshops/Meshmerize";
 import Python from "./Workshops/Python";
+import DataAnalytics from "./Workshops/DataAnalytics";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -110,7 +111,7 @@ const Internal = () => {
             )}
             <p className={styles.howtopay}>
               How to{" "}
-              <a href="" target="_blank">
+              <a href="https://drive.google.com/file/d/1-MO-lgNpqUtozEuaj5mA1gCMTSoIPJrG/view?usp=sharing" target="_blank">
                 <h4 style={{ display: "inline" }}>Pay?</h4>
               </a>
             </p>
@@ -118,7 +119,7 @@ const Internal = () => {
           <div className={`col-12 col-lg-8 ${styles.rightdata}`}>
             <div className={styles.sponsor}>
               {data.sponsorImg && (
-                <a href={data.sponsorLink}>
+                <a href={data.sponsorLink} target="_blank">
                   <h3>
                     Presented by{" "}
                     <img
@@ -150,6 +151,7 @@ const Internal = () => {
             )}
             {cardName === "meshmerize" && <Meshmerize />}
             {cardName === "python" && <Python />}
+            {cardName === "data analytics" && <DataAnalytics />}
           </div>
         </div>
       </div>

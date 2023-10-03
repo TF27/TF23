@@ -8,6 +8,10 @@ import backimg1 from "./../img/exp_bg.png";
 import frame from "./../../Compi/static/card/Frame.png";
 
 import Meshmerize from "./Workshops/m-Meshmerize";
+import DataAnalytics from "./Workshops/m-DataAnalytics";
+// import Python from "./Workshops/m-Python";
+// import Python from './Workshops/m-Python';
+import Pito from './Workshops/m-pito';
 
 const MInternal = () => {
   const { cardName } = useParams();
@@ -117,7 +121,7 @@ const MInternal = () => {
           <div className={`col-12 col-lg-8 ${styles.rightdata}`}>
             <div className={styles.sponsor}>
               {data.sponsorImg && (
-                <a href={data.sponsorLink}>
+                <a href={data.sponsorLink} target="_blank">
                   <h3>
                     Presented by{" "}
                     <img
@@ -148,6 +152,9 @@ const MInternal = () => {
               <div className={styles.compi_reg}></div>
             )}
             {cardName === "meshmerize" && <Meshmerize />}
+            {cardName === "python" && <Pito />}
+            {cardName === "data analytics" && <DataAnalytics />}
+
           </div>
         </div>
       </div>

@@ -23,6 +23,7 @@ import Mechanzo from "./Competitions/m-mechanzo";
 import JoinTeam from "./Teams/joinTeam";
 import AddParti from "./Teams/add_parti";
 import SingleParti from "./Teams/single_parti";
+import Robocapleague from "./Competitions/m-robocapleague";
 
 const MInternal = () => {
   const { compiName } = useParams();
@@ -79,6 +80,7 @@ const MInternal = () => {
         <div className="row">
           <div className={styles.sponsor}>
             {data.sponsorImg && (
+              <a href={data.sponsorLink} target="_blank">
               <h3>
                 Sponsored by{" "}
                 <img
@@ -87,6 +89,7 @@ const MInternal = () => {
                   className={styles.sponsorImg}
                 />
               </h3>
+              </a>
             )}
           </div>
           {user === null ? (
@@ -198,6 +201,7 @@ const MInternal = () => {
         {compiName === "urban-furturism" && <UrbanFuturism />}
         {compiName === "tech-aid" && <TechAid />}
         {compiName === "atom-quest" && <AtomQuest />}
+        {compiName === "robocap league" && <Robocapleague />}
       </div>
     ));
   };
