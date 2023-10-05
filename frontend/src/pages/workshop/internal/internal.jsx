@@ -7,7 +7,7 @@ import styles from "./internal.module.css";
 import backimg1 from "./../img/exp_bg.png";
 import frame from "./../../Compi/static/card/Frame.png";
 
-import Meshmerize from "./Workshops/Meshmerize";
+import Gesture from "./Workshops/Gesture";
 import Python from "./Workshops/Python";
 import DataAnalytics from "./Workshops/DataAnalytics";
 
@@ -149,7 +149,7 @@ const Internal = () => {
             ) : (
               <div className={styles.compi_reg}></div>
             )}
-            {cardName === "meshmerize" && <Meshmerize />}
+            {cardName === "gesture robotics" && <Gesture />}
             {cardName === "python" && <Python />}
             {cardName === "data analytics" && <DataAnalytics />}
           </div>

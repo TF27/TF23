@@ -150,13 +150,13 @@ const HackAI = () => {
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
                     Last date of registration:<br/>
-                    6th October 2023<br/><br/>
+                    9th October 2023<br/><br/>
 
                     Round 1 Submission Deadline:<br/>
-                    7th October 2023<br/><br/>
+                    10th October 2023<br/><br/>
 
                     Finalist announcement:<br/>
-                    15th October 2023<br/><br/>
+                    16th October 2023<br/><br/>
 
                     Final Round at IIT Bombay Campus:<br/>
                     27th December 2023</div>

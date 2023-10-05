@@ -4,7 +4,7 @@ import Faq from "react-faq-component";
 import Whatsapplink from "../../../../components/whatsapp/link";
 import "./x.css";
 
-const Meshmerize = () => {
+const Gesture = () => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = (openX) => {
@@ -171,4 +171,4 @@ const Meshmerize = () => {
   );
 };
 
-export default Meshmerize;
+export default Gesture;
