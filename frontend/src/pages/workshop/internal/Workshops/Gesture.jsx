@@ -5,7 +5,7 @@ import './x.css';
 import Whatsapplink from '../../../../components/whatsapp/link';
 
 
-const Meshmerize = () => {
+const Gesture = () => {
     const [activeCity, setActiveCity] = useState('About');
     const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {
@@ -81,4 +81,4 @@ const Meshmerize = () => {
      );
 }
  
-export default Meshmerize;
+export default Gesture;

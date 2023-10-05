@@ -7,7 +7,7 @@ import styles from "./internal.module.css";
 import backimg1 from "./../img/exp_bg.png";
 import frame from "./../../Compi/static/card/Frame.png";
 
-import Meshmerize from "./Workshops/m-Meshmerize";
+import Gesture from "./Workshops/m-gesture";
 import DataAnalytics from "./Workshops/m-DataAnalytics";
 // import Python from "./Workshops/m-Python";
 // import Python from './Workshops/m-Python';
@@ -151,7 +151,7 @@ const MInternal = () => {
             ) : (
               <div className={styles.compi_reg}></div>
             )}
-            {cardName === "meshmerize" && <Meshmerize />}
+            {cardName === "gesture robotics" && <Gesture />}
             {cardName === "python" && <Pito />}
             {cardName === "data analytics" && <DataAnalytics />}
 
