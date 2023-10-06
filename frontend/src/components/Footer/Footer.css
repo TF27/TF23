@@ -26,6 +26,26 @@
     z-index: 214748364;
 }
 
+.anounceIt a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    animation: ohyeah 3s infinite;
+    font-weight: bold;
+}
+
+@keyframes ohyeah {
+    0% {
+        opacity: 1; /* Fully visible */
+      }
+      50% {
+        opacity: 0; /* Completely transparent */
+      }
+      100% {
+        opacity: 1; /* Fully visible */
+      }
+}
+
 .footWeb{
     display: flex;
     justify-content: space-between;
@@ -65,11 +85,15 @@
     justify-content: space-around;
     /* margin-right: 3%; */
 }
+
 .footMulti{
     display: flex;
 }
 
 @media (max-width: 848px){
+    .anounceIt{
+        display :none;
+    }
     .footLinkO{
         display: none;
     }
