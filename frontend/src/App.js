@@ -55,6 +55,7 @@ const WorkshopExplore = React.lazy(() =>
 );
 // const CompiInternal = React.lazy(()=> import('/pages/Compi/Compi_Internal/index'))
 const MUN = React.lazy(() => import("./pages/MUN/mun"));
+const IC = React.lazy(() => import("./pages/Events/Innovation Challenge/ic"));
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -85,8 +86,8 @@ function App() {
             ) : (
               <Header />
             )} */}
-            <Header />
-          {/* <Header_update /> */}
+            {/* <Header /> */}
+          <Header_update />
 
           <Routes>
             <Route path="/" element={isLoading ? <Loading1 /> : <Home />} />
@@ -271,6 +272,24 @@ function App() {
                 </React.Suspense>
               }
             />
+
+            <Route 
+              path="/innovationchallenge"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <IC />
+                </React.Suspense>
+              }
+            />
+            <Route 
+              path="/ic"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <IC />
+                </React.Suspense>
+              }
+            />
+
           </Routes>
 
           <Footer />
