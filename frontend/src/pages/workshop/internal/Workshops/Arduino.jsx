@@ -41,13 +41,16 @@ const Arduino = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Master concepts of Data Analytics and Manipulation using Python!</div>
+            Arduino is an open-source platform used for building electronics projects<br /> <br />
+            Date: 28th-29th December <br /> <br />
+            Duration: 12-14 hours <br /> <br />
+            Venue: IIT Bombay <br /></div>
             </div>
           </div>
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            <b>Register and Pay before 20th October 2023 to avail the workshop at the early bird price</b> <br /><br />
+            <b>Register and Pay before 15th October 2023 to avail the workshop at the early bird price</b> <br /><br />
             Group Discounts: <br/>
             Register as a group to avail the following discounts: <br/>
             2 members Rs. 150 off <br/>
@@ -72,8 +75,8 @@ const Arduino = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-                Akshat Gupta<br/>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8928455606`}>+91 96196 78850</div>
+                Sanya Agrawal<br/>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7588931688`}>+91 75889 31688</div>
                     <div className="col-3 contactMail" onClick={() => window.location.href = `gourish@techfest.org`}>akshat@techfest.org</div>
                     
               </div>

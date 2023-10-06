@@ -4,7 +4,7 @@ import Faq from "react-faq-component";
 import Whatsapplink from "../../../../components/whatsapp/link";
 import "./x.css";
 
-const DataAnalytics = () => {
+const Arduino = () => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = (openX) => {
@@ -57,7 +57,7 @@ const DataAnalytics = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Master concepts of Data Analytics and Manipulation using Python!<br /> <br />
+          Arduino is an open-source platform used for building electronics projects <br /> <br />
           Date: 28th-29th December <br /> <br />
           Duration: 12-14 hours <br /> <br />
           Venue: IIT Bombay <br />
@@ -140,20 +140,20 @@ const DataAnalytics = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Akshat Gupta
+            Sanya Agrawal
             <div
               className="contactNum"
-              onClick={() => (window.location.href = `tel:9619678850`)}
+              onClick={() => (window.location.href = `tel:7588931688`)}
             >
-              +91 96196 78850
+              +91 75889 31688
             </div>
             <div
               className="contactMail"
               onClick={() =>
-                (window.location.href = `mailto:akshat@techfest.org`)
+                (window.location.href = `mailto:sanya@techfest.org`)
               }
             >
-              akshat@techfest.org
+              sanya@techfest.org
             </div>
           </div>
         </div>
@@ -162,4 +162,4 @@ const DataAnalytics = () => {
   );
 };
 
-export default DataAnalytics;
+export default Arduino;

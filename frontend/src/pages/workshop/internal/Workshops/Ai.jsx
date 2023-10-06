@@ -5,7 +5,7 @@ import './x.css';
 import Whatsapplink from '../../../../components/whatsapp/link';
 
 
-const Python = () => {
+const Ai = () => {
     const [activeCity, setActiveCity] = useState('About');
     const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {
@@ -41,13 +41,16 @@ const Python = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Master the fundamentals of writing Python scripts and using its libraries</div>
+            Apply principles of Artificial Intelligence in solutions that require inference, perception, and knowledge representation<br /> <br />
+            Date: 28th-29th December <br /> <br />
+            Duration: 12-14 hours <br /> <br />
+            Venue: IIT Bombay <br /></div>
             </div>
           </div>
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            <b>Register and Pay before 20th October 2023 to avail the workshop at the early bird price</b> <br /><br />
+            <b>Register and Pay before 15th October 2023 to avail the workshop at the early bird price</b> <br /><br />
             Group Discounts: <br/>
             Register as a group to avail the following discounts: <br/>
             2 members Rs. 150 off <br/>
@@ -72,9 +75,9 @@ const Python = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-                Gourish Singhal<br/>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8928455606`}>+91 89284 55606</div>
-                    <div className="col-3 contactMail" onClick={() => window.location.href = `gourish@techfest.org`}>gourish@techfest.org</div>
+                Arnav Patel<br/>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9372634701`}>+91 93726 34701</div>
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `arnav@techfest.org`}>arnav@techfest.org</div>
                     
               </div>
             </div>
@@ -85,4 +88,4 @@ const Python = () => {
      );
 }
  
-export default Python;
+export default Ai;

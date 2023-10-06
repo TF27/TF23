@@ -5,7 +5,7 @@ import './x.css';
 import Whatsapplink from '../../../../components/whatsapp/link';
 
 
-const DataAnalytics = () => {
+const Solarizer = () => {
     const [activeCity, setActiveCity] = useState('About');
     const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {
@@ -25,7 +25,8 @@ const DataAnalytics = () => {
         margin: 'auto',
         rowContentMarginBottom: '0',
       }
-
+      // const walink1 = "https://chat.whatsapp.com/CYpCpfezIEf09EtiY591Y5";
+      // const dslink1 = "https://chat.whatsapp.com/CYpCpfezIEf09EtiY591Y5";
     return ( 
       <div>
       <div className={styles.impdata}>
@@ -41,10 +42,11 @@ const DataAnalytics = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Master concepts of Data Analytics and Manipulation using Python!<br /> <br />
-          Date: 28th-29th December <br /> <br />
-          Duration: 12-14 hours <br /> <br />
-          Venue: IIT Bombay <br /></div>
+            Design a Solar PV Plant and make a Solar Mobile Charger <br /> <br />
+            Date: 28th-29th December <br /> <br />
+            Duration: 12-14 hours <br /> <br />
+            Venue: IIT Bombay <br />
+              </div>
             </div>
           </div>
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
@@ -56,7 +58,7 @@ const DataAnalytics = () => {
             2 members Rs. 150 off <br/>
             3 members Rs. 250 off <br/>
             4 members Rs. 300 off <br/>
-            </div>
+              </div>
             </div>
           </div>
           <div id="Rules" className={`${styles.info} ${activeCity === 'Rules' ? styles.show : styles.hide}`}>
@@ -75,9 +77,9 @@ const DataAnalytics = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-                Akshat Gupta<br/>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9619678850`}>+91 96196 78850</div>
-                    <div className="col-3 contactMail" onClick={() => window.location.href = `akshat@techfest.org`}>akshat@techfest.org</div>
+              Atharv Apshinge<br/>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9324589830`}>+91 93245 89830</div>
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `atharv@techfest.org`}>atharv@techfest.org</div>
                     
               </div>
             </div>
@@ -88,4 +90,4 @@ const DataAnalytics = () => {
      );
 }
  
-export default DataAnalytics;
+export default Solarizer;
