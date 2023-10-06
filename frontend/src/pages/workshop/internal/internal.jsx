@@ -8,8 +8,18 @@ import backimg1 from "./../img/exp_bg.png";
 import frame from "./../../Compi/static/card/Frame.png";
 
 import Gesture from "./Workshops/Gesture";
-import Python from "./Workshops/Python";
+import Pito from "./Workshops/Pito";
 import DataAnalytics from "./Workshops/DataAnalytics";
+import Arduino from "./Workshops/Arduino";
+import Solarizer from "./Workshops/Solarizer";
+import Ai from "./Workshops/Ai";
+import Cloud from "./Workshops/Cloud";
+import Mi from "./Workshops/Mi";
+import Sixth from "./Workshops/Sixth";
+import Auto from "./Workshops/Auto";
+import Crypto from "./Workshops/Crypto";
+import Block from "./Workshops/Block";
+import Dta from "./Workshops/Dta";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -150,8 +160,18 @@ const Internal = () => {
               <div className={styles.compi_reg}></div>
             )}
             {cardName === "gesture robotics" && <Gesture />}
-            {cardName === "python" && <Python />}
+            {cardName === "python" && <Pito />}
             {cardName === "data analytics" && <DataAnalytics />}
+            {cardName === "arduino" && <Arduino />}
+            {cardName === "solarizer" && <Solarizer />}
+            {cardName === "artificial intelligence" && <Ai/>}
+            {cardName === "cloud computing" && <Cloud/>}
+            {cardName === "machine learning" && <Mi/>}
+            {cardName === "sixth sense" && <Sixth/>}
+            {cardName === "electric vehicles " && <Auto/>}
+            {cardName === "crypto trading by wazirX " && <Crypto/>}
+            {cardName === "blockchain " && <Block/>}
+            {cardName === "data to aI " && <Dta/>}
           </div>
         </div>
       </div>

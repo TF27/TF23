@@ -12,6 +12,18 @@ import DataAnalytics from "./Workshops/m-DataAnalytics";
 // import Python from "./Workshops/m-Python";
 // import Python from './Workshops/m-Python';
 import Pito from './Workshops/m-pito';
+import Arduino from "./Workshops/m-Arduino";
+import Solarizer from "./Workshops/m-Solarizer";
+import Ai from "./Workshops/m-Ai";
+import Cloud from "./Workshops/m-Cloud";
+import Mi from "./Workshops/m-Mi";
+import Sixth from "./Workshops/m-Sixth";
+import Auto from "./Workshops/m-Auto"; 
+import Crypto from "./Workshops/m-Crypto"; 
+import Block from "./Workshops/m-Block"; 
+import Dta from "./Workshops/m-Dta"; 
+
+
 
 const MInternal = () => {
   const { cardName } = useParams();
@@ -152,8 +164,19 @@ const MInternal = () => {
               <div className={styles.compi_reg}></div>
             )}
             {cardName === "gesture robotics" && <Gesture />}
-            {cardName === "python" && <Pito />}
+            {cardName === "python" && <Pito/>}
             {cardName === "data analytics" && <DataAnalytics />}
+            {cardName === "arduino" && <Arduino />}
+            {cardName === "solarizer" && <Solarizer />}
+            {cardName === "artificial intelligence" && <Ai />}
+            {cardName === "cloud computing" && <Cloud />}
+            {cardName === "machine learning" && <Mi />}
+            {cardName === "sixth sense" && <Sixth />}
+            {cardName === "electric vehicles" && <Auto />}
+            {cardName === "crypto trading by wazirX" && <Crypto />}
+            {cardName === "blockchain" && <Block />}
+            {cardName === "data to aI" && <Dta />}
+
 
           </div>
         </div>

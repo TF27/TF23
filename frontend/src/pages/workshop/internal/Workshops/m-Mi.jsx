@@ -4,7 +4,7 @@ import Faq from "react-faq-component";
 import Whatsapplink from "../../../../components/whatsapp/link";
 import "./x.css";
 
-const DataAnalytics = () => {
+const Mi = () => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = (openX) => {
@@ -57,8 +57,8 @@ const DataAnalytics = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Master concepts of Data Analytics and Manipulation using Python!<br /> <br />
-          Date: 28th-29th December <br /> <br />
+          Master the sci-kit-learn library and become proficient in developing clever machine learning algorithms <br /> <br />
+          Date: 26th-27th December <br /> <br />
           Duration: 12-14 hours <br /> <br />
           Venue: IIT Bombay <br />
           </div>
@@ -83,7 +83,7 @@ const DataAnalytics = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Register and Pay before 15th October 2023 to avail the workshop at the early bird price <br /><br />
+            Register and Pay before 15th October 2023 to avail the workshop at the early bird price <br /><br />
             Group Discounts: <br/>
             Register as a group to avail the following discounts: <br/>
             2 members Rs. 150 off <br/>
@@ -140,20 +140,20 @@ const DataAnalytics = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Akshat Gupta
+            Manas Dadhich
             <div
               className="contactNum"
-              onClick={() => (window.location.href = `tel:9619678850`)}
+              onClick={() => (window.location.href = `tel:9981378767`)}
             >
-              +91 96196 78850
+              +91 99813 78767
             </div>
             <div
               className="contactMail"
               onClick={() =>
-                (window.location.href = `mailto:akshat@techfest.org`)
+                (window.location.href = `mailto:manas@techfest.org`)
               }
             >
-              akshat@techfest.org
+              manas@techfest.org
             </div>
           </div>
         </div>
@@ -162,4 +162,4 @@ const DataAnalytics = () => {
   );
 };
 
-export default DataAnalytics;
+export default Mi;

@@ -5,7 +5,7 @@ import './x.css';
 import Whatsapplink from '../../../../components/whatsapp/link';
 
 
-const DataAnalytics = () => {
+const Ethical = () => {
     const [activeCity, setActiveCity] = useState('About');
     const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {
@@ -41,7 +41,7 @@ const DataAnalytics = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Master concepts of Data Analytics and Manipulation using Python!<br /> <br />
+            Learn to identify and fix security threats breaching the company's security system<br /> <br />
           Date: 28th-29th December <br /> <br />
           Duration: 12-14 hours <br /> <br />
           Venue: IIT Bombay <br /></div>
@@ -75,9 +75,9 @@ const DataAnalytics = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-                Akshat Gupta<br/>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9619678850`}>+91 96196 78850</div>
-                    <div className="col-3 contactMail" onClick={() => window.location.href = `akshat@techfest.org`}>akshat@techfest.org</div>
+                Sarvesh Bang<br/>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8766784117`}>+91 87667 84117</div>
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `sarvesh@techfest.org`}>sarvesh@techfest.org</div>
                     
               </div>
             </div>
@@ -88,4 +88,4 @@ const DataAnalytics = () => {
      );
 }
  
-export default DataAnalytics;
+export default Ethical;

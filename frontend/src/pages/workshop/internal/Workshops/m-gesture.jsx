@@ -57,10 +57,10 @@ const Gesture = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Teams must build a line follower bot that can keep track of
-            directions while going through a maze. It must analyze the path in
-            the Dry Run and use this information in the Actual Run to traverse
-            the maze to reach the ending point in the minimum possible time.
+          Learn about the invariable future of robotics and automation <br /> <br />
+            Date: 28th-29th December <br /> <br />
+            Duration: 12-14 hours <br /> <br />
+            Venue: IIT Bombay <br />
           </div>
         </div>
       </div>
@@ -83,9 +83,12 @@ const Gesture = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Top 5 teams from each Zonal Qualifier will qualify for the Grand
-            Finale that will be held during Techfest 2022-23 (Only if they score
-            higher than the minimum cut-off score)
+          <b>Register and Pay before 15th October 2023 to avail the workshop at the early bird price</b> <br /><br />
+            Group Discounts: <br/>
+            Register as a group to avail the following discounts: <br/>
+            2 members Rs. 150 off <br/>
+            3 members Rs. 250 off <br/>
+            4 members Rs. 300 off <br/>
           </div>
         </div>
       </div>
@@ -108,25 +111,13 @@ const Gesture = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            1. Every team has to register online on the official Techfest
-            website for the competition
-            <br />
-            2. A Team ID will be allocated to the team on registration which
-            shall be used for future references
-            <br />
-            3. The decision of the organizers or judges shall be treated as
-            final and binding on all
-            <br />
-            4. No responsibility will be held by Techfest, IIT Bombay for any
-            late, lost or misdirected entries
-            <br />
-            5. Note that at any point of time the latest information will be
-            that which is on the website; However, registered participants will
-            be informed through mail about any changes
-            <br />
-            6. All modes of official communication will be through the Techfest
-            e-mail, participants are advised to keep track of all folders in
-            their e-mail accounts
+          1. <b>Eligibility:</b> Participants will have to register individually for each workshop. <br/>
+            2. <b>Payment Instructions:</b> While paying the fees, login with the same credentials with which you had registered on the Techfest Website. Please enter the data correctly for us to process your payment information properly. <br/>
+            3. <b>Prerequisites:</b> A laptop/PC with Microsoft Windows (7 or later & Minimum 4GB RAM), configuration Internet Connectivity (Typically to be able to do video call / conferencing), Notepad & Pen. <br/>
+            4. <b>Certificate Criterion:</b> Participants should be present in all the sessions. Failing this, no certificate will be awarded to the participant. Certificate of Training from Techfest, IIT Bombay will be given to all the participants.<br/>
+            <br />No Refunds will be entertained <br />
+            **Limited number of seats <br/>
+            **If the Workshop gets canceled, all the participants will be given a full refund, irrespective of the Deadline. <br />
           </div>
         </div>
       </div>
@@ -149,20 +140,20 @@ const Gesture = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Rishu Bhadani
+            Aryan Gupta
             <div
               className="contactNum"
-              onClick={() => (window.location.href = `tel:8709397909`)}
+              onClick={() => (window.location.href = `tel:7317520804`)}
             >
-              +91 87093 97909
+              +91 73175 20804
             </div>
             <div
               className="contactMail"
               onClick={() =>
-                (window.location.href = `mailto:rishu.techfest.iitb@gmail.com`)
+                (window.location.href = `mailto:aryan@techfest.org`)
               }
             >
-              rishu.techfest.iitb@gmail.com
+              aryan@techfest.org
             </div>
           </div>
         </div>

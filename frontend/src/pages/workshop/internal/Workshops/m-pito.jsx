@@ -57,7 +57,10 @@ const Pito = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Master the fundamentals of writing Python scripts and using its libraries
+          Master the fundamentals of writing Python scripts and using its libraries <br /><br />
+            Date: 26th-27th <br /> <br />
+            Duration: 12-14 hours <br /><br />
+            Venue: IIT Bombay <br />
           </div>
         </div>
       </div>
