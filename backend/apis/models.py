@@ -105,6 +105,7 @@ class compi_team(models.Model):
 class Workshop(models.Model):
     name = models.CharField(max_length=100, primary_key=True)
     prize = models.CharField(max_length=100)
+    ex_prize = models.CharField(null=True, blank=True, max_length=100)
     desc = models.TextField()
     img = models.ImageField(upload_to='workshop')
     sponsorImg = models.ImageField(upload_to='workshop_sponsors', null=True, blank=True)

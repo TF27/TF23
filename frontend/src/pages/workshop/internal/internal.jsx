@@ -23,7 +23,7 @@ import Dta from "./Workshops/Dta";
 
 const Internal = () => {
   const { cardName } = useParams();
-
+  // const [discount, setDiscount] = useState(True)
   const [data, setData] = useState([]);
   const { googleSignIn, user } = UserAuth();
   const handleGoogleSignIn = async () => {
@@ -144,7 +144,9 @@ const Internal = () => {
             <div className={styles.cardND}>
               <h1 className={styles.compi_name}>{data.name}</h1>
               <p>{data.desc}</p>
-              <h4 className={styles.compi_prize}> INR {data.prize}</h4>
+              <div className={styles.work_prize}>
+                <h4 className={styles.compi_prize}> INR {data.prize}</h4> {data.ex_prize && <span><h5>{data.ex_prize}</h5></span>}
+              </div>
             </div>
             {user === null ? (
               <div className={styles.compi_reg}></div>

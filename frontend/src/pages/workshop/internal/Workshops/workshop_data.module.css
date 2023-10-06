@@ -185,6 +185,14 @@
 .whatd_rect2::-webkit-scrollbar {
     width: 10px;
   }
+
+  .info_data{
+    margin-top: 8px;
+  }
+  .info_details img{
+    margin-left: 2px;
+    width: 35px;
+  }
   
   /* Track */
   .whatd_rect2::-webkit-scrollbar-track {
@@ -230,6 +238,14 @@
     list-style: none;
     position: relative;
     left: -30px;
+}
+.info_details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.info_details div{
+    width: 40%;
 }
 
 @media (max-width: 992px) {

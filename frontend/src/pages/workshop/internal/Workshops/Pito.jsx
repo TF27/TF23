@@ -3,7 +3,7 @@ import styles from './workshop_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
 import Whatsapplink from '../../../../components/whatsapp/link';
-
+import yt from './../../img/glimpses.png'
 
 const Pito = () => {
     const [activeCity, setActiveCity] = useState('About');
@@ -41,10 +41,22 @@ const Pito = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Master the fundamentals of writing Python scripts and using its libraries <br /><br />
-            Date: 26th-27th <br /> <br />
-            Duration: 12-14 hours <br /><br />
-            Venue: IIT Bombay <br /></div>
+              <div className={styles.info_details}>
+                <div>
+                  <h3>Data: </h3>
+                  <p>26th-27th December</p>
+                  <h3>Venue: </h3>
+                  <p>IIT Bombay</p>
+                  <h3>Glimpses: <a href="" target="_blank"><img src={yt} /></a></h3>
+                </div>
+                <div>
+                  <h3>Duration:</h3>
+                  <p>12-14 hours</p>
+                  <h3>Early Bird Offer:</h3>
+                  <p>Free Access Pass to Techfest for events such as EDM night, Robowar, Exhibition, Keynote Sessions and many more*</p>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
