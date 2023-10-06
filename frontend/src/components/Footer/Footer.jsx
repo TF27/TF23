@@ -76,9 +76,9 @@ const Footer = () => {
             </li>
           </div>
         </div>
-        <div className='anounceIt'>
+        {/* <div className='anounceIt'>
           <Link to='/workshops'>Workshops are Live Now!</Link>
-        </div>
+        </div> */}
         <div className="socialMedia">
           <li>
             <a
