@@ -3,7 +3,7 @@ import styles from './workshop_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
 import Whatsapplink from '../../../../components/whatsapp/link';
-
+import yt from './../../img/glimpses.png'
 
 const Sixth = () => {
     const [activeCity, setActiveCity] = useState('About');
@@ -25,8 +25,7 @@ const Sixth = () => {
         margin: 'auto',
         rowContentMarginBottom: '0',
       }
-      // const walink1 = "https://chat.whatsapp.com/CYpCpfezIEf09EtiY591Y5";
-      // const dslink1 = "https://chat.whatsapp.com/CYpCpfezIEf09EtiY591Y5";
+
     return ( 
       <div>
       <div className={styles.impdata}>
@@ -42,23 +41,34 @@ const Sixth = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Augment physical world around you with a wearable gestural interface <br /> <br />
-            Date: 28th-29th December <br /> <br />
-            Duration: 12-14 hours <br /> <br />
-            Venue: IIT Bombay <br />
+              <div className={styles.info_details}>
+                <div>
+                  <h3>Date: </h3>
+                  <p>28th-29th December</p>
+                  <h3>Venue: </h3>
+                  <p>IIT Bombay</p>
+                  <h3>Glimpses: <a href="" target="_blank"><img src={yt} /></a></h3>
+                </div>
+                <div>
+                  <h3>Duration:</h3>
+                  <p>12-14 hours</p>
+                  <h3>Early Bird Offer:</h3>
+                  <p>Free Access Pass to Techfest for events such as EDM night, Robowar, Exhibition, Keynote Sessions and many more*</p>
+                </div>
               </div>
+            </div>
             </div>
           </div>
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            <b>Register and Pay before 15th October 2023 to avail the workshop at the early bird price</b> <br /><br />
+            <b>Register and Pay before 20th October 2023 to avail the workshop at the early bird price</b> <br /><br />
             Group Discounts: <br/>
             Register as a group to avail the following discounts: <br/>
             2 members Rs. 150 off <br/>
             3 members Rs. 250 off <br/>
             4 members Rs. 300 off <br/>
-              </div>
+            </div>
             </div>
           </div>
           <div id="Rules" className={`${styles.info} ${activeCity === 'Rules' ? styles.show : styles.hide}`}>
@@ -77,7 +87,7 @@ const Sixth = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Aryan Gupta<br/>
+                Aryan Gupta<br/>
                     <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7317520804`}>+91 73175 20804</div>
                     <div className="col-3 contactMail" onClick={() => window.location.href = `aryan@techfest.org`}>aryan@techfest.org</div>
                     

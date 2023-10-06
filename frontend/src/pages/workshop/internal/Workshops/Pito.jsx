@@ -43,7 +43,7 @@ const Pito = () => {
             <div className={styles.info_data}>
               <div className={styles.info_details}>
                 <div>
-                  <h3>Data: </h3>
+                  <h3>Date: </h3>
                   <p>26th-27th December</p>
                   <h3>Venue: </h3>
                   <p>IIT Bombay</p>

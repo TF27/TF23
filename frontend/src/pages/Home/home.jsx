@@ -4,7 +4,7 @@ import HomeParallax from "./parallax";
 import styles from "./home.module.css";
 
 // import images
-import spimg from "./images/sponsor.png";
+import spimg from "./images/sponsor.jpg";
 import lec1 from "./assets/explore/Lec1.jpg";
 import lec2 from "./assets/explore/Lec2.jpg";
 import lec3 from "./assets/explore/Lec3.jpg";
