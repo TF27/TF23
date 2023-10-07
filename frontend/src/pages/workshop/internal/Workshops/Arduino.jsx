@@ -205,7 +205,7 @@ const Arduino = () => {
                     (window.location.href = `gourish@techfest.org`)
                   }
                 >
-                  akshat@techfest.org
+                  sanya@techfest.org
                 </div>
               </div>
             </div>
