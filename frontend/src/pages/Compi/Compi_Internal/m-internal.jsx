@@ -24,6 +24,7 @@ import JoinTeam from "./Teams/joinTeam";
 import AddParti from "./Teams/add_parti";
 import SingleParti from "./Teams/single_parti";
 import Robocapleague from "./Competitions/m-robocapleague";
+import Dronelog from "./Competitions/m-Dronelog";
 
 const MInternal = () => {
   const { compiName } = useParams();
@@ -202,6 +203,7 @@ const MInternal = () => {
         {compiName === "tech-aid" && <TechAid />}
         {compiName === "atom-quest" && <AtomQuest />}
         {compiName === "robocap league" && <Robocapleague />}
+        {compiName === "dronelog" && <Dronelog />}
       </div>
     ));
   };

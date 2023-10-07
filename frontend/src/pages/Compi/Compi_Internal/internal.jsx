@@ -23,6 +23,7 @@ import UrbanFuturism from "./Competitions/UrbanFuturism";
 import SingleParti from "./Teams/single_parti";
 import AddParti from "./Teams/add_parti";
 import Robocapleague from "./Competitions/robocapleague";
+import Dronelog from "./Competitions/Dronelog";
 
 const Internal = () => {
   const { compiName } = useParams();
@@ -139,6 +140,7 @@ const Internal = () => {
             {compiName === "urban-futurism" && <UrbanFuturism />}
             {compiName === "atom-quest" && <AtomQuest />}
             {compiName === "robocap league" && <Robocapleague />}
+            {compiName === "dronelog" && <Dronelog />}
 
             <div className={styles.team_reg}>
               {user === null ? (
