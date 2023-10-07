@@ -20,15 +20,15 @@ def compi_count():
 
     for compi in compies:
         compi.reg_count = 0 
-        print("no")
+        # print("no")
 
     for d in data:
         for compie in compies:
             if d.compi.name == compie.name :
                 compie.reg_count+=1
-                print("yes")
+                # print("yes")
     
-        print(d.compi.reg_count)
+        # print(d.compi.reg_count)
     return None
     
 
@@ -59,6 +59,7 @@ def export_data_to_csv_all(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="your_model_data.csv"'
     writer = csv.writer(response)
+    
     writer.writerow([
         'TF ID',
         'Competition',
@@ -81,6 +82,7 @@ def export_data_to_csv_all(request):
 
     # Retrieve data from the model and write to CSV
     queryset = compi_reg.objects.all()
+    
     for obj in queryset:
         writer.writerow([
             obj.tf_id,
@@ -103,15 +105,23 @@ def export_data_to_csv_all(request):
 
     return response
 
+@staff_member_required
 def download_compi_team_csv(request):
+    # Query the database to get all compi_team objects
+    compi_teams = compi_team.objects.all()
+
+    # Create a response with a CSV attachment
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="compi_team_data.csv"'
 
+    # Create a CSV writer
     writer = csv.writer(response)
-    writer.writerow([
-        'Team ID',
-        'Competition Name',
+
+    # Write the header row
+    header = [
+        'Compi Name',
         'Max Team Length',
+        'Team ID',
         'Team Leader Name',
         'Team Leader Email',
         'Participant 1 Name',
@@ -122,16 +132,16 @@ def download_compi_team_csv(request):
         'Participant 3 Email',
         'Team Length',
         'Participants',
-        'Single Participant',
-    ])
+        'Single Participant'
+    ]
+    writer.writerow(header)
 
-    compi_teams = compi_team.objects.all()
-
+    # Write data rows
     for team in compi_teams:
-        writer.writerow([
-            team.team_id,
-            team.compi_name.name,  # Assuming compi_name has a 'name' attribute
+        data_row = [
+            team.compi_name.name,  # Replace 'name' with the actual field name in the Compi model
             team.max_team_length,
+            team.team_id,
             team.team_leader_name,
             team.team_leader_email,
             team.parti1_name,
@@ -143,6 +153,7 @@ def download_compi_team_csv(request):
             team.team_length,
             team.participants,
             team.single_parti,
-        ])
+        ]
+        writer.writerow(data_row)
 
     return response
