@@ -25,6 +25,7 @@ import Dta from "./Workshops/m-Dta";
 
 
 
+
 const MInternal = () => {
   const { cardName } = useParams();
 
@@ -169,13 +170,13 @@ const MInternal = () => {
             {cardName === "arduino" && <Arduino />}
             {cardName === "solarizer" && <Solarizer />}
             {cardName === "artificial intelligence" && <Ai />}
-            {cardName === "cloud computing" && <Cloud />}
+            {cardName === "cloud computing by amazon" && <Cloud />}
             {cardName === "machine learning" && <Mi />}
             {cardName === "6th sense robotics" && <Sixth />}
             {cardName === "electric vehicles" && <Auto />}
             {cardName === "crypto trading by wazirX" && <Crypto />}
             {cardName === "blockchain" && <Block />}
-            {cardName === "data to aI" && <Dta />}
+            {cardName === "data to aI by google" && <Dta />}
 
 
           </div>

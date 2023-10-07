@@ -20,6 +20,8 @@ import Auto from "./Workshops/Auto";
 import Crypto from "./Workshops/Crypto";
 import Block from "./Workshops/Block";
 import Dta from "./Workshops/Dta";
+import Dta from "./Workshops/Ethical";
+import Ethical from "./Workshops/Ethical";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -167,14 +169,15 @@ const Internal = () => {
             {cardName === "arduino" && <Arduino />}
             {cardName === "solarizer" && <Solarizer />}
             {cardName === "artificial intelligence" && <Ai/>}
-            {cardName === "cloud computing" && <Cloud/>}
+            {cardName === "cloud computing by amazon" && <Cloud/>}
             {cardName === "machine learning" && <Mi/>}
             {cardName === "6th sense" && <Sixth/>}
             {cardName === "6th sense robotics" && <Sixth/>}
             {cardName === "electric vehicles" && <Auto/>}
             {cardName === "crypto trading by wazirX" && <Crypto/>}
             {cardName === "blockchain" && <Block/>}
-            {cardName === "data to aI" && <Dta/>}
+            {cardName === "data to aI by google" && <Dta/>}
+            {cardName === "ethical hacking" && <Ethical/>}
           </div>
         </div>
       </div>
