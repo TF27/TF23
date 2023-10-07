@@ -46,9 +46,9 @@ const HomeParallax = () => {
           <img src={head} className={styles.head} />
           <img src={headm} className={styles.headm}/>
         </div>
-        {/* <div className={styles.headUL}>
+        <div className={styles.headUL}>
           <Link to='/workshops'>Workshops are Live Now!</Link>
-        </div> */}
+        </div>
       </div>
       <div className={styles.clouds}>
         <img

@@ -20,6 +20,7 @@ import Auto from "./Workshops/Auto";
 import Crypto from "./Workshops/Crypto";
 import Block from "./Workshops/Block";
 import Dta from "./Workshops/Dta";
+import Ethical from "./Workshops/Ethical";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -119,12 +120,12 @@ const Internal = () => {
                 </div>
               </div>
             )}
-            <p className={styles.howtopay}>
+            {/* <p className={styles.howtopay}>
             <a href="https://drive.google.com/file/d/1-MO-lgNpqUtozEuaj5mA1gCMTSoIPJrG/view?usp=sharing" target="_blank">How to{" "}</a>
               <a href="https://drive.google.com/file/d/1-MO-lgNpqUtozEuaj5mA1gCMTSoIPJrG/view?usp=sharing" target="_blank">
                 <h4 style={{ display: "inline" }}>Pay?</h4>
               </a>
-            </p>
+            </p> */}
           </div>
           <div className={`col-12 col-lg-8 ${styles.rightdata}`}>
             <div className={styles.sponsor}>
@@ -167,14 +168,15 @@ const Internal = () => {
             {cardName === "arduino" && <Arduino />}
             {cardName === "solarizer" && <Solarizer />}
             {cardName === "artificial intelligence" && <Ai/>}
-            {cardName === "cloud computing" && <Cloud/>}
+            {cardName === "cloud computing by amazon" && <Cloud/>}
             {cardName === "machine learning" && <Mi/>}
             {cardName === "6th sense" && <Sixth/>}
             {cardName === "6th sense robotics" && <Sixth/>}
             {cardName === "electric vehicles" && <Auto/>}
             {cardName === "crypto trading by wazirX" && <Crypto/>}
             {cardName === "blockchain" && <Block/>}
-            {cardName === "data to aI" && <Dta/>}
+            {cardName === "data to aI by google" && <Dta/>}
+            {cardName === "ethical hacking" && <Ethical/>}
           </div>
         </div>
       </div>
