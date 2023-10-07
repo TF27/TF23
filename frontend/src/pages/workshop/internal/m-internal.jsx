@@ -124,7 +124,7 @@ const MInternal = () => {
               </div>
             )}
             <p className={styles.howtopay}>
-              How to{" "}
+              <a href="" target="_blank">How to{" "}</a>
               <a href="" target="_blank">
                 <h4 style={{ display: "inline" }}>Pay?</h4>
               </a>
