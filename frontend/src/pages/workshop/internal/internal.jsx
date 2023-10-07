@@ -169,15 +169,11 @@ const Internal = () => {
             {cardName === "artificial intelligence" && <Ai/>}
             {cardName === "cloud computing" && <Cloud/>}
             {cardName === "machine learning" && <Mi/>}
-<<<<<<< HEAD
-            {cardName === "6th sense" && <Sixth/>}
-=======
             {cardName === "6th sense robotics" && <Sixth/>}
->>>>>>> d4fbdaa93c2df66ca85b6f4964857608132e9d76
-            {cardName === "electric vehicles " && <Auto/>}
-            {cardName === "crypto trading by wazirX " && <Crypto/>}
-            {cardName === "blockchain " && <Block/>}
-            {cardName === "data to aI " && <Dta/>}
+            {cardName === "electric vehicles" && <Auto/>}
+            {cardName === "crypto trading by wazirX" && <Crypto/>}
+            {cardName === "blockchain" && <Block/>}
+            {cardName === "data to aI" && <Dta/>}
           </div>
         </div>
       </div>
