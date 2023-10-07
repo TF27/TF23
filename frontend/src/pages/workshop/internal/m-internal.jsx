@@ -149,7 +149,9 @@ const MInternal = () => {
             <div className={styles.cardND}>
               <h1 className={styles.compi_name}>{data.name}</h1>
               <p>{data.desc}</p>
-              <h4 className={styles.compi_prize}> INR {data.prize}</h4>
+              <div className={styles.work_prize}>
+                <h4 className={styles.compi_prize}> INR {data.prize}</h4> {data.ex_prize && <span><h5>{data.ex_prize}</h5></span>}
+              </div>
             </div>
             {user === null ? (
               <div className={styles.compi_reg}></div>
@@ -172,7 +174,7 @@ const MInternal = () => {
             {cardName === "artificial intelligence" && <Ai />}
             {cardName === "cloud computing by amazon" && <Cloud />}
             {cardName === "machine learning" && <Mi />}
-            {cardName === "6th sense robotics" && <Sixth />}
+            {cardName === "6th sense robotics " && <Sixth />}
             {cardName === "electric vehicles" && <Auto />}
             {cardName === "crypto trading by wazirX" && <Crypto />}
             {cardName === "blockchain" && <Block />}
