@@ -3,7 +3,7 @@ import styles from './workshop_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
 import Whatsapplink from '../../../../components/whatsapp/link';
-
+import yt from './../../img/glimpses.png'
 
 const Solarizer = () => {
     const [activeCity, setActiveCity] = useState('About');
@@ -42,10 +42,21 @@ const Solarizer = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Design a Solar PV Plant and make a Solar Mobile Charger <br /> <br />
-            Date: 28th-29th December <br /> <br />
-            Duration: 12-14 hours <br /> <br />
-            Venue: IIT Bombay <br />
+            <div className={styles.info_details}>
+                <div>
+                  <h3>Date: </h3>
+                  <p>28th-29th December</p>
+                  <h3>Venue: </h3>
+                  <p>IIT Bombay</p>
+                  <h3>Glimpses: <a href="https://www.youtube.com/watch?v=0_FBwJi8VBo" target="_blank"><img src={yt} /></a></h3>
+                </div>
+                <div>
+                  <h3>Duration:</h3>
+                  <p>12-14 hours</p>
+                  <h3>Early Bird Offer:</h3>
+                  <p>Free Access Pass to Techfest for events such as EDM night, Robowar, Exhibition, Keynote Sessions and many more*</p>
+                </div>
+              </div>
               </div>
             </div>
           </div>

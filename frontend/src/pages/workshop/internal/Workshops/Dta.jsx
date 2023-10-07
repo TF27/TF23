@@ -3,7 +3,7 @@ import styles from './workshop_data.module.css';
 import Faq from 'react-faq-component';
 import './x.css';
 import Whatsapplink from '../../../../components/whatsapp/link';
-
+import yt from './../../img/glimpses.png'
 
 const Dta= () => {
     const [activeCity, setActiveCity] = useState('About');
@@ -41,10 +41,22 @@ const Dta= () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-        Master Google Cloud for data innovation: pipelines, AI/ML, Generative AI in one workshop<br /> <br />
-          Date: 28th-29th December <br /> <br />
-          Duration: 12-14 hours <br /> <br />
-          Venue: IIT Bombay <br /></div>
+              <div className={styles.info_details}>
+                <div>
+                  <h3>Date: </h3>
+                  <p>28th-29th December</p>
+                  <h3>Venue: </h3>
+                  <p>IIT Bombay</p>
+                  <h3>Glimpses: <a href="https://www.youtube.com/watch?v=0_FBwJi8VBo" target="_blank" rel="noreferrer"><img src={yt} /></a></h3>
+                </div>
+                <div>
+                  <h3>Duration:</h3>
+                  <p>12-14 hours</p>
+                  <h3>Early Bird Offer:</h3>
+                  <p>Free Access Pass to Techfest for events such as EDM night, Robowar, Exhibition, Keynote Sessions and many more*</p>
+                </div>
+              </div>
+          </div>
             </div>
           </div>
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>

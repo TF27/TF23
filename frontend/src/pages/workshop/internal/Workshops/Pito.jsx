@@ -47,7 +47,7 @@ const Pito = () => {
                   <p>26th-27th December</p>
                   <h3>Venue: </h3>
                   <p>IIT Bombay</p>
-                  <h3>Glimpses: <a href="" target="_blank"><img src={yt} /></a></h3>
+                  <h3>Glimpses: <a href="https://www.youtube.com/watch?v=0_FBwJi8VBo" target="_blank" rel="noreferrer"><img src={yt} /></a></h3>
                 </div>
                 <div>
                   <h3>Duration:</h3>

@@ -120,7 +120,7 @@ const Internal = () => {
               </div>
             )}
             <p className={styles.howtopay}>
-              How to{" "}
+            <a href="https://drive.google.com/file/d/1-MO-lgNpqUtozEuaj5mA1gCMTSoIPJrG/view?usp=sharing" target="_blank">How to{" "}</a>
               <a href="https://drive.google.com/file/d/1-MO-lgNpqUtozEuaj5mA1gCMTSoIPJrG/view?usp=sharing" target="_blank">
                 <h4 style={{ display: "inline" }}>Pay?</h4>
               </a>
@@ -171,10 +171,10 @@ const Internal = () => {
             {cardName === "machine learning" && <Mi/>}
             {cardName === "6th sense" && <Sixth/>}
             {cardName === "6th sense robotics" && <Sixth/>}
-            {cardName === "electric vehicles " && <Auto/>}
-            {cardName === "crypto trading by wazirX " && <Crypto/>}
-            {cardName === "blockchain " && <Block/>}
-            {cardName === "data to aI " && <Dta/>}
+            {cardName === "electric vehicles" && <Auto/>}
+            {cardName === "crypto trading by wazirX" && <Crypto/>}
+            {cardName === "blockchain" && <Block/>}
+            {cardName === "data to aI" && <Dta/>}
           </div>
         </div>
       </div>
