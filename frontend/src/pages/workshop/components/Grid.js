@@ -9,7 +9,7 @@ const Grid = ({cards}) => {
     <>
       <div className="technorion_cards">
         <div className="container" style={{ maxWidth: "90%" }}>
-          <div className="row">
+          <div className="row" style={{paddingBottom: '80px'}}>
           {sortedCards.map((card) => (
               <Card key={card.index} card={card} />
             ))}
