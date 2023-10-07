@@ -124,12 +124,12 @@ const MInternal = () => {
                 </div>
               </div>
             )}
-            <p className={styles.howtopay}>
+            {/* <p className={styles.howtopay}>
               <a href="" target="_blank">How to{" "}</a>
               <a href="" target="_blank">
                 <h4 style={{ display: "inline" }}>Pay?</h4>
               </a>
-            </p>
+            </p> */}
           </div>
           <div className={`col-12 col-lg-8 ${styles.rightdata}`}>
             <div className={styles.sponsor}>

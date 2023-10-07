@@ -86,8 +86,8 @@ function App() {
             ) : (
               <Header />
             )} */}
-            <Header />
-          {/* <Header_update /> */}
+            {/* <Header /> */}
+          <Header_update />
 
           <Routes>
             <Route path="/" element={isLoading ? <Loading1 /> : <Home />} />

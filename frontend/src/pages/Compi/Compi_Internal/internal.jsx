@@ -38,6 +38,9 @@ const Internal = () => {
     } else if (compiName === "tfo") {
       navigate("/competitions/techfest%20olympiad");
     }
+    else if (compiName === "workshop"){
+      navigate("/workshops")
+    }
     // Add more conditions as needed for other compiNames
   }, [navigate, compiName]);
 
