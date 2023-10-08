@@ -174,7 +174,7 @@ const MInternal = () => {
             {cardName === "artificial intelligence" && <Ai />}
             {cardName === "cloud computing by amazon" && <Cloud />}
             {cardName === "machine learning" && <Mi />}
-            {cardName === "6th sense robotics " && <Sixth />}
+            {cardName === "6th sense robotics" && <Sixth />}
             {cardName === "electric vehicles" && <Auto />}
             {cardName === "crypto trading by wazirX" && <Crypto />}
             {cardName === "blockchain" && <Block />}
