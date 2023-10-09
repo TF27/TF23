@@ -15,7 +15,7 @@
 }
 
 .layer1 {
-  background-image: url('../img/workshop_bg.jpg');
+  background-image: url('../img/bg_workshop.jpg');
   z-index: -1;
   position: relative;
   background-size: cover;
@@ -25,7 +25,7 @@
 }
 
 .layer2 {
-  background-image: url('../img/workshop_header.jpg');
+  background-image: url('../img/workshop_header.png');
   opacity: 1;
   z-index: -1;
   background-size: 70%;
@@ -35,7 +35,7 @@
 }
 
 .layer3 {
-  background-image: url('../img/workshop_man.jpg');
+  background-image: url('../img/w1\ 2.png');
   opacity: 1;
   z-index: -1;
   background-size: auto 121vh;
@@ -44,7 +44,7 @@
 }
 
 .image {
-  background-image: url('../img/back.jpg');
+  background-image: url('../img/bg_workshop.jpg');
   min-height: 120vh;
   position: relative;
   background-size: cover;
