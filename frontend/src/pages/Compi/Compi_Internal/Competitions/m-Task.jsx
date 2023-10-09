@@ -131,7 +131,7 @@ const Task = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'Structure' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}> Stage 1: <br />
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Stage 1: <br />
             Teams have to submit their ideas in the form of a presentation deck <br />
             <br />
             Stage 2: <br />
@@ -145,11 +145,11 @@ const Task = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'Timeline' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}> Round 1:<br/>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Round 1:<br/>
             Last date to register: 31st October 2023 <br />
             Submission deadline: 1st November 2023
              <br /> 
-             ROund 1 result announcement: 17 November 2023<br /> <br />
+             Round 1 result announcement: 17 November 2023<br /> <br />
             Final round at IIT Bombay: 28th December 2023<br/>
             </div>
                 </div>
@@ -188,7 +188,7 @@ const Task = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'Contact' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}> 
                     Rishabh Tibrewal
                     <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8709397909`}>+91 89484 86206</div>
                     <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:rishu.techfest.iitb@gmail.com`}></div>
