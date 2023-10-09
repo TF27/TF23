@@ -113,14 +113,14 @@ const IC = () => {
           </div>
           <div className={styles.icDate_o}>
             <div className={styles.icDate_i}>
-              <div className={styles.icDate_t}>NSO - 17th October</div>
-              <div className={styles.icDate_b}>22 October - 10 AM to 10 PM</div>
+              <div className={styles.icDate_t}>NSO - 21st November</div>
+              <div className={styles.icDate_b}>26 November - 10 AM to 10 PM</div>
             </div>
           </div>
           <div className={styles.icDate_o}>
             <div className={styles.icDate_i}>
-              <div className={styles.icDate_t}>NSO - 17th October</div>
-              <div className={styles.icDate_b}>22 October - 10 AM to 10 PM</div>
+              <div className={styles.icDate_t}>NSO - 5th December</div>
+              <div className={styles.icDate_b}>10 December - 10 AM to 10 PM</div>
             </div>
           </div>
         </div>
