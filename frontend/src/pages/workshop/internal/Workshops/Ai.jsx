@@ -103,9 +103,9 @@ const Ai = () => {
                 <div className={styles.info_details}>
                   <div>
                     <h3>Date: </h3>
-                    <p>28th-29th December</p>
+                    <p>28th-29th December</p> <br />
                     <h3>Venue: </h3>
-                    <p>IIT Bombay</p>
+                    <p>IIT Bombay</p> <br />
                     <h3>
                       Glimpses:{" "}
                       <a
