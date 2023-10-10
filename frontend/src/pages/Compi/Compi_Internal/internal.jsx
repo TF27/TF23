@@ -52,8 +52,12 @@ const Internal = () => {
     navigate("/workshops/machine%20learning");
   }
     else if (compiName === "workshop"){
-      navigate("/workshops")
+      navigate("/workshops");
     }
+  
+     else if (compiName === "techaid"){
+    navigate("/competitions/tech-aid")
+  }
     // Add more conditions as needed for other compiNames
   }, [navigate, compiName]);
 
