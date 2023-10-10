@@ -156,7 +156,7 @@ const AtomQuest = () => {
             <br/>10th October 2023
 
             <br/>First Project Report Submission:
-            <br/>10th October 2023
+            <br/>16th October 2023
 
             <br/>Video Submission:
             <br/>3rd November 2023
