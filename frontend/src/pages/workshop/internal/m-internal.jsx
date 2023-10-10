@@ -25,6 +25,7 @@ import Dta from "./Workshops/m-Dta";
 
 
 
+
 const MInternal = () => {
   const { cardName } = useParams();
 
@@ -123,12 +124,12 @@ const MInternal = () => {
                 </div>
               </div>
             )}
-            <p className={styles.howtopay}>
-              How to{" "}
+            {/* <p className={styles.howtopay}>
+              <a href="" target="_blank">How to{" "}</a>
               <a href="" target="_blank">
                 <h4 style={{ display: "inline" }}>Pay?</h4>
               </a>
-            </p>
+            </p> */}
           </div>
           <div className={`col-12 col-lg-8 ${styles.rightdata}`}>
             <div className={styles.sponsor}>
@@ -148,7 +149,9 @@ const MInternal = () => {
             <div className={styles.cardND}>
               <h1 className={styles.compi_name}>{data.name}</h1>
               <p>{data.desc}</p>
-              <h4 className={styles.compi_prize}> INR {data.prize}</h4>
+              <div className={styles.work_prize}>
+                <h4 className={styles.compi_prize}> INR {data.prize}</h4> {data.ex_prize && <span><h5>{data.ex_prize}</h5></span>}
+              </div>
             </div>
             {user === null ? (
               <div className={styles.compi_reg}></div>
@@ -169,13 +172,13 @@ const MInternal = () => {
             {cardName === "arduino" && <Arduino />}
             {cardName === "solarizer" && <Solarizer />}
             {cardName === "artificial intelligence" && <Ai />}
-            {cardName === "cloud computing" && <Cloud />}
+            {cardName === "cloud computing by amazon" && <Cloud />}
             {cardName === "machine learning" && <Mi />}
             {cardName === "6th sense robotics" && <Sixth />}
             {cardName === "electric vehicles" && <Auto />}
             {cardName === "crypto trading by wazirX" && <Crypto />}
             {cardName === "blockchain" && <Block />}
-            {cardName === "data to aI" && <Dta />}
+            {cardName === "data to aI by google" && <Dta />}
 
 
           </div>

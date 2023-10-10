@@ -349,6 +349,9 @@
        /* top: -200px; */
        position: relative;
     }
+    .work_prize{
+      justify-content: center;
+    }
  }
  
  @media (max-width: 552px) {

@@ -143,9 +143,9 @@ const Pito = () => {
             Gourish Singhal
             <div
               className="col-3 contactNum"
-              onClick={() => (window.location.href = `tel:8928455606`)}
+              onClick={() => (window.location.href = `tel:9424873725`)}
             >
-              +91 89284 55606
+              +91 94248 73725
             </div>
             <div
               className="col-3 contactMail"

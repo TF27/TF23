@@ -27,10 +27,10 @@ const Robocapleague = () => {
             title: "Is it free to register for Robocap League?",
             content: 'Yes, it is free to register.'
           },
-          {
-            title: "How can I make my own team (as a team leader)?",
-            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Robocap League -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
-          },
+          // {
+          //   title: "How can I make my own team (as a team leader)?",
+          //   content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Robocap League -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
+          // },
           {
             title: "What is the Registered Mail ID?",
             content: 'The Gmail ID which was used to Sign In is the Registered Mail ID. It is a unique identity of any participant. It will be used in adding team members in a team, joining a pre-existing team etc.'

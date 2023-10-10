@@ -103,6 +103,7 @@ class compi_team(models.Model):
 # Workshops
 
 class Workshop(models.Model):
+    workshop_id = models.IntegerField(null=True, default=0)
     name = models.CharField(max_length=100, primary_key=True)
     prize = models.CharField(max_length=100)
     ex_prize = models.CharField(null=True, blank=True, max_length=100)

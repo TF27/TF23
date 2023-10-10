@@ -23,6 +23,8 @@ import UrbanFuturism from "./Competitions/UrbanFuturism";
 import SingleParti from "./Teams/single_parti";
 import AddParti from "./Teams/add_parti";
 import Robocapleague from "./Competitions/robocapleague";
+import Dronelog from "./Competitions/Dronelog";
+import Task from "./Competitions/Task";
 
 const Internal = () => {
   const { compiName } = useParams();
@@ -37,6 +39,25 @@ const Internal = () => {
     } else if (compiName === "tfo") {
       navigate("/competitions/techfest%20olympiad");
     }
+   else if (compiName === "uf") {
+    navigate("/competitions/urban-futurism");
+  }
+  else if (compiName === "taskwhiz") {
+    navigate("/competitions/task%20whiz");
+  }
+  else if (compiName === "ai") {
+    navigate("workshops/artificial%20intelligence");
+  }
+  else if (compiName === "ml") {
+    navigate("/workshops/machine%20learning");
+  }
+    else if (compiName === "workshop"){
+      navigate("/workshops");
+    }
+  
+     else if (compiName === "techaid"){
+    navigate("/competitions/tech-aid")
+  }
     // Add more conditions as needed for other compiNames
   }, [navigate, compiName]);
 
@@ -139,6 +160,8 @@ const Internal = () => {
             {compiName === "urban-futurism" && <UrbanFuturism />}
             {compiName === "atom-quest" && <AtomQuest />}
             {compiName === "robocap league" && <Robocapleague />}
+            {compiName === "dronelog" && <Dronelog />}
+            {compiName === "task whiz" && <Task />}
 
             <div className={styles.team_reg}>
               {user === null ? (
