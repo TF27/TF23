@@ -29,7 +29,7 @@ import Task from "./Competitions/m-Task";
 
 const MInternal = () => {
   const { compiName } = useParams();
-  const { roboCamp, setRoboCamp } = useState(false);
+  const [ roboCamp, setRoboCamp ] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     // Check compiName and perform redirections
