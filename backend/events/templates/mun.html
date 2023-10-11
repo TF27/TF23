@@ -1,0 +1,2062 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta property="og:url" content="https://techfest.org/mun" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TWMUN | Techfest, IIT Bombay</title>
+    <meta property="og:title" content=" Become a part of Asia's Largest Science and Technology Festival: Techfest, IIT Bombay today!" />
+    <meta name="description" content="Techfest World Model United Nations in the year 2021 will have its second Online Edition, set to continue its legacy as India's largest Online MUN conference, a benchmark platform for advanced debate on the social, political and economic facets of the world at large. Through its forum of excellence, Techfest World Model United Nations has created an unparalleled legacy of robust debate involving members of the youth from across the world. This year, Techfest World Model United Nations promises to be bigger, bolder and better." />
+    <meta name="author" content="Techfest, Web Manager" />
+    <meta name="keywords" content="Techfest,Model UN,conference,techfest IIT Bombay,Model United Nations,topics,IIT Bombay,MUN,applications,IIT,Techfest MUN,procedure,Indian Institute of Technology,Techfest world mun,global,2021,twmun,world,iit Mumbai MUN,international,school,iit Mumbai,committees,assembly,disec,unhrc,mumbai,UN,registration,allocation,country,study guide,iit mumbai,committees,united nations,EB,executive board,priority,delegatechair,moderator,rapporteur,agendas,awards,best delegate,best delegations,twmun,twmun 2019,twmun 2018,twmun 2020,twmun 2021, twmun 2022,offline mun, offline mumbai mun, twmun committees,twmun agendas,twmun awards,twmun activities,twmun blog,twmun benefits,twmun basics,twmun best delegate,twmun eb,twmun executive board,mun committees,mun agendas,mun awards,mun activities,mun blog,mun benefits,mun basics,mun best delegate,mun eb,mun executive board, india mun, MUN in India, MUN in Mumbai, " />
+    <meta property="og:image" content="http://techfest.org/2019/mun.jpg" />
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JES12YFZRP"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JES12YFZRP');
+    </script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Favicon
+    ================================================== -->
+        <link rel="shortcut icon" type="image/x-icon" href="https://techfest.org/static/resources/home/favicon_logo.png">
+    <!-- Stylesheets    ================================================== -->
+
+    <link href="{% static 'resources/mun/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="{% static 'resources/mun/css/style.css' %}" rel="stylesheet" />
+    <link href="    {% static 'resources/mun/css/responsive.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <style>
+
+            /*Compi Cards*/
+.card{
+    /* width: 100%; */
+     margin: 30px auto;
+    position: relative;
+    width: 100%;
+    /*margin-top: 5vw;*/
+    background: transparent;
+    /*z-index: -100;*/
+}
+.post-modules {
+    /* width: 20%; */
+    /* margin: 30px auto; */
+    position: relative;
+    border: 0.5px solid white;
+    border-radius: 5px 5px 5px 5px;
+    margin: auto;
+}
+.post-modules:hover .desc {
+    display: block;
+    transition: all 0.4s ease-in;
+    margin-bottom: 1px;
+}
+.thumbnail {
+    height: 24vw;
+    border-radius: 5px 5px 5px 5px;
+    position: relative;
+    overflow: hidden;
+    /* background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 41.15%, rgba(255, 255, 255, 0.472472) 54.8%, rgba(255, 255, 255, 0.9) 73.44%, rgba(255, 255, 255, 0.93929) 85.37%, #FFFFFF 100%), url(https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg); */
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.sub_title3{
+    background-image: url("/static/resources/competitions/Rectangle 173.png");
+    background-size: cover;
+    width: 163px;
+    height: 35px;
+    padding-left: 10px;
+    color: #fff !important;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    top: 20px;
+    background-repeat: no-repeat;
+    margin-left: -5px;
+}
+.post-content {
+    padding: 9px 12px;
+    padding-bottom: 2px;
+    position: absolute;
+    color: #fff !important;
+    bottom: 0;
+    width: 100%;
+    font-size: 25px;
+}
+.title {
+    margin-bottom: 5px;
+    /*font-family: GothamLight;*/
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 21px;
+    color: #fff;
+    /* padding-bottom: 5px; */
+}
+.sub-title {
+    /*font-family: GothamLight;*/
+    font-style: normal;
+    /* font-size: 18px; */
+    line-height: 18px;
+    color: #fff;
+    /* margin-bottom: 10px; */
+}
+
+.desc {
+    font-size: 14px;
+    display: none;
+    transition: all 0.4s ease-in;
+    margin-bottom: 0px !important;
+}
+
+.refer{
+    background-color:white ;
+    border: 0.3px solid #ABABAB;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding-top: 3px;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    width: 40%;
+    height: 30px;
+    margin-left: 7px;
+    text-align: center;
+}
+
+.explore{
+    /*margin-left:-50px;*/
+    background-color: transparent;
+    border: 0.3px solid #989898;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /*width: 76px;*/
+    height: 30px;
+    width: 40%;
+    text-align: center;
+        padding-top: 3px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-right: 7px;
+    /*margin: auto;*/
+}
+
+a.arefer{
+    font-size:15px;
+}
+
+a.aexplore{
+    font-size:15px;
+    width: max-content;
+    height: max-content;
+}
+
+@media only screen and (max-width: 1300px){
+    .refer{
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+    .title{
+        line-height: 23px;
+        font-size: 20px;
+    }
+    .sub_title{
+        font-size: 23px;
+        line-height: 24px;
+    }
+}
+@media only screen and (max-width: 1185px) {
+    .title{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .post-content{
+        line-height: 17px;
+    }
+    .sub_title{
+        font-size: 19px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 1135px){
+    .refer{
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+}
+@media only screen and (max-width:1052px){
+    .title{
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .post-content{
+        line-height: 14px;
+        font-size: 14px;
+    }
+    .sub_title{
+        font-size: 16px;
+        line-height: 16px;
+    }
+    a.arefer{
+        font-size:13px;
+    }
+    a.aexplore{
+        font-size:13px;
+    }
+}
+
+@media only screen and (max-width:955px){
+    .sub_title{
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+
+@media only screen and (max-width:920px){
+    .post-content{
+        font-size: 12px;
+        line-height: 13px;
+    }
+    .title{
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .sub_title{
+        font-size: 14px;
+        line-height: 14px;
+    }
+    a.arefer{
+        font-size:11px;
+    }
+    a.aexplore{
+        font-size:11px;
+    }
+}
+
+@media only screen and (max-width:890px){
+    .post-content{
+        font-size: 10px;
+        line-height: 10.5px;
+    }
+}
+
+@media only screen and (max-width:840px) {
+    .title{
+        font-size: 13px;
+        line-height: 13px;
+    }
+    .sub_title{
+        font-size: 13px;
+        line-height: 13px;
+    }
+    .post-content {
+        font-size: 10px;
+        line-height: 10.5px;
+    }
+}
+
+
+/*Compi Cards End*/
+        .hero {
+            background: linear-gradient(180deg, rgba(50, 198, 201, 0.5) 0.17%, rgba(34, 97, 138, 0.6) 44.13%, rgba(37, 87, 132, 0.5) 72.91%, #3E1C55 100.68%), url('https://techfest.org/static/resources/mun/img/mun.jpg') no-repeat center / cover;
+            mask-image: linear-gradient(to bottom, transparent 10%, black);
+            /*height: 100%;*/
+            height: 100vh;
+            width: 100%;
+            min-height: 700px;
+        }
+        .hero .container{
+            height: 100vh;
+        }
+        .contact-icon {
+            font-size: xx-large;
+        }
+        .card {
+            margin: 10px auto;
+        }
+        .card-img-top{
+            height: 235px;
+            width: 283px;
+            background-position: center;
+            background-size: cover;
+        }
+        .vhover {
+            max-height: 290px;
+        }
+        .portfolio-item {
+            height: 290px;
+        }
+        .btn-default:hover {
+            color: white;
+            /*background-color: #1a4173;*/
+            border-color: #adadad;
+            background: #3E1C55;
+        }
+        .section-registration {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        /*.nav-tabs a {*/
+        /*    color: #212121;*/
+        /*}*/
+        .circular--landscape {
+            display: inline-block;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        .circleImg {
+            display: block;
+            width: 200px;
+            height: 200px;
+        }
+        .round-info {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 24px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #3E1C55;
+        }
+        .cntr {
+            display: block;
+            margin: 0 auto;
+        }
+        @media only screen and (max-width : 767px) {
+            .navbar-toggle .icon-bar {
+                background-color: white;
+            }
+            .card-img-top {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .skrollable-after .icon-bar {
+                background-color: #212121;
+            }
+            .section-registration {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+        }
+        .btn[disabled]:hover {
+            background-color: #1a4173;
+        }
+    </style>
+    <style>
+        @font-face {
+            font-family: Bebas Kai;
+            src:url({% static 'resources/fonts/BebasKai.ttf' %});
+        }
+        @font-face {
+            font-family: Avenir LT Pro;
+            src:url({% static 'resources/fonts/AvenirLTProLight.otf' %});
+        }
+        @font-face {
+            font-family: euro;
+            src:url({% static 'resources/fonts/eurostile.TTF' %});
+        }
+
+        .post-module{
+            width: 80%;
+            /* padding-left: 20px;
+            padding-right: 20px; */
+
+            /*margin: 30px auto;*/
+            position: relative;
+        }
+
+        .post-modules{
+            width: 80%;
+            border-radius: 5px 5px 0px 0px !important;
+            /*font-family: GothamLight !important;*/
+            border: 0.5px solid rgba(255,255,255,0.5);
+            margin: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thumbnail{
+            height: 290px;
+            position: relative;
+            overflow: hidden;
+            margin: -2px;
+            /*filter: blur(5px);*/
+            /*background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 41.15%, rgba(255, 255, 255, 0.472472) 54.8%, rgba(255, 255, 255, 0.9) 73.44%, rgba(255, 255, 255, 0.93929) 85.37%, #FFFFFF 100%), url('https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg');*/
+            background-size: cover;
+            background-position: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+
+        .wstit{
+            /*font-style: normal;*/
+            font-weight: 600;
+            font-size: 16px!important;
+            /*line-height: 21px;*/
+            color: #fff;
+            padding-bottom:10px;
+            margin-bottom: 0px;
+        }
+
+        .descriptionw{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #fff;
+            /*display:none;*/
+            padding-left: 0;
+            padding-top: 0px;
+            padding-bottom:0px;
+            margin-bottom: 0;
+            margin-top: 0px;
+            /*transition: ease-in-out;*/
+        }
+
+
+
+        .buttonlayer{
+            position: absolute;
+            margin-top: 0px;
+            padding-top: 0px;
+        }
+
+        .buttonfntr{
+            background: rgba(255,255,255,0.2);
+            font-style: normal;
+            font-weight: normal;
+            font-family: euro;
+            letter-spacing: 1px;
+            font-size: 18px;
+            line-height: 25px;
+            color: #FFFFFF;
+        }
+        .buttonfntr:hover{
+            color: #FFFFFF;
+            background: rgba(255,255,255,0.3);
+
+        }
+
+
+        .buttonfnte{
+            background: rgba(255, 255, 255, 0.06);
+            font-style: normal;
+            font-family: euro;
+            letter-spacing: 1px;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            color: #fff;
+        }
+        .buttonfnte:hover{
+            color:#fff;
+            background: rgba(255, 255, 255, 0.16);
+        }
+
+        .post-module{
+            transition: 0.3s;
+        }
+
+
+
+        .post-content{
+
+            padding: 9px 12px;
+            position: absolute;
+            bottom: 0 !important;
+            width: 100%;
+        }
+
+        .title{
+            /*font-style: normal;*/
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 21px;
+            color: #fff;
+            padding-bottom:5px;
+        }
+        .sub-title{
+            font-style: normal;
+            /* font-size: 18px; */
+            line-height: 23px;
+            color: #fff;
+            margin-bottom:10px;
+        }
+
+        .description{
+            text-align: left;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #fff;
+            display:none;
+            padding-left: 0;
+            padding-top: 0px;
+            padding-bottom:0px;
+            margin-bottom: 0;
+            transition: ease-in-out;
+        }
+        .mun-title{
+            font-size: 36px;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: #3E1C55;
+
+        }
+        .mun-sub-title{
+            color: #3E1C55;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 0px !important;
+        }
+        .hover-title{
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    .section-services:before {
+        content: '';
+        background: url('https://techfest.org/static/resources/mun/img/committee.jpg') no-repeat fixed center / cover;
+        width: 100%;
+        height: 400px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    /* Section: Counters */
+    .section-counters {
+        background: url('https://techfest.org/static/resources/mun/img/counters-bg.jpg') no-repeat fixed center / cover;
+        width: 100%;
+        padding: 100px 0;
+        position: relative;
+    }
+    .blue{
+        width:300px;
+        font-size: 20px;
+        letter-spacing: 1px;
+        height:35px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background: #3E1C55;
+        border-radius: 5px;
+        border: 0.5px solid white;
+        color: white;
+        margin: 20px auto 0px auto;
+    }
+    .blue:hover{
+        color: white;
+        text-decoration: none;
+
+    }
+
+    </style>
+
+<style>
+
+
+.card{
+
+    /* width: 100%; */
+     margin: 30px auto;
+    position: relative;
+    width: 100%;
+    /*margin-top: 5vw;*/
+    background: transparent;
+    /*z-index: -100;*/
+}
+/*.row .col-4{*/
+/*    z-index: 5;*/
+/*}*/
+.thumbnail {
+    height: 18vw;
+    border-radius: 5px 5px 5px 5px;
+    position: relative;
+    overflow: hidden;
+    /* background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 41.15%, rgba(255, 255, 255, 0.472472) 54.8%, rgba(255, 255, 255, 0.9) 73.44%, rgba(255, 255, 255, 0.93929) 85.37%, #FFFFFF 100%), url(https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg); */
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@media only screen and (max-width : 767px) {
+    .thumbnail {
+        height: 60vw;
+        border-radius: 5px 5px 5px 5px;
+        position: relative;
+        overflow: hidden;
+        /* background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 41.15%, rgba(255, 255, 255, 0.472472) 54.8%, rgba(255, 255, 255, 0.9) 73.44%, rgba(255, 255, 255, 0.93929) 85.37%, #FFFFFF 100%), url(https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg); */
+        background-size: cover;
+        transition: all 0.3s ease-in-out;
+
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+.thumbnail:hover{
+    background-image: linear-gradient(to top,rgb(120, 83, 151),rgb(120, 83, 151)), url('https://techfest.org/static/resources/mun/img/committees/UNSC.jpg');
+}
+
+.image1:hover:after {
+    background-color: rgba(0, 0, 255, 0.3) !important;
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.sub_title2{
+    background-image: url("/static/resources/competitions/Rectangle 149.png");
+    background-size: cover;
+    width: 120px;
+    height: 30px;
+    padding-left: 20px;
+    color: #fff !important;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    top: 20px;
+    background-repeat: no-repeat;
+    margin-left: -5px;
+
+}
+.sub_title3{
+    background-image: url("/static/resources/competitions/Rectangle 173.png");
+    background-size: cover;
+    width: 163px;
+    height: 35px;
+    padding-left: 10px;
+    color: #fff !important;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    top: 20px;
+    background-repeat: no-repeat;
+    margin-left: -5px;
+}
+
+        .post-modules {
+            margin: auto;
+    /* width: 20%; */
+    /* margin: 30px auto; */
+    position: relative;
+    border: 0.5px solid white;
+    border-radius: 5px 5px 5px 5px;
+}
+.title {
+    margin-bottom: 5px;
+    /*font-family: GothamLight;*/
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 21px;
+    color: #fff;
+    /* padding-bottom: 5px; */
+}
+.sub-title {
+    /*font-family: GothamLight;*/
+    font-style: normal;
+    /* font-size: 18px; */
+    line-height: 18px;
+    color: #fff;
+    /* margin-bottom: 10px; */
+}
+.row justify-content-center{
+    width: 100%;
+}
+p.name{
+    margin: 0;
+}
+.contact{
+        width:100%;
+        border-radius: 5px;
+        height:140px;
+        border: 2px solid white;
+        background: rgba(255,255,255,0.06) !important;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    .container-contact{
+        width: 110%;
+        margin: auto;
+        background: rgba(255,255,255,0.06);
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+
+.post-modules:hover .desc {
+    /*background: #3c1e55;*/
+    display: block;
+    transition: all 0.4s ease-in;
+    margin-bottom: 1px;
+}
+
+
+.desc {
+    font-size: 14px;
+    display: none;
+    transition: all 0.4s ease-in;
+    margin-bottom: 0px !important;
+}
+
+.refer{
+    background-color: #3C1E55 ;
+    border: 0.3px solid white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /*margin: auto;*/
+    padding-top: 3px;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+
+    width: 40%;
+    /*width: 10rem;*/
+    height: 30px;
+    margin-left: 7px;
+    text-align: center;
+}
+.explore{
+    /*margin-left:-50px;*/
+    background-color: transparent;
+    border: 0.3px solid #989898;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /*width: 76px;*/
+    height: 30px;
+    width: 40%;
+    text-align: center;
+        padding-top: 3px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-right: 7px;
+    /*margin: auto;*/
+}
+
+/*body {*/
+/*  !*touch-action: none;*!*/
+/*    touch-action: pan-y pinch-zoom*/
+/*}*/
+
+.mem-info{
+    margin-bottom: 35px;
+}
+@media only screen and (max-width : 850px) {
+    .site-header {
+        background: rgb(115 80 113);
+        padding: 10px 0;
+        box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.2);
+        color: black;
+    }
+    .mem-info{
+        margin-bottom: 35px;
+    }
+    .refer{
+        padding-top: 3%;
+    }
+    .desc{
+        line-height: 16px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+<header id="jumbotron" class="site-header" data-anchor-target=".hero"
+
+        data-top="background: rgba(255,255,255,0); padding: 30px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0);"
+        data-top-bottom="background: rgba(255,255,255,1); padding: 10px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.2);">
+    <nav id="primary-navigation" class="site-navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle collapsed" data-target="#portfolio-perfect-collapse"
+                        aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="http://techfest.org" class="site-logo"><img height="50" src="https://techfest.org/static/resources/layout/tF%20LOGO%20DATE-2.png" alt="logo" /></a>
+            </div>
+            <!-- /.navbar-header -->
+            <div class="main-menu" id="portfolio-perfect-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="page-scroll"><a href="#hero">Home</a></li>
+                    <li class="page-scroll dropdown">
+                        <a href="#about">About<i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#abouttwmun">TWMUN</a>
+                            </li>
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#abouttechfest">Techfest</a>
+                            </li>
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#aboutwelcome">Welcome Letter</a>
+                            </li>
+                            <li><a href="#secretariat">Secretariat</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="page-scroll"><a href="#committees">Committees</a></li>
+                    <li class="page-scroll">
+                        <a href="#registration">Registration</a>
+                    </li>
+                    <li class="page-scroll"><a href="#faq">FAQs</a></li>
+                </ul>
+                <!-- /.navbar-nav -->
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- /.primary-navigation -->
+</header>
+<!-- /#header -->
+<div id="hero" class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="margin-top: 10rem;">
+                <img src="{% static 'resources/mun/img/newtwmunlogo.png' %}" style="display: block; margin: auto auto;" />
+                <h1 style="color: white; text-align: center; margin-top: 3rem;">
+                    Techfest World MUN
+                </h1>
+                <h2 style="color: white;"><em>Order from Chaos</em></h2>
+                <a class="blue" href="https://docs.google.com/forms/d/e/1FAIpQLScrUZwl9e62xIw3qXtEDx4NfrRoOqhbMO7QkeX_Yl-Ap1uvXA/viewform">Register</a>
+            </div>
+            <!-- <div class="col-md-6">
+                <h1>Alex Vidal</h1>
+                <div class="page-scroll">
+                    <p class="job-title">Full Stack Developer</p>
+                    <a href="#contact" class="btn btn-fill ">Hire me</a>
+                    <div class="clearfix visible-xsm"></div>
+                    <a href="#portfolio" class="btn btn-border">Explore more</a>
+                </div>
+            </div> -->
+            <!-- <div class="col-md-6 text-right">
+                <img src="2020/mun/img/alex-vidal.png" alt="alex-vidal">
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- /.hero -->
+<main id="main" class="site-main">
+    <section id="about" class="site-section section-portfolio">
+        <div class="container">
+            <div class="text-center">
+                <p class="mun-title">About Us</p>
+            </div>
+            <div style="margin-top: 80px;" class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item circular--landscape cntr">
+                        <a href="#" data-toggle="modal" data-target="#abouttwmun"><img
+                                    src="{% static 'resources/mun/img/new/logoround.png' %}" style="transform: scale(1.2);" class="circleImg" alt="" /></a>
+                        <!--                             <div class="portfolio-item-info">
+                            <a href="#" data-toggle="modal" data-target="#abouttwmun"><span class="glyphicon glyphicon-eye-open"></span></a>
+                        </div> -->
+                        <!-- /.portfolio-item-info -->
+                    </div>
+                    <p class="round-info">TWMUN</p>
+                    <!-- /.portfolio-item -->
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item circular--landscape cntr">
+                        <a href="#" data-toggle="modal" data-target="#abouttechfest"><img
+                                    src="{% static 'resources/mun/img/new/techfest.png' %}" class="circleImg" alt="" /></a>
+                        <!-- <div class="portfolio-item-info">
+                            <a href="#" data-toggle="modal" data-target="#abouttechfest"><span class="glyphicon glyphicon-eye-open"></span></a>
+                        </div> -->
+                        <!-- /.portfolio-item-info -->
+                    </div>
+                    <p class="round-info">TECHFEST</p>
+                    <!-- /.portfolio-item -->
+                </div>
+                <div class="col-md-4 col-sm-6" >
+                    <div class="portfolio-item circular--landscape cntr">
+                        <a href="#" data-toggle="modal" data-target="#aboutwelcome"><img
+                                    src="{% static 'resources/mun/img/new/welcome.png' %}" class="circleImg" alt="" /></a>
+                        <!-- <div class="portfolio-item-info">
+                            <a href="#" data-toggle="modal" data-target="#aboutwelcome"><span class="glyphicon glyphicon-eye-open"></span></a>
+                        </div> -->
+                        <!-- /.portfolio-item-info -->
+                    </div>
+                    <p class="round-info">WELCOME LETTER</p>
+                    <!-- /.portfolio-item -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.secton-about -->
+    <section id="committees" class="site-section section-services overlay text-center">
+        <div class="container">
+            <div style="margin-bottom: -40px !important;" class="row">
+                <div  class="col-md-12">
+                    <p class="mun-title">Committees</p>
+                    <p class="mun-sub-title">INTERNATIONAL PRESS</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                      <div class="card" style="cursor: pointer;">
+                        <div class="post-modules module-8" style="margin-bottom: 0px !important;">
+                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/committees/IP.png' %});" ></div>
+<!--                            <div class="sub_title3">COMPETITIONS</div>-->
+                          <div class="post-content" >
+<!--                            <h1 class="title">Shangri-La Dialogue</h1>-->
+<!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
+                            <div class="desc">
+                              <p> International press allows you to act as an unbiased journalist reporting on the ...
+                                  <br>
+                                <div class="row" style="display: flex; justify-content: space-around;">
+                                    <div class="refer">
+                                        <a class="arefer" data-toggle="modal" data-target="#ip" style="20px; font-size: 15px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                    </div>
+                                </div>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+                    <div style="margin-top: 50px;" class="col-md-12 col-sm-12 ">
+                    <p class="mun-sub-title">COLLEGE</p>
+                </div>
+                </div>
+
+                <div  class="row">
+                    <div class="col-md-4">
+                      <div class="card" style="cursor: pointer;">
+                        <div class="post-modules module-10" style="margin-bottom: 0px !important;">
+                          <div class="thumbnail" style="background-image: url({% static 'resources/mun/img/committees/NATO.png' %});" ></div>
+<!--                          <div class="thumbnail" style="background-image: linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgb(143 96 149 / 0%) -10.08%, rgb(144 67 154 / 0%) -43.62%, rgb(72 25 74 / 75%) -5.85%, rgb(77 64 88) 151%), url({% static 'resources/mun/img/committees/UNSC.jpg' %});" ></div>-->
+<!--                            linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgba(19, 31, 44, 0) 17.92%, rgba(19, 31, 44, 0) 42.38%, rgba(19, 31, 44, 0.75) 67.15%, #131F2C 100%), url({% static 'resources/mun/img/committees/UNSC.jpg' %})-->
+<!--                            <div class="sub_title3">COMPETITIONS</div>-->
+                          <div class="post-content" >
+<!--                            <h1 class="title">UNSC</h1>-->
+<!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
+                            <div class="desc">
+                              <p>NATO is an active and leading contributor to peace and security on the international ...
+                                  <br>
+                                <div class="row" style="display: flex; justify-content: space-around;">
+                                    <div class="refer">
+                                        <a class="arefer" data-toggle="modal" data-target="#nato" style="20px; font-size: 15px;font-weight: 500;color: white;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                    </div>
+                                </div>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card" style="cursor: pointer;">
+                        <div class="post-modules module-1" style="margin-bottom: 0px !important;">
+                          <div class="thumbnail" style="background-image: url({% static 'resources/mun/img/committees/UNSC.jpg' %});" ></div>
+<!--                          <div class="thumbnail" style="background-image: linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgb(143 96 149 / 0%) -10.08%, rgb(144 67 154 / 0%) -43.62%, rgb(72 25 74 / 75%) -5.85%, rgb(77 64 88) 151%), url({% static 'resources/mun/img/committees/UNSC.jpg' %});" ></div>-->
+<!--                            linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgba(19, 31, 44, 0) 17.92%, rgba(19, 31, 44, 0) 42.38%, rgba(19, 31, 44, 0.75) 67.15%, #131F2C 100%), url({% static 'resources/mun/img/committees/UNSC.jpg' %})-->
+<!--                            <div class="sub_title3">COMPETITIONS</div>-->
+                          <div class="post-content" >
+<!--                            <h1 class="title">UNSC</h1>-->
+<!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
+                            <div class="desc">
+                              <p>The UNSC charter seeks to promote harmonious relationships among the member nations by...
+                                  <br>
+                                <div class="row" style="display: flex; justify-content: space-around;">
+                                    <div class="refer">
+                                        <a class="arefer" data-toggle="modal" data-target="#unsc" style="20px; font-size: 15px;font-weight: 500;color: white;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                    </div>
+                                </div>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card" style="cursor: pointer;">
+                        <div class="post-modules module-2" style="margin-bottom: 0px !important;">
+                          <div class="thumbnail" style="background-image: url({% static 'resources/mun/img/committees/UNHRC.jpg' %});" ></div>
+<!--                            <div class="sub_title3">COMPETITIONS</div>-->
+                          <div class="post-content" >
+<!--                            <h1 class="title">UNHCR</h1>-->
+<!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
+                            <div class="desc">
+                              <p>UNHCR is a United Nations agency mandated to aid and protect refugees, forcibly displaced ...
+                                  <br>
+                                <div class="row" style="display: flex; justify-content: space-around;">
+                                    <div class="refer">
+                                        <a class="arefer" data-toggle="modal" data-target="#unhrc" style="20px; font-size: 15px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                    </div>
+                                </div>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card" style="cursor: pointer;">
+                        <div class="post-modules module-3" style="margin-bottom: 0px !important;">
+                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/committees/AIPPM.jpg' %});" ></div>
+<!--                            <div class="sub_title3">COMPETITIONS</div>-->
+                          <div class="post-content" >
+<!--                            <h1 class="title">AIPPM</h1>-->
+<!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
+                            <div class="desc">
+                              <p>The All Political Parties Meet is a place for unconstrained political debate, discussion, and deliberation ...
+                                  <br>
+                                <div class="row" style="display: flex; justify-content: space-around;">
+                                    <div class="refer">
+                                        <a class="arefer" data-toggle="modal" data-target="#aippm" style="20px; font-size: 15px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                    </div>
+                                </div>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card" style="cursor: pointer;">
+                        <div class="post-modules module-9" style="margin-bottom: 0px !important;">
+                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/committees/UNCSW.png' %});" ></div>
+<!--                            <div class="sub_title3">COMPETITIONS</div>-->
+                          <div class="post-content" >
+<!--                            <h1 class="title">Shangri-La Dialogue</h1>-->
+<!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
+                            <div class="desc">
+                              <p>There have been various successful initiatives to enhance women's rights, but...
+                                  <br>
+                                <div class="row" style="display: flex; justify-content: space-around;">
+                                    <div class="refer">
+                                        <a class="arefer" data-toggle="modal" data-target="#uncsw" style="20px; font-size: 15px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                    </div>
+                                </div>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="card" style="cursor: pointer;">
+                        <div class="post-modules module-4" style="margin-bottom: 0px !important;">
+                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/committees/SLD.jpg' %});" ></div>
+<!--                            <div class="sub_title3">COMPETITIONS</div>-->
+                          <div class="post-content" >
+<!--                            <h1 class="title">Shangri-La Dialogue</h1>-->
+<!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
+                            <div class="desc">
+                              <p>The Shangri-La Dialogue (SLD) is an inter-governmental security forum held annually by an ...
+                                  <br>
+                                <div class="row" style="display: flex; justify-content: space-around;">
+                                    <div class="refer">
+                                        <a class="arefer" data-toggle="modal" data-target="#sld" style="20px; font-size: 15px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                    </div>
+                                </div>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+
+
+                <div style="margin-top: 50px;" class="col-md-12 col-sm-12 ">
+                    <p class="mun-sub-title">SCHOOL</p>
+                </div>
+                <div class="row mt-3">
+
+                    <div class="col-md-4">
+                      <div class="card" style="cursor: pointer;">
+                        <div class="post-modules module-5" style="margin-bottom: 0px !important;">
+                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/committees/UNOC.jpg' %});" ></div>
+<!--                            <div class="sub_title3">COMPETITIONS</div>-->
+                          <div class="post-content" >
+<!--                            <h1 class="title">UNOC</h1>-->
+<!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
+                            <div class="desc">
+                              <p>UN Ocean is an interagency mechanism that aims to improve the coordination, coherency ...
+                                  <br>
+                                <div class="row" style="display: flex; justify-content: space-around;">
+                                    <div class="refer">
+                                        <a class="arefer" data-toggle="modal" data-target="#unoc" style="20px; font-size: 15px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                    </div>
+                                </div>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card" style="cursor: pointer;">
+                        <div class="post-modules module-6" style="margin-bottom: 0px !important;">
+                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/committees/SOCHUM.jpg' %});" ></div>
+<!--                            <div class="sub_title3">COMPETITIONS</div>-->
+                          <div class="post-content" >
+<!--                            <h1 class="title">SOCHUM</h1>-->
+<!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
+                            <div class="desc">
+                              <p>The Social, Humanitarian, and Cultural Committee (SOCHUM) focuses on the welfare and human ...
+                                  <br>
+                                <div class="row" style="display: flex; justify-content: space-around;">
+                                    <div class="refer">
+                                        <a class="arefer" data-toggle="modal" data-target="#sochum" style="20px; font-size: 15px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                    </div>
+                                </div>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card" style="cursor: pointer;">
+                        <div class="post-modules module-7" style="margin-bottom: 0px !important;">
+                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/committees/DISEC.jpg' %});" ></div>
+<!--                            <div class="sub_title3">COMPETITIONS</div>-->
+                          <div class="post-content" >
+<!--                            <h1 class="title">DISEC</h1>-->
+<!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
+                            <div class="desc">
+                              <p>DISEC is concerned with issues of international significance pertaining to the security and demilitarisation of all ...
+                                  <br>
+                                <div class="row" style="display: flex; justify-content: space-around;">
+                                    <div class="refer">
+                                        <a class="arefer" data-toggle="modal" data-target="#disec" style="20px; font-size: 15px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                    </div>
+                                </div>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="registration" class="site-section text-center section-registration">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <p class="mun-title">Registration</p>
+                </div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#delegateReg" aria-controls="delegateReg" role="tab" data-toggle="tab">Delegate Registration</a></li>
+                    <li role="presentation"><a href="#ebReg" aria-controls="ebReg" role="tab" data-toggle="tab">Delegation Registration</a></li>
+                    <li role="presentation"><a href="#rapReg" aria-controls="rapReg" role="tab" data-toggle="tab">Study Guides</a></li>
+
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="delegateReg">
+                        <h4>Delegate Registration</h4>
+                        <br>
+                        <p>Register now and get the opportunity to learn, lead and become a part of the TWMUN legacy. <br>School Committees are open to students up to 12th Grade, while College Committees are open for all.</p>
+                        <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScrUZwl9e62xIw3qXtEDx4NfrRoOqhbMO7QkeX_Yl-Ap1uvXA/viewform" target="_blank" role="button" >Register Now</a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="ebReg">
+                        <h4>Delegation Registration</h4>
+                        <br>
+                        <p>Register now and get the opportunity to learn, lead and become a part of the TWMUN legacy.<br>A delegation consists of 6 or more members from one institution.<br>School Committees are open to students up to 12th Grade, while College Committees will are open for all.</p>
+                        <a class="btn btn-default" href="https://forms.gle/ukCxdGBKDhhCg1pw6" target="_blank" role="button">Register Now</a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="rapReg">
+                        <h4>Study Guides</h4>
+                        <br>
+                        <p>The study guides and delegate resources have now been released!</p>
+                        <a class="btn btn-default" href="https://drive.google.com/drive/folders/1Z5LoCA8hPT7CnyVLMy41duNE_UAPXlJS" target="_blank" role="button" >Resources</a>
+
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="caReg">
+                        <h4>Campus Ambassador Registration</h4>
+                        <br>
+                        <a class="btn btn-default" onclick="return false;" disabled href="https://docs.google.com/forms/d/e/1FAIpQLSfp1H27-ac3x3prr7WcV8zPnbAFVDRK4ZO3hch8EqT3yjYoCQ/viewform?usp=sf_link" target="_blank" role="button">Register Now</a>
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-12 col-sm-12 col-xs-12"><hr></div>
+            </div>
+        </div>
+    </section>
+    <!-- /.secton-services -->
+    <section id="faq" class="site-section text-left section-faq">
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="mun-title">Frequently Asked Questions</p>
+                </div>
+                <div class="col-md-12 col-sm-12 qna">
+                    <h3 >What is Model United Nations?</h3>
+                    <br />
+                    <p >
+                        Model United Nations (also Model UN or MUN) is an academic simulation of the United Nations that aims to educate and encourage participants to discuss about major issues concerning the world, topics in international relations, diplomacy and the United Nations agenda.
+                    </p>
+                    <h3 >
+                        What are the dates of Techfest World MUN?
+                    </h3>
+                    <br />
+                    <p >
+                        Techfest World MUN, IIT Bombay is a two day conference and will be held during Techfest 2022-23  from the 17th to the 18th of December, 2022.
+                    </p>
+                    <h3 >
+                        What awards will be provided at TWMUN 2022?
+                    </h3>
+                    <br />
+                    <p >
+                        The awards will be presented at the discretion of the chairs of each committee and will include one Best Delegate and one Honourable Mentions/High Commendations. A Best Delegation award will also be provided.
+                    </p>
+
+                </div>
+                <div class="col-md-12 col-sm-12 qna">
+                    <h3 >
+                        Who can register for TWMUN, IIT Bombay?
+                    </h3>
+                    <br />
+                    <p >
+                        All students with a valid ID card of their high school or college can register for TWMUN, IIT Bombay. However, exceptional cases are sometimes made for recent graduates.
+                    </p>
+                    <h3 >
+                        When will the study guides be released?
+                    </h3>
+                    <br />
+                    <p >
+                        The study guides will be released approximately one month before the conference.
+                    </p>
+                    <h3 >
+                        What is the venue?
+                    </h3>
+                    <br />
+                    <p >
+                        Techfest World Model United Nations will be held on the campus of IIT Bombay.
+                    </p>
+                </div>
+                <div class="col-md-12 col-sm-12 qna">
+                    <h3 >
+                        I am a first time MUNner. What should I expect?
+                    </h3>
+                    <br />
+                    <p >
+                        An intellectual challenge! Follow basic steps, which include reading your study guides, being well prepared on your agendas, and being ready to speak during the conference. Take multiple opportunities and participate during the moderated and unmoderated caucus. Focus on managing your country’s interests and speaking clearly.
+                    </p>
+                    <h3 >
+                        What is the dress code for Techfest World MUN 2022?
+                    </h3>
+                    <br />
+                    <p >
+                        The Dress Code for Techfest World MUN 2022 is western formals/Indian formals.
+                    </p>
+<!--                    <h3 data-aos="fade-left">-->
+<!--                        What is the venue?-->
+<!--                    </h3>-->
+<!--                    <br />-->
+<!--                    <p data-aos="fade-left">-->
+<!--                        Techfest World Model United Nations will be held on the campus of IIT Bombay.-->
+<!--                    </p>-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="secretariat" class="site-section text-center section-secretariat">
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <p class="mun-title">Secretariat</p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mem-info">
+                    <div class='post-modules' style="margin-bottom: 0px !important;">
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%),url({% static 'resources/mun/secretariat/Sharnam.png' %});" >
+                            <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
+                        </div>
+                        <div class='post-content'>
+                            <h1 class="wstit" style="">DIRECTOR GENERAL</h1>
+                            <div class='descriptionw'>
+                                <h3 style="color: white;" class="card-subtitle">Sharnam Faria</h3>
+                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:sharnam@techfest.org">sharnam@techfest.org</a>
+                                                                <br>
+                                    <a style="text-decoration: none;color: white;" href="tel:+917506497461">+91
+                                                                    7506497461</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mem-info">
+                    <div class='post-modules' style="margin-bottom: 0px !important;">
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%),url({% static 'resources/mun/secretariat/manav.jpg' %});" >
+                            <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
+                        </div>
+                        <div class='post-content'>
+                            <h1 class="wstit" style="">CHIEF ADVISOR</h1>
+                            <div class='descriptionw'>
+                                <h3 style="color: white;" class="card-subtitle">Manav Singh</h3>
+                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:singhmanav22@gmail.com">singhmanav22@gmail.com</a>
+                                    <br>
+                                    <a style="text-decoration: none;color: white;" href="tel:+919833085193">+91 98330 85193</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mem-info">
+                    <div class='post-modules' style="margin-bottom: 0px !important;">
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/tannushriya.jpg' %});" >
+                            <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
+                        </div>
+                        <div class='post-content'>
+                            <h1 class="wstit" style="">SECRETARY GENERAL</h1>
+                            <div class='descriptionw'>
+                                <h3 style="color: white;" class="card-subtitle">Tannusriya Tripathi</h3>
+                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:tannusriya.tripathi@gmail.com">tannusriya.tripathi@gmail.com</a>
+                                    <br>
+                                    <a style="text-decoration: none;color: white;" href="tel:+917995077101">+91 79950 77101</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mem-info">
+                    <div class='post-modules' style="margin-bottom: 0px !important;">
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Nandini.jpg' %});" >
+                            <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
+                        </div>
+                        <div class='post-content'>
+                            <h1 class="wstit" style="">SECRETARY GENERAL</h1>
+                            <div class='descriptionw'>
+                                <h3 style="color: white;" class="card-subtitle">Nandini Shailendran</h3>
+                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:nandinichirayil@gmail.com">nandinichirayil@gmail.com</a>
+                                    <br>
+                                    <a style="text-decoration: none;color: white;" href="tel:+917045142936">+91 70451 42936</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mem-info">
+                    <div class='post-modules' style="margin-bottom: 0px !important;">
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Indrayanee.jpg' %});" >
+                            <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
+                        </div>
+                        <div class='post-content'>
+                            <h1 class="wstit" style="">DEPUTY SECRETARY GENERAL</h1>
+                            <div class='descriptionw'>
+                                <h3 style="color: white;" class="card-subtitle">Indrayanee Pandit</h3>
+                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:indrayaneepandit@gmail.com">indrayaneepandit@gmail.com</a>
+                                    <br>
+                                    <a style="text-decoration: none;color: white;" href="tel:+918788998754">+91 87889 98754</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mem-info">
+                    <div class='post-modules' style="margin-bottom: 0px !important;">
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Jasleen.jpg' %});" >
+                            <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
+                        </div>
+                        <div class='post-content'>
+                            <h1 class="wstit" style="">CHARGE D' AFFAIRS</h1>
+                            <div class='descriptionw'>
+                                <h3 style="color: white;" class="card-subtitle">Jasleen Singh</h3>
+                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:jasleenmohansingh@gmail.com">jasleenmohansingh@gmail.com</a>
+                                    <br>
+                                    <a style="text-decoration: none;color: white;" href="tel:+918369070703">+91 83690 70703</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mem-info">
+                    <div class='post-modules' style="margin-bottom: 0px !important;">
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Ketakee.jpg' %});" >
+                            <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
+                        </div>
+                        <div class='post-content'>
+                            <h1 class="wstit" style="">USG PR</h1>
+                            <div class='descriptionw'>
+                                <h3 style="color: white;" class="card-subtitle">Ketakee Agashe</h3>
+                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:ketakee.agashe91@gmail.com">ketakee.agashe91@gmail.com</a>
+                                    <br>
+                                    <a style="text-decoration: none;color: white;" href="tel:+919967307228">+91 99673 07228</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mem-info">
+                    <div class='post-modules' style="margin-bottom: 0px !important;">
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Aiman.jpg' %});" >
+                            <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
+                        </div>
+                        <div class='post-content'>
+                            <h1 class="wstit" style="">USG DESIGN</h1>
+                            <div class='descriptionw'>
+                                <h3 style="color: white;" class="card-subtitle">Aiman Aslam</h3>
+                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:aiman.aslam2002@gmail.com">aiman.aslam2002@gmail.com</a>
+                                    <br>
+                                    <a style="text-decoration: none;color: white;" href="tel:+919004934919">+91 90049 34919</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mem-info">
+                    <div class='post-modules' style="margin-bottom: 0px !important;">
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%),url({% static 'resources/mun/secretariat/Parth.jpg' %});background-position: top !important;" >
+                            <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
+                        </div>
+                        <div class='post-content'>
+                            <h1 class="wstit" style="">USG DESIGN</h1>
+                            <div class='descriptionw'>
+                                <h3 style="color: white;" class="card-subtitle">Partha Pitkar</h3>
+                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:pitkarpartha@gmail.com">pitkarpartha@gmail.com</a>
+                                    <br>
+                                    <a style="text-decoration: none;color: white;" href="tel:+919930617198">+91 99306 17198</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4 col-sm-6 mem-info">
+                    <div class='post-modules' style="margin-bottom: 0px !important;">
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Shivam.jpg' %});" >
+                            <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
+                        </div>
+                        <div class='post-content'>
+                            <h1 class="wstit" style="">USG DESIGN</h1>
+                            <div class='descriptionw'>
+                                <h3 style="color: white;" class="card-subtitle">Shivam Kumar</h3>
+                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:shivamsagar220201@gmail.com">shivamsagar220201@gmail.com</a>
+                                    <br>
+                                    <a style="text-decoration: none;color: white;" href="tel:+918737051651">+91 87370 51651</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+    </section>
+
+    <section id="contact" class="site-section section-form text-center">
+        <div class="container">
+            <p class="mun-title">Contact</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <p><a href="https://www.google.com/maps/search/Techfest+Office+Students'+Activity+Center+IIT+Bombay,+Powai,+Mumbai+Maharashtra,+India+-+400076/@19.1341086,72.9113959,17z/data=!3m1!4b1" style="text-decoration: none; color: #212121;"><i class="fa fa-map-marker contact-icon" aria-hidden="true"></i></a></p>
+                    <p><a href="https://www.google.com/maps/search/Techfest+Office+Students'+Activity+Center+IIT+Bombay,+Powai,+Mumbai+Maharashtra,+India+-+400076/@19.1341086,72.9113959,17z/data=!3m1!4b1" style="text-decoration: none; color: #212121;">Techfest Office Students' Activity Center IIT Bombay, Powai, Mumbai Maharashtra, India - 400076</a></p>
+                </div>
+                <div class="col-md-4">
+                    <p><a href="tel:+917995077101" style="text-decoration: none; color: #212121"><i class="fa fa-phone contact-icon" aria-hidden="true"></i></a></p>
+                    <p><a href="tel:+917995077101" style="text-decoration: none; color: #212121">Get in touch with the Secretariat</a></p>
+                </div>
+                <div class="col-md-4">
+                    <p><a href="mailto:mun@techfest.org" style="text-decoration: none; color: #212121;"><i class="fa fa-envelope contact-icon" aria-hidden="true"></i></a></p>
+                    <p><a href="mailto:mun@techfest.org" style="text-decoration: none; color: #212121;">mun@techfest.org</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.section-form -->
+</main>
+<!-- /#main -->
+<!-- Modals -->
+<div id="abouttwmun" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <div class="modal-body">
+                <h1>About TWMUN</h1>
+                <br>
+                <br>
+                <p>Techfest World Model United Nations is finally back offline, on the grounds of IIT Bombay. It acts as a benchmark platform for advanced debate on the social, political and economic facets of the world at large. Through its forum of excellence, Techfest World Model United Nations has created an unparalleled legacy of robust debate involving members of the youth from across the world. This year, Techfest World Model United Nations promises to be bigger, bolder and better.</p>
+                <br>
+                <br>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<div id="abouttechfest" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <div class="modal-body">
+                <h1>About Techfest</h1>
+                <br>
+                <p>Techfest is the Annual Science and Technology Festival of IIT Bombay, initiated in 1998 with a mission to promote technology, scientific thinking, and innovation. Now in its 26th Edition, Techfest has grown to be Asia’s Largest Science & Technology Festival with an astounding annual footfall of 1.75+ lakh, and an extensive network of over 3000 colleges, including more than 500 international universities. With a plethora of workshops, competitions, lectures, conferences, exhibitions, performances, concerts and various other events, Techfest is not just a college festival, it is an experience that you will cherish forever!</p>
+                <br>
+                <br>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<div id="aboutwelcome" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <div class="modal-body">
+                <h1>Welcome Letter</h1>
+                <br>
+                <p>Despite the fact that time marches on, flaunting all of its unpredictable glory, Model United Nations Conferences have ensured our survival by connecting it to our capacity for change and providing us with a forum in which to voice our concerns without hindrance. We may have first become interested in Model United Nations competitions by the allure of sitting in a conference room where everyone is dressed impeccably, each person representing a country while discussing a global issue and attempting to find a solution to a problem that not even the world's best diplomats can solve, but our years as members of the Indian MUN Society have left a mark far more permanent than any award or certificate. MUNs have become a location for attacking, defending, and most importantly, compromising where through diplomacy and  courtesy everyone strives to make "ladies and gentlemen" a reality.    The members of the Indian MUN society represent the apex of a community of lifelong learners who seek knowledge not only from the voluminous electronic bookshelves of the world's leading universities but also from one another.   If you're looking for a place with a unique culture of growth, go no further than the Techfest World Model United Nations, where we've adopted an inclusive society. Many late nights have been spent over the past few months by our committee's Secretariat and its unrivalled Executive board to ensure that you will leave Techfest with far more information and connections than you had before you arrived.</p>
+                <br>
+                <p>Tannusriya Tripathi</p>
+                <p>Secretary General</p>
+                <br>
+                <br>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- /.modal -->
+<div id="sochum" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <div class="modal-body">
+                <h1>Social Humanitarian and Cultural Committee</h1>
+                <p>The General Assembly allocates to the Third Committee, agenda items relating to a range of social, humanitarian affairs and human rights issues that affect people all over the world.<br>The Committee discusses questions relating to the advancement of women, the protection of children, indigenous issues, the treatment of refugees, the promotion of fundamental freedoms through the elimination of racism and racial discrimination, and the right to self- determination. The Committee also addresses important social development questions such as issues related to youth, family, ageing, persons with disabilities, crime prevention, criminal justice, and international drug control. Delegates will find themselves deliberating on whether a problematic situation problematic needs to be solved as one wrong move can domino effect any situation out of control.</p>
+                <hr>
+                <h2>Agenda</h2>
+                <h3 style="text-align: center;">Addressing the Condition of Prisons & Prisoners Worldwide.</h3>
+                <hr>
+                <h2>Registration</h2>
+                <div class="text-center">
+                    <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScrUZwl9e62xIw3qXtEDx4NfrRoOqhbMO7QkeX_Yl-Ap1uvXA/viewform" target="_blank" role="button">Register Now</a>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<div id="unsc" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <div class="modal-body">
+                <h1>The United Nations Security Council</h1>
+                <p>The UNSC charter seeks to promote harmonious relationships among the member nations by maintaining international peace and security. The Security Council takes the lead in determining the existence of a threat to the peace or act of aggression. It calls upon the parties to a dispute to settle it by peaceful means and recommends methods of adjustment or terms of settlement. </p>
+                <hr>
+                <h2>Agenda</h2>
+                <h3 style="text-align: center;">Discussing the situation in Nagorno Karabakh region.</h3>
+                <hr>
+                <h2>Registration</h2>
+                <div class="text-center">
+                    <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScrUZwl9e62xIw3qXtEDx4NfrRoOqhbMO7QkeX_Yl-Ap1uvXA/viewform" target="_blank" role="button">Register Now</a>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<div id="nato" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <div class="modal-body">
+                <h1>The North Atlantic Treaty Organization</h1>
+                <p>NATO is an active and leading contributor to peace and security on the international stage. It promotes democratic values and is committed to the peaceful resolution of disputes. However, if diplomatic efforts fail, it has the military capacity needed to undertake crisis-management operations, alone or in cooperation with other countries and international organisations. As the investigation into a deadly explosion  in Polish territory continues, Poland’s government has reserved the right to invoke Article 4 of NATO’s treaty, a provision that enables members to start a formal discussion within the alliance about threats to their security. </p>
+                <hr>
+                <h2>Agenda</h2>
+                <h3 style="text-align: center;">Discussing NATO response strategy for Russian actions</h3>
+                <hr>
+                <h2>Registration</h2>
+                <div class="text-center">
+                    <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScrUZwl9e62xIw3qXtEDx4NfrRoOqhbMO7QkeX_Yl-Ap1uvXA/viewform" target="_blank" role="button">Register Now</a>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<div id="disec" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <div class="modal-body">
+                <h1>Disarmament and International Security Committee</h1>
+                <p>DISEC is concerned with issues of international significance pertaining to the security and demilitarisation of all countries and areas, as well as the protection of all global inhabitants.According to the UN Charter, the purpose of DISEC  is to establish 'general principles of cooperation in the maintenance of international peace and security, including the principles governing disarmament and the regulation of armaments, and to provide "recommendations to the Members or the Security Council with regard to such principles.</p>
+                <hr>
+                <h2>Agenda</h2>
+                <h3 style="text-align: center;">Discussing the utilization of technology for modern warfare.</h3>
+                <hr>
+                <h2>Registration</h2>
+                <div class="text-center">
+                    <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScrUZwl9e62xIw3qXtEDx4NfrRoOqhbMO7QkeX_Yl-Ap1uvXA/viewform" target="_blank" role="button">Register Now</a>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<div id="unhrc" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <div class="modal-body">
+                <h1>United Nations High Commissioner for Refugees</h1>
+                <p>UNHCR is a United Nations agency mandated to aid and protect refugees, forcibly displaced communities, persons facing discrimination on the basis of gender or sexual orientation, and stateless people, and to aid in their voluntary repatriation, local integration, or resettlement in a third country. UNHCR as a committee serves as a platform to have a solution-focused dialogue for improving the pre-existing system and providing LGBTQIA+ persons an opportunity to live freely and seek asylum without invasive questions into their traumatic experiences.</p>
+                <hr>
+                <h2>Agenda</h2>
+                <h3 style="text-align: center;">Protecting LGBTQI+ refugees.</h3>
+                <hr>
+                <h2>Registration</h2>
+                <div class="text-center">
+                    <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScrUZwl9e62xIw3qXtEDx4NfrRoOqhbMO7QkeX_Yl-Ap1uvXA/viewform" target="_blank" role="button">Register Now</a>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<div id="aippm" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <div class="modal-body">
+                <h1>All India Political Party Meet</h1>
+                <p>The All Political Parties Meet is a place for unconstrained political debate, discussion, and deliberation that is outside of the legislative functions of Parliament. The All India Political Parties Meet is an endeavour to imitate political reality by stimulating the different policy and governance levels that exist in our nation today where varied political ideas and personalities convene to make choices on matters of national significance.</p>
+                <hr>
+                <h2>Agenda</h2>
+                <h3 style="text-align: center;">Deliberation on a comprehensive Data-protection framework.</h3>
+                <hr>
+                <h2>Registration</h2>
+                <div class="text-center">
+                    <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScrUZwl9e62xIw3qXtEDx4NfrRoOqhbMO7QkeX_Yl-Ap1uvXA/viewform" target="_blank" role="button">Register Now</a>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<div id="sld" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <div class="modal-body">
+                <h1>Crisis committee: Shangri-La Dialogue</h1>
+                <p>The Shangri-La Dialogue (SLD) is an inter-governmental security forum held annually by an independent think tank, the International Institute for Strategic Studies (IISS).The summit seeks to cultivate a sense of community among most important policymakers in defence and security community of the region and topics including geo-economics, terrorism and security,strategy technology and arms control , and many more are discussed. </p>
+                <hr>
+                <h2>Agenda</h2>
+                <h3 style="text-align: center;">Discussing the reformation of strategy for threat to peace.</h3>
+                <hr>
+                <h2>Registration</h2>
+                <div class="text-center">
+                    <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScrUZwl9e62xIw3qXtEDx4NfrRoOqhbMO7QkeX_Yl-Ap1uvXA/viewform" target="_blank" role="button">Register Now</a>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<div id="uncsw" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <div class="modal-body">
+                <h1>United Nations Commission on the Status of Women</h1>
+                <p>There have been various successful initiatives to enhance women's rights, but it is equally essential that women's rights be protected on a worldwide scale. Despite the fact that women's rights have advanced to the point that they have nearly equal employment prospects and a greater social status in the majority of regions, women still maintain inferior positions to males in the workplace and in society for a variety of reasons. This is noted to be most prominent in Middle Eastern nations engaged in the difficult process of enacting social and political transformation, where the unequal status of women stands out as an especially formidable obstacle. Being devoted to the protection of women's human rights, the Commission on the Status of Women (CSW) provides a forum for representatives of United Nations institutions and civil society organisations to participate in issue-based advocacy dialogues on specific issues relevant to women's rights.</p>
+                <hr>
+                <h2>Agenda</h2>
+                <h3 style="text-align: center;">Reforms for protection of women's rights and constitutional freedoms with special emphasis on middle eastern countries.</h3>
+                <hr>
+                <h2>Registration</h2>
+                <div class="text-center">
+                    <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScrUZwl9e62xIw3qXtEDx4NfrRoOqhbMO7QkeX_Yl-Ap1uvXA/viewform" target="_blank" role="button">Register Now</a>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<div id="ip" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <div class="modal-body">
+                <h1>International Press</h1>
+                <p>International press allows you to act as an unbiased journalist reporting on the simulation’s proceedings at the conference. Committee debates are investigated, interviews and articles are researched, and press conference reports are authored for the international press. </p>
+                <hr>
+                <h2>Registration</h2>
+                <div class="text-center">
+                    <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScrUZwl9e62xIw3qXtEDx4NfrRoOqhbMO7QkeX_Yl-Ap1uvXA/viewform" target="_blank" role="button">Register Now</a>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<div id="unoc" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <div class="modal-body">
+                <h1>United Nations Ocean Conference</h1>
+                <p>UN Ocean is an interagency mechanism that aims to improve the coordination, coherency and efficiency of competent organisations of the UN system and the International Seabed authority. It recognises the close connection between marine biodiversity and highlights sustainable development goals to conserve oceans, seas and marine resources.</p>
+                <hr>
+                <h2>Agenda</h2>
+                <h3 style="text-align: center;">Use of Technology in furtherance of SDG 14</h3>
+                <hr>
+<!--                <div class="text-center">-->
+<!--                    <a class="btn btn-default" href="2020/mun/studyguides/NPTRC_ROP.pdf" target="_blank" role="button">Rules of Procedure</a>-->
+<!--                </div>-->
+
+                <h2>Registration</h2>
+                <div class="text-center">
+                    <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScrUZwl9e62xIw3qXtEDx4NfrRoOqhbMO7QkeX_Yl-Ap1uvXA/viewform" target="_blank" role="button">Register Now</a>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+</div>
+    <!-- /.modal-dialog -->
+
+    <div id="unw2" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                </div>
+                <div class="modal-body">
+                    <h1>UN Women</h1>
+                    <p>A committee that became operational in 2011 thus becoming a landmark moment in streamlining the world’s focus on the plight of women, their empowerment and working towards the equality of both genders has placed the 2030 Sustainable Development Goals as one of the centres of their main thematic work. In the wise words of the first Executive Director of UNW, Ms. Michelle Bachelet, “Justice means more than punishing the perpetrators; it means redress and reparations that enable women to recover.” <br>
+                        Dedicated to gender equality and empowerment of women, UN Women serves as the global champion on women’s rights. One can expect various socio-political topics to be put up for debate in this committee in furtherance of the common aim to develop and uphold standards and create an environment in which every women and girl can exercise her human rights and live up to her full potential.
+                    </p>
+                    <hr>
+                    <h2>Agenda</h2>
+                    <h3 style="text-align: center;">The situation of women in Afghanistan</h3>
+                    <hr>
+                    <h2>Registration</h2>
+                    <div class="text-center">
+                        <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScXWyOyRRNbix01W_UkmLcQjG0oM7TZT4KcFEk1TB2ETZdpGg/viewform?usp=sf_link" target="_blank" role="button">Register Now</a>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div id="al" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                </div>
+                <div class="modal-body">
+                    <h1>Arab League</h1>
+                    <p>The Arab league, also known as the League of Arab States, is an international regional organization of Arab states in the Middle East that was constituted to enable cooperation between member states on economic and military affairs amongst others. </p>
+                    <hr>
+                    <h2>Agenda</h2>
+                    <h3 style="text-align: center;">Consideration of Palestine as a country</h3>
+                    <hr>
+                    <h2>Registration</h2>
+                    <div class="text-center">
+                        <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScXWyOyRRNbix01W_UkmLcQjG0oM7TZT4KcFEk1TB2ETZdpGg/viewform?usp=sf_link" target="_blank" role="button">Register Now</a>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="{% static 'resources/mun/js/bootstrap.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="{% static 'resources/mun/js/skrollr.min.js' %}"></script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
+<script src="{% static 'resources/mun/js/jquery.countTo.min.js' %}"></script>
+<script src="{% static 'resources/mun/js/script.js' %}"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  //   window.addEventListener('wheel', { passive: false })
+  // $('li').on('sortable:sort',function(event){
+  //   alert("From " + event.detail.startIndex + " to " + event.detail.newIndex);
+  // });
+
+
+    AOS.init();
+
+if (window.innerWidth > 850) {
+    skrollr.init();
+}
+</script>
+<script>
+    $('.hover').mouseleave(function () {
+        $(this).removeClass('hover');
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        function alignModal(){
+            var modalDialog = $(this).find(".modal-dialog");
+            /* Applying the top margin on modal dialog to align it vertically center */
+            modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2));
+        }
+        // Align modal when it is displayed
+        $(".modal").on("shown.bs.modal", alignModal);
+
+        // Align modal when user resize the window
+        $(window).on("resize", function(){
+            $(".modal:visible").each(alignModal);
+        });
+
+        if ($(window).width() < 767) {
+            $("[data-aos='fade-right']").attr("data-aos", "fade-up");
+            $("[data-aos='fade-left']").attr("data-aos", "fade-up");
+        }
+
+        $(window).resize(function() {
+            if ($(window).width() < 767) {
+                $("[data-aos='fade-right']").attr("data-aos", "fade-up");
+                $("[data-aos='fade-left']").attr("data-aos", "fade-up");
+            }
+        });
+    });
+</script>
+<script>
+<!--deleted compi card script-->
+//Both
+</script>
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- For Cards -->
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script>
+      $(document).ready(function()
+    {
+        $(".post-modules").css("transition", "transform 200ms ease-in-out");
+        // $(".post-content").css("transition", "transform 100ms ease-in-out");
+        // $( "post-modules" ).children('thumbnail').hover(function() { $(this).css("background-image","red") } )
+
+        $(".post-modules").hover(
+            // Handler for mouseenter
+            function()
+            {
+                $(this).css("transform", "scale(1.08,1.25)");
+                $(this).children( ".post-content" ).css("transform", "scale(1,0.8)");
+                $(this).children( ".post-content" ).css("margin-bottom", "-20px");
+            },
+            // Handler for mouseleave
+            function()
+            {
+                $(this).css("transform", "scale(1)");
+                $(this).children( ".post-content" ).css("transform", "scale(1)");
+                $(this).children( ".post-content" ).css("margin-bottom", "0px");
+            }
+        );
+
+        $(".module-1").hover(
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", "linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgb(143 96 149 / 0%) -10.08%, rgb(144 67 154 / 0%) -43.62%, rgb(72 25 74 / 75%) -5.85%, rgb(77 64 88) 151%), url({% static 'resources/mun/img/committees/UNSC.jpg' %}) ");
+            },
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", " url({% static 'resources/mun/img/committees/UNSC.jpg' %}) ");
+            }
+        );
+        $(".module-2").hover(
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", "linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgb(143 96 149 / 0%) -10.08%, rgb(144 67 154 / 0%) -43.62%, rgb(72 25 74 / 75%) -5.85%, rgb(77 64 88) 151%), url({% static 'resources/mun/img/committees/UNHRC.jpg' %}) ");
+            },
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", " url({% static 'resources/mun/img/committees/UNHRC.jpg' %}) ");
+            }
+        );
+        $(".module-3").hover(
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", "linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgb(143 96 149 / 0%) -10.08%, rgb(144 67 154 / 0%) -43.62%, rgb(72 25 74 / 75%) -5.85%, rgb(77 64 88) 151%), url({% static 'resources/mun/img/committees/AIPPM.jpg' %}) ");
+            },
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", " url({% static 'resources/mun/img/committees/AIPPM.jpg' %}) ");
+            }
+        );
+
+        $(".module-8").hover(
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", "linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgb(143 96 149 / 0%) -10.08%, rgb(144 67 154 / 0%) -43.62%, rgb(72 25 74 / 75%) -5.85%, rgb(77 64 88) 151%), url({% static 'resources/mun/img/committees/IP.png' %}) ");
+            },
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", " url({% static 'resources/mun/img/committees/IP.png' %}) ");
+            }
+        );
+
+         $(".module-9").hover(
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", "linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgb(143 96 149 / 0%) -10.08%, rgb(144 67 154 / 0%) -43.62%, rgb(72 25 74 / 75%) -5.85%, rgb(77 64 88) 151%), url({% static 'resources/mun/img/committees/UNCSW.png' %}) ");
+            },
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", " url({% static 'resources/mun/img/committees/UNCSW.png' %}) ");
+            }
+        );
+         $(".module-10").hover(
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", "linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgb(143 96 149 / 0%) -10.08%, rgb(144 67 154 / 0%) -43.62%, rgb(72 25 74 / 75%) -5.85%, rgb(77 64 88) 151%), url({% static 'resources/mun/img/committees/NATO.png' %}) ");
+            },
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", " url({% static 'resources/mun/img/committees/NATO.png' %}) ");
+            }
+        );
+        $(".module-4").hover(
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", "linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgb(143 96 149 / 0%) -10.08%, rgb(144 67 154 / 0%) -43.62%, rgb(72 25 74 / 75%) -5.85%, rgb(77 64 88) 151%), url({% static 'resources/mun/img/committees/SLD.jpg' %}) ");
+            },
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", " url({% static 'resources/mun/img/committees/SLD.jpg' %}) ");
+            }
+        );
+        $(".module-5").hover(
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", "linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgb(143 96 149 / 0%) -10.08%, rgb(144 67 154 / 0%) -43.62%, rgb(72 25 74 / 75%) -5.85%, rgb(77 64 88) 151%), url({% static 'resources/mun/img/committees/UNOC.jpg' %}) ");
+            },
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", " url({% static 'resources/mun/img/committees/UNOC.jpg' %}) ");
+            }
+        );
+        $(".module-6").hover(
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", "linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgb(143 96 149 / 0%) -10.08%, rgb(144 67 154 / 0%) -43.62%, rgb(72 25 74 / 75%) -5.85%, rgb(77 64 88) 151%), url({% static 'resources/mun/img/committees/SOCHUM.jpg' %}) ");
+            },
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", " url({% static 'resources/mun/img/committees/SOCHUM.jpg' %}) ");
+            }
+        );
+        $(".module-7").hover(
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", "linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgb(143 96 149 / 0%) -10.08%, rgb(144 67 154 / 0%) -43.62%, rgb(72 25 74 / 75%) -5.85%, rgb(77 64 88) 151%), url({% static 'resources/mun/img/committees/DISEC.jpg' %}) ");
+            },
+            function()
+            {
+                $(this).children( ".thumbnail" ).css("background-image", " url({% static 'resources/mun/img/committees/DISEC.jpg' %}) ");
+            }
+        );
+
+
+    });
+
+
+
+    </script>
+
+</html>

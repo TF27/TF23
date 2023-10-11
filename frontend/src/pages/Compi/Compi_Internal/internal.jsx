@@ -28,6 +28,7 @@ import Task from "./Competitions/Task";
 
 const Internal = () => {
   const { compiName } = useParams();
+  const { roboCamp, setRoboCamp } = useState(false);
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -41,6 +42,9 @@ const Internal = () => {
     }
     else if (compiName === "workshop"){
       navigate("/workshops")
+    }
+    else if (compiName === "robocap league"){
+      setRoboCamp(true);
     }
     // Add more conditions as needed for other compiNames
   }, [navigate, compiName]);
@@ -194,7 +198,8 @@ const Internal = () => {
                   <div className={styles.int_reg}>
                     <div className={styles.reg_rect1}></div>
                     <div className={styles.reg_rect2}>
-                      <Link to={`register`}>Register</Link>
+                      {roboCamp ? (<a href="https://www.robocapleague.com/apply" target="_blank" rel="noopener noreferrer">Register</a>) : (<Link to={`register`}>Register</Link>)}
+                      {/* <Link to={`register`}>Register</Link> */}
                     </div>
                   </div>
                 </div>

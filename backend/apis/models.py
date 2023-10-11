@@ -1,5 +1,6 @@
 from typing import Any
 from django.db import models
+from django.core.exceptions import ValidationError
 
 # Create your models here.
 class Compi(models.Model):
@@ -136,3 +137,28 @@ class workshop_reg(models.Model):
     paid = models.BooleanField(default=False)
     def __str__(self):
         return self.name
+
+class Robowars(models.Model):
+    robowar_id = models.IntegerField(null=True, default=0)
+    category = models.CharField(max_length=100, primary_key=True)
+    img = models.ImageField(upload_to='robowars')
+    statement = models.FileField(upload_to='ProblemStatements', null=True, blank=True)
+
+class RobowarTeamMember(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=254)
+    phone = models.CharField(max_length=254)    
+class robowar_reg(models.Model):
+    robowar_id = models.CharField(max_length=50, blank=True, null=True)
+    category = models.ForeignKey(Robowars, on_delete=models.CASCADE)
+    team_name = models.CharField(max_length=50, unique=True, blank=True, null=True)
+    country = models.CharField(max_length=255, null=True, blank=True)
+    college = models.CharField(max_length=1000, null=True, blank=True)
+    team_leader_name = models.CharField(max_length=50, blank=True, null=True)
+    team_leader_email = models.EmailField(max_length=254, blank=True, null=True)
+    team_leader_phone = models.CharField(max_length=254, blank=True, null=True)
+    members = models.ManyToManyField(RobowarTeamMember)
+    team_length = models.IntegerField(blank=True, null=True)
+    def clean(self):
+        if self.members.count() > 3:
+            raise ValidationError("A team can have a maximum of three members.")
