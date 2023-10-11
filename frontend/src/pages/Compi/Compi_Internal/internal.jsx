@@ -28,7 +28,7 @@ import Task from "./Competitions/Task";
 
 const Internal = () => {
   const { compiName } = useParams();
-  const { roboCamp, setRoboCamp } = useState(false);
+  const [ roboCamp, setRoboCamp ] = useState(false);
 
   const navigate = useNavigate();
   useEffect(() => {
