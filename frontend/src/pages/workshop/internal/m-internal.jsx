@@ -22,7 +22,7 @@ import Auto from "./Workshops/m-Auto";
 import Crypto from "./Workshops/m-Crypto"; 
 import Block from "./Workshops/m-Block"; 
 import Dta from "./Workshops/m-Dta"; 
-
+import Chatgpt from "./Workshops/m-Chatgpt"; 
 
 
 
@@ -179,6 +179,7 @@ const MInternal = () => {
             {cardName === "crypto trading by wazirX" && <Crypto />}
             {cardName === "blockchain" && <Block />}
             {cardName === "data to aI by google" && <Dta />}
+            {cardName === "chatgpt (prompt engineering)" && <Chatgpt />}
 
 
           </div>

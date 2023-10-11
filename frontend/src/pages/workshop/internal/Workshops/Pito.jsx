@@ -88,7 +88,7 @@ const Pito = () => {
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
                 Gourish Singhal<br/>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8928455606`}>+91 89284 55606</div>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9424873725`}>+91 94248 73725</div>
                     <div className="col-3 contactMail" onClick={() => window.location.href = `gourish@techfest.org`}>gourish@techfest.org</div>
                     
               </div>

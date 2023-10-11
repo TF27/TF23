@@ -4,7 +4,7 @@ import Faq from "react-faq-component";
 import Whatsapplink from "../../../../components/whatsapp/link";
 import "./x.css";
 
-const Pito = () => {
+const Chatgpt = () => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = (openX) => {
@@ -33,8 +33,8 @@ const Pito = () => {
     margin: "auto",
     rowContentMarginBottom: "0",
   };
-//   const walink1 = "https://chat.whatsapp.com/CYpCpfezIEf09EtiY591Y5";
-//   const dslink1 = "https://chat.whatsapp.com/CYpCpfezIEf09EtiY591Y5";
+  // const walink1 = "https://chat.whatsapp.com/CYpCpfezIEf09EtiY591Y5";
+  // const dslink1 = "https://chat.whatsapp.com/CYpCpfezIEf09EtiY591Y5";
 
   return (
     <div className={styles.mWholeData}>
@@ -56,11 +56,11 @@ const Pito = () => {
           }`}
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-          <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Master the fundamentals of writing Python scripts and using its libraries <br /><br />
-            Date: 26th-27th <br /> <br />
-            Duration: 12-14 hours <br /><br />
-            Venue: IIT Bombay <br />
+          <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Master the skill of prompt engineering in the world of AI 
+           <br /> <br />
+          Date: 28th-29th December <br /> <br />
+          Duration: 9-10 hours <br /> <br />
+          Venue: IIT Bombay <br />
           </div>
         </div>
       </div>
@@ -83,11 +83,11 @@ const Pito = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Register and Pay before 20th October 2023 to avail the workshop at the early bird price <br /><br />
+          Register and Pay before 15th October 2023 to avail the workshop at the early bird price <br /><br />
             Group Discounts: <br/>
             Register as a group to avail the following discounts: <br/>
-            2 members Rs. 100 off <br/>
-            3 members Rs. 200 off <br/>
+            2 members Rs. 150 off <br/>
+            3 members Rs. 250 off <br/>
             4 members Rs. 300 off <br/>
           </div>
         </div>
@@ -111,7 +111,7 @@ const Pito = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            1.<b>Eligibility:</b> Participants will have to register individually for each workshop. <br/>
+          1.<b>Eligibility:</b> Participants will have to register individually for each workshop. <br/>
             2. <b>Payment Instructions:</b> While paying the fees, login with the same credentials with which you had registered on the Techfest Website. Please enter the data correctly for us to process your payment information properly. <br/>
             3. <b>Prerequisites:</b> A laptop/PC with Microsoft Windows (7 or later & Minimum 4GB RAM), configuration Internet Connectivity (Typically to be able to do video call / conferencing), Notepad & Pen. <br/>
             4. <b>Certificate Criterion:</b> Participants should be present in all the sessions. Failing this, no certificate will be awarded to the participant. Certificate of Training from Techfest, IIT Bombay will be given to all the participants.<br/>
@@ -140,20 +140,20 @@ const Pito = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Gourish Singhal
+            Jainam Shah
             <div
-              className="col-3 contactNum"
-              onClick={() => (window.location.href = `tel:9424873725`)}
+              className="contactNum"
+              onClick={() => (window.location.href = `tel:8369504031`)}
             >
-              +91 94248 73725
+              +91 83695 04031
             </div>
             <div
-              className="col-3 contactMail"
+              className="contactMail"
               onClick={() =>
-                (window.location.href = `mailto:gourish@techfest.org`)
+                (window.location.href = `mailto:jainam@techfest.org`)
               }
             >
-              gourish@techfest.org
+              jainam@techfest.org
             </div>
           </div>
         </div>
@@ -162,4 +162,4 @@ const Pito = () => {
   );
 };
 
-export default Pito;
+export default Chatgpt;

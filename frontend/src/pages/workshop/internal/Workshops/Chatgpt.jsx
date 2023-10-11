@@ -5,7 +5,7 @@ import "./x.css";
 import Whatsapplink from "../../../../components/whatsapp/link";
 import yt from "./../../img/glimpses.png";
 
-const Ai = () => {
+const Chatgpt= () => {
   const [activeCity, setActiveCity] = useState("About");
   const [activeIndex, setActiveIndex] = useState(null);
   const openCity = (cityName) => {
@@ -103,9 +103,9 @@ const Ai = () => {
                 <div className={styles.info_details}>
                   <div>
                     <h3>Date: </h3>
-                    <p>28th-29th December</p> <br />
+                    <p>28th-29th December</p> <br /> <br />
                     <h3>Venue: </h3>
-                    <p>IIT Bombay</p> <br />
+                    <p>IIT Bombay</p> <br /> <br />
                     <h3>
                       Glimpses:{" "}
                       <a
@@ -119,7 +119,7 @@ const Ai = () => {
                   </div>
                   <div>
                     <h3>Duration:</h3>
-                    <p>12-14 hours</p>
+                    <p>10-12 hours</p> <br /> <br />
                     <h3>Early Bird Offer:</h3>
                     <p>
                       Free Access Pass to Techfest for events such as EDM night,
@@ -191,19 +191,19 @@ const Ai = () => {
           >
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-                Arnav Patel
+                Jainam Shah
                 <br />
                 <div
                   className="col-3 contactNum"
-                  onClick={() => (window.location.href = `tel:9372634701`)}
+                  onClick={() => (window.location.href = `tel:8369504031`)}
                 >
-                  +91 93726 34701
+                  +91 83695 04031
                 </div>
                 <div
                   className="col-3 contactMail"
-                  onClick={() => (window.location.href = `arnav@techfest.org`)}
+                  onClick={() => (window.location.href = `jainam@techfest.org`)}
                 >
-                  arnav@techfest.org
+                  jainam@techfest.org
                 </div>
               </div>
             </div>
@@ -214,4 +214,4 @@ const Ai = () => {
   );
 };
 
-export default Ai;
+export default Chatgpt;

@@ -117,14 +117,14 @@ const Task = () => {
         <div className={styles.information}>
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
-            <div className={styles.info_data}>
+            <div className={styles.info_data}> <br /> <br />
             Design & Develop an intelligent task management system that leverages the concepts like AI, ML, Data Analytics and User Friendly Interface
               </div>
             </div>
           </div>
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
-            <div className={styles.info_data}>
+            <div className={styles.info_data}> <br /> <br />
             Stage 1: <br />
             Teams have to submit their ideas in the form of a presentation deck <br />
             <br />
@@ -135,7 +135,7 @@ const Task = () => {
           </div>
           <div id="Timeline" className={`${styles.info} ${activeCity === 'Timeline' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
-            <div className={styles.info_data}>
+            <div className={styles.info_data}> <br /> <br />
             Round 1:<br/>
             Last date to register: 31st October 2023 <br />
             Submission deadline: 1st November 2023
@@ -172,7 +172,7 @@ const Task = () => {
           </div>
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
-              <div className={styles.info_data}>
+              <div className={styles.info_data}> <br /> <br />
               Rishabh Tibrewal<br/>
                     <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8948486206`}>+91 89484 86206</div>
                     <div className="col-3 contactMail" onClick={() => window.location.href = `shreshthraj.techfest@gmail.com`}></div>

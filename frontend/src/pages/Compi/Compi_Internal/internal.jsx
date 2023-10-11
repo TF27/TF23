@@ -39,9 +39,25 @@ const Internal = () => {
     } else if (compiName === "tfo") {
       navigate("/competitions/techfest%20olympiad");
     }
+   else if (compiName === "uf") {
+    navigate("/competitions/urban-futurism");
+  }
+  else if (compiName === "taskwhiz") {
+    navigate("/competitions/task%20whiz");
+  }
+  else if (compiName === "ai") {
+    navigate("workshops/artificial%20intelligence");
+  }
+  else if (compiName === "ml") {
+    navigate("/workshops/machine%20learning");
+  }
     else if (compiName === "workshop"){
-      navigate("/workshops")
+      navigate("/workshops");
     }
+  
+     else if (compiName === "techaid"){
+    navigate("/competitions/tech-aid")
+  }
     // Add more conditions as needed for other compiNames
   }, [navigate, compiName]);
 
