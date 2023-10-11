@@ -21,6 +21,7 @@ import Crypto from "./Workshops/Crypto";
 import Block from "./Workshops/Block";
 import Dta from "./Workshops/Dta";
 import Ethical from "./Workshops/Ethical";
+import Chatgpt from "./Workshops/Chatgpt";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -177,6 +178,7 @@ const Internal = () => {
             {cardName === "blockchain" && <Block/>}
             {cardName === "data to aI by google" && <Dta/>}
             {cardName === "ethical hacking" && <Ethical/>}
+            {cardName === "chatgpt (prompt engineering)" && <Chatgpt/>}
           </div>
         </div>
       </div>
