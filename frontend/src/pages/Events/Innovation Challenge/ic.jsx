@@ -142,7 +142,7 @@ const IC = () => {
             <div className={styles.icContact_i}>
               <h2>Sarvesh Bang</h2>
               <p>
-                sarvesh@techfest.org <br /> +91 99999 99999
+                sarvesh@techfest.org <br /> +91 87667 84117
               </p>
             </div>
           </div>
