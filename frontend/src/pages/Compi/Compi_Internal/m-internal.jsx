@@ -29,6 +29,7 @@ import Task from "./Competitions/m-Task";
 
 const MInternal = () => {
   const { compiName } = useParams();
+  const { roboCamp, setRoboCamp } = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     // Check compiName and perform redirections
@@ -38,9 +39,22 @@ const MInternal = () => {
       navigate("/competitions/meshmerize");
     } else if (compiName === "tfo") {
       navigate("/competitions/techfest%20olympiad");
+    } else if (compiName === "uf") {
+      navigate("/competitions/urban-futurism");
+    } else if (compiName === "taskwhiz") {
+      navigate("/competitions/task%20whiz");
+    } else if (compiName === "ai") {
+      navigate("workshops/artificial%20intelligence");
+    } else if (compiName === "ml") {
+      navigate("/workshops/machine%20learning");
+    } else if (compiName === "workshop") {
+      navigate("/workshops");
+    } else if (compiName === "robocap league") {
+      setRoboCamp(true);
     }
     // Add more conditions as needed for other compiNames
   }, [navigate, compiName]);
+  
   const [data, setData] = useState([]);
   const { googleSignIn, user } = UserAuth();
   const handleGoogleSignIn = async () => {
@@ -83,14 +97,14 @@ const MInternal = () => {
           <div className={styles.sponsor}>
             {data.sponsorImg && (
               <a href={data.sponsorLink} target="_blank">
-              <h3>
-                Sponsored by{" "}
-                <img
-                  src={data.sponsorImg}
-                  alt="Sponsor"
-                  className={styles.sponsorImg}
-                />
-              </h3>
+                <h3>
+                  Sponsored by{" "}
+                  <img
+                    src={data.sponsorImg}
+                    alt="Sponsor"
+                    className={styles.sponsorImg}
+                  />
+                </h3>
               </a>
             )}
           </div>
@@ -157,8 +171,8 @@ const MInternal = () => {
                         <Link to={`createTeam`}>Create Team</Link>
                       </div>
                     </div>
-                      <JoinTeam />
-                      <SingleParti />
+                    <JoinTeam />
+                    <SingleParti />
                   </div>
                 )}
               </div>
@@ -222,8 +236,8 @@ const MInternal = () => {
     top: "0",
     zIndex: "-1",
     animation: "changeImage 5s infinite",
-    backgroundAttachment: 'fixed',
-    paddingBottom: '170px',
+    backgroundAttachment: "fixed",
+    paddingBottom: "170px",
   };
 
   const keyframes = `

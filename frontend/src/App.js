@@ -27,6 +27,7 @@ import Header_update from "./components/Navbar/Header_update";
 // const Home= React.lazy(() => import('./pages/Home/home'));
 const Lectures = React.lazy(() => import("./pages/Lectures/index"));
 const Compi = React.lazy(() => import("./pages/Compi/compi"));
+const Robowars = React.lazy(() => import("./pages/Robowars/robowars"));
 const Exhibition = React.lazy(() => import("./pages/Exhibition/exhi"));
 const Media = React.lazy(() => import("./pages/AboutUs/Media/index"));
 const HISTORY = React.lazy(() => import("./pages/AboutUs/history/index"));
@@ -140,6 +141,14 @@ function App() {
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Compi />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/robowars"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Robowars />
                 </React.Suspense>
               }
             />

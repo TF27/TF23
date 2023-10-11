@@ -39,11 +39,17 @@ const Internal = () => {
       navigate("/competitions/meshmerize");
     } else if (compiName === "tfo") {
       navigate("/competitions/techfest%20olympiad");
-    }
-    else if (compiName === "workshop"){
-      navigate("/workshops")
-    }
-    else if (compiName === "robocap league"){
+    } else if (compiName === "uf") {
+      navigate("/competitions/urban-futurism");
+    } else if (compiName === "taskwhiz") {
+      navigate("/competitions/task%20whiz");
+    } else if (compiName === "ai") {
+      navigate("workshops/artificial%20intelligence");
+    } else if (compiName === "ml") {
+      navigate("/workshops/machine%20learning");
+    } else if (compiName === "workshop") {
+      navigate("/workshops");
+    } else if (compiName === "robocap league") {
       setRoboCamp(true);
     }
     // Add more conditions as needed for other compiNames
@@ -130,10 +136,9 @@ const Internal = () => {
             ) : data.is_team_registered ? (
               <div className={styles.youhave}>
                 {" "}
-                You have successfully registered with your email <span>
-                  {user.email}
-                </span>{" "}
-                and your team ID is <span>{data.team_id}</span>
+                You have successfully registered with your email{" "}
+                <span>{user.email}</span> and your team ID is{" "}
+                <span>{data.team_id}</span>
               </div>
             ) : (
               <div className={styles.compi_reg}></div>
@@ -198,7 +203,17 @@ const Internal = () => {
                   <div className={styles.int_reg}>
                     <div className={styles.reg_rect1}></div>
                     <div className={styles.reg_rect2}>
-                      {roboCamp ? (<a href="https://www.robocapleague.com/apply" target="_blank" rel="noopener noreferrer">Register</a>) : (<Link to={`register`}>Register</Link>)}
+                      {roboCamp ? (
+                        <a
+                          href="https://www.robocapleague.com/apply"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Register
+                        </a>
+                      ) : (
+                        <Link to={`register`}>Register</Link>
+                      )}
                       {/* <Link to={`register`}>Register</Link> */}
                     </div>
                   </div>
@@ -223,7 +238,7 @@ const Internal = () => {
     top: "0",
     zIndex: "-1",
     animation: "changeImage 5s infinite",
-    backgroundAttachment: 'fixed',
+    backgroundAttachment: "fixed",
   };
 
   const keyframes = `

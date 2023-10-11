@@ -21,6 +21,7 @@ import Crypto from "./Workshops/Crypto";
 import Block from "./Workshops/Block";
 import Dta from "./Workshops/Dta";
 import Ethical from "./Workshops/Ethical";
+import Chatgpt from "./Workshops/Chatgpt";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -120,12 +121,12 @@ const Internal = () => {
                 </div>
               </div>
             )}
-            {/* <p className={styles.howtopay}>
-            <a href="https://drive.google.com/file/d/1-MO-lgNpqUtozEuaj5mA1gCMTSoIPJrG/view?usp=sharing" target="_blank">How to{" "}</a>
-              <a href="https://drive.google.com/file/d/1-MO-lgNpqUtozEuaj5mA1gCMTSoIPJrG/view?usp=sharing" target="_blank">
+            <p className={styles.howtopay}>
+            <a href="https://drive.google.com/file/d/1VBgqBtSZlQ3gSKtH6YVKCVGwaOxwCVWo/view?usp=sharing" target="_blank">How to{" "}</a>
+              <a href="https://drive.google.com/file/d/1VBgqBtSZlQ3gSKtH6YVKCVGwaOxwCVWo/view?usp=sharing" target="_blank">
                 <h4 style={{ display: "inline" }}>Pay?</h4>
               </a>
-            </p> */}
+            </p>
           </div>
           <div className={`col-12 col-lg-8 ${styles.rightdata}`}>
             <div className={styles.sponsor}>
@@ -177,6 +178,7 @@ const Internal = () => {
             {cardName === "blockchain" && <Block/>}
             {cardName === "data to aI by google" && <Dta/>}
             {cardName === "ethical hacking" && <Ethical/>}
+            {cardName === "chatgpt (prompt engineering)" && <Chatgpt/>}
           </div>
         </div>
       </div>
