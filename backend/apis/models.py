@@ -21,7 +21,7 @@ class Compi(models.Model):
     sponsorImg = models.ImageField(upload_to='compi_sponsors', null=True, blank=True)
     sponsorLink = models.CharField(max_length=250, null=True, blank=True)
     reg_count = models.IntegerField(default=0)
-
+    closed = models.BooleanField(default=False)
     def __str__(self):
         return self.name
     

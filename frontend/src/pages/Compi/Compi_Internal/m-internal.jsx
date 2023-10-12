@@ -29,7 +29,7 @@ import Task from "./Competitions/m-Task";
 
 const MInternal = () => {
   const { compiName } = useParams();
-  const [ roboCamp, setRoboCamp ] = useState(false);
+  const [roboCamp, setRoboCamp] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     // Check compiName and perform redirections
@@ -54,7 +54,7 @@ const MInternal = () => {
     }
     // Add more conditions as needed for other compiNames
   }, [navigate, compiName]);
-  
+
   const [data, setData] = useState([]);
   const { googleSignIn, user } = UserAuth();
   const handleGoogleSignIn = async () => {
@@ -181,7 +181,17 @@ const MInternal = () => {
                 <div className={styles.int_reg}>
                   <div className={styles.reg_rect1}></div>
                   <div className={styles.reg_rect2}>
-                    <Link to={`register`}>Register</Link>
+                    {roboCamp ? (
+                      <a
+                        href="https://www.robocapleague.com/apply"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Register
+                      </a>
+                    ) : (
+                      <Link to={`register`}>Register</Link>
+                    )}
                   </div>
                 </div>
                 <div className={styles.share}>
