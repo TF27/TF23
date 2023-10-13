@@ -4,7 +4,7 @@ import Header from './components/Navbar/Header';
 import { AuthContextProvider } from './contexts/AuthContext';
 import Protected from './contexts/Protected';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Home from './pages/Home/home';
+import Cyclothon from './pages/cyclothon/Cyclothon';
 // import Exhibition from './pages/Exhibition/exhi';
 // import Compi from './pages/Compi/compi';
 import CompiInternal from './pages/Compi/Compi_Internal/index';
@@ -21,6 +21,7 @@ import AddParti from './pages/Compi/Compi_Internal/Teams/add_parti';
 import Footer from './components/Footer/Footer';
 import Loading1 from './pages/loading_page/Loading1'
 import WorkReg from './pages/workshop/internal/reg';
+import Home from './pages/Home/home'
 
 // const Home= React.lazy(() => import('./pages/Home/home'));
 const Lectures = React.lazy(() => import('./pages/Lectures/index'));
@@ -62,11 +63,12 @@ function App() {
                         isLoading ? (
                             <Loading1 />
                          ) : (
-                            <Home />
+                            <Home/>
                          )
                          
                         } />
                         <Route path='/legals' element={<Legals/>}/>
+                        <Route path='/cyclothon' element={<Cyclothon/>}/>
                         <Route path='/workshops/' element={
                             <React.Suspense fallback={<div>Loading...</div>}>
                             <Workshop/>
