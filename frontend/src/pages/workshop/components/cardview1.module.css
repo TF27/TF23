@@ -7,8 +7,40 @@
     transition: all 1s ease-in;
 }
 
+.noReg{
+  margin: auto;
+  width: 92%;
+  height: 88%;
+  background-size: contain;
+  text-align: left;
+}
+
+a{
+  text-decoration: none;
+}
+.noReg a h3{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.noReg a p{
+  color: white;
+  text-decoration: none;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.compi_card .card_title h3, p{
+  width: 100%;
+  padding-left: 8px;
+  margin-bottom: 0;
+  /* padding-bottom: 1rem; */
+  /* background: black; */
+}
+
 .compi_card{
-    background:rgba(0, 5, 29, 0.847);
+    background:#000;
     margin-top: 20px;
     margin-bottom: 20px;
     font-family: 'Forum', sans-serif;
@@ -18,7 +50,7 @@
     padding: 10px;
     transform: scale(1);
     transition: transform 0.3s ease;
-    aspect-ratio: 1/1.2;
+    aspect-ratio: 1/1;
     overflow: hidden;
 }
 
@@ -41,11 +73,14 @@
 }
 .card_title{
     display: flex;
+    align-items: flex-start;
     justify-content: flex-end;
     flex-direction: column;
     position: relative;
     bottom: 0;
     transition: 1s ease;
+    height: 100%;
+    padding-left: 1px;
 }
 .card_title h3{
     color:  #FFE381;
@@ -300,7 +335,7 @@
 @media screen and (max-width: 1100px) {
   .card_title h3{
     position: relative;
-    top: -2px;
+    /* top: -2px; */
     font-size: 15px;
   }
   .card_sustitle{

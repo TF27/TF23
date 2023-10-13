@@ -22,25 +22,38 @@ import TechfestOlympiad from "./Competitions/TechfestOlympiad";
 import UrbanFuturism from "./Competitions/UrbanFuturism";
 import SingleParti from "./Teams/single_parti";
 import AddParti from "./Teams/add_parti";
-
+import Robocapleague from "./Competitions/robocapleague";
+import Dronelog from "./Competitions/Dronelog";
+import Task from "./Competitions/Task";
 
 const Internal = () => {
   const { compiName } = useParams();
+  const [ roboCamp, setRoboCamp ] = useState(false);
 
   const navigate = useNavigate();
   useEffect(() => {
     // Check compiName and perform redirections
-    if (compiName === 'cozmo') {
-        navigate('/competitions/cozmoclench');
-    } 
-    else if (compiName === 'mesh') {
-        navigate('/competitions/meshmerize');
-    }
-    else if (compiName === 'tfo'){
-        navigate('/competitions/techfest%20olympiad');
+    if (compiName === "cozmo") {
+      navigate("/competitions/cozmoclench");
+    } else if (compiName === "mesh") {
+      navigate("/competitions/meshmerize");
+    } else if (compiName === "tfo") {
+      navigate("/competitions/techfest%20olympiad");
+    } else if (compiName === "uf") {
+      navigate("/competitions/urban-futurism");
+    } else if (compiName === "taskwhiz") {
+      navigate("/competitions/task%20whiz");
+    } else if (compiName === "ai") {
+      navigate("workshops/artificial%20intelligence");
+    } else if (compiName === "ml") {
+      navigate("/workshops/machine%20learning");
+    } else if (compiName === "workshop") {
+      navigate("/workshops");
+    } else if (compiName === "robocap league") {
+      setRoboCamp(true);
     }
     // Add more conditions as needed for other compiNames
-}, [navigate, compiName]);
+  }, [navigate, compiName]);
 
   const [data, setData] = useState([]);
   const { googleSignIn, user } = UserAuth();
@@ -106,7 +119,7 @@ const Internal = () => {
           <div className={`col-12 col-lg-8 ${styles.rightdata}`}>
             <div className={styles.sponsor}>
               {data.sponsorImg && (
-                <a href={data.sponsorLink}>
+                <a href={data.sponsorLink} target="_blank">
                   <h3>
                     Sponsored by{" "}
                     <img
@@ -123,10 +136,9 @@ const Internal = () => {
             ) : data.is_team_registered ? (
               <div className={styles.youhave}>
                 {" "}
-                You have successfully with your email <span>
-                  {user.email}
-                </span>{" "}
-                and your team ID is <span>{data.team_id}</span>
+                You have successfully registered with your email{" "}
+                <span>{user.email}</span> and your team ID is{" "}
+                <span>{data.team_id}</span>
               </div>
             ) : (
               <div className={styles.compi_reg}></div>
@@ -140,6 +152,9 @@ const Internal = () => {
             {compiName === "tech-aid" && <TechAid />}
             {compiName === "urban-futurism" && <UrbanFuturism />}
             {compiName === "atom-quest" && <AtomQuest />}
+            {compiName === "robocap league" && <Robocapleague />}
+            {compiName === "dronelog" && <Dronelog />}
+            {compiName === "task whiz" && <Task />}
 
             <div className={styles.team_reg}>
               {user === null ? (
@@ -166,34 +181,40 @@ const Internal = () => {
                 </div>
               ) : data.is_registered ? (
                 <div className={styles.lolReg} style={{ marginTop: "20px" }}>
-                  You have registered successfully!
-                  <div className={styles.compi_team}>
-                    <div className={styles.create_team}>
-                      <div className={styles.create_rect1}></div>
-                      <div className={styles.create_rect2}>
-                        <Link to={`createTeam`}>Create Team</Link>
+                  You have registered successfully with{" "}
+                  <span>{user?.email}</span>
+                  {data.max_team_length === 1 ? (
+                    <></>
+                  ) : (
+                    <div className={styles.compi_team}>
+                      <div className={styles.create_team}>
+                        <div className={styles.create_rect1}></div>
+                        <div className={styles.create_rect2}>
+                          <Link to={`createTeam`}>Create Team</Link>
+                        </div>
                       </div>
-                    </div>
-                    {/* <div className={styles.join_team}>
-                    <div className={styles.join_rect1}></div>
-                    <div className={styles.join_rect2}>
-                      <Link to={`joinTeam`}>Join Team</Link>
-                    </div>
-                  </div> */}
-                    <div>
                       <JoinTeam />
-                    </div>
-                    <div>
                       <SingleParti />
                     </div>
-                  </div>
+                  )}
                 </div>
               ) : (
                 <div>
                   <div className={styles.int_reg}>
                     <div className={styles.reg_rect1}></div>
                     <div className={styles.reg_rect2}>
-                      <Link to={`register`}>Register</Link>
+                      {roboCamp ? (
+                        <a
+                          href="https://www.robocapleague.com/apply"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Register
+                        </a>
+                      ) : (
+                        <Link to={`register`}>Register</Link>
+                      )}
+                      {/* <Link to={`register`}>Register</Link> */}
                     </div>
                   </div>
                 </div>
@@ -217,6 +238,7 @@ const Internal = () => {
     top: "0",
     zIndex: "-1",
     animation: "changeImage 5s infinite",
+    backgroundAttachment: "fixed",
   };
 
   const keyframes = `

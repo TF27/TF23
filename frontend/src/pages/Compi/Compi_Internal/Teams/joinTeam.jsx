@@ -52,8 +52,10 @@ const JoinTeam = () => {
         console.log(response.data);
         alert("Joined succesfully!!");
         navigate(`/competitions/${compiName}`);
+        window.location.reload(); 
       })
       .catch((error) => {
+        alert(error)
         console.error(error);
       });
   };
@@ -65,7 +67,7 @@ const JoinTeam = () => {
   };
 
   return (
-    <div className="dissolveTeam" style={{ zIndex: "3" }}>
+    <div className="dissolveTeam jonojono" style={{ zIndex: "3", width: "200px" }}>
       <div
         onClick={() => setVisibility(!visibility)}
         className={styles.join_team}

@@ -7,11 +7,25 @@ import styles from "./internal.module.css";
 import backimg1 from "./../img/exp_bg.png";
 import frame from "./../../Compi/static/card/Frame.png";
 
-import Meshmerize from "./Workshops/Meshmerize";
+import Gesture from "./Workshops/Gesture";
+import Pito from "./Workshops/Pito";
+import DataAnalytics from "./Workshops/DataAnalytics";
+import Arduino from "./Workshops/Arduino";
+import Solarizer from "./Workshops/Solarizer";
+import Ai from "./Workshops/Ai";
+import Cloud from "./Workshops/Cloud";
+import Mi from "./Workshops/Mi";
+import Sixth from "./Workshops/Sixth";
+import Auto from "./Workshops/Auto";
+import Crypto from "./Workshops/Crypto";
+import Block from "./Workshops/Block";
+import Dta from "./Workshops/Dta";
+import Ethical from "./Workshops/Ethical";
+import Chatgpt from "./Workshops/Chatgpt";
 
 const Internal = () => {
   const { cardName } = useParams();
-
+  // const [discount, setDiscount] = useState(True)
   const [data, setData] = useState([]);
   const { googleSignIn, user } = UserAuth();
   const handleGoogleSignIn = async () => {
@@ -71,8 +85,17 @@ const Internal = () => {
                     </div>
                   </div>
                 </div>
-              ) : data.is_team_leader ? (
-                <></>
+              ) : data.is_registered ? (
+                <div>
+                  <div className={styles.statement}>
+                    <div className={styles.stat_rect1}></div>
+                    <div className={styles.stat_rect2}>
+                      <a href={data.paymentLink} target="_blank">
+                        Pay Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
               ) : (
                 <div>
                   <div className={styles.statement}>
@@ -99,8 +122,8 @@ const Internal = () => {
               </div>
             )}
             <p className={styles.howtopay}>
-              How to{" "}
-              <a href="" target="_blank">
+            <a href="https://drive.google.com/file/d/1VBgqBtSZlQ3gSKtH6YVKCVGwaOxwCVWo/view?usp=sharing" target="_blank">How to{" "}</a>
+              <a href="https://drive.google.com/file/d/1VBgqBtSZlQ3gSKtH6YVKCVGwaOxwCVWo/view?usp=sharing" target="_blank">
                 <h4 style={{ display: "inline" }}>Pay?</h4>
               </a>
             </p>
@@ -108,7 +131,7 @@ const Internal = () => {
           <div className={`col-12 col-lg-8 ${styles.rightdata}`}>
             <div className={styles.sponsor}>
               {data.sponsorImg && (
-                <a href={data.sponsorLink}>
+                <a href={data.sponsorLink} target="_blank">
                   <h3>
                     Presented by{" "}
                     <img
@@ -123,14 +146,16 @@ const Internal = () => {
             <div className={styles.cardND}>
               <h1 className={styles.compi_name}>{data.name}</h1>
               <p>{data.desc}</p>
-              <h4 className={styles.compi_prize}> INR {data.prize}</h4>
+              <div className={styles.work_prize}>
+                <h4 className={styles.compi_prize}> INR {data.prize}</h4> {data.ex_prize && <span><h5>{data.ex_prize}</h5></span>}
+              </div>
             </div>
             {user === null ? (
               <div className={styles.compi_reg}></div>
             ) : data.is_team_registered ? (
               <div className={styles.youhave}>
                 {" "}
-                You have successfully with your email <span>
+                You have successfully registered with your email <span>
                   {user.email}
                 </span>{" "}
                 and your team ID is <span>{data.team_id}</span>
@@ -138,7 +163,22 @@ const Internal = () => {
             ) : (
               <div className={styles.compi_reg}></div>
             )}
-            {cardName === "meshmerize" && <Meshmerize />}
+            {cardName === "gesture robotics" && <Gesture />}
+            {cardName === "python" && <Pito />}
+            {cardName === "data analytics" && <DataAnalytics />}
+            {cardName === "arduino" && <Arduino />}
+            {cardName === "solarizer" && <Solarizer />}
+            {cardName === "artificial intelligence" && <Ai/>}
+            {cardName === "cloud computing by amazon" && <Cloud/>}
+            {cardName === "machine learning" && <Mi/>}
+            {cardName === "6th sense" && <Sixth/>}
+            {cardName === "6th sense robotics" && <Sixth/>}
+            {cardName === "electric vehicles" && <Auto/>}
+            {cardName === "crypto trading by wazirX" && <Crypto/>}
+            {cardName === "blockchain" && <Block/>}
+            {cardName === "data to aI by google" && <Dta/>}
+            {cardName === "ethical hacking" && <Ethical/>}
+            {cardName === "chatgpt (prompt engineering)" && <Chatgpt/>}
           </div>
         </div>
       </div>

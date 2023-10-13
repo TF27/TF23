@@ -119,6 +119,11 @@
     position: absolute;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+  }
+
+  .headUL{
+    display: none;
   }
 
   @media (min-width:848px) {
@@ -163,6 +168,12 @@
   right: 0;
 }
 
+.headUU{
+  display: flex;
+  justify-content: center;
+}
+
+
 /*==========================Home No parallax====================== */
 
 .titSpn {
@@ -194,6 +205,7 @@
   margin-top: 25px;
   margin-bottom: 25px;
 }
+
 
 .spnImg a {
   text-decoration: none;
@@ -508,8 +520,33 @@
 
 @media (max-width: 570px){
   .home{
-    background-image: url('./images/homebgm.jpg')
+    background-image: url('./images/homebgm.jpg');
   }
+  .headUL{
+    display: flex;
+    z-index: 5;
+    justify-content: center;
+    margin-top: 108px;
+  }
+  .headUL a{
+    text-decoration: none;
+    color: white;
+    animation: ohyeah 3s infinite;
+    font-size: 24px;
+  }
+}
+
+
+@keyframes ohyeah {
+  0% {
+      opacity: 1; /* Fully visible */
+    }
+    50% {
+      opacity: 0; /* Completely transparent */
+    }
+    100% {
+      opacity: 1; /* Fully visible */
+    }
 }
 
 @media (max-width: 880px){

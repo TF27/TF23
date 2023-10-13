@@ -37,35 +37,40 @@ const Reg = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
   };
 
-  const handleFocus = (e) => {
-    const label = e.target.previousSibling;
-    if (label) {
-      label.classList.add(styles.floatingLabel);
-    }
-  };
+  // const handleFocus = (e) => {
+  //   const label = e.target.previousSibling;
+  //   if (romeo) {
+  //   } else {
+  //     if (label) {
+  //       label.classList.add(styles.floatingLabel);
+  //     }
+  //   }
+  // };
 
-  const handleBlur = (e) => {
-    const label = e.target.previousSibling;
-    if (label && e.target.value === "") {
-      label.classList.remove(styles.floatingLabel);
-    }
-  };
-  function checkInputValues() {
-    const inputs = document.querySelectorAll("input");
+  // const handleBlur = (e) => {
+  //   const label = e.target.previousSibling;
+  //   if (romeo) {
+  //   } else {
+  //     if (label && e.target.value === "") {
+  //       label.classList.remove(styles.floatingLabel);
+  //     }
+  //   }
+  // };
+  // function checkInputValues() {
+  //   const inputs = document.querySelectorAll("input");
 
-    inputs.forEach((input) => {
-      handleFocus({ target: input }); // Call focus event on each input
-      handleBlur({ target: input }); // Call blur event on each input
-    });
-  }
-  setInterval(checkInputValues, 100);
+  //   inputs.forEach((input) => {
+  //     handleFocus({ target: input });
+  //     handleBlur({ target: input });
+  //   });
+  // }
+  // setInterval(checkInputValues, 100);
 
   const handleSubmit = (event) => {
     setRegsitering(true);
@@ -153,7 +158,11 @@ const Reg = () => {
                     />
                   </div>
                   <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label className={styles.formLabel}>Phone No.</label>
+                    <label
+                      className={`${styles.floatingLabel} ${styles.formLabel}`}
+                    >
+                      Phone No.
+                    </label>
                     <input
                       type="number"
                       name="phoneno"
@@ -199,7 +208,11 @@ const Reg = () => {
                     </select>
                   </div>
                   <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label className={styles.formLabel}>City</label>
+                    <label
+                      className={`${styles.floatingLabel} ${styles.formLabel}`}
+                    >
+                      City
+                    </label>
                     <input
                       type="text"
                       name="city"
@@ -213,7 +226,11 @@ const Reg = () => {
                 </div>
                 <div className={`row ${styles.multiWrapper}`}>
                   <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label className={styles.formLabel}>Pincode</label>
+                    <label
+                      className={`${styles.floatingLabel} ${styles.formLabel}`}
+                    >
+                      Pincode
+                    </label>
                     <input
                       type="number"
                       name="pincode"
@@ -225,7 +242,11 @@ const Reg = () => {
                     />
                   </div>
                   <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label className={styles.formLabel}>Country</label>
+                    <label
+                      className={`${styles.floatingLabel} ${styles.formLabel}`}
+                    >
+                      Country
+                    </label>
                     <input
                       type="text"
                       name="country"
@@ -284,7 +305,11 @@ const Reg = () => {
                 )}
 
                 <div className={styles.inputWrapper}>
-                  <label className={styles.formLabel}>Address</label>
+                  <label
+                    className={`${styles.floatingLabel} ${styles.formLabel}`}
+                  >
+                    Address
+                  </label>
                   <input
                     type="text"
                     name="address"
@@ -296,7 +321,11 @@ const Reg = () => {
                   />
                 </div>
                 <div className={styles.inputWrapper}>
-                  <label className={styles.formLabel}>Institute Name</label>
+                  <label
+                    className={`${styles.floatingLabel} ${styles.formLabel}`}
+                  >
+                    Institute Name
+                  </label>
                   <input
                     type="text"
                     name="instiname"
@@ -308,7 +337,11 @@ const Reg = () => {
                   />
                 </div>
                 <div className={styles.inputWrapper}>
-                  <label className={styles.formLabel}>Institute Address</label>
+                  <label
+                    className={`${styles.floatingLabel} ${styles.formLabel}`}
+                  >
+                    Institute Address
+                  </label>
                   <input
                     type="text"
                     name="instiadress"
@@ -320,7 +353,11 @@ const Reg = () => {
                   />
                 </div>
                 <div className={styles.inputWrapper}>
-                  <label className={styles.formLabel}>Institute Pincode</label>
+                  <label
+                    className={`${styles.floatingLabel} ${styles.formLabel}`}
+                  >
+                    Institute Pincode
+                  </label>
                   <input
                     type="number"
                     name="instipincode"

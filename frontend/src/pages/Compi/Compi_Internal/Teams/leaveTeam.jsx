@@ -37,6 +37,7 @@ const LeaveTeam = () => {
         console.log(response.data);
         alert('Left succesfully!!');
         navigate(`/competitions/${compiName}`)
+        window.location.reload(); 
       })
       .catch((error) => {
         console.error(error);

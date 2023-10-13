@@ -1,5 +1,6 @@
 from typing import Any
 from django.db import models
+from django.core.exceptions import ValidationError
 
 # Create your models here.
 class Compi(models.Model):
@@ -20,7 +21,7 @@ class Compi(models.Model):
     sponsorImg = models.ImageField(upload_to='compi_sponsors', null=True, blank=True)
     sponsorLink = models.CharField(max_length=250, null=True, blank=True)
     reg_count = models.IntegerField(default=0)
-
+    closed = models.BooleanField(default=False)
     def __str__(self):
         return self.name
     
@@ -103,12 +104,16 @@ class compi_team(models.Model):
 # Workshops
 
 class Workshop(models.Model):
+    workshop_id = models.IntegerField(null=True, default=0)
     name = models.CharField(max_length=100, primary_key=True)
     prize = models.CharField(max_length=100)
+    ex_prize = models.CharField(null=True, blank=True, max_length=100)
     desc = models.TextField()
     img = models.ImageField(upload_to='workshop')
     sponsorImg = models.ImageField(upload_to='workshop_sponsors', null=True, blank=True)
+    sponsorLink = models.CharField(max_length=250, null=True, blank=True)
     statement = models.FileField(upload_to='ProblemStatements', null=True, blank=True)
+    paymentLink = models.TextField(null=True, blank=True)
     closed = models.BooleanField(default=False)
     def __str__(self):
         return self.name
@@ -128,3 +133,32 @@ class workshop_reg(models.Model):
         ('O', 'Other'),
     ], max_length=255, null=True, blank=True)
     pincode = models.IntegerField(blank=True, null=True)
+    ca_referral = models.CharField(max_length=255, blank=True, null=True)
+    paid = models.BooleanField(default=False)
+    def __str__(self):
+        return self.name
+
+class Robowars(models.Model):
+    robowar_id = models.IntegerField(null=True, default=0)
+    category = models.CharField(max_length=100, primary_key=True)
+    img = models.ImageField(upload_to='robowars')
+    statement = models.FileField(upload_to='ProblemStatements', null=True, blank=True)
+
+class RobowarTeamMember(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=254)
+    phone = models.CharField(max_length=254)    
+class robowar_reg(models.Model):
+    robowar_id = models.CharField(max_length=50, blank=True, null=True)
+    category = models.ForeignKey(Robowars, on_delete=models.CASCADE)
+    team_name = models.CharField(max_length=50, unique=True, blank=True, null=True)
+    country = models.CharField(max_length=255, null=True, blank=True)
+    college = models.CharField(max_length=1000, null=True, blank=True)
+    team_leader_name = models.CharField(max_length=50, blank=True, null=True)
+    team_leader_email = models.EmailField(max_length=254, blank=True, null=True)
+    team_leader_phone = models.CharField(max_length=254, blank=True, null=True)
+    members = models.ManyToManyField(RobowarTeamMember)
+    team_length = models.IntegerField(blank=True, null=True)
+    def clean(self):
+        if self.members.count() > 3:
+            raise ValidationError("A team can have a maximum of three members.")

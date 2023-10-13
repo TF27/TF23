@@ -5,22 +5,30 @@ from apis.models import *
 from django.http import HttpResponse
 import csv
 
+@staff_member_required
+def home(request):
+    compies = Compi.objects.all()  # Retrieve all competitions
+    context = {
+        'compies': compies,
+    }
+    return render(request, 'home.html', context)
 
+# @staff_member_required
 def compi_count():
     data = compi_reg.objects.all()
     compies = Compi.objects.all()
 
     for compi in compies:
         compi.reg_count = 0 
-        print("no")
+        # print("no")
 
     for d in data:
         for compie in compies:
             if d.compi.name == compie.name :
                 compie.reg_count+=1
-                print("yes")
+                # print("yes")
     
-        print(d.compi.reg_count)
+        # print(d.compi.reg_count)
     return None
     
 
@@ -46,11 +54,12 @@ def compi(request,compiname):
         return HttpResponse("Wrong URL, check agian!!")
     return None
 
-
+@staff_member_required
 def export_data_to_csv_all(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="your_model_data.csv"'
     writer = csv.writer(response)
+    
     writer.writerow([
         'TF ID',
         'Competition',
@@ -73,6 +82,7 @@ def export_data_to_csv_all(request):
 
     # Retrieve data from the model and write to CSV
     queryset = compi_reg.objects.all()
+    
     for obj in queryset:
         writer.writerow([
             obj.tf_id,
@@ -92,5 +102,58 @@ def export_data_to_csv_all(request):
             obj.yearofstudy,
             obj.zonals
         ])  # Adjust fields as needed
+
+    return response
+
+@staff_member_required
+def download_compi_team_csv(request):
+    # Query the database to get all compi_team objects
+    compi_teams = compi_team.objects.all()
+
+    # Create a response with a CSV attachment
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="compi_team_data.csv"'
+
+    # Create a CSV writer
+    writer = csv.writer(response)
+
+    # Write the header row
+    header = [
+        'Compi Name',
+        'Max Team Length',
+        'Team ID',
+        'Team Leader Name',
+        'Team Leader Email',
+        'Participant 1 Name',
+        'Participant 1 Email',
+        'Participant 2 Name',
+        'Participant 2 Email',
+        'Participant 3 Name',
+        'Participant 3 Email',
+        'Team Length',
+        'Participants',
+        'Single Participant'
+    ]
+    writer.writerow(header)
+
+    # Write data rows
+    for team in compi_teams:
+        data_row = [
+            team.compi_name.name,  # Replace 'name' with the actual field name in the Compi model
+            team.max_team_length,
+            team.team_id,
+            team.team_leader_name,
+            team.team_leader_email,
+            team.parti1_name,
+            team.parti1_email,
+            team.parti2_name,
+            team.parti2_email,
+            team.parti3_name,
+            team.parti3_email,
+            team.team_length,
+            team.participants,
+            team.single_parti,
+        ]
+        writer.writerow(data_row)
 
     return response

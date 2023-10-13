@@ -204,6 +204,15 @@
     height: 40px;
     width: 200px;
  }
+ .cardND p{
+   margin-bottom: 0;
+ }
+ .work_prize span{
+   text-decoration: line-through;
+   text-decoration-thickness: 1px;
+   font-style: italic;
+   font-size: 15px;
+ }
  .single_rect2 {
     height: 40px;
     width: 200px;
@@ -211,6 +220,11 @@
     margin-top: 6px;
  }
  
+ .work_prize{
+   display: flex;
+   align-items: baseline;
+ }
+
  .reg_button {
     background-color: transparent;
     border: none;
@@ -232,7 +246,7 @@
  }
  .imgFrame {
     width: 350px;
-    height: 319px;
+    height: 312px;
     position: relative;
     top: 0%;
     /* left: -8.5%; */
@@ -241,7 +255,7 @@
  }
  @media (max-width: 1200px) {
     .imgFrame {
-       left: -8.5%;
+       /* left: -8.5%; */
     }
  }
  
@@ -271,7 +285,7 @@
  
     .imgFrame {
        position: absolute;
-       top: 1%;
+       top: 2%;
        left: auto;
     }
     .imgCompi {
@@ -334,6 +348,9 @@
     .statement {
        /* top: -200px; */
        position: relative;
+    }
+    .work_prize{
+      justify-content: center;
     }
  }
  
@@ -417,4 +434,5 @@
        width: 249px;
     }
  }
- 
+
+

@@ -159,15 +159,15 @@ const HackAI = () => {
               <ul>
                 <li>
                   Last date of registration: <br />
-                  6th October 2023
+                  9th October 2023
                 </li>
                 <li>
                   Round 1 Submission Deadline: <br />
-                  7th October 2023
+                  10th October 2023
                 </li>
                 <li>
                   Finalist announcement: <br />
-                  15th October 2023
+                  16th October 2023
                 </li>
                 <li>
                   Final Round at IIT Bombay Campus: <br />

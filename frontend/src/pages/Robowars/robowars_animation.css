@@ -1,0 +1,12 @@
+.compi_bg{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("../Compi/static/img/Compi_back.jpg");
+    z-index: -100;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}

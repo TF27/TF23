@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
 import styles from "./home.module.css";
 import head from "./images/themename.png";
 import headm from "./images/themenamem.png";
@@ -41,8 +42,13 @@ const HomeParallax = () => {
                
             </div> */}
       <div className={styles.headU} >
-        <img src={head} className={styles.head} />
-        <img src={headm} className={styles.headm}/>
+        <div className={styles.headUU}>
+          <img src={head} className={styles.head} />
+          <img src={headm} className={styles.headm}/>
+        </div>
+        <div className={styles.headUL}>
+          <Link to='/workshops'>Workshops are Live Now!</Link>
+        </div>
       </div>
       <div className={styles.clouds}>
         <img

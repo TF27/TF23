@@ -143,15 +143,9 @@ const Mechanzo = () => {
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
             Round 1:<br/>
-            Zonals Round will be held at 5 major cities, namely <br />
-            1. Mumbai - 8th October<br />
-            2. Bangalore - 28th October <br />
-            3. Jaipur - 15th October <br />
-            4. Bhopal - 15th October <br />
-            5. Lucknow - 15th October<br />
-             <br />
+            Date and Venue will be conveyed soon
             Round 2:<br/>
-            Finale will be held at Techfest 2023-24 during 27th - 29th December 2023
+            Finale will be held at Techfest 2023-24 during 27th - 29th December 2023 (Exact date and time will be conveyed to the finalists)
               </div>
             </div>
           </div>
