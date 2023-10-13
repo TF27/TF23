@@ -5,13 +5,7 @@ import { AuthContextProvider } from './contexts/AuthContext';
 import Protected from './contexts/Protected';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Cyclothon from './pages/cyclothon/Cyclothon';
-import "./App.css";
-import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import Header from "./components/Navbar/Header";
-import { AuthContextProvider } from "./contexts/AuthContext";
-import Protected from "./contexts/Protected";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import Home from "./pages/Home/home";
 // import Exhibition from './pages/Exhibition/exhi';
 // import Compi from './pages/Compi/compi';
@@ -100,6 +94,7 @@ function App() {
           <Routes>
             <Route path="/" element={isLoading ? <Loading1 /> : <Home />} />
             <Route path="/legals" element={<Legals />} />
+            <Route path="/cyclothon" element={<Cyclothon />} />
             <Route
               path="/workshops/"
               element={
