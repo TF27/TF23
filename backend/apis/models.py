@@ -144,10 +144,10 @@ class Robowars(models.Model):
     img = models.ImageField(upload_to='robowars')
     statement = models.FileField(upload_to='ProblemStatements', null=True, blank=True)
 
-class RobowarTeamMember(models.Model):
-    name = models.CharField(max_length=50)
-    email = models.EmailField(max_length=254)
-    phone = models.CharField(max_length=254)    
+# class RobowarTeamMember(models.Model):
+#     name = models.CharField(max_length=50)
+#     email = models.EmailField(max_length=254)
+#     phone = models.CharField(max_length=254)    
 class robowar_reg(models.Model):
     robowar_id = models.CharField(max_length=50, blank=True, null=True)
     category = models.ForeignKey(Robowars, on_delete=models.CASCADE)
@@ -157,8 +157,16 @@ class robowar_reg(models.Model):
     team_leader_name = models.CharField(max_length=50, blank=True, null=True)
     team_leader_email = models.EmailField(max_length=254, blank=True, null=True)
     team_leader_phone = models.CharField(max_length=254, blank=True, null=True)
-    members = models.ManyToManyField(RobowarTeamMember)
+    # members = models.ManyToManyField(RobowarTeamMember)
+    parti1_name = models.CharField(max_length=50, blank=True, null=True)
+    parti1_email = models.EmailField(max_length=254, blank=True, null=True)
+    parti1_phone = models.CharField(max_length=254, blank=True, null=True)
+    parti2_name = models.CharField(max_length=50, blank=True, null=True)
+    parti2_email = models.EmailField(max_length=254, blank=True, null=True)
+    parti2_phone = models.CharField(max_length=254, blank=True, null=True)
+    parti3_name = models.CharField(max_length=50, blank=True, null=True)
+    parti3_email = models.EmailField(max_length=254, blank=True, null=True)
+    parti3_phone = models.CharField(max_length=254, blank=True, null=True)
     team_length = models.IntegerField(blank=True, null=True)
-    def clean(self):
-        if self.members.count() > 3:
-            raise ValidationError("A team can have a maximum of three members.")
+    def __str__(self):
+        return self.category.category + " " + self.team_name
