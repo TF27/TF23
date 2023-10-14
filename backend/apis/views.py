@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
+from rest_framework.generics import CreateAPIView
 from apis.serializers import *
 from apis.models import *
 from django.views.decorators.csrf import csrf_exempt
@@ -501,3 +502,56 @@ def workshop_reg_form(request):
         # print(res)
         return JsonResponse(res)
     
+
+# Robowars   
+@api_view(['GET'])
+def robowar_card(request):
+    if request.method == 'GET':
+        try: 
+            email = get_user_id(request)
+            # email = user.email if user else None
+            robowar = Robowars.objects.all()
+            serializer = RobowarsSerializer(robowar, many=True, context={'user': email})
+            return Response(serializer.data)
+        except:
+            robowar = Robowars.objects.all()
+            serializer = RobowarsSerializer(robowar, many=True, context={'request': request})
+            return Response(serializer.data)
+      
+@api_view(['POST'])
+def robowars_reg_form(request):
+    if request.method== 'POST':
+        robowars_reg_serializer = RobowarsRegSerializer(data=request.data, many=False)
+        print(robowars_reg_serializer)
+        if robowars_reg_serializer.is_valid():
+            category = robowars_reg_serializer.validated_data.get('category')
+            team_leader_email = robowars_reg_serializer.validated_data.get('team_leader_email')
+            team_leader_name = robowars_reg_serializer.validated_data.get('team_leader_name')
+            parti_email1 = robowars_reg_serializer.validated_data.get('parti1_email')
+            parti_email2 = robowars_reg_serializer.validated_data.get('parti2_email')
+            parti_email3 = robowars_reg_serializer.validated_data.get('parti3_email')
+            if robowar_reg.objects.filter(team_leader_email=team_leader_email, category=category).exists():
+                res = {'success': False, 'error': 'Team already formed'}
+                return JsonResponse(res, status=400)
+            elif parti_email1 and robowar_reg.objects.filter(parti1_email=parti_email1, category=category).exists():
+                res = {'success': False, 'error': 'Team already formed'}
+                return JsonResponse(res, status=400)
+            elif parti_email2 and robowar_reg.objects.filter(parti2_email=parti_email2, category=category).exists():
+                res = {'success': False, 'error': 'Team already formed'}
+                return JsonResponse(res, status=400)
+            elif parti_email3 and robowar_reg.objects.filter(parti3_email=parti_email3, category=category).exists():
+                res = {'success': False, 'error': 'Team already formed'}
+                return JsonResponse(res, status=400)
+            else:
+                last_reg = robowar_reg.objects.order_by('-robowar_id').first()
+                next_tf_id = '0269'
+                if last_reg:
+                    last_tf_id = last_reg.robowar_id[-4:]
+                    next_tf_id = str(int(last_tf_id) + 1).zfill(4)
+                robowar_id = f"TF-R23{next_tf_id}"
+                print('hello')
+                robowars_reg_serializer.save(robowar_id=robowar_id)
+                res = {'success': True}
+                return JsonResponse(res)
+        res = {'success': False}
+        return JsonResponse(res)

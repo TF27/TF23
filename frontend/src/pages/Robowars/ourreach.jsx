@@ -1,7 +1,7 @@
 import React from 'react';
 import Counter from '../../components/NewReach/counter';
 import mylogo from '../Lectures/assets/ourr.png'
-import '../Lectures/ourreach.css';
+import './ourreach.css';
 function ourReach() {
   return (
     <>
@@ -12,7 +12,7 @@ function ourReach() {
         <div className="buffer">
           <img src={mylogo} alt="buffering" id='myImg'/>
           <div className='Overlay'>
-            <Counter targetValue={65} duration={2000} scrollVal={2200} plus='L+'/>
+            <Counter targetValue={13} duration={1000} scrollVal={1300} plus='L+'/>
           </div>
           <div>
             <h2>Prize Money</h2>
@@ -21,19 +21,19 @@ function ourReach() {
         <div className="buffer">
           <img src={mylogo} alt="buffering" id='myImg'/>
           <div className='Overlay'>
-            <Counter targetValue={25} duration={2000} scrollVal={2200} plus='+'/>
+            <Counter targetValue={20} duration={1000} scrollVal={1300} plus='+'/>
           </div>
           <div>
-            <h2>Competitions</h2>
+            <h2>International Teams</h2>
           </div>
         </div>
         <div className="buffer">
           <img src={mylogo} alt="buffering" id='myImg'/>
           <div className='Overlay'>
-            <Counter targetValue={35} duration={2000} scrollVal={2200} plus='K+'/>
+            <Counter targetValue={7} duration={1000} scrollVal={1300} plus='K+'/>
           </div>
           <div>
-            <h2>Participants</h2>
+            <h2>Audience</h2>
           </div>
         </div>
       </div>

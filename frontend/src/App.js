@@ -1,10 +1,11 @@
-import "./App.css";
-import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import Header from "./components/Navbar/Header";
-import { AuthContextProvider } from "./contexts/AuthContext";
-import Protected from "./contexts/Protected";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import './App.css';
+import React ,{useState,useEffect}from 'react';
+import Header from './components/Navbar/Header';
+import { AuthContextProvider } from './contexts/AuthContext';
+import Protected from './contexts/Protected';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Cyclothon from './pages/cyclothon/Cyclothon';
+
 import Home from "./pages/Home/home";
 // import Exhibition from './pages/Exhibition/exhi';
 // import Compi from './pages/Compi/compi';
@@ -57,6 +58,7 @@ const WorkshopExplore = React.lazy(() =>
 // const CompiInternal = React.lazy(()=> import('/pages/Compi/Compi_Internal/index'))
 const MUN = React.lazy(() => import("./pages/MUN/mun"));
 const IC = React.lazy(() => import("./pages/Events/Innovation Challenge/ic"));
+const RoboReg = React.lazy(() => import("./pages/Robowars/components/Reg"));
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -93,6 +95,7 @@ function App() {
           <Routes>
             <Route path="/" element={isLoading ? <Loading1 /> : <Home />} />
             <Route path="/legals" element={<Legals />} />
+            <Route path="/cyclothon" element={<Cyclothon />} />
             <Route
               path="/workshops/"
               element={
@@ -149,6 +152,14 @@ function App() {
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Robowars />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/robowars/:catName/register"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <RoboReg />
                 </React.Suspense>
               }
             />
@@ -273,6 +284,7 @@ function App() {
                 </React.Suspense>
               }
             />
+            
             <Route
               path="/gallery/technoholix"
               element={
