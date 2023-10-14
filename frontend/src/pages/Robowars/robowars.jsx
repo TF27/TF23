@@ -98,7 +98,12 @@ const Robowars = () => {
 
 
           </div>
+          <div className={styles.titSpn_rect1}>
+            <div className={styles.titSpn_rect2}>Register now</div>
+          </div>
+          
         </div>
+        
       <Technorion />
       <OurReach />
       <br /><br /><br /><br />
