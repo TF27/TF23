@@ -54,7 +54,7 @@ const RoboReg = () => {
     axios
       .post("/api/robowars_reg/", formData)
       .then((response) => {
-        console.log("Added Successfully!!");
+        alert("Registered Successfully!!");
         navigate(`/robowars`);
       })
       .catch((error) => {
