@@ -67,10 +67,9 @@ const Robowars = () => {
           </div>
         </div>
         <div className={`col-12 col-lg-8 ${styles.themeText}`}>
-          Techfest presents the International Robowars! India’s Largest Robot
-          Combat Competition where participants from around the globe battle
-          each other for the coveted Robowars Champion Title. Witness sparks fly
-          as metal crushes metal in the most glorious battles interspersed with
+          Techfest presents the International Robowars! India’s Largest Robot Combat Competition where 300+ participants from 20+ countries battle each other in front of a crowd of over 7000 people for the coveted Robowars Champion Title. In the ultimate battlefield 
+          for destruction hungry robots, witness sparks fly in a captivating fusion of technology and combat
+          as metal crushes metal in the most glorious battles, interspersed with
           magnificent artist performances for non-stop entertainment.
         </div>
       </div>
@@ -144,10 +143,10 @@ const Robowars = () => {
 
           <div className="Contactbox">
             <div className="Contactbox1">
-              Arnav Patel<br></br>
-              arnav@techfest.org<br></br>
-              <div onClick={() => (window.location.href = `tel:${9372634701}`)}>
-                {9372634701}
+              Aryan Gupta<br></br>
+              aryan@techfest.org<br></br>
+              <div onClick={() => (window.location.href = `tel:${7317520804}`)}>
+                {7317520804}
               </div>
             </div>
             <div className="Contactbox1">
