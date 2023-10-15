@@ -243,7 +243,8 @@ const RoboReg = () => {
                   value={formData.team_name}
                   onChange={handleChange}
                   className={styles.formInput}
-                  autoComplete="off"
+                  autoComplete="off"    
+                  required
                 />
               </div>
               <div className={styles.inputWrapper}>
@@ -259,6 +260,7 @@ const RoboReg = () => {
                   onChange={handleChange}
                   className={styles.formInput}
                   autoComplete="off"
+                  required
                 />
               </div>
               <div className={styles.inputWrapper}>
@@ -274,6 +276,7 @@ const RoboReg = () => {
                   onChange={handleChange}
                   className={styles.formInput}
                   autoComplete="off"
+                  required
                 />
               </div>
               <div className={styles.inputWrapper}>
@@ -289,6 +292,7 @@ const RoboReg = () => {
                   onChange={handleChange}
                   className={styles.formInput}
                   autoComplete="off"
+                  required
                 />
               </div>
               <div className={styles.inputWrapper}>
@@ -304,6 +308,7 @@ const RoboReg = () => {
                   onChange={handleChange}
                   className={styles.formInput}
                   autoComplete="off"
+                  required
                 />
               </div>
               <div className={styles.inputWrapper}>
@@ -319,6 +324,7 @@ const RoboReg = () => {
                   onChange={handleChange}
                   className={styles.formInput}
                   autoComplete="off"
+                  required
                 />
               </div>
               <div>
