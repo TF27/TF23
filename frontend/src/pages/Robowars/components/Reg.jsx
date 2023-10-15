@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { UserAuth } from "../../../contexts/AuthContext";
 import styles from "./reg.module.css";
-import bgimg from "./../img/robowarsback.png";
+import bgimg from "./../img/robowarsback.jpg";
 
 const RoboReg = () => {
   axios.defaults.xsrfCookieName = "csrftoken";

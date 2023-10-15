@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import bg from "./img/bg.png";
+import bg from "./img/bg1.jpg";
 import Cards from "./cards";
 import OurReach from "./ourreach";
 import Carousel from "../../components/Carousel/carousel";
