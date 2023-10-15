@@ -15,7 +15,7 @@
 }
 
 .layer1 {
-  background-image: url('../img/robowarsback.png');
+  background-image: url('../img/robowarsback.jpg');
   z-index: -1;
   position: relative;
   background-size: cover;
