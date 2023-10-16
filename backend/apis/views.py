@@ -552,6 +552,13 @@ def robowars_reg_form(request):
                 print('hello')
                 robowars_reg_serializer.save(robowar_id=robowar_id)
                 res = {'success': True}
+                try: 
+                    subject = f'Techfest, IIT Bombay | Joined the {robowar_id} team for International Robowars'
+                    message = f"You have successfully joined a team with {team_leader_email} for the Int'l Robowars with TeamID {robowar_id} and with the team leader {team_leader_name}"
+                    from_email = 'noreply@techfest.org'
+                    send_mail(subject, message, from_email, team_leader_email)
+                except: 
+                    res = {'sucess': True}
                 return JsonResponse(res)
         res = {'success': False}
         return JsonResponse(res)
