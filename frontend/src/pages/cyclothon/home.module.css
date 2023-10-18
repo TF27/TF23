@@ -174,32 +174,35 @@
     justify-content: center;
   }
   .layer3{
-    background-size: auto 95vh;
+    background-size: auto 79vh;
+    top: -4rem;
   
   }
   .image{
     top: 0vh;
   }
   .layer4{
-    background-size: 80%;
+    background-size: 90%;
     
   }
   .circle{
     width: auto;
     height: 80vh;
-    top: 2rem;
+    top: -2rem;
     position: relative;
   }
   .custombutton1{
-    top: 57vh;
+    top: 50vh;
     left: -2%;
+    size: 50vw;
   }
   .custombutton2{
-    top: 57vh;
+    top: 50vh;
     left: 2%;
+    size: 50vw;
   }
   .date{
-    top: 40vh;
+    top: 34vh;
   }
   .sponser1{
     margin-top: 50px;
