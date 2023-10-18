@@ -58,6 +58,7 @@ const WorkshopExplore = React.lazy(() =>
 // const CompiInternal = React.lazy(()=> import('/pages/Compi/Compi_Internal/index'))
 const MUN = React.lazy(() => import("./pages/MUN/mun"));
 const IC = React.lazy(() => import("./pages/Events/Innovation Challenge/ic"));
+const RoboReg = React.lazy(() => import("./pages/Robowars/components/Reg"));
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -151,6 +152,14 @@ function App() {
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Robowars />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/robowars/:catName/register"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <RoboReg />
                 </React.Suspense>
               }
             />
@@ -275,6 +284,7 @@ function App() {
                 </React.Suspense>
               }
             />
+            
             <Route
               path="/gallery/technoholix"
               element={

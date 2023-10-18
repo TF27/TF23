@@ -803,7 +803,7 @@ p.name{
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="http://techfest.org" class="site-logo"><img height="50" src="https://techfest.org/static/resources/layout/tF%20LOGO%20DATE-2.png" alt="logo" /></a>
+                <a href="http://techfest.org" class="site-logo"><img height="50" src="{% static 'resources/mun/img/tflogo.png' %}" alt="logo" /></a>
             </div>
             <!-- /.navbar-header -->
             <div class="main-menu" id="portfolio-perfect-collapse">
@@ -848,24 +848,12 @@ p.name{
                     Techfest World MUN
                 </h1>
                 <h2 style="color: white;"><em>Order from Chaos</em></h2>
-                <a class="blue" href="https://docs.google.com/forms/d/e/1FAIpQLScrUZwl9e62xIw3qXtEDx4NfrRoOqhbMO7QkeX_Yl-Ap1uvXA/viewform">Register</a>
+                <a class="blue" href="https://linktr.ee/twmun23?fbclid=PAAab563mrbjsA6GEcu2k7JO5rjQy7AX966Lp_qYRP4dtPj2vutN2cJrU72qA">Register</a>
             </div>
-            <!-- <div class="col-md-6">
-                <h1>Alex Vidal</h1>
-                <div class="page-scroll">
-                    <p class="job-title">Full Stack Developer</p>
-                    <a href="#contact" class="btn btn-fill ">Hire me</a>
-                    <div class="clearfix visible-xsm"></div>
-                    <a href="#portfolio" class="btn btn-border">Explore more</a>
-                </div>
-            </div> -->
-            <!-- <div class="col-md-6 text-right">
-                <img src="2020/mun/img/alex-vidal.png" alt="alex-vidal">
-            </div> -->
         </div>
     </div>
 </div>
-<!-- /.hero -->
+
 <main id="main" class="site-main">
     <section id="about" class="site-section section-portfolio">
         <div class="container">
@@ -877,44 +865,30 @@ p.name{
                     <div class="portfolio-item circular--landscape cntr">
                         <a href="#" data-toggle="modal" data-target="#abouttwmun"><img
                                     src="{% static 'resources/mun/img/new/logoround.png' %}" style="transform: scale(1.2);" class="circleImg" alt="" /></a>
-                        <!--                             <div class="portfolio-item-info">
-                            <a href="#" data-toggle="modal" data-target="#abouttwmun"><span class="glyphicon glyphicon-eye-open"></span></a>
-                        </div> -->
-                        <!-- /.portfolio-item-info -->
                     </div>
                     <p class="round-info">TWMUN</p>
-                    <!-- /.portfolio-item -->
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="portfolio-item circular--landscape cntr">
                         <a href="#" data-toggle="modal" data-target="#abouttechfest"><img
                                     src="{% static 'resources/mun/img/new/techfest.png' %}" class="circleImg" alt="" /></a>
-                        <!-- <div class="portfolio-item-info">
-                            <a href="#" data-toggle="modal" data-target="#abouttechfest"><span class="glyphicon glyphicon-eye-open"></span></a>
-                        </div> -->
-                        <!-- /.portfolio-item-info -->
                     </div>
                     <p class="round-info">TECHFEST</p>
-                    <!-- /.portfolio-item -->
                 </div>
                 <div class="col-md-4 col-sm-6" >
                     <div class="portfolio-item circular--landscape cntr">
                         <a href="#" data-toggle="modal" data-target="#aboutwelcome"><img
                                     src="{% static 'resources/mun/img/new/welcome.png' %}" class="circleImg" alt="" /></a>
-                        <!-- <div class="portfolio-item-info">
-                            <a href="#" data-toggle="modal" data-target="#aboutwelcome"><span class="glyphicon glyphicon-eye-open"></span></a>
-                        </div> -->
-                        <!-- /.portfolio-item-info -->
                     </div>
                     <p class="round-info">WELCOME LETTER</p>
-                    <!-- /.portfolio-item -->
                 </div>
             </div>
         </div>
     </section>
-    <!-- /.secton-about -->
+
     <section id="committees" class="site-section section-services overlay text-center">
         <div class="container">
+            
             <div style="margin-bottom: -40px !important;" class="row">
                 <div  class="col-md-12">
                     <p class="mun-title">Committees</p>
@@ -955,12 +929,7 @@ p.name{
                       <div class="card" style="cursor: pointer;">
                         <div class="post-modules module-10" style="margin-bottom: 0px !important;">
                           <div class="thumbnail" style="background-image: url({% static 'resources/mun/img/committees/NATO.png' %});" ></div>
-<!--                          <div class="thumbnail" style="background-image: linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgb(143 96 149 / 0%) -10.08%, rgb(144 67 154 / 0%) -43.62%, rgb(72 25 74 / 75%) -5.85%, rgb(77 64 88) 151%), url({% static 'resources/mun/img/committees/UNSC.jpg' %});" ></div>-->
-<!--                            linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgba(19, 31, 44, 0) 17.92%, rgba(19, 31, 44, 0) 42.38%, rgba(19, 31, 44, 0.75) 67.15%, #131F2C 100%), url({% static 'resources/mun/img/committees/UNSC.jpg' %})-->
-<!--                            <div class="sub_title3">COMPETITIONS</div>-->
                           <div class="post-content" >
-<!--                            <h1 class="title">UNSC</h1>-->
-<!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
                             <div class="desc">
                               <p>NATO is an active and leading contributor to peace and security on the international ...
                                   <br>
@@ -979,12 +948,7 @@ p.name{
                       <div class="card" style="cursor: pointer;">
                         <div class="post-modules module-1" style="margin-bottom: 0px !important;">
                           <div class="thumbnail" style="background-image: url({% static 'resources/mun/img/committees/UNSC.jpg' %});" ></div>
-<!--                          <div class="thumbnail" style="background-image: linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgb(143 96 149 / 0%) -10.08%, rgb(144 67 154 / 0%) -43.62%, rgb(72 25 74 / 75%) -5.85%, rgb(77 64 88) 151%), url({% static 'resources/mun/img/committees/UNSC.jpg' %});" ></div>-->
-<!--                            linear-gradient(180deg, rgba(19, 31, 44, 0) 0%, rgba(19, 31, 44, 0) 17.92%, rgba(19, 31, 44, 0) 42.38%, rgba(19, 31, 44, 0.75) 67.15%, #131F2C 100%), url({% static 'resources/mun/img/committees/UNSC.jpg' %})-->
-<!--                            <div class="sub_title3">COMPETITIONS</div>-->
                           <div class="post-content" >
-<!--                            <h1 class="title">UNSC</h1>-->
-<!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
                             <div class="desc">
                               <p>The UNSC charter seeks to promote harmonious relationships among the member nations by...
                                   <br>
@@ -1188,13 +1152,13 @@ p.name{
                         <h4>Delegate Registration</h4>
                         <br>
                         <p>Register now and get the opportunity to learn, lead and become a part of the TWMUN legacy. <br>School Committees are open to students up to 12th Grade, while College Committees are open for all.</p>
-                        <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScrUZwl9e62xIw3qXtEDx4NfrRoOqhbMO7QkeX_Yl-Ap1uvXA/viewform" target="_blank" role="button" >Register Now</a>
+                        <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScOJVXOe2Dt19IIwYHJBBZUcLCRunkEH8kxkY4YMRy6AD4h_Q/viewform" target="_blank" role="button" >Register Now</a>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="ebReg">
                         <h4>Delegation Registration</h4>
                         <br>
                         <p>Register now and get the opportunity to learn, lead and become a part of the TWMUN legacy.<br>A delegation consists of 6 or more members from one institution.<br>School Committees are open to students up to 12th Grade, while College Committees will are open for all.</p>
-                        <a class="btn btn-default" href="https://forms.gle/ukCxdGBKDhhCg1pw6" target="_blank" role="button">Register Now</a>
+                        <a class="btn btn-default" href="https://linktr.ee/twmun23" target="_blank" role="button">Register Now</a>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="rapReg">
                         <h4>Study Guides</h4>
@@ -1303,33 +1267,33 @@ p.name{
 
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%),url({% static 'resources/mun/secretariat/Sharnam.png' %});" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
                             <h1 class="wstit" style="">DIRECTOR GENERAL</h1>
                             <div class='descriptionw'>
-                                <h3 style="color: white;" class="card-subtitle">Sharnam Faria</h3>
-                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:sharnam@techfest.org">sharnam@techfest.org</a>
+                                <h3 style="color: white;" class="card-subtitle">Shriya Kajrolkar</h3>
+                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:shriya.techfest@gmail.com">shriya.techfest@gmail.com</a>
                                                                 <br>
-                                    <a style="text-decoration: none;color: white;" href="tel:+917506497461">+91
-                                                                    7506497461</a></p>
+                                    <a style="text-decoration: none;color: white;" href="tel:+918828283803">+91
+                                        8828283803</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%),url({% static 'resources/mun/secretariat/manav.jpg' %});" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Jasleen.jpg' %});" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
-                            <h1 class="wstit" style="">CHIEF ADVISOR</h1>
+                            <h1 class="wstit" style="">ADVISORY BOARD</h1>
                             <div class='descriptionw'>
-                                <h3 style="color: white;" class="card-subtitle">Manav Singh</h3>
-                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:singhmanav22@gmail.com">singhmanav22@gmail.com</a>
+                                <h3 style="color: white;" class="card-subtitle">Jasleen Singh</h3>
+                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:jasleenmohansingh@gmail.com">jasleenmohansingh@gmail.com</a>
                                     <br>
-                                    <a style="text-decoration: none;color: white;" href="tel:+919833085193">+91 98330 85193</a></p>
+                                    <a style="text-decoration: none;color: white;" href="tel:+918369070703">+91 83690 70703</a></p>
                             </div>
                         </div>
                     </div>
@@ -1340,7 +1304,7 @@ p.name{
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
-                            <h1 class="wstit" style="">SECRETARY GENERAL</h1>
+                            <h1 class="wstit" style="">ADVISORY BOARD</h1>
                             <div class='descriptionw'>
                                 <h3 style="color: white;" class="card-subtitle">Tannusriya Tripathi</h3>
                                 <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:tannusriya.tripathi@gmail.com">tannusriya.tripathi@gmail.com</a>
@@ -1352,16 +1316,32 @@ p.name{
                 </div>
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Nandini.jpg' %});" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Ketakee.jpg' %});" >
+                            <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
+                        </div>
+                        <div class='post-content'>
+                            <h1 class="wstit" style="">ADVISORY BOARD</h1>
+                            <div class='descriptionw'>
+                                <h3 style="color: white;" class="card-subtitle">Ketakee Agashe</h3>
+                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:ketakee.agashe91@gmail.com">ketakee.agashe91@gmail.com</a>
+                                    <br>
+                                    <a style="text-decoration: none;color: white;" href="tel:+919967307228">+91 99673 07228</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mem-info">
+                    <div class='post-modules' style="margin-bottom: 0px !important;">
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
                             <h1 class="wstit" style="">SECRETARY GENERAL</h1>
                             <div class='descriptionw'>
-                                <h3 style="color: white;" class="card-subtitle">Nandini Shailendran</h3>
-                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:nandinichirayil@gmail.com">nandinichirayil@gmail.com</a>
+                                <h3 style="color: white;" class="card-subtitle">Bhagyashree Birje</h3>
+                                <!-- <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:nandinichirayil@gmail.com">nandinichirayil@gmail.com</a> -->
                                     <br>
-                                    <a style="text-decoration: none;color: white;" href="tel:+917045142936">+91 70451 42936</a></p>
+                                    <a style="text-decoration: none;color: white;" href="tel:+918104596316">+91 81045 96316</a></p>
                             </div>
                         </div>
                     </div>
@@ -1384,64 +1364,80 @@ p.name{
                 </div>
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Jasleen.jpg' %});" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
-                            <h1 class="wstit" style="">CHARGE D' AFFAIRS</h1>
+                            <h1 class="wstit" style="">DEPUTY SECRETARY GENERAL</h1>
                             <div class='descriptionw'>
-                                <h3 style="color: white;" class="card-subtitle">Jasleen Singh</h3>
-                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:jasleenmohansingh@gmail.com">jasleenmohansingh@gmail.com</a>
+                                <h3 style="color: white;" class="card-subtitle">Ridhima Mishra</h3>
+                                <!-- <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:indrayaneepandit@gmail.com">indrayaneepandit@gmail.com</a> -->
                                     <br>
-                                    <a style="text-decoration: none;color: white;" href="tel:+918369070703">+91 83690 70703</a></p>
+                                    <a style="text-decoration: none;color: white;" href="tel:+919833949925">+91 98339 49925</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Ketakee.jpg' %});" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
-                            <h1 class="wstit" style="">USG PR</h1>
+                            <h1 class="wstit" style="">DEPUTY SECRETARY GENERAL</h1>
                             <div class='descriptionw'>
-                                <h3 style="color: white;" class="card-subtitle">Ketakee Agashe</h3>
-                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:ketakee.agashe91@gmail.com">ketakee.agashe91@gmail.com</a>
+                                <h3 style="color: white;" class="card-subtitle">Krish Panjwani</h3>
+                                <!-- <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:indrayaneepandit@gmail.com">indrayaneepandit@gmail.com</a> -->
                                     <br>
-                                    <a style="text-decoration: none;color: white;" href="tel:+919967307228">+91 99673 07228</a></p>
+                                    <a style="text-decoration: none;color: white;" href="tel:+917248989506">+91 7248989506</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Aiman.jpg' %});" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
-                            <h1 class="wstit" style="">USG DESIGN</h1>
+                            <h1 class="wstit" style="">CHARGEE D’AFFAIRES</h1>
                             <div class='descriptionw'>
-                                <h3 style="color: white;" class="card-subtitle">Aiman Aslam</h3>
-                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:aiman.aslam2002@gmail.com">aiman.aslam2002@gmail.com</a>
+                                <h3 style="color: white;" class="card-subtitle">Siddharth Mundada </h3>
+                                <!-- <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:ketakee.agashe91@gmail.com">ketakee.agashe91@gmail.com</a> -->
                                     <br>
-                                    <a style="text-decoration: none;color: white;" href="tel:+919004934919">+91 90049 34919</a></p>
+                                    <a style="text-decoration: none;color: white;" href="tel:+919359215029">+91 93592 15029</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%),url({% static 'resources/mun/secretariat/Parth.jpg' %});background-position: top !important;" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
-                            <h1 class="wstit" style="">USG DESIGN</h1>
+                            <h1 class="wstit" style="">CHIEF INFORMATION OFFICER</h1>
                             <div class='descriptionw'>
-                                <h3 style="color: white;" class="card-subtitle">Partha Pitkar</h3>
-                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:pitkarpartha@gmail.com">pitkarpartha@gmail.com</a>
+                                <h3 style="color: white;" class="card-subtitle">Pratyush Dugar</h3>
+                                <!-- <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:aiman.aslam2002@gmail.com">aiman.aslam2002@gmail.com</a> -->
                                     <br>
-                                    <a style="text-decoration: none;color: white;" href="tel:+919930617198">+91 99306 17198</a></p>
+                                    <a style="text-decoration: none;color: white;" href="tel:+917738571273">+91 77385 71273</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mem-info">
+                    <div class='post-modules' style="margin-bottom: 0px !important;">
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);background-position: top !important;" >
+                            <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
+                        </div>
+                        <div class='post-content'>
+                            <h1 class="wstit" style="">DIRECTOR OF COMMUNICATION</h1>
+                            <div class='descriptionw'>
+                                <h3 style="color: white;" class="card-subtitle">Adam Mamode</h3>
+                                <!-- <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:pitkarpartha@gmail.com">pitkarpartha@gmail.com</a> -->
+                                    <br>
+                                    <a style="text-decoration: none;color: white;" href="tel:+919820212889">+91 98202 12889</a></p>
                             </div>
                         </div>
                     </div>
@@ -1449,16 +1445,16 @@ p.name{
                 <div class="col-md-4"></div>
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Shivam.jpg' %});" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
-                            <h1 class="wstit" style="">USG DESIGN</h1>
+                            <h1 class="wstit" style="">DIRECTOR OF COMMUNICATION</h1>
                             <div class='descriptionw'>
-                                <h3 style="color: white;" class="card-subtitle">Shivam Kumar</h3>
-                                <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:shivamsagar220201@gmail.com">shivamsagar220201@gmail.com</a>
+                                <h3 style="color: white;" class="card-subtitle">Sara Pimprikar</h3>
+                                <!-- <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:shivamsagar220201@gmail.com">shivamsagar220201@gmail.com</a> -->
                                     <br>
-                                    <a style="text-decoration: none;color: white;" href="tel:+918737051651">+91 87370 51651</a></p>
+                                    <a style="text-decoration: none;color: white;" href="tel:+919689076449">+91 96890 76449</a></p>
                             </div>
                         </div>
                     </div>

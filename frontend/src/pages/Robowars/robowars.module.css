@@ -1,237 +1,134 @@
-.Technorion{
-    font-family: 'Forum', sans-serif;
-    margin-top: 60px;
-    padding-top: 100px;
+.Technorion {
+  font-family: "Forum", sans-serif;
 }
-/*================map + zonals========================================================*/
-.desc {
-    background:  rgba(0,0,0,.3);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 2px solid #8D7654;
-    margin: auto;
-    width: 80%;
-    /* margin-top: -220px; */
-    margin-bottom: 70px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-items: center;
-}
-
-.desc_cont{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-}
-
-.mapContainer{
-  width: 40%;
-}
-
-.descimage{
-  /* height: 100%; */
-  width: 120%;
-  margin-left: -15%;
-  
-}
-
-.descT{
-    font-family: 'Forum', sans-serif;
-    font-size: 18px;
-    letter-spacing: 0.1em;
-    text-align: left;
-    color: #ffffff;
-    padding: 20px 0 15px 20px;
-    margin-bottom: 0px;
-}
-.textContainer table {
-  width: 80%;
-  margin: 10px auto;
-  border: none;
-}
-.textContainer th{
-  border-bottom: 1px solid #BB9564;
-}
-.textContainer th, .textContainer td {
-  padding: 5px;
-  font-size: 18px;
-  text-align: left;
-}
-
-@media screen and (max-width: 920px) {
-  .desc {
-    flex-direction: column;
-    width: 95%;
-    height: 140%;
-  }
-
-  .descT{
-    font-size: 14px;
-}
-.textContainer th, .textContainer td {
-  font-size: 13px;
-}
-  .desc_cont{
-    width: 100%;
-  }
-  .mapContainer{
-    width: 70%;
-  
-    margin: 0 auto;
-  }  
-}
-
 /*==========================================================cards=============================================================*/
-.card_img{
-    width:74%;
-    aspect-ratio: 1/1.2;
-    object-fit: fill;
-    opacity: 1;
-    transition: all 1s ease-in;
+.compi_card {
+  background: rgba(0, 5, 29, 0.847);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Forum", sans-serif;
+  padding: 10px;
+  transform: scale(1);
+  aspect-ratio: 1/1.1;
+  overflow: hidden;
 }
 
-.compi_card{
-    background:rgba(0, 5, 29, 0.847);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-family: 'Forum', sans-serif;
-    /* max-width: 25%; */
-    /* margin-right: 20px;
-    margin-left: 20px; */
-    padding: 10px;
-    transform: scale(1);
-    transition: transform 0.3s ease;
-    aspect-ratio: 1/1.4;
-    overflow: hidden;
+.card_img {
+  width: 75%;
+  aspect-ratio: 1/1;
+  object-fit: fill;
+  opacity: 1;
+  border: 1px solid #bb9564;
+  margin: auto;
 }
 
-.card_tag{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.card_tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card_tag h3{
-    font-family: 'Forum', sans-serif;
-    font-size: 120%;
-    letter-spacing: 0.1em;
-    text-align: left;
-    color: #FFE381;
-    font-weight: 400;
-    text-transform: uppercase;
-    padding: 12px;
-    margin-bottom: 0px;
+.card_tag h3 {
+  font-family: "Forum", sans-serif;
+  font-size: 120%;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #ffe381;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 12px;
+  margin-bottom: 0px;
 }
-.card_title{
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    position: relative;
-    bottom: 0;
-    transition: 1s ease;
+.card_title {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: relative;
+  bottom: 0;
+  transition: 1s ease;
 }
-.card_title h3{
-    color:  #FFE381;
-    font-family: 'Forum', sans-serif;
-    /* letter-spacing: 0.1em; */
-    padding-top: 5%;
-    margin-bottom: 0px;
-    font-size: 20px;
-    text-transform: capitalize;
+.card_title h3 {
+  color: #ffe381;
+  font-family: "Forum", sans-serif;
+  /* letter-spacing: 0.1em; */
+  padding-top: 5%;
+  margin-bottom: 0px;
+  font-size: 20px;
+  text-transform: capitalize;
 }
 
-.card_sustitle{
+.card_sustitle {
   font-size: 15px;
-
 }
 
-.card_post{
-    opacity: 0;
-    transition: opacity .1s linear 0s;
-    width: 80%;
-    margin: 0 auto 0 auto;
+.card_post {
+  opacity: 0;
+  transition: opacity 0.1s linear 0s;
+  width: 80%;
+  margin: 0 auto 0 auto;
 }
 
-.card_regexp{
-    position: absolute;
-    left: 8%;
-    bottom: 15px;
-    display: flex;
-    border-top: 1px solid #BB9564;
-    flex-direction: row;
-    justify-content: center;
-    /* max-width: 80%; */
-    margin: auto;
-    text-align:center;
-    width: 85%;
-    top: 88%;
-    height: 10%;
+.card_regexp {
+  position: absolute;
+  left: 8%;
+  bottom: 15px;
+  display: flex;
+  border-top: 1px solid #bb9564;
+  flex-direction: row;
+  justify-content: center;
+  /* max-width: 80%; */
+  margin: auto;
+  text-align: center;
+  width: 85%;
+  top: 88%;
+  height: 10%;
 }
 
-.card_reg{
-    border-right: 1px solid #BB9564;
-    padding-right: 8%;
-    padding-top: .4vw;
-    padding-left: 8%;
-    padding-bottom: .4vw;
-    color: #FFE381;
+.card_reg {
+  border-right: 1px solid #bb9564;
+  padding-right: 8%;
+  padding-top: 0.4vw;
+  padding-left: 8%;
+  padding-bottom: 0.4vw;
+  color: #ffe381;
 }
-.card_exp{
-    border-left: 1px solid #BB9564;
-    padding-right: 4%;
-    padding-top: .4vw;
-    padding-left: 8%;
-    padding-bottom: .4vw;
+.card_exp {
+  border-left: 1px solid #bb9564;
+  padding-right: 4%;
+  padding-top: 0.4vw;
+  padding-left: 8%;
+  padding-bottom: 0.4vw;
 }
 
-@media(max-width: 1100px)
-{
-  .card_exp{
+@media (max-width: 1100px) {
+  .card_exp {
     padding-left: 4%;
   }
-}  
-@media(max-width: 991px)
-{
-  .card_exp{
+}
+@media (max-width: 991px) {
+  .card_exp {
     padding-left: 8%;
   }
 }
-@media(max-width: 860px)
-{
-  .card_exp{
+@media (max-width: 860px) {
+  .card_exp {
     padding-left: 6%;
   }
 }
-/* @media(max-width: 769px)
-{
-  .card_exp{
-    padding-left: 12%;
-    padding-top: .7vw;
-  }
-}
-@media(max-width: 650px)
-{
-  .card_exp{
-    padding-left: 8%;
-    padding-top: .7vw;
-  }
-} */
-.card_reg{
-  padding-top: .2vw;
+
+.card_reg {
+  padding-top: 0.2vw;
   padding-left: 1vw;
   font-size: 20px;
 }
 
-@media(max-width: 576px)
-{
-  .card_exp{
+@media (max-width: 576px) {
+  .card_exp {
     padding-left: 12%;
     padding-top: 1.7vw;
   }
-  .card_reg{
+  .card_reg {
     padding-top: 1.2vw;
     padding-left: 0vw;
     font-size: 20px;
@@ -240,173 +137,130 @@
   }
 }
 
-
-
-.card_reg a{
-    color:  #FFE381;
-    font-family: 'Forum', sans-serif;
-    letter-spacing: 0.1em;
-    font-size: 18px;
-    text-decoration: none;
+.card_reg a {
+  color: #ffe381;
+  font-family: "Forum", sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 18px;
+  text-decoration: none;
 }
 
-.card_reg button{
-    color: #FFE381;
-    font-family: 'Forum', sans-serif;
-    letter-spacing: 0.1em;
-    font-size:18px;
-    text-decoration: none;
-    background: none;
-    border: none;
+.card_reg button {
+  color: #ffe381;
+  font-family: "Forum", sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 18px;
+  text-decoration: none;
+  background: none;
+  border: none;
 }
 
-.card_exp a{
-    color: #BB9564;
-    font-family: 'Forum', sans-serif;
-    letter-spacing: 0.1em;
-    font-size:18px;
-    text-decoration: none;
-    margin-bottom: 0px;
-    width: 100%;
-    height: 100%;
+.card_exp a {
+  color: #bb9564;
+  font-family: "Forum", sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 100%;
+}
+.card_desc {
+  font-family: "Forum", sans-serif;
+  font-size: 16px;
+  max-width: 90%;
+  margin: auto;
 }
 
-.compi_card:hover{
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-  }
-  
-  /* Hide image on hover */
-  .compi_card:hover .card_img {
-    /* display: none; */
-    opacity: 0;
-    transition: all .1s ease-in;
-  }
-
-  .compi_card:hover .espark4{
-    opacity: 0;
-  }
-  .compi_card:hover .espark1{
-    opacity: 0;
-  }
-  .compi_card:hover .fspark4{
-    opacity: 0;
-  }
-  .compi_card:hover .fspark1{
-    opacity: 0;
-  }
-
-  .compi_card:hover .card_post{
-    opacity: 1;
-    transition: opacity .1s linear .3s;
-  }
-
-  .compi_card:hover .card_title{
-    margin-top: -200px;
-  }
-  .card_desc{
-    font-family: 'Forum', sans-serif;
-    font-size: 16px;
-    max-width: 90%;
-    margin: auto;
-  }
-
-  .card_share{
-    position: absolute;
-    left: 37%;
-    bottom: 18%;
-  }
-
-  .card_img{
-    border: 1px solid #BB9564;
-    margin:auto;
-  }
-
-.card_rect1{
-    border: 1px solid #BB9564;
-    position:absolute;
-    width: 86%;
-    height: 97%;
-    left: 7.5%;
-    top: 5px;
+.card_share {
+  position: absolute;
+  left: 37%;
+  bottom: 18%;
 }
 
-.card_rect2{
-    border: 1px solid #BB9564;
-    left: 5.5%;
-    width: 90%;
-    height: 95%;
-    position: absolute;
+.card_rect1 {
+  border: 1px solid #bb9564;
+  position: absolute;
+  width: 86%;
+  height: 97%;
+  left: 7.5%;
+  top: 5px;
+}
+
+.card_rect2 {
+  border: 1px solid #bb9564;
+  left: 5.5%;
+  width: 90%;
+  height: 95%;
+  position: absolute;
 }
 
 /* .card1_cont{
 
 } */
 
-.share_rect1{
-    height: 35px;
-    width: 100px;
-    border: 1px solid #BB9564;
-    position: relative;
+.share_rect1 {
+  height: 35px;
+  width: 100px;
+  border: 1px solid #bb9564;
+  position: relative;
 }
 
-.share_rect2{
-    height: 35px;
-    width: 100px;
-    border: 1px solid #BB9564;
-    margin-left: 3px;
-    margin-top: 3px;
-    position: relative;
-    font-size: 24px;
-    font-weight: 200;
-    font-family: 'Forum', sans-serif;
-    color: #BB9564;
+.share_rect2 {
+  height: 35px;
+  width: 100px;
+  border: 1px solid #bb9564;
+  margin-left: 3px;
+  margin-top: 3px;
+  position: relative;
+  font-size: 24px;
+  font-weight: 200;
+  font-family: "Forum", sans-serif;
+  color: #bb9564;
 }
-.share_rect2:hover{
-    color:#A7E9FF;
-}
+
 .indiamapContainer {
-    display: flex;
-    align-items: center;
-    height: 300px;
-    margin: 20px auto;
-  }
-  
-  .imageContainer {
-    flex:auto;
-    margin-left: 30px; /* Add margin to the left for spacing */
-    padding: 10px; /* Add padding to keep the image within the border */
-    box-sizing: content-box; /* Reset box-sizing to avoid additional width from padding */
-    max-width: 50%; /* Set a maximum width for the image container */
-  }
-  
-  .imageContainer img {
-    max-width: 50%;
-    max-height: 50%;
-    width: auto;
-    height: auto;
-    border: 1px solid #BB9564;
-    object-fit: contain;
-  }
-  
-  .textContainer {
-    flex: 1;
-    margin-right: 20px; /* Add margin to the right for spacing */
-  }
-  
-  .textContainer p {
-    margin: 0;
-    font-size: 18px;
-    font-family: 'Forum', sans-serif;
-  }
+  display: flex;
+  align-items: center;
+  height: 300px;
+  margin: 20px auto;
+}
 
-  .chand{
-    position: absolute;
-    right: 9%;
-    bottom: 55%;
-    height: 20px;
-    width: auto;
-  }
+.imageContainer {
+  flex: auto;
+  margin-left: 30px; /* Add margin to the left for spacing */
+  padding: 10px; /* Add padding to keep the image within the border */
+  box-sizing: content-box; /* Reset box-sizing to avoid additional width from padding */
+  max-width: 50%; /* Set a maximum width for the image container */
+}
+
+.imageContainer img {
+  max-width: 50%;
+  max-height: 50%;
+  width: auto;
+  height: auto;
+  border: 1px solid #bb9564;
+  object-fit: contain;
+}
+
+.textContainer {
+  flex: 1;
+  margin-right: 20px; /* Add margin to the right for spacing */
+}
+
+.textContainer p {
+  margin: 0;
+  font-size: 18px;
+  font-family: "Forum", sans-serif;
+}
+
+.chand {
+  position: absolute;
+  right: 9%;
+  bottom: 55%;
+  height: 20px;
+  width: auto;
+}
 /* 
   .chand2{
     position: absolute;
@@ -416,314 +270,257 @@
     width: auto;
   } */
 
-  .espark{
-    position: absolute;
-    left: 15.5%;
-    bottom: 25%;
-    height: 5px;
-    width: auto;
-  }
-
-  .espark2{
-    position: absolute;
-    left: 12%;
-    bottom: 89%;
-    height: 25px;
-    width: auto;
-  }
-
-  .espark3{
-    position: absolute;
-    left: 88%;
-    bottom: 90%;
-    height: 5px;
-    width: auto;
-  }
-
-  .espark4{
-    position: absolute;
-    left:79%;
-    bottom: 20%;
-    height: 25px;
-    width: auto;
-  }
-
-  .fspark{
-    position: absolute;
-    left: 18%;
-    bottom: 20%;
-    height: 20px;
-    width: auto;
-  }
-  .fspark2{
-    position: absolute;
-    left: 10%;
-    bottom: 85%;
-    height: 20px;
-    width: auto;
-  }
-  .fspark3{
-    position: absolute;
-    left: 86%;
-    bottom: 23%;
-    height: 20px;
-    width: auto;
-  }
-  .fspark4{
-    position: absolute;
-    left: 83%;
-    bottom: 90%;
-    height: 20px;
-    width: auto;
-  }
-
-  /* Add hover styles for card_reg and card_exp */
-.card_reg:hover a{
-  color: #A7E9FF; /* Change the color to blue on hover */
+.espark {
+  position: absolute;
+  left: 15.5%;
+  bottom: 25%;
+  height: 5px;
+  width: auto;
 }
 
-.card_exp:hover a{
-  color: #A7E9FF; /* Change the color to blue on hover */
+.espark2 {
+  position: absolute;
+  left: 12%;
+  bottom: 89%;
+  height: 25px;
+  width: auto;
 }
-.fspark4:hover {
-  opacity: 0;
+
+.espark3 {
+  position: absolute;
+  left: 88%;
+  bottom: 90%;
+  height: 5px;
+  width: auto;
 }
 
-  /* For Media Queries */
-  @media (max-width: 768px) {
-    .indiamapContainer {
-      flex-direction: column-reverse; /* Map below text */
-      height: auto;
-    }
-  
-    .imageContainer,
-    .textContainer {
-      margin: 0; /* Reset margin for smaller screens */
-    }
-  
-    .textContainer p {
-      font-size: 16px; /* Adjust font size for smaller screens */
-    }
+.espark4 {
+  position: absolute;
+  left: 79%;
+  bottom: 20%;
+  height: 25px;
+  width: auto;
+}
+
+.fspark {
+  position: absolute;
+  left: 18%;
+  bottom: 20%;
+  height: 20px;
+  width: auto;
+}
+.fspark2 {
+  position: absolute;
+  left: 10%;
+  bottom: 85%;
+  height: 20px;
+  width: auto;
+}
+.fspark3 {
+  position: absolute;
+  left: 86%;
+  bottom: 23%;
+  height: 20px;
+  width: auto;
+}
+.fspark4 {
+  position: absolute;
+  left: 83%;
+  bottom: 90%;
+  height: 20px;
+  width: auto;
+}
+
+/* Add hover styles for card_reg and card_exp */
+.card_reg:hover a {
+  color: #a7e9ff; /* Change the color to blue on hover */
+}
+
+.card_exp:hover a {
+  color: #a7e9ff; /* Change the color to blue on hover */
+}
+
+/* For Media Queries */
+@media (max-width: 768px) {
+  .indiamapContainer {
+    flex-direction: column-reverse; /* Map below text */
+    height: auto;
   }
-  
 
-@media screen and (max-width: 576px) {
-      
-  .compi_card:hover {
-    transition: none;
-    transform: scale(1);
+  .imageContainer,
+  .textContainer {
+    margin: 0; /* Reset margin for smaller screens */
   }
 
-  /* Hide image on hover */
-  .compi_card:hover .card_img {
-    /* display: none; */
-    opacity: 1;
+  .textContainer p {
+    font-size: 16px; /* Adjust font size for smaller screens */
   }
-
-  .compi_card:hover .card_post{
-    display: none;
-  }
-
-  .compi_card:hover .card_title{
-    margin-top: 0px;
-  }
-
-
 }
 
 @media screen and (max-width: 1400px) {
-  .card_title h3{
+  .card_title h3 {
     font-size: 15px;
   }
 
-  .card_sustitle{
+  .card_sustitle {
     font-size: 13px;
-  }
-
-  .card_img{
-    width:72%;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .card_title h3{
+  .card_title h3 {
     font-size: 15px;
   }
-  .card_sustitle{
+  .card_sustitle {
     font-size: 14px;
-  }
-
-  .card_img{
-    width:65%;
   }
 }
 
 @media screen and (max-width: 1100px) {
-  .card_title h3{
+  .card_title h3 {
     position: relative;
     top: -2px;
     font-size: 15px;
   }
-  .card_sustitle{
+  .card_sustitle {
     position: relative;
     top: -2px;
     font-size: 12px;
   }
-
-  .card_img{
-    width:65%;
-  }
 }
 
 @media screen and (max-width: 768px) {
-  .card_title h3{
+  .card_title h3 {
     top: 10px;
     font-size: 20px;
   }
-  .card_sustitle{
+  .card_sustitle {
     top: 20px;
     font-size: 15px;
-  }
-
-  .card_img{
-    height: 70%;
   }
 }
 
 @media screen and (max-width: 675px) {
-  .card_title h3{
+  .card_title h3 {
     top: 0px;
     font-size: 15px;
   }
-  .card_sustitle{
+  .card_sustitle {
     top: 0px;
     font-size: 15px;
-  }
-
-  .card_img{
-    height: 70%;
   }
 }
 
-.card_title div{
-    color: #A7E9FF;
-    font-family: 'Forum', sans-serif;
-    letter-spacing: 0.1em;
-    margin-bottom: 0px;
+.card_title div {
+  color: #a7e9ff;
+  font-family: "Forum", sans-serif;
+  letter-spacing: 0.1em;
+  margin-bottom: 0px;
 }
 
 @media screen and (max-width: 576px) {
-  .card_title h3{
+  .card_title h3 {
     top: 0px;
     font-size: 25px;
   }
-  .card_sustitle{
+  .card_sustitle {
     top: 0px;
     font-size: 20px;
   }
-
-  .card_img{
-    height: 70%;
+  .compi_card {
+    /* aspect-ratio: 1/1.25; */
   }
-
-  .compi_card{
-    aspect-ratio: 1/1.25;
-}
 }
 @media screen and (max-width: 430px) {
-  .card_title h3{
+  .card_title h3 {
     top: 0px;
     font-size: 20px;
   }
-  .card_sustitle{
+  .card_sustitle {
     top: 0px;
     font-size: 15px;
   }
 
-  .compi_card{
-    aspect-ratio: 1/1.4;
+  .compi_card {
+    /* aspect-ratio: 1/1.4; */
+  }
 }
-  
-}
-  
 
 .titSpn {
-    margin-top: 40px;
-  }
-  
-  .titSpn_rect1 {
-    border: #ab8d60 2px solid;
-    width: 220px;
-    height: 50px;
-    margin: auto;
-  }
-  
-  .titSpn_rect2 {
-    border: #ab8d60 2px solid;
-    width: 220px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-    transform: translate(3px, 3px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    font-family: 'Forum', sans-serif;
-  }
-  
-  .spnImg {
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
-  
-  
-  .spnImg a {
-    text-decoration: none;
-  }
-  .spnImg a p {
-    text-decoration: none;
-    color: #ab8d60;
-    margin: 10px 0 0 0;
-    font-size: 20px;
-  }
-  .themeData {
-    /* display: flex; */
-    margin-top: 40px;
-    font-size: 20px;
-    height: 32vh;
-  
-  }
-  .themeImg {
-    /* border: #ab8d60 2px solid;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.titSpn_rect1 {
+  border: #ab8d60 2px solid;
+  width: 220px;
+  height: 50px;
+  margin: auto;
+}
+
+.titSpn_rect2 {
+  border: #ab8d60 2px solid;
+  width: 220px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  transform: translate(3px, 3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-family: "Forum", sans-serif;
+}
+
+.spnImg {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.spnImg a {
+  text-decoration: none;
+}
+.spnImg a p {
+  text-decoration: none;
+  color: #ab8d60;
+  margin: 10px 0 0 0;
+  font-size: 20px;
+}
+.themeData {
+  font-size: 20px;
+  height: 32vh;
+  max-width: 90%;
+  margin: auto;
+}
+.themeImg {
+  /* border: #ab8d60 2px solid;
     width: 90%;
     height: 300px;
     margin: auto; */
-    border: #ab8d60 2px solid;
-    width: auto;
-    height: auto;
-    margin: auto;
-  }
-  .themeData img {
-    /* width: 90%;
+  border: #ab8d60 2px solid;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+.themeData img {
+  /* width: 90%;
     height: 300px;
     border: #ab8d60 2px solid;
     object-fit: fill;
     transform: translate(3px,3px); */
-    border: #ab8d60 2px solid;
-    width: 102%;
-    height: 30vh;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-    transform: translate(5px, 5px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  border: #ab8d60 2px solid;
+  width: 102%;
+  height: 30vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  transform: translate(5px, 5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  @media(max-width: 980px)
-{
-  .themeData{
+@media (max-width: 980px) {
+  .themeData {
     height: auto;
   }
 }
@@ -751,8 +548,8 @@
 }
 
 @media (max-width: 992px) {
-  .themeImg{
-    height:400px;
+  .themeImg {
+    height: 400px;
   }
 }
 
@@ -784,8 +581,8 @@
   .themeData img {
     width: 300px;
   }
-  .themeText{
+  .themeText {
     text-align: center;
-    font-size:medium ;
+    font-size: medium;
   }
 }

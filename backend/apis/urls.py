@@ -19,5 +19,7 @@ urlpatterns = [
     path('notify/', views.NotifyView.as_view(), name='notify'),
     path('workshop/', views.workshop_card, name='workshop_card'),
     path('workshop_reg/', views.workshop_reg_form, name='workshop_reg_form'),
+    path('robowars/', views.robowar_card, name='robowars_card'),
+    path('robowars_reg/', views.robowars_reg_form, name='robowars_reg_form'),
 ]
 
