@@ -180,6 +180,7 @@ const MInternal = () => {
             {cardName === "blockchain" && <Block />}
             {cardName === "data to aI by google" && <Dta />}
             {cardName === "chatgpt (prompt engineering)" && <Chatgpt />}
+            
 
 
           </div>
