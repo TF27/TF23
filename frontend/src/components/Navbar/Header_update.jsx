@@ -108,6 +108,9 @@ const Header_update = () => {
                 <li>
                   <Link to="/lectures">Lectures</Link>
                 </li>
+		<li>
+		  <Link to="/robowars">Robowars</Link>
+		</li>
               </ul>
             </div>
           </li>
@@ -204,6 +207,9 @@ const Header_update = () => {
             <li onClick={showMenu}>
               <Link to="/summits">Int'l Summits</Link>
             </li>
+	    <li onClick={showMenu}>
+		<Link to="/robowars">Robowars</Link>
+		</li>
             <li onClick={showMenu}>
               <Link to="/lectures">Lectures</Link>
             </li>

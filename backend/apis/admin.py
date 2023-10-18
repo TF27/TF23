@@ -13,3 +13,6 @@ admin.site.register(Notifying)
 #Workshop
 admin.site.register(Workshop)
 admin.site.register(workshop_reg)
+
+admin.site.register(Robowars)
+admin.site.register(robowar_reg)

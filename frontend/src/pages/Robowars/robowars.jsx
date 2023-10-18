@@ -1,113 +1,99 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import { Link } from "react-router-dom";
-import { UserAuth } from "../../contexts/AuthContext";
-// import { Frame3 } from "./compi_animation";
-import Technorion from "./technorion";
+
+import bg from "./img/bg1.jpg";
+import Cards from "./cards";
 import OurReach from "./ourreach";
 import Carousel from "../../components/Carousel/carousel";
 import "./robowars_animation.css";
-import '../Lectures/lecture.css';
 import styles from "./robowars.module.css";
-import i1 from '../../pages/Exhibition/assets/i1.jpg'
-import i2 from '../../pages/Exhibition/assets/i2.jpg'
-import i3 from '../../pages/Exhibition/assets/i3.png'
-import i4 from '../../pages/Exhibition/assets/i4.jpg'
-import i5 from '../../pages/Exhibition/assets/i5.jpg'
-import i6 from '../../pages/Exhibition/assets/i6.jpg'
-import i7 from '../../pages/Exhibition/assets/i7.jpg'
-import i8 from '../../pages/Exhibition/assets/i8.jpg'
-import i9 from '../../pages/Exhibition/assets/i9.jpg'
-import i10 from '../../pages/Exhibition/assets/i10.jpg'
 
-import im1 from '../Lectures/assets/l1.jpg';
-import im2 from '../Lectures/assets/l2.jpg';
-import im3 from '../Lectures/assets/l3.jpg';
-import im4 from '../Lectures/assets/l4.jpg';
-import im5 from '../Lectures/assets/l5.jpg';
-import im6 from '../Lectures/assets/l6.JPG';
-import im7 from '../Lectures/assets/l7.jpg';
-import im8 from '../Lectures/assets/l8.jpg';
-import im9 from '../Lectures/assets/l9.jpg';
-import im10 from '../Lectures/assets/l10.jpg';
+import irc1 from './img/irc.png';
+import irc2 from './img/irc1.png';
+
+import i1 from "../../pages/Exhibition/assets/i1.jpg";
+import i2 from "../../pages/Exhibition/assets/i2.jpg";
+import i3 from "../../pages/Exhibition/assets/i3.png";
+import i4 from "../../pages/Exhibition/assets/i4.jpg";
+import i5 from "../../pages/Exhibition/assets/i5.jpg";
+import i6 from "../../pages/Exhibition/assets/i6.jpg";
+import i7 from "../../pages/Exhibition/assets/i7.jpg";
+import i8 from "../../pages/Exhibition/assets/i8.jpg";
+import i9 from "../../pages/Exhibition/assets/i9.jpg";
+import i10 from "../../pages/Exhibition/assets/i10.jpg";
+
+import im1 from "../Lectures/assets/l1.jpg";
+import im2 from "../Lectures/assets/l2.jpg";
+import im3 from "../Lectures/assets/l3.jpg";
+import im4 from "../Lectures/assets/l4.jpg";
+import im5 from "../Lectures/assets/l5.jpg";
+import im6 from "../Lectures/assets/l6.JPG";
+import im7 from "../Lectures/assets/l7.jpg";
+import im8 from "../Lectures/assets/l8.jpg";
+import im9 from "../Lectures/assets/l9.jpg";
+import im10 from "../Lectures/assets/l10.jpg";
+import ImageOne from "./components/ImageOne";
 
 const Robowars = () => {
-  const [data, setData] = useState([]);
-  const { user } = UserAuth();
-  
-  const google_id = user?.uid;
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("/api/compi_card/", {
-          headers: {
-            "X-Google-UID": google_id,
-          },
-        });
-        console.log(axios.defaults.headers.common);
-        setData(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchData();
-  }, []);
-
-  const card = () => {
-    return data.map((data) => (
-      <div key={data.id}>
-        <h2>{data.tag}</h2>
-        <p>{data.name}</p>
-        <p>{data.prize}</p>
-        <p>{data.desc}</p>
-        <p>
-          <img src={data.img} />
-        </p>
-        {data.is_registered ? (
-          <p>Registered</p>
-        ) : (
-          <p>
-            <Link to={`${data.name}/register`}>Register</Link>
-          </p>
-        )}
-        <p>
-          <Link to={data.name}>Explore</Link>
-        </p>
-      </div>
-    ));
+  const bgHaiJi = {
+    backgroundImage: `url(${bg})`, // Initial background image
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center center",
+    width: "100vw",
+    position: "absolute",
+    top: "0",
+    zIndex: "-1",
+    backgroundAttachment: "fixed",
   };
 
   return (
-    <div className="competitions">
-      <div className="compi_bg"></div>
-      {/* <Frame3 /> */}
+    <div className="competitions" style={bgHaiJi}>
+      <ImageOne />
       <div className={`${styles.titSpn} ${styles.homeTheme}`}>
-          <div className={styles.titSpn_rect1}>
-            <div className={styles.titSpn_rect2}>About</div>
+        <div className={styles.titSpn_rect1}>
+          <div className={styles.titSpn_rect2}>About</div>
+        </div>
+      </div>
+      <div className={`row ${styles.themeData}`}>
+        <div className="col-12 col-lg-4">
+          <div className={styles.themeImg}>
+            <iframe
+              src="https://www.youtube.com/embed/0_FBwJi8VBo?si=yaNM1nKy7nydA1XU"
+              title="YouTube video player"
+              frameborder="0"
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
-        <div className={`row ${styles.themeData}`}>
-          <div className="col-12 col-lg-4">
-            <div className={styles.themeImg}>
-            <iframe src="https://www.youtube.com/embed/0_FBwJi8VBo?si=yaNM1nKy7nydA1XU" title="YouTube video player" frameborder="0" loading="lazy"></iframe>
-            </div>
-          </div>
-          <div className={`col-12 col-lg-8 ${styles.themeText}`}>
-          Techfest presents the International Robowars! India’s Largest Robot Combat Competition where participants from around the globe battle each other for the coveted Robowars Champion Title. Witness sparks fly as metal crushes metal in the most glorious battles interspersed with magnificent artist performances for non-stop entertainment.
-
-
-          </div>
+        <div className={`col-12 col-lg-8 ${styles.themeText}`}>
+          Techfest presents the International Robowars! India’s Largest Robot Combat Competition where 300+ participants from 20+ countries battle each other in front of a crowd of over 7000 people for the coveted Robowars Champion Title. In the ultimate battlefield 
+          for destruction hungry robots, witness sparks fly in a captivating fusion of technology and combat
+          as metal crushes metal in the most glorious battles, interspersed with
+          magnificent artist performances for non-stop entertainment.
         </div>
-      <Technorion />
+      </div>
+      <div className={`${styles.titSpn} ${styles.homeTheme}`}>
+        <div className={styles.titSpn_rect1}>
+          <div className={styles.titSpn_rect2}>Resources</div>
+        </div>
+      </div>
+      <Cards />
       <OurReach />
-      <br /><br /><br /><br />
-      {/* {card()} */}
-       <div className="checkThis">
-        <h1 style={{ marginTop: "0px", marginBottom: "40px" }}>
+      <div className="contactus1">
+          <h1 style={{ marginTop: "60px", marginBottom: "40px" }}>
+            INT'L ZONAL PARTNER
+          </h1>
+          <div className="pkmkb">
+            <img src={irc1} style={{width: '210px', height: '250px', top: '-50px', position: 'relative'}}/>
+            <img src={irc2} />
+          </div>
+        </div>
+      <div className="checkThis">
+        <h1 style={{ marginTop: "10px", marginBottom: "40px" }}>
           CHECK THIS OUT
         </h1>
-        <div style={{ height: "390px" }}>
+        <div>
           <h2 style={{ marginBottom: "0px" }}>Exhibition</h2>
           <Carousel
             i1={i1}
@@ -127,10 +113,10 @@ const Robowars = () => {
               <Link to="/exhibitions">Explore</Link>
             </div>
           </div>
-          <br /><br /><br /><br /><br /><br /><br /><br />
+          <br />
         </div>
-        <div style={{marginBottom: '150px'}}>
-          <h2 className="gap" >Lectures</h2>
+        <div style={{ marginTop: "40px", marginBottom: "0px" }}>
+          <h2 className="gap">Lectures</h2>
           <Carousel
             i1={im1}
             i2={im2}
@@ -150,8 +136,30 @@ const Robowars = () => {
             </div>
           </div>
         </div>
+        <div className="contactus">
+          <h1 style={{ marginTop: "60px", marginBottom: "40px" }}>
+            CONTACT US
+          </h1>
+
+          <div className="Contactbox">
+            <div className="Contactbox1">
+              Aryan Gupta<br></br>
+              aryan@techfest.org<br></br>
+              <div onClick={() => (window.location.href = `tel:${7317520804}`)}>
+                {7317520804}
+              </div>
+            </div>
+            <div className="Contactbox1">
+              Manas Dadhich<br></br>
+              manas@techfest.org<br></br>
+              {/* <div onClick={() => window.location.href = `mailto:manas@techfest.org`}>{manas@techfest.org}</div><br></br> */}
+              <div onClick={() => (window.location.href = `tel:${9981378767}`)}>
+                {9981378767}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      
     </div>
   );
 };

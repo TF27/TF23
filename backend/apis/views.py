@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
+from rest_framework.generics import CreateAPIView
 from apis.serializers import *
 from apis.models import *
 from django.views.decorators.csrf import csrf_exempt
@@ -22,7 +23,7 @@ from django.db.models.signals import post_save as _post_save
 import json
 import datetime
 from rest_framework.parsers import FileUploadParser, MultiPartParser, FormParser, JSONParser
-
+import pandas as pd
 from django.core.mail import send_mail, send_mass_mail
 from django.conf import settings
 
@@ -37,12 +38,55 @@ class NotifyView(APIView):
 
 
 def mail_bhejo(request):
-    subject = "Test Mail"
-    message = "kuch nhi bass test kar rha hu django, ignore it"
-    from_email = 'noreply@techfest.org'
-    recipient_list = ['yatharth85204@gmail.com']
-    send_mail(subject, message, from_email, recipient_list)
+    subject = "Get Ready to Soar to New Heights in Competitions at Techfest, IIT Bombay"
+    message = """Greetings from Techfest, IIT Bombay!
+We thoroughly cherished your participation in Techfest Competitions, and we cannot wait to have you back!
 
+It's that time of the year again when innovation, creativity, and technology converge at Techfest, IIT Bombay. We are thrilled to invite you, our valued past participant, to participate in our Ideate Competitions – Atom Quest, Urban Futurism, TechAid, and Dronelog. This is your chance to showcase your skills, ideas, and passion, and win exciting prizes!
+
+Here's a quick overview of the competitions:
+
+1. Atom Quest:
+Prize Money: INR 2,00,000
+Description: The problem statement involves the creation of an intelligent smart home appliance or system with specific characteristics. The objective is to develop a novel smart home technology that offers unique features and functionalities, differentiating it from existing solutions in the market.
+Registration Link: techfest.org/competitions/atom-quest
+
+2. Urban Futurism
+Prize Money: INR 80,000
+Description: Imagine and design the cities of the future. Develop sustainable solutions to urban challenges in transportation, infrastructure, and more.
+Registration Link: techfest.org/competitions/urban-futurism
+
+3. TechAid
+Prize Money: INR 80,000
+Description: The goal is to address specific challenges and barriers faced by differently-abled individuals in their daily lives. In this competition, we challenge participants to think creatively and develop groundbreaking solutions across a spectrum of verticals
+Registration Link: techfest.org/competitions/tech-aid
+
+4. Dronelog
+Prize Money: INR 1,50,000
+Description: Revolutionize Inventory Management with Scalable Drone Technology: Achieve Real-Time Accuracy, Automated Scanning, and Autonomous Movement for Efficient Warehousing using drones
+Registration Link: techfest.org/competitions/dronelog
+
+These competitions are not just about winning prizes; they are about pushing the boundaries of your imagination and innovation. Participating in these events will provide you with a platform to connect with like-minded individuals, gain practical experience, and make a difference in the world through technology.
+
+To register for these competitions and to learn more about the rules, guidelines, and deadlines, please visit our website: techfest.org
+
+Thank you for being a part of the Techfest family, and we can't wait to witness your innovative ideas in action!
+
+Best regards,
+Team Techfest
+"""
+
+    from_email = 'noreply@techfest.org'
+    excel = '/home/yat251/Desktop/Coding/TF23/backend/emails.csv'
+    recipient_df = pd.read_csv(excel)
+    
+    # Filter out empty cells from the 'Emails' column and convert them to a list
+    recipient_list = recipient_df['Email'].dropna().tolist()
+    i=0
+    for recipient in recipient_list:
+        print(i)
+        send_mail(subject, message, from_email, [recipient])
+        i+=1
 
 @parser_classes([JSONParser])
 def get_user(request):
@@ -458,3 +502,63 @@ def workshop_reg_form(request):
         # print(res)
         return JsonResponse(res)
     
+
+# Robowars   
+@api_view(['GET'])
+def robowar_card(request):
+    if request.method == 'GET':
+        try: 
+            email = get_user_id(request)
+            # email = user.email if user else None
+            robowar = Robowars.objects.all()
+            serializer = RobowarsSerializer(robowar, many=True, context={'user': email})
+            return Response(serializer.data)
+        except:
+            robowar = Robowars.objects.all()
+            serializer = RobowarsSerializer(robowar, many=True, context={'request': request})
+            return Response(serializer.data)
+      
+@api_view(['POST'])
+def robowars_reg_form(request):
+    if request.method== 'POST':
+        robowars_reg_serializer = RobowarsRegSerializer(data=request.data, many=False)
+        print(robowars_reg_serializer)
+        if robowars_reg_serializer.is_valid():
+            category = robowars_reg_serializer.validated_data.get('category')
+            team_leader_email = robowars_reg_serializer.validated_data.get('team_leader_email')
+            team_leader_name = robowars_reg_serializer.validated_data.get('team_leader_name')
+            parti_email1 = robowars_reg_serializer.validated_data.get('parti1_email')
+            parti_email2 = robowars_reg_serializer.validated_data.get('parti2_email')
+            parti_email3 = robowars_reg_serializer.validated_data.get('parti3_email')
+            if robowar_reg.objects.filter(team_leader_email=team_leader_email, category=category).exists():
+                res = {'success': False, 'error': 'Team already formed'}
+                return JsonResponse(res, status=400)
+            elif parti_email1 and robowar_reg.objects.filter(parti1_email=parti_email1, category=category).exists():
+                res = {'success': False, 'error': 'Team already formed'}
+                return JsonResponse(res, status=400)
+            elif parti_email2 and robowar_reg.objects.filter(parti2_email=parti_email2, category=category).exists():
+                res = {'success': False, 'error': 'Team already formed'}
+                return JsonResponse(res, status=400)
+            elif parti_email3 and robowar_reg.objects.filter(parti3_email=parti_email3, category=category).exists():
+                res = {'success': False, 'error': 'Team already formed'}
+                return JsonResponse(res, status=400)
+            else:
+                last_reg = robowar_reg.objects.order_by('-robowar_id').first()
+                next_tf_id = '0269'
+                if last_reg:
+                    last_tf_id = last_reg.robowar_id[-4:]
+                    next_tf_id = str(int(last_tf_id) + 1).zfill(4)
+                robowar_id = f"TF-R23{next_tf_id}"
+                print('hello')
+                robowars_reg_serializer.save(robowar_id=robowar_id)
+                res = {'success': True}
+                try: 
+                    subject = f'Techfest, IIT Bombay | Joined the {robowar_id} team for International Robowars'
+                    message = f"You have successfully joined a team with {team_leader_email} for the Int'l Robowars with TeamID {robowar_id} and with the team leader {team_leader_name}"
+                    from_email = 'noreply@techfest.org'
+                    send_mail(subject, message, from_email, team_leader_email)
+                except: 
+                    res = {'sucess': True}
+                return JsonResponse(res)
+        res = {'success': False}
+        return JsonResponse(res)

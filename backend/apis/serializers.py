@@ -78,3 +78,19 @@ class WorkshopRegSerializer(serializers.ModelSerializer):
     class Meta:
         model = workshop_reg
         fields = '__all__'
+
+class RobowarsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Robowars
+        fields = '__all__'
+
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        user = self.context.get('user')
+        representation['is_registered'] = robowar_reg.objects.filter(team_leader_email=user, category=instance).exists()
+        return representation
+    
+class RobowarsRegSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = robowar_reg
+        fields = '__all__'

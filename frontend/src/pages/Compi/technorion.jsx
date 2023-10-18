@@ -96,19 +96,6 @@ const Technorion = () => {
           </div>
           <div>
             <div className={styles.card_regexp}>
-              {/* {data.is_registered ? (
-                        <div className={styles.card_reg}>Registered</div>
-                     ) : user ? (
-                        <div className={styles.card_reg}>
-                           <Link to={`${data.name}/register`}>Register</Link>
-                        </div>
-                     ) : (
-                        <div className={styles.card_reg}>
-                           <button onClick={handleGoogleSignIn}>
-                              Register
-                           </button>
-                        </div>
-                     )} */}
               {user === null ? (
                 <div className={styles.card_reg}>
                   <button onClick={handleGoogleSignIn}>Register</button>
@@ -117,7 +104,17 @@ const Technorion = () => {
                 <div className={styles.card_reg}>Registered</div>
               ) : (
                 <div className={styles.card_reg}>
-                  <Link to={`${data.name}/register`}>Register</Link>
+                  {data.name === "robocap league" ? (
+                    <a
+                      href="https://www.robocapleague.com/apply"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Register
+                    </a>
+                  ) : (
+                    <Link to={`${data.name}/register`}>Register</Link>
+                  )}
                 </div>
               )}
               <div className={styles.card_exp}>
@@ -126,8 +123,6 @@ const Technorion = () => {
             </div>
           </div>
         </div>
-        {/* </div>
-          </div> */}
       </div>
     ));
   };
@@ -269,7 +264,7 @@ const Technorion = () => {
           </div>
           <div>
             <div className={styles.card_regexp}>
-            {user === null ? (
+              {user === null ? (
                 <div className={styles.card_reg}>
                   <button onClick={handleGoogleSignIn}>Register</button>
                 </div>
@@ -343,7 +338,7 @@ const Technorion = () => {
           </div>
           <div>
             <div className={styles.card_regexp}>
-            {user === null ? (
+              {user === null ? (
                 <div className={styles.card_reg}>
                   <button onClick={handleGoogleSignIn}>Register</button>
                 </div>
@@ -425,7 +420,8 @@ const Technorion = () => {
       <div className="technorion_cards">
         <div className="container" style={{ maxWidth: "90%" }}>
           <div className="row">
-            {othercard()}{card()} {markiCompi()}
+            {othercard()}
+            {card()} {markiCompi()}
           </div>
         </div>
       </div>
