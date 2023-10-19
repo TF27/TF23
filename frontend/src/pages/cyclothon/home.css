@@ -111,6 +111,21 @@
     margin-right: calc(-.5 * var(--bs-gutter-x));
     margin-left: calc(-.5 * var(--bs-gutter-x));
   }
+  .maxprotein{
+    max-width: 20%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  .energy{
+    font: 'Montserrat';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    position: relative;
+    left: 2.5%;
+    width: 95%;
+  }
 
   @keyframes openFromLeft {
     0% {
@@ -170,7 +185,7 @@
     }
     .tnc{
       font-size: 182%;
-    margin-top: 105px;
+    margin-top: 70px;
     font-family: 'Kanit', sans-serif;
     font-weight: 700;
     line-height: 38px;
@@ -181,7 +196,7 @@
     font: 'Montserrat';
     font-size: 14px;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 18px;
     letter-spacing: 0.1em;
     text-align: justify;
     width: 92%;
@@ -213,6 +228,14 @@
    }
    .row1{
     margin-left: 20px;
+   }
+   .maxprotein{
+    max-width: 70%;
+    margin-bottom: 0px;
+   }
+   .energy{
+    margin-top: 50px;
+    margin-bottom: 5px;
    }
   
   }
