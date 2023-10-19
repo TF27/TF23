@@ -52,7 +52,64 @@
   }
   .contact{
     max-width: 35%;
-    margin-top: 150px;
+    margin-top: 100px;
+    margin-bottom: -48px;
+  }
+  .tnc{
+    font-family: 'Kanit', sans-serif;
+  font-weight: 900;
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 74px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: 5%;
+
+  }
+  .tnctext{
+    margin-top: 5%;
+    font: 'Montserrat';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    text-align: justify;
+    width: 95%;
+    position: relative;
+    left: 30px;
+
+  }
+  .decathlon{
+    max-width: 33%;
+    margin-top: 32px;
+    margin-bottom: 66px;
+
+  }
+  .element1{
+     margin-left: -41px;
+  }
+  .element2{
+    margin-left: -170px;
+  }
+  .element3{
+    margin-left: -198px;
+  }
+  .element4{
+    margin-left: -74px;
+  }
+  .container1{
+    font-family: 'Animales';
+    position: relative;
+    left: 50px;
+  }
+  .row1{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
   }
 
   @keyframes openFromLeft {
@@ -109,7 +166,61 @@
     .contact{
       max-width: 84%;
       margin-top: 60px;
+      margin-bottom: -48px;
     }
+    .tnc{
+      font-size: 182%;
+    margin-top: 105px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+    line-height: 38px;
+
+    }
+    .tnctext{
+      margin-top: 5%;
+    font: 'Montserrat';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-align: justify;
+    width: 92%;
+    position: relative;
+    left: 15px;
+    }
+    .decathlon{
+      max-width: 75%;
+    margin-top: 14px;
+    margin-bottom: -15px;
+
+    }
+    .element1{
+      margin-left: -10px;
+   }
+   .element2{
+     margin-left: -7px;
+   }
+   .element3{
+     margin-left: -10px;
+     margin-top: -30px;
+   }
+   .element4{
+     margin-left: -10px;
+     margin-top: -41px;
+   }
+   .container1{
+    left: -11px;
+   }
+   .row1{
+    margin-left: 20px;
+   }
+  
+  }
+  @media (min-width: 768px){
+.col-md-3 {
+    flex: 0 0 auto;
+    width: 34%;
+}
   }
 
   
