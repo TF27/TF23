@@ -1,22 +1,24 @@
 {% extends "compi/base.html" %}
 
 {% block body %}
-  {%for item in reg %}
+  <a href="{% url 'admins:download_csv_ofCompi' compiname %}" class="btn btn-primary">Download Reg</a>
+  <a href="{% url 'admins:download_csv_ofCompiTeam' compiname %}" class="btn btn-primary">Download Team</a>
+  {% for item in reg %}
     {% if item.compi.name == compiname %}
-    <tr>
-        <td>{{item.name}}</td>
-        <td>{{item.compi.name}}</td>
-        <td>{{item.phoneno}}</td>
-        <td>{{item.email}}</td>
-        <td>{{item.yearofstudy}}</td>
-        <td>{{item.ca_refral}}</td>
-        <td>{{item.city}}</td>
-        <td>{{item.country}}</td>
-        <td>{{item.gender}}</td>
-        <td>{{item.address}} , {{item.pincode}}</td>
-        <td>{{item.instiname}}</td>
-        <td>{{item.instiaddress}} {{item.instipincode}}</td>
-    </tr>
+      <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.compi.name }}</td>
+        <td>{{ item.phoneno }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.yearofstudy }}</td>
+        <td>{{ item.ca_refral }}</td>
+        <td>{{ item.city }}</td>
+        <td>{{ item.country }}</td>
+        <td>{{ item.gender }}</td>
+        <td>{{ item.address }}, {{ item.pincode }}</td>
+        <td>{{ item.instiname }}</td>
+        <td>{{ item.instiaddress }} {{ item.instipincode }}</td>
+      </tr>
     {% endif %}
   {% endfor %}
 {% endblock %}
