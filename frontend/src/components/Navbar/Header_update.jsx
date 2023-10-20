@@ -111,6 +111,9 @@ const Header_update = () => {
 		<li>
 		  <Link to="/robowars">Robowars</Link>
 		</li>
+    <li>
+		  <Link to="/cyclothon">Cyclothon</Link>
+		</li>
               </ul>
             </div>
           </li>
