@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.contrib.admin.views.decorators import staff_member_required
 from apis.models import *
 from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
 import csv
 
 @staff_member_required
@@ -13,22 +14,19 @@ def home(request):
     }
     return render(request, 'home.html', context)
 
+
 # @staff_member_required
 def compi_count():
-    data = compi_reg.objects.all()
     compies = Compi.objects.all()
 
     for compi in compies:
-        compi.reg_count = 0 
-        # print("no")
+        compi.reg_count = 0
 
-    for d in data:
-        for compie in compies:
-            if d.compi.name == compie.name :
-                compie.reg_count+=1
-                # print("yes")
-    
-        # print(d.compi.reg_count)
+    for compi in compies:
+        for d in compi_reg.objects.filter(compi=compi):
+            compi.reg_count += 1
+            compi.save()  # Save the updated compi object
+
     return None
     
 
@@ -113,6 +111,108 @@ def download_compi_team_csv(request):
     # Create a response with a CSV attachment
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="compi_team_data.csv"'
+
+    # Create a CSV writer
+    writer = csv.writer(response)
+
+    # Write the header row
+    header = [
+        'Compi Name',
+        'Max Team Length',
+        'Team ID',
+        'Team Leader Name',
+        'Team Leader Email',
+        'Participant 1 Name',
+        'Participant 1 Email',
+        'Participant 2 Name',
+        'Participant 2 Email',
+        'Participant 3 Name',
+        'Participant 3 Email',
+        'Team Length',
+        'Participants',
+        'Single Participant'
+    ]
+    writer.writerow(header)
+
+    # Write data rows
+    for team in compi_teams:
+        data_row = [
+            team.compi_name.name,  # Replace 'name' with the actual field name in the Compi model
+            team.max_team_length,
+            team.team_id,
+            team.team_leader_name,
+            team.team_leader_email,
+            team.parti1_name,
+            team.parti1_email,
+            team.parti2_name,
+            team.parti2_email,
+            team.parti3_name,
+            team.parti3_email,
+            team.team_length,
+            team.participants,
+            team.single_parti,
+        ]
+        writer.writerow(data_row)
+
+    return response
+
+@staff_member_required
+def download_csv_ofCompi(request, compiname):
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = f'attachment; filename="{compiname}_data.csv"'
+    writer = csv.writer(response)
+
+    writer.writerow([
+        'Name',
+        'Competition',
+        'TF ID',
+        'Email',
+        'Google ID',
+        'Phone Number',
+        'City',
+        'Country',
+        'Gender',
+        'PinCode',
+        'Address',
+        'Institution Name',
+        'Institution Address',
+        'Institution Pincode',
+        'Year of Study',
+        'Zonals',
+    ])  # Write header row
+
+    queryset = compi_reg.objects.filter(compi__name=compiname)
+
+    for item in queryset:
+        writer.writerow([
+            item.name,
+            item.compi.name,
+            item.tf_id,
+            item.email,
+            item.google_id,
+            item.phoneno,
+            item.city,
+            item.country,
+            item.gender,
+            item.pincode,
+            item.address,
+            item.instiname,
+            item.instiadress,
+            item.instipincode,
+            item.yearofstudy,
+            item.zonals,
+        ])
+
+    return response
+
+@staff_member_required
+def download_csv_ofCompiTeam(request, compiname):
+    # Query the database to get all compi_team objects
+    compi_teams = compi_team.objects.filter(compi_name = compiname)
+
+    # Create a response with a CSV attachment
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = f'attachment; filename="{compiname}_Teamdata.csv"'
 
     # Create a CSV writer
     writer = csv.writer(response)

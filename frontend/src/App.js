@@ -4,7 +4,7 @@ import Header from './components/Navbar/Header';
 import { AuthContextProvider } from './contexts/AuthContext';
 import Protected from './contexts/Protected';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Cyclothon from './pages/cyclothon/Cyclothon';
+// import Cyclothon from './pages/cyclothon/Cyclothon';
 
 import Home from "./pages/Home/home";
 // import Exhibition from './pages/Exhibition/exhi';
@@ -61,6 +61,9 @@ const MUN = React.lazy(() => import("./pages/MUN/mun"));
 const IC = React.lazy(() => import("./pages/Events/Innovation Challenge/ic"));
 const RoboReg = React.lazy(() => import("./pages/Robowars/components/Reg"));
 
+const Cyclothon = React.lazy(() => import("./pages/Events/cyclothon/Cyclothon"));
+
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 //   const location = useLocation();
@@ -96,7 +99,14 @@ function App() {
           <Routes>
             <Route path="/" element={isLoading ? <Loading1 /> : <Home />} />
             <Route path="/legals" element={<Legals />} />
-            <Route path="/cyclothon" element={<Cyclothon />} />
+            {/* <Route path="/cyclothon" element={<Cyclothon />} /> */}
+
+            <Route path='/cyclothon' element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <Cyclothon />
+              </React.Suspense>
+            } />
+
             <Route
               path="/workshops/"
               element={

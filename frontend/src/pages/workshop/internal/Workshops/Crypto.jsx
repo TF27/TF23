@@ -103,7 +103,7 @@ const Crypto = () => {
                 <div className={styles.info_details}>
                   <div>
                     <h3>Date: </h3>
-                    <p>26th-27th December</p>
+                    <p>27th December</p>
                     <h3>Venue: </h3>
                     <p>IIT Bombay</p>
                     <h3>

@@ -1,0 +1,252 @@
+.image-container {
+    width: 95vw;
+    margin-top: 30px;
+    height: 55vh;
+    overflow: hidden;
+  }
+  :root {
+    --min-font-size: 16px;
+    --max-font-size: 24px;
+  }
+  .visiontext{
+    margin-top: 5%;
+    font: 'Montserrat';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0.1em;
+    text-align: center; 
+  }
+  .row-gap{
+    row-gap: 40px;
+  }
+  .class1{
+    padding-left: calc(var(--bs-gutter-x) * .5);
+  }
+  .class2{
+    margin-left: calc(var(--bs-gutter-x) * -0.1);
+  }
+.fade-in {
+    width: 95vw;
+    position: relative;
+    left: 40px;
+    background-repeat: no-repeat;
+    background-image: url('./img/schedule-body.png');
+    background-size: 95vw 55vh;
+    height: 55vh;
+  }
+  .vision{
+    margin-top: 150px;
+  }
+  
+  .fade-in.show {
+    animation: openFromLeft 4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  .schedule{
+    max-width: 30%;
+    margin-top: 150px;
+  }
+  .sponser{
+    max-width: 45%;
+    margin-top:150px;
+  }
+  .contact{
+    max-width: 35%;
+    margin-top: 100px;
+    margin-bottom: -48px;
+  }
+  .tnc{
+    font-family: 'Kanit', sans-serif;
+  font-weight: 900;
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 74px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: 5%;
+
+  }
+  .tnctext{
+    margin-top: 5%;
+    font: 'Montserrat';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    text-align: justify;
+    width: 95%;
+    position: relative;
+    left: 30px;
+
+  }
+  .decathlon{
+    max-width: 33%;
+    margin-top: 32px;
+    margin-bottom: 66px;
+
+  }
+  .element1{
+     margin-left: -41px;
+  }
+  .element2{
+    margin-left: -170px;
+  }
+  .element3{
+    margin-left: -198px;
+  }
+  .element4{
+    margin-left: -74px;
+  }
+  .container1{
+    font-family: 'Animales';
+    position: relative;
+    left: 50px;
+  }
+  .row1{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+  }
+  .maxprotein{
+    max-width: 20%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  .energy{
+    font: 'Montserrat';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    position: relative;
+    left: 2.5%;
+    width: 95%;
+  }
+
+  @keyframes openFromLeft {
+    0% {
+      width: 0vw;
+    }
+    16.67%{
+        width:16.67vw;
+    }
+    33.33%{
+        width: 33.33vw;
+    }
+    50%{
+        width: 50vw;
+    }
+    66.67%{
+        width: 66.67vw;
+    }
+    83.34%{
+        width: 83.34vw;
+    }
+    100% {
+      width: 100vw;
+    }
+  }
+  @media(max-width:548px){
+    .fade-in{
+      background-image: url('./img/mobileschedule.png');
+      background-size: auto 129vw;
+    left: 5px;
+    width: 95vw;
+    height: 122vw
+    }
+    .visiontext{
+      font-size: 4.5vw;
+      font-weight: 500;
+      line-height: 1.2;
+      text-align: justify;
+    }
+    .vision{
+      margin-top: 70px;
+    }
+    .fade-in.show {
+      animation: none;
+    }
+    .schedule{
+      max-width: 70%;
+      margin-top: 60px;
+    }
+    .sponser{
+      max-width: 98%;
+      margin-top: 70px;
+    }
+    .contact{
+      max-width: 84%;
+      margin-top: 60px;
+      margin-bottom: -48px;
+    }
+    .tnc{
+      font-size: 182%;
+    margin-top: 70px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+    line-height: 38px;
+
+    }
+    .tnctext{
+      margin-top: 5%;
+    font: 'Montserrat';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    text-align: justify;
+    width: 92%;
+    position: relative;
+    left: 15px;
+    }
+    .decathlon{
+      max-width: 75%;
+    margin-top: 14px;
+    margin-bottom: -15px;
+
+    }
+    .element1{
+      margin-left: -10px;
+   }
+   .element2{
+     margin-left: -7px;
+   }
+   .element3{
+     margin-left: -10px;
+     margin-top: -30px;
+   }
+   .element4{
+     margin-left: -10px;
+     margin-top: -41px;
+   }
+   .container1{
+    left: -11px;
+   }
+   .row1{
+    margin-left: 20px;
+   }
+   .maxprotein{
+    max-width: 70%;
+    margin-bottom: 0px;
+   }
+   .energy{
+    margin-top: 50px;
+    margin-bottom: 5px;
+   }
+  
+  }
+  @media (min-width: 768px){
+.col-md-3 {
+    flex: 0 0 auto;
+    width: 34%;
+}
+  }
+
+  
+ 
+  
+  
