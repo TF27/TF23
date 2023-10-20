@@ -197,7 +197,7 @@ const Arduino = () => {
                 <div
                   className="col-3 contactMail"
                   onClick={() =>
-                    (window.location.href = `gourish@techfest.org`)
+                    (window.location.href = `sanya@techfest.org`)
                   }
                 >
                   sanya@techfest.org

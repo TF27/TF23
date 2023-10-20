@@ -4,7 +4,7 @@ import Faq from "react-faq-component";
 import Whatsapplink from "../../../../components/whatsapp/link";
 import "./x.css";
 
-const Block = () => {
+const Android = () => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = (openX) => {
@@ -57,8 +57,7 @@ const Block = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Explore Blockchain, Solidity, DeFi, and NFTs in this immersive workshop at the tech-finance crossroads <br /> <br />
-          Date: 26th-27th December <br /> <br />
+          Date: 28th-29th December <br /> <br />
           Duration: 12-14 hours <br /> <br />
           Venue: IIT Bombay <br />
           </div>
@@ -83,12 +82,8 @@ const Block = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Register and Pay before 15th October 2023 to avail the workshop at the early bird price <br /><br />
-            Group Discounts: <br/>
-            Register as a group to avail the following discounts: <br/>
-            2 members Rs. 150 off <br/>
-            3 members Rs. 250 off <br/>
-            4 members Rs. 300 off <br/>
+          Register and Pay before 22nd October 2023 to avail the workshop at the early bird price <br /><br />
+
           </div>
         </div>
       </div>
@@ -140,20 +135,20 @@ const Block = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Shriya Kajrolkar
+            Utkarsh Daga
             <div
               className="contactNum"
-              onClick={() => (window.location.href = `tel:88282 83803`)}
+              onClick={() => (window.location.href = `tel:9636509616`)}
             >
-              +91 88282 83803
+              +91 96365 09616
             </div>
             <div
               className="contactMail"
               onClick={() =>
-                (window.location.href = `mailto:shriya@techfest.org`)
+                (window.location.href = `mailto:utkarsh@techfest.org`)
               }
             >
-              shriya@techfest.org
+              utkarsh@techfest.org
             </div>
           </div>
         </div>
@@ -162,4 +157,4 @@ const Block = () => {
   );
 };
 
-export default Block;
+export default Android;
