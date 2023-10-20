@@ -22,6 +22,10 @@ import Block from "./Workshops/Block";
 import Dta from "./Workshops/Dta";
 import Ethical from "./Workshops/Ethical";
 import Chatgpt from "./Workshops/Chatgpt";
+import Android from "./Workshops/Android";
+import Webdev from "./Workshops/Webdev";
+import Cybersecurity from "./Workshops/Cybersecurity";
+import W3b from "./Workshops/W3b";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -179,6 +183,10 @@ const Internal = () => {
             {cardName === "data to aI by google" && <Dta/>}
             {cardName === "ethical hacking" && <Ethical/>}
             {cardName === "chatgpt (prompt engineering)" && <Chatgpt/>}
+            {cardName === "android development" && <Android/>}
+            {cardName === "web development" && <Webdev/>}
+            {cardName === "cybersecurity" && <Cybersecurity/>}
+            {cardName === "web 3.0" && <W3b/>}
           </div>
         </div>
       </div>
