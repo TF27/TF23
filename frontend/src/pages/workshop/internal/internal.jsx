@@ -121,6 +121,20 @@ const Internal = () => {
                 </div>
               </div>
             )}
+            {data.statement && (
+              <div className={styles.statement}>
+                <div className={styles.stat_rect1}></div>
+                <div className={styles.stat_rect2}>
+                  <a
+                    href='https://forms.gle/8KvyXtYuCUtSAWpa8'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Accommodation
+                  </a>
+                </div>
+              </div>
+            )}
             <p className={styles.howtopay}>
             <a href="https://drive.google.com/file/d/1VBgqBtSZlQ3gSKtH6YVKCVGwaOxwCVWo/view?usp=sharing" target="_blank">How to{" "}</a>
               <a href="https://drive.google.com/file/d/1VBgqBtSZlQ3gSKtH6YVKCVGwaOxwCVWo/view?usp=sharing" target="_blank">
