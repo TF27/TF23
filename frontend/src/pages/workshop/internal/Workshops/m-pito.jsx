@@ -47,7 +47,7 @@ const Pito = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatu_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatu_rect2}`}>
-            About
+            Details
           </div>
         </div>
         <div

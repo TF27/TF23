@@ -4,7 +4,7 @@ import Faq from "react-faq-component";
 import Whatsapplink from "../../../../components/whatsapp/link";
 import "./x.css";
 
-const Block = () => {
+const Cybersecurity= () => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = (openX) => {
@@ -47,7 +47,7 @@ const Block = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatu_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatu_rect2}`}>
-            Details
+           Details
           </div>
         </div>
         <div
@@ -57,8 +57,8 @@ const Block = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Explore Blockchain, Solidity, DeFi, and NFTs in this immersive workshop at the tech-finance crossroads <br /> <br />
-          Date: 26th-27th December <br /> <br />
+          Learn about common cyber threats, counter defense tools and how to keep accounts and credentials safe <br /> <br />
+          Date: 28th-29th December <br /> <br />
           Duration: 12-14 hours <br /> <br />
           Venue: IIT Bombay <br />
           </div>
@@ -140,20 +140,20 @@ const Block = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Shriya Kajrolkar
+            Ajay Agrawal
             <div
               className="contactNum"
-              onClick={() => (window.location.href = `tel:88282 83803`)}
+              onClick={() => (window.location.href = `tel:7509759232`)}
             >
-              +91 88282 83803
+              +91 75097 59232
             </div>
             <div
               className="contactMail"
               onClick={() =>
-                (window.location.href = `mailto:shriya@techfest.org`)
+                (window.location.href = `mailto:ajay@techfest.org`)
               }
             >
-              shriya@techfest.org
+              ajay@techfest.org
             </div>
           </div>
         </div>
@@ -162,4 +162,4 @@ const Block = () => {
   );
 };
 
-export default Block;
+export default Cybersecurity;

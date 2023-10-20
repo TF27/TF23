@@ -5,7 +5,7 @@ import "./x.css";
 import Whatsapplink from "../../../../components/whatsapp/link";
 import yt from "./../../img/glimpses.png";
 
-const Crypto = () => {
+const Cybersecurity = () => {
   const [activeCity, setActiveCity] = useState("About");
   const [activeIndex, setActiveIndex] = useState(null);
   const openCity = (cityName) => {
@@ -103,7 +103,7 @@ const Crypto = () => {
                 <div className={styles.info_details}>
                   <div>
                     <h3>Date: </h3>
-                    <p>27th December</p>
+                    <p>28th-29th December</p>
                     <h3>Venue: </h3>
                     <p>IIT Bombay</p>
                     <h3>
@@ -119,7 +119,7 @@ const Crypto = () => {
                   </div>
                   <div>
                     <h3>Duration:</h3>
-                    <p>7-8 hours</p>
+                    <p>12-14 hours</p>
                     <h3>Early Bird Offer:</h3>
                     <p>
                       Free Access Pass to Techfest for events such as EDM night,
@@ -191,19 +191,19 @@ const Crypto = () => {
           >
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-                Chirag Rao
+                Ajay Agrawal
                 <br />
                 <div
                   className="col-3 contactNum"
-                  onClick={() => (window.location.href = `tel:8287175335`)}
+                  onClick={() => (window.location.href = `tel:7509759232`)}
                 >
-                  +91 82871 753358
+                  +91 75097 59232
                 </div>
                 <div
                   className="col-3 contactMail"
-                  onClick={() => (window.location.href = `chirag@techfest.org`)}
+                  onClick={() => (window.location.href = `ajay@techfest.org`)}
                 >
-                  chirag@techfest.org
+                  ajay@techfest.org
                 </div>
               </div>
             </div>
@@ -214,4 +214,4 @@ const Crypto = () => {
   );
 };
 
-export default Crypto;
+export default Cybersecurity;

@@ -5,7 +5,7 @@ import "./x.css";
 import Whatsapplink from "../../../../components/whatsapp/link";
 import yt from "./../../img/glimpses.png";
 
-const Crypto = () => {
+const Webdev = () => {
   const [activeCity, setActiveCity] = useState("About");
   const [activeIndex, setActiveIndex] = useState(null);
   const openCity = (cityName) => {
@@ -103,7 +103,7 @@ const Crypto = () => {
                 <div className={styles.info_details}>
                   <div>
                     <h3>Date: </h3>
-                    <p>27th December</p>
+                    <p>26th-27th December</p>
                     <h3>Venue: </h3>
                     <p>IIT Bombay</p>
                     <h3>
@@ -119,7 +119,7 @@ const Crypto = () => {
                   </div>
                   <div>
                     <h3>Duration:</h3>
-                    <p>7-8 hours</p>
+                    <p>12-14 hours</p>
                     <h3>Early Bird Offer:</h3>
                     <p>
                       Free Access Pass to Techfest for events such as EDM night,
@@ -139,16 +139,11 @@ const Crypto = () => {
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
                 <b>
-                  Register and Pay before 15th October 2023 to avail the
+                  Register and Pay before 22nd October 2023 to avail the
                   workshop at the early bird price
                 </b>{" "}
                 <br />
-                <br />
-                Group Discounts: <br />
-                Register as a group to avail the following discounts: <br />
-                2 members Rs. 150 off <br />
-                3 members Rs. 250 off <br />
-                4 members Rs. 300 off <br />
+
               </div>
             </div>
           </div>
@@ -191,19 +186,21 @@ const Crypto = () => {
           >
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-                Chirag Rao
+                Prathamesh Hatwar
                 <br />
                 <div
                   className="col-3 contactNum"
-                  onClick={() => (window.location.href = `tel:8287175335`)}
+                  onClick={() => (window.location.href = `tel:7387041365`)}
                 >
-                  +91 82871 753358
+                  +91 73870 41365
                 </div>
                 <div
                   className="col-3 contactMail"
-                  onClick={() => (window.location.href = `chirag@techfest.org`)}
+                  onClick={() =>
+                    (window.location.href = `prathamesh@techfest.org`)
+                  }
                 >
-                  chirag@techfest.org
+                  prathamesh@techfest.org
                 </div>
               </div>
             </div>
@@ -214,4 +211,4 @@ const Crypto = () => {
   );
 };
 
-export default Crypto;
+export default Webdev;
