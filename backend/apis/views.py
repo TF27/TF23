@@ -522,7 +522,7 @@ def robowar_card(request):
 def robowars_reg_form(request):
     if request.method== 'POST':
         robowars_reg_serializer = RobowarsRegSerializer(data=request.data, many=False)
-        print(robowars_reg_serializer)
+        print(robowars_reg_serializer.is_valid())
         if robowars_reg_serializer.is_valid():
             category = robowars_reg_serializer.validated_data.get('category')
             team_leader_email = robowars_reg_serializer.validated_data.get('team_leader_email')
@@ -553,12 +553,14 @@ def robowars_reg_form(request):
                 robowars_reg_serializer.save(robowar_id=robowar_id)
                 res = {'success': True}
                 try: 
-                    subject = f'Techfest, IIT Bombay | Joined the {robowar_id} team for International Robowars'
-                    message = f"You have successfully joined a team with {team_leader_email} for the Int'l Robowars with TeamID {robowar_id} and with the team leader {team_leader_name}"
+                    subject = f'Techfest, IIT Bombay | Successful Registration for International Robowars'
+                    message = f"You have successfully registered for the Int'l Robowars with {team_leader_email}. Your TeamID is {robowar_id} and with the team leader {team_leader_name}"
+                    # print(team_leader_email, team_leader_name, robowar_id)
                     from_email = 'noreply@techfest.org'
-                    send_mail(subject, message, from_email, team_leader_email)
+                    recipeint_list = [team_leader_email]
+                    send_mail(subject, message, from_email, recipeint_list)
                 except: 
-                    res = {'sucess': True}
+                    res = {'sucess no mail': True}
                 return JsonResponse(res)
         res = {'success': False}
         return JsonResponse(res)

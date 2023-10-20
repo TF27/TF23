@@ -16,13 +16,14 @@ import sponsor from './img/sponsor.png'
 import decathlon from './img/decathlon.png'
 import contact from './img/contact.png'
 import schedule from './img/schedule-title.png'
+import maxprotein from './img/maxprotein.jpg'
 
 const Cyclothon = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const ref = useRef(null);
 
   const redirectToExternalSite = () => {
-    window.location.href = 'https://www.techfest.org'; 
+    window.location.href = 'https://play.decathlon.in/event-details/IIT-Bombay-Techfest-Cyclothon/63c55e10-6e5a-11ee-b57b-1794e332b535?utm_source=sharebutton&utm_medium=decathlon_play_partner_app&utm_campaign=externalshare'; 
   };
   const rentcycle = () => {
     window.location.href = 'https://www.meraevents.com/event/cycle-on-rent-cyclothon-2023-iitb?ucode=organizer'; 
@@ -147,6 +148,8 @@ const Cyclothon = () => {
     <img src={sponsor} alt="sorry no image" className="img-fluid sponser" />
     <p></p>
     <img src={decathlon} alt="sorry no image" className="img-fluid decathlon" />
+    <p className="energy">Energy Partner</p>
+    <img src={maxprotein} alt="sorry no image" className="img-fluid maxprotein" />
 
      
     
@@ -177,11 +180,11 @@ const Cyclothon = () => {
 13. Techfest will provide the Services to the Participants of The Event up until its completion free of cost to the Participants. For any medical care further to the Services provided to the Participant and for which admission into any in-patient department (IPD) is required, the Participant shall be admitted to the nearest hospital and the Participant or relative shall follow the policies of that hospital for admission and billing. In case the Participant is admitted to the Hospital, he/ she shall be charged for the medical services availed there as per the prevailing policy of that hospital and the Participant shall bear such costs.</p>
       </div>
     <img src={contact} alt="sorry no image" className="img-fluid contact"  />
-    <h3 style={{position:'relative',top:'10vh',font:'montserrat',marginBottom:'5vh'}} className={parallax.date}>Ajay Agrawal<br/>
+    <h3 style={{position:'relative',top:'10vh',font:'montserrat',marginBottom:'5vh'}} className={parallax.date}>Ajay Agrawal<br/>ajay@techfest.org<br/>
 +91 7509759232
 
 </h3>
-    <h3 style={{position:'relative',top:'10vh',font:'montserrat',marginBottom:'20vh'}} className={parallax.date}>Prathamesh Hatwar<br/>
+    <h3 style={{position:'relative',top:'10vh',font:'montserrat',marginBottom:'20vh'}} className={parallax.date}>Prathamesh Hatwar<br/>prathamesh@techfest.org<br/>
 +91 7387041365 </h3>
  </div>
   )
