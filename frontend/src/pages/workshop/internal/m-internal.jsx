@@ -28,6 +28,8 @@ import Android from "./Workshops/m-Android";
 import Webdev from "./Workshops/m-Webdev";
 import Cybersecurity from "./Workshops/m-Cybersecurity";
 import W3b from "./Workshops/m-W3b";
+import Digitalm from "./Workshops/m-Digitalm";
+import Ds from "./Workshops/m-Ds";
 
 const MInternal = () => {
   const { cardName } = useParams();
@@ -188,6 +190,8 @@ const MInternal = () => {
             {cardName === "web development" && <Webdev/>}
             {cardName === "cybersecurity" && <Cybersecurity/>}
             {cardName === "web 3.0" && <W3b/>}
+            {cardName === "digital marketing" && <Digitalm/>}
+            {cardName === "data science" && <Ds/>}
 
           </div>
         </div>

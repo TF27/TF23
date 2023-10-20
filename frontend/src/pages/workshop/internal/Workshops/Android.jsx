@@ -143,6 +143,12 @@ const Android = () => {
                   workshop at the early bird price
                 </b>{" "}
                 <br />
+                <br />
+                Group Discounts: <br />
+                Register as a group to avail the following discounts: <br />
+                2 members Rs. 150 off <br />
+                3 members Rs. 250 off <br />
+                4 members Rs. 300 off <br />
 
               </div>
             </div>

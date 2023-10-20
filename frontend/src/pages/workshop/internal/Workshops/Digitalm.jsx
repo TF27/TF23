@@ -5,7 +5,7 @@ import "./x.css";
 import Whatsapplink from "../../../../components/whatsapp/link";
 import yt from "./../../img/glimpses.png";
 
-const W3b = () => {
+const Digitalm = () => {
   const [activeCity, setActiveCity] = useState("About");
   const [activeIndex, setActiveIndex] = useState(null);
   const openCity = (cityName) => {
@@ -142,15 +142,13 @@ const W3b = () => {
                   Register and Pay before 22nd October 2023 to avail the
                   workshop at the early bird price
                 </b>{" "}
-                <br />                
+                <br />
                 <br />
                 Group Discounts: <br />
                 Register as a group to avail the following discounts: <br />
                 2 members Rs. 150 off <br />
                 3 members Rs. 250 off <br />
                 4 members Rs. 300 off <br />
-
-
               </div>
             </div>
           </div>
@@ -193,21 +191,19 @@ const W3b = () => {
           >
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-                Abhishek Kedare
+                Atharv Apshinge
                 <br />
                 <div
                   className="col-3 contactNum"
-                  onClick={() => (window.location.href = `tel:7558588254`)}
+                  onClick={() => (window.location.href = `tel:9324589830`)}
                 >
-                  +91 75585 88254
+                  +91 93245 89830
                 </div>
                 <div
                   className="col-3 contactMail"
-                  onClick={() =>
-                    (window.location.href = `abhishek@techfest.org`)
-                  }
+                  onClick={() => (window.location.href = `atharv@techfest.org`)}
                 >
-                  abhishek@techfest.org
+                  atharv@techfest.org
                 </div>
               </div>
             </div>
@@ -218,4 +214,4 @@ const W3b = () => {
   );
 };
 
-export default W3b;
+export default Digitalm;

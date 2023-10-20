@@ -4,7 +4,7 @@ import Faq from "react-faq-component";
 import Whatsapplink from "../../../../components/whatsapp/link";
 import "./x.css";
 
-const Ai = () => {
+const Digitalm = () => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = (openX) => {
@@ -57,7 +57,7 @@ const Ai = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Apply principles of Artificial Intelligence in solutions that require inference, perception, and knowledge representation <br /> <br />
+          
           Date: 28th-29th December <br /> <br />
           Duration: 12-14 hours <br /> <br />
           Venue: IIT Bombay <br />
@@ -140,20 +140,20 @@ const Ai = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Arnav Patel
+            Atharv Asphinge
             <div
               className="contactNum"
-              onClick={() => (window.location.href = `tel:9372634701`)}
+              onClick={() => (window.location.href = `tel:9324589830`)}
             >
-              +91 93726 34701
+              +91 93245 89830
             </div>
             <div
               className="contactMail"
               onClick={() =>
-                (window.location.href = `mailto:arnav@techfest.org`)
+                (window.location.href = `mailto:atharv@techfest.org`)
               }
             >
-              arnav@techfest.org
+              atharv@techfest.org
             </div>
           </div>
         </div>
@@ -162,4 +162,4 @@ const Ai = () => {
   );
 };
 
-export default Ai;
+export default Digitalm;

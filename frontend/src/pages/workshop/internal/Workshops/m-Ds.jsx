@@ -4,7 +4,7 @@ import Faq from "react-faq-component";
 import Whatsapplink from "../../../../components/whatsapp/link";
 import "./x.css";
 
-const Ai = () => {
+const Ds = () => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = (openX) => {
@@ -57,8 +57,8 @@ const Ai = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Apply principles of Artificial Intelligence in solutions that require inference, perception, and knowledge representation <br /> <br />
-          Date: 28th-29th December <br /> <br />
+          
+          Date: 26th-27th December <br /> <br />
           Duration: 12-14 hours <br /> <br />
           Venue: IIT Bombay <br />
           </div>
@@ -140,20 +140,20 @@ const Ai = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Arnav Patel
+            Mankirat Chawla
             <div
               className="contactNum"
-              onClick={() => (window.location.href = `tel:9372634701`)}
+              onClick={() => (window.location.href = `tel:9996437175`)}
             >
-              +91 93726 34701
+              +91 99964 37175
             </div>
             <div
               className="contactMail"
               onClick={() =>
-                (window.location.href = `mailto:arnav@techfest.org`)
+                (window.location.href = `mailto:mankirat@techfest.org`)
               }
             >
-              arnav@techfest.org
+              mankirat@techfest.org
             </div>
           </div>
         </div>
@@ -162,4 +162,4 @@ const Ai = () => {
   );
 };
 
-export default Ai;
+export default Ds;
