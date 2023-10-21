@@ -103,6 +103,8 @@ const Gesture = () => {
               <div className={styles.info_data}>
                 <div className={styles.info_details}>
                   <div>
+                  <b>Hands-on workshop where kits will be provided to the participants</b> <br /> 
+                  Participate in a team of 4 (The team has to buy only 1 ticket)<br />
                     <h3>Date: </h3>
                     <p>28th-29th December</p>
                     <h3>Venue: </h3>

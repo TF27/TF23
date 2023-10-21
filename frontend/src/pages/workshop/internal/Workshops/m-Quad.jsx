@@ -4,7 +4,7 @@ import Faq from "react-faq-component";
 import Whatsapplink from "../../../../components/whatsapp/link";
 import "./x.css";
 
-const Digitalm = () => {
+const Quad = () => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = (openX) => {
@@ -57,7 +57,8 @@ const Digitalm = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          
+          <b>Hands-on workshop where kits will be provided to the participants</b> <br /> 
+          Participate in a team of 4 (The team has to buy only 1 ticket)<br /> <br />
           Date: 26th-27th December <br /> <br />
           Duration: 12-14 hours <br /> <br />
           Venue: IIT Bombay <br />
@@ -140,20 +141,20 @@ const Digitalm = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Atharv Asphinge
+            Krishna Rathi
             <div
               className="contactNum"
-              onClick={() => (window.location.href = `tel:9324589830`)}
+              onClick={() => (window.location.href = `tel:7014036467`)}
             >
-              +91 93245 89830
+              +91 70140 36467
             </div>
             <div
               className="contactMail"
               onClick={() =>
-                (window.location.href = `mailto:atharv@techfest.org`)
+                (window.location.href = `mailto:krishna@techfest.org`)
               }
             >
-              atharv@techfest.org
+              krishna@techfest.org
             </div>
           </div>
         </div>
@@ -162,4 +163,4 @@ const Digitalm = () => {
   );
 };
 
-export default Digitalm;
+export default Quad;

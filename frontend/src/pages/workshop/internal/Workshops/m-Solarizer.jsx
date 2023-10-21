@@ -57,7 +57,7 @@ const Solarizer = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Design a Solar PV Plant and make a Solar Mobile Charger <br /> <br />
+          <b>Hands-on workshop where kits will be provided to the participants</b> <br /> <br />
           Date: 27th-28th December <br /> <br />
           Duration: 12-14 hours <br /> <br />
           Venue: IIT Bombay <br />
