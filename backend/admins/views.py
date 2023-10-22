@@ -9,8 +9,10 @@ import csv
 @staff_member_required
 def home(request):
     compies = Compi.objects.all()  # Retrieve all competitions
+    workshops = Workshop.objects.all()  # Retrieve all workshops
     context = {
         'compies': compies,
+        'workshops': workshops,
     }
     return render(request, 'home.html', context)
 
@@ -29,8 +31,6 @@ def compi_count():
 
     return None
     
-
-
 @staff_member_required
 def compi(request,compiname):
     if request.method == 'GET':
@@ -41,9 +41,7 @@ def compi(request,compiname):
             'compiname': compiname,
             'compies':compies,
         }
-
         compi_count()
-
         if compiname == "compi":
             return render(request, 'compi/overall.html', context)
         for reg in data:
@@ -257,3 +255,24 @@ def download_csv_ofCompiTeam(request, compiname):
         writer.writerow(data_row)
 
     return response
+
+@staff_member_required
+def workshop(request, workshopname):
+    if request.method == 'GET':
+        print('hi')
+        print(workshopname)
+        data = workshop_reg.objects.all()
+        workshops = Workshop.objects.all()
+        context = {
+            'reg': data,
+            'workshopname': workshopname,
+            'workshops': workshops,
+        }
+        print(workshopname)
+        if workshopname == "workshop":
+            return render(request, 'workshops/overall.html', context)
+        # for reg in data:
+        #     if reg.workshop.name == workshopname:
+        #         return render(request, 'workshops/workshop.html', context)
+        return HttpResponse("Wrong URL, check agian!!")
+    return None

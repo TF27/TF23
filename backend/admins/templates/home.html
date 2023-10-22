@@ -17,5 +17,16 @@
             {% endfor %}
         </ul>
     </div>
+    <div>
+        <h1>Workshops</h1>
+        <a href="{% url 'admins:workshop' 'workshop' %}"><h2>All Workshops</h2></a>
+        <ul>
+            {% for workshop in workshops %}
+            <li>
+                <a href='{% url "admins:workshop" workshopname=workshop.name %}'>{{ workshop.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
