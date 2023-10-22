@@ -47,7 +47,7 @@ const Arduino = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatu_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatu_rect2}`}>
-            About
+            Details
           </div>
         </div>
         <div
@@ -57,7 +57,8 @@ const Arduino = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Arduino is an open-source platform used for building electronics projects <br /> <br />
+          <b>Hands-on workshop where kits will be provided to the participants</b> <br /> 
+          Participate in a team of 4 (The team has to buy only 1 ticket)<br /> <br />
           Date: 28th-29th December <br /> <br />
           Duration: 12-14 hours <br /> <br />
           Venue: IIT Bombay <br />
@@ -83,7 +84,7 @@ const Arduino = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Register and Pay before 15th October 2023 to avail the workshop at the early bird price <br /><br />
+          Register and Pay before 22nd October 2023 to avail the workshop at the early bird price <br /><br />
 
           </div>
         </div>

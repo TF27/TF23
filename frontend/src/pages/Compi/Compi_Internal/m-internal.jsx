@@ -224,7 +224,7 @@ const MInternal = () => {
         {compiName === "cozmoclench" && <CozmoClench />}
         {compiName === "techfest olympiad" && <TechfestOlympiad />}
         {compiName === "codecode" && <Codecode />}
-        {compiName === "urban-furturism" && <UrbanFuturism />}
+        {compiName === "urban-futurism" && <UrbanFuturism />}
         {compiName === "tech-aid" && <TechAid />}
         {compiName === "atom-quest" && <AtomQuest />}
         {compiName === "robocap league" && <Robocapleague />}

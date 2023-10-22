@@ -22,6 +22,13 @@ import Block from "./Workshops/Block";
 import Dta from "./Workshops/Dta";
 import Ethical from "./Workshops/Ethical";
 import Chatgpt from "./Workshops/Chatgpt";
+import Android from "./Workshops/Android";
+import Webdev from "./Workshops/Webdev";
+import Cybersecurity from "./Workshops/Cybersecurity";
+import W3b from "./Workshops/W3b";
+import Digitalm from "./Workshops/Digitalm";
+import Ds from "./Workshops/Ds";
+import Quad from "./Workshops/Quad";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -121,6 +128,20 @@ const Internal = () => {
                 </div>
               </div>
             )}
+            {data.statement && (
+              <div className={styles.statement}>
+                <div className={styles.stat_rect1}></div>
+                <div className={styles.stat_rect2}>
+                  <a
+                    href='https://forms.gle/8KvyXtYuCUtSAWpa8'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Accommodation
+                  </a>
+                </div>
+              </div>
+            )}
             <p className={styles.howtopay}>
             <a href="https://drive.google.com/file/d/1VBgqBtSZlQ3gSKtH6YVKCVGwaOxwCVWo/view?usp=sharing" target="_blank">How to{" "}</a>
               <a href="https://drive.google.com/file/d/1VBgqBtSZlQ3gSKtH6YVKCVGwaOxwCVWo/view?usp=sharing" target="_blank">
@@ -179,6 +200,13 @@ const Internal = () => {
             {cardName === "data to aI by google" && <Dta/>}
             {cardName === "ethical hacking" && <Ethical/>}
             {cardName === "chatgpt (prompt engineering)" && <Chatgpt/>}
+            {cardName === "android development" && <Android/>}
+            {cardName === "web development" && <Webdev/>}
+            {cardName === "cybersecurity" && <Cybersecurity/>}
+            {cardName === "web 3.0" && <W3b/>}
+            {cardName === "digital marketing" && <Digitalm/>}
+            {cardName === "data science" && <Ds/>}
+            {cardName === "quadcopter" && <Quad/>}
           </div>
         </div>
       </div>

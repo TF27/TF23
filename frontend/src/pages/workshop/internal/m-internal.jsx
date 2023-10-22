@@ -23,8 +23,14 @@ import Crypto from "./Workshops/m-Crypto";
 import Block from "./Workshops/m-Block"; 
 import Dta from "./Workshops/m-Dta"; 
 import Chatgpt from "./Workshops/m-Chatgpt"; 
-
-
+import Ethical from "./Workshops/m-Ethical";
+import Android from "./Workshops/m-Android";
+import Webdev from "./Workshops/m-Webdev";
+import Cybersecurity from "./Workshops/m-Cybersecurity";
+import W3b from "./Workshops/m-W3b";
+import Digitalm from "./Workshops/m-Digitalm";
+import Ds from "./Workshops/m-Ds";
+import Quad from "./Workshops/m-Quad";
 
 const MInternal = () => {
   const { cardName } = useParams();
@@ -180,7 +186,14 @@ const MInternal = () => {
             {cardName === "blockchain" && <Block />}
             {cardName === "data to aI by google" && <Dta />}
             {cardName === "chatgpt (prompt engineering)" && <Chatgpt />}
-
+            {cardName === "ethical hacking" && <Ethical />}
+            {cardName === "android development" && <Android/>}
+            {cardName === "web development" && <Webdev/>}
+            {cardName === "cybersecurity" && <Cybersecurity/>}
+            {cardName === "web 3.0" && <W3b/>}
+            {cardName === "digital marketing" && <Digitalm/>}
+            {cardName === "data science" && <Ds/>}
+            {cardName === "quadcopter" && <Quad/>}
 
           </div>
         </div>
