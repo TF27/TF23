@@ -44,7 +44,7 @@ const Internal = () => {
     } else if (compiName === "taskwhiz") {
       navigate("/competitions/task%20whiz");
     } else if (compiName === "ai") {
-      navigate("workshops/artificial%20intelligence");
+      navigate("/workshops/artificial%20intelligence");
     } else if (compiName === "ml") {
       navigate("/workshops/machine%20learning");
     } else if (compiName === "workshop") {
