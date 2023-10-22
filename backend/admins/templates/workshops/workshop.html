@@ -1,0 +1,24 @@
+{% extends "workshops/base.html" %}
+
+{% block body %}
+    <br/> <br/>
+    <p>Total Registrations: {{ reg|length }}</p> 
+  <br/> <br/>
+  <a name="" id="" class="btn btn-primary" href="{% url 'admins:download_workshop_csv' workshopname %}">Download Regs</a>
+    <br/> <br/>
+  {%for registration in reg %}
+  <tr>
+    <td>{{ registration.id }}</td>
+    <td>{{ registration.worksho_id }}</td>
+    <td>{{ registration.workshop.name }}</td>
+    <td>{{ registration.name }}</td>
+    <td>{{ registration.email }}</td>
+    <td>{{ registration.phoneno }}</td>
+    <td>{{ registration.city }}</td>
+    <td>{{ registration.gender }}</td>
+    <td>{{ registration.pincode }}</td>
+    <td>{{ registration.ca_referral }}</td>
+    <td>{{ registration.paid }}</td>
+  </tr>
+  {% endfor %}
+{% endblock %}
