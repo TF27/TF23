@@ -1,23 +1,25 @@
 {% extends "workshops/base.html" %}
 
 {% block body %}
-  <!-- <a name="" id="" class="btn btn-primary" href="{% url "admins:export-csv-all"  %}"> Download Regs</a>
-  <a name="" id="" class="btn btn-primary" href="{% url "admins:export-compi-team-csv"  %}"> Download Teams</a> -->
-  <!-- {%for registration in reg %}
+<br/> <br/>
+<p>Total Registrations: {{ reg|length }}</p> 
+<br/> <br/>
+  <br/> <br/>
+  <a name="" id="" class="btn btn-primary" href="{% url 'admins:download_workshop_csv' workshopname %}">Download Regs</a>
+  <br/> <br/>
+  {%for registration in reg %}
   <tr>
+    <td>{{ registration.id }}</td>
+    <td>{{ registration.worksho_id }}</td>
+    <td>{{ registration.workshop.name }}</td>
     <td>{{ registration.name }}</td>
-    <td>{{ registration.compi.name }}</td>
-    <td>{{ registration.phoneno }}</td>
     <td>{{ registration.email }}</td>
-    <td>{{ registration.yearofstudy }}</td>
-    <td>{{ registration.ca_refral }}</td>
+    <td>{{ registration.phoneno }}</td>
     <td>{{ registration.city }}</td>
-    <td>{{ registration.country }}</td>
     <td>{{ registration.gender }}</td>
-    <td>{{ registration.address }}</td>
-    <td>{{ registration.instiname }}</td>
-    <td>{{ registration.instiaddress }}</td>
+    <td>{{ registration.pincode }}</td>
+    <td>{{ registration.ca_referral }}</td>
+    <td>{{ registration.paid }}</td>
   </tr>
-  {% endfor %} -->
-  <p>Hiiii</p>
+  {% endfor %}
 {% endblock %}

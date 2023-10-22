@@ -23,7 +23,7 @@
         <ul>
             {% for workshop in workshops %}
             <li>
-                <a href='{% url "admins:workshop" workshopname=workshop.name %}'>{{ workshop.name }}</a>
+                <a href="{% url 'admins:workshop' workshopname=workshop.name %}">{{ workshop.name }}</a>
             </li>
             {% endfor %}
         </ul>
