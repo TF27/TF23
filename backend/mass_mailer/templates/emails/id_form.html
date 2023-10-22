@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Emails</title>
+</head>
+<body>
+    <h1>Send Emails</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Send Emails</button>
+    </form>
+    <p>Once all emais are send the database will be deleted</p>
+</body>
+</html>

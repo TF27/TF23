@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'admins',
     'rest_framework',
     'corsheaders',
+    'mass_mailer',
 ]
 
 MIDDLEWARE = [
