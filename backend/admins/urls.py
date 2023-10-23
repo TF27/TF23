@@ -10,4 +10,6 @@ urlpatterns = [
     path('export-compi-team-csv/', views.download_compi_team_csv, name='export-compi-team-csv'),
     path('download_csv_ofCompi/<str:compiname>/', views.download_csv_ofCompi, name='download_csv_ofCompi'),
     path('download_csv_ofCompiTeam/<str:compiname>/', views.download_csv_ofCompiTeam, name='download_csv_ofCompiTeam'),
+    path('worki/<str:workshopname>', views.workshop, name='workshop'),
+    path('download_workshop_csv/<str:workshopname>/', views.download_workshop_csv, name='download_workshop_csv'),
 ]

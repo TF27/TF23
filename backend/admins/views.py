@@ -9,8 +9,10 @@ import csv
 @staff_member_required
 def home(request):
     compies = Compi.objects.all()  # Retrieve all competitions
+    workshops = Workshop.objects.all()  # Retrieve all workshops
     context = {
         'compies': compies,
+        'workshops': workshops,
     }
     return render(request, 'home.html', context)
 
@@ -29,8 +31,6 @@ def compi_count():
 
     return None
     
-
-
 @staff_member_required
 def compi(request,compiname):
     if request.method == 'GET':
@@ -41,9 +41,7 @@ def compi(request,compiname):
             'compiname': compiname,
             'compies':compies,
         }
-
         compi_count()
-
         if compiname == "compi":
             return render(request, 'compi/overall.html', context)
         for reg in data:
@@ -256,4 +254,67 @@ def download_csv_ofCompiTeam(request, compiname):
         ]
         writer.writerow(data_row)
 
+    return response
+
+@staff_member_required
+def workshop(request, workshopname):
+    if request.method == 'GET':
+        data = workshop_reg.objects.all()
+        workshops = Workshop.objects.all()
+        context = {
+            'reg': data,
+            'workshopname': workshopname,
+            'workshops': workshops,
+        }
+
+        if workshopname == "workshop":
+            return render(request, 'workshops/overall.html', context)
+        else:
+            try:
+                data_filtered = data.filter(workshop__name=workshopname)  # Corrected the variable name
+                context['reg'] = data_filtered
+                return render(request, 'workshops/workshop.html', context)
+            except:
+                return HttpResponse("Wrong URL, check again!!")
+    
+    return None
+
+@staff_member_required
+def download_workshop_csv(request, workshopname):
+    if workshopname == "workshop":
+        regs = workshop_reg.objects.all()
+    else:
+        regs = workshop_reg.objects.filter(workshop__name=workshopname)
+
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = f'attachment; filename="{workshopname}_data.csv"'
+
+    writer = csv.writer(response)
+    header = [
+        'Workshop ID',
+        'Workshop Name',
+        'Name',
+        'Email',
+        'Phone Number',
+        'City',
+        'Gender', 
+        'Pincode',
+        'CA Referral',
+        'Paid',
+    ]
+    writer.writerow(header)
+    for reg in regs: 
+        data_row = [
+            reg.worksho_id,
+            reg.workshop.name,
+            reg.name,
+            reg.email,
+            reg.phoneno,
+            reg.city,
+            reg.gender,
+            reg.pincode,
+            reg.ca_referral,
+            reg.paid,
+        ]
+        writer.writerow(data_row)
     return response
