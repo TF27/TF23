@@ -49,11 +49,15 @@ const Internal = () => {
       navigate("/workshops/machine%20learning");
     } else if (compiName === "workshop") {
       navigate("/workshops");
+    } else if (compiName === "google") {
+      navigate("/workshops/data%20to%20aI%20by%20google");
+    } else if (compiName === "aws") {
+      navigate("/workshops/cloud%20computing%20by%20amazon");
     } else if (compiName === "robocap league") {
       setRoboCamp(true);
     }
     // Add more conditions as needed for other compiNames
-  }, [navigate, compiName]);
+}, [navigate, compiName]);
 
   const [data, setData] = useState([]);
   const { googleSignIn, user } = UserAuth();
