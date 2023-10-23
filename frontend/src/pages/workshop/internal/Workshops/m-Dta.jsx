@@ -59,7 +59,7 @@ const Dta = () => {
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
           
           Master Google Cloud for data innovation: pipelines, AI/ML, Generative AI in one workshop <br /> <br />
-          Date: 26th-27th December <br /> <br />
+          Date: 28th-29th December <br /> <br />
           Duration: 12-14 hours <br /> <br />
           Venue: IIT Bombay <br />
           </div>
