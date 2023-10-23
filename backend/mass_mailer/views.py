@@ -26,6 +26,37 @@ def email_form_view(request):
         form = EmailForm()
     return render(request, 'emails/email_form.html', {'form': form})
 
+# @staff_member_required
+# def send_email(request):
+#     if request.method == 'POST':
+#         form = YourIDForm(request.POST)
+#         if form.is_valid():
+#             your_id = form.cleaned_data['your_id']
+#             email = Email.objects.get(your_id=your_id)
+#             df = pd.read_csv(email.recipient_list.path)
+#             subject = email.subject
+#             message = email.message
+#             recipient_list = df['Email'].dropna().tolist()
+#             from_email = "noreply@techfest.org"
+
+#             # Send emails
+#             for recipient in recipient_list:
+#                 send_mail(subject, message, from_email, [recipient])
+
+#             num_emails = len(recipient_list)
+
+#             os.remove(email.recipient_list.path)
+#             email.delete()
+
+#             return render(request, 'emails/email_count.html', {'num_emails': num_emails})
+#     else:
+#         form = YourIDForm()
+
+#     return render(request, 'emails/id_form.html', {'form': form})
+
+from django.core.mail import send_mass_mail
+from django.core.mail import BadHeaderError
+
 @staff_member_required
 def send_email(request):
     if request.method == 'POST':
@@ -39,9 +70,15 @@ def send_email(request):
             recipient_list = df['Email'].dropna().tolist()
             from_email = "noreply@techfest.org"
 
-            # Send emails
-            for recipient in recipient_list:
-                send_mail(subject, message, from_email, [recipient])
+            # Create a list of email message tuples
+            messages = [(subject, message, from_email, [recipient]) for recipient in recipient_list]
+
+            try:
+                # Send the emails in a single call using send_mass_mail
+                send_mass_mail(messages, fail_silently=False)
+            except BadHeaderError:
+                # Handle the case where there is a bad email header
+                pass
 
             num_emails = len(recipient_list)
 
