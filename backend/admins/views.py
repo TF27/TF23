@@ -21,14 +21,15 @@ def home(request):
 def compi_count():
     compies = Compi.objects.all()
 
-    for compi in compies:
-        compi.reg_count = 0
+    # for compi in compies:
+    #     compi.reg_count = 0
 
-    for compi in compies:
-        for d in compi_reg.objects.filter(compi=compi):
-            compi.reg_count += 1
-            compi.save()  # Save the updated compi object
+    # for compi in compies:
+    #     for d in compi_reg.objects.filter(compi=compi):
+    #         compi.reg_count += 1
+    #         compi.save()  # Save the updated compi object
 
+    print('hi')
     return None
     
 @staff_member_required
@@ -44,10 +45,14 @@ def compi(request,compiname):
         compi_count()
         if compiname == "compi":
             return render(request, 'compi/overall.html', context)
-        for reg in data:
-            if reg.compi.name == compiname:
-                return render(request, 'compi/compi.html', context)
-        return HttpResponse("Wrong URL, check agian!!")
+        else:
+            data_filtered = data.filter(compi__name=compiname)
+            context['reg'] = data_filtered
+            return render(request, 'compi/compi.html', context)
+        # for reg in data:
+        #     if reg.compi.name == compiname:
+        #         return render(request, 'compi/compi.html', context)
+        # return HttpResponse("Wrong URL, check agian!!")
     return None
 
 @staff_member_required
