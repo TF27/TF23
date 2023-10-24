@@ -110,8 +110,8 @@ const Iot = () => {
         objectFit: 'scale-down', 
         paddingRight: '8px',
     }
-    const walink1 = "https://chat.whatsapp.com/BDPHWBqWiVI4MBIlYHU4zu";
-    const dslink1 = "https://chat.whatsapp.com/BDPHWBqWiVI4MBIlYHU4zu";
+    const walink1 = "https://chat.whatsapp.com/CX8SD5yAHkPEPqhvHVafa9";
+    const dslink1 = "https://chat.whatsapp.com/CX8SD5yAHkPEPqhvHVafa9";
 
     return ( 
       <div>

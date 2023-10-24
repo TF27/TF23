@@ -106,8 +106,8 @@ const Iot = () => {
         margin: 'auto',
         rowContentMarginBottom: '0',
       }
-    const walink1 = "https://chat.whatsapp.com/KjtoeOGy9wnGQr3KZPyJCC";
-    const dslink1 = "https://chat.whatsapp.com/KjtoeOGy9wnGQr3KZPyJCC";
+    const walink1 = "https://chat.whatsapp.com/CX8SD5yAHkPEPqhvHVafa9";
+    const dslink1 = "https://chat.whatsapp.com/CX8SD5yAHkPEPqhvHVafa9";
 
     return (
         <div className={styles.mWholeData}>

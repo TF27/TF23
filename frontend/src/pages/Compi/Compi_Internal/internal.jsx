@@ -54,6 +54,8 @@ const Internal = () => {
       navigate("/workshops/data%20to%20aI%20by%20google");
     } else if (compiName === "aws") {
       navigate("/workshops/cloud%20computing%20by%20amazon");
+    } else if (compiName === "tih") {
+        navigate("/competitions/tIH%20-%20ioT");
     } else if (compiName === "robocap league") {
       setRoboCamp(true);
     }
