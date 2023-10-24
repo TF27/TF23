@@ -5,7 +5,7 @@ import './x.css';
 import Whatsapplink from '../../../../components/whatsapp/link';
 
 
-const Tih = () => {
+const Iot = () => {
     const [activeCity, setActiveCity] = useState('About');
     const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {
@@ -27,7 +27,7 @@ const Tih = () => {
             content: 'One team can have a maximum of 4 members.'
           },
           {
-            title: "Is it free to register for Meshmerize?",
+            title: "Is it free to register for TIH - IoT?",
             content: 'Yes, it is free to register.'
           },
           {
@@ -130,7 +130,7 @@ const Tih = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            The aim of TechAid: Innovations for Inclusion is to enhance accessibility, independence, and overall quality of life for people with disabilities. By developing innovative solutions across various verticals, the goal is to address specific challenges and barriers faced by differently-abled individuals in their daily lives. In this competition, we challenge participants to think creatively and develop groundbreaking solutions across a spectrum of verticals              </div>
+            IoT Technologies for Interconnecting Water, Land, and Air  </div>
             </div>
           </div>
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
@@ -138,7 +138,7 @@ const Tih = () => {
             <div className={styles.info_data}>
             Abstract Submission: <br/>
             Participants have to submit a report based on the work done so far and also consistent with the format mentioned in the problem statement. <br/>
-            Final Report Submission: <br />
+            Presentation Submission: <br />
             Participants have to submit a final report in which their research, proposed solution, technical aspects, benefit to the users, etc. all should be mentioned as given in the Problem Statement. <br />
             Final Presentation: <br />
             The final shortlisted participants would be getting a chance to present and explain their solutions in front of judges during the main fest which will be held in IIT Bombay.              </div>
@@ -153,14 +153,15 @@ const Tih = () => {
             <li>Abstract Submission: <br />
             15th November 2023</li>
 
+            <li>Shortlisting of abstracts: <br />
+            24th November 2023</li>
+
             <li>Presentation Submission: <br />
             20th December 2023</li>
 
-            <li>Final presentation & video submission: <br />
-            10th December 2023 </li>
+            <li>Final presentation & result announcement of Ideation Stage: <br />
+            27th-29th December 2023 </li>
 
-            <li>Presentation Stage & Exhibition: <br />
-            During Techfest 2022-23, in mid december </li>
               </div>
             </div>
           </div>
@@ -192,9 +193,9 @@ const Tih = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Aditya Sisodiya<br/>
-              +91 79991 57905<br/>
-              adityasisodiya.techfest@gmail.com
+              Chirag Rao<br/>
+              +91 82871 75335<br/>
+              chiragrao.techfest@gmail.com
               </div>
             </div>
           </div>
@@ -207,4 +208,4 @@ const Tih = () => {
      );
 }
  
-export default Tih ;
+export default Iot ;
