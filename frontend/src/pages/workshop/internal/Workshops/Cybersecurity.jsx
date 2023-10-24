@@ -103,7 +103,7 @@ const Cybersecurity = () => {
                 <div className={styles.info_details}>
                   <div>
                     <h3>Date: </h3>
-                    <p>28th-29th December</p>
+                    <p>26th-27th December</p>
                     <h3>Venue: </h3>
                     <p>IIT Bombay</p>
                     <h3>
