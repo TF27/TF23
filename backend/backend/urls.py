@@ -8,6 +8,7 @@ urlpatterns = [
     path('api/', include('apis.urls')),
     path('administrator/',include('admins.urls'), name="administrator"),
     path('', include('events.urls')),
+    path('masser/', include('mass_mailer.urls'))
     # path("administrator/", include("administrator.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

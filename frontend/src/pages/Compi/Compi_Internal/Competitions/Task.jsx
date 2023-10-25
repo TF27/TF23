@@ -99,8 +99,8 @@ const Task = () => {
         margin: 'auto',
         rowContentMarginBottom: '0',
       }
-      const walink1 = "https://chat.whatsapp.com/KjtoeOGy9wnGQr3KZPyJCC";
-      const dslink1 = "https://chat.whatsapp.com/KjtoeOGy9wnGQr3KZPyJCC";
+      const walink1 = "https://chat.whatsapp.com/DcK1mvhYyn5IYyyLStNqUy";
+      const dslink1 = "https://chat.whatsapp.com/DcK1mvhYyn5IYyyLStNqUy";
     return ( 
       <div>
       <div className={styles.impdata}>

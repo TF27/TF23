@@ -139,10 +139,16 @@ const Webdev = () => {
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
                 <b>
-                  Register and Pay before 22nd October 2023 to avail the
+                  Register and Pay before 29th October 2023 to avail the
                   workshop at the early bird price
                 </b>{" "}
                 <br />
+                <br />
+                Group Discounts: <br />
+                Register as a group to avail the following discounts: <br />
+                2 members Rs. 150 off <br />
+                3 members Rs. 300 off <br />
+                4 members Rs. 500 off <br />
 
               </div>
             </div>

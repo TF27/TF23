@@ -57,7 +57,8 @@ const Gesture = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Learn about the invariable future of robotics and automation <br /> <br />
+          <b>Hands-on workshop where kits will be provided to the participants</b> <br /> 
+          Participate in a team of 4 (The team has to buy only 1 ticket)<br /> <br />
             Date: 28th-29th December <br /> <br />
             Duration: 12-14 hours <br /> <br />
             Venue: IIT Bombay <br />
@@ -83,7 +84,7 @@ const Gesture = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          <b>Register and Pay before 15th October 2023 to avail the workshop at the early bird price</b> <br /><br />
+          <b>Register and Pay before 29th October 2023 to avail the workshop at the early bird price</b> <br /><br />
 
           </div>
         </div>

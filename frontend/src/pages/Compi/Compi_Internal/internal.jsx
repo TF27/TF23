@@ -25,6 +25,7 @@ import AddParti from "./Teams/add_parti";
 import Robocapleague from "./Competitions/robocapleague";
 import Dronelog from "./Competitions/Dronelog";
 import Task from "./Competitions/Task";
+import Iot from "./Competitions/Iot";
 
 const Internal = () => {
   const { compiName } = useParams();
@@ -44,16 +45,22 @@ const Internal = () => {
     } else if (compiName === "taskwhiz") {
       navigate("/competitions/task%20whiz");
     } else if (compiName === "ai") {
-      navigate("workshops/artificial%20intelligence");
+      navigate("/workshops/artificial%20intelligence");
     } else if (compiName === "ml") {
       navigate("/workshops/machine%20learning");
     } else if (compiName === "workshop") {
       navigate("/workshops");
+    } else if (compiName === "google") {
+      navigate("/workshops/data%20to%20aI%20by%20google");
+    } else if (compiName === "aws") {
+      navigate("/workshops/cloud%20computing%20by%20amazon");
+    } else if (compiName === "tih") {
+        navigate("/competitions/tIH%20-%20ioT");
     } else if (compiName === "robocap league") {
       setRoboCamp(true);
     }
     // Add more conditions as needed for other compiNames
-  }, [navigate, compiName]);
+}, [navigate, compiName]);
 
   const [data, setData] = useState([]);
   const { googleSignIn, user } = UserAuth();
@@ -155,6 +162,7 @@ const Internal = () => {
             {compiName === "robocap league" && <Robocapleague />}
             {compiName === "dronelog" && <Dronelog />}
             {compiName === "task whiz" && <Task />}
+            {compiName === "tIH - ioT" && <Iot />}
 
             <div className={styles.team_reg}>
               {user === null ? (

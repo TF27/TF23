@@ -494,6 +494,7 @@ def workshop_reg_form(request):
             # compi_reg_serializer.save()
             subject = "Workshop Registration"
             message = f"You have successfully registered for the {workshop_reg_serializer.validated_data.get('workshop')} with email {workshop_reg_serializer.validated_data.get('email')} and name {workshop_reg_serializer.validated_data.get('name')}"
+            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {workshop_reg_serializer.validated_data.get('workshop')} Workshop with {workshop_reg_serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. Register for more Workshops at techfest.org/workshops \nThanks and Regards,\nTeam Techfest 2023-24"
             from_email = 'noreply@techfest.org'
             recipient_list = [workshop_reg_serializer.validated_data.get('email')]
             send_mail(subject, message, from_email, recipient_list)
