@@ -29,7 +29,7 @@ import Header_update from "./components/Navbar/Header_update";
 const Lectures = React.lazy(() => import("./pages/Lectures/index"));
 const Compi = React.lazy(() => import("./pages/Compi/compi"));
 const Robowars = React.lazy(() => import("./pages/Robowars/robowars"));
-const Accommodation = React.lazy(() => import("./pages/Accommodation/accommodation"));
+const Accommodation = React.lazy(() => import("./pages/Accommodation/index"));
 const Exhibition = React.lazy(() => import("./pages/Exhibition/exhi"));
 const Media = React.lazy(() => import("./pages/AboutUs/Media/index"));
 const HISTORY = React.lazy(() => import("./pages/AboutUs/history/index"));
