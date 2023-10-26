@@ -83,7 +83,7 @@ const Ds = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Register and Pay before 22nd October 2023 to avail the workshop at the early bird price <br /><br />
+          Register and Pay before 29th October 2023 to avail the workshop at the early bird price <br /><br />
             Group Discounts: <br/>
             Register as a group to avail the following discounts: <br/>
             2 members Rs. 150 off <br/>
