@@ -84,7 +84,7 @@ const Gesture = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          <b>Register and Pay before 22nd October 2023 to avail the workshop at the early bird price</b> <br /><br />
+          <b>Register and Pay before 29th October 2023 to avail the workshop at the early bird price</b> <br /><br />
 
           </div>
         </div>
