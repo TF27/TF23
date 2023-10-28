@@ -565,3 +565,25 @@ def robowars_reg_form(request):
                 return JsonResponse(res)
         res = {'success': False}
         return JsonResponse(res)
+    
+def Acco_reg(request):
+    for i in range(1, int(request.POST['number_of_people'])+1):
+        input_name = 'name'+str(i)
+        input_email = 'email'+str(i)
+        input_phone = 'phone'+str(i)
+        input_gender = 'gender'+str(i)
+        input_dob = 'dob'+str(i)
+        input_city = 'city'+str(i)
+        input_aadhar = 'aadhar'+str(i)
+        registered_by = request.user.email
+        
+
+        tf_reg_serializer = HospiReg2022Serializer(data={'name':request.POST[input_name],'email':request.POST[input_email],'phone':request.POST[input_phone],'gender':request.POST[input_gender],'dob':request.POST[input_dob],'city':request.POST[input_city],'aadhar':request.POST[input_aadhar],'checkin':request.POST['checkin'],'checkout':request.POST['checkout'], 'registered_by':registered_by})
+        if tf_reg_serializer.is_valid():
+            tf_reg_serializer.save()
+            send_mail(
+                'Registration Successful for Accommodation, Techfest 2022-23',
+                "Hey "+ username +"!\n\nThanks for registering for Accommodation at Techfest, IIT Bombay! \nYou have successfully registered your information to opt for accommodation at Techfest, you only have to pay to confirm your booking on " + payment_link + " \n\nOn payment, you’ll receive a confirmation mail which will confirm your stay at Techfest 2022-23 from 14th December 2022 6 AM to 19th December 2022 10 AM. \n\nLooking forward to seeing you at Techfest 2022-23. \n\nRegards, \nTeam Techfest 2022-23",
+                'noreply@techfest.org',
+                [useremail]
+            )

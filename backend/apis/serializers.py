@@ -94,3 +94,8 @@ class RobowarsRegSerializer(serializers.ModelSerializer):
     class Meta:
         model = robowar_reg
         fields = '__all__'
+
+class HospiReg2022Serializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Acco_reg
+        fields = '__all__'

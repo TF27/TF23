@@ -170,3 +170,16 @@ class robowar_reg(models.Model):
     team_length = models.IntegerField(blank=True, null=True)
     def __str__(self):
         return self.category.category + " " + self.team_name
+    
+class Acco_reg(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField(unique=True, max_length=255)
+    phone = models.CharField(blank=True, null=True, max_length=255)
+    gender = models.CharField(blank=True, null=True, max_length=255)
+    dob = models.CharField(blank=True, null=True, max_length=255)
+    city = models.CharField(blank=True, null=True, max_length=255)
+    aadhar = models.CharField(blank=True, null=True, max_length=255)
+    checkin = models.CharField(blank=True, null=True, max_length=255)
+    checkout = models.CharField(blank=True, null=True, max_length=255)
+    registered_by = models.CharField(blank=True, null=True, max_length=255)
+    created_at = models.DateTimeField(blank=True, null=True, auto_now_add=True)
