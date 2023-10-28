@@ -566,24 +566,38 @@ def robowars_reg_form(request):
         res = {'success': False}
         return JsonResponse(res)
     
-def Acco_reg(request):
-    for i in range(1, int(request.POST['number_of_people'])+1):
-        input_name = 'name'+str(i)
-        input_email = 'email'+str(i)
-        input_phone = 'phone'+str(i)
-        input_gender = 'gender'+str(i)
-        input_dob = 'dob'+str(i)
-        input_city = 'city'+str(i)
-        input_aadhar = 'aadhar'+str(i)
-        registered_by = request.user.email
-        
-
-        tf_reg_serializer = HospiReg2022Serializer(data={'name':request.POST[input_name],'email':request.POST[input_email],'phone':request.POST[input_phone],'gender':request.POST[input_gender],'dob':request.POST[input_dob],'city':request.POST[input_city],'aadhar':request.POST[input_aadhar],'checkin':request.POST['checkin'],'checkout':request.POST['checkout'], 'registered_by':registered_by})
-        if tf_reg_serializer.is_valid():
-            tf_reg_serializer.save()
-            send_mail(
-                'Registration Successful for Accommodation, Techfest 2022-23',
-                "Hey "+ username +"!\n\nThanks for registering for Accommodation at Techfest, IIT Bombay! \nYou have successfully registered your information to opt for accommodation at Techfest, you only have to pay to confirm your booking on " + payment_link + " \n\nOn payment, you’ll receive a confirmation mail which will confirm your stay at Techfest 2022-23 from 14th December 2022 6 AM to 19th December 2022 10 AM. \n\nLooking forward to seeing you at Techfest 2022-23. \n\nRegards, \nTeam Techfest 2022-23",
-                'noreply@techfest.org',
-                [useremail]
-            )
+@api_view(['POST'])
+def acco_reg(request):
+    if request.method == 'POST':
+        acco_reg_serializer = AccoRegSerializer(data=request.data, many=False)
+        if acco_reg_serializer.is_valid():
+            email = acco_reg_serializer.validated_data.get('email')
+            if acco_reg.objects.filter(email=email).exists():
+                return JsonResponse({'error': 'A registration with this email for this workshop already exists.'}, status=400)
+            last_reg = acco_reg.objects.order_by('-acco_id').first()
+            next_tf_id = '0269'
+            if last_reg:
+                last_tf_id = last_reg.acco_id[-4:]
+                next_tf_id = str(int(last_tf_id) + 1).zfill(4)
+            acco_id = f"TF-AC23{next_tf_id}"
+            acco_reg_serializer.save(acco_id=acco_id)
+            # compi_reg_serializer.save()
+            subject = "Accomodation Registration"
+            message = f"You have successfully registered for the Accomodation with email {acco_reg_serializer.validated_data.get('email')} and name {acco_reg_serializer.validated_data.get('name')}"
+            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in Accomodation with {acco_reg_serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. Register for more Workshops at techfest.org/workshops \nThanks and Regards,\nTeam Techfest 2023-24"
+            from_email = 'noreply@gmail.com'
+            send_mail(subject, message, from_email, [acco_reg_serializer.validated_data.get('email')])
+            return JsonResponse(acco_reg_serializer.data)
+        res = {'success': False}
+        return JsonResponse(res)
+    
+@api_view(['PUT'])
+def proof_upload(request):
+    if request.method == 'PUT':
+        email = request.data['email']
+        acco = acco_reg.objects.get(email=email)
+        if acco:
+            acco.proof = request.data['proof']
+            acco.save()
+            return JsonResponse({'success': True})
+        return JsonResponse({'success': False})

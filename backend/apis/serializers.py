@@ -95,7 +95,12 @@ class RobowarsRegSerializer(serializers.ModelSerializer):
         model = robowar_reg
         fields = '__all__'
 
-class HospiReg2022Serializer(serializers.HyperlinkedModelSerializer):
+class AccoRegSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Acco_reg
-        fields = '__all__'
+        model = AccoReg
+        fields = ['acco_id', 'name', 'email', 'phone', 'gender', 'dob', 'city', 'aadhar', 'aadhar_proof', 'no_of_male', 'no_of_female', 'checkin', 'checkout']
+
+class AccoRegProofSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AccoReg
+        fields = ['payment_id', 'payment_proof', 'email']
