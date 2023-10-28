@@ -5,6 +5,8 @@ from django.contrib.admin.views.decorators import staff_member_required
 import pandas as pd
 from .models import *
 from django.core.mail import send_mail, send_mass_mail
+from django.core.mail import send_mass_mail
+from django.core.mail import BadHeaderError
 
 # Create your views here.
 @staff_member_required
@@ -14,7 +16,6 @@ def mail_bhejo(request):
     from_email = "noreply@techfest.org"
     recipient_list = ["yatharth85204@gmail.com"]
     send_mail(subject, message, from_email, recipient_list)
-
 
 def email_form_view(request):
     if request.method == 'POST':
@@ -53,9 +54,6 @@ def email_form_view(request):
 #         form = YourIDForm()
 
 #     return render(request, 'emails/id_form.html', {'form': form})
-
-from django.core.mail import send_mass_mail
-from django.core.mail import BadHeaderError
 
 @staff_member_required
 def send_email(request):

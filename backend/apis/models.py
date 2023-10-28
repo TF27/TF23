@@ -170,3 +170,4 @@ class robowar_reg(models.Model):
     team_length = models.IntegerField(blank=True, null=True)
     def __str__(self):
         return self.category.category + " " + self.team_name
+    
