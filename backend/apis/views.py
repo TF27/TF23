@@ -203,7 +203,7 @@ def compi_reg_form(request):
             compi_reg_serializer.save(tf_id=tf_id)
             # compi_reg_serializer.save()
             subject = f"Techfest, IIT Bombay | Registration successful for {compi_reg_serializer.validated_data.get('compi')}"
-            message = f"You have successfully registered for the {compi_reg_serializer.validated_data.get('compi')} with email {compi_reg_serializer.validated_data.get('email')} and name {compi_reg_serializer.validated_data.get('name')}.You must create or join a team to complete the registration procedure, or else you can click on Single Participant to compete alone."
+            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {compi_reg_serializer.validated_data.get('compi')} Workshop with {compi_reg_serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. Register for more Workshops at techfest.org/workshops \n Thanks and Regards, \n Team Techfest 2023-24"
             from_email = 'noreply@techfest.org'
             recipient_list = [compi_reg_serializer.validated_data.get('email')]
             send_mail(subject, message, from_email, recipient_list)
