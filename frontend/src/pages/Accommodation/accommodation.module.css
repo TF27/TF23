@@ -165,7 +165,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
+  font-size: 20px;
   font-family: "Forum", sans-serif;
   
 }
@@ -189,6 +189,117 @@ border: 1px solid rgba(255, 255, 255, 0.6);
   margin: auto;
   padding: 2px;
 
+}
+
+.incbutton{
+  background-color: transparent;
+  border-color: transparent;
+  color: #fff;
+}
+
+.decbutton{
+  background-color: transparent;
+  border-color: transparent;
+  color: #fff;
+}
+
+.baap {
+  background: rgba(26, 26, 26, 0.4);
+  backdrop-filter: blur(38px);
+  -webkit-backdrop-filter: blur(38px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  width: 956px;
+  height: max-content;
+  margin: auto;
+  border: 1px solid white;
+  /* border-image: linear-gradient(to bottom, #FFFFFF, transparent); */
+  overflow: hidden;
+  /* border-radius:5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px; */
+  /* border-right: 1px solid black;
+  border-image: linear-gradient(to bottom, black, transparent); */
+  border-image-slice: 1;
+  border-collapse: collapse;
+  border-radius: 14px;
+
+  /* padding: 25px; */
+}
+
+.myheading {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-family: 'Avenir LT Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 24px;
+  /* identical to box height */
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.long_box {
+  font-size: 15px;
+  width: 356px;
+  margin: auto;
+  padding: 0px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.first_name {
+  color: #FFFFFF;
+  font-size: 15px;
+  width: 165px;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+.last_name {
+  color: #FFFFFF;
+  font-size: 15px;
+  width: 165px;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.mybutton {
+  background-color: rgba(255, 255, 255, 0);
+  letter-spacing: 1px;
+  /* color: white; */
+  font-size: 16px;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+
+.anti-america {
+  color: white;
+  background: #326872;
+  backdrop-filter: blur(38px);
+  -webkit-backdrop-filter: blur(38px);
+}
+
+.this-is-america {
+  background: #326872;
+  backdrop-filter: blur(38px);
+  -webkit-backdrop-filter: blur(38px);
+}
+.submit{
+  color: #FFFFFF;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  border-radius: 5px;
+  border: 1px solid #FFFFFF;
 }
 
 @media (max-width:1160px) {
