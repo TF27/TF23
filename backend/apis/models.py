@@ -171,3 +171,23 @@ class robowar_reg(models.Model):
     def __str__(self):
         return self.category.category + " " + self.team_name
     
+class AccoReg(models.Model):
+    acco_id = models.CharField(max_length=50, blank=True, null=True)
+    name = models.CharField(max_length=255, null=True, blank=True)
+    email = models.EmailField(unique=True, max_length=255)
+    phone = models.CharField(blank=True, null=True, max_length=255)
+    gender = models.CharField(blank=True, null=True, max_length=255)
+    dob = models.CharField(blank=True, null=True, max_length=255)
+    city = models.CharField(blank=True, null=True, max_length=255)
+    aadhar = models.CharField(blank=True, null=True, max_length=255)
+    aadhar_proof = models.FileField(upload_to='acco', null=True, blank=True)
+    no_of_male = models.IntegerField(blank=True, null=True)
+    no_of_female = models.IntegerField(blank=True, null=True)
+    checkin = models.CharField(blank=True, null=True, max_length=255)
+    checkout = models.CharField(blank=True, null=True, max_length=255)
+    created_at = models.DateTimeField(blank=True, null=True, auto_now_add=True)
+    payment_id = models.CharField(blank=True, null=True, max_length=255)
+    payment_proof = models.FileField(upload_to='acco', null=True, blank=True)
+    paid = models.BooleanField(default=False)
+    def __str__(self):
+        return self.name
