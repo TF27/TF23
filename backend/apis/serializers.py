@@ -94,3 +94,13 @@ class RobowarsRegSerializer(serializers.ModelSerializer):
     class Meta:
         model = robowar_reg
         fields = '__all__'
+
+class AccoRegSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = AccoReg
+        fields = ['acco_id', 'name', 'email', 'phone', 'gender', 'dob', 'city', 'aadhar', 'aadhar_proof', 'no_of_male', 'no_of_female', 'checkin', 'checkout']
+
+class AccoRegProofSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AccoReg
+        fields = ['payment_id', 'payment_proof', 'email']

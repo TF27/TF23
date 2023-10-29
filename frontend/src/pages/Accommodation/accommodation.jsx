@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './accommodation.module.css';
 import ImageOne from './components/ImageOne';
 import bg from './img/darkbg.png';
+import Register from './components/reg';
 
 const Accommodation = () => {
   const bgHaiJi = {
@@ -97,15 +98,7 @@ const Accommodation = () => {
           )}
 
           {showRegistrationForm && (
-            <div className={styles['content-rect1']}>
-              <div className={styles['content-rect2']}>
-                {/* Your registration form code goes here */}
-                {/* Example: */}
-                <form>
-                  {/* Form fields and submit button */}
-                </form>
-              </div>
-            </div>
+           <Register />
           )
           }
         </div>

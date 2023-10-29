@@ -1,9 +1,9 @@
-import './App.css';
-import React ,{useState,useEffect}from 'react';
-import Header from './components/Navbar/Header';
-import { AuthContextProvider } from './contexts/AuthContext';
-import Protected from './contexts/Protected';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import "./App.css";
+import React, { useState, useEffect } from "react";
+import Header from "./components/Navbar/Header";
+import { AuthContextProvider } from "./contexts/AuthContext";
+import Protected from "./contexts/Protected";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import Cyclothon from './pages/cyclothon/Cyclothon';
 
 import Home from "./pages/Home/home";
@@ -56,17 +56,16 @@ const Workshop = React.lazy(() => import("./pages/workshop/home"));
 const WorkshopExplore = React.lazy(() =>
   import("./pages/workshop/internal/index")
 );
-// const CompiInternal = React.lazy(()=> import('/pages/Compi/Compi_Internal/index'))
-const MUN = React.lazy(() => import("./pages/MUN/mun"));
+
 const IC = React.lazy(() => import("./pages/Events/Innovation Challenge/ic"));
 const RoboReg = React.lazy(() => import("./pages/Robowars/components/Reg"));
 
-const Cyclothon = React.lazy(() => import("./pages/Events/cyclothon/Cyclothon"));
-
+const Cyclothon = React.lazy(() =>
+  import("./pages/Events/cyclothon/Cyclothon")
+);
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-//   const location = useLocation();
 
   useEffect(() => {
     setTimeout(() => {
@@ -74,52 +73,29 @@ function App() {
     }, 4000);
   }, []);
 
-//   let headeru;
-//   if(location.pathname === "/twmun"){
-//     headeru = <Header_update />
-//   }
-//   else{
-//     headeru = <Header />
-//   }
-
   return (
     <div className="App">
       <Router>
         <AuthContextProvider>
-          {/* <Navbar />*/}
-
-          {/* {location.pathname === "/twmun" ? (
-              <Header_update />
-            ) : (
-              <Header />
-            )} */}
-            {/* <Header /> */}
           <Header_update />
 
           <Routes>
             <Route path="/" element={isLoading ? <Loading1 /> : <Home />} />
             <Route path="/legals" element={<Legals />} />
-            {/* <Route path="/cyclothon" element={<Cyclothon />} /> */}
-
-            <Route path='/cyclothon' element={
-              <React.Suspense fallback={<div>Loading...</div>}>
-                <Cyclothon />
-              </React.Suspense>
-            } />
+            <Route
+              path="/cyclothon"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Cyclothon />
+                </React.Suspense>
+              }
+            />
 
             <Route
               path="/workshops/"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Workshop />
-                </React.Suspense>
-              }
-            />
-            <Route
-              path="/twmun"
-              element={
-                <React.Suspense fallback={<div>Loading...</div>}>
-                  <MUN />
                 </React.Suspense>
               }
             />
@@ -131,7 +107,6 @@ function App() {
                 </React.Suspense>
               }
             />
-
             <Route path="/recognition" element={<Recognition />} />
 
             <Route
@@ -168,6 +143,14 @@ function App() {
             />
             <Route
               path="/accommodation"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Accommodation />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/acco"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Accommodation />
@@ -303,7 +286,7 @@ function App() {
                 </React.Suspense>
               }
             />
-            
+
             <Route
               path="/gallery/technoholix"
               element={
@@ -313,7 +296,7 @@ function App() {
               }
             />
 
-            <Route 
+            <Route
               path="/innovationchallenge"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
@@ -321,7 +304,7 @@ function App() {
                 </React.Suspense>
               }
             />
-            <Route 
+            <Route
               path="/ic"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
@@ -329,7 +312,6 @@ function App() {
                 </React.Suspense>
               }
             />
-
           </Routes>
 
           <Footer />
