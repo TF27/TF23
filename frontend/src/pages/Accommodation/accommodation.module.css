@@ -202,6 +202,14 @@ border: 1px solid rgba(255, 255, 255, 0.6);
 
 }
 
+/* In your CSS stylesheet */
+.blue-circle {
+  background-color: blue;
+  color: white; /* You can adjust text color if needed */
+  /* Add any other styling properties you need */
+}
+
+
 .incbutton{
   background-color: transparent;
   border-color: transparent;
