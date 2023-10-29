@@ -9,8 +9,8 @@ const Register = () => {
   const [i, setI] = useState(0);
   const [showRegistrationForm, setShowRegistrationForm] = useState(false);
   const [checked, setChecked] = useState(false);
-
-  const [formFields, setFormFields] = useState({
+  // const [imageName, setImageName] = useState('');
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
@@ -20,20 +20,37 @@ const Register = () => {
     aadhar: "",
     no_of_male: 0,
     no_of_female: 0,
-    checkin: null,
-    checkout: null,
+    checkin: 0,
+    checkout: 0,
     aadhar_proof: null, // Store the uploaded file here
   });
 
+  const updateFormData = (fieldName, value) => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [fieldName]: value,
+    }));
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormFields({ ...formFields, [name]: value });
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    console.log(formData)
   };
 
   const handleFileChange = (e) => {
     const file = e.target.files[0]; // Get the first selected file
-    setFormFields({ ...formFields, aadhar_proof: file });
+    setFormData({ ...formData, aadhar_proof: file });
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+    
+  }
 
   const activateButton = () => {
     setChecked(!checked);
@@ -88,7 +105,16 @@ const Register = () => {
       alert("No Stay?");
       return;
     }
+    console.log(CheckIn, CheckOut, Male, Female)
+  
+    // Update the formData object with the selected values
+    updateFormData("no_of_male", Male);
+    updateFormData("no_of_female", Female);
+    updateFormData("checkin", CheckIn);
+    updateFormData("checkout", CheckOut);
+  
     setShowRegistrationForm(true);
+    console.log(formData);
   };
 
   return (
@@ -102,7 +128,7 @@ const Register = () => {
         >
           <div className={styles.baap}>
             <div className={styles["details-block"]}>
-              <div className={styles.myheading}>Member-{i}</div>
+              {/* <div className={styles.myheading}>Member-{i}</div> */}
               <div className={styles.row}>
                 <div className={styles["col-6"]}>
                   <div className={styles["col-12"]}>
@@ -111,16 +137,20 @@ const Register = () => {
                       <input
                         type="text"
                         className={styles["reg-box"]}
-                        name={`name${i}`}
+                        name='name'
+                        onChange={handleChange}
+                        value={formData.name}
                         required
                       />
                     </div>
                     <div classsubmitFormName={styles["long_box"]}>
                       Gender
                       <select
-                        name={`gender${i}`}
+                        name='gender'
                         type="text"
                         className={styles["reg-box"]}
+                        onChange={handleChange}
+                        value={formData.gender}
                         required
                       >
                         <option
@@ -148,10 +178,11 @@ const Register = () => {
                       <input
                         type="number"
                         className={styles["reg-box"]}
-                        name={`phone${i}`}
+                        name='phone'
                         required
                         onInvalid="this.setCustomValidity('Enter a Valid Phone Number')"
-                        onChange="this.setCustomValidity('')"
+                        onChange={handleChange}
+                        value={formData.phone}
                       />
                     </div>
                     <div className={styles["long_box"]}>
@@ -159,7 +190,9 @@ const Register = () => {
                       <input
                         type="email"
                         className={styles["reg-box"]}
-                        name={`email${i}`}
+                        name='email'
+                        onChange={handleChange}
+                        value={formData.email}
                         required
                       />
                     </div>
@@ -171,7 +204,10 @@ const Register = () => {
                     <input
                       type="date"
                       className={styles["reg-box"]}
-                      name={`dob${i}`}
+                      name='dob'
+                      onChange={handleChange}
+                      value={formData.dob}
+                      required
                     />
                   </div>
                   <div className={styles["long_box"]}>
@@ -179,7 +215,9 @@ const Register = () => {
                     <input
                       type="text"
                       className={styles["reg-box"]}
-                      name={`city${i}`}
+                      name='city'
+                      onChange={handleChange}
+                      value={formData.city}
                       required
                     />
                   </div>
@@ -188,17 +226,21 @@ const Register = () => {
                     <input
                       type="number"
                       className={styles["reg-box"]}
-                      name={`aadhar${i}`}
+                      name='aadhar'
+                      onChange={handleChange}
+                      value={formData.aadhar}
+                      required
                     />
                   </div>
-                  <input type="file" id="image" required multiple />
+
+                  <input type="file" id="image" onChange={handleFileChange} required multiple />
                 </div>
               </div>
             </div>
             <br></br>
             <div className={styles.tick}>
               <div className={styles["col-1"]}>
-                <input type="checkbox" name="terms" id="terms" onChange={activateButton} />
+                <input type="checkbox" name="terms" id="terms" onChange={activateButton} required/>
               </div>
               <div className={styles["col-11"]}>
                 I certify that the above entered information is true to the best
