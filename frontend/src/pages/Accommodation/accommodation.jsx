@@ -105,20 +105,20 @@ const Accommodation = () => {
         </div>
 
         <div className={`${styles.titSpn} ${styles.homeTheme}`}>
-          <div className={styles.titSpn_rect1}>
+          
             {showBackButton ? (
               // Render the "BACK" button when it's enabled
-              <button className={`${styles.titSpn_rect2} ${styles.registerButton}`} onClick={goBack}>
-                BACK
-              </button>
+              <div></div>
             ) : (
               // Render the "REGISTER NOW" button when it's enabled
+              <div className={styles.titSpn_rect1}>
               <button className={`${styles.titSpn_rect2} ${styles.registerButton}`} onClick={toggleRegistrationForm}>
                 REGISTER NOW
               </button>
+              </div>
             )}
           </div>
-        </div>
+        
       </div>
     </div>
   );

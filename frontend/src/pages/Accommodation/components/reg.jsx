@@ -133,7 +133,7 @@ const Register = () => {
               {/* <div className={styles.myheading}>Member-{i}</div> */}
               <div className={styles.row}>
                 <div className={styles["col-6"]}>
-                  <div className={styles["col-12"]}>
+                  <div className={design["pewdiepie"]}>
                     <div className={styles["long_box"]}>
                     <label className={`${design.floatingLabel} ${design.formLabel}`}>
                       Full Name (same as Aadhar Card)
@@ -147,7 +147,8 @@ const Register = () => {
                         required
                       />
                     </div>
-                    <div classsubmitFormName={styles["long_box"]}>
+                    <div className={design.rowing}>
+                    <div className={styles["long_box"]}>
                     <label className={`${design.floatingLabel} ${design.formLabel}`}>
                       Gender
                       </label>
@@ -174,9 +175,6 @@ const Register = () => {
                         >
                           Female
                         </option>
-                        <option className={styles["anti-america"]}>
-                          Others
-                        </option>
                       </select>
                     </div>
                     <div className={styles["long_box"]}>
@@ -193,6 +191,7 @@ const Register = () => {
                         value={formData.phone}
                       />
                     </div>
+                    </div>
                     <div className={styles["long_box"]}>
                     <label className={`${design.floatingLabel} ${design.formLabel}`}>
                       E-mail
@@ -208,7 +207,8 @@ const Register = () => {
                     </div>
                   </div>
                 </div>
-                <div className={styles["col-6"]}>
+                <div className={design["pewdiepie"]}>
+                <div className={design.rowing}>
                   <div className={styles["long_box"]}>
                   <label className={`${design.floatingLabel} ${design.formLabel}`}>
                     Date of Birth
@@ -235,6 +235,7 @@ const Register = () => {
                       required
                     />
                   </div>
+                  </div>
                   <div className={styles["long_box"]}>
                   <label className={`${design.floatingLabel} ${design.formLabel}`}>
                     Aadhar Card Number
@@ -248,12 +249,16 @@ const Register = () => {
                       required
                     />
                   </div>
+                  <div className={design["yoyo"]}>
 
-                  <input type="file" id="image" onChange={handleFileChange} required multiple />
+                  <button className={design["damnbro"]}>Aadhar Card Proof</button>
+                  <input className={design["formiInput"]} type="file" id="image" onChange={handleFileChange} required multiple />
+                  </div>
                 </div>
               </div>
             </div>
             <br></br>
+            <div className={design["pewdiepie"]}>
             <div className={styles.tick}>
               <div className={styles["col-1"]}>
                 <input type="checkbox" name="terms" id="terms" onChange={activateButton} required/>
@@ -266,6 +271,7 @@ const Register = () => {
                 from the accommodation facilities.
               </div>
             </div>
+          </div>
           </div>
           
           <div className={styles.titSpn_rect1}>

@@ -264,7 +264,7 @@ border: 1px solid rgba(255, 255, 255, 0.6);
 
 .long_box {
   font-size: 15px;
-  width: 356px;
+  width: 70vw;
   margin: auto;
   padding: 0px;
   margin-bottom: 10px;
@@ -321,6 +321,15 @@ border: 1px solid rgba(255, 255, 255, 0.6);
   border: 1px solid #FFFFFF;
 }
 
+.tick{
+  display: flex;
+    max-width: 88%;
+    /* justify-content: center; */
+    margin: auto;
+    position: relative;
+    top: -46px;
+    margin-bottom: 28px;
+}
 @media (max-width:1160px) {
   .titSpn_rect2 {
     border: #ab8d60 2px solid;
