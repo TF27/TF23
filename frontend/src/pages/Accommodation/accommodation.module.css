@@ -212,9 +212,9 @@ border: 1px solid rgba(255, 255, 255, 0.6);
   border-bottom-right-radius: 5px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-  width: 956px;
+  width: 80vw;
   height: max-content;
-  margin: auto;
+  margin-top: 10vh;
   border: 1px solid white;
   /* border-image: linear-gradient(to bottom, #FFFFFF, transparent); */
   overflow: hidden;

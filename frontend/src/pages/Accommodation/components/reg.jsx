@@ -66,10 +66,10 @@ const Register = () => {
   const renderRegistrationForm = () => {
     if (showRegistrationForm) {
       return (
-        <form action="{% url 'hospitality-reg' %}" method="post" id="reg-form">
+        <form className={styles.regformi} action="{% url 'hospitality-reg' %}" method="post" id="reg-form">
           <div className={styles.baap}>
             <div className={styles['details-block']}>
-              <div className={styles.myheading}>Member-{{i}}</div>
+              <div className={styles.myheading}>Member-{i}</div>
               <div className={styles.row}>
                 <div className={styles['col-6']}>
                   <div className={styles['col-12']}>
