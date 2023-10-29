@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import styles from "../accommodation.module.css";
+import axios from "axios";
 import design from "./reg.module.css"
 
 const Register = () => {
+  axios.defaults.xsrfCookieName = "csrftoken";
+  axios.defaults.xsrfHeaderName = "X-CSRFToken";
+  
   const [Male, setMale] = useState(0);
   const [Female, setFemale] = useState(0);
   const [CheckIn, setCheckIn] = useState(null);
@@ -40,18 +44,32 @@ const Register = () => {
       ...prevData,
       [name]: value,
     }));
-    console.log(formData)
+    
   };
 
   const handleFileChange = (e) => {
     const file = e.target.files[0]; // Get the first selected file
     setFormData({ ...formData, aadhar_proof: file });
+    console.log(formData)
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    
+    axios
+      .post('/api/acco_reg/', formData, {
+        headers: {
+          'content-Type': 'multipart/form-data'
+        }
+      })
+      .then((res) => {
+        console.log(res);
+        alert("Registration Successful!");
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("Registration Failed!");
+      });
   }
 
   const activateButton = () => {
@@ -275,7 +293,7 @@ const Register = () => {
           </div>
           
           <div className={styles.titSpn_rect1}>
-          <button className={`${styles.titSpn_rect2} ${styles.registerButton}`} type={"submit"}>Submit</button>
+          <button className={`${styles.titSpn_rect2} ${styles.registerButton}`} type={"submit"} onClick={handleSubmit}>Submit</button>
           </div>
         </form>
       ) : (

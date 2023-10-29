@@ -572,9 +572,12 @@ def acco_reg(request):
         acco_reg_serializer = AccoRegSerializer(data=request.data, many=False)
         if acco_reg_serializer.is_valid():
             email = acco_reg_serializer.validated_data.get('email')
-            if acco_reg.objects.filter(email=email).exists():
-                return JsonResponse({'error': 'A registration with this email for this workshop already exists.'}, status=400)
-            last_reg = acco_reg.objects.order_by('-acco_id').first()
+            try:
+                if AccoReg.objects.filter(email=email).exists():
+                    return JsonResponse({'error': 'A registration with this email for this workshop already exists.'}, status=400)
+            except:
+                pass
+            last_reg = AccoReg.objects.order_by('-acco_id').first()
             next_tf_id = '0269'
             if last_reg:
                 last_tf_id = last_reg.acco_id[-4:]
@@ -585,7 +588,7 @@ def acco_reg(request):
             subject = "Accomodation Registration"
             message = f"You have successfully registered for the Accomodation with email {acco_reg_serializer.validated_data.get('email')} and name {acco_reg_serializer.validated_data.get('name')}"
             message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in Accomodation with {acco_reg_serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. Register for more Workshops at techfest.org/workshops \nThanks and Regards,\nTeam Techfest 2023-24"
-            from_email = 'noreply@gmail.com'
+            from_email = 'noreply@techfest.org'
             send_mail(subject, message, from_email, [acco_reg_serializer.validated_data.get('email')])
             return JsonResponse(acco_reg_serializer.data)
         res = {'success': False}
