@@ -1,0 +1,103 @@
+
+.regFormF{
+    top: 100px;
+    position: relative;
+    
+}
+.formLabel {
+    position: absolute;
+    pointer-events: none;
+    /* left: 12px; */
+    /* top: 50%; */
+    transform: translate(10px, 10px);
+    transition: transform 0.2s ease-out, font-size 0.2s ease-out;
+    font-size: 16px;
+    color: #999;
+    z-index: 2;
+}
+ 
+.floatingLabel {
+    transform: translate(50%, -50%) scale(1.2);
+    font-size: 12px;
+    background: rgba(36, 32, 43, .80);
+    border-radius: 20%;
+    padding: 0 10px;
+    color: #fff;
+}
+
+.inputWrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.formInput {
+    color: white;
+    width: 50%;
+    padding: 10px;
+    border: 2px solid #b7aeae;
+    border-radius: 8px;
+    background: rgba(71, 65, 65, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.compiReg form{
+    margin-top: 20px;
+}
+
+.genderOps{
+    border-radius: 8px;
+    background: rgba(71, 65, 65, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    color: black;
+}
+
+.multiWrapper{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 52%;
+}
+
+.multiWrapper .formInput{
+    width: 100%;
+}
+
+.formSubmit{
+    font-size: 18px;
+    background: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 5px 25px;
+}
+
+.godhelp{
+    margin-top: 10vh; 
+}
+
+.formalign{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

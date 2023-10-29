@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import styles from "../accommodation.module.css";
+<<<<<<< HEAD
 import axios from "axios";
+=======
+import design from "./reg.module.css"
+>>>>>>> 1733dbe34cd5aea830a30849c9cb6852798bade0
 
 const Register = () => {
   axios.defaults.xsrfCookieName = "csrftoken";
@@ -28,6 +32,7 @@ const Register = () => {
     checkout: 0,
     aadhar_proof: null, // Store the uploaded file here
   });
+  
 
   const updateFormData = (fieldName, value) => {
     setFormData((prevFormData) => ({
@@ -151,10 +156,12 @@ const Register = () => {
                 <div className={styles["col-6"]}>
                   <div className={styles["col-12"]}>
                     <div className={styles["long_box"]}>
+                    <label className={`${design.floatingLabel} ${design.formLabel}`}>
                       Full Name (same as Aadhar Card)
+                      </label>
                       <input
                         type="text"
-                        className={styles["reg-box"]}
+                        className={design["formInput"]}
                         name='name'
                         onChange={handleChange}
                         value={formData.name}
@@ -162,11 +169,13 @@ const Register = () => {
                       />
                     </div>
                     <div classsubmitFormName={styles["long_box"]}>
+                    <label className={`${design.floatingLabel} ${design.formLabel}`}>
                       Gender
+                      </label>
                       <select
                         name='gender'
                         type="text"
-                        className={styles["reg-box"]}
+                        className={design["formInput"]}
                         onChange={handleChange}
                         value={formData.gender}
                         required
@@ -192,10 +201,12 @@ const Register = () => {
                       </select>
                     </div>
                     <div className={styles["long_box"]}>
+                    <label className={`${design.floatingLabel} ${design.formLabel}`}>
                       Contact Number
+                      </label>
                       <input
                         type="number"
-                        className={styles["reg-box"]}
+                        className={design["formInput"]}
                         name='phone'
                         required
                         onInvalid="this.setCustomValidity('Enter a Valid Phone Number')"
@@ -204,10 +215,12 @@ const Register = () => {
                       />
                     </div>
                     <div className={styles["long_box"]}>
+                    <label className={`${design.floatingLabel} ${design.formLabel}`}>
                       E-mail
+                      </label>
                       <input
                         type="email"
-                        className={styles["reg-box"]}
+                        className={design["formInput"]}
                         name='email'
                         onChange={handleChange}
                         value={formData.email}
@@ -218,10 +231,12 @@ const Register = () => {
                 </div>
                 <div className={styles["col-6"]}>
                   <div className={styles["long_box"]}>
+                  <label className={`${design.floatingLabel} ${design.formLabel}`}>
                     Date of Birth
+                    </label>
                     <input
                       type="date"
-                      className={styles["reg-box"]}
+                      className={design["formInput"]}
                       name='dob'
                       onChange={handleChange}
                       value={formData.dob}
@@ -229,10 +244,12 @@ const Register = () => {
                     />
                   </div>
                   <div className={styles["long_box"]}>
+                  <label className={`${design.floatingLabel} ${design.formLabel}`}>
                     City
+                    </label>
                     <input
                       type="text"
-                      className={styles["reg-box"]}
+                      className={design["formInput"]}
                       name='city'
                       onChange={handleChange}
                       value={formData.city}
@@ -240,10 +257,12 @@ const Register = () => {
                     />
                   </div>
                   <div className={styles["long_box"]}>
+                  <label className={`${design.floatingLabel} ${design.formLabel}`}>
                     Aadhar Card Number
+                    </label>
                     <input
                       type="number"
-                      className={styles["reg-box"]}
+                      className={design["formInput"]}
                       name='aadhar'
                       onChange={handleChange}
                       value={formData.aadhar}
@@ -269,8 +288,9 @@ const Register = () => {
               </div>
             </div>
           </div>
-          
-          <button type="submit" onClick={handleSubmit}>Submit</button>
+          <div className={styles.titSpn_rect1}>
+          <button className={`${styles.titSpn_rect2} ${styles.registerButton}`} type={"submit"} onClick={handleSubmit}>Submit</button>
+          </div>
         </form>
       ) : (
         <div className={styles["register-kar"]}>
@@ -280,36 +300,46 @@ const Register = () => {
                 <h4>Check-in</h4>
                 <h6>December 2023</h6>
                 <div className={styles["round-main"]}>
-                  <div
-                    className={styles["round"]}
+                <div
+                    className={`${styles["round"]} ${
+                      CheckIn === 26 ? styles["blue-circle"] : ""
+                    }`}
                     onClick={() => checkin(26)}
                     id="i26"
                   >
                     <h6>26</h6>
                   </div>
                   <div
-                    className={styles["round"]}
+                    className={`${styles["round"]} ${
+                      CheckIn === 27 ? styles["blue-circle"] : ""
+                    }`}
                     onClick={() => checkin(27)}
                     id="i27"
                   >
                     <h6>27</h6>
                   </div>
                   <div
-                    className={styles["round"]}
+                    className={`${styles["round"]} ${
+                      CheckIn === 28 ? styles["blue-circle"] : ""
+                    }`}
                     onClick={() => checkin(28)}
                     id="i28"
                   >
                     <h6>28</h6>
                   </div>
                   <div
-                    className={styles["round"]}
+                    className={`${styles["round"]} ${
+                      CheckIn === 29 ? styles["blue-circle"] : ""
+                    }`}
                     onClick={() => checkin(29)}
                     id="i29"
                   >
                     <h6>29</h6>
                   </div>
                   <div
-                    className={styles["round"]}
+                    className={`${styles["round"]} ${
+                      CheckIn === 30 ? styles["blue-circle"] : ""
+                    }`}
                     onClick={() => checkin(30)}
                     id="i30"
                   >
@@ -323,36 +353,46 @@ const Register = () => {
                 <h4>Check-out</h4>
                 <h6>December 2023</h6>
                 <div className={styles["round-main"]}>
-                  <div
-                    className={styles["round"]}
+                <div
+                    className={`${styles["round"]} ${
+                      CheckOut === 26 ? styles["blue-circle"] : ""
+                    }`}
                     onClick={() => checkout(26)}
                     id="o26"
                   >
                     <h6>26</h6>
                   </div>
                   <div
-                    className={styles["round"]}
+                    className={`${styles["round"]} ${
+                      CheckOut === 27 ? styles["blue-circle"] : ""
+                    }`}
                     onClick={() => checkout(27)}
                     id="o27"
                   >
                     <h6>27</h6>
                   </div>
                   <div
-                    className={styles["round"]}
+                    className={`${styles["round"]} ${
+                      CheckOut === 28 ? styles["blue-circle"] : ""
+                    }`}
                     onClick={() => checkout(28)}
                     id="o28"
                   >
                     <h6>28</h6>
                   </div>
                   <div
-                    className={styles["round"]}
+                    className={`${styles["round"]} ${
+                      CheckOut === 29 ? styles["blue-circle"] : ""
+                    }`}
                     onClick={() => checkout(29)}
                     id="o29"
                   >
                     <h6>29</h6>
                   </div>
                   <div
-                    className={styles["round"]}
+                    className={`${styles["round"]} ${
+                      CheckOut === 30 ? styles["blue-circle"] : ""
+                    }`}
                     onClick={() => checkout(30)}
                     id="o30"
                   >
