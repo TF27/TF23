@@ -63,10 +63,11 @@ const Register = () => {
     setShowRegistrationForm(true);
   };
 
-  const renderRegistrationForm = () => {
-    if (showRegistrationForm) {
-      return (
-        <form className={styles.regformi} action="{% url 'hospitality-reg' %}" method="post" id="reg-form">
+
+  return (
+    {showRegistrationForm ? (
+      <>
+      <form className={styles.regformi} action="{% url 'hospitality-reg' %}" method="post" id="reg-form">
           <div className={styles.baap}>
             <div className={styles['details-block']}>
               <div className={styles.myheading}>Member-{i}</div>
@@ -130,14 +131,9 @@ const Register = () => {
             </div>
           </div>
         </form>
-      );
-    } else {
-      return null;
-    }
-  };
-
-  return (
-    <div className={styles['register-kar']}>
+        </>
+    ): (
+      <div className={styles['register-kar']}>
       <div className={styles['check-kar']}>
         <div className={styles['check-rect1']}>
           <div className={styles['check-rect2']}>
@@ -197,11 +193,10 @@ const Register = () => {
           </p>
         </div>
       </div>
-      {/* Submit button */}
       <button onClick={submitForm}>Submit</button>
-      {renderRegistrationForm()}
     </div>
-  );
+    )
+    }
 };
 
 export default Register;
