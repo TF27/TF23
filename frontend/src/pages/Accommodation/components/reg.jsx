@@ -333,7 +333,9 @@ const Register = () => {
               </p>
             </div>
           </div>
-          <button onClick={goNext}>Next</button>
+          <div className={styles.titSpn_rect1}>
+          <button className={`${styles.titSpn_rect2} ${styles.registerButton}`} onClick={goNext}>Next</button>
+          </div>
         </div>
       )}
     </>
