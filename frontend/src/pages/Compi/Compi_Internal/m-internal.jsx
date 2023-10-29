@@ -33,27 +33,61 @@ const MInternal = () => {
   const [roboCamp, setRoboCamp] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
-    // Check compiName and perform redirections
-    if (compiName === "cozmo") {
-      navigate("/competitions/cozmoclench");
-    } else if (compiName === "mesh") {
-      navigate("/competitions/meshmerize");
-    } else if (compiName === "tfo") {
-      navigate("/competitions/techfest%20olympiad");
-    } else if (compiName === "uf") {
-      navigate("/competitions/urban-futurism");
-    } else if (compiName === "taskwhiz") {
-      navigate("/competitions/task%20whiz");
-    } else if (compiName === "ai") {
-      navigate("workshops/artificial%20intelligence");
-    } else if (compiName === "ml") {
-      navigate("/workshops/machine%20learning");
-    } else if (compiName === "workshop") {
-      navigate("/workshops");
-    } else if (compiName === "robocap league") {
-      setRoboCamp(true);
-    }
-    // Add more conditions as needed for other compiNames
+  // Check compiName and perform redirections
+  if (compiName === "cozmo") {
+    navigate("/competitions/cozmoclench");
+  } else if (compiName === "mesh") {
+    navigate("/competitions/meshmerize");
+  } else if (compiName === "tfo") {
+    navigate("/competitions/techfest%20olympiad");
+  } else if (compiName === "uf") {
+    navigate("/competitions/urban-futurism");
+  } else if (compiName === "taskwhiz") {
+    navigate("/competitions/task%20whiz");
+  } else if (compiName === "ai") {
+    navigate("/workshops/artificial%20intelligence");
+  } else if (compiName === "ml") {
+    navigate("/workshops/machine%20learning");
+  } else if (compiName === "workshop") {
+    navigate("/workshops");
+  } else if (compiName === "chatgpt") {
+    navigate("/workshops/chatgpt%20(prompt%20engineering)");
+  } else if (compiName === "hacking") {
+    navigate("/workshops/ethical%20hacking");
+  } else if (compiName === "google") {
+    navigate("/workshops/data%20to%20aI%20by%20google");
+  } else if (compiName === "aws") {
+    navigate("/workshops/cloud%20computing%20by%20amazon");
+  } else if (compiName === "tih") {
+      navigate("/competitions/tIH%20-%20ioT");
+  } else if (compiName === "sixthsense") {
+    navigate("/workshops/6th%20sense%20robotics"); 
+  } else if (compiName === "quadcopter") {
+    navigate("/workshops/quadcopter"); 
+  } else if (compiName === "webdev") {
+    navigate("/workshops/web%20development"); 
+  } else if (compiName === "appdev") {
+    navigate("/workshops/android%20development"); 
+  } else if (compiName === "crypto") {
+    navigate("/workshops/crypto%20trading%20by%20wazirX"); 
+  } else if (compiName === "web3") {
+    navigate("/workshops/web%203.0"); 
+  } else if (compiName === "csec") {
+    navigate("/workshops/cybersecurity"); 
+  } else if (compiName === "analytics") {
+    navigate("/workshops/data%20analytics"); 
+  } else if (compiName === "ev") {
+    navigate("/workshops/electric%20vehicles"); 
+  } else if (compiName === "solarizer") {
+    navigate("/workshops/solarizer"); 
+  } else if (compiName === "robotics") {
+    navigate("/workshops/gesture%20robotics"); 
+  } else if (compiName === "arduino") {
+    navigate("/workshops/arduino"); 
+  } else if (compiName === "robocap league") {
+    setRoboCamp(true);
+  }
+// Add more conditions as needed for other compiNames
   }, [navigate, compiName]);
 
   const [data, setData] = useState([]);
