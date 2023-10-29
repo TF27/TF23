@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import styles from "../accommodation.module.css";
-<<<<<<< HEAD
 import axios from "axios";
-=======
 import design from "./reg.module.css"
->>>>>>> 1733dbe34cd5aea830a30849c9cb6852798bade0
 
 const Register = () => {
   axios.defaults.xsrfCookieName = "csrftoken";
