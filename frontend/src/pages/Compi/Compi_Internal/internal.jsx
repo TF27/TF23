@@ -50,6 +50,10 @@ const Internal = () => {
       navigate("/workshops/machine%20learning");
     } else if (compiName === "workshop") {
       navigate("/workshops");
+    } else if (compiName === "chatgpt") {
+      navigate("/workshops/chatgpt%20(prompt%20engineering)");
+    } else if (compiName === "hacking") {
+      navigate("/workshops/ethical%20hacking");
     } else if (compiName === "google") {
       navigate("/workshops/data%20to%20aI%20by%20google");
     } else if (compiName === "aws") {

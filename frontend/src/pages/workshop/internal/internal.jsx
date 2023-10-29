@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLayoutEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { UserAuth } from "../../../contexts/AuthContext";
 import styles from "./internal.module.css";
@@ -48,7 +48,17 @@ const Internal = () => {
     window.scrollTo(0, 0);
   });
 
+  const navigate = useNavigate();
   const google_id = user ? user.email : null;
+
+  useEffect(() => {
+    if(cardName === "chatgpt"){
+      navigate("/workshops/chatgpt%20(prompt%20engineering)");
+    }
+    if(cardName === "hacking"){
+      navigate("/workshops/ethical%20hacking");
+    }
+  }, [cardName, navigate]);
 
   useEffect(() => {
     const fetchData = async () => {
