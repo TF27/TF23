@@ -8,6 +8,7 @@ const Register = () => {
   const [CheckOut, setCheckOut] = useState(null);
   const [i, setI] = useState(0);
   const [showRegistrationForm, setShowRegistrationForm] = useState(false);
+  const [checked, setChecked] = useState(false);
 
   const [formFields, setFormFields] = useState({
     name: "",
@@ -33,6 +34,10 @@ const Register = () => {
     const file = e.target.files[0]; // Get the first selected file
     setFormFields({ ...formFields, aadhar_proof: file });
   };
+
+  const activateButton = () => {
+    setChecked(!checked);
+  }
 
   const incrementMale = () => {
     setMale(Male + 1);
@@ -186,13 +191,14 @@ const Register = () => {
                       name={`aadhar${i}`}
                     />
                   </div>
+                  <input type="file" id="image" required multiple />
                 </div>
               </div>
             </div>
             <br></br>
             <div className={styles.tick}>
               <div className={styles["col-1"]}>
-                {/* <input type="checkbox" name="terms" id="terms" onChange={activateButton} /> */}
+                <input type="checkbox" name="terms" id="terms" onChange={activateButton} />
               </div>
               <div className={styles["col-11"]}>
                 I certify that the above entered information is true to the best
@@ -203,6 +209,8 @@ const Register = () => {
               </div>
             </div>
           </div>
+          
+          <button type="submit">Submit</button>
         </form>
       ) : (
         <div className={styles["register-kar"]}>
