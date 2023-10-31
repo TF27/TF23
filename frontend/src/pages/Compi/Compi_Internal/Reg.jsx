@@ -298,6 +298,9 @@ const Reg = () => {
                       <option value="5" className={styles.genderOps}>
                         Bangalore
                       </option>
+                      <option value="6" className={styles.genderOps}>
+                        Nepal
+                      </option>
                     </select>
                   </div>
                 ) : (
