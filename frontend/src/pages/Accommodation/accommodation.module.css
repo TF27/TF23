@@ -51,7 +51,7 @@
 .content {
   display: flex;
   flex-direction: row;
-  height: 60vh;
+  height: 90vh;
   width: 80vw;
   margin-top: 0px;
   padding: 20px;
@@ -68,6 +68,8 @@
   width: 10vw;
   height: 40px;
   margin: auto;
+  top: 13px;
+  position: relative;
 }
 
 .titSpn_rect2 {
@@ -87,24 +89,35 @@
 .content-rect1 {
   border: #ab8d60 2px solid;
   width: 80vw;
-  height: 40vh;
+  height: 70vh;
   margin: auto;
 }
 
 .content-rect2 {
   border: #ab8d60 2px solid;
   width: 80vw;
-  height: 40vh;
+  height: 70vh;
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
   transform: translate(3px, 3px);
   display: flex;
   align-items: center;
-  justify-content: center;
   font-size: 15px;
   font-family: "Forum", sans-serif;
+  white-space: pre-wrap;
+  text-align: left;
+  padding-left: 20px;
+  overflow-y: auto;
 }
 
+.centered-content {
+  text-align: center; /* Center the text horizontally */
+}
+
+.centered-content h1 {
+  font-size: 34px; /* Adjust the font size for the heading as needed */
+  text-align: center;
+}
 .check-kar{
   position: relative;
   display: flex;
@@ -112,8 +125,8 @@
   justify-content: center;
   gap: -20vw;
   width: 78vw;
-    top: 3vh;
-    height: 40vh;
+  top: 3vh;
+  height: 40vh;
 }
 
 .check-rect1 {
@@ -144,7 +157,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100vw;
-  height: 35vw;
+  height: 70vh;
 }
 
 .people-rect1 {
@@ -191,6 +204,14 @@ border: 1px solid rgba(255, 255, 255, 0.6);
 
 }
 
+/* In your CSS stylesheet */
+.blue-circle {
+  background-color: blue;
+  color: white; /* You can adjust text color if needed */
+  /* Add any other styling properties you need */
+}
+
+
 .incbutton{
   background-color: transparent;
   border-color: transparent;
@@ -212,9 +233,9 @@ border: 1px solid rgba(255, 255, 255, 0.6);
   border-bottom-right-radius: 5px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-  width: 956px;
+  width: 80vw;
   height: max-content;
-  margin: auto;
+  margin-top: 10vh;
   border: 1px solid white;
   /* border-image: linear-gradient(to bottom, #FFFFFF, transparent); */
   overflow: hidden;
@@ -245,7 +266,7 @@ border: 1px solid rgba(255, 255, 255, 0.6);
 
 .long_box {
   font-size: 15px;
-  width: 356px;
+  width: 70vw;
   margin: auto;
   padding: 0px;
   margin-bottom: 10px;
@@ -302,6 +323,15 @@ border: 1px solid rgba(255, 255, 255, 0.6);
   border: 1px solid #FFFFFF;
 }
 
+.tick{
+  display: flex;
+    max-width: 88%;
+    /* justify-content: center; */
+    margin: auto;
+    position: relative;
+    top: -46px;
+    margin-bottom: 28px;
+}
 @media (max-width:1160px) {
   .titSpn_rect2 {
     border: #ab8d60 2px solid;
@@ -319,15 +349,21 @@ border: 1px solid rgba(255, 255, 255, 0.6);
   .content-rect2 {
     border: #ab8d60 2px solid;
     width: 80vw;
-    height: 40vh;
+    height: 60vh;
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
     transform: translate(3px, 3px);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
+    font-size: 10px;
     font-family: "Forum", sans-serif;
+  }
+  .content-rect1 {
+    border: #ab8d60 2px solid;
+    width: 80vw;
+    height: 60vh;
+    margin: auto;
   }
   
 }
@@ -346,4 +382,118 @@ border: 1px solid rgba(255, 255, 255, 0.6);
     font-size: 8px;
     font-family: "Forum", sans-serif;
   }
+}
+
+@media (max-width:668px) {
+  .check-kar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: -20vw;
+    width: 100vw;
+    top: 3vh;
+    height: 40vh;
+  }
+
+  .check-rect1 {
+    border: #ab8d60 2px solid;
+    width: 57vw;
+    height: 18vh;
+    margin: auto;
+  }
+  
+  .check-rect2 {
+    border: #ab8d60 2px solid;
+    width: 57vw;
+    height: 18vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    transform: translate(3px, 3px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-family: "Forum", sans-serif;
+  }
+
+  .register-kar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 70vh;
+  }
+  
+  .people-rect1 {
+    border: #ab8d60 2px solid;
+    width: 78vw;
+    height: 8vh;
+    margin: auto;
+    margin-bottom: 10vw;
+    margin-top: 6vh;
+  }
+  
+  .people-rect2 {
+    border: #ab8d60 2px solid;
+    width: 78vw;
+    height: 8vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    transform: translate(3px, 3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: "Forum", sans-serif;
+    
+  }
+
+  .round-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 56vw;
+    height: 8vw;
+  }
+  .round{
+    box-sizing: border-box;
+    cursor: pointer;
+  
+  /*position: absolute;*/
+  width: 13%;
+    height: 100%;
+  /*height: 72px;*/
+  border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 100%;
+    margin: auto;
+    padding: 2px;
+  
+  }
+
+  .titSpn_rect1 {
+    border: #ab8d60 2px solid;
+    width: 35vw;
+    height: 6vh;
+    margin: auto;
+    top: 13px;
+    position: relative;
+  }
+  
+  .titSpn_rect2 {
+    border: #ab8d60 2px solid;
+    width: 35vw;
+    height: 6vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    transform: translate(3px, 3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-family: "Forum", sans-serif;
+  }
+  
 }

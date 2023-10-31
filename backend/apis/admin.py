@@ -16,3 +16,5 @@ admin.site.register(workshop_reg)
 
 admin.site.register(Robowars)
 admin.site.register(robowar_reg)
+
+admin.site.register(AccoReg)

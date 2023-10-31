@@ -60,6 +60,30 @@ const Internal = () => {
       navigate("/workshops/cloud%20computing%20by%20amazon");
     } else if (compiName === "tih") {
         navigate("/competitions/tIH%20-%20ioT");
+    } else if (compiName === "sixthsense") {
+      navigate("/workshops/6th%20sense%20robotics"); 
+    } else if (compiName === "quadcopter") {
+      navigate("/workshops/quadcopter"); 
+    } else if (compiName === "webdev") {
+      navigate("/workshops/web%20development"); 
+    } else if (compiName === "appdev") {
+      navigate("/workshops/android%20development"); 
+    } else if (compiName === "crypto") {
+      navigate("/workshops/crypto%20trading%20by%20wazirX"); 
+    } else if (compiName === "web3") {
+      navigate("/workshops/web%203.0"); 
+    } else if (compiName === "csec") {
+      navigate("/workshops/cybersecurity"); 
+    } else if (compiName === "analytics") {
+      navigate("/workshops/data%20analytics"); 
+    } else if (compiName === "ev") {
+      navigate("/workshops/electric%20vehicles"); 
+    } else if (compiName === "solarizer") {
+      navigate("/workshops/solarizer"); 
+    } else if (compiName === "robotics") {
+      navigate("/workshops/gesture%20robotics"); 
+    } else if (compiName === "arduino") {
+      navigate("/workshops/arduino"); 
     } else if (compiName === "robocap league") {
       setRoboCamp(true);
     }
