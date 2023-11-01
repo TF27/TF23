@@ -84,6 +84,10 @@ const Internal = () => {
       navigate("/workshops/gesture%20robotics"); 
     } else if (compiName === "arduino") {
       navigate("/workshops/arduino"); 
+    } else if (compiName === "python") {
+      navigate("/workshops/python"); 
+    } else if (compiName === "blockchain") {
+      navigate("/workshops/blockchain"); 
     } else if (compiName === "robocap league") {
       setRoboCamp(true);
     }
