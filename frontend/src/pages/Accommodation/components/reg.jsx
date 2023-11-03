@@ -65,11 +65,13 @@ const Register = () => {
       .then((res) => {
         console.log(res);
         alert("Registration Successful!");
+        window.location.href = 'https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer';
       })
       .catch((err) => {
         console.log(err);
         alert("Registration Failed!");
       });
+  
   }
 
   const activateButton = () => {
@@ -293,7 +295,7 @@ const Register = () => {
           </div>
           
           <div className={styles.titSpn_rect1}>
-          <button className={`${styles.titSpn_rect2} ${styles.registerButton}`} type={"submit"} onClick={handleSubmit}>Submit</button>
+          <button className={`${styles.titSpn_rect2} ${styles.registerButton}`} type={"submit"} onClick={handleSubmit}>Pay</button>
           </div>
         </form>
       ) : (

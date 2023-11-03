@@ -101,9 +101,8 @@
   color: white;
   transform: translate(3px, 3px);
   display: flex;
-  align-items: center;
   font-size: 15px;
-  font-family: "Forum", sans-serif;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
   white-space: pre-wrap;
   text-align: left;
   padding-left: 20px;
@@ -145,12 +144,11 @@
   transform: translate(3px, 3px);
   display: flex;
   flex-direction: column;
-  text-align: left;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+  justify-content: center;
+  text-align: center;
   font-size: 15px;
-  overflow-y: scroll;
 }
-.content-rect2 *{
+.content-rect2 *, .content-rect2{
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
 }
 
