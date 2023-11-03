@@ -1,40 +1,42 @@
-import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import styles from "../accommodation.module.css";
 import axios from "axios";
-import { UserAuth } from "../../../contexts/AuthContext";
-import styles from "./reg.module.css";
+import design from "./reg.module.css"
 
-// import bgimg from "./../static/img/exp_bg.png";
-import bgimg from "../img/accoback.png";
-
-const Reg = () => {
+const Register = () => {
   axios.defaults.xsrfCookieName = "csrftoken";
   axios.defaults.xsrfHeaderName = "X-CSRFToken";
-
-  const [romeo, setRegsitering] = useState(false);
-  const { compiName } = useParams();
-  const { user } = UserAuth();
-  const googleId = user.uid;
-  const navigate = useNavigate();
-
+  
+  const [Male, setMale] = useState(0);
+  const [Female, setFemale] = useState(0);
+  const [CheckIn, setCheckIn] = useState(null);
+  const [CheckOut, setCheckOut] = useState(null);
+  const [i, setI] = useState(0);
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
+  const [checked, setChecked] = useState(false);
+  // const [imageName, setImageName] = useState('');
   const [formData, setFormData] = useState({
-    compi: compiName,
-    name: user?.displayName,
-    email: user?.email,
-    google_id: user?.uid,
-    phoneno: "",
-    city: "",
-    country: "",
+    name: "",
+    email: "",
+    phone: "",
     gender: "",
-    zonals: "",
-    pincode: "",
-    address: "",
-    instiname: "",
-    instiadress: "",
-    instipincode: "",
-    yearofstudy: "",
-    // ca_refral: '',
+    dob: "",
+    city: "",
+    aadhar: "",
+    no_of_male: 0,
+    no_of_female: 0,
+    checkin: 0,
+    checkout: 0,
+    aadhar_proof: null, // Store the uploaded file here
   });
+  
+
+  const updateFormData = (fieldName, value) => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [fieldName]: value,
+    }));
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,416 +44,406 @@ const Reg = () => {
       ...prevData,
       [name]: value,
     }));
+    
   };
 
-  // const handleFocus = (e) => {
-  //   const label = e.target.previousSibling;
-  //   if (romeo) {
-  //   } else {
-  //     if (label) {
-  //       label.classList.add(styles.floatingLabel);
-  //     }
-  //   }
-  // };
+  const handleFileChange = (e) => {
+    const file = e.target.files[0]; // Get the first selected file
+    setFormData({ ...formData, aadhar_proof: file });
+    console.log(formData)
+  };
 
-  // const handleBlur = (e) => {
-  //   const label = e.target.previousSibling;
-  //   if (romeo) {
-  //   } else {
-  //     if (label && e.target.value === "") {
-  //       label.classList.remove(styles.floatingLabel);
-  //     }
-  //   }
-  // };
-  // function checkInputValues() {
-  //   const inputs = document.querySelectorAll("input");
-
-  //   inputs.forEach((input) => {
-  //     handleFocus({ target: input });
-  //     handleBlur({ target: input });
-  //   });
-  // }
-  // setInterval(checkInputValues, 100);
-
-  const handleSubmit = (event) => {
-    setRegsitering(true);
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     console.log(formData);
     axios
-      .post("/api/compi_reg/", formData)
-      .then((response) => {
-        console.log("Added Successfully!!");
-        navigate(`/competitions/${compiName}`);
+      .post('/api/acco_reg/', formData, {
+        headers: {
+          'content-Type': 'multipart/form-data'
+        }
       })
-      .catch((error) => {
-        console.error("Error:", error);
-        setRegsitering(false);
-        // Handle the error
+      .then((res) => {
+        console.log(res);
+        alert("Registration Successful!");
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("Registration Failed!");
       });
+  }
+
+  const activateButton = () => {
+    setChecked(!checked);
+  }
+
+  const incrementMale = () => {
+    setMale(Male + 1);
+    setI(Male + 1 + Female); // Update 'i' when male count changes
   };
 
-  const fixbg = {
-    backgroundImage: `url(${bgimg})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    height: "100vh",
-    position: "fixed",
-    width: "100%",
-    zIndex: "-1",
-    top: "0",
-    backgroundAttachment: "fixed",
+  const decrementMale = () => {
+    if (Male > 0) {
+      setMale(Male - 1);
+      setI(Male - 1 + Female); // Update 'i' when male count changes
+    }
   };
+
+  const incrementFemale = () => {
+    setFemale(Female + 1);
+    setI(Male + 1 + Female); // Update 'i' when female count changes
+  };
+
+  const decrementFemale = () => {
+    if (Female > 0) {
+      setFemale(Female - 1);
+      setI(Male + Female - 1); // Update 'i' when female count changes
+    }
+  };
+
+  const checkin = (date) => {
+    setCheckIn(date);
+  };
+
+  const checkout = (date) => {
+    setCheckOut(date);
+  };
+
+  const goNext = () => {
+    if (CheckIn > CheckOut) {
+      alert("Time travel not available!");
+      return;
+    }
+    if (CheckIn === null) {
+      alert("Choose Check-in date");
+      return;
+    }
+    if (CheckOut === null) {
+      alert("Choose Check-out date");
+      return;
+    }
+    if (Male + Female === 0) {
+      alert("No Stay?");
+      return;
+    }
+    console.log(CheckIn, CheckOut, Male, Female)
+  
+    // Update the formData object with the selected values
+    updateFormData("no_of_male", Male);
+    updateFormData("no_of_female", Female);
+    updateFormData("checkin", CheckIn);
+    updateFormData("checkout", CheckOut);
+  
+    setShowRegistrationForm(true);
+    console.log(formData);
+  };
+
   return (
-    <div className={styles.compiReg}>
-      <div style={fixbg} />
-      <div className={styles.bgitis}>
-        <div className={styles.overlay}>
-          <div className={styles.reg_head}>
-            <div>
-              <img src={user?.photoURL} alt="User" />
-            </div>
-            <div className={styles.head_n}>
-              <div>
-                <h2>{user?.displayName}</h2>
+    <>
+      {showRegistrationForm ? (
+        <form
+          className={styles.regformi}
+          action="{% url 'hospitality-reg' %}"
+          method="post"
+          id="reg-form"
+        >
+          <div className={styles.baap}>
+            <div className={styles["details-block"]}>
+              {/* <div className={styles.myheading}>Member-{i}</div> */}
+              <div className={styles.row}>
+                <div className={styles["col-6"]}>
+                  <div className={design["pewdiepie"]}>
+                    <div className={styles["long_box"]}>
+                    <label className={`${design.floatingLabel} ${design.formLabel}`}>
+                      Full Name (same as Aadhar Card)
+                      </label>
+                      <input
+                        type="text"
+                        className={design["formInput"]}
+                        name='name'
+                        onChange={handleChange}
+                        value={formData.name}
+                        required
+                      />
+                    </div>
+                    <div className={design.rowing}>
+                    <div className={styles["long_box"]}>
+                    <label className={`${design.floatingLabel} ${design.formLabel}`}>
+                      Gender
+                      </label>
+                      <select
+                        name='gender'
+                        type="text"
+                        className={design["formInput"]}
+                        onChange={handleChange}
+                        value={formData.gender}
+                        required
+                      >
+                        <option
+                          className={styles["this-is-america"]}
+                          disabled="disabled"
+                          selected="selected"
+                          value=""
+                        ></option>
+                        <option className={styles["anti-america"]} value="Male">
+                          Male
+                        </option>
+                        <option
+                          className={styles["anti-america"]}
+                          value="Female"
+                        >
+                          Female
+                        </option>
+                      </select>
+                    </div>
+                    <div className={styles["long_box"]}>
+                    <label className={`${design.floatingLabel} ${design.formLabel}`}>
+                      Contact Number
+                      </label>
+                      <input
+                        type="number"
+                        className={design["formInput"]}
+                        name='phone'
+                        required
+                        onInvalid="this.setCustomValidity('Enter a Valid Phone Number')"
+                        onChange={handleChange}
+                        value={formData.phone}
+                      />
+                    </div>
+                    </div>
+                    <div className={styles["long_box"]}>
+                    <label className={`${design.floatingLabel} ${design.formLabel}`}>
+                      E-mail
+                      </label>
+                      <input
+                        type="email"
+                        className={design["formInput"]}
+                        name='email'
+                        onChange={handleChange}
+                        value={formData.email}
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className={design["pewdiepie"]}>
+                <div className={design.rowing}>
+                  <div className={styles["long_box"]}>
+                  <label className={`${design.floatingLabel} ${design.formLabel}`}>
+                    Date of Birth
+                    </label>
+                    <input
+                      type="date"
+                      className={design["formInput"]}
+                      name='dob'
+                      onChange={handleChange}
+                      value={formData.dob}
+                      required
+                    />
+                  </div>
+                  <div className={styles["long_box"]}>
+                  <label className={`${design.floatingLabel} ${design.formLabel}`}>
+                    City
+                    </label>
+                    <input
+                      type="text"
+                      className={design["formInput"]}
+                      name='city'
+                      onChange={handleChange}
+                      value={formData.city}
+                      required
+                    />
+                  </div>
+                  </div>
+                  <div className={styles["long_box"]}>
+                  <label className={`${design.floatingLabel} ${design.formLabel}`}>
+                    Aadhar Card Number
+                    </label>
+                    <input
+                      type="number"
+                      className={design["formInput"]}
+                      name='aadhar'
+                      onChange={handleChange}
+                      value={formData.aadhar}
+                      required
+                    />
+                  </div>
+                  <div className={design["yoyo"]}>
+
+                  <button className={design["damnbro"]}>Aadhar Card Proof</button>
+                  <input className={design["formiInput"]} type="file" id="image" onChange={handleFileChange} required multiple />
+                  </div>
+                </div>
               </div>
-              <hr></hr>
-              <div>Every Field is Compulsory</div>
+            </div>
+            <br></br>
+            <div className={design["pewdiepie"]}>
+            <div className={styles.tick}>
+              <div className={styles["col-1"]}>
+                <input type="checkbox" name="terms" id="terms" onChange={activateButton} required/>
+              </div>
+              <div className={styles["col-11"]}>
+                I certify that the above entered information is true to the best
+                of my knowledge and belief, and I understand that I subject
+                myself to disciplinary action in the event that the above facts
+                are found to be falsified, which includes immediate dismissal
+                from the accommodation facilities.
+              </div>
             </div>
           </div>
-          <div>
-            <form onSubmit={handleSubmit} autoComplete="off">
-              <div className={styles.regFormContainer}>
+          </div>
+          
+          <div className={styles.titSpn_rect1}>
+          <button className={`${styles.titSpn_rect2} ${styles.registerButton}`} type={"submit"} onClick={handleSubmit}>Submit</button>
+          </div>
+        </form>
+      ) : (
+        <div className={styles["register-kar"]}>
+          <div className={styles["check-kar"]}>
+            <div className={styles["check-rect1"]}>
+              <div className={styles["check-rect2"]}>
+                <h4>Check-in</h4>
+                <h6>December 2023</h6>
+                <div className={styles["round-main"]}>
                 <div
-                  className={styles.inputWrapper}
-                  style={{ display: "none" }}
-                >
-                  <label
-                    className={`${styles.floatingLabel} ${styles.formLabel}`}
+                    className={`${styles["round"]} ${
+                      CheckIn === 26 ? styles["blue-circle"] : ""
+                    }`}
+                    onClick={() => checkin(26)}
+                    id="i26"
                   >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={user.displayName}
-                    onChange={handleChange}
-                    className={styles.formInput}
-                    disabled
-                    autoComplete="off"
-                  />
-                </div>
-                <div className={`row ${styles.multiWrapper}`}>
-                  <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label
-                      className={`${styles.floatingLabel} ${styles.formLabel}`}
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={user.email}
-                      onChange={handleChange}
-                      className={styles.formInput}
-                      disabled
-                      autoComplete="off"
-                    />
+                    <h6>26</h6>
                   </div>
-                  <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label
-                      className={`${styles.floatingLabel} ${styles.formLabel}`}
-                    >
-                      Phone No.
-                    </label>
-                    <input
-                      type="number"
-                      name="phoneno"
-                      value={formData.phoneno}
-                      onChange={handleChange}
-                      className={styles.formInput}
-                      autoComplete="off"
-                      maxLength={6}
-                      required
-                    />
-                  </div>
-                </div>
-                <div className={`row ${styles.multiWrapper}`}>
-                  <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label
-                      className={`${styles.floatingLabel} ${styles.formLabel}`}
-                    >
-                      Gender
-                    </label>
-                    <select
-                      name="gender"
-                      value={formData.gender}
-                      onChange={handleChange}
-                      className={styles.formInput}
-                      required
-                    >
-                      <option
-                        value=""
-                        style={{ display: "none" }}
-                        className={styles.genderOps}
-                      >
-                        Select
-                      </option>
-                      <option value="M" className={styles.genderOps}>
-                        Male
-                      </option>
-                      <option value="F" className={styles.genderOps}>
-                        Female
-                      </option>
-                      <option value="O" className={styles.genderOps}>
-                        Other
-                      </option>
-                    </select>
-                  </div>
-                  <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label
-                      className={`${styles.floatingLabel} ${styles.formLabel}`}
-                    >
-                      City
-                    </label>
-                    <input
-                      type="text"
-                      name="city"
-                      value={formData.city}
-                      onChange={handleChange}
-                      className={styles.formInput}
-                      autoComplete="off"
-                      required
-                    />
-                  </div>
-                </div>
-                <div className={`row ${styles.multiWrapper}`}>
-                  <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label
-                      className={`${styles.floatingLabel} ${styles.formLabel}`}
-                    >
-                      Pincode
-                    </label>
-                    <input
-                      type="number"
-                      name="pincode"
-                      value={formData.pincode}
-                      onChange={handleChange}
-                      className={styles.formInput}
-                      required
-                      autoComplete="off"
-                    />
-                  </div>
-                  <div className={`col-md-6 ${styles.inputWrapper}`}>
-                    <label
-                      className={`${styles.floatingLabel} ${styles.formLabel}`}
-                    >
-                      Country
-                    </label>
-                    <input
-                      type="text"
-                      name="country"
-                      value={formData.country}
-                      onChange={handleChange}
-                      className={styles.formInput}
-                      autoComplete="off"
-                      required
-                    />
-                  </div>
-                </div>
-                {compiName === "meshmerize" ||
-                compiName === "cozmoclench" ||
-                compiName === "codecode" ||
-                compiName === "techfest olympiad" ||
-                compiName === "mechanzo league" ? (
-                  <div className={styles.inputWrapper}>
-                    <label
-                      className={`${styles.floatingLabel} ${styles.formLabel}`}
-                    >
-                      Nearby Zonal
-                    </label>
-                    <select
-                      name="zonals"
-                      value={formData.zonals}
-                      onChange={handleChange}
-                      className={styles.formInput}
-                      required
-                    >
-                      <option
-                        value=""
-                        style={{ display: "none" }}
-                        className={styles.genderOps}
-                      >
-                        Nearby Zonals
-                      </option>
-                      <option value="1" className={styles.genderOps}>
-                        Mumbai
-                      </option>
-                      <option value="2" className={styles.genderOps}>
-                        Bhopal
-                      </option>
-                      <option value="3" className={styles.genderOps}>
-                        Lucknow
-                      </option>
-                      <option value="4" className={styles.genderOps}>
-                        Jaipur
-                      </option>
-                      <option value="5" className={styles.genderOps}>
-                        Bangalore
-                      </option>
-                    </select>
-                  </div>
-                ) : (
-                  <div></div>
-                )}
-
-                <div className={styles.inputWrapper}>
-                  <label
-                    className={`${styles.floatingLabel} ${styles.formLabel}`}
+                  <div
+                    className={`${styles["round"]} ${
+                      CheckIn === 27 ? styles["blue-circle"] : ""
+                    }`}
+                    onClick={() => checkin(27)}
+                    id="i27"
                   >
-                    Address
-                  </label>
-                  <input
-                    type="text"
-                    name="address"
-                    value={formData.address}
-                    onChange={handleChange}
-                    className={styles.formInput}
-                    autoComplete="off"
-                    required
-                  />
-                </div>
-                <div className={styles.inputWrapper}>
-                  <label
-                    className={`${styles.floatingLabel} ${styles.formLabel}`}
+                    <h6>27</h6>
+                  </div>
+                  <div
+                    className={`${styles["round"]} ${
+                      CheckIn === 28 ? styles["blue-circle"] : ""
+                    }`}
+                    onClick={() => checkin(28)}
+                    id="i28"
                   >
-                    Institute Name
-                  </label>
-                  <input
-                    type="text"
-                    name="instiname"
-                    value={formData.instiname}
-                    onChange={handleChange}
-                    className={styles.formInput}
-                    required
-                    autoComplete="off"
-                  />
-                </div>
-                <div className={styles.inputWrapper}>
-                  <label
-                    className={`${styles.floatingLabel} ${styles.formLabel}`}
+                    <h6>28</h6>
+                  </div>
+                  <div
+                    className={`${styles["round"]} ${
+                      CheckIn === 29 ? styles["blue-circle"] : ""
+                    }`}
+                    onClick={() => checkin(29)}
+                    id="i29"
                   >
-                    Institute Address
-                  </label>
-                  <input
-                    type="text"
-                    name="instiadress"
-                    value={formData.instiadress}
-                    onChange={handleChange}
-                    className={styles.formInput}
-                    autoComplete="off"
-                    required
-                  />
-                </div>
-                <div className={styles.inputWrapper}>
-                  <label
-                    className={`${styles.floatingLabel} ${styles.formLabel}`}
+                    <h6>29</h6>
+                  </div>
+                  <div
+                    className={`${styles["round"]} ${
+                      CheckIn === 30 ? styles["blue-circle"] : ""
+                    }`}
+                    onClick={() => checkin(30)}
+                    id="i30"
                   >
-                    Institute Pincode
-                  </label>
-                  <input
-                    type="number"
-                    name="instipincode"
-                    value={formData.instipincode}
-                    required
-                    onChange={handleChange}
-                    className={styles.formInput}
-                    autoComplete="off"
-                  />
-                </div>
-                <div className={styles.inputWrapper}>
-                  <label
-                    className={`${styles.floatingLabel} ${styles.formLabel}`}
-                  >
-                    Year of Study{" "}
-                  </label>
-                  <select
-                    name="yearofstudy"
-                    value={formData.yearofstudy}
-                    onChange={handleChange}
-                    className={styles.formInput}
-                    required
-                  >
-                    <option
-                      value=""
-                      style={{ display: "none" }}
-                      className={styles.genderOps}
-                    >
-                      Select year of Study
-                    </option>
-                    <option value="1" className={styles.genderOps}>
-                      1st Year
-                    </option>
-                    <option value="2" className={styles.genderOps}>
-                      2nd Year
-                    </option>
-                    <option value="3" className={styles.genderOps}>
-                      3rd Year
-                    </option>
-                    <option value="4" className={styles.genderOps}>
-                      4th Year
-                    </option>
-                    <option value="5" className={styles.genderOps}>
-                      5th Year
-                    </option>
-                    <option value="16" className={styles.genderOps}>
-                      6th Standard
-                    </option>
-                    <option value="17" className={styles.genderOps}>
-                      7th Standard
-                    </option>
-                    <option value="18" className={styles.genderOps}>
-                      8th Standard
-                    </option>
-                    <option value="19" className={styles.genderOps}>
-                      9th Standard
-                    </option>
-                    <option value="20" className={styles.genderOps}>
-                      10th Standard
-                    </option>
-                    <option value="21" className={styles.genderOps}>
-                      11th Standard
-                    </option>
-                    <option value="22" className={styles.genderOps}>
-                      12th Standard
-                    </option>
-                    <option value="23" className={styles.genderOps}>
-                      Graduated
-                    </option>
-                  </select>
-                </div>
-                <div>
-                  {romeo ? (
-                    <button
-                      type="submit"
-                      className={styles.formSubmit}
-                      disabled
-                    >
-                      Submitting...
-                    </button>
-                  ) : (
-                    <button type="submit" className={styles.formSubmit}>
-                      Submit
-                    </button>
-                  )}
+                    <h6>30</h6>
+                  </div>
                 </div>
               </div>
-            </form>
+            </div>
+            <div className={styles["check-rect1"]}>
+              <div className={styles["check-rect2"]}>
+                <h4>Check-out</h4>
+                <h6>December 2023</h6>
+                <div className={styles["round-main"]}>
+                <div
+                    className={`${styles["round"]} ${
+                      CheckOut === 26 ? styles["blue-circle"] : ""
+                    }`}
+                    onClick={() => checkout(26)}
+                    id="o26"
+                  >
+                    <h6>26</h6>
+                  </div>
+                  <div
+                    className={`${styles["round"]} ${
+                      CheckOut === 27 ? styles["blue-circle"] : ""
+                    }`}
+                    onClick={() => checkout(27)}
+                    id="o27"
+                  >
+                    <h6>27</h6>
+                  </div>
+                  <div
+                    className={`${styles["round"]} ${
+                      CheckOut === 28 ? styles["blue-circle"] : ""
+                    }`}
+                    onClick={() => checkout(28)}
+                    id="o28"
+                  >
+                    <h6>28</h6>
+                  </div>
+                  <div
+                    className={`${styles["round"]} ${
+                      CheckOut === 29 ? styles["blue-circle"] : ""
+                    }`}
+                    onClick={() => checkout(29)}
+                    id="o29"
+                  >
+                    <h6>29</h6>
+                  </div>
+                  <div
+                    className={`${styles["round"]} ${
+                      CheckOut === 30 ? styles["blue-circle"] : ""
+                    }`}
+                    onClick={() => checkout(30)}
+                    id="o30"
+                  >
+                    <h6>30</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles["people-rect1"]}>
+            <div className={styles["people-rect2"]}>
+              {/* Display Male and Female counts */}
+              <p>
+                Male:{" "}
+                <button className={styles["decbutton"]} onClick={decrementMale}>
+                  -
+                </button>{" "}
+                {Male}
+                <button className={styles["incbutton"]} onClick={incrementMale}>
+                  +{" "}
+                </button>
+              </p>
+              <p>
+                Female:{" "}
+                <button
+                  className={styles["decbutton"]}
+                  onClick={decrementFemale}
+                >
+                  -
+                </button>
+                {Female}
+                <button
+                  className={styles["incbutton"]}
+                  onClick={incrementFemale}
+                >
+                  +
+                </button>
+              </p>
+            </div>
+          </div>
+          <div className={styles.titSpn_rect1}>
+          <button className={`${styles.titSpn_rect2} ${styles.registerButton}`} onClick={goNext}>Next</button>
           </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 
-export default Reg;
+export default Register;

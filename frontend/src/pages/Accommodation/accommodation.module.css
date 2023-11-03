@@ -51,7 +51,7 @@
 .content {
   display: flex;
   flex-direction: row;
-  height: 60vh;
+  height: 90vh;
   width: 80vw;
   margin-top: 0px;
   padding: 20px;
@@ -68,6 +68,8 @@
   width: 10vw;
   height: 40px;
   margin: auto;
+  top: 13px;
+  position: relative;
 }
 
 .titSpn_rect2 {
@@ -87,18 +89,62 @@
 .content-rect1 {
   border: #ab8d60 2px solid;
   width: 80vw;
-  height: 40vh;
+  height: 70vh;
   margin: auto;
 }
 
 .content-rect2 {
   border: #ab8d60 2px solid;
   width: 80vw;
-  height: 40vh;
+  height: 70vh;
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
   transform: translate(3px, 3px);
   display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-family: "Forum", sans-serif;
+  white-space: pre-wrap;
+  text-align: left;
+  padding-left: 20px;
+  overflow-y: auto;
+}
+
+.centered-content {
+  text-align: center; /* Center the text horizontally */
+}
+
+.centered-content h1 {
+  font-size: 34px; /* Adjust the font size for the heading as needed */
+  text-align: center;
+}
+.check-kar{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: -20vw;
+  width: 78vw;
+  top: 3vh;
+  height: 40vh;
+}
+
+.check-rect1 {
+  border: #ab8d60 2px solid;
+  width: 30vw;
+  height: 20vh;
+  margin: auto;
+}
+
+.check-rect2 {
+  border: #ab8d60 2px solid;
+  width: 30vw;
+  height: 20vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  transform: translate(3px, 3px);
+  display: flex;
+  flex-direction: column;
   text-align: left;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
   font-size: 15px;
@@ -151,6 +197,187 @@
   background: #000000; 
 }
 
+.register-kar{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 70vh;
+}
+
+.people-rect1 {
+  border: #ab8d60 2px solid;
+  width: 40vw;
+  height: 10vh;
+  margin: auto;
+  margin-bottom: 10vw;
+}
+
+.people-rect2 {
+  border: #ab8d60 2px solid;
+  width: 40vw;
+  height: 10vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  transform: translate(3px, 3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-family: "Forum", sans-serif;
+  
+}
+
+.round-main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 25vw;
+}
+.round{
+  box-sizing: border-box;
+  cursor: pointer;
+
+/*position: absolute;*/
+width: 13%;
+  height: 100%;
+/*height: 72px;*/
+border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 100%;
+  margin: auto;
+  padding: 2px;
+
+}
+
+/* In your CSS stylesheet */
+.blue-circle {
+  background-color: blue;
+  color: white; /* You can adjust text color if needed */
+  /* Add any other styling properties you need */
+}
+
+
+.incbutton{
+  background-color: transparent;
+  border-color: transparent;
+  color: #fff;
+}
+
+.decbutton{
+  background-color: transparent;
+  border-color: transparent;
+  color: #fff;
+}
+
+.baap {
+  background: rgba(26, 26, 26, 0.4);
+  backdrop-filter: blur(38px);
+  -webkit-backdrop-filter: blur(38px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  width: 80vw;
+  height: max-content;
+  margin-top: 10vh;
+  border: 1px solid white;
+  /* border-image: linear-gradient(to bottom, #FFFFFF, transparent); */
+  overflow: hidden;
+  /* border-radius:5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px; */
+  /* border-right: 1px solid black;
+  border-image: linear-gradient(to bottom, black, transparent); */
+  border-image-slice: 1;
+  border-collapse: collapse;
+  border-radius: 14px;
+
+  /* padding: 25px; */
+}
+
+.myheading {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-family: 'Avenir LT Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 24px;
+  /* identical to box height */
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.long_box {
+  font-size: 15px;
+  width: 70vw;
+  margin: auto;
+  padding: 0px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.first_name {
+  color: #FFFFFF;
+  font-size: 15px;
+  width: 165px;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+.last_name {
+  color: #FFFFFF;
+  font-size: 15px;
+  width: 165px;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.mybutton {
+  background-color: rgba(255, 255, 255, 0);
+  letter-spacing: 1px;
+  /* color: white; */
+  font-size: 16px;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+
+.anti-america {
+  color: white;
+  background: #326872;
+  backdrop-filter: blur(38px);
+  -webkit-backdrop-filter: blur(38px);
+}
+
+.this-is-america {
+  background: #326872;
+  backdrop-filter: blur(38px);
+  -webkit-backdrop-filter: blur(38px);
+}
+.submit{
+  color: #FFFFFF;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  border-radius: 5px;
+  border: 1px solid #FFFFFF;
+}
+
+.tick{
+  display: flex;
+    max-width: 88%;
+    /* justify-content: center; */
+    margin: auto;
+    position: relative;
+    top: -46px;
+    margin-bottom: 28px;
+}
 @media (max-width:1160px) {
   .titSpn_rect2 {
     border: #ab8d60 2px solid;
@@ -168,15 +395,21 @@
   .content-rect2 {
     border: #ab8d60 2px solid;
     width: 80vw;
-    height: 40vh;
+    height: 60vh;
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
     transform: translate(3px, 3px);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
+    font-size: 10px;
     font-family: "Forum", sans-serif;
+  }
+  .content-rect1 {
+    border: #ab8d60 2px solid;
+    width: 80vw;
+    height: 60vh;
+    margin: auto;
   }
   
 }
@@ -232,3 +465,117 @@
   .info_tab::-webkit-scrollbar-thumb:hover {
     background: #000000; 
   }
+
+@media (max-width:668px) {
+  .check-kar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: -20vw;
+    width: 100vw;
+    top: 3vh;
+    height: 40vh;
+  }
+
+  .check-rect1 {
+    border: #ab8d60 2px solid;
+    width: 57vw;
+    height: 18vh;
+    margin: auto;
+  }
+  
+  .check-rect2 {
+    border: #ab8d60 2px solid;
+    width: 57vw;
+    height: 18vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    transform: translate(3px, 3px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-family: "Forum", sans-serif;
+  }
+
+  .register-kar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 70vh;
+  }
+  
+  .people-rect1 {
+    border: #ab8d60 2px solid;
+    width: 78vw;
+    height: 8vh;
+    margin: auto;
+    margin-bottom: 10vw;
+    margin-top: 6vh;
+  }
+  
+  .people-rect2 {
+    border: #ab8d60 2px solid;
+    width: 78vw;
+    height: 8vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    transform: translate(3px, 3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: "Forum", sans-serif;
+    
+  }
+
+  .round-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 56vw;
+    height: 8vw;
+  }
+  .round{
+    box-sizing: border-box;
+    cursor: pointer;
+  
+  /*position: absolute;*/
+  width: 13%;
+    height: 100%;
+  /*height: 72px;*/
+  border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 100%;
+    margin: auto;
+    padding: 2px;
+  
+  }
+
+  .titSpn_rect1 {
+    border: #ab8d60 2px solid;
+    width: 35vw;
+    height: 6vh;
+    margin: auto;
+    top: 13px;
+    position: relative;
+  }
+  
+  .titSpn_rect2 {
+    border: #ab8d60 2px solid;
+    width: 35vw;
+    height: 6vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    transform: translate(3px, 3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-family: "Forum", sans-serif;
+  }
+  
+}

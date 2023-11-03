@@ -1,42 +1,20 @@
-.bgitis {
-    background: rgba(0, 0, 0, 0.5);
-    height: 10%;
-    padding: 70px 0 150px 0;
-}
-
-.overlay {
-    position: relative;
-    top: 80px;
-}
-
-.reg_head {
+.rowing{
     display: flex;
-    justify-content: center;
-    width: 80%;
-    margin: auto;
+    flex-direction: row;
+    width: 70vw;
+    margin-left: 5vw;
+    gap:1vw;
 }
 
-.reg_head img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-}
-
-.head_n {
+.pewdiepie{
+    top:5vw;
     position: relative;
-    top: 28px;
-    left: 21px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
-
-.reg_head hr {
-    margin: 0;
-    width: 40vw;
-    opacity: 0.75;
+.regFormF{
+    top: 100px;
+    position: relative;
+    
 }
-
 .formLabel {
     position: absolute;
     pointer-events: none;
@@ -65,7 +43,7 @@
 
 .formInput {
     color: white;
-    width: 50%;
+    width: 100%;
     padding: 10px;
     border: 2px solid #b7aeae;
     border-radius: 8px;
@@ -75,6 +53,36 @@
     -webkit-backdrop-filter: blur(3px);
     outline: none;
     transition: border-color 0.2s ease-in-out;
+}
+
+.damnbro{
+    position: absolute;
+    width:88%;
+    background-color: transparent;
+    border: 2px solid #b7aeae;
+    color: #fff;
+    border-radius: 8px;
+}
+
+
+.yoyo{
+    display: flex;
+    justify-content: center;
+}
+
+.formiInput {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #b7aeae;
+    border-radius: 8px;
+    background: rgba(71, 65, 65, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+    opacity: 0;
 }
 
 .compiReg form{
@@ -118,7 +126,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    height: 100vh;
 }
 
 input:-webkit-autofill,

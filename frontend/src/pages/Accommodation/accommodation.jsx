@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './accommodation.module.css';
 import ImageOne from './components/ImageOne';
 import bg from './img/darkbg.png';
+import Register from './components/reg';
 import Faq from 'react-faq-component';
 
 const Accommodation = () => {
@@ -182,7 +183,7 @@ const Accommodation = () => {
     'REACHING IITB': <>Travelling in Mumbai is very easy and systematic. The modes of travelling in Mumbai are taxis, auto rickshaws, local train and BEST Buses. IIT Bombay is located at Powai, which is an eastern suburb in the North-Eastern part (Central Railway Line) of Mumbai.<br/> Mumbai is in the form of a long narrow island, almost a peninsula, thrusting southwards into the Arabian Sea. In Mumbai, local trains run through the following routes. <br/> Western Railway: Churchgate to Borivali/Virar and return. <br/> Central Railway: Mumbai CST to Karjat/Kasara and return.<br/> Harbour Route: Mumbai CST to Andheri and return<br/>New Bombay Route: Mumbai CST to Vashi/Panvel and return.<br/> Kanjur Marg, a Local Train Station is the closest local train stop to IIT Bombay. It is located on Central Railway line.<br/>An auto rickshaw from Kanjur-Marg station to IIT Bombay Main Gate costs Rs.45 approx.<br/>Important railway stations where you can get down are:<br/>Chhatrapati Shivaji Terminal (CST)<br/>Churchgate<br/>Mumbai Central<br/> Dadar <br/>Lokmanya Tilak Terminus<br/>Thane<br/>Borivali<br/>Andheri<br/>    Bandra<br/>Kalyan<br/>Thane is the nearest station to IIT Bombay. Next is Lokmanya Tilak Terminus (LTT) (near Kurla) and Dadar is third in this regard.<br/>The taxis ply through all of the Mumbai. Auto rickshaws ply between Bandra-Borivali and Sion-Mulund and should be preferred if you have some heavy luggage, which may otherwise cause you inconvenience while travelling by local trains and buses. In taxis, you also have an option of AC Taxis-Cool Cabs, which is a more comfortable way of travel.<br/>Trains/buses should be preferred if you carry less baggage with you, say a small bag per person. Please beware of pickpockets in locals and BEST buses.<br/> Southbound trains on all the Local train lines are more crowded in the morning and thus should be avoided if the passenger is carrying baggage. Similarly, the northbound trains in the evening are more crowded.<br/>With respect to mornings at Kanjurmarg station, travelling from Mumbai CST, Dadar or Kurla would be less crowded that travelling from Kalyan or Thane.<br/> For buses/autorickshaws, the destination should be stated as "IIT Main Gate, Powai".<br/>Please download m-indicator mobile application for hands-on maps & routes of Mumbai<br/>1. Every team has to register online on the official Techfest website for the competition.<br/>2. A Team ID will be allocated to the team on registration which shall be used for future references.<br/>3. The decision of the organizers or judges shall be treated as final and binding on all.<br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries.<br/>5. Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.'+'6. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts.</>,
     'CONTACT US': 'Content for CONTACT US',
   };
-
+  
   const [activeTab, setActiveTab] = useState('ABOUT US'); // Default to ABOUT US
   const [showRegistrationForm, setShowRegistrationForm] = useState(false);
   const [showBackButton, setShowBackButton] = useState(false);
@@ -235,34 +236,26 @@ const Accommodation = () => {
           )}
 
           {showRegistrationForm && (
-            <div className={styles['content-rect1']}>
-              <div className={styles['content-rect2']}>
-                {/* Your registration form code goes here */}
-                {/* Example: */}
-                <form>
-                  {/* Form fields and submit button */}
-                </form>
-              </div>
-            </div>
+           <Register />
           )
           }
         </div>
 
         <div className={`${styles.titSpn} ${styles.homeTheme}`}>
-          <div className={styles.titSpn_rect1}>
+          
             {showBackButton ? (
               // Render the "BACK" button when it's enabled
-              <button className={`${styles.titSpn_rect2} ${styles.registerButton}`} onClick={goBack}>
-                BACK
-              </button>
+              <div></div>
             ) : (
               // Render the "REGISTER NOW" button when it's enabled
+              <div className={styles.titSpn_rect1}>
               <button className={`${styles.titSpn_rect2} ${styles.registerButton}`} onClick={toggleRegistrationForm}>
                 REGISTER NOW
               </button>
+              </div>
             )}
           </div>
-        </div>
+        
       </div>
     </div>
   );
