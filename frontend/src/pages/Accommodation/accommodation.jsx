@@ -218,7 +218,13 @@ const Accommodation = () => {
       5. Note that at any point of time the latest information will be that which is on the website. However, registered participants will be informed through mail about any changes.<br/>
       6. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts. <br/>
       </>,
-    'CONTACT US': 'Content for CONTACT US',
+    'CONTACT US': 
+    <div style={{textAlign:'Center', width:'100%', fontSize:'20px'}}>
+      Nivesh Maheshwari <br />
+      Hospitality Manager <br />
+      +91 73576 54007 <br />
+      nivesh@techfest.org
+    </div>,
   };
   
   const [activeTab, setActiveTab] = useState('ABOUT US'); // Default to ABOUT US
