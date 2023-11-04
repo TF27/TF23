@@ -78,6 +78,7 @@ class compi_reg(models.Model):
         ('3', 'Lucknow'),
         ('4', 'Jaipur'),
         ('5', 'Bangalore'),
+        ('6', 'Nepal'),
     ], max_length=255, blank=True, null=True)
 
 class compi_team(models.Model):

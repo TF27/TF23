@@ -115,7 +115,7 @@ const Header_update = () => {
                   <Link to="/summits">Int'l Summit</Link>
                 </li>
                 <li>
-                  <a to ="/twmun">MUN</a>
+                  <a href="/twmun">MUN</a>
                 </li>
 
 		
