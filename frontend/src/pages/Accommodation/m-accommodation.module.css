@@ -54,8 +54,8 @@
     transform: translate(3px, 3px);
     display: flex;
     /* align-items: center; */
-    /* justify-content: center; */
-    font-size: 11px;
+    padding: 10px;
+    font-size: 14px;
     font-family: "Forum", sans-serif;
     overflow-y: scroll;
     text-align: left;
@@ -84,7 +84,7 @@
     display: flex;
     /* align-items: center; */
     /* justify-content: center; */
-    font-size: 13px;
+    font-size: 15px;
     font-family: "Forum", sans-serif;
      /* Add margin to separate the content from other tabs */
     order: 2; /* Change the order to 2 to move the content below the tabs */
@@ -112,9 +112,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
+    font-size: 15px;
     font-family: "Forum", sans-serif;
     text-align: left;
+    cursor: pointer;
+  }
+ 
+  .m-content-rect2::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .m-content-rect2::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  .m-content-rect2::-webkit-scrollbar-thumb {
+    background: #000000; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  .m-content-rect2::-webkit-scrollbar-thumb:hover {
+    background: #000000; 
   }
   
 
