@@ -138,8 +138,7 @@ const Header_update = () => {
           {/* <ul> */}
           <li>
             <Link
-              to="https://forms.gle/8KvyXtYuCUtSAWpa8"
-              className="navSummit"
+              to="/accommodation"
             >
               Accommodation
             </Link>
@@ -211,6 +210,9 @@ const Header_update = () => {
             {/* <li onClick={showMenu}>
               <Link to="/">Home</Link>
             </li> */}
+            <li onClick={showMenu}>
+              <Link to="/accommodation">Accommodation</Link>
+            </li>
             <li onClick={showMenu}>
               <Link to="/workshops">Workshops</Link>
             </li>
