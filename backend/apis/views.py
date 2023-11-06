@@ -598,7 +598,7 @@ def acco_reg(request):
 def proof_upload(request):
     if request.method == 'PUT':
         email = request.data['email']
-        acco = acco_reg.objects.get(email=email)
+        acco = AccoReg.objects.get(email=email)
         if acco:
             acco.proof = request.data['proof']
             acco.save()
