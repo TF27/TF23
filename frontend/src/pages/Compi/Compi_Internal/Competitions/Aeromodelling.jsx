@@ -5,7 +5,7 @@ import './x.css';
 import Whatsapplink from '../../../../components/whatsapp/link';
 
 
-const MERNifier = () => {
+const Aeromodelling = () => {
     const [activeCity, setActiveCity] = useState('About');
     const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {
@@ -15,28 +15,32 @@ const MERNifier = () => {
       const data = {
         rows: [
           {
+            title: "Why should I participate in RowBoatics?",
+            content: 'The competition provides its participants with a reasonable grasp of important mechanical and programming principles that will take them in the direction of being able to design and construct their boat. Participants work together to design and build a boat that can navigate on an obstacle-filled track and complete the race task before the other boat'
+          },
+          {
+            title: "How many stages does the competition have?",
+            content: 'The competition is divided into 2 stages, detailed information about both stages can be found in the problem statement.'
+          },
+          {
             title: "How to register?",
-            content: 'Follow this steps for registration : www.techfest.org > Competitions > MERNifier > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
+            content: 'Participants should be Signed in before Registering.Then, follow these steps for registration :www.techfest.org -> Competitions > RowBoatics -> Register -> Fill all your details -> You are registered in that competition. Now you must either Create a team or Join a Team using the registered mail ID.'
           },
           {
-            title: "Who can participate?",
-            content: 'Any individual with a valid ID card, Early stage startups, Upto 3 years old college passouts can participate in the competition.'
+            title: "What is the Registered Mail Id of a person?",
+            content: 'The Gmail Id which was used to Sign In is the registered mail Id. It is a unique identity of any participant. And will be used in adding team members to a team, joining a pre-existing team, availing accommodation, etc.'
           },
           {
-            title: "How many people can be there in one team?",
-            content: 'One team can have a maximum of 4 members.'
-          },
-          {
-            title: "Is it free to register for MERNifier?",
+            title: "Is it free to register for RowBoatics?",
             content: 'Yes, it is free to register.'
           },
           {
             title: "How can I make my own team (as a team leader)?",
-            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> MERNifier -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
+            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> RowBoatics -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
           },
           {
-            title: "What is the Registered Mail ID?",
-            content: 'The Gmail ID which was used to Sign In is the Registered Mail ID. It is a unique identity of any participant. It will be used in adding team members in a team, joining a pre-existing team etc.'
+            title: "How many people can be there in one team?",
+            content: 'One team can have maximum of 4 members.'
           },
           {
             title:"Who can add members in a team?",
@@ -69,6 +73,10 @@ const MERNifier = () => {
           {
             title: "Can a team have members from different colleges?",
             content: 'Yes, students from different colleges can form a team.'
+          },
+          {
+            title: "Can we change the team leader of our team?",
+            content: 'No, you can’t change the team leader of your team. But, you can dissolve the team and form a new one.'
           },
           {
             title: "Can I register for more than one competition?",
@@ -110,8 +118,8 @@ const MERNifier = () => {
         objectFit: 'scale-down', 
         paddingRight: '8px',
     }
-    const walink1 = "https://chat.whatsapp.com/IZ2S7j8Nc6X0oje2kgQ2cJ";
-    const dslink1 = "https://chat.whatsapp.com/IZ2S7j8Nc6X0oje2kgQ2cJ";
+    const walink1 = "https://chat.whatsapp.com/HlSkcSNFJsFJCWKBRoE6e0";
+    const dslink1 = "https://chat.whatsapp.com/HlSkcSNFJsFJCWKBRoE6e0";
 
     return ( 
       <div>
@@ -130,7 +138,7 @@ const MERNifier = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Developing a MERN stack-focused code assistant tool that understands and caters to the specific needs of MongoDB, Express.js, React.js, and Node.js developers to enhance their productivity and efficiency. </div>
+            Teams will design and build a manually controlled, wireless boat that has to sail through the obstacles in the arena and complete the race task before the other boat. </div>
             </div>
           </div>
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
@@ -138,19 +146,15 @@ const MERNifier = () => {
             <div className={styles.info_data}>
             <ul>
               <li>
-              Round 1: Abstract review meet<br />
-              Shortlisted teams will showcase their work<br/>
-              Improvements will be suggested by the experts
-
+              The competition is divided into two Stages:
               </li> 
               <li>
-              Round 2: Final review meet<br/>
-              Updated report will be showcased based on which 5 teams will be shortlisted for the final presentation
+              Stage 1:<br/>
+              Every team must submit their design for the robot, which should also contain a detailed description of the critical components of the design. The submissions which satisfy the specifications given in the problem statement will qualify for the second stage, which will be informed to the teams through the mail. There are no restrictions on design and you can think like an unconventional thinker keeping in mind the constraints given in the problem statement.
               </li>
               <li>
-              Round 3: Presentation and Working Demonstration<br/>
-              Working demonstration and presentation of the solution<br/>
-              Top 5 teams shortlisted from Stage 2 will present their solution at Techfest 2023-24
+              Stage 2:<br/>
+              The teams shortlisted for Stage 2 will compete in a knock-out type round where two teams compete against each other. The 2nd round will be held during Techfest from 27th to 29th December 2023. Details of the round shall be mentioned in the problem statement mailed to those who qualify for the 2nd round.
               </li>
 
             </ul>
@@ -159,20 +163,20 @@ const MERNifier = () => {
           <div id="Timeline" className={`${styles.info} ${activeCity === 'Timeline' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            <li>Last Date of Registration: <br />
-            19th November 2023</li>
+            <li>Last date for registration:<br />
+                    10th December, 2023</li>
 
             <li>Last date for abstract submission <br />
-            19th November 2023</li>
+            10th December, 2023</li>
 
-            <li>Round 1: <br />
-            22nd November 2023</li>
+            <li>Abstract result announcement:<br />
+            12th December 2023</li>
 
-            <li>Round 2: <br />
-            Mid-December 2023 </li>
-
-            <li>Roound 3: <br />
+            <li>IIT Bombay zonal round:<br />
             27th-29th December 2023 </li>
+            
+            <li>Final at RVCE Bangalore:<br />
+            February 2024 </li>
               </div>
             </div>
           </div>
@@ -191,22 +195,29 @@ const MERNifier = () => {
           <div id="Rules" className={`${styles.info} ${activeCity === 'Rules' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            1. Every team has to register online on the official Techfest website for the competition
-            <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references
-            <br/>3. The decision of the organizers or judges shall be treated as final and binding on all
-            <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries
-            <br/>5. The idea presented by the teams should be original (not protected by means of patent/copyright/technical publication by anyone)
-            <br/>6. Note that at any point of time the latest information will be that which is on the website; however, registered participants will be informed through mail about any changes
-            <br/>7. All modes of official communication will be through the Techfest e-mail, participants are advised to keep track of all folders in their e-mail accounts
+            <li>1. Each team would be given two attempts in Qualifier round and two attempts in Payload Round. Best score from both attempts will be considered as a score for each round. 
+
+                    </li>
+
+                    <li>2. The timer will start after 30 seconds of the previous team completing their attempt. The participants need to be prepared in time and launch without delay after entering the take-off zone.
+
+                    </li>
+                    <li>3. The teams would lose their turn if they are not ready in time.
+
+                    </li>
+
+                    <li>4. The same aircraft should be used in both the rounds and it should be the same one in the abstract. In case of damages during the competition, teams can repair the same aircraft but are not allowed to use a replacement. The repaired aircraft should be ready in given time.
+                        
+                    </li>
               </div>
             </div>
           </div>
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Sumit Adikari<br/>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8348229467`}>+91 83482 29467</div>
-                    <div className="col-3 contactMail" onClick={() => window.location.href = `sumittechfest158@gmail.com`}>sumittechfest158@gmail.com</div>
+              Arnav Dutt Sharma<br/>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8880030000`}>+91 88800 30000</div>
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `arnavv.techfest@gmail.com`}>arnavv.techfest@gmail.com</div>
               
               </div>
             </div>
@@ -221,4 +232,4 @@ const MERNifier = () => {
      );
 }
  
-export default MERNifier;
+export default Aeromodelling;
