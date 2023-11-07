@@ -3,7 +3,7 @@ import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import Whatsapplink from '../../../../components/whatsapp/link';
 import './x.css';
-import Aeromodelling from './aeromodelling';
+// import Aeromodelling from './aeromodelling';
 
 const Aeromodelling = () => {
 

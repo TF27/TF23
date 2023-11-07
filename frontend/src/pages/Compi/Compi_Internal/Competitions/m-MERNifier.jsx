@@ -214,8 +214,8 @@ const MERNifier = () => {
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
                     Sumit Adikari<br/>
-                    <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:sumittechfest158@gmail.com`}>sumittechfest158@gmail.com</div>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8348229467`}>+91 83482 29467</div>
+                    <div onClick={() => window.location.href = `mailto:sumittechfest158@gmail.com`}>sumittechfest158@gmail.com</div>
+                    <div className="contactNum" onClick={() => window.location.href = `tel:8348229467`}>+91 83482 29467</div>
                     </div>
                 </div>
             </div>
