@@ -28,6 +28,7 @@ import Task from "./Competitions/Task";
 import Iot from "./Competitions/Iot";
 import MERNifier from "./Competitions/MERNifier";
 import RowBoatics from "./Competitions/RowBoatics";
+import Aeromodelling from "./Competitions/Aeromodelling";
 
 const Internal = () => {
   const { compiName } = useParams();
@@ -40,12 +41,14 @@ const Internal = () => {
       navigate("/competitions/cozmoclench");
     } else if (compiName === "mesh") {
       navigate("/competitions/meshmerize");
+    } else if (compiName === "aeromodelling") {
+        navigate("/competitions/boeing%20aeromodelling");
     } else if (compiName === "tfo") {
       navigate("/competitions/techfest%20olympiad");
-    } else if (compiName === "mernifier") {
-      navigate("/competitions/MERNifier");
-    } else if (compiName === "rowboatics") {
-      navigate("/competitions/RowBoatics");
+    } else if (compiName === "MERNifier") {
+      navigate("/competitions/mernifier");
+    } else if (compiName === "RowBoatics") {
+      navigate("/competitions/rowboatics");
     } else if (compiName === "uf") {
       navigate("/competitions/urban-futurism");
     } else if (compiName === "taskwhiz") {
@@ -199,6 +202,7 @@ const Internal = () => {
             {compiName === "tIH - ioT" && <Iot />}
             {compiName === "mernifier" && <MERNifier />}
             {compiName === "rowboatics" && <RowBoatics />}
+            {compiName === "boeing aeromodelling" && <Aeromodelling />}
 
             <div className={styles.team_reg}>
               {user === null ? (
