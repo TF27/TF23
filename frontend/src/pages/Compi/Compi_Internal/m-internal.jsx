@@ -27,6 +27,8 @@ import Robocapleague from "./Competitions/m-robocapleague";
 import Dronelog from "./Competitions/m-Dronelog";
 import Task from "./Competitions/m-Task";
 import Iot from "./Competitions/m-Iot";
+import MERNifier from "./Competitions/m-MERNifier";
+import RowBoatics from "./Competitions/m-RowBoatics";
 
 const MInternal = () => {
   const { compiName } = useParams();
@@ -40,6 +42,10 @@ const MInternal = () => {
     navigate("/competitions/meshmerize");
   } else if (compiName === "tfo") {
     navigate("/competitions/techfest%20olympiad");
+  } else if (compiName === "mernifier") {
+    navigate("/competitions/MERNifier");
+  } else if (compiName === "rowboatics") {
+    navigate("/competitions/RowBoatics");
   } else if (compiName === "uf") {
     navigate("/competitions/urban-futurism");
   } else if (compiName === "taskwhiz") {
@@ -266,6 +272,8 @@ const MInternal = () => {
         {compiName === "dronelog" && <Dronelog />}
         {compiName === "task whiz" && <Task />}
         {compiName === "tIH - ioT" && <Iot />}
+        {compiName === "mernifier" && <MERNifier />}
+        {compiName === "rowboatics" && <RowBoatics />}
       </div>
     ));
   };

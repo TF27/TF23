@@ -3,8 +3,9 @@ import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import Whatsapplink from '../../../../components/whatsapp/link';
 import './x.css';
+import Aeromodelling from './aeromodelling';
 
-const RowBoatics = () => {
+const Aeromodelling = () => {
 
     const [open, setOpen] = useState(false);
 
@@ -164,16 +165,19 @@ const RowBoatics = () => {
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
                     <li>Last date for registration:<br />
-            30th November 2023</li>
+                    10th December, 2023</li>
 
             <li>Last date for abstract submission <br />
-            30th November 2023</li>
+            10th December, 2023</li>
 
-            <li>Results and shortlisting of teams for Stage 2: <br />
-            1st December 2023</li>
+            <li>Abstract result announcement:<br />
+            12th December 2023</li>
 
-            <li>Final round - Stage 2 competition:<br />
+            <li>IIT Bombay zonal round:<br />
             27th-29th December 2023 </li>
+            
+            <li>Final at RVCE Bangalore:<br />
+            February 2024 </li>
            
                     </div>
                 </div>
@@ -198,12 +202,20 @@ const RowBoatics = () => {
                 <div className={`${styles.whatd} ${open === 'Rules' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                    <li>Abstract should include all necessary projection images of the boat design along with a detailed description of the critical components used and abilities of boat.<br/>
-              Although there is no cost restriction but estimation of the total cost of the device with all its components should be mentioned in final abstract.
-              </li>
-              <li>The Abstract file must be uploaded in the pdf format with file name TeamID.pdf in the google form (link given in the problem statement) with all other necessary details, before the deadline. <br/>
-              The last date to fill the form and uploading the abstract file is 30th Nov, 2023. No other mode of submission will be considered unless any technical or genuine issue with the form.
-              </li>
+                    <li>1. Each team would be given two attempts in Qualifier round and two attempts in Payload Round. Best score from both attempts will be considered as a score for each round. 
+
+                    </li>
+
+                    <li>2. The timer will start after 30 seconds of the previous team completing their attempt. The participants need to be prepared in time and launch without delay after entering the take-off zone.
+
+                    </li>
+                    <li>3. The teams would lose their turn if they are not ready in time.
+
+                    </li>
+
+                    <li>4. The same aircraft should be used in both the rounds and it should be the same one in the abstract. In case of damages during the competition, teams can repair the same aircraft but are not allowed to use a replacement. The repaired aircraft should be ready in given time.
+                        
+                    </li>
                     </div>
             </div>
             <div>
@@ -214,9 +226,9 @@ const RowBoatics = () => {
                 <div className={`${styles.whatd} ${open === 'Contact' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                    Ank Kumar Gupta<br/>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:6306061251`}>+91 63060 61251</div>
-                    <div className="col-3 contactMail" onClick={() => window.location.href = `ank.techfest@gmail.com`}>ank.techfest@gmail.com</div>
+                    Arnav Dutt Sharma<br/>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8880030000`}>+91 88800 30000</div>
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `arnavv.techfest@gmail.com`}>arnavv.techfest@gmail.com</div>
                     </div>
                 </div>
             </div>
@@ -226,4 +238,4 @@ const RowBoatics = () => {
     );
 }
 
-export default RowBoatics;
+export default Aeromodelling;
