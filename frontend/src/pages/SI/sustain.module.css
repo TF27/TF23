@@ -1,0 +1,62 @@
+.bg{
+    background-image: url('./img/bg1.jpg');
+    z-index: -1;
+}
+
+.body{
+    width: 80%;
+    margin: 20vh 10% 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.textblock{
+    margin: 10vh 0;
+}
+
+.textblock h3{
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 43.88px;
+    margin: 3vh 0;
+}
+
+.textblock p{
+    font-weight: 200;
+    font-size: 1.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 29.81px;
+    text-align: left;
+}
+
+.button{
+    display: inline;
+    width: min-content;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 2vh 0;
+    border: 3px greenyellow solid;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.button2{
+    display: inline;
+    width: min-content;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 2vh 5vw;
+    border: 3px greenyellow solid;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transform: translate(10px, 10px);
+    color: white;
+    text-decoration: none;
+}
+
+.button2:hover{
+    color: white;
+}
