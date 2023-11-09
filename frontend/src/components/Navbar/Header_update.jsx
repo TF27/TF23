@@ -226,6 +226,9 @@ const Header_update = () => {
               <Link to="/robowars">Robowars</Link>
             </li>
             <li onClick={showMenu}>
+              <Link to="/sustain">Sustain</Link>
+            </li>
+            <li onClick={showMenu}>
               <Link to="/cyclothon">Cyclothon</Link>
             </li>
             <li onClick={showMenu}>

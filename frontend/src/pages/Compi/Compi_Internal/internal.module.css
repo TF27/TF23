@@ -308,6 +308,10 @@
       justify-content: center;
    }
 
+   .wdata{
+      margin-top: 70px;
+   }
+
    .basicInfo {
       top: -275px;
       position: relative;

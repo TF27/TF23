@@ -106,8 +106,8 @@ const CozmoClench = () => {
         margin: 'auto',
         rowContentMarginBottom: '0',
       }
-      const walink1 = "https://chat.whatsapp.com/J5ne9cb7TvM5gdOrmhIqcc";
-      const dslink1 = "https://chat.whatsapp.com/J5ne9cb7TvM5gdOrmhIqcc";
+      const walink1 = "https://chat.whatsapp.com/Llw5pM7QsdP6POyqiuWkkO";
+      const dslink1 = "https://chat.whatsapp.com/Llw5pM7QsdP6POyqiuWkkO";
 
     return (
         <div className={styles.mWholeData}>
