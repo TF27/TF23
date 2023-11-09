@@ -276,6 +276,7 @@ const Aeromodelling = () => {
                 </ul>
               </div>
             </div>
+            </div>
             <div
               id="Timeline"
               className={`${styles.info} ${
@@ -402,7 +403,6 @@ const Aeromodelling = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
