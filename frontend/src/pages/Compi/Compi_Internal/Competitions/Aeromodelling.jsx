@@ -11,10 +11,20 @@ const Aeromodelling = () => {
     setActiveCity(cityName);
   };
 
+  const handleClick = (index) => {
+    if (activeIndex === index) {
+      // If the clicked item is already open, close it
+      setActiveIndex(null);
+    } else {
+      // If the clicked item is not open, open it and close any previously open item
+      setActiveIndex(index);
+    }
+  };
+
   const data = {
     rows: [
       {
-        title: "Why should I participate in RowBoatics?",
+        title: "Why should I participate in Boeing Aermodelling?",
         content:
           "The competition provides its participants with a reasonable grasp of important mechanical and programming principles that will take them in the direction of being able to design and construct their boat. Participants work together to design and build a boat that can navigate on an obstacle-filled track and complete the race task before the other boat",
       },
@@ -26,7 +36,7 @@ const Aeromodelling = () => {
       {
         title: "How to register?",
         content:
-          "Participants should be Signed in before Registering.Then, follow these steps for registration :www.techfest.org -> Competitions > RowBoatics -> Register -> Fill all your details -> You are registered in that competition. Now you must either Create a team or Join a Team using the registered mail ID.",
+          "Participants should be Signed in before Registering.Then, follow these steps for registration :www.techfest.org -> Competitions > Boeing Aermodelling -> Register -> Fill all your details -> You are registered in that competition. Now you must either Create a team or Join a Team using the registered mail ID.",
       },
       {
         title: "What is the Registered Mail Id of a person?",
@@ -34,13 +44,13 @@ const Aeromodelling = () => {
           "The Gmail Id which was used to Sign In is the registered mail Id. It is a unique identity of any participant. And will be used in adding team members to a team, joining a pre-existing team, availing accommodation, etc.",
       },
       {
-        title: "Is it free to register for RowBoatics?",
+        title: "Is it free to register for Boeing Aermodelling?",
         content: "Yes, it is free to register.",
       },
       {
         title: "How can I make my own team (as a team leader)?",
         content:
-          "Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> RowBoatics -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team",
+          "Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Boeing Aermodelling -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team",
       },
       {
         title: "How many people can be there in one team?",
@@ -54,7 +64,7 @@ const Aeromodelling = () => {
       {
         title: "Can I add myself to an existing team?",
         content:
-          "Yes, follow these steps to get added to a team. Join team -> Enter required details. You will be added to that team.",
+          "Yes, follow these steps to get added to a team. Join team -> Enter Team-Id. You will be added to that team.",
       },
       {
         title: "How can I remove members from my team (as a team leader)?",
@@ -103,17 +113,6 @@ const Aeromodelling = () => {
       },
     ],
   };
-
-  const handleClick = (index) => {
-    if (activeIndex === index) {
-      // If the clicked item is already open, close it
-      setActiveIndex(null);
-    } else {
-      // If the clicked item is not open, open it and close any previously open item
-      setActiveIndex(index);
-    }
-  };
-
   const styles1 = {
     bgColor: "none",
     titleTextColor: "white",
@@ -130,8 +129,8 @@ const Aeromodelling = () => {
     objectFit: "scale-down",
     paddingRight: "8px",
   };
-  const walink1 = "https://chat.whatsapp.com/HlSkcSNFJsFJCWKBRoE6e0";
-  const dslink1 = "https://chat.whatsapp.com/HlSkcSNFJsFJCWKBRoE6e0";
+  const walink1 = "https://chat.whatsapp.com/GQjNx1VQ3FN6X63x8NRas5";
+  const dslink1 = "https://chat.whatsapp.com/GQjNx1VQ3FN6X63x8NRas5";
 
   return (
     <div>
@@ -239,9 +238,10 @@ const Aeromodelling = () => {
           >
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-                Teams will design and build a manually controlled, wireless boat
-                that has to sail through the obstacles in the arena and complete
-                the race task before the other boat.{" "}
+                A competition that revolves around optimizing the performance of
+                an RC plane in terms of maneuver execution time. Your challenge
+                is to design and construct an RC aircraft that excels in swiftly
+                completing a maneuvers.{" "}
               </div>
             </div>
           </div>
@@ -256,31 +256,26 @@ const Aeromodelling = () => {
                 <ul>
                   <li>The competition is divided into two Stages:</li>
                   <li>
-                    Stage 1:
+                    The zonal events will be conducted in 4 IITs (East Zone: IIT
+                    Kharagpur, West Zone – IIT Bombay, North Zone – IIT Kanpur
+                    and South Zone – IIT Madras).
                     <br />
-                    Every team must submit their design for the robot, which
-                    should also contain a detailed description of the critical
-                    components of the design. The submissions which satisfy the
-                    specifications given in the problem statement will qualify
-                    for the second stage, which will be informed to the teams
-                    through the mail. There are no restrictions on design and
-                    you can think like an unconventional thinker keeping in mind
-                    the constraints given in the problem statement.
+                    Top 3 teams from each zonal round will be invited to the
+                    national finals at RVCE, Bangalore.
                   </li>
+                  <br />
                   <li>
-                    Stage 2:
+                    IIT Bombay zonal round will be on 27th-29th December during
+                    Techfest offline mode.
                     <br />
-                    The teams shortlisted for Stage 2 will compete in a
-                    knock-out type round where two teams compete against each
-                    other. The 2nd round will be held during Techfest from 27th
-                    to 29th December 2023. Details of the round shall be
-                    mentioned in the problem statement mailed to those who
-                    qualify for the 2nd round.
+                    The arena will be open ground. There will be two rounds in
+                    the zonal competition.
                   </li>
+                  <li>A. Qualifier Round</li>
+                  <li>B. Main Round</li>
                 </ul>
               </div>
             </div>
-          </div>
             <div
               id="Timeline"
               className={`${styles.info} ${
@@ -383,13 +378,13 @@ const Aeromodelling = () => {
                   Arnav Dutt Sharma
                   <br />
                   <div
-                    className="col-3 contactNum"
+                    className=""
                     onClick={() => (window.location.href = `tel:8880030000`)}
                   >
                     +91 88800 30000
                   </div>
                   <div
-                    className="col-3 contactMail"
+                    className=""
                     onClick={() =>
                       (window.location.href = `arnavv.techfest@gmail.com`)
                     }
@@ -407,6 +402,7 @@ const Aeromodelling = () => {
           </div>
         </div>
       </div>
+    </div>
   );
 };
 

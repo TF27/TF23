@@ -64,7 +64,7 @@ const Quad = () => {
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            <b>Register and Pay before 29th October 2023 to avail the workshop at the early bird price</b> <br /><br />
+            <b>Register and Pay before 12th November 2023 to avail the workshop at the early bird price</b> <br /><br />
             </div>
             </div>
           </div>

@@ -270,127 +270,128 @@ const MERNifier = () => {
               </div>
             </div>
           </div>
-            <div
-              id="Timeline"
-              className={`${styles.info} ${
-                activeCity === "Timeline" ? styles.show : styles.hide
-              }`}
-            >
-              <div className={styles.info_tab}>
-                <div className={styles.info_data}>
-                  <li>
-                    Last Date of Registration: <br />
-                    19th November 2023
-                  </li>
 
-                  <li>
-                    Last date for abstract submission <br />
-                    19th November 2023
-                  </li>
+          <div
+            id="Timeline"
+            className={`${styles.info} ${
+              activeCity === "Timeline" ? styles.show : styles.hide
+            }`}
+          >
+            <div className={styles.info_tab}>
+              <div className={styles.info_data}>
+                <li>
+                  Last Date of Registration: <br />
+                  19th November 2023
+                </li>
 
-                  <li>
-                    Round 1: <br />
-                    22nd November 2023
-                  </li>
+                <li>
+                  Last date for abstract submission <br />
+                  19th November 2023
+                </li>
 
-                  <li>
-                    Round 2: <br />
-                    Mid-December 2023{" "}
-                  </li>
+                <li>
+                  Round 1: <br />
+                  22nd November 2023
+                </li>
 
-                  <li>
-                    Roound 3: <br />
-                    27th-29th December 2023{" "}
-                  </li>
-                </div>
-              </div>
-            </div>
-            <div
-              id="FAQs"
-              className={`${styles.info} ${
-                activeCity === "FAQs" ? styles.show : styles.hide
-              }`}
-            >
-              <div className={styles.info_tab}>
-                <div className={styles.info_data}>
-                  <Faq
-                    data={data}
-                    styles={styles1}
-                    activeIndex={activeIndex}
-                    onToggle={handleClick}
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              id="Rules"
-              className={`${styles.info} ${
-                activeCity === "Rules" ? styles.show : styles.hide
-              }`}
-            >
-              <div className={styles.info_tab}>
-                <div className={styles.info_data}>
-                  1. Every team has to register online on the official Techfest
-                  website for the competition
-                  <br />
-                  2. A Team ID will be allocated to the team on registration
-                  which shall be used for future references
-                  <br />
-                  3. The decision of the organizers or judges shall be treated
-                  as final and binding on all
-                  <br />
-                  4. No responsibility will be held by Techfest, IIT Bombay for
-                  any late, lost or misdirected entries
-                  <br />
-                  5. The idea presented by the teams should be original (not
-                  protected by means of patent/copyright/technical publication
-                  by anyone)
-                  <br />
-                  6. Note that at any point of time the latest information will
-                  be that which is on the website; however, registered
-                  participants will be informed through mail about any changes
-                  <br />
-                  7. All modes of official communication will be through the
-                  Techfest e-mail, participants are advised to keep track of all
-                  folders in their e-mail accounts
-                </div>
-              </div>
-            </div>
-            <div
-              id="Contact"
-              className={`${styles.info} ${
-                activeCity === "Contact" ? styles.show : styles.hide
-              }`}
-            >
-              <div className={styles.info_tab}>
-                <div className={styles.info_data}>
-                  Sumit Adikari
-                  <br />
-                  <div
-                    className="col-3 contactNum"
-                    onClick={() => (window.location.href = `tel:8348229467`)}
-                  >
-                    +91 83482 29467
-                  </div>
-                  <div
-                    className="col-3 contactMail"
-                    onClick={() =>
-                      (window.location.href = `sumittechfest158@gmail.com`)
-                    }
-                  >
-                    sumittechfest158@gmail.com
-                  </div>
-                </div>
+                <li>
+                  Round 2: <br />
+                  Mid-December 2023{" "}
+                </li>
+
+                <li>
+                  Roound 3: <br />
+                  27th-29th December 2023{" "}
+                </li>
               </div>
             </div>
           </div>
-        </div>
-        <div className={styles.grouplink}>
-          <div className={styles.wabutton}>
-            <Whatsapplink walink={walink1} dslink={dslink1} target="_blank" />
+          <div
+            id="FAQs"
+            className={`${styles.info} ${
+              activeCity === "FAQs" ? styles.show : styles.hide
+            }`}
+          >
+            <div className={styles.info_tab}>
+              <div className={styles.info_data}>
+                <Faq
+                  data={data}
+                  styles={styles1}
+                  activeIndex={activeIndex}
+                  onToggle={handleClick}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            id="Rules"
+            className={`${styles.info} ${
+              activeCity === "Rules" ? styles.show : styles.hide
+            }`}
+          >
+            <div className={styles.info_tab}>
+              <div className={styles.info_data}>
+                1. Every team has to register online on the official Techfest
+                website for the competition
+                <br />
+                2. A Team ID will be allocated to the team on registration which
+                shall be used for future references
+                <br />
+                3. The decision of the organizers or judges shall be treated as
+                final and binding on all
+                <br />
+                4. No responsibility will be held by Techfest, IIT Bombay for
+                any late, lost or misdirected entries
+                <br />
+                5. The idea presented by the teams should be original (not
+                protected by means of patent/copyright/technical publication by
+                anyone)
+                <br />
+                6. Note that at any point of time the latest information will be
+                that which is on the website; however, registered participants
+                will be informed through mail about any changes
+                <br />
+                7. All modes of official communication will be through the
+                Techfest e-mail, participants are advised to keep track of all
+                folders in their e-mail accounts
+              </div>
+            </div>
+          </div>
+          <div
+            id="Contact"
+            className={`${styles.info} ${
+              activeCity === "Contact" ? styles.show : styles.hide
+            }`}
+          >
+            <div className={styles.info_tab}>
+              <div className={styles.info_data}>
+                Sumit Adikari
+                <br />
+                <div
+                  className=""
+                  onClick={() => (window.location.href = `tel:8348229467`)}
+                >
+                  +91 83482 29467
+                </div>
+                <div
+                  className=""
+                  onClick={() =>
+                    (window.location.href = `sumittechfest158@gmail.com`)
+                  }
+                >
+                  sumittechfest158@gmail.com
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <div className={styles.grouplink}>
+        <div className={styles.wabutton}>
+          <Whatsapplink walink={walink1} dslink={dslink1} target="_blank" />
+        </div>
+      </div>
+    </div>
   );
 };
 

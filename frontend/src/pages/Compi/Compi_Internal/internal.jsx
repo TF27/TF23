@@ -29,6 +29,7 @@ import Iot from "./Competitions/Iot";
 import MERNifier from "./Competitions/MERNifier";
 import RowBoatics from "./Competitions/RowBoatics";
 import Aeromodelling from "./Competitions/Aeromodelling";
+import CertiTech from "./Competitions/CertiTech";
 
 const Internal = () => {
   const { compiName } = useParams();
@@ -203,6 +204,7 @@ const Internal = () => {
             {compiName === "mernifier" && <MERNifier />}
             {compiName === "rowboatics" && <RowBoatics />}
             {compiName === "boeing aeromodelling" && <Aeromodelling />}
+            {compiName === "certiTech" && <CertiTech />}
 
             <div className={styles.team_reg}>
               {user === null ? (
