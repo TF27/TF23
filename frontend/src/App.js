@@ -4,11 +4,7 @@ import Header from "./components/Navbar/Header";
 import { AuthContextProvider } from "./contexts/AuthContext";
 import Protected from "./contexts/Protected";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import Cyclothon from './pages/cyclothon/Cyclothon';
-
 import Home from "./pages/Home/home";
-// import Exhibition from './pages/Exhibition/exhi';
-// import Compi from './pages/Compi/compi';
 import CompiInternal from "./pages/Compi/Compi_Internal/index";
 import Reg from "./pages/Compi/Compi_Internal/Reg";
 import Create_Team from "./pages/Compi/Compi_Internal/Teams/create_team";
@@ -24,6 +20,9 @@ import Footer from "./components/Footer/Footer";
 import Loading1 from "./pages/loading_page/Loading1";
 import WorkReg from "./pages/workshop/internal/reg";
 import Header_update from "./components/Navbar/Header_update";
+import Sustain from "./pages/SI/index.jsx";
+import SustainRegtest from "./pages/SI/components/Reg2.jsx";
+import Sustainregwebinar from "./pages/SI/components/Reg1.jsx";
 
 // const Home= React.lazy(() => import('./pages/Home/home'));
 const Lectures = React.lazy(() => import("./pages/Lectures/index"));
@@ -138,6 +137,30 @@ function App() {
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Robowars />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/sustain"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Sustain />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/sustainregtest"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <SustainRegtest />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/sustainregwebinar"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Sustainregwebinar/>
                 </React.Suspense>
               }
             />

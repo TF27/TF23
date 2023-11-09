@@ -602,7 +602,33 @@ def robowars_reg_form(request):
                 return JsonResponse(res)
         res = {'success': False}
         return JsonResponse(res)
+    
 
+@api_view(['POST'])
+def sustain_reg_test(request):
+    if request.method == 'POST':
+        sustain_reg_test_serializer = RobowarsRegSerializer(
+            data=request.data, many=False)
+        print(sustain_reg_test_serializer.is_valid())
+        if sustain_reg_test_serializer.is_valid():
+                sustain_reg_test_serializer.save()
+                res = {'success': True}
+                return JsonResponse(res)
+        res = {'success': False}
+        return JsonResponse(res)
+    
+@api_view(['POST'])
+def sustain_reg_webinar(request):
+    if request.method == 'POST':
+        sustain_reg_webinar_serializer = RobowarsRegSerializer(
+            data=request.data, many=False)
+        print(sustain_reg_webinar_serializer.is_valid())
+        if sustain_reg_webinar_serializer.is_valid():
+                sustain_reg_webinar_serializer.save()
+                res = {'success': True}
+                return JsonResponse(res)
+        res = {'success': False}
+        return JsonResponse(res)
 
 @api_view(['POST'])
 def acco_reg(request):

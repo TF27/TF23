@@ -4,7 +4,6 @@ import Faq from 'react-faq-component';
 import Whatsapplink from '../../../../components/whatsapp/link';
 import './x.css';
 
-
 const Aeromodelling = () => {
 
     const [open, setOpen] = useState(false);

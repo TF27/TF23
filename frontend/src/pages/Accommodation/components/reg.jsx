@@ -14,6 +14,7 @@ const Register = () => {
   const [i, setI] = useState(0);
   const [showRegistrationForm, setShowRegistrationForm] = useState(false);
   const [checked, setChecked] = useState(false);
+  const [romeo, setRomeo] = useState(false);
   // const [imageName, setImageName] = useState('');
   const [formData, setFormData] = useState({
     name: "",
@@ -55,7 +56,7 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    setRomeo(true);
     axios
       .post('/api/acco_reg/', formData, {
         headers: {
@@ -295,7 +296,10 @@ const Register = () => {
           </div>
           
           <div className={styles.titSpn_rect1}>
-          <button className={`${styles.titSpn_rect2} ${styles.registerButton}`} type={"submit"} onClick={handleSubmit}>Pay</button>
+            {romeo ? (<button className={`${styles.titSpn_rect2} ${styles.registerButton}`} disabled>Submitting...</button>)
+            : (
+              <button className={`${styles.titSpn_rect2} ${styles.registerButton}`} type={"submit"} onClick={handleSubmit}>Pay</button>
+            )}
           </div>
         </form>
       ) : (

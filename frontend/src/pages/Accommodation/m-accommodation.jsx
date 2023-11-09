@@ -10,6 +10,7 @@ import Faq from 'react-faq-component';
 const MAccommodation = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const handleClick = (index) => {
+    setShowBackButton(false);
     if (activeIndex === index) {
       setActiveIndex(null);
     } else {
@@ -248,6 +249,7 @@ const MAccommodation = () => {
   const [showBackButton, setShowBackButton] = useState(false);
 
   const tabClickHandler = (tab) => {
+    setShowBackButton(false)
     setActiveTab(activeTab === tab ? null : tab);
     setShowRegistrationForm(false);
   };
@@ -262,6 +264,7 @@ const MAccommodation = () => {
     <div className="m-accommodation" style={bgHaiJi}>
       <div className={styles['m-accommodation-container']}>
         <ImageOne />
+
         <div className={styles.tabs}>
           {tabs.map((tab, index) => (
             <div

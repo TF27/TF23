@@ -163,7 +163,7 @@ const Accommodation = () => {
         </li>
     </ol>
     ,
-    'FAQs': <div id="FAQs" className={`${styles.info}`}>
+    'FAQs': <div id="FAQs" className={`${styles.infoFaq}`}>
     <div className={styles.info_tab}>
     <div className={styles.info_data}>
       <Faq 
