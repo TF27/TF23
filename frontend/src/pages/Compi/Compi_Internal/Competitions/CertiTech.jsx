@@ -5,7 +5,7 @@ import './x.css';
 import Whatsapplink from '../../../../components/whatsapp/link';
 
 
-const MERNifier = () => {
+const CertiTech = () => {
     const [activeCity, setActiveCity] = useState('About');
     const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {
@@ -16,7 +16,7 @@ const MERNifier = () => {
         rows: [
           {
             title: "How to register?",
-            content: 'Follow this steps for registration : www.techfest.org > Competitions > MERNifier > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
+            content: 'Follow this steps for registration : www.techfest.org > Competitions > CertiTech > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
           },
           {
             title: "Who can participate?",
@@ -27,12 +27,12 @@ const MERNifier = () => {
             content: 'One team can have a maximum of 4 members.'
           },
           {
-            title: "Is it free to register for MERNifier?",
+            title: "Is it free to register for CertiTech?",
             content: 'Yes, it is free to register.'
           },
           {
             title: "How can I make my own team (as a team leader)?",
-            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> MERNifier -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
+            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> CertiTech -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
           },
           {
             title: "What is the Registered Mail ID?",
@@ -110,8 +110,8 @@ const MERNifier = () => {
         objectFit: 'scale-down', 
         paddingRight: '8px',
     }
-    const walink1 = "https://chat.whatsapp.com/IZ2S7j8Nc6X0oje2kgQ2cJ";
-    const dslink1 = "https://chat.whatsapp.com/IZ2S7j8Nc6X0oje2kgQ2cJ";
+    const walink1 = "https://chat.whatsapp.com/Jg0ivcTqFVbGFEfHWV9YHw";
+    const dslink1 = "https://chat.whatsapp.com/Jg0ivcTqFVbGFEfHWV9YHw";
 
     return ( 
       <div>
@@ -162,13 +162,13 @@ const MERNifier = () => {
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
             <li>Last Date of Registration: <br />
-            19th November 2023</li>
+            23th November 2023</li>
 
             <li>Last date for abstract submission <br />
-            19th November 2023</li>
+            23th November 2023</li>
 
             <li>Round 1: <br />
-            22nd November 2023</li>
+            26th November 2023</li>
 
             <li>Round 2: <br />
             Mid-December 2023 </li>
@@ -206,9 +206,9 @@ const MERNifier = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Sumit Adikari<br/>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8348229467`}>+91 83482 29467</div>
-                    <div className="col-3 contactMail" onClick={() => window.location.href = `sumittechfest158@gmail.com`}>sumittechfest158@gmail.com</div>
+              Jeeten Makwana<br/>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9925312099`}>+91 99253 12099</div>
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `mjeeten.techfest@gmail.com`}>mjeeten.techfest@gmail.com</div>
               
               </div>
             </div>
@@ -223,4 +223,4 @@ const MERNifier = () => {
      );
 }
  
-export default MERNifier;
+export default CertiTech;

@@ -151,16 +151,16 @@ const TechAid = () => {
                 30th October 2023</li>
 
             <li>First Project Report Submission: <br />
-            30th October 2023</li>
+            10nd November 2023</li>
 
             <li>Final Project Report Submission: <br />
-            2nd November 2023</li>
+            10nd November 2023</li>
 
             <li>Final presentation & video submission: <br />
             10th December 2023 </li>
 
             <li>Presentation Stage & Exhibition: <br />
-            During Techfest 2022-23, in mid december </li>
+            During Techfest 2023-24 </li>
               </div>
             </div>
           </div>

@@ -160,6 +160,9 @@ const RowBoatics = () => {
             </ul>
             </div>
           </div>
+          </div>
+
+          
           <div id="Timeline" className={`${styles.info} ${activeCity === 'Timeline' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
@@ -215,7 +218,6 @@ const RowBoatics = () => {
       </div>
       <div className={styles.grouplink}>
       <div className={styles.wabutton }><Whatsapplink walink={walink1} dslink={dslink1} target="_blank"/></div>
-    </div>
     </div>
     </div>
      );

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
-import './x.css';
 import Whatsapplink from '../../../../components/whatsapp/link';
+import './x.css';
 
-const CozmoClench = () => {
+const CertiTech = () => {
 
     const [open, setOpen] = useState(false);
 
@@ -27,24 +27,24 @@ const CozmoClench = () => {
     const data = {
         rows: [
           {
-            title: "Why should I participate in the CozmoClench?",
-            content: "The competition provides a platform for students to design and construct their own gripper bot which can drive through an obstacle-filled path and put the objects in the respective target zones. It also provides an opportunity for students to work as a team and test their skills"
+            title: "How to register?",
+            content: 'Follow this steps for registration : www.techfest.org > Competitions > CertiTech > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
           },
           {
-            title: "How to register?",
-            content: 'Follow this steps for registration : www.techfest.org > Competitions > CozmoClench > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
+            title: "Who can participate?",
+            content: 'Any individual with a valid ID card, Early stage startups, Upto 3 years old college passouts can participate in the competition'
           },
           {
             title: "How many people can be there in one team?",
             content: 'One team can have a maximum of 4 members.'
           },
           {
-            title: "Is it free to register for Meshmerize?",
+            title: "Is it free to register for CertiTech?",
             content: 'Yes, it is free to register.'
           },
           {
             title: "How can I make my own team (as a team leader)?",
-            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> CozmoClench -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
+            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> CertiTech -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
           },
           {
             title: "What is the Registered Mail ID?",
@@ -106,9 +106,8 @@ const CozmoClench = () => {
         margin: 'auto',
         rowContentMarginBottom: '0',
       }
-      const walink1 = "https://chat.whatsapp.com/Llw5pM7QsdP6POyqiuWkkO";
-      const dslink1 = "https://chat.whatsapp.com/Llw5pM7QsdP6POyqiuWkkO";
-
+      const walink1 = "https://chat.whatsapp.com/Jg0ivcTqFVbGFEfHWV9YHw";
+      const dslink1 = "https://chat.whatsapp.com/Jg0ivcTqFVbGFEfHWV9YHw";
     return (
         <div className={styles.mWholeData}>
             <div className={styles.grouplink}>
@@ -121,8 +120,8 @@ const CozmoClench = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'About' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>The competition provides a platform for students to design and construct their own gripper bot which can drive through an obstacle-filled path and put the objects in the respective target zones. It also provides an opportunity for students to work as a team and test their skills</div>
-                </div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Developing a MERN stack-focused code assistant tool that understands and caters to the specific needs of MongoDB, Express.js, React.js, and Node.js developers to enhance their productivity and efficiency.</div>
+                    </div>
             </div>
             <div>
                 <div onClick={() => handleClickOpen('Structure')} className={`${styles.whatu} ${open === 'Structure' ? styles.whatuOpen : ''}`}>
@@ -131,8 +130,26 @@ const CozmoClench = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'Structure' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Top 5 teams from each Zonal Qualifier will qualify for the Grand Finale that will be held during Techfest 2022-23 (Only if they score higher than the minimum cut-off score)</div>
-                </div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
+                    <ul>
+              <li>
+              Round 1: Abstract review meet<br />
+              Shortlisted teams will showcase their work<br/>
+              Improvements will be suggested by the experts
+
+              </li> 
+              <li>
+              Round 2: Final review meet<br/>
+              Updated report will be showcased based on which 5 teams will be shortlisted for the final presentation
+              </li>
+              <li>
+              Round 3: Presentation and Working Demonstration<br/>
+              Working demonstration and presentation of the solution<br/>
+              Top 5 teams shortlisted from Stage 2 will present their solution at Techfest 2023-24
+              </li>
+
+            </ul>
+                    </div>
             </div>
             <div>
                 <div onClick={() => handleClickOpen('Timeline')} className={`${styles.whatu} ${open === 'Timeline' ? styles.whatuOpen : ''}`}>
@@ -141,16 +158,23 @@ const CozmoClench = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'Timeline' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Round 1:<br/>
-            Zonals Round will be held at 5 major cities, namely <br />
-            1. Mumbai - 8th October<br />
-            2. Bangalore - 28th October <br />
-            3. Jaipur - 15th October <br />
-            4. Bhopal - 15th October <br />
-            5. Lucknow - 15th October<br />
-             <br />
-            Round 2:<br/>
-            Finale will be held at Techfest 2023-24 during 27th - 29th December 2023</div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
+                    <li>Last Date of Registration: <br />
+            23th November 2023</li>
+
+            <li>Last date for abstract submission <br />
+            23th November 2023</li>
+
+            <li>Round 1: <br />
+            26th November 2023</li>
+
+            <li>Round 2: <br />
+            Mid-December 2023 </li>
+
+            <li>Roound 3: <br />
+            27th-29th December 2023 </li>
+           
+                    </div>
                 </div>
             </div>
             <div>
@@ -172,13 +196,13 @@ const CozmoClench = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'Rules' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                      1. Every team has to register online on the official Techfest website for the competition
-                      <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references
-                      <br/>3. The decision of the organizers or judges shall be treated as final and binding on all
-                      <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries
-                      <br/>5. Note that at any point of time the latest information will be that which is on the website, however, registered participants will be informed through mail about any changes
-                      <br/>6. All modes of official communication will be through the Techfest e-mail, participants are advised to keep track of all folders in their e-mail accounts</div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>1. Every team has to register online on the official Techfest website for the competition
+            <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references
+            <br/>3. The decision of the organizers or judges shall be treated as final and binding on all
+            <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries
+            <br/>5. The idea presented by the teams should be original (not protected by means of patent/copyright/technical publication by anyone)
+            <br/>6. Note that at any point of time the latest information will be that which is on the website; However, registered participants will be informed through mail about any changes
+            <br/>7. All modes of official communication will be through the Techfest e-mail, participants are advised to keep track of all folders in their e-mail accounts</div>
                 </div>
             </div>
             <div>
@@ -189,14 +213,15 @@ const CozmoClench = () => {
                 <div className={`${styles.whatd} ${open === 'Contact' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-                    Tarun Kumar<br/>
-                    <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:tarun01.techfest@gmail.com`}>tarun01.techfest@gmail.com</div>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:7549952736`}>+91 75499 52736</div>
+                    Jeeten Makwana<br/>
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:mjeeten.techfest@gmail.com`}>mjeeten.techfest@gmail.com</div>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9925312099`}>+91 99253 12099</div>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     );
 }
 
-export default CozmoClench;
+export default CertiTech;
