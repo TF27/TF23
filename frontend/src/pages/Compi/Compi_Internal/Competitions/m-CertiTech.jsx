@@ -120,7 +120,9 @@ const CertiTech = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'About' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Developing a MERN stack-focused code assistant tool that understands and caters to the specific needs of MongoDB, Express.js, React.js, and Node.js developers to enhance their productivity and efficiency.</div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
+                    Participants are tasked with designing and developing a secure and transparent system for delivering insurance certificates to policyholders, enhancing trust and efficiency in the insurance sector by harnessing the power of Distributed Ledger Technology (DLT).
+                    </div>
                     </div>
             </div>
             <div>
