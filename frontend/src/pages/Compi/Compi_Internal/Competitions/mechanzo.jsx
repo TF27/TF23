@@ -143,9 +143,18 @@ const Mechanzo = () => {
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
             Round 1:<br/>
-            Date and Venue will be conveyed soon
+            Venue and Date for zonals round:<br/>
+            1. Our Lady of Fatima convent secondary school, Gurugram - 18 November 2023<br/>
+            2. Canal Valley Public School,	Rewari -	21 November 2023<br/>
+            3. Rawat Senior Secondary School,	Jaipur -	22 November 2023<br/>
+            4. International Sahaja Public School,	Dharamshala -	22 November 2023<br/>	
+            5. School of Eminence Batala,	Batala -	23 November 2023<br/>
+            6. Pragyan School,	G. Noida -	28 November 2023<br/>
+            7. Vidyamandir Trust, Palanpur,	Palanpur -	2 December 2023<br/>
+            8. IIT Bombay,	Mumbai -	26 December 2023<br/><br/>
+
             Round 2:<br/>
-            Finale will be held at Techfest 2023-24 during 27th - 29th December 2023 (Exact date and time will be conveyed to the finalists)
+            Finale will be held at Techfest 2023-24 during 27th - 29th December 2023
               </div>
             </div>
           </div>

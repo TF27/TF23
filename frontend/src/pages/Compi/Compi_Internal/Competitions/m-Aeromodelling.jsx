@@ -3,7 +3,6 @@ import styles from './compi_data.module.css';
 import Faq from 'react-faq-component';
 import Whatsapplink from '../../../../components/whatsapp/link';
 import './x.css';
-// import Aeromodelling from './aeromodelling';
 
 const Aeromodelling = () => {
 
@@ -27,29 +26,25 @@ const Aeromodelling = () => {
 
     const data = {
         rows: [
-            {
-                title: "Why should I participate in RowBoatics?",
-                content: 'The competition provides its participants with a reasonable grasp of important mechanical and programming principles that will take them in the direction of being able to design and construct their boat. Participants work together to design and build a boat that can navigate on an obstacle-filled track and complete the race task before the other boat'
+              {
+                title: "How to register?",
+                content: 'Participants should be Signed in before Registering.Then, follow these steps for registration :www.techfest.org -> Competitions > Boeing Aermodelling -> Register -> Fill all your details -> You are registered in that competition. Now you must either Create a team or Join a Team using the registered mail ID.'
               },
               {
                 title: "How many stages does the competition have?",
                 content: 'The competition is divided into 2 stages, detailed information about both stages can be found in the problem statement.'
               },
               {
-                title: "How to register?",
-                content: 'Participants should be Signed in before Registering.Then, follow these steps for registration :www.techfest.org -> Competitions > RowBoatics -> Register -> Fill all your details -> You are registered in that competition. Now you must either Create a team or Join a Team using the registered mail ID.'
-              },
-              {
                 title: "What is the Registered Mail Id of a person?",
                 content: 'The Gmail Id which was used to Sign In is the registered mail Id. It is a unique identity of any participant. And will be used in adding team members to a team, joining a pre-existing team, availing accommodation, etc.'
               },
               {
-                title: "Is it free to register for RowBoatics?",
+                title: "Is it free to register for Boeing Aermodelling?",
                 content: 'Yes, it is free to register.'
               },
               {
                 title: "How can I make my own team (as a team leader)?",
-                content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> RowBoatics -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
+                content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Boeing Aermodelling -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
               },
               {
                 title: "How many people can be there in one team?",
@@ -61,7 +56,7 @@ const Aeromodelling = () => {
               },
               {
                 title: "Can I add myself to an existing team?",
-                content: 'Yes, follow these steps to get added to a team. Join team -> Enter required details. You will be added to that team.'
+                content: 'Yes, follow these steps to get added to a team. Join team -> Enter your Team ID. You will be added to that team.'
               },
               {
                 title: "How can I remove members from my team (as a team leader)?",
@@ -115,8 +110,8 @@ const Aeromodelling = () => {
         margin: 'auto',
         rowContentMarginBottom: '0',
       }
-      const walink1 = "https://chat.whatsapp.com/HlSkcSNFJsFJCWKBRoE6e0";
-      const dslink1 = "https://chat.whatsapp.com/HlSkcSNFJsFJCWKBRoE6e0";
+      const walink1 = "https://chat.whatsapp.com/GQjNx1VQ3FN6X63x8NRas5";
+      const dslink1 = "https://chat.whatsapp.com/GQjNx1VQ3FN6X63x8NRas5";
     return (
         <div className={styles.mWholeData}>
             <div className={styles.grouplink}>
@@ -129,7 +124,9 @@ const Aeromodelling = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'About' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Developing a MERN stack-focused code assistant tool that understands and caters to the specific needs of MongoDB, Express.js, React.js, and Node.js developers to enhance their productivity and efficiency.</div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
+                    A competition that revolves around optimizing the performance of an RC plane in terms of maneuver execution time. Your challenge is to design and construct an RC aircraft that excels in swiftly completing a maneuvers.
+                    </div>
                     </div>
             </div>
             <div>
