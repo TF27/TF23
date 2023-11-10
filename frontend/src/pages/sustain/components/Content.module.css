@@ -1,0 +1,16 @@
+.container {
+  text-align: center;
+  margin: 2rem;
+  /* color: white; */
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+}
+
+.content {
+  margin-top: 1rem;
+}

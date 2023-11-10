@@ -24,6 +24,7 @@ import Footer from "./components/Footer/Footer";
 import Loading1 from "./pages/loading_page/Loading1";
 import WorkReg from "./pages/workshop/internal/reg";
 import Header_update from "./components/Navbar/Header_update";
+import Sustain from "./pages/sustain/App"
 
 // const Home= React.lazy(() => import('./pages/Home/home'));
 const Lectures = React.lazy(() => import("./pages/Lectures/index"));
@@ -103,6 +104,11 @@ function App() {
             <Route path='/cyclothon' element={
               <React.Suspense fallback={<div>Loading...</div>}>
                 <Cyclothon />
+              </React.Suspense>
+            } />
+            <Route path='/sustain' element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <Sustain />
               </React.Suspense>
             } />
 
