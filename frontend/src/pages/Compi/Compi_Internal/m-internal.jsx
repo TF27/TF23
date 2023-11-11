@@ -27,6 +27,10 @@ import Robocapleague from "./Competitions/m-robocapleague";
 import Dronelog from "./Competitions/m-Dronelog";
 import Task from "./Competitions/m-Task";
 import Iot from "./Competitions/m-Iot";
+import MERNifier from "./Competitions/m-MERNifier";
+import RowBoatics from "./Competitions/m-RowBoatics";
+import Aeromodelling from "./Competitions/m-Aeromodelling";
+import CertiTech from "./Competitions/m-CertiTech";
 
 const MInternal = () => {
   const { compiName } = useParams();
@@ -38,8 +42,14 @@ const MInternal = () => {
     navigate("/competitions/cozmoclench");
   } else if (compiName === "mesh") {
     navigate("/competitions/meshmerize");
+  } else if (compiName === "aeromodelling") {
+    navigate("/competitions/boeing%20aeromodelling");
   } else if (compiName === "tfo") {
     navigate("/competitions/techfest%20olympiad");
+  } else if (compiName === "MERNifier") {
+    navigate("/competitions/mernifier");
+  } else if (compiName === "RowBoatics") {
+    navigate("/competitions/rowboatics");
   } else if (compiName === "uf") {
     navigate("/competitions/urban-futurism");
   } else if (compiName === "taskwhiz") {
@@ -266,6 +276,10 @@ const MInternal = () => {
         {compiName === "dronelog" && <Dronelog />}
         {compiName === "task whiz" && <Task />}
         {compiName === "tIH - ioT" && <Iot />}
+        {compiName === "mernifier" && <MERNifier />}
+        {compiName === "rowboatics" && <RowBoatics />}
+        {compiName === "boeing aeromodelling" && <Aeromodelling />}
+        {compiName === "cerTitech" && <CertiTech />}
       </div>
     ));
   };

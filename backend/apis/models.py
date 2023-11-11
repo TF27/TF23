@@ -78,6 +78,7 @@ class compi_reg(models.Model):
         ('3', 'Lucknow'),
         ('4', 'Jaipur'),
         ('5', 'Bangalore'),
+        ('6', 'Nepal'),
     ], max_length=255, blank=True, null=True)
 
 class compi_team(models.Model):
@@ -191,3 +192,19 @@ class AccoReg(models.Model):
     paid = models.BooleanField(default=False)
     def __str__(self):
         return self.name
+    
+
+class SustainRegTest(models.Model):
+    name = models.CharField(max_length=255, null=True, blank=True)
+    email = models.EmailField(unique=True, max_length=255)
+    phone = models.CharField(blank=True, null=True, max_length=255)
+    college = models.CharField(blank=True, null=True, max_length=255)
+    country = models.CharField(blank=True, null=True, max_length=255)
+    testdate = models.CharField(blank=True, null=True, max_length=255)
+
+class SustainRegWebinar(models.Model):
+    name = models.CharField(max_length=255, null=True, blank=True)
+    email = models.EmailField(unique=True, max_length=255)
+    phone = models.CharField(blank=True, null=True, max_length=255)
+    college = models.CharField(blank=True, null=True, max_length=255)
+    country = models.CharField(blank=True, null=True, max_length=255)

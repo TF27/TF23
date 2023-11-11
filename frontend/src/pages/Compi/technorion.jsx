@@ -364,6 +364,24 @@ const Technorion = () => {
   return (
     <div className={styles.Technorion}>
       <div className="blackGradient-to-bottom" />
+      <div className="technorion_cards">
+        <div className="container" style={{ maxWidth: "90%" }}>
+          <div className="row">
+            {othercard()}
+            {card()} {markiCompi()}
+          </div>
+        </div>
+      </div>
+      {/* <div className="technorion_cards">
+            <div className="container" style={{ maxWidth: "90%" }}>
+               <div className="row">{markiCompi()}</div>
+            </div>
+         </div> */}
+      <div className="technorion_cards">
+        <div className="container" style={{ maxWidth: "90%" }}>
+          <div className="row">{ideatesCard()}</div>
+        </div>
+      </div>
       <h1>TECHNORION</h1>
       <div className={styles.desc}>
         <div className={styles.desc_cont}>
@@ -415,24 +433,6 @@ const Technorion = () => {
         </div>
         <div className={styles.mapContainer}>
           <img src={indiamap} alt="india" className={styles.descimage} />
-        </div>
-      </div>
-      <div className="technorion_cards">
-        <div className="container" style={{ maxWidth: "90%" }}>
-          <div className="row">
-            {othercard()}
-            {card()} {markiCompi()}
-          </div>
-        </div>
-      </div>
-      {/* <div className="technorion_cards">
-            <div className="container" style={{ maxWidth: "90%" }}>
-               <div className="row">{markiCompi()}</div>
-            </div>
-         </div> */}
-      <div className="technorion_cards">
-        <div className="container" style={{ maxWidth: "90%" }}>
-          <div className="row">{ideatesCard()}</div>
         </div>
       </div>
     </div>

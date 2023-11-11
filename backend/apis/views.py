@@ -10,7 +10,7 @@ from django.shortcuts import render
 from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser
 from rest_framework import status
-from rest_framework.decorators import api_view 
+from rest_framework.decorators import api_view
 from rest_framework.views import APIView
 from rest_framework import viewsets
 from rest_framework.decorators import parser_classes, permission_classes
@@ -26,6 +26,8 @@ from rest_framework.parsers import FileUploadParser, MultiPartParser, FormParser
 import pandas as pd
 from django.core.mail import send_mail, send_mass_mail
 from django.conf import settings
+from django.utils.html import format_html
+
 
 class NotifyView(APIView):
     def post(self, request):
@@ -79,18 +81,19 @@ Team Techfest
     from_email = 'noreply@techfest.org'
     excel = '/home/yat251/Desktop/Coding/TF23/backend/emails.csv'
     recipient_df = pd.read_csv(excel)
-    
+
     # Filter out empty cells from the 'Emails' column and convert them to a list
     recipient_list = recipient_df['Email'].dropna().tolist()
-    i=0
+    i = 0
     for recipient in recipient_list:
         print(i)
         send_mail(subject, message, from_email, [recipient])
-        i+=1
+        i += 1
+
 
 @parser_classes([JSONParser])
 def get_user(request):
-    try: 
+    try:
         google_id = request.headers.get('X-Google-UID')
         # print(google_id)
         users = compi_reg.objects.filter(google_id=google_id)
@@ -107,6 +110,7 @@ def get_user(request):
     # print(user, 'get user')
     return user
 
+
 @parser_classes([JSONParser])
 def get_user_id(request):
     try:
@@ -117,14 +121,15 @@ def get_user_id(request):
             for user in users:
                 continue
         else:
-            user=None
+            user = None
     except:
         user = None
     return email
 
+
 @parser_classes([JSONParser])
 def get_compi(request):
-    try: 
+    try:
         # print('hi')
         compi = request.headers.get('X-Compi-ID')
         # print(compi)
@@ -133,31 +138,35 @@ def get_compi(request):
         compi = None
     return compi
 
+
 @parser_classes([JSONParser])
 def get_team_id(request):
     try:
         # print(request.headers)
-        team_id = request.headers.get('X-Team-ID') 
-        # print(team_id)  
+        team_id = request.headers.get('X-Team-ID')
+        # print(team_id)
         return team_id
     except:
         team_id = None
     return team_id
 
+
 @api_view(['GET'])
 def compi_card(request):
     if request.method == 'GET':
-        try: 
+        try:
             email = get_user_id(request)
             # email = user.email if user else None
             # print(email)
             compi = Compi.objects.all()
-            serializer = Compi_CardsSerializer(compi, many=True, context={'user': email})
+            serializer = Compi_CardsSerializer(
+                compi, many=True, context={'user': email})
             return Response(serializer.data)
         except:
             compi = Compi.objects.all()
             print(compi)
-            serializer = Compi_CardsSerializer(compi, many=True, context={'request': request})
+            serializer = Compi_CardsSerializer(
+                compi, many=True, context={'request': request})
             return Response(serializer.data)
 
 
@@ -171,7 +180,7 @@ def check_reg(request):
             # print(gotcha, 'gotcha it is')
             compi_exists = gotcha.filter(compi=compi).exists()
             # return Response(compi_exists)
-        
+
             return Response(True)
         except:
             return Response(False)
@@ -180,12 +189,12 @@ def check_reg(request):
 # def compi_mail(request):
 
 
-
-@api_view(['POST']) 
+@api_view(['POST'])
 @csrf_exempt
 def compi_reg_form(request):
-    if request.method=='POST':
-        compi_reg_serializer = Compi_RegSerializer(data=request.data, many=False)
+    if request.method == 'POST':
+        compi_reg_serializer = Compi_RegSerializer(
+            data=request.data, many=False)
         print(compi_reg_serializer)
         # print(compi_reg_serializer.is_valid())
         if compi_reg_serializer.is_valid():
@@ -217,7 +226,7 @@ def page(request):
     return render(request, 'index.html')
 
 
-### For team
+# For team
 
 def team_reg_check(request):
     lead = request.team_leader_email
@@ -227,18 +236,24 @@ def team_reg_check(request):
 @api_view(['POST'])
 @csrf_exempt
 def create_team(request):
-    if request.method=='POST':
-        compi_team_serializer = Compi_TeamSerializer(data=request.data, many=False)
+    if request.method == 'POST':
+        compi_team_serializer = Compi_TeamSerializer(
+            data=request.data, many=False)
         if compi_team_serializer.is_valid():
-            # if check_reg(compi_team_serializer) is 
+            # if check_reg(compi_team_serializer) is
             compi = compi_team_serializer.validated_data.get('compi_name')
             compi1 = str(compi).capitalize()
             compi_reg_instances = compi_reg.objects.filter(compi=compi)
-            team_leader_email = compi_team_serializer.validated_data.get('team_leader_email')
-            team_leader_name = compi_team_serializer.validated_data.get('team_leader_name')
-            parti_email1 = compi_team_serializer.validated_data.get('parti1_email')
-            parti_email2 = compi_team_serializer.validated_data.get('parti2_email')
-            parti_email3 = compi_team_serializer.validated_data.get('parti3_email')
+            team_leader_email = compi_team_serializer.validated_data.get(
+                'team_leader_email')
+            team_leader_name = compi_team_serializer.validated_data.get(
+                'team_leader_name')
+            parti_email1 = compi_team_serializer.validated_data.get(
+                'parti1_email')
+            parti_email2 = compi_team_serializer.validated_data.get(
+                'parti2_email')
+            parti_email3 = compi_team_serializer.validated_data.get(
+                'parti3_email')
             print(request.data.get('parti1_email'))
             if compi_team.objects.filter(team_leader_email=team_leader_email, compi_name=compi).exists():
                 res = {'success': False, 'error': 'Team already formed'}
@@ -255,7 +270,8 @@ def create_team(request):
                 print(4)
                 res = {'success': False, 'error': 'User not registered'}
                 return JsonResponse(res, status=400)
-            latest_team = compi_team.objects.filter(compi_name=compi).order_by('-team_id').first()
+            latest_team = compi_team.objects.filter(
+                compi_name=compi).order_by('-team_id').first()
             next_team_id = '0269'
             if latest_team:
                 last_team_id = latest_team.team_id[-4:]
@@ -266,11 +282,13 @@ def create_team(request):
             subject = f'Techfest, IIT Bombay | Creation of Team successful for {compi1}'
             message = f'You have successfully created your team with team leader {team_leader_name} and {team_id}. Kindly go through all the rules and FAQs carefully, and keep checking the website for regular updates.'
             send_mailer = 'noreply@techfest.org'
-            recipient = [compi_team_serializer.validated_data.get('team_leader_email')]
+            recipient = [compi_team_serializer.validated_data.get(
+                'team_leader_email')]
             send_mail(subject, message, send_mailer, recipient)
             subject2 = f'Techfest, IIT Bombay | Added to {team_id} team for the {compi1} competition'
             message2 = f'You have been successfully added to the team for the {compi1} competition with team leader {team_leader_email} and {team_id}. Kindly go through all the rules and FAQs carefully, and keep checking the website for regular updates.'
-            recipient2 = [compi_team_serializer.validated_data.get('parti1_email'), compi_team_serializer.validated_data.get('parti2_email'), compi_team_serializer.validated_data.get('parti3_email')]
+            recipient2 = [compi_team_serializer.validated_data.get('parti1_email'), compi_team_serializer.validated_data.get(
+                'parti2_email'), compi_team_serializer.validated_data.get('parti3_email')]
             recipient2 = [email for email in recipient2 if email is not None]
             for rec in recipient2:
                 send_mail(subject2, message2, send_mailer, [rec])
@@ -279,22 +297,26 @@ def create_team(request):
 
         return JsonResponse(res)
 
+
 @api_view(['POST'])
 @csrf_exempt
 def single_parti(request):
     if request.method == 'POST':
-        compi_team_serializer = Compi_TeamSerializer(data=request.data, many=False)
+        compi_team_serializer = Compi_TeamSerializer(
+            data=request.data, many=False)
         # print(compi_team_serializer.is_valid())
         if compi_team_serializer.is_valid():
-            # if check_reg(compi_team_serializer) is 
+            # if check_reg(compi_team_serializer) is
             compi = compi_team_serializer.validated_data.get('compi_name')
             compi1 = str(compi).capitalize()
             compi_reg_instances = compi_reg.objects.filter(compi=compi)
-            team_leader_email = compi_team_serializer.validated_data.get('team_leader_email')
+            team_leader_email = compi_team_serializer.validated_data.get(
+                'team_leader_email')
             if not compi_reg_instances.filter(email=team_leader_email).exists():
                 res = {'success': False, 'error': 'User not registered'}
                 return JsonResponse(res)
-            latest_team = compi_team.objects.filter(compi_name=compi).order_by('-team_id').first()
+            latest_team = compi_team.objects.filter(
+                compi_name=compi).order_by('-team_id').first()
             next_team_id = '0269'
             if latest_team:
                 last_team_id = latest_team.team_id[-4:]
@@ -305,11 +327,13 @@ def single_parti(request):
             subject = f'Techfest, IIT Bombay | Creation of Team successful for {compi1}'
             message = f'You have successfully created your Unique ID {team_id} in the {compi1} competition with email address {team_leader_email}'
             send_mailer = 'noreply@techfest.org'
-            recipient = [compi_team_serializer.validated_data.get('team_leader_email')]
+            recipient = [compi_team_serializer.validated_data.get(
+                'team_leader_email')]
             send_mail(subject, message, send_mailer, recipient)
             return JsonResponse(compi_team_serializer.data)
         res = {'success': False}
         return JsonResponse(res)
+
 
 @api_view(['PUT'])
 @csrf_exempt
@@ -322,9 +346,9 @@ def join_team(request):
             parti_email = request.data['parti_email']
             compi = team.compi_name
             compi = str(compi).capitalize()
-            if(team.single_parti==True):
+            if (team.single_parti == True):
                 return JsonResponse({'success': False, 'message': 'Team is already full'})
-            if(team.parti1_email == parti_email or
+            if (team.parti1_email == parti_email or
                team.parti2_email == parti_email or
                team.parti3_email == parti_email):
                 return JsonResponse({'success': False, 'message': 'You are already in the team'})
@@ -346,9 +370,10 @@ def join_team(request):
             send_mailer = 'noreply@techfest.org'
             recipient = [parti_email]
             send_mail(subject, message, send_mailer, recipient)
-            return JsonResponse(serializer.data)       
+            return JsonResponse(serializer.data)
         # print(parti_email, parti_name)
         return JsonResponse({'success': False, 'message': 'Team not found'})
+
 
 @api_view(['PUT'])
 @csrf_exempt
@@ -363,11 +388,11 @@ def add_parti(request):
             compi = team.compi_name
             compi = str(compi).capitalize()
             if leader_email == team.team_leader_email:
-                if(team.single_parti==True):
+                if (team.single_parti == True):
                     return JsonResponse({'success': False, 'message': 'Team is already full'})
-                if(team.parti1_email == parti_email or
-                team.parti2_email == parti_email or
-                team.parti3_email == parti_email):
+                if (team.parti1_email == parti_email or
+                   team.parti2_email == parti_email or
+                   team.parti3_email == parti_email):
                     return JsonResponse({'success': False, 'message': 'You are already in the team'})
                 if not team.parti1_email:
                     team.parti1_name = parti_name
@@ -387,11 +412,9 @@ def add_parti(request):
                 send_mailer = 'noreply@techfest.org'
                 recipient = [parti_email]
                 send_mail(subject, message, send_mailer, recipient)
-                return JsonResponse(serializer.data)       
+                return JsonResponse(serializer.data)
         # print(parti_email, parti_name)
         return JsonResponse({'success': False, 'message': 'Team not found'})
-
-
 
 
 @api_view(['PUT'])
@@ -425,11 +448,9 @@ def leave_team(request):
             recipient = [parti_email]
             # print('yaha ka error')
             send_mail(subject, message, send_mailer, recipient)
-            return JsonResponse(serializer.data)       
-        
-        return JsonResponse({'success': False, 'message': 'Team not found'})
-    
+            return JsonResponse(serializer.data)
 
+        return JsonResponse({'success': False, 'message': 'Team not found'})
 
 
 @api_view(['DELETE'])
@@ -444,40 +465,46 @@ def delete_team(request):
         # print(request.data)
         # team = compi_team.objects.get(team_id=team_id)
         try:
-            team = compi_team.objects.get(team_id=team_id, team_leader_email=parti_email)
+            team = compi_team.objects.get(
+                team_id=team_id, team_leader_email=parti_email)
             compi = team.compi_name
         except compi_team.DoesNotExist:
             return JsonResponse({'success': False, 'message': 'Team not found'})
         subject = f'Techfest, IIT Bombay | Dissolved the {team_id} team for the {compi} competition'
         message = f'The Team has been successfully dissolved with team id {team_id} and with the team leader name ({team.team_leader_name}) and his mail id {team.team_leader_email}. You can check our website for exploring other competitions.'
         send_mailer = 'noreply@techfest.org'
-        recipient = [team.team_leader_email, team.parti1_email, team.parti2_email, team.parti3_email]
+        recipient = [team.team_leader_email, team.parti1_email,
+                     team.parti2_email, team.parti3_email]
         recipient = [email for email in recipient if email is not None]
         send_mail(subject, message, send_mailer, recipient)
         team.delete()
         return JsonResponse({'success': True, 'message': 'Team deleted successfully'})
 
 
-# Workshops     
+# Workshops
 @api_view(['GET'])
 def workshop_card(request):
     if request.method == 'GET':
-        try: 
+        try:
             email = get_user_id(request)
             # email = user.email if user else None
             workshop = Workshop.objects.all()
-            serializer = WorkshopsSerializer(workshop, many=True, context={'user': email})
+            serializer = WorkshopsSerializer(
+                workshop, many=True, context={'user': email})
             return Response(serializer.data)
         except:
             workshop = Workshop.objects.all()
-            serializer = WorkshopsSerializer(workshop, many=True, context={'request': request})
+            serializer = WorkshopsSerializer(
+                workshop, many=True, context={'request': request})
             return Response(serializer.data)
-        
-@api_view(['POST']) 
+
+
+@api_view(['POST'])
 @csrf_exempt
 def workshop_reg_form(request):
-    if request.method=='POST':
-        workshop_reg_serializer = WorkshopRegSerializer(data=request.data, many=False)
+    if request.method == 'POST':
+        workshop_reg_serializer = WorkshopRegSerializer(
+            data=request.data, many=False)
         # print(workshop_reg_serializer)
         if workshop_reg_serializer.is_valid():
             email = workshop_reg_serializer.validated_data.get('email')
@@ -496,41 +523,51 @@ def workshop_reg_form(request):
             message = f"You have successfully registered for the {workshop_reg_serializer.validated_data.get('workshop')} with email {workshop_reg_serializer.validated_data.get('email')} and name {workshop_reg_serializer.validated_data.get('name')}"
             message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {workshop_reg_serializer.validated_data.get('workshop')} Workshop with {workshop_reg_serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. Register for more Workshops at techfest.org/workshops \nThanks and Regards,\nTeam Techfest 2023-24"
             from_email = 'noreply@techfest.org'
-            recipient_list = [workshop_reg_serializer.validated_data.get('email')]
+            recipient_list = [
+                workshop_reg_serializer.validated_data.get('email')]
             send_mail(subject, message, from_email, recipient_list)
             return JsonResponse(workshop_reg_serializer.data)
         res = {'success': False}
         # print(res)
         return JsonResponse(res)
-    
 
-# Robowars   
+
+# Robowars
 @api_view(['GET'])
 def robowar_card(request):
     if request.method == 'GET':
-        try: 
+        try:
             email = get_user_id(request)
             # email = user.email if user else None
             robowar = Robowars.objects.all()
-            serializer = RobowarsSerializer(robowar, many=True, context={'user': email})
+            serializer = RobowarsSerializer(
+                robowar, many=True, context={'user': email})
             return Response(serializer.data)
         except:
             robowar = Robowars.objects.all()
-            serializer = RobowarsSerializer(robowar, many=True, context={'request': request})
+            serializer = RobowarsSerializer(
+                robowar, many=True, context={'request': request})
             return Response(serializer.data)
-      
+
+
 @api_view(['POST'])
 def robowars_reg_form(request):
-    if request.method== 'POST':
-        robowars_reg_serializer = RobowarsRegSerializer(data=request.data, many=False)
+    if request.method == 'POST':
+        robowars_reg_serializer = RobowarsRegSerializer(
+            data=request.data, many=False)
         print(robowars_reg_serializer.is_valid())
         if robowars_reg_serializer.is_valid():
             category = robowars_reg_serializer.validated_data.get('category')
-            team_leader_email = robowars_reg_serializer.validated_data.get('team_leader_email')
-            team_leader_name = robowars_reg_serializer.validated_data.get('team_leader_name')
-            parti_email1 = robowars_reg_serializer.validated_data.get('parti1_email')
-            parti_email2 = robowars_reg_serializer.validated_data.get('parti2_email')
-            parti_email3 = robowars_reg_serializer.validated_data.get('parti3_email')
+            team_leader_email = robowars_reg_serializer.validated_data.get(
+                'team_leader_email')
+            team_leader_name = robowars_reg_serializer.validated_data.get(
+                'team_leader_name')
+            parti_email1 = robowars_reg_serializer.validated_data.get(
+                'parti1_email')
+            parti_email2 = robowars_reg_serializer.validated_data.get(
+                'parti2_email')
+            parti_email3 = robowars_reg_serializer.validated_data.get(
+                'parti3_email')
             if robowar_reg.objects.filter(team_leader_email=team_leader_email, category=category).exists():
                 res = {'success': False, 'error': 'Team already formed'}
                 return JsonResponse(res, status=400)
@@ -553,19 +590,46 @@ def robowars_reg_form(request):
                 print('hello')
                 robowars_reg_serializer.save(robowar_id=robowar_id)
                 res = {'success': True}
-                try: 
+                try:
                     subject = f'Techfest, IIT Bombay | Successful Registration for International Robowars'
                     message = f"You have successfully registered for the Int'l Robowars with {team_leader_email}. Your TeamID is {robowar_id} and with the team leader {team_leader_name}"
                     # print(team_leader_email, team_leader_name, robowar_id)
                     from_email = 'noreply@techfest.org'
                     recipeint_list = [team_leader_email]
                     send_mail(subject, message, from_email, recipeint_list)
-                except: 
+                except:
                     res = {'sucess no mail': True}
                 return JsonResponse(res)
         res = {'success': False}
         return JsonResponse(res)
     
+
+@api_view(['POST'])
+def sustain_reg_test(request):
+    if request.method == 'POST':
+        sustain_reg_test_serializer = RobowarsRegSerializer(
+            data=request.data, many=False)
+        print(sustain_reg_test_serializer.is_valid())
+        if sustain_reg_test_serializer.is_valid():
+                sustain_reg_test_serializer.save()
+                res = {'success': True}
+                return JsonResponse(res)
+        res = {'success': False}
+        return JsonResponse(res)
+    
+@api_view(['POST'])
+def sustain_reg_webinar(request):
+    if request.method == 'POST':
+        sustain_reg_webinar_serializer = RobowarsRegSerializer(
+            data=request.data, many=False)
+        print(sustain_reg_webinar_serializer.is_valid())
+        if sustain_reg_webinar_serializer.is_valid():
+                sustain_reg_webinar_serializer.save()
+                res = {'success': True}
+                return JsonResponse(res)
+        res = {'success': False}
+        return JsonResponse(res)
+
 @api_view(['POST'])
 def acco_reg(request):
     if request.method == 'POST':
@@ -585,20 +649,33 @@ def acco_reg(request):
             acco_id = f"TF-AC23{next_tf_id}"
             acco_reg_serializer.save(acco_id=acco_id)
             # compi_reg_serializer.save()
+            url = "https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24"
             subject = "Accomodation Registration"
             message = f"You have successfully registered for the Accomodation with email {acco_reg_serializer.validated_data.get('email')} and name {acco_reg_serializer.validated_data.get('name')}"
-            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in Accomodation with {acco_reg_serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. Register for more Workshops at techfest.org/workshops \nThanks and Regards,\nTeam Techfest 2023-24"
+            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in Accomodation with {acco_reg_serializer.validated_data.get('email')} as your registered email address. Click here: {url} to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. Register for more Workshops at techfest.org/workshops \nThanks and Regards,\nTeam Techfest 2023-24"
             from_email = 'noreply@techfest.org'
-            send_mail(subject, message, from_email, [acco_reg_serializer.validated_data.get('email')])
+            # message = format_html(
+            #     "Greetings from Techfest, IIT Bombay!<br>"
+            #     "You have been successfully registered in Accommodation with {email} as your registered email address.<br>"
+            #     "<a href='{url}'>Click here</a> to complete the payment procedure.<br>"
+            #     "The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest.<br>"
+            #     "Register for more Workshops at <a href='techfest.org/workshops'>techfest.org/workshops</a><br>"
+            #     "Thanks and Regards,<br>"
+            #     "Team Techfest 2023-24"
+            # ).format(email=email1, url=url)
+
+            send_mail(subject, message, from_email, [
+                      acco_reg_serializer.validated_data.get('email')])
             return JsonResponse(acco_reg_serializer.data)
         res = {'success': False}
         return JsonResponse(res)
-    
+
+
 @api_view(['PUT'])
 def proof_upload(request):
     if request.method == 'PUT':
         email = request.data['email']
-        acco = acco_reg.objects.get(email=email)
+        acco = AccoReg.objects.get(email=email)
         if acco:
             acco.proof = request.data['proof']
             acco.save()

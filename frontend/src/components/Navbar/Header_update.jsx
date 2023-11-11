@@ -114,11 +114,13 @@ const Header_update = () => {
                 <li>
                   <Link to="/summits">Int'l Summit</Link>
                 </li>
+                <li>
+                  <a href="/twmun">MUN</a>
+                </li>
 
-		
-    <li>
-		  <Link to="/cyclothon">Cyclothon</Link>
-		</li>
+                <li>
+                  <Link to="/cyclothon">Cyclothon</Link>
+                </li>
               </ul>
             </div>
           </li>
@@ -135,7 +137,9 @@ const Header_update = () => {
         <div className="wnavRight navRow">
           {/* <ul> */}
           <li>
-            <Link to="https://forms.gle/8KvyXtYuCUtSAWpa8" className="navSummit">
+            <Link
+              to="/accommodation"
+            >
               Accommodation
             </Link>
           </li>
@@ -207,6 +211,9 @@ const Header_update = () => {
               <Link to="/">Home</Link>
             </li> */}
             <li onClick={showMenu}>
+              <Link to="/accommodation">Accommodation</Link>
+            </li>
+            <li onClick={showMenu}>
               <Link to="/workshops">Workshops</Link>
             </li>
             <li onClick={showMenu}>
@@ -215,12 +222,18 @@ const Header_update = () => {
             <li onClick={showMenu}>
               <Link to="/summits">Int'l Summits</Link>
             </li>
-	    <li onClick={showMenu}>
-		<Link to="/robowars">Robowars</Link>
-		</li>
-    <li onClick={showMenu}>
-		<Link to="/cyclothon">Cyclothon</Link>
-		</li>
+            <li onClick={showMenu}>
+              <Link to="/robowars">Robowars</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/sustain">Sustain</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/cyclothon">Cyclothon</Link>
+            </li>
+            <li onClick={showMenu}>
+              <a href="/twmun">MUN</a>
+            </li>
             <li onClick={showMenu}>
               <Link to="/lectures">Lectures</Link>
             </li>
