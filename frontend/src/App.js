@@ -30,6 +30,7 @@ const Lectures = React.lazy(() => import("./pages/Lectures/index"));
 const Compi = React.lazy(() => import("./pages/Compi/compi"));
 const Robowars = React.lazy(() => import("./pages/Robowars/robowars"));
 const Accommodation = React.lazy(() => import("./pages/Accommodation/index"));
+const Fintech = React.lazy(() => import("./pages/Summit/fintech"));
 const Exhibition = React.lazy(() => import("./pages/Exhibition/exhi"));
 const Media = React.lazy(() => import("./pages/AboutUs/Media/index"));
 const HISTORY = React.lazy(() => import("./pages/AboutUs/history/index"));
@@ -187,6 +188,15 @@ function App() {
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Summit />
+                </React.Suspense>
+              }
+            />
+
+            <Route
+              path="/fintech"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Fintech/>
                 </React.Suspense>
               }
             />

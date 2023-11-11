@@ -6,7 +6,7 @@ import ImageTwo from './components/ImageTwo';
 function Summit() {
   return (
     <div style={{height:'120vh',scrollBehavior:'smooth'}}  >
-      <ImageOne />
+      {/* <ImageOne /> */}
       <ImageTwo/>
     </div>  
   );
