@@ -102,8 +102,10 @@ const Arduino = () => {
               <div className={styles.info_data}>
                 <div className={styles.info_details}>
                   <div>
+                  <b>Hands-on workshop where kits will be provided to the participants</b> <br /> 
+                  Participate in a team of 4 (The team has to buy only 1 ticket)<br /> 
                     <h3>Date: </h3>
-                    <p>28th-29th December</p>
+                    <p>26th-27th December</p>
                     <h3>Venue: </h3>
                     <p>IIT Bombay</p>
                     <h3>
@@ -139,7 +141,7 @@ const Arduino = () => {
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
                 <b>
-                  Register and Pay before 15th October 2023 to avail the
+                  Register and Pay before 12th November 2023 to avail the
                   workshop at the early bird price
                 </b>{" "}
                 <br />

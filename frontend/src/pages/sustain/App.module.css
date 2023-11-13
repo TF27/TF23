@@ -13,3 +13,12 @@
   width: fit-content;
   margin: 0 auto;
 }
+.register_btn_container:hover{
+  cursor: pointer;
+}
+@media(max-width:548px){
+  .para{
+    /* text-align: justify; */
+  }
+}
+

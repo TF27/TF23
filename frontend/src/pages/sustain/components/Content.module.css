@@ -13,4 +13,15 @@
 
 .content {
   margin-top: 1rem;
+ 
 }
+@media(max-width:548px){
+  .content {
+    text-align: justify;
+  }
+  .container{
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+}
+

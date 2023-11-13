@@ -21,5 +21,10 @@ urlpatterns = [
     path('workshop_reg/', views.workshop_reg_form, name='workshop_reg_form'),
     path('robowars/', views.robowar_card, name='robowars_card'),
     path('robowars_reg/', views.robowars_reg_form, name='robowars_reg_form'),
+    path('acco_reg/', views.acco_reg, name='acco_reg'),
+    path('acco_proof/', views.proof_upload, name='proof_upload'),
+    path('sustaintest_reg/', views.sustain_reg_test, name='sustain_reg_test'),    
+    path('sustainwebinar_reg/', views.sustain_reg_test, name='sustain_reg_webinar'),
+    
 ]
 

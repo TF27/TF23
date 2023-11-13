@@ -1,14 +1,10 @@
-import './App.css';
-import React ,{useState,useEffect}from 'react';
-import Header from './components/Navbar/Header';
-import { AuthContextProvider } from './contexts/AuthContext';
-import Protected from './contexts/Protected';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-// import Cyclothon from './pages/cyclothon/Cyclothon';
-
+import "./App.css";
+import React, { useState, useEffect } from "react";
+import Header from "./components/Navbar/Header";
+import { AuthContextProvider } from "./contexts/AuthContext";
+import Protected from "./contexts/Protected";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/home";
-// import Exhibition from './pages/Exhibition/exhi';
-// import Compi from './pages/Compi/compi';
 import CompiInternal from "./pages/Compi/Compi_Internal/index";
 import Reg from "./pages/Compi/Compi_Internal/Reg";
 import Create_Team from "./pages/Compi/Compi_Internal/Teams/create_team";
@@ -24,12 +20,15 @@ import Footer from "./components/Footer/Footer";
 import Loading1 from "./pages/loading_page/Loading1";
 import WorkReg from "./pages/workshop/internal/reg";
 import Header_update from "./components/Navbar/Header_update";
-import Sustain from "./pages/sustain/App"
+import Sustain from "./pages/sustain/App.jsx";
+import SustainRegtest from "./pages/SI/components/Reg2.jsx";
+import Sustainregwebinar from "./pages/SI/components/Reg1.jsx";
 
 // const Home= React.lazy(() => import('./pages/Home/home'));
 const Lectures = React.lazy(() => import("./pages/Lectures/index"));
 const Compi = React.lazy(() => import("./pages/Compi/compi"));
 const Robowars = React.lazy(() => import("./pages/Robowars/robowars"));
+const Accommodation = React.lazy(() => import("./pages/Accommodation/index"));
 const Exhibition = React.lazy(() => import("./pages/Exhibition/exhi"));
 const Media = React.lazy(() => import("./pages/AboutUs/Media/index"));
 const HISTORY = React.lazy(() => import("./pages/AboutUs/history/index"));
@@ -56,17 +55,16 @@ const Workshop = React.lazy(() => import("./pages/workshop/home"));
 const WorkshopExplore = React.lazy(() =>
   import("./pages/workshop/internal/index")
 );
-// const CompiInternal = React.lazy(()=> import('/pages/Compi/Compi_Internal/index'))
-const MUN = React.lazy(() => import("./pages/MUN/mun"));
+
 const IC = React.lazy(() => import("./pages/Events/Innovation Challenge/ic"));
 const RoboReg = React.lazy(() => import("./pages/Robowars/components/Reg"));
 
-const Cyclothon = React.lazy(() => import("./pages/Events/cyclothon/Cyclothon"));
-
+const Cyclothon = React.lazy(() =>
+  import("./pages/Events/cyclothon/Cyclothon")
+);
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-//   const location = useLocation();
 
   useEffect(() => {
     setTimeout(() => {
@@ -74,57 +72,29 @@ function App() {
     }, 4000);
   }, []);
 
-//   let headeru;
-//   if(location.pathname === "/twmun"){
-//     headeru = <Header_update />
-//   }
-//   else{
-//     headeru = <Header />
-//   }
-
   return (
     <div className="App">
       <Router>
         <AuthContextProvider>
-          {/* <Navbar />*/}
-
-          {/* {location.pathname === "/twmun" ? (
-              <Header_update />
-            ) : (
-              <Header />
-            )} */}
-            {/* <Header /> */}
           <Header_update />
 
           <Routes>
             <Route path="/" element={isLoading ? <Loading1 /> : <Home />} />
             <Route path="/legals" element={<Legals />} />
-            {/* <Route path="/cyclothon" element={<Cyclothon />} /> */}
-
-            <Route path='/cyclothon' element={
-              <React.Suspense fallback={<div>Loading...</div>}>
-                <Cyclothon />
-              </React.Suspense>
-            } />
-            <Route path='/sustain' element={
-              <React.Suspense fallback={<div>Loading...</div>}>
-                <Sustain />
-              </React.Suspense>
-            } />
+            <Route
+              path="/cyclothon"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Cyclothon />
+                </React.Suspense>
+              }
+            />
 
             <Route
               path="/workshops/"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Workshop />
-                </React.Suspense>
-              }
-            />
-            <Route
-              path="/twmun"
-              element={
-                <React.Suspense fallback={<div>Loading...</div>}>
-                  <MUN />
                 </React.Suspense>
               }
             />
@@ -136,7 +106,6 @@ function App() {
                 </React.Suspense>
               }
             />
-
             <Route path="/recognition" element={<Recognition />} />
 
             <Route
@@ -168,6 +137,46 @@ function App() {
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Robowars />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/sustain"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Sustain />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/sustainregtest"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <SustainRegtest />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/sustainregwebinar"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Sustainregwebinar/>
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/accommodation"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Accommodation />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/acco"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Accommodation />
                 </React.Suspense>
               }
             />
@@ -300,7 +309,7 @@ function App() {
                 </React.Suspense>
               }
             />
-            
+
             <Route
               path="/gallery/technoholix"
               element={
@@ -310,7 +319,7 @@ function App() {
               }
             />
 
-            <Route 
+            <Route
               path="/innovationchallenge"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
@@ -318,7 +327,7 @@ function App() {
                 </React.Suspense>
               }
             />
-            <Route 
+            <Route
               path="/ic"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
@@ -326,7 +335,6 @@ function App() {
                 </React.Suspense>
               }
             />
-
           </Routes>
 
           <Footer />

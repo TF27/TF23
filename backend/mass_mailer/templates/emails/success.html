@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success</title>
+</head>
+<style>
+    .btn{
+        padding: 10px;
+        background-color: rgb(0, 42, 179);
+        color: white;
+        text-decoration: none;
+    }
+</style>
+<body>
+    <h1>Form Submitted Successfully</h1>
+    <p>Your ID: {{ your_id }}</p>
+    <p>Save this id, I am not saving saving it for you guys, u need this send this mail to the users</p>
+    <a href="{% url 'send_email' %}" class="btn btn-primary">Send Email</a>
+</body>
+</html>

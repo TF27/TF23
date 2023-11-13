@@ -57,7 +57,7 @@ const Solarizer = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Design a Solar PV Plant and make a Solar Mobile Charger <br /> <br />
+          <b>Hands-on workshop where kits will be provided to the participants</b> <br /> <br />
           Date: 27th-28th December <br /> <br />
           Duration: 12-14 hours <br /> <br />
           Venue: IIT Bombay <br />
@@ -83,12 +83,7 @@ const Solarizer = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          Register and Pay before 15th October 2023 to avail the workshop at the early bird price <br /><br />
-            Group Discounts: <br/>
-            Register as a group to avail the following discounts: <br/>
-            2 members Rs. 150 off <br/>
-            3 members Rs. 250 off <br/>
-            4 members Rs. 300 off <br/>
+          Register and Pay before 12th November 2023 to avail the workshop at the early bird price <br /><br />
           </div>
         </div>
       </div>

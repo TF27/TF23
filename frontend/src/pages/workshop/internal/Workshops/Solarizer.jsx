@@ -44,6 +44,7 @@ const Solarizer = () => {
             <div className={styles.info_data}>
             <div className={styles.info_details}>
                 <div>
+                <b>Hands-on workshop where kits will be provided to the participants</b> <br /> <br />
                   <h3>Date: </h3>
                   <p>28th-29th December</p>
                   <h3>Venue: </h3>
@@ -63,12 +64,8 @@ const Solarizer = () => {
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            <b>Register and Pay before 15th October 2023 to avail the workshop at the early bird price</b> <br /><br />
-            Group Discounts: <br/>
-            Register as a group to avail the following discounts: <br/>
-            2 members Rs. 150 off <br/>
-            3 members Rs. 250 off <br/>
-            4 members Rs. 300 off <br/>
+            <b>Register and Pay before 12th November 2023 to avail the workshop at the early bird price</b> <br /><br />
+  
               </div>
             </div>
           </div>

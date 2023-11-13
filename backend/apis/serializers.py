@@ -84,6 +84,7 @@ class RobowarsSerializer(serializers.ModelSerializer):
         model = Robowars
         fields = '__all__'
 
+
     def to_representation(self, instance):
         representation = super().to_representation(instance)
         user = self.context.get('user')
@@ -93,4 +94,24 @@ class RobowarsSerializer(serializers.ModelSerializer):
 class RobowarsRegSerializer(serializers.ModelSerializer):
     class Meta:
         model = robowar_reg
+        fields = '__all__'
+
+class AccoRegSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = AccoReg
+        fields = ['acco_id', 'name', 'email', 'phone', 'gender', 'dob', 'city', 'aadhar', 'aadhar_proof', 'no_of_male', 'no_of_female', 'checkin', 'checkout']
+
+class AccoRegProofSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AccoReg
+        fields = ['payment_id', 'payment_proof', 'email']
+
+class SustainRegTestSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SustainRegTest
+        fields = '__all__'
+    
+class SustainRegWebinarSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SustainRegWebinar
         fields = '__all__'

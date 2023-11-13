@@ -226,6 +226,19 @@ a.aexplore{
     }
 }
 
+.left-text {
+       float: left;
+}
+
+.right-text {
+    float: right;
+}
+
+.left-text, .right-text {
+         display: inline-block;
+         width: 49%;
+}
+
 @media only screen and (max-width:955px){
     .sub_title{
         font-size: 16px;
@@ -847,7 +860,7 @@ p.name{
                 <h1 style="color: white; text-align: center; margin-top: 3rem;">
                     Techfest World MUN
                 </h1>
-                <h2 style="color: white;"><em>Order from Chaos</em></h2>
+                <h2 style="color: white;"><em>Beyond Hypocrisy</em></h2>
                 <a class="blue" href="https://linktr.ee/twmun23?fbclid=PAAab563mrbjsA6GEcu2k7JO5rjQy7AX966Lp_qYRP4dtPj2vutN2cJrU72qA">Register</a>
             </div>
         </div>
@@ -892,12 +905,14 @@ p.name{
             <div style="margin-bottom: -40px !important;" class="row">
                 <div  class="col-md-12">
                     <p class="mun-title">Committees</p>
-                    <p class="mun-sub-title">INTERNATIONAL PRESS</p>
+                    <!-- <p class="mun-sub-title">INTERNATIONAL PRESS</p> -->
                     <div class="row">
                         <div class="col-md-4">
                       <div class="card" style="cursor: pointer;">
                         <div class="post-modules module-8" style="margin-bottom: 0px !important;">
-                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/committees/IP.png' %});" ></div>
+                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/comm_logos/download.png' %}); background-size: contain;" ></div>
+                          <!-- <div class="thumbnail" style="background-image: url('/backend/events/static/resources/mun/img/comm_logos/download.png' );"></div> -->
+
 <!--                            <div class="sub_title3">COMPETITIONS</div>-->
                           <div class="post-content" >
 <!--                            <h1 class="title">Shangri-La Dialogue</h1>-->
@@ -907,7 +922,7 @@ p.name{
                                   <br>
                                 <div class="row" style="display: flex; justify-content: space-around;">
                                     <div class="refer">
-                                        <a class="arefer" data-toggle="modal" data-target="#ip" style="20px; font-size: 15px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                        <a class="arefer" data-toggle="modal" data-target="#ip" style="font-size: 20px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
                                     </div>
                                 </div>
                               </p>
@@ -928,14 +943,14 @@ p.name{
                     <div class="col-md-4">
                       <div class="card" style="cursor: pointer;">
                         <div class="post-modules module-10" style="margin-bottom: 0px !important;">
-                          <div class="thumbnail" style="background-image: url({% static 'resources/mun/img/committees/NATO.png' %});" ></div>
+                          <div class="thumbnail" style="background-image: url({% static 'resources/mun/img/comm_logos/lolla.png' %}); background-size: contain;" ></div>
                           <div class="post-content" >
                             <div class="desc">
-                              <p>NATO is an active and leading contributor to peace and security on the international ...
+                              <p>Mitigating Unconstitutional Changes in Government and Post-Conflict restoration
                                   <br>
                                 <div class="row" style="display: flex; justify-content: space-around;">
                                     <div class="refer">
-                                        <a class="arefer" data-toggle="modal" data-target="#nato" style="20px; font-size: 15px;font-weight: 500;color: white;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                        <a class="arefer" data-toggle="modal" data-target="#nato" style="font-size: 20px;font-weight: 500;color: white;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
                                     </div>
                                 </div>
                               </p>
@@ -947,14 +962,14 @@ p.name{
                     <div class="col-md-4">
                       <div class="card" style="cursor: pointer;">
                         <div class="post-modules module-1" style="margin-bottom: 0px !important;">
-                          <div class="thumbnail" style="background-image: url({% static 'resources/mun/img/committees/UNSC.jpg' %});" ></div>
+                          <div class="thumbnail" style="background-image: url({% static 'resources/mun/img/comm_logos/906px-UN_emblem_blue.png' %}); background-size: contain;" ></div>
                           <div class="post-content" >
                             <div class="desc">
-                              <p>The UNSC charter seeks to promote harmonious relationships among the member nations by...
+                              <p>Assessing UN Peacekeeping operations as a tool for international crisis response
                                   <br>
                                 <div class="row" style="display: flex; justify-content: space-around;">
                                     <div class="refer">
-                                        <a class="arefer" data-toggle="modal" data-target="#unsc" style="20px; font-size: 15px;font-weight: 500;color: white;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                        <a class="arefer" data-toggle="modal" data-target="#unsc" style="font-size: 20px;font-weight: 500;color: white;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
                                     </div>
                                 </div>
                               </p>
@@ -966,17 +981,17 @@ p.name{
                     <div class="col-md-4">
                       <div class="card" style="cursor: pointer;">
                         <div class="post-modules module-2" style="margin-bottom: 0px !important;">
-                          <div class="thumbnail" style="background-image: url({% static 'resources/mun/img/committees/UNHRC.jpg' %});" ></div>
-<!--                            <div class="sub_title3">COMPETITIONS</div>-->
+                          <div class="thumbnail" style="background-image: url({% static 'resources/mun/img/comm_logos/2002cb_5fee06e962ea444b8e7edd8322c0f402~mv2.webp' %}); background-size: contain;" ></div>
+                           <!-- <div class="sub_title3">COMPETITIONS</div> -->
                           <div class="post-content" >
-<!--                            <h1 class="title">UNHCR</h1>-->
-<!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
+                           <!-- <h1 class="title">UNHCR</h1> -->
+                           <!-- <div class="sub_title">INR 1,75,000 Prize</div> -->
                             <div class="desc">
-                              <p>UNHCR is a United Nations agency mandated to aid and protect refugees, forcibly displaced ...
+                              <p>Reviewing the Impact of 73rd and 74th Amendment on Services with emphasis on Exploring State Control
                                   <br>
                                 <div class="row" style="display: flex; justify-content: space-around;">
                                     <div class="refer">
-                                        <a class="arefer" data-toggle="modal" data-target="#unhrc" style="20px; font-size: 15px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                        <a class="arefer" data-toggle="modal" data-target="#unhrc" style="font-size: 20px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
                                     </div>
                                 </div>
                               </p>
@@ -986,19 +1001,41 @@ p.name{
                       </div>
                     </div>
                     <div class="col-md-4">
+                        <!-- <div class="card" style="cursor: pointer;">
+                          <div class="post-modules module-4" style="margin-bottom: 0px !important;">
+                            <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/committees/SLD.jpg' %});" ></div>
+                             <div class="sub_title3">COMPETITIONS</div>
+                            <div class="post-content" >
+                             <h1 class="title">Shangri-La Dialogue</h1>
+                             <div class="sub_title">INR 1,75,000 Prize</div>
+                              <div class="desc">
+                                <p>The Shangri-La Dialogue (SLD) is an inter-governmental security forum held annually by an ...
+                                    <br>
+                                  <div class="row" style="display: flex; justify-content: space-around;">
+                                      <div class="refer">
+                                          <a class="arefer" data-toggle="modal" data-target="#sld" style="font-size: 20px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                      </div>
+                                  </div>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div> -->
+                      </div>
+                    <div class="col-md-4">
                       <div class="card" style="cursor: pointer;">
                         <div class="post-modules module-3" style="margin-bottom: 0px !important;">
-                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/committees/AIPPM.jpg' %});" ></div>
+                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/comm_logos/Web_capture_22-9-2023_122526_.jpeg' %}); background-size: contain;" ></div>
 <!--                            <div class="sub_title3">COMPETITIONS</div>-->
                           <div class="post-content" >
 <!--                            <h1 class="title">AIPPM</h1>-->
 <!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
                             <div class="desc">
-                              <p>The All Political Parties Meet is a place for unconstrained political debate, discussion, and deliberation ...
+                              <p>Addressing the Implications of Retirement Trends on Global Economy
                                   <br>
                                 <div class="row" style="display: flex; justify-content: space-around;">
                                     <div class="refer">
-                                        <a class="arefer" data-toggle="modal" data-target="#aippm" style="20px; font-size: 15px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                        <a class="arefer" data-toggle="modal" data-target="#aippm" style="font-size: 20px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
                                     </div>
                                 </div>
                               </p>
@@ -1007,51 +1044,30 @@ p.name{
                         </div>
                       </div>
                     </div>
+                    
+                 
                     <div class="col-md-4">
-                      <div class="card" style="cursor: pointer;">
-                        <div class="post-modules module-9" style="margin-bottom: 0px !important;">
-                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/committees/UNCSW.png' %});" ></div>
-<!--                            <div class="sub_title3">COMPETITIONS</div>-->
-                          <div class="post-content" >
-<!--                            <h1 class="title">Shangri-La Dialogue</h1>-->
-<!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
-                            <div class="desc">
-                              <p>There have been various successful initiatives to enhance women's rights, but...
-                                  <br>
-                                <div class="row" style="display: flex; justify-content: space-around;">
-                                    <div class="refer">
-                                        <a class="arefer" data-toggle="modal" data-target="#uncsw" style="20px; font-size: 15px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
-                                    </div>
-                                </div>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-md-4">
-                      <div class="card" style="cursor: pointer;">
+                      <!-- <div class="card" style="cursor: pointer;">
                         <div class="post-modules module-4" style="margin-bottom: 0px !important;">
                           <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/committees/SLD.jpg' %});" ></div>
-<!--                            <div class="sub_title3">COMPETITIONS</div>-->
+                           <div class="sub_title3">COMPETITIONS</div>
                           <div class="post-content" >
-<!--                            <h1 class="title">Shangri-La Dialogue</h1>-->
-<!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
+                           <h1 class="title">Shangri-La Dialogue</h1>
+                           <div class="sub_title">INR 1,75,000 Prize</div>
                             <div class="desc">
                               <p>The Shangri-La Dialogue (SLD) is an inter-governmental security forum held annually by an ...
                                   <br>
                                 <div class="row" style="display: flex; justify-content: space-around;">
                                     <div class="refer">
-                                        <a class="arefer" data-toggle="modal" data-target="#sld" style="20px; font-size: 15px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                        <a class="arefer" data-toggle="modal" data-target="#sld" style="font-size: 20px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
                                     </div>
                                 </div>
                               </p>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
+                      </div> -->
+                    </div> 
 
                 </div>
 
@@ -1064,17 +1080,17 @@ p.name{
                     <div class="col-md-4">
                       <div class="card" style="cursor: pointer;">
                         <div class="post-modules module-5" style="margin-bottom: 0px !important;">
-                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/committees/UNOC.jpg' %});" ></div>
+                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/comm_logos/India-Secures-The-Prestigious-Seat-in-UNCSW-Feature.jpg' %}); background-size: contain;" ></div>
 <!--                            <div class="sub_title3">COMPETITIONS</div>-->
                           <div class="post-content" >
 <!--                            <h1 class="title">UNOC</h1>-->
 <!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
                             <div class="desc">
-                              <p>UN Ocean is an interagency mechanism that aims to improve the coordination, coherency ...
+                              <p>Discussing Maternal Mortality in Developing Countries
                                   <br>
                                 <div class="row" style="display: flex; justify-content: space-around;">
                                     <div class="refer">
-                                        <a class="arefer" data-toggle="modal" data-target="#unoc" style="20px; font-size: 15px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                        <a class="arefer" data-toggle="modal" data-target="#unoc" style="font-size: 20px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
                                     </div>
                                 </div>
                               </p>
@@ -1086,17 +1102,17 @@ p.name{
                     <div class="col-md-4">
                       <div class="card" style="cursor: pointer;">
                         <div class="post-modules module-6" style="margin-bottom: 0px !important;">
-                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/committees/SOCHUM.jpg' %});" ></div>
+                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/comm_logos/unep-1-logo-png-transparent.png' %}); background-size: contain;" ></div>
 <!--                            <div class="sub_title3">COMPETITIONS</div>-->
                           <div class="post-content" >
 <!--                            <h1 class="title">SOCHUM</h1>-->
 <!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
                             <div class="desc">
-                              <p>The Social, Humanitarian, and Cultural Committee (SOCHUM) focuses on the welfare and human ...
+                              <p>Discussing Climate Change Induced Migration
                                   <br>
                                 <div class="row" style="display: flex; justify-content: space-around;">
                                     <div class="refer">
-                                        <a class="arefer" data-toggle="modal" data-target="#sochum" style="20px; font-size: 15px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                        <a class="arefer" data-toggle="modal" data-target="#sochum" style="font-size: 20px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
                                     </div>
                                 </div>
                               </p>
@@ -1108,17 +1124,17 @@ p.name{
                     <div class="col-md-4">
                       <div class="card" style="cursor: pointer;">
                         <div class="post-modules module-7" style="margin-bottom: 0px !important;">
-                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/committees/DISEC.jpg' %});" ></div>
+                          <div class="thumbnail" style="background-image:  url({% static 'resources/mun/img/comm_logos/unhcr-logo.jpeg' %}); background-size: contain;" ></div>
 <!--                            <div class="sub_title3">COMPETITIONS</div>-->
                           <div class="post-content" >
 <!--                            <h1 class="title">DISEC</h1>-->
 <!--                            <div class="sub_title">INR 1,75,000 Prize</div>-->
                             <div class="desc">
-                              <p>DISEC is concerned with issues of international significance pertaining to the security and demilitarisation of all ...
+                              <p>Addressing the Economic Inclusion of Refugees
                                   <br>
                                 <div class="row" style="display: flex; justify-content: space-around;">
                                     <div class="refer">
-                                        <a class="arefer" data-toggle="modal" data-target="#disec" style="20px; font-size: 15px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
+                                        <a class="arefer" data-toggle="modal" data-target="#disec" style="font-size: 20px;font-weight: 500;color: #FFFFFF;font-family:'Avenir LT Pro';font-style:normal;text-decoration:none;">Read More</a>
                                     </div>
                                 </div>
                               </p>
@@ -1197,10 +1213,10 @@ p.name{
                     </h3>
                     <br />
                     <p >
-                        Techfest World MUN, IIT Bombay is a two day conference and will be held during Techfest 2022-23  from the 17th to the 18th of December, 2022.
+                        Techfest World MUN, IIT Bombay is a two day conference and will be held during Techfest 2023-24  from the 27th to the 29th of December, 2023.
                     </p>
                     <h3 >
-                        What awards will be provided at TWMUN 2022?
+                        What awards will be provided at TWMUN 2023?
                     </h3>
                     <br />
                     <p >
@@ -1240,11 +1256,11 @@ p.name{
                         An intellectual challenge! Follow basic steps, which include reading your study guides, being well prepared on your agendas, and being ready to speak during the conference. Take multiple opportunities and participate during the moderated and unmoderated caucus. Focus on managing your country’s interests and speaking clearly.
                     </p>
                     <h3 >
-                        What is the dress code for Techfest World MUN 2022?
+                        What is the dress code for Techfest World MUN 2023?
                     </h3>
                     <br />
                     <p >
-                        The Dress Code for Techfest World MUN 2022 is western formals/Indian formals.
+                        The Dress Code for Techfest World MUN 2023 is western formals/Indian formals.
                     </p>
 <!--                    <h3 data-aos="fade-left">-->
 <!--                        What is the venue?-->
@@ -1267,7 +1283,7 @@ p.name{
 
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Shriya.jpg' %});" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
@@ -1332,7 +1348,7 @@ p.name{
                 </div>
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Bhagyashree.jpg' %});" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
@@ -1348,11 +1364,11 @@ p.name{
                 </div>
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Indrayanee.jpg' %});" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Indrayani.jpg' %});" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
-                            <h1 class="wstit" style="">DEPUTY SECRETARY GENERAL</h1>
+                            <h1 class="wstit" style="">SECRETARY GENERAL</h1>
                             <div class='descriptionw'>
                                 <h3 style="color: white;" class="card-subtitle">Indrayanee Pandit</h3>
                                 <p class="card-text"><a style="text-decoration: none;color: white;" href="mailto:indrayaneepandit@gmail.com">indrayaneepandit@gmail.com</a>
@@ -1364,7 +1380,7 @@ p.name{
                 </div>
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Ridhima.jpg' %});" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
@@ -1380,7 +1396,7 @@ p.name{
                 </div>
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Krish.jpg' %});" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
@@ -1396,7 +1412,7 @@ p.name{
                 </div>
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Siddharth.jpg' %});" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
@@ -1412,7 +1428,7 @@ p.name{
                 </div>
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Pratyush.jpg' %});" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
@@ -1428,7 +1444,7 @@ p.name{
                 </div>
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);background-position: top !important;" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);background-position: top !important;, url({% static 'resources/mun/secretariat/Adam.jpg' %})" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
@@ -1445,7 +1461,7 @@ p.name{
                 <div class="col-md-4"></div>
                 <div class="col-md-4 col-sm-6 mem-info">
                     <div class='post-modules' style="margin-bottom: 0px !important;">
-                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%);" >
+                        <div class='thumbnail' style="background-image: linear-gradient(180deg, rgba(50, 198, 201, 0) 21.94%, rgba(57, 102, 136, 0.5625) 52.95%, #3E1C55 78.11%), url({% static 'resources/mun/secretariat/Sara.jpg' %});" >
                             <!-- <img src='https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg'> -->
                         </div>
                         <div class='post-content'>
@@ -1536,8 +1552,11 @@ p.name{
                 <br>
                 <p>Despite the fact that time marches on, flaunting all of its unpredictable glory, Model United Nations Conferences have ensured our survival by connecting it to our capacity for change and providing us with a forum in which to voice our concerns without hindrance. We may have first become interested in Model United Nations competitions by the allure of sitting in a conference room where everyone is dressed impeccably, each person representing a country while discussing a global issue and attempting to find a solution to a problem that not even the world's best diplomats can solve, but our years as members of the Indian MUN Society have left a mark far more permanent than any award or certificate. MUNs have become a location for attacking, defending, and most importantly, compromising where through diplomacy and  courtesy everyone strives to make "ladies and gentlemen" a reality.    The members of the Indian MUN society represent the apex of a community of lifelong learners who seek knowledge not only from the voluminous electronic bookshelves of the world's leading universities but also from one another.   If you're looking for a place with a unique culture of growth, go no further than the Techfest World Model United Nations, where we've adopted an inclusive society. Many late nights have been spent over the past few months by our committee's Secretariat and its unrivalled Executive board to ensure that you will leave Techfest with far more information and connections than you had before you arrived.</p>
                 <br>
-                <p>Tannusriya Tripathi</p>
-                <p>Secretary General</p>
+                <p class="left-text">Ketakee Agashe</p>
+                <p class="right-text">Indrayanee Pandit</p>
+                <br>
+                <p class="left-text">Advisory Board</p>
+                <p class="right-text">Secretary General</p>
                 <br>
                 <br>
             </div>

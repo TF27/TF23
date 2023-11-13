@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLayoutEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { UserAuth } from "../../../contexts/AuthContext";
 import styles from "./internal.module.css";
@@ -26,6 +26,9 @@ import Android from "./Workshops/Android";
 import Webdev from "./Workshops/Webdev";
 import Cybersecurity from "./Workshops/Cybersecurity";
 import W3b from "./Workshops/W3b";
+import Digitalm from "./Workshops/Digitalm";
+import Ds from "./Workshops/Ds";
+import Quad from "./Workshops/Quad";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -45,7 +48,17 @@ const Internal = () => {
     window.scrollTo(0, 0);
   });
 
+  const navigate = useNavigate();
   const google_id = user ? user.email : null;
+
+  useEffect(() => {
+    if(cardName === "chatgpt"){
+      navigate("/workshops/chatgpt%20(prompt%20engineering)");
+    }
+    if(cardName === "hacking"){
+      navigate("/workshops/ethical%20hacking");
+    }
+  }, [cardName, navigate]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -125,6 +138,20 @@ const Internal = () => {
                 </div>
               </div>
             )}
+            {data.statement && (
+              <div className={styles.statement}>
+                <div className={styles.stat_rect1}></div>
+                <div className={styles.stat_rect2}>
+                  <a
+                    href='https://forms.gle/8KvyXtYuCUtSAWpa8'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Accommodation
+                  </a>
+                </div>
+              </div>
+            )}
             <p className={styles.howtopay}>
             <a href="https://drive.google.com/file/d/1VBgqBtSZlQ3gSKtH6YVKCVGwaOxwCVWo/view?usp=sharing" target="_blank">How to{" "}</a>
               <a href="https://drive.google.com/file/d/1VBgqBtSZlQ3gSKtH6YVKCVGwaOxwCVWo/view?usp=sharing" target="_blank">
@@ -187,6 +214,9 @@ const Internal = () => {
             {cardName === "web development" && <Webdev/>}
             {cardName === "cybersecurity" && <Cybersecurity/>}
             {cardName === "web 3.0" && <W3b/>}
+            {cardName === "digital marketing" && <Digitalm/>}
+            {cardName === "data science" && <Ds/>}
+            {cardName === "quadcopter" && <Quad/>}
           </div>
         </div>
       </div>
