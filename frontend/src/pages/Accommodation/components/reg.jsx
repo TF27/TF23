@@ -28,7 +28,8 @@ const Register = () => {
     no_of_female: 0,
     checkin: 0,
     checkout: 0,
-    aadhar_proof: null, // Store the uploaded file here
+    aadhar_proof: null,
+    sexy_word: "", // Store the uploaded file here
   });
   
 
@@ -57,8 +58,10 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setRomeo(true);
+    const sexyWord = `${formData.name}15Novlala${formData.email}or19Nov${formData.phone}`;
+    const updatedFormData = { ...formData, sexy_word: sexyWord };
     axios
-      .post('/api/acco_reg/', formData, {
+      .post('/api/acco_reg/', updatedFormData, {
         headers: {
           'content-Type': 'multipart/form-data'
         }
