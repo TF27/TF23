@@ -193,17 +193,26 @@ def check_reg(request):
 @csrf_exempt
 def compi_reg_form(request):
     if request.method == 'POST':
+        sexy_word = request.data.get('sexy_word')
         compi_reg_serializer = Compi_RegSerializer(
             data=request.data, many=False)
-        print(compi_reg_serializer)
+        # print(compi_reg_serializer)
         # print(compi_reg_serializer.is_valid())
         if compi_reg_serializer.is_valid():
+            # print('hello')
             email = compi_reg_serializer.validated_data.get('email')
             compi = compi_reg_serializer.validated_data.get('compi')
+            phone = compi_reg_serializer.validated_data.get('phoneno')
+            # print(sexy_word)
+            sexy_word1 = f"{compi or ''}15Nov{email or ''}or19Nov{phone or ''}"
+            # print(sexy_word1)
+            if sexy_word != sexy_word1:
+                # print(sexy_word, sexy_word1)
+                return JsonResponse({'error': 'Failed'}, status=400)
             if compi_reg.objects.filter(email=email, compi=compi).exists():
                 return JsonResponse({'error': 'A registration with this email for this compi already exists.'}, status=400)
-
             last_reg = compi_reg.objects.order_by('-tf_id').first()
+            print('hi i am here')
             next_tf_id = '0269'
             if last_reg:
                 last_tf_id = last_reg.tf_id[-4:]
@@ -215,8 +224,11 @@ def compi_reg_form(request):
             message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {compi_reg_serializer.validated_data.get('compi')} Workshop with {compi_reg_serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. Register for more Workshops at techfest.org/workshops \n Thanks and Regards, \n Team Techfest 2023-24"
             from_email = 'noreply@techfest.org'
             recipient_list = [compi_reg_serializer.validated_data.get('email')]
-            send_mail(subject, message, from_email, recipient_list)
-            return JsonResponse(compi_reg_serializer.data)
+            try:
+                send_mail(subject, message, from_email, recipient_list)
+                return JsonResponse(compi_reg_serializer.data)
+            except:
+                return JsonResponse(compi_reg_serializer.data)
         res = {'success': False}
         # print(res)
         return JsonResponse(res)
@@ -503,12 +515,20 @@ def workshop_card(request):
 @csrf_exempt
 def workshop_reg_form(request):
     if request.method == 'POST':
+        sexy_word = request.data.get('sexy_word')
         workshop_reg_serializer = WorkshopRegSerializer(
             data=request.data, many=False)
         # print(workshop_reg_serializer)
         if workshop_reg_serializer.is_valid():
             email = workshop_reg_serializer.validated_data.get('email')
             workshop = workshop_reg_serializer.validated_data.get('workshop')
+            phone = workshop_reg_serializer.validated_data.get('phoneno')
+            # print(sexy_word)
+            sexy_word1 = f"{workshop or ''}15Novlolol{email or ''}or19Nov{phone or ''}"
+            # print(sexy_word1)
+            if sexy_word != sexy_word1:
+                # print(sexy_word, sexy_word1)
+                return JsonResponse({'error': 'Failed'}, status=400)
             if workshop_reg.objects.filter(email=email, workshop=workshop).exists():
                 return JsonResponse({'error': 'A registration with this email for this workshop already exists.'}, status=400)
             last_reg = workshop_reg.objects.order_by('-worksho_id').first()
@@ -525,8 +545,11 @@ def workshop_reg_form(request):
             from_email = 'noreply@techfest.org'
             recipient_list = [
                 workshop_reg_serializer.validated_data.get('email')]
-            send_mail(subject, message, from_email, recipient_list)
-            return JsonResponse(workshop_reg_serializer.data)
+            try:
+                send_mail(subject, message, from_email, recipient_list)
+                return JsonResponse(workshop_reg_serializer.data)
+            except:
+                return JsonResponse(workshop_reg_serializer.data)
         res = {'success': False}
         # print(res)
         return JsonResponse(res)
@@ -633,9 +656,15 @@ def sustain_reg_webinar(request):
 @api_view(['POST'])
 def acco_reg(request):
     if request.method == 'POST':
+        sexy_word = request.data.get('sexy_word')
         acco_reg_serializer = AccoRegSerializer(data=request.data, many=False)
         if acco_reg_serializer.is_valid():
+            name = acco_reg_serializer.validated_data.get('name')
             email = acco_reg_serializer.validated_data.get('email')
+            phone = acco_reg_serializer.validated_data.get('phone')
+            sexy_word1 = f"{name or ''}15Novlala{email or ''}or19Nov{phone or ''}"
+            if sexy_word != sexy_word1:
+                return JsonResponse({'error': 'Failed'}, status=400)
             try:
                 if AccoReg.objects.filter(email=email).exists():
                     return JsonResponse({'error': 'A registration with this email for this workshop already exists.'}, status=400)
@@ -654,19 +683,12 @@ def acco_reg(request):
             message = f"You have successfully registered for the Accomodation with email {acco_reg_serializer.validated_data.get('email')} and name {acco_reg_serializer.validated_data.get('name')}"
             message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in Accomodation with {acco_reg_serializer.validated_data.get('email')} as your registered email address. Click here: {url} to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. Register for more Workshops at techfest.org/workshops \nThanks and Regards,\nTeam Techfest 2023-24"
             from_email = 'noreply@techfest.org'
-            # message = format_html(
-            #     "Greetings from Techfest, IIT Bombay!<br>"
-            #     "You have been successfully registered in Accommodation with {email} as your registered email address.<br>"
-            #     "<a href='{url}'>Click here</a> to complete the payment procedure.<br>"
-            #     "The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest.<br>"
-            #     "Register for more Workshops at <a href='techfest.org/workshops'>techfest.org/workshops</a><br>"
-            #     "Thanks and Regards,<br>"
-            #     "Team Techfest 2023-24"
-            # ).format(email=email1, url=url)
-
-            send_mail(subject, message, from_email, [
-                      acco_reg_serializer.validated_data.get('email')])
-            return JsonResponse(acco_reg_serializer.data)
+            try:
+                send_mail(subject, message, from_email, [
+                        acco_reg_serializer.validated_data.get('email')])
+                return JsonResponse(acco_reg_serializer.data)
+            except:
+                return JsonResponse(acco_reg_serializer.data)
         res = {'success': False}
         return JsonResponse(res)
 
