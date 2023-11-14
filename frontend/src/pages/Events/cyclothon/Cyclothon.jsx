@@ -99,7 +99,7 @@ const Cyclothon = () => {
         <div className="col-md-6 class2">
           <img src={cyclo} alt="sorry no image" className="img-fluid" style={{maxWidth:'70%',marginBottom:'15px'}} />
           <p className="visiontext">Techfest, IIT Bombay is thrilled to present the 6th edition of the Techfest Cyclothon with a profound focus on sustainability. On the 5th of November, we invite you to partake in a memorable journey that beautifully marries nature and urban living. As you cycle through a captivating 15 km route that winds through the lush IIT Bombay campus, we aim to kindle a sense of eco-consciousness and the significance of sustainable practices in our daily lives. Together, let's pedal towards a cleaner, greener future at the Techfest Cyclothon.
-</p>
+          </p>
         </div>
       </div>
       <img src={vision} alt="sorry no image"  className="img-fluid vision" style={{maxWidth:'50%',marginTop:'50px'}} />

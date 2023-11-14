@@ -95,7 +95,7 @@ const MAccommodation = () => {
     <table className={styles.table} style={{width:'95%', margin:'0 2.5%'}}>
       <tr>
         <th style={{width:'25%'}}>Accommodation Charges</th>
-        <td>Accommodation charges are INR 3499 per candidate for 5 days. Maximum of 5 nights stay allowed (26th Dec 6 AM - 30th Dec 10 AM). It does not include food facility. Guest can purchase their meals from the food court, night cafeteria or private hostel canteens or hostel messes at subsidized rates.</td>
+        <td>Accommodation charges are INR 2999 <s>3499</s> (Early Bird Offer) per candidate for 5 days. Maximum of 5 nights stay allowed (26th Dec 6 AM - 30th Dec 10 AM). It does not include food facility. Guest can purchase their meals from the food court, night cafeteria or private hostel canteens or hostel messes at subsidized rates.</td>
       </tr>
       <br />
       <tr>

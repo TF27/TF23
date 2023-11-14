@@ -121,6 +121,9 @@ const Header_update = () => {
                 <li>
                   <Link to="/cyclothon">Cyclothon</Link>
                 </li>
+                <li>
+                  <Link to="/sustain">Sustain</Link>
+                </li>
               </ul>
             </div>
           </li>
@@ -262,7 +265,7 @@ const Header_update = () => {
               {user?.displayName ? (
                 <div className="singin">
                   <div className="logout_rect1">
-                    <div className="logout_rect2">Sing Out</div>
+                    <div className="logout_rect2">Sign Out</div>
                   </div>
                 </div>
               ) : (
