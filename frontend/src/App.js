@@ -151,7 +151,7 @@ function App() {
               }
             />
             <Route
-              path="/si-finance"
+              path="/financialliteracy"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <SIrobowars />
