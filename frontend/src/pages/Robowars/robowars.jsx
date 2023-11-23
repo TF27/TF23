@@ -10,6 +10,7 @@ import styles from "./robowars.module.css";
 
 import irc1 from './img/irc.png';
 import irc2 from './img/irc1.png';
+import irc3 from './img/logobotmakers.png';
 
 import i1 from "../../pages/Exhibition/assets/i1.jpg";
 import i2 from "../../pages/Exhibition/assets/i2.jpg";
@@ -80,6 +81,15 @@ const Robowars = () => {
       </div>
       <Cards />
       <OurReach />
+      <div className="contactus1">
+          <h1 style={{ marginTop: "60px", marginBottom: "40px" }}>
+            SUPPORTED BY
+          </h1>
+          <div className="pkmkb">
+            
+            <img src={irc3} style={{width: '300px'}}/>
+          </div>
+        </div>
       <div className="contactus1">
           <h1 style={{ marginTop: "60px", marginBottom: "40px" }}>
             INT'L ZONAL PARTNER

@@ -15,7 +15,7 @@
 }
 
 .layer1 {
-  background-image: url('../img/robowarsback.jpg');
+  background-image: url('../img/background.png');
   z-index: 1;
   position: relative;
   background-size: cover;
@@ -25,7 +25,7 @@
 }
 
 .layer2 {
-  background-image: url('../img/robowarsmid.png');
+  background-image: url('../img/mid.png');
   opacity: 1;
   z-index: 2;
   /* background-size: 50%; */
@@ -36,7 +36,7 @@
 }
 
 .layer3 {
-  background-image: url('../img/robowarsfore.png');
+  background-image: url('../img/foreground.png');
   opacity: 1;
   z-index: 1;
   margin-top: 55pt;

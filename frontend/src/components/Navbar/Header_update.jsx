@@ -122,6 +122,9 @@ const Header_update = () => {
                   <Link to="/cyclothon">Cyclothon</Link>
                 </li>
                 <li>
+                  <Link to="/si-finance">SI - Finance</Link>
+                </li>
+                <li>
                   <Link to="/sustain">Sustain</Link>
                 </li>
               </ul>
@@ -233,6 +236,9 @@ const Header_update = () => {
             </li>
             <li onClick={showMenu}>
               <Link to="/cyclothon">Cyclothon</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/si-finance">SI - Finance</Link>
             </li>
             <li onClick={showMenu}>
               <a href="/twmun">MUN</a>
