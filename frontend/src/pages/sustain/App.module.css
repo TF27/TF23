@@ -16,9 +16,5 @@
 .register_btn_container:hover{
   cursor: pointer;
 }
-@media(max-width:548px){
-  .para{
-    /* text-align: justify; */
-  }
-}
+
 
