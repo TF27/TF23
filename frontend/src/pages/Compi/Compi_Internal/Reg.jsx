@@ -32,6 +32,7 @@ const Reg = () => {
     instiadress: "",
     instipincode: "",
     yearofstudy: "",
+    sexy_word: "",
     // ca_refral: '',
   });
 
@@ -43,41 +44,14 @@ const Reg = () => {
     }));
   };
 
-  // const handleFocus = (e) => {
-  //   const label = e.target.previousSibling;
-  //   if (romeo) {
-  //   } else {
-  //     if (label) {
-  //       label.classList.add(styles.floatingLabel);
-  //     }
-  //   }
-  // };
-
-  // const handleBlur = (e) => {
-  //   const label = e.target.previousSibling;
-  //   if (romeo) {
-  //   } else {
-  //     if (label && e.target.value === "") {
-  //       label.classList.remove(styles.floatingLabel);
-  //     }
-  //   }
-  // };
-  // function checkInputValues() {
-  //   const inputs = document.querySelectorAll("input");
-
-  //   inputs.forEach((input) => {
-  //     handleFocus({ target: input });
-  //     handleBlur({ target: input });
-  //   });
-  // }
-  // setInterval(checkInputValues, 100);
-
   const handleSubmit = (event) => {
     setRegsitering(true);
     event.preventDefault();
-    console.log(formData);
+    // console.log(formData);
+    const sexyWord = `${formData.compi}15Nov${formData.email}or19Nov${formData.phoneno}`;
+    const updatedFormData = { ...formData, sexy_word: sexyWord };
     axios
-      .post("/api/compi_reg/", formData)
+      .post("/api/compi_reg/", updatedFormData)
       .then((response) => {
         console.log("Added Successfully!!");
         navigate(`/competitions/${compiName}`);
