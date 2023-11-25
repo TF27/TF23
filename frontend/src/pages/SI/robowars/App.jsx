@@ -9,10 +9,10 @@ import { useNavigate } from 'react-router-dom';
 function App() {
 
   const w1_reg = () => {
-    window.location.href = 'https://docs.google.com/forms/d/1Xk-cMmQSQQe47-50rbLHcbI9b2I-_E1LJ56ugVgCbQw/prefill'; 
+    window.location.href = 'https://forms.gle/XQtCRhHrBzPqKr3t9'; 
   };
   const w2_reg = () => {
-    window.location.href = 'https://docs.google.com/forms/d/1SzR5IYXYmJzbV5mo8Qqfnp6aCOwH4WFRGZKWi6HTJpY/prefill'; 
+    window.location.href = 'https://forms.gle/pGqwHVJYA2TmZc5B6'; 
   };
   const t1_reg = () => {
     window.location.href = 'https://rzp.io/l/gqqpOlU9'; 
@@ -33,9 +33,7 @@ function App() {
           <h4 className={styles.para}>
             Personal Finance webinars by Zerodha<br/>
             Webinar 1: 8th dec, 4:00-5:00 pm<br/>
-            Webinar 2: 16th dec, 4:00-5:00 pm<br/>
-    
-
+            Webinar 2: 16th dec, 4:00-5:00 pm<br/> 
           </h4>
         
           <Container className="mt-5">
