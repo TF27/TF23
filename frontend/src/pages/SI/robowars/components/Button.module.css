@@ -1,0 +1,33 @@
+.container {
+  background: rgba(10, 10, 10, 0.5);
+  border: 1px solid #2a8833;
+  margin-left: 15px;
+  margin-top: 5px;
+  font-size: 21px;
+  width: fit-content;
+  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.container::before {
+  --spacing-p: 0.5rem;
+  --spacing-n: -0.5rem;
+  content: "";
+  background: rgba(81, 79, 79, 0);
+  position: absolute;
+  left: var(--spacing-n);
+  top: var(--spacing-n);
+  right: var(--spacing-p);
+  bottom: var(--spacing-p);
+  border: 1px solid #2a8833;
+}
+
+.container a {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+
+}

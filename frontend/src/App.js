@@ -21,6 +21,7 @@ import Loading1 from "./pages/loading_page/Loading1";
 import WorkReg from "./pages/workshop/internal/reg";
 import Header_update from "./components/Navbar/Header_update";
 import Sustain from "./pages/sustain/App.jsx";
+import SIrobowars from "./pages/SI/robowars/App.jsx";
 import SustainRegtest from "./pages/SI/components/Reg2.jsx";
 import Sustainregwebinar from "./pages/SI/components/Reg1.jsx";
 
@@ -146,6 +147,14 @@ function App() {
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Sustain />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/financialliteracy"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <SIrobowars />
                 </React.Suspense>
               }
             />
