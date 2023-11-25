@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import parallax from './parallax.module.css';
-
 const ImageOne = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -18,7 +17,7 @@ const ImageOne = () => {
   return(
   <div  className={parallax.parallaxcontainer} style={{height: '100vh'}} >
     <div className={`${parallax.parallaxlayer} ${parallax.layer1}`} style={{ transform: `translateY(${scrollPosition * 0.1}px)`,scrollBehavior:'smooth' }} />
-    <div className={`${parallax.parallaxlayer} ${parallax.layer2}`} style={{ transform: `translateY(${scrollPosition * 0.3}px)` }}>Sustain</div>
+    <div className={`${parallax.parallaxlayer} ${parallax.layer2}`} style={{ transform: `translateY(${scrollPosition * 0.3}px)` }}/>
     <div className={`${parallax.parallaxlayer} ${parallax.layer3}`} />
     <div className={parallax.blackGradientbottom}/>
   </div>

@@ -1,0 +1,36 @@
+.container {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #2a8833;
+  margin-left: 17px;
+  margin-top: 5px;
+  font-size: 21px;
+  width: fit-content;
+  position: relative;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
+.container::before {
+  --spacing-p: 0.5rem;
+  --spacing-n: -0.5rem;
+  content: "";
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: var(--spacing-n);
+  top: var(--spacing-n);
+  right: var(--spacing-p);
+  bottom: var(--spacing-p);
+  border: 1px solid #2a8833;
+}
+
+.container a {
+  /* color: white; */
+  text-decoration: none;
+}
+
+.name {
+  text-transform: uppercase;
+}
