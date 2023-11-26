@@ -163,11 +163,6 @@ USE_TZ = True
 
 STATIC_URL = "apo/"
 STATIC_ROOT = os.path.join(BASE_DIR, "apo/")
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",
-#     "/backend/events/static/",
-# ]
-
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
@@ -177,26 +172,7 @@ MEDIA_URL = "/media/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-
-# Taaki SES Pareshan na karien
-
-# EMAIL_USE_TLS = True
-# EMAIL_HOST = 'email-smtp.ap-south-1.amazonaws.com'
-# EMAIL_HOST_USER = 'AKIATEUUM33B5ZYQDREC'
-# EMAIL_HOST_PASSWORD = 'BGfZ4WxwU9AOfkVQL7hib9Vwlb5eYFtYE/hcQjYqcLDO'
-# EMAIL_PORT = 587
-
-
-# EMAIL_USE_TLS = True
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST_USER = 'cuzallis11@gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_HOST_PASSWORD = ''
-
 EMAIL_BACKEND = "django_ses.SESBackend"
-# AWS_SES_REGION_NAME = 'us-east-1'
-# AWS_SES_REGION_ENDPOINT = 'email-smtp.us-east-1.amazonaws.com'
 AWS_ACCESS_KEY_ID = "AKIATEUUM33B2WR5KA5P"
 AWS_SECRET_ACCESS_KEY = "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"
-# EMAIL_HOST_USER = 'noreply@techfest.org'
+

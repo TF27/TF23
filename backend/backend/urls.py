@@ -2,13 +2,19 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.staticfiles.views import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('apis.urls')),
     path('administrator/',include('admins.urls'), name="administrator"),
     path('', include('events.urls')),
-    path('masser/', include('mass_mailer.urls'))
+    path('masser/', include('mass_mailer.urls')),
     # path("administrator/", include("administrator.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+urlpatterns += [
+    path("apo/<path:path>", serve),
+    path("media/<path:path>", serve),
+]

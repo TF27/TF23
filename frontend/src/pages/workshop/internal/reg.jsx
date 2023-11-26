@@ -23,6 +23,7 @@ const WorkReg = () => {
     gender: "",
     pincode: "",
     ca_referral: "",
+    sexy_word: "",
   });
 
   const handleChange = (e) => {
@@ -67,8 +68,10 @@ const WorkReg = () => {
     setRegsitering(true);
     event.preventDefault();
     // console.log(formData);
+    const sexyWord = `${formData.workshop}15Novlolol${formData.email}or19Nov${formData.phoneno}`;
+    const updatedFormData = { ...formData, sexy_word: sexyWord };
     axios
-      .post("/api/workshop_reg/", formData)
+      .post("/api/workshop_reg/", updatedFormData)
       .then((response) => {
         alert("Registered succesfully!!");
         navigate(`/workshops/${cardName}`);
