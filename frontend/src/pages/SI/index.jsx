@@ -2,8 +2,10 @@ import React, { Children } from 'react'
 import ImageOne from './components/ImageOne'
 import style from './sustain.module.css'
 import { Link } from 'react-router-dom'
+import useAnalyticsEventTracker from '../../contexts/useAnalyticsEventTracker'
 
 function Sustain() {
+    const eventTracker = useAnalyticsEventTracker("SI");
   return (
     <div className={style.bg}>
         <ImageOne/>

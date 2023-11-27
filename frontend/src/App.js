@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import Header from "./components/Navbar/Header";
 import { AuthContextProvider } from "./contexts/AuthContext";
+import ReactGA from 'react-ga';
 import Protected from "./contexts/Protected";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/home";
@@ -65,6 +66,9 @@ const RoboReg = React.lazy(() => import("./pages/Robowars/components/Reg"));
 const Cyclothon = React.lazy(() =>
   import("./pages/Events/cyclothon/Cyclothon")
 );
+
+const Tracking_ID = "UA-81222017-2";
+ReactGA.initialize(Tracking_ID);
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
