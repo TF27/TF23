@@ -30,6 +30,7 @@ import MERNifier from "./Competitions/MERNifier";
 import RowBoatics from "./Competitions/RowBoatics";
 import Aeromodelling from "./Competitions/Aeromodelling";
 import CertiTech from "./Competitions/CertiTech";
+import Here from "./Competitions/Here";
 
 const Internal = () => {
   const { compiName } = useParams();
@@ -54,6 +55,8 @@ const Internal = () => {
       navigate("/competitions/urban-futurism");
     } else if (compiName === "taskwhiz") {
       navigate("/competitions/task%20whiz");
+    }else if (compiName === "here") {
+      navigate("/competitions/here%20hackathon");
     } else if (compiName === "ai") {
       navigate("/workshops/artificial%20intelligence");
     } else if (compiName === "ml") {
@@ -100,7 +103,7 @@ const Internal = () => {
       navigate("/workshops/blockchain"); 
     } else if (compiName === "robocap league") {
       setRoboCamp(true);
-    }
+    } 
     // Add more conditions as needed for other compiNames
 }, [navigate, compiName]);
 
@@ -209,7 +212,7 @@ const Internal = () => {
             {compiName === "rowboatics" && <RowBoatics />}
             {compiName === "boeing aeromodelling" && <Aeromodelling />}
             {compiName === "certiTech" && <CertiTech />}
-
+            {compiName === "here hackathon" && <Here />}
             <div className={styles.team_reg}>
               {user === null ? (
                 <div>

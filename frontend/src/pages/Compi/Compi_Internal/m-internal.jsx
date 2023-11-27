@@ -31,6 +31,7 @@ import MERNifier from "./Competitions/m-MERNifier";
 import RowBoatics from "./Competitions/m-RowBoatics";
 import Aeromodelling from "./Competitions/m-Aeromodelling";
 import CertiTech from "./Competitions/m-CertiTech";
+import Here from "./Competitions/m-Here";
 
 const MInternal = () => {
   const { compiName } = useParams();
@@ -54,6 +55,8 @@ const MInternal = () => {
     navigate("/competitions/urban-futurism");
   } else if (compiName === "taskwhiz") {
     navigate("/competitions/task%20whiz");
+  } else if (compiName === "here") {
+    navigate("/competitions/here%20hackathon");
   } else if (compiName === "ai") {
     navigate("/workshops/artificial%20intelligence");
   } else if (compiName === "ml") {
@@ -280,6 +283,7 @@ const MInternal = () => {
         {compiName === "rowboatics" && <RowBoatics />}
         {compiName === "boeing aeromodelling" && <Aeromodelling />}
         {compiName === "cerTitech" && <CertiTech />}
+        {compiName === "here hackthon" && <Here/>}
       </div>
     ));
   };
