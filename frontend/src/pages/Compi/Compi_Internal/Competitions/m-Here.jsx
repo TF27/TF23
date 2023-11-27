@@ -120,7 +120,8 @@ const Here = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'About' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Get a chance to showcase your coding skills through this fierce and competitive hackathon</div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Develop an app for local business discovery with real-time info using HERE Places API or for city exploration with guided tours and historical insights using HERE Location Services.
+            Selected teams will get to participate in an offline hackathon at IIT Bombay.</div>
                 </div>
             </div>
             <div>
