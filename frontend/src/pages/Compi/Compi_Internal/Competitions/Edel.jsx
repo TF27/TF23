@@ -4,7 +4,7 @@ import Faq from 'react-faq-component';
 import './x.css';
 import Whatsapplink from '../../../../components/whatsapp/link';
 
-const Here = () => {
+const Edel = () => {
     const [activeCity, setActiveCity] = useState('About');
     const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {
@@ -129,8 +129,7 @@ const Here = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Develop an app for local business discovery with real-time info using HERE Places API or for city exploration with guided tours and historical insights using HERE Location Services.
-            Selected teams will get to participate in an offline hackathon at IIT Bombay.
+            Get a chance to showcase your coding skills through this fierce and competitive hackathon   
               </div>
             </div>
           </div>
@@ -220,4 +219,4 @@ const Here = () => {
      );
 }
  
-export default Here;
+export default Edel;
