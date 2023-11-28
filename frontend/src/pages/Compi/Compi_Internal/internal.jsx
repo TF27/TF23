@@ -33,7 +33,7 @@ import CertiTech from "./Competitions/CertiTech";
 import Here from "./Competitions/Here";
 import Idrl from "./Competitions/Idrl";
 import Mouse from "./Competitions/Mouse";
-import Edel from "./Competitions/edel";
+import Edel from "./Competitions/Edel";
 
 function Internal() {
   const { compiName } = useParams();
