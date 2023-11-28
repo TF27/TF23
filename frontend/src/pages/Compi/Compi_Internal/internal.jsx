@@ -32,6 +32,7 @@ import Aeromodelling from "./Competitions/Aeromodelling";
 import CertiTech from "./Competitions/CertiTech";
 import Here from "./Competitions/Here";
 import Idrl from "./Competitions/Idrl";
+import Mouse from "./Competitions/Mouse";
 
 const Internal = () => {
   const { compiName } = useParams();
@@ -54,6 +55,8 @@ const Internal = () => {
       navigate("/competitions/int'l%20drone%20racing");
     } else if (compiName === "RowBoatics") {
       navigate("/competitions/rowboatics");
+    }  else if (compiName === "micromouse") {
+      navigate("/competitions/micromouse%20challenge");
     } else if (compiName === "uf") {
       navigate("/competitions/urban-futurism");
     } else if (compiName === "taskwhiz") {
@@ -217,6 +220,7 @@ const Internal = () => {
             {compiName === "certiTech" && <CertiTech />}
             {compiName === "here hackathon" && <Here />}
             {compiName === "int'l drone racing" && <Idrl/>}
+            {compiName === "micromouse challenge" && <Mouse/>}
             <div className={styles.team_reg}>
               {user === null ? (
                 <div>
