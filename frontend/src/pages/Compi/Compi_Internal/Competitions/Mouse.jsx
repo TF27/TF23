@@ -130,7 +130,7 @@ const Mouse = () => {
           <div id="Timeline" className={`${styles.info} ${activeCity === 'Timeline' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Last Date of Submission: 18 December, 2023 <br /> <br />
+            Last Date of Submission: 25 December, 2023 <br /> <br />
 
             Date of Competition: 28-29th December, 2023
               </div>
