@@ -289,7 +289,7 @@ const MInternal = () => {
         {compiName === "rowboatics" && <RowBoatics />}
         {compiName === "boeing aeromodelling" && <Aeromodelling />}
         {compiName === "cerTitech" && <CertiTech />}
-        {compiName === "here hackthon" && <Here/>}
+        {compiName === "here hackathon" && <Here/>}
         {compiName === "int'l drone racing" && <Idrl/>}
         {compiName === "micromouse challenge" && <Mouse/>}
       </div>
