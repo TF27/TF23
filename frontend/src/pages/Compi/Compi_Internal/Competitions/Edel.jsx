@@ -14,24 +14,20 @@ const Edel = () => {
       const data = {
         rows: [
           {
-            title: "Why should I participate in the Here Hackathon?",
-            content: "The competition provides the participants with real life problem solving. In the final round, participants work together to solve the problems in a specific time."
-          },
-          {
             title: "How to register?",
-            content: 'Follow this steps for registration : www.techfest.org > Competitions > Here Hackathon > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
+            content: 'Follow this steps for registration : www.techfest.org > Competitions > Cashflow Modelling > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
           },
           {
             title: "How many people can be there in one team?",
             content: 'One team can have a maximum of 4 members.'
           },
           {
-            title: "Is it free to register for Here Hackathon?",
+            title: "Is it free to register for Cashflow Modelling?",
             content: 'Yes, it is free to register.'
           },
           {
             title: "How can I make my own team (as a team leader)?",
-            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Here Hackathon -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
+            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Cashflow Modelling -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
           },
           {
             title: "What is the Registered Mail ID?",
@@ -109,8 +105,8 @@ const Edel = () => {
         objectFit: 'scale-down', 
         paddingRight: '8px',
     }
-    const walink1 = "https://chat.whatsapp.com/C1aYwCuebnW7L3q3GeuvZw";
-    const dslink1 = "https://chat.whatsapp.com/C1aYwCuebnW7L3q3GeuvZw";
+    const walink1 = "https://chat.whatsapp.com/Gur8T8nzfTdHT6k6cP1QOn";
+    const dslink1 = "https://chat.whatsapp.com/Gur8T8nzfTdHT6k6cP1QOn";
 
     return ( 
       <div>
@@ -129,7 +125,7 @@ const Edel = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Get a chance to showcase your coding skills through this fierce and competitive hackathon   
+            Join our Cash Flow Optimization Challenge! Develop models to forecast cash flow, recommend optimal payment strategies, and apply solutions to the last 7 months' data. Revolutionize our cash flow management and maximize investment income.   
               </div>
             </div>
           </div>
@@ -139,11 +135,11 @@ const Edel = () => {
               <ul>
                 <li>
                   Round 1: <br />
-                  In this round, the teams will have to solve the Round 1 Problem Statment provided and submit all the relevant files. 
+                  Participants are required to provide a comprehensive summary of their comprehension of the Problem Statement. 
                 </li>
                 <li>
                   Final round: <br />
-                  Selected finalists will compete in an offline hackathon at IIT Bombay campus. 
+                  This stage will involve a physical demonstration, during which the chosen teams will present the functionality of their model. Students will be required to demonstrate the functionality of their model on the data provided, the scenario analysis and present their recommendations. 
                 </li>
               </ul>
               </div>
@@ -155,19 +151,23 @@ const Edel = () => {
               <ul>
                 <li>
                   Last date of registration: <br />
-                  6th December 2023
+                  7th December 2023
                 </li>
                 <li>
-                  Round 1 Submission Deadline: <br />
-                  7th December 2023
+                  Draft Submission Deadline: <br />
+                  8th December 2023
                 </li>
                 <li>
                   Finalist announcement: <br />
                   13th December 2023
                 </li>
                 <li>
+                  Submission of Presentation: <br />
+                  25th December 2023
+                </li>
+                <li>
                   Final Round at IIT Bombay Campus: <br />
-                  28th December 2023
+                  29th December 2023
                 </li>
               </ul>
               </div>

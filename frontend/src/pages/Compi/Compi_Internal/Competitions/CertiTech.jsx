@@ -162,18 +162,18 @@ const CertiTech = () => {
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
             <li>Last Date of Registration: <br />
-            23th November 2023</li>
+            1st December 2023</li>
 
             <li>Last date for abstract submission <br />
-            23th November 2023</li>
+            1st December 2023</li>
 
             <li>Round 1: <br />
-            26th November 2023</li>
+            3rd December 2023</li>
 
             <li>Round 2: <br />
             Mid-December 2023 </li>
 
-            <li>Roound 3: <br />
+            <li>Round 3: <br />
             27th-29th December 2023 </li>
               </div>
             </div>
@@ -206,9 +206,9 @@ const CertiTech = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Jeeten Makwana<br/>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9925312099`}>+91 99253 12099</div>
-                    <div className="col-3 contactMail" onClick={() => window.location.href = `mjeeten.techfest@gmail.com`}>mjeeten.techfest@gmail.com</div>
+              Atharv Apshinge<br/>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9324589830`}>+91 93245 89830</div>
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `atharv@techfest.org`}>atharv@techfest.org</div>
               
               </div>
             </div>

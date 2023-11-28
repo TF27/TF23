@@ -34,6 +34,7 @@ import CertiTech from "./Competitions/m-CertiTech";
 import Here from "./Competitions/m-Here";
 import Idrl from "./Competitions/m-Idrl";
 import Mouse from "./Competitions/m-Mouse";
+import Edel from "./Competitions/m-Edel";
 
 const MInternal = () => {
   const { compiName } = useParams();
@@ -47,6 +48,8 @@ const MInternal = () => {
     navigate("/competitions/meshmerize");
   } else if (compiName === "aeromodelling") {
     navigate("/competitions/boeing%20aeromodelling");
+  }  else if (compiName === "cashflow") {
+    navigate("/competitions/cashflow%20modelling");
   } else if (compiName === "idrl") {
     navigate("/competitions/int'l%20drone%20racing");
   }  else if (compiName === "micromouse") {
@@ -292,6 +295,7 @@ const MInternal = () => {
         {compiName === "here hackathon" && <Here/>}
         {compiName === "int'l drone racing" && <Idrl/>}
         {compiName === "micromouse challenge" && <Mouse/>}
+        {compiName === "cashflow modelling" && <Edel/>}
       </div>
     ));
   };
