@@ -39,7 +39,7 @@ const Here = () => {
             content: 'One team can have a maximum of 4 members.'
           },
           {
-            title: "Is it free to register for HackAI?",
+            title: "Is it free to register for Here Hackathon?",
             content: 'Yes, it is free to register.'
           },
           {

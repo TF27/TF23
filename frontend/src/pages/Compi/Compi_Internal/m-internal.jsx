@@ -32,6 +32,7 @@ import RowBoatics from "./Competitions/m-RowBoatics";
 import Aeromodelling from "./Competitions/m-Aeromodelling";
 import CertiTech from "./Competitions/m-CertiTech";
 import Here from "./Competitions/m-Here";
+import Idrl from "./Competitions/m-Idrl";
 
 const MInternal = () => {
   const { compiName } = useParams();
@@ -45,6 +46,8 @@ const MInternal = () => {
     navigate("/competitions/meshmerize");
   } else if (compiName === "aeromodelling") {
     navigate("/competitions/boeing%20aeromodelling");
+  } else if (compiName === "idrl") {
+    navigate("/competitions/int'l%20drone%20racing");
   } else if (compiName === "tfo") {
     navigate("/competitions/techfest%20olympiad");
   } else if (compiName === "MERNifier") {
@@ -284,6 +287,7 @@ const MInternal = () => {
         {compiName === "boeing aeromodelling" && <Aeromodelling />}
         {compiName === "cerTitech" && <CertiTech />}
         {compiName === "here hackthon" && <Here/>}
+        {compiName === "int'l drone racing" && <Idrl/>}
       </div>
     ));
   };

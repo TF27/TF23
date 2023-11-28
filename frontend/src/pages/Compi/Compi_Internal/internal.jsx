@@ -31,6 +31,7 @@ import RowBoatics from "./Competitions/RowBoatics";
 import Aeromodelling from "./Competitions/Aeromodelling";
 import CertiTech from "./Competitions/CertiTech";
 import Here from "./Competitions/Here";
+import Idrl from "./Competitions/Idrl";
 
 const Internal = () => {
   const { compiName } = useParams();
@@ -49,6 +50,8 @@ const Internal = () => {
       navigate("/competitions/techfest%20olympiad");
     } else if (compiName === "MERNifier") {
       navigate("/competitions/mernifier");
+    }  else if (compiName === "idrl") {
+      navigate("/competitions/int'l%20drone%20racing");
     } else if (compiName === "RowBoatics") {
       navigate("/competitions/rowboatics");
     } else if (compiName === "uf") {
@@ -213,6 +216,7 @@ const Internal = () => {
             {compiName === "boeing aeromodelling" && <Aeromodelling />}
             {compiName === "certiTech" && <CertiTech />}
             {compiName === "here hackathon" && <Here />}
+            {compiName === "int'l drone racing" && <Idrl/>}
             <div className={styles.team_reg}>
               {user === null ? (
                 <div>
