@@ -281,27 +281,27 @@ const MERNifier = () => {
               <div className={styles.info_data}>
                 <li>
                   Last Date of Registration: <br />
-                  19th November 2023
+                  3rd December 2023
                 </li>
 
                 <li>
                   Last date for abstract submission <br />
-                  19th November 2023
+                  3rd November 2023
                 </li>
 
                 <li>
-                  Round 1: <br />
-                  22nd November 2023
+                  Online Session 1: <br />
+                  5th December 2023
                 </li>
 
                 <li>
-                  Round 2: <br />
-                  Mid-December 2023{" "}
+                  Final Abstract Submission: <br />
+                  Mid-December 2023
                 </li>
 
                 <li>
-                  Roound 3: <br />
-                  27th-29th December 2023{" "}
+                  Final at IIT Bombay: <br />
+                  27th-29th December 2023
                 </li>
               </div>
             </div>
