@@ -208,3 +208,16 @@ class SustainRegWebinar(models.Model):
     phone = models.CharField(blank=True, null=True, max_length=255)
     college = models.CharField(blank=True, null=True, max_length=255)
     country = models.CharField(blank=True, null=True, max_length=255)
+
+class SummitSpeaker(models.Model):
+    ching_id = models.IntegerField(null=True, default=0)
+    name = models.CharField(max_length=255, null=True, blank=True)
+    designation = models.CharField(max_length=255, null=True, blank=True)
+    desc = models.TextField(null=True, blank=True)
+    summit = models.CharField(choices=[
+        ('Industry', 'Industry'),
+        ('Fintech', 'Fintech'),
+    ], max_length=255, null=True, blank=True)
+    img = models.ImageField(upload_to='summit_speakers', null=True, blank=True)
+    def __str__(self):
+        return self.name

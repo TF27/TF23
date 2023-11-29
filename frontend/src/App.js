@@ -10,7 +10,7 @@ import CompiInternal from "./pages/Compi/Compi_Internal/index";
 import Reg from "./pages/Compi/Compi_Internal/Reg";
 import Create_Team from "./pages/Compi/Compi_Internal/Teams/create_team";
 // import Workshop from './pages/workshop/home';
-import Summit from "./pages/Summit/home.js";
+import Summit from "./pages/Summit/home.jsx";
 import Contact from "./pages/AboutUs/ContactUs/contact.jsx";
 // import Explore from './pages/workshop/components/Explore';
 import Recognition from "./pages/AboutUs/recognition/Recognition";
@@ -230,7 +230,7 @@ function App() {
             />
 
             <Route
-              path="/fintech"
+              path="/summits/fintech"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Fintech/>
