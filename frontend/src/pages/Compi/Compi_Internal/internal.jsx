@@ -50,8 +50,12 @@ function Internal() {
       navigate("/competitions/boeing%20aeromodelling");
     } else if (compiName === "tfo") {
       navigate("/competitions/techfest%20olympiad");
+    }  else if (compiName === "edelweisstokio") {
+      navigate("/competitions/cashflow%20modelling");
     } else if (compiName === "MERNifier") {
       navigate("/competitions/mernifier");
+    }  else if (compiName === "certiTech") {
+      navigate("/competitions/certiTech");
     } else if (compiName === "idrl") {
       navigate("/competitions/int'l%20drone%20racing");
     } else if (compiName === "RowBoatics") {
