@@ -216,6 +216,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      
       <Explore 
         Heading="Competitions" 
         data={dataCompetitions} 

@@ -39,7 +39,7 @@ const Here = () => {
             content: 'One team can have a maximum of 4 members.'
           },
           {
-            title: "Is it free to register for HackAI?",
+            title: "Is it free to register for Here Hackathon?",
             content: 'Yes, it is free to register.'
           },
           {
@@ -120,7 +120,8 @@ const Here = () => {
                 </div>
                 <div className={`${styles.whatd} ${open === 'About' ? styles.whatdOpen : ''}`}>
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
-                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Get a chance to showcase your coding skills through this fierce and competitive hackathon</div>
+                    <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>Develop an app for local business discovery with real-time info using HERE Places API or for city exploration with guided tours and historical insights using HERE Location Services.
+            Selected teams will get to participate in an offline hackathon at IIT Bombay.</div>
                 </div>
             </div>
             <div>
@@ -199,8 +200,6 @@ const Here = () => {
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
                     Atharv Apshinge<br/>
-                    +91 93245 89830 <br />
-                    atharv@techfest.org
                     <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:atharv@techfest.org`}>atharv@techfest.org</div>
                     <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9324589830`}>9324589830</div>
                     </div>

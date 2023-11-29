@@ -4,7 +4,8 @@ import Faq from 'react-faq-component';
 import './x.css';
 import Whatsapplink from '../../../../components/whatsapp/link';
 
-const Here = () => {
+
+const Mouse = () => {
     const [activeCity, setActiveCity] = useState('About');
     const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {
@@ -14,24 +15,20 @@ const Here = () => {
       const data = {
         rows: [
           {
-            title: "Why should I participate in the Here Hackathon?",
-            content: "The competition provides the participants with real life problem solving. In the final round, participants work together to solve the problems in a specific time."
-          },
-          {
             title: "How to register?",
-            content: 'Follow this steps for registration : www.techfest.org > Competitions > Here Hackathon > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
+            content: 'Follow this steps for registration : www.techfest.org > Competitions > Micromouse Challenge > Explore More -> Register > Fill all your details > You will be registered and now you must either Create a team/Join a team'
           },
           {
             title: "How many people can be there in one team?",
             content: 'One team can have a maximum of 4 members.'
           },
           {
-            title: "Is it free to register for Here Hackathon?",
+            title: "Is it free to register for Micromouse Challenge?",
             content: 'Yes, it is free to register.'
           },
           {
             title: "How can I make my own team (as a team leader)?",
-            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Here Hackathon -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
+            content: 'Follow this process: www.techfest.org -> (hover on) Competitions -> Competitions -> Micromouse Challenge -> Explore -> Register -> Fill all your details -> Team -> Create a team -> Use the Registered Mail ID of other participants to add them to your team. They must be already registered before adding them to your team'
           },
           {
             title: "What is the Registered Mail ID?",
@@ -47,7 +44,7 @@ const Here = () => {
           },
           {
             title: "How can I remove members from my team (as a team leader)?",
-            content: 'You cannot remove any team member.'
+            content: 'You cannot remove a team member.'
           },
           {
             title: "What happens when the team leader leaves their team?",
@@ -60,10 +57,6 @@ const Here = () => {
           {
             title: "How can a team member (other than the leader) leave the team?",
             content: 'Click on the Leave Team button and you will be removed from the registered team.'
-          },
-          {
-            title: "Who can delete a team?",
-            content: 'Only the team leader can delete the team using the Dissolve Team button.'
           },
           {
             title: "Can a team have members from different colleges?",
@@ -104,14 +97,8 @@ const Here = () => {
         margin: 'auto',
         rowContentMarginBottom: '0',
       }
-
-    const lol = {
-        objectFit: 'scale-down', 
-        paddingRight: '8px',
-    }
-    const walink1 = "https://chat.whatsapp.com/C1aYwCuebnW7L3q3GeuvZw";
-    const dslink1 = "https://chat.whatsapp.com/C1aYwCuebnW7L3q3GeuvZw";
-
+      const walink1 = "https://chat.whatsapp.com/JfnswTDxpTU7QXuidxymK4";
+      const dslink1 = "https://chat.whatsapp.com/JfnswTDxpTU7QXuidxymK4";
     return ( 
       <div>
       <div className={styles.impdata}>
@@ -129,48 +116,23 @@ const Here = () => {
           <div id="About" className={`${styles.info} ${activeCity === 'About' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-            Develop an app for local business discovery with real-time info using HERE Places API or for city exploration with guided tours and historical insights using HERE Location Services.
-            Selected teams will get to participate in an offline hackathon at IIT Bombay.
+            Participants are required to code an autonomous self-contained bot on ROS to be simulated on Gazebo, Micromouse, which can get to the centre of a maze in the shortest possible time. A micromouse essentially comprises of a drive motor or motors to move it; a steering and turning method and sensors to detect the presence or absence of maze walls which has to be specified in the URDF and sensors or control logic to oversee the action of the rest and keep the vehicle 'on track' or to solve the maze.
               </div>
             </div>
           </div>
           <div id="Structure" className={`${styles.info} ${activeCity === 'Structure' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-              <ul>
-                <li>
-                  Round 1: <br />
-                  In this round, the teams will have to solve the Round 1 Problem Statment provided and submit all the relevant files. 
-                </li>
-                <li>
-                  Final round: <br />
-                  Selected finalists will compete in an offline hackathon at IIT Bombay campus. 
-                </li>
-              </ul>
+            This is a single stage competiton. Participants have to code their bot and then send all the required files as a zip file as mentioned in the Problem Statement and compete at Techfest 2023.
               </div>
             </div>
           </div>
           <div id="Timeline" className={`${styles.info} ${activeCity === 'Timeline' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
-              <ul>
-                <li>
-                  Last date of registration: <br />
-                  6th December 2023
-                </li>
-                <li>
-                  Round 1 Submission Deadline: <br />
-                  7th December 2023
-                </li>
-                <li>
-                  Finalist announcement: <br />
-                  13th December 2023
-                </li>
-                <li>
-                  Final Round at IIT Bombay Campus: <br />
-                  28th December 2023
-                </li>
-              </ul>
+            Last Date of Submission: 25 December, 2023 <br /> <br />
+
+            Date of Competition: 28-29th December, 2023
               </div>
             </div>
           </div>
@@ -193,31 +155,28 @@ const Here = () => {
             <br/>2. A Team ID will be allocated to the team on registration which shall be used for future references
             <br/>3. The decision of the organizers or judges shall be treated as final and binding on all
             <br/>4. No responsibility will be held by Techfest, IIT Bombay for any late, lost or misdirected entries
-            <br/>5. All modes of official communication will be through the Techfest e-mail, participants are advised to keep track of all folders in their e-mail accounts
-            <br/>6. Participants have to bring their own laptops during the competition
-            <br/>7. Teams will be responsible for their devices, it is advised that laptops should be charged before the competition
-            <br/>8. Mobile phones are not allowed during the competition
-            <br/>9. The organisers reserve the right to change any or all of the above rules as they deem fit. Change in rules, if any, will be highlighted on the website and notified to the registered teams
+            <br/>5. Note that at any point of time the latest information will be that which is on the website; however, registered participants will be informed through mail about any changes
+            <br/>6. All modes of official communication will be through the Techfest e-mail, participants are advised to keep track of all folders in their e-mail accounts
               </div>
             </div>
           </div>
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Atharv Apshinge <br />
-        
-              <div className="col-3 contactMail" onClick={() => window.location.href = `mailto:atharv@techfest.org`}>atharv@techfest.org</div>
-              <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9324589830`}>+91 93245 89830</div>
+              Vidyanand Kumar<br/>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9142538453`}>+91 91425 38453</div>
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `rishu.techfest.iitb@gmail.com`}>kvidyanand966@gmail.com</div>
+                    
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className={styles.grouplink}>
-        <div className={styles.wabutton }><Whatsapplink walink={walink1} dslink={dslink1} target="_blank"/></div>
-      </div>
-      </div>
+      <div className={styles.wabutton }><Whatsapplink walink={walink1} dslink={dslink1} target="_blank"/></div>
+    </div>
+    </div>
      );
 }
  
-export default Here;
+export default Mouse;

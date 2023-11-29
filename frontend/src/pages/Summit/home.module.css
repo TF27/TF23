@@ -1,0 +1,100 @@
+.Summit{
+    background-image: url(./assets/summit_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-attachment: fixed;
+} 
+
+.SummitCOO{
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+}
+
+.SummitCard_rect1{
+    width: 350px;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    border: 1px solid #BB9564;
+}
+.SummitCard_rect2{
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    border: 1px solid #BB9564;
+    transform: translate(5px, 5px);
+}
+
+.CardHead{
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+    overflow-y: hidden;
+}
+
+.SummitHead{
+    margin-top: 14vh;
+    margin-bottom: 40px;
+}
+
+.RegExp{
+    display: flex;
+    justify-content: space-around;
+}
+
+.Reg{
+    width: 100%;
+    height: 40px;
+    background-color: rgba(255,255,255,0.2);
+    cursor: pointer;
+}
+.Exp{
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+.Reg a, .Exp a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.CardND{
+    bottom: -78%;
+    position: relative;
+    transition: bottom 0.3s ease 0s;
+}
+.CardN{
+    font-size: 28px;
+}
+.CardD{
+    font-size: 16px;
+}
+
+
+.SummitCard_rect1:hover .CardND{
+    bottom: -38%;
+}
+.Reg:hover .Reg{
+    background-color: rgba(255,255,255,0.3);
+}
+.Exp:hover .Exp{
+    background-color: rgba(255,255,255,0.16);
+}
+
+@media (max-width: 768px){
+    .SummitCOO{
+        /* flex-direction: column; */
+        max-width: 100%;
+    }
+}
