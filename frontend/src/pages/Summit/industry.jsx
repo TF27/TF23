@@ -1,61 +1,111 @@
-import React, { useState } from 'react';
-import styles from './fintech.module.css';
-import ImageOne from './components/ImageOne';
-import bg from './assets/summit_bg.jpg';
+import React, { useState } from "react";
+import styles from "./fintech.module.css";
+import ImageOne from "./components/ImageOne";
+import bg from "./assets/summit_bg.jpg";
+import Speakers from "./components/speakers";
 
-const Industry = () => {
+const Fintech = () => {
   const bgHaiJi = {
     backgroundImage: `url(${bg})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center center',
-    width: '100vw',
-    position: 'absolute',
-    top: '0',
-    zIndex: '-1',
-    backgroundAttachment: 'fixed',
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center center",
+    width: "100vw",
+    position: "absolute",
+    top: "0",
+    zIndex: "-1",
+    backgroundAttachment: "fixed",
     // Add a pseudo-element to create an overlay
-  '::before': {
-    content: '""',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    background: 'rgba(0, 0, 0, 1)', // Adjust the color and transparency here
-  },
+    "::before": {
+      content: '""',
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      background: "rgba(0, 0, 0, 1)", // Adjust the color and transparency here
+    },
+  };
+
+  const Border = ({text}) => {
+    return (
+      <>
+        <div className={styles.titSpn_rect1}>
+            <div className={styles.titSpn_rect2}><h1>{text}</h1></div>
+          </div>
+      </>
+    )
   };
 
   return (
     <div className="yoyohoneysingh" style={bgHaiJi}>
-      <div className={styles['accommodation-container']}>
+      <div className={styles["accommodation-container"]}>
         <ImageOne />
-        
-        <div className={`${styles.titSpn} ${styles.homeTheme}`}>
-        <div className={styles.titSpn_rect1}>
-          <div className={styles.titSpn_rect2}>About</div>
+
+        <div className={styles.About}>
+          <Border text='About' />
+          <p>
+          The rise of Fintech has forever changed the way companies do
+            business. There have never been as many decisions for business
+            people from crowdsourcing to mobile payments as there are now. It's
+            never been less expensive to set up your business as well as to
+            extend it. Fintech has been a boon for the consumer of banking and
+            financial services. It has improved customer satisfaction and worked
+            on consumers' pain points, providing a digital platform for
+            entrepreneurs and investors to digitize financially. The
+            International Fintech Summit is the ideal meeting place facilitating
+            multi-stakeholder dialogue with power-packed networking
+            opportunities among C-Level executives, leading industry experts,
+            decision-makers, and policymakers from across the value chain to
+            foster collaboration, discuss current challenges, business
+            opportunities, develop market strategies, share knowledge and
+            identify solutions aimed at shaping the future of Fintech. For
+            Students: Lay the foundation for your career through live
+            intellectual discussions with speakers through chat and individual
+            assessments to add to your expertise. Networking opportunities with
+            Fintech leaders. Build your career by interacting with our honorable
+            speakers, industry professionals and get a certificate of
+            completion. For Professionals: Meet influential people and expand
+            your professional network. Get insights about the current state of
+            the industry and the future possibilities. Explore opportunities in
+            the fintech sector.
+          </p>
         </div>
-      </div>
-      <div className={`row ${styles.themeData}`}>
-        
-        <div className={styles.themeText}>
-        Now is the time for digitalization. With scarce resources in our hands, rapid changes in customers and producers' behavior, a comfort-loving generation; E-Commerce is the best option socially, politically, and economically. E-Commerce is booming, even faster than Zomato's posts on their social media handles. And this growth is very promising.
-
-The International Industry Summit aims at discussing the trends that are bringing this change and changing the consumer’s perspective to this new way of shopping. The summit will provide you with a complete outlook on the growth and potential of D2C, B2C, brand marketing, etc.
-
-For Students:
-
-Build your career by interacting with our honorable speakers, industry professionals and get a certificate of completion.
-Connect with CxO’s, innovators, investors, industry professionals, and entrepreneurs and get inspired by their brand-making stories.
-For Professionals:
-
-Learn about the loopholes a company faces, and prepare yourself for upcoming challenges while also growing your industry network
-Discover the trends that will reshape the E-commerce landscape: ML & AI chatbots, ultra personalization, customer experience.
+        <div>
+          <Border text='Speakers' />
+          <Speakers summit="Industry" />
         </div>
-      </div>
+        <div>
+          <Border text='Agendas' />
+          <div className={styles.agendasI}>
+            <div className={styles.agendasII}>
+              <div className={styles.agendasIII}>What is fintech and why is it important?</div>
+              <div className={styles.agendasIII}>What are the different types of fintech?</div>
+            </div>
+            <div className={styles.agendasII}>
+              <div className={styles.agendasIII}>What are the benefits of fintech?</div>
+              <div className={styles.agendasIII}>What are the challenges of fintech?</div>
+            </div>
+            <div className={styles.agendasII}>
+              <div className={styles.agendasIII}>What is the future of fintech?</div>
+              <div className={styles.agendasIII}>What are the best examples of fintech?</div>
+            </div>
+            <div className={styles.agendasII}>
+              <div className={styles.agendasIII}>What is fintech and why is it important?</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <Border text='Contact Us' />
+          <div className={styles.contact}>
+            <p>Mankirat Chawla</p>
+            <div className={styles.email} onClick={() => window.location.href = `mailto:mankirat@techfest.org`}>mankirat@techfest.org</div>
+            <div className={styles.phone} onClick={() => window.location.href = `tel:+91 9996437175`}>+91 99964 37175</div>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Industry;
+export default Fintech;

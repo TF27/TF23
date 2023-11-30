@@ -25,6 +25,7 @@ import Sustain from "./pages/sustain/App.jsx";
 import SIrobowars from "./pages/SI/robowars/App.jsx";
 import SustainRegtest from "./pages/SI/components/Reg2.jsx";
 import Sustainregwebinar from "./pages/SI/components/Reg1.jsx";
+import SummitReg from "./pages/Summit/reg.jsx";
 
 // const Home= React.lazy(() => import('./pages/Home/home'));
 const Lectures = React.lazy(() => import("./pages/Lectures/index"));
@@ -239,11 +240,20 @@ function App() {
             />
 
             <Route
-              path="/industry"
+              path="/summits/industry"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Industry/>
                 </React.Suspense>
+              }
+            />
+
+          <Route
+              path="summits/:cardName/register"
+              element={
+                <Protected>
+                  <SummitReg />
+                </Protected>
               }
             />
 

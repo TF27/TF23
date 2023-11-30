@@ -1,0 +1,82 @@
+.overlay {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: opacity 500ms;
+  }
+  .popup {
+    margin: 0 auto;
+    padding: 20px;
+    /* background:rgb(43 40 40); */
+    background: #00000082;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(5.5px);
+    backdrop-filter: blur(5.5px);
+    border: 1px solid rgba(0,0,0,1);
+    border-radius: 5px;
+    width: 80%;
+    height: 88%;
+    position: fixed;
+    top: 5%;
+    /* left: 35%; */
+    transition: all .5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #fff;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: -3px;
+    right: 6px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+  }
+  .popup .close:hover {
+    cursor: pointer;
+    color: #fff;
+  }
+  .popup .content {
+    max-height: 95%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .popup {
+      width: 95%;
+      top: 12%;
+      height: 72%;
+    }
+  }
+  
+  .popup .content::-webkit-scrollbar {
+    width: 10px;
+  }
+    /* Track */
+    .popup .content::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px none; 
+        border-radius: 10px;  
+      }
+       
+      /* Handle */
+    .popup .content::-webkit-scrollbar-thumb {
+        background: rgb(161, 161, 161); 
+        border-radius: 10px;
+      }
+      
+      /* Handle on hover */
+    .popup .content::-webkit-scrollbar-thumb:hover {
+        background: none; 
+      }
+      
