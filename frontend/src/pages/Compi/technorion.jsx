@@ -36,7 +36,7 @@ const Technorion = () => {
             "X-Email": google_id,
           },
         });
-        console.log(axios.defaults.headers.common);
+        // console.log(axios.defaults.headers.common);
         setData(response.data);
       } catch (error) {
         console.error(error);

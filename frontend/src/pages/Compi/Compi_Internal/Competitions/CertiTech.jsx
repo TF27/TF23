@@ -162,13 +162,13 @@ const CertiTech = () => {
             <div className={styles.info_tab}>
             <div className={styles.info_data}>
             <li>Last Date of Registration: <br />
-            1st December 2023</li>
+            6th December 2023</li>
 
             <li>Last date for abstract submission <br />
-            1st December 2023</li>
+            6th December 2023</li>
 
-            <li>Round 1: <br />
-            3rd December 2023</li>
+            <li>Online Session 1: <br />
+            8th December 2023</li>
 
             <li>Round 2: <br />
             Mid-December 2023 </li>

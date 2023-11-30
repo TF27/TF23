@@ -64,7 +64,7 @@ function Summit() {
   return (
     <div className={styles.Summit}>
       <div className={styles.SummitHead}>
-        <h1>Internaional Summits</h1>
+        <h1>International Summits</h1>
       </div>
       <div className={styles.SummitCO}>
         <div className="container">

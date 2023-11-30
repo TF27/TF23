@@ -703,3 +703,63 @@ def proof_upload(request):
             acco.save()
             return JsonResponse({'success': True})
         return JsonResponse({'success': False})
+    
+
+@api_view(['GET'])
+def summitSpeaker(request):
+    if request.method == "GET":
+        try:
+            email = get_user_id(request)
+            summitSpeaker = SummitSpeaker.objects.all()
+            serializer = SummitSpeakerSerializer(
+                summitSpeaker, many=True, context={'user': email})
+            return Response(serializer.data)
+        except:
+            summitSpeaker = SummitSpeaker.objects.all()
+            serializer = SummitSpeakerSerializer(
+                summitSpeaker, many=True, context={'request': request})
+            return Response(serializer.data)
+
+@api_view(['POST'])
+@csrf_exempt
+def summitRegForm(request):
+    if request.method == 'POST':
+        sexy_word = request.data.get('sexy_word')
+        serializer = SummitRegSerializer(
+            data=request.data, many=False)
+        
+        if serializer.is_valid():
+            print(serializer)
+            email = serializer.validated_data.get('email')
+            summit = serializer.validated_data.get('summit')
+            phone = serializer.validated_data.get('phoneno')
+            # print(sexy_word)
+            sexy_word1 = f"{summit or ''}30Novlalaland{email or ''}or19NovWeLose{phone or ''}"
+            # print(sexy_word1)
+            if sexy_word != sexy_word1:
+                # print(sexy_word, sexy_word1)
+                return JsonResponse({'error': 'Failed'}, status=400)
+            if SummitReg.objects.filter(email=email, summit=summit).exists():
+                return JsonResponse({'error': 'A registration with this email for this workshop already exists.'}, status=400)
+            last_reg = SummitReg.objects.order_by('-summit_id').first()
+            next_tf_id = '3369'
+            if last_reg:
+                last_tf_id = last_reg.summit_id[-4:]
+                next_tf_id = str(int(last_tf_id) + 1).zfill(4)
+            summit_id = f"TF-S23{next_tf_id}"
+            serializer.save(summit_id=summit_id)
+            # compi_reg_serializer.save()
+            subject = "Successful Intl'Summit Registration"
+            message = f"You have successfully registered for the {serializer.validated_data.get('summit')} with email {serializer.validated_data.get('email')} and name {serializer.validated_data.get('name')}"
+            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {serializer.validated_data.get('summit')} Workshop with {serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. Register for more Workshops at techfest.org/workshops \nThanks and Regards,\nTeam Techfest 2023-24"
+            from_email = 'noreply@techfest.org'
+            recipient_list = [
+                serializer.validated_data.get('email')]
+            try:
+                send_mail(subject, message, from_email, recipient_list)
+                return JsonResponse(serializer.data)
+            except:
+                return JsonResponse(serializer.data)
+        res = {'success': False}
+        # print(res)
+        return JsonResponse(res)

@@ -116,7 +116,12 @@ class SustainRegWebinarSerializer(serializers.ModelSerializer):
         model = SustainRegWebinar
         fields = '__all__'
 
-class SummitSpeaker(serializers.ModelSerializer):
+class SummitSpeakerSerializer(serializers.ModelSerializer):
     class Meta:
         model = SummitSpeaker
+        fields = '__all__'
+
+class SummitRegSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SummitReg
         fields = '__all__'
