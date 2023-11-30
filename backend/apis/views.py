@@ -727,19 +727,29 @@ def summitRegForm(request):
         sexy_word = request.data.get('sexy_word')
         serializer = SummitRegSerializer(
             data=request.data, many=False)
-        
+        # if(serializer.is_valid()):
+        #     print('hi')
+        # else:
+        #     print(serializer.errors)
         if serializer.is_valid():
-            print(serializer)
+            # print(serializer)
             email = serializer.validated_data.get('email')
-            summit = serializer.validated_data.get('summit')
+            summitisho = serializer.validated_data.get('summitisho')
             phone = serializer.validated_data.get('phoneno')
             # print(sexy_word)
-            sexy_word1 = f"{summit or ''}30Novlalaland{email or ''}or19NovWeLose{phone or ''}"
+            # print(summitisho)
+            mahito = 'Fintech Summit'
+            if(summitisho == mahito):
+                summitosh = 1
+            else:
+                # print(summitisho)
+                summitosh = 1
+            sexy_word1 = f"{summitosh or ''}30Novlalaland{email or ''}or19NovWeLose{phone or ''}"
             # print(sexy_word1)
             if sexy_word != sexy_word1:
                 # print(sexy_word, sexy_word1)
                 return JsonResponse({'error': 'Failed'}, status=400)
-            if SummitReg.objects.filter(email=email, summit=summit).exists():
+            if SummitReg.objects.filter(email=email, summitisho=summitisho).exists():
                 return JsonResponse({'error': 'A registration with this email for this workshop already exists.'}, status=400)
             last_reg = SummitReg.objects.order_by('-summit_id').first()
             next_tf_id = '3369'
@@ -751,7 +761,7 @@ def summitRegForm(request):
             # compi_reg_serializer.save()
             subject = "Successful Intl'Summit Registration"
             message = f"You have successfully registered for the {serializer.validated_data.get('summit')} with email {serializer.validated_data.get('email')} and name {serializer.validated_data.get('name')}"
-            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {serializer.validated_data.get('summit')} Workshop with {serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. Register for more Workshops at techfest.org/workshops \nThanks and Regards,\nTeam Techfest 2023-24"
+            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {serializer.validated_data.get('summit')} Workshop with {serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. \nThanks and Regards,\nTeam Techfest 2023-24"
             from_email = 'noreply@techfest.org'
             recipient_list = [
                 serializer.validated_data.get('email')]
@@ -759,7 +769,24 @@ def summitRegForm(request):
                 send_mail(subject, message, from_email, recipient_list)
                 return JsonResponse(serializer.data)
             except:
+                print('hi')
                 return JsonResponse(serializer.data)
         res = {'success': False}
         # print(res)
         return JsonResponse(res)
+    
+@api_view(['GET'])
+def summits(request):
+    if request.method == 'GET':
+        try:
+            email = get_user_id(request)
+            # email = user.email if user else None
+            summit = Summits.objects.all()
+            serializer = SummitsSerializer(
+                summit, many=True, context={'user': email})
+            return Response(serializer.data)
+        except:
+            summit = Summits.objects.all()
+            serializer = SummitsSerializer(
+                summit, many=True, context={'request': request})
+            return Response(serializer.data)

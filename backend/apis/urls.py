@@ -25,6 +25,7 @@ urlpatterns = [
     path('acco_proof/', views.proof_upload, name='proof_upload'),
     path('sustaintest_reg/', views.sustain_reg_test, name='sustain_reg_test'),    
     path('sustainwebinar_reg/', views.sustain_reg_test, name='sustain_reg_webinar'),
+    path('summits/', views.summits, name='summits'),
     path('summitSpeaker/', views.summitSpeaker, name='summitSpeaker'),
     path('summitReg/', views.summitRegForm, name='summitReg'),
 ]

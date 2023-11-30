@@ -19,5 +19,6 @@ admin.site.register(robowar_reg)
 
 admin.site.register(AccoReg)
 
+admin.site.register(Summits)
 admin.site.register(SummitSpeaker)
 admin.site.register(SummitReg)
