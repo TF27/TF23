@@ -13,9 +13,16 @@ const SummitReg = () => {
   const { cardName } = useParams();
   const { user } = UserAuth();
   const navigate = useNavigate();
+  let summito;
+
+  if (cardName === 'fintech') {
+    summito = 1;
+  } else {
+    summito = 2;
+  }
 
   const [formData, setFormData] = useState({
-    summit: cardName,
+    summitisho: summito,
     name: user?.displayName,
     email: user?.email,
     phoneno: "",
@@ -37,8 +44,9 @@ const SummitReg = () => {
   const handleSubmit = (event) => {
     setRegsitering(true);
     event.preventDefault();
-    const sexyWord = `${formData.summit}30Novlalaland${formData.email}or19NovWeLose${formData.phoneno}`;
+    const sexyWord = `${formData.summitisho}30Novlalaland${formData.email}or19NovWeLose${formData.phoneno}`;
     const updatedFormData = { ...formData, sexy_word: sexyWord };
+    // console.log(updatedFormData)
     axios
       .post("/api/summitReg/", updatedFormData)
       .then((response) => {

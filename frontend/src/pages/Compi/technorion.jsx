@@ -100,6 +100,8 @@ const Technorion = () => {
                 <div className={styles.card_reg}>
                   <button onClick={handleGoogleSignIn}>Register</button>
                 </div>
+              ) : data.closed ? (
+                <div className={styles.card_reg}>Closed</div>
               ) : data.is_registered ? (
                 <div className={styles.card_reg}>Registered</div>
               ) : (
@@ -178,24 +180,14 @@ const Technorion = () => {
           </div>
           <div>
             <div className={styles.card_regexp}>
-              {/* {data.is_registered ? (
-                        <div className={styles.card_reg}>Registered</div>
-                     ) : user ? (
-                        <div className={styles.card_reg}>
-                           <Link to={`${data.name}/register`}>Register</Link>
-                        </div>
-                     ) : (
-                        <div className={styles.card_reg}>
-                           <button onClick={handleGoogleSignIn}>
-                              Register
-                           </button>
-                        </div>
-                     )} */}
               {user === null ? (
                 <div className={styles.card_reg}>
                   <button onClick={handleGoogleSignIn}>Register</button>
                 </div>
-              ) : data.is_registered ? (
+              ) : data.closed ? (
+                <div className={styles.card_reg}>Closed</div>
+              ) :
+              data.is_registered ? (
                 <div className={styles.card_reg}>Registered</div>
               ) : (
                 <div className={styles.card_reg}>
@@ -268,6 +260,8 @@ const Technorion = () => {
                 <div className={styles.card_reg}>
                   <button onClick={handleGoogleSignIn}>Register</button>
                 </div>
+              ) : data.closed ? (
+                <div className={styles.card_reg}>Closed</div>
               ) : data.is_registered ? (
                 <div className={styles.card_reg}>Registered</div>
               ) : (

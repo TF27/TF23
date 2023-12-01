@@ -68,6 +68,8 @@ const Cyclothon = React.lazy(() =>
   import("./pages/Events/cyclothon/Cyclothon")
 );
 
+const IFT = React.lazy(() => import("./pages/Events/ift/ift"));
+
 const Tracking_ID = "UA-81222017-2";
 ReactGA.initialize(Tracking_ID);
 
@@ -375,6 +377,14 @@ function App() {
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <IC />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/ift"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <IFT />
                 </React.Suspense>
               }
             />

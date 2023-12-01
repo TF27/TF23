@@ -1,25 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { UserAuth } from "../../contexts/AuthContext";
 import styles from "./home.module.css";
 import fin from "./assets/sum1.jpg";
 
 function Summit() {
-  const dataSummit = [
-    {
-      regLink: "fintech/register",
-      exploreLink: "fintech",
-      name: "Fintech Summit",
-      img: fin,
-      desc: "I am the god of the multiverse, infinity ultron is my bitch",
-    },
-    {
-      regLink: "industry/register",
-      exploreLink: "industry",
-      name: "Industry 4.0",
-      img: fin,
-      desc: "I am the god of the multiverse, infinity ultron is my bitch",
-    },
-  ];
+  const [dataSummit, setData] = useState([]);
+  const { googleSignIn, user } = UserAuth();
+
+  const handleGoogleSignIn = async () => {
+    try {
+      await handleGoogleSignIn();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const google_id = user?.email;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("/api/summits", {
+          headers: {
+            "X-Email": google_id,
+          },
+        });
+        setData(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, [google_id]);
+
+  // const dataSummit = [
+  //   {
+  //     regLink: "fintech/register",
+  //     exploreLink: "fintech",
+  //     name: "Fintech Summit",
+  //     img: fin,
+  //     desc: "I am the god of the multiverse, infinity ultron is my bitch",
+  //   },
+  //   {
+  //     regLink: "industry/register",
+  //     exploreLink: "industry",
+  //     name: "Industry 4.0",
+  //     img: fin,
+  //     desc: "I am the god of the multiverse, infinity ultron is my bitch",
+  //   },
+  // ];
 
   const Card = ({ data }) => {
     return (
@@ -38,15 +68,21 @@ function Summit() {
                   }}
                 >
                   <div className={styles.CardND}>
-                    <div className={styles.CardN}>
-                      {data.name}
-                    </div>
+                    <div className={styles.CardN}>{data.name}</div>
                     <div className={styles.CardD}>{data.desc}</div>
                   </div>
                 </div>
                 <div className={styles.RegExp}>
                   <div className={styles.Reg}>
-                    <Link to={data.regLink}>Register</Link>
+                    {user == null ? (
+                      <button onClick={handleGoogleSignIn}>Register</button>
+                    ) : data.is_paid ? (
+                      <a href="">Registered</a>
+                    ) : data.is_registered ? (
+                      <a href="">Pay Now</a>
+                    ) : (
+                      <Link to={data.regLink}>Register</Link>
+                    )}
                   </div>
                   <div className={styles.Exp}>
                     <Link to={data.exploreLink}>Explore</Link>
