@@ -197,7 +197,7 @@ const Crypto = () => {
                   className="col-3 contactNum"
                   onClick={() => (window.location.href = `tel:8287175335`)}
                 >
-                  +91 82871 753358
+                  +91 82871 75335
                 </div>
                 <div
                   className="col-3 contactMail"

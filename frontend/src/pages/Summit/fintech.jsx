@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./fintech.module.css";
 import ImageOne from "./components/ImageOne";
-import bg from "./assets/summit_bg.jpg";
+import bg from "./assets/finbg.jpg";
 import Speakers from "./components/speakers";
 
 const Fintech = () => {
