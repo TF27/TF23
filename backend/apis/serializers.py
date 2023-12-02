@@ -140,3 +140,8 @@ class SummitRegSerializer(serializers.ModelSerializer):
     class Meta:
         model = SummitReg
         fields = '__all__'
+
+class IFTSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = IFT
+        fields = '__all__'

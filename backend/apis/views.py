@@ -790,3 +790,18 @@ def summits(request):
             serializer = SummitsSerializer(
                 summit, many=True, context={'request': request})
             return Response(serializer.data)
+
+@api_view(['GET'])
+def ift(request):
+    if request.method == 'GET':
+        try: 
+            email = get_user_id(request)
+            ift = IFT.objects.all()
+            serializer = IFTSerializer(
+                ift, many=True, context={'user': email})
+            return Response(serializer.data)
+        except:
+            ift = IFT.objects.all()
+            serializer = IFTSerializer(
+                ift, many=True, context={'request': request})
+            return Response(serializer.data)

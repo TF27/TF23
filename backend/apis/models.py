@@ -10,6 +10,7 @@ class Compi(models.Model):
         ('2','Compis'),
         ('3','Ideates'),
         ('4','forth'),
+        ('5', 'dummy'),
     ], default=None)
     tag = models.CharField(max_length=100)
     name = models.CharField(max_length=100, primary_key=True)
@@ -254,3 +255,12 @@ class SummitReg(models.Model):
     paid = models.BooleanField(default=False)
     def __str__(self):
         return self.name
+    
+class IFT(models.Model):
+    ift_id = models.IntegerField(null=True, default=0)
+    category = models.CharField(max_length=100, primary_key=True)
+    img = models.ImageField(upload_to='ift')
+    statement = models.FileField(upload_to='ift/ps', null=True, blank=True)
+    
+    def __str__(self):
+        return self.category

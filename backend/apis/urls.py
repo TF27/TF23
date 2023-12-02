@@ -28,5 +28,6 @@ urlpatterns = [
     path('summits/', views.summits, name='summits'),
     path('summitSpeaker/', views.summitSpeaker, name='summitSpeaker'),
     path('summitReg/', views.summitRegForm, name='summitReg'),
+    path('ift/', views.ift, name='ift'),
 ]
 

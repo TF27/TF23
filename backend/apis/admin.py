@@ -22,3 +22,5 @@ admin.site.register(AccoReg)
 admin.site.register(Summits)
 admin.site.register(SummitSpeaker)
 admin.site.register(SummitReg)
+
+admin.site.register(IFT)
