@@ -209,6 +209,15 @@ class SustainRegWebinar(models.Model):
     college = models.CharField(blank=True, null=True, max_length=255)
     country = models.CharField(blank=True, null=True, max_length=255)
 
+class Summits(models.Model):
+    regLink=models.CharField(max_length=255, null=True, blank=True)
+    exploreLink=models.CharField(max_length=255, null=True, blank=True)
+    name = models.CharField(max_length=255, null=True, blank=True)
+    img = models.ImageField(upload_to='summit', null=True, blank=True)
+    desc = models.TextField(null=True, blank=True)
+    def __str__(self):
+        return self.name
+
 class SummitSpeaker(models.Model):
     ching_id = models.IntegerField(null=True, default=0)
     name = models.CharField(max_length=255, null=True, blank=True)
@@ -220,16 +229,18 @@ class SummitSpeaker(models.Model):
         ('Fintech', 'Fintech'),
     ], max_length=255, null=True, blank=True)
     img = models.ImageField(upload_to='summit_speakers', null=True, blank=True)
+    
     def __str__(self):
         return self.name
 
 class SummitReg(models.Model):
     id = models.AutoField(primary_key=True)
     summit_id = models.CharField(max_length=50, blank=True, null=True)
-    summit = models.CharField(choices=[
-        ('industry', 'industry'),
-        ('fintech', 'fintech'),
-    ], max_length=255, null=True, blank=True)
+    # summit = models.CharField(choices=[
+    #     ('industry', 'industry'),
+    #     ('fintech', 'fintech'),
+    # ], max_length=255, null=True, blank=True)
+    summitisho = models.ForeignKey(Summits, on_delete=models.CASCADE, default=None)
     name = models.CharField(max_length=255, null=True, blank=True)
     email = models.EmailField(max_length=255, null=True, blank=True)
     phoneno = models.CharField(max_length=255, null=True, blank=True)

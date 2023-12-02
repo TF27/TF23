@@ -116,6 +116,21 @@ class SustainRegWebinarSerializer(serializers.ModelSerializer):
         model = SustainRegWebinar
         fields = '__all__'
 
+class SummitsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Summits
+        fields = '__all__'
+
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        user = self.context.get('user')
+        has_paid = False
+        if user:
+            has_paid = SummitReg.objects.filter(email=user, summitisho=instance, paid=True).exists()
+        representation['is_registered'] = SummitReg.objects.filter(email=user, summitisho=instance).exists()
+        return representation
+
+
 class SummitSpeakerSerializer(serializers.ModelSerializer):
     class Meta:
         model = SummitSpeaker
