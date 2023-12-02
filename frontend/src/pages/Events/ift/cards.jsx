@@ -2,13 +2,13 @@ import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { UserAuth } from "../../contexts/AuthContext";
-import styles from "./robowars.module.css";
+import { UserAuth } from "../../../contexts/AuthContext";
+import styles from "./ift.module.css";
 // Images
-import dot from "../Compi/static/card/dot.png";
-import chand from "../Compi/static/card/chand.png";
-import espark from "../Compi/static/card/espark.png";
-import fspark from "../Compi/static/card/fspark.png";
+import dot from "../../Compi/static/card/dot.png";
+import chand from "../../Compi/static/card/chand.png";
+import espark from "../../Compi/static/card/espark.png";
+import fspark from "../../Compi/static/card/fspark.png";
 
 // Here is the code
 const Cards = () => {
@@ -28,7 +28,7 @@ const Cards = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/api/robowars/", {
+        const response = await axios.get("/api/ift/", {
           headers: {
             "X-Email": google_id,
           },
@@ -44,7 +44,7 @@ const Cards = () => {
 
   const card = () => {
     return data.map((data) => (
-      <div key={data.id} className="col-lg-3 col-md-4 col-sm-6 col-12">
+      <div key={data.id} className={`col-sm-6 col-12 ${styles.card}`}>
         <div className={styles.compi_card}>
           <div className={styles.card_rect1}></div>
           <div className={styles.card_rect2}></div>
