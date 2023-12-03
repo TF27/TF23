@@ -43,25 +43,25 @@ import work4 from "./assets/explore/works4.jpg";
 
 const dataWorkshops = [
   {
-    perLink: 'data to aI by google',
+    perLink: 'workshops/data to aI by google',
     image: work1,
     name: "Data to AI by Google",
     posi: "( INR 1699 )",
   },
   {
-    perLink: 'cloud computing by amazon',
+    perLink: 'workshops/cloud computing by amazon',
     image: work2,
     name: "Cloud Computing by Amazon",
     posi: "( INR 1599 )",
   },
   {
-    perLink: 'ethical hacking',
+    perLink: 'workshops/ethical hacking',
     image: work3,
     name: "Ethical Hacking",
     posi: "( INR 1899 )",
   },
   {
-    perLink: 'python',
+    perLink: 'workshops/python',
     image: work4,
     name: "Python",
     posi: "( INR 1490 )",
@@ -69,25 +69,25 @@ const dataWorkshops = [
 ]
 const dataCompetitions = [
   {
-    perLink: 'cozmoclench',
+    perLink: 'competitions/cozmoclench',
     image: comp1,
     name: "Cozmoclench",
     posi: "( INR 1,00,000 )",
   },
   {
-    perLink: 'meshmerize',
+    perLink: 'competitions/meshmerize',
     image: comp2,
     name: "Meshmerize",
     posi: "( INR 1,00,000 )",
   },
   {
-    perLink: 'techfest olympiad',
+    perLink: 'competitions/techfest olympiad',
     image: comp3,
     name: "Techfest Olympiad",
     posi: "( INR 40,000 )",
   },
   {
-    perLink: 'codecode',
+    perLink: 'competitions/codecode',
     image: comp4,
     name: "CoDecode",
     posi: "( INR 40,000 )",
@@ -95,25 +95,25 @@ const dataCompetitions = [
 ];
 const dataLectures = [
   {
-    perLink: 'cozmoclench',
+    perLink: 'competitions/cozmoclench',
     image: lec1,
     name: "Late Dr. APJ Abdul Kalam",
     posi: "(Former President)",
   },
   {
-    perLink: 'meshmerize',
+    perLink: 'competitions/meshmerize',
     image: lec2,
     name: "The 14th Dalai Lama",
     posi: "(Nobel Laureate, Peace)",
   },
   {
-    perLink: 'techfest olympiad',
+    perLink: 'competitions/techfest olympiad',
     image: lec3,
     name: "N R Narayana Murty",
     posi: "( Co-Founder of Infosys)",
   },
   {
-    perLink: 'codecode',
+    perLink: 'competitions/codecode',
     image: lec4,
     name: "Zaheer Khan",
     posi: "(Former Indian Cricketer)",
@@ -121,25 +121,25 @@ const dataLectures = [
 ];
 const dataExhibitions = [
   {
-    perLink: 'cozmoclench',
+    perLink: 'competitions/cozmoclench',
     image: exh1,
     name: "Sophia",
     posi: "(Hong Kong)",
   },
   {
-    perLink: 'meshmerize',
+    perLink: 'competitions/meshmerize',
     image: exh2,
     name: "Gravity Industries",
     posi: "(UK)",
   },
   {
-    perLink: 'techfest olympiad',
+    perLink: 'competitions/techfest olympiad',
     image: exh3,
     name: "Virgin Hyperloop",
     posi: "(USA)",
   },
   {
-    perLink: 'codecode',
+    perLink: 'competitions/codecode',
     image: exh4,
     name: "AirCar",
     posi: "(Turkey)",
@@ -159,7 +159,7 @@ const Explore = ({ Heading, data, link }) => {
           return (
             
             <div className={`col-lg-3 col-sm-6 col-12 ${styles.oooo}`} key={index}>
-              <Link to={`/competitions/${item.perLink}`} >
+              <Link to={`/${item.perLink}`} >
               <div className={styles.card}>
                 <div className={styles.card_rect1}>
                   <div className={styles.card_rect2}>

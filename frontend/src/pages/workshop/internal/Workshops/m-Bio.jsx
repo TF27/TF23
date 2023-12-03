@@ -57,10 +57,10 @@ const Bio = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-          <b>Distinguished Speakers:
+          <b>Distinguished Speakers: </b>
           Prof. Sanjeeva Srivastava - IIT Bombay <br />
           Prof. Graham Ball - Executive Director of MTRC, ARU, United Kingdom <br />
-          Lab visits for all participants on the second day and showcase of the national state of art mass spectrometry facility with a live demonstration. Quiz toppers will get a golden opportunity to work in a project with the Brainpot team of IIT Bombay </b><br />
+          Lab visits for all participants on the second day and showcase of the national state of art mass spectrometry facility with a live demonstration. Quiz toppers will get a golden opportunity to work in a project with the Brainpot team of IIT Bombay<br />
           Date: 26th-27th December <br /> 
           Duration: 12-14 hours <br /> 
           Venue: IIT Bombay <br />
