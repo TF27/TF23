@@ -102,7 +102,7 @@ const Block = () => {
               <div className={styles.info_data}>
                 <div className={styles.info_details}>
                   <div>
-                    <h3>Distinguished speakers: </h3> <br />
+                    <h3>Distinguished speakers: </h3>
                     Prof. Sanjeeva Srivastava - IIT Bombay <br />
                     Prof. Graham Ball - Executive Director of MTRC, ARU, United Kingdom <br />
                     Lab visits for all participants on the second day and showcase of the national state of art mass spectrometry facility with a live demonstration. Quiz toppers will get a golden opportunity to work in a project with the Brainpot team of IIT Bombay <br />
