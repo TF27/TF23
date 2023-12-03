@@ -232,11 +232,7 @@ const Reg = () => {
                     />
                   </div>
                 </div>
-                {compiName === "meshmerize" ||
-                compiName === "cozmoclench" ||
-                compiName === "codecode" ||
-                compiName === "techfest olympiad" ||
-                compiName === "mechanzo league" ? (
+                {compiName === "meshmerize zonals" ? (
                   <div className={styles.inputWrapper}>
                     <label
                       className={`${styles.floatingLabel} ${styles.formLabel}`}
