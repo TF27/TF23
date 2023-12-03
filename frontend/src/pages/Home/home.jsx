@@ -17,6 +17,11 @@ import comp1 from "./assets/explore/Compi1.jpeg";
 import comp2 from "./assets/explore/Compi2.jpeg";
 import comp3 from "./assets/explore/Compi3.jpg";
 import comp4 from "./assets/explore/Compi4.jpg";
+import work1 from "./assets/explore/works1.png";
+import work2 from "./assets/explore/works2.jpg";
+import work3 from "./assets/explore/works3.jpg";
+import work4 from "./assets/explore/works4.jpg";
+
 
 // import MetaTags from 'react-meta-tags';
 
@@ -36,6 +41,32 @@ import comp4 from "./assets/explore/Compi4.jpg";
 //   }
 // }
 
+const dataWorkshops = [
+  {
+    perLink: 'data to aI by google',
+    image: work1,
+    name: "Data to AI by Google",
+    posi: "( INR 1699 )",
+  },
+  {
+    perLink: 'cloud computing by amazon',
+    image: work2,
+    name: "Cloud Computing by Amazon",
+    posi: "( INR 1599 )",
+  },
+  {
+    perLink: 'ethical hacking',
+    image: work3,
+    name: "Ethical Hacking",
+    posi: "( INR 1899 )",
+  },
+  {
+    perLink: 'python',
+    image: work4,
+    name: "Python",
+    posi: "( INR 1490 )",
+  },  
+]
 const dataCompetitions = [
   {
     perLink: 'cozmoclench',
@@ -217,6 +248,11 @@ const Home = () => {
         </div>
       </div>
       
+      <Explore 
+        Heading="Workshops" 
+        data={dataWorkshops} 
+        link="workshops" 
+      />
       <Explore 
         Heading="Competitions" 
         data={dataCompetitions} 
