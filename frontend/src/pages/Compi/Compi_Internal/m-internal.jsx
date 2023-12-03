@@ -88,7 +88,11 @@ const MInternal = () => {
     navigate("/workshops/quadcopter"); 
   } else if (compiName === "webdev") {
     navigate("/workshops/web%20development"); 
-  } else if (compiName === "appdev") {
+  }  else if (compiName === "bioanalytics") {
+    navigate("/workshops/bio%20analytics"); 
+  } else if (compiName === "marketing") {
+    navigate("/workshops/digital%20marketing"); 
+  }  else if (compiName === "appdev") {
     navigate("/workshops/android%20development"); 
   } else if (compiName === "crypto") {
     navigate("/workshops/crypto%20trading%20by%20wazirX"); 

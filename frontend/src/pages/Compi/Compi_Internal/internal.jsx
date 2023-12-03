@@ -90,6 +90,8 @@ function Internal() {
       navigate("/workshops/6th%20sense%20robotics");
     } else if (compiName === "quadcopter") {
       navigate("/workshops/quadcopter");
+    }  else if (compiName === "bioanalytics") {
+      navigate("/workshops/bio%20analytics");
     } else if (compiName === "webdev") {
       navigate("/workshops/web%20development");
     } else if (compiName === "appdev") {
@@ -100,6 +102,8 @@ function Internal() {
       navigate("/workshops/web%203.0");
     } else if (compiName === "csec") {
       navigate("/workshops/cybersecurity");
+    }  else if (compiName === "marketing") {
+      navigate("/workshops/digital%20marketing");
     } else if (compiName === "analytics") {
       navigate("/workshops/data%20analytics");
     } else if (compiName === "ev") {

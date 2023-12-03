@@ -31,6 +31,7 @@ import W3b from "./Workshops/m-W3b";
 import Digitalm from "./Workshops/m-Digitalm";
 import Ds from "./Workshops/m-Ds";
 import Quad from "./Workshops/m-Quad";
+import Bio from "./Workshops/m-Bio";
 
 const MInternal = () => {
   const { cardName } = useParams();
@@ -194,6 +195,7 @@ const MInternal = () => {
             {cardName === "digital marketing" && <Digitalm/>}
             {cardName === "data science" && <Ds/>}
             {cardName === "quadcopter" && <Quad/>}
+            {cardName === "bio analytics" && <Bio/>}
 
           </div>
         </div>
