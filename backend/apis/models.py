@@ -264,3 +264,19 @@ class IFT(models.Model):
     
     def __str__(self):
         return self.category
+    
+class IFTReg(models.Model):
+    tf_id = models.CharField(max_length=50, blank=True, null=True)
+    category = models.ForeignKey(IFT, on_delete=models.CASCADE)
+    driver_name = models.CharField(max_length=50, blank=True, null=True)
+    driver_email = models.EmailField(max_length=254, blank=True, null=True)
+    driver_phone = models.CharField(max_length=254, blank=True, null=True)
+    pit_name = models.CharField(max_length=50, blank=True, null=True)
+    pit_email = models.EmailField(max_length=254, blank=True, null=True)
+    pit_phone = models.CharField(max_length=254, blank=True, null=True)
+    pincode = models.IntegerField(blank=True, null=True)
+    address = models.TextField(blank=True, null=True)
+    country = models.CharField(max_length=255, null=True, blank=True)
+
+    def __str__(self):
+        return self.category.category + " " + self.driver_name
