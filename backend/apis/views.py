@@ -200,8 +200,6 @@ def compi_reg_form(request):
             data=request.data, many=False)
         # print(compi_reg_serializer)
         # print(compi_reg_serializer.is_valid())
-        if request.get('email') is None:
-            return JsonResponse({'error': 'Failed'}, status=400)
         if compi_reg_serializer.is_valid():
             # print('hello')
             email = compi_reg_serializer.validated_data.get('email')
@@ -256,8 +254,6 @@ def team_reg_check(request):
 @csrf_exempt
 def create_team(request):
     if request.method == 'POST':
-        if request.get('email') is None:
-            return JsonResponse({'error': 'Failed'}, status=400)
         compi_team_serializer = Compi_TeamSerializer(
             data=request.data, many=False)
         if compi_team_serializer.is_valid():
@@ -525,8 +521,6 @@ def workshop_card(request):
 def workshop_reg_form(request):
     if request.method == 'POST':
         sexy_word = request.data.get('sexy_word')
-        if request.get('email') is None:
-            return JsonResponse({'error': 'Failed'}, status=400)
         workshop_reg_serializer = WorkshopRegSerializer(
             data=request.data, many=False)
         # print(workshop_reg_serializer)
