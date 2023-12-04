@@ -5,6 +5,8 @@ from rest_framework import permissions
 from rest_framework.generics import CreateAPIView
 from apis.serializers import *
 from apis.models import *
+from django.db.models import Func, F, Value, CharField, IntegerField
+from django.db.models.functions import Cast
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 from django.http.response import JsonResponse
@@ -211,17 +213,20 @@ def compi_reg_form(request):
                 return JsonResponse({'error': 'Failed'}, status=400)
             if compi_reg.objects.filter(email=email, compi=compi).exists():
                 return JsonResponse({'error': 'A registration with this email for this compi already exists.'}, status=400)
-            last_reg = compi_reg.objects.order_by('-tf_id').first()
-            print('hi i am here')
+            if compi_reg.objects.filter(tf_id='TF-2310000').exists():
+                pass
+            last_reg = compi_reg.objects.order_by('-id').first()
             next_tf_id = '0269'
             if last_reg:
                 last_tf_id = last_reg.tf_id[-4:]
+                print(last_tf_id)
                 next_tf_id = str(int(last_tf_id) + 1).zfill(4)
+                print(next_tf_id)
             tf_id = f"TF-23{next_tf_id}"
             compi_reg_serializer.save(tf_id=tf_id)
             # compi_reg_serializer.save()
             subject = f"Techfest, IIT Bombay | Registration successful for {compi_reg_serializer.validated_data.get('compi')}"
-            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {compi_reg_serializer.validated_data.get('compi')} Workshop with {compi_reg_serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. Register for more Workshops at techfest.org/workshops \n Thanks and Regards, \n Team Techfest 2023-24"
+            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {compi_reg_serializer.validated_data.get('compi')} with {compi_reg_serializer.validated_data.get('email')} as your registered email address.\n Thanks and Regards, \n Team Techfest 2023-24"
             from_email = 'noreply@techfest.org'
             recipient_list = [compi_reg_serializer.validated_data.get('email')]
             try:
