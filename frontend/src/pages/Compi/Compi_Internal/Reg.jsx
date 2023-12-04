@@ -53,7 +53,7 @@ const Reg = () => {
     axios
       .post("/api/compi_reg/", updatedFormData)
       .then((response) => {
-        console.log("Added Successfully!!");
+        alert("Added Successfully!!");
         navigate(`/competitions/${compiName}`);
       })
       .catch((error) => {
