@@ -810,3 +810,38 @@ def ift(request):
             serializer = IFTSerializer(
                 ift, many=True, context={'request': request})
             return Response(serializer.data)
+        
+@api_view(['POST'])
+def iftReg(request):
+    if request.method == 'POST':
+        sexy_word = request.data.get('sexy_word')
+        serializer = IFTRegSerializer(
+            data=request.data, many=False)
+        print(serializer.is_valid())
+        if serializer.is_valid():
+            name = serializer.validated_data.get('driver_name')
+            email = serializer.validated_data.get('driver_email')
+            phone = serializer.validated_data.get('driver_phone')
+            category = serializer.validated_data.get('category')
+            sexy_word1 = f"{name or ''}MereMehboob{email or ''}orKissiOrKe{phone or ''}"
+            if sexy_word != sexy_word1:
+                return JsonResponse({'error': 'Failed'}, status=400)
+            if IFTReg.objects.filter(driver_email=email, category=category).exists() or IFTReg.objects.filter(pit_email=email, category=category).exists():
+                return JsonResponse({'error': 'A registration with this email for this category already exists.'}, status=400)
+            last_reg = IFTReg.objects.order_by('-id').first()
+            next_tf_id = '3369'
+            if last_reg:
+                last_tf_id = last_reg.id
+                next_tf_id = str(int(last_tf_id) + 1).zfill(4)
+            id = f"TF-IFT23{next_tf_id}"
+            serializer.save(tf_id=id)
+            subject = "IFT Registration"
+            message = f"Greetings from Techfest, IIT Bombay! \nYou have successfully registered for the {category} with email {email} and name {name}, and {serializer.validated_data.get('pit_email')} and name {serializer.validated_data.get('pit_name')}\nThanks and Regards,\nTeam Techfest 2023-2"
+            from_email = 'noreply@techfest.org'
+            try:
+                send_mail(subject, message, from_email, [email, serializer.validated_data.get('pit_email')])
+                return JsonResponse(serializer.data)
+            except:
+                return JsonResponse(serializer.data)
+        res = {'success': False}
+        return JsonResponse(res)

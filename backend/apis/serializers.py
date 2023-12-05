@@ -145,3 +145,17 @@ class IFTSerializer(serializers.ModelSerializer):
     class Meta:
         model = IFT
         fields = '__all__'
+
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        user = self.context.get('user')
+        representation['is_registered'] = False
+        if IFTReg.objects.filter(driver_email=user, category=instance).exists() or IFTReg.objects.filter(pit_email=user, category=instance).exists():
+            representation['is_registered'] = True
+        # representation['is_registered'] = IFTReg.objects.filter(driver_email=user, category=instance).exists()
+        return representation
+
+class IFTRegSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = IFTReg
+        fields = '__all__'

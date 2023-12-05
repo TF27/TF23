@@ -29,5 +29,6 @@ urlpatterns = [
     path('summitSpeaker/', views.summitSpeaker, name='summitSpeaker'),
     path('summitReg/', views.summitRegForm, name='summitReg'),
     path('ift/', views.ift, name='ift'),
+    path('iftReg/', views.iftReg, name='iftReg'),
 ]
 

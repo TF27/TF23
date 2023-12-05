@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import Header from "./components/Navbar/Header";
 import { AuthContextProvider } from "./contexts/AuthContext";
-import ReactGA from 'react-ga';
+import ReactGA from "react-ga";
 import Protected from "./contexts/Protected";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/home";
@@ -69,6 +69,7 @@ const Cyclothon = React.lazy(() =>
 );
 
 const IFT = React.lazy(() => import("./pages/Events/ift/ift"));
+const IFTReg = React.lazy(() => import("./pages/Events/ift/reg"));
 
 const Tracking_ID = "UA-81222017-2";
 ReactGA.initialize(Tracking_ID);
@@ -178,7 +179,7 @@ function App() {
               path="/sustainregwebinar"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
-                  <Sustainregwebinar/>
+                  <Sustainregwebinar />
                 </React.Suspense>
               }
             />
@@ -236,7 +237,7 @@ function App() {
               path="/summits/fintech"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
-                  <Fintech/>
+                  <Fintech />
                 </React.Suspense>
               }
             />
@@ -245,12 +246,12 @@ function App() {
               path="/summits/industry"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
-                  <Industry/>
+                  <Industry />
                 </React.Suspense>
               }
             />
 
-          <Route
+            <Route
               path="summits/:cardName/register"
               element={
                 <Protected>
@@ -386,6 +387,14 @@ function App() {
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <IFT />
                 </React.Suspense>
+              }
+            />
+            <Route
+              path="/ift/:cardName/register"
+              element={
+                <Protected>
+                  <IFTReg />
+                </Protected>
               }
             />
           </Routes>

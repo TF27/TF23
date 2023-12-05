@@ -24,3 +24,4 @@ admin.site.register(SummitSpeaker)
 admin.site.register(SummitReg)
 
 admin.site.register(IFT)
+admin.site.register(IFTReg)
