@@ -3,6 +3,10 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.views import serve
+from django.http import HttpResponseRedirect
+
+def custom_404(request, exception):
+    return HttpResponseRedirect('https://techfest.org')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -18,3 +22,5 @@ urlpatterns += [
     path("apo/<path:path>", serve),
     path("media/<path:path>", serve),
 ]
+
+handler404 = custom_404
