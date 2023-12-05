@@ -35,6 +35,7 @@ import Here from "./Competitions/m-Here";
 import Idrl from "./Competitions/m-Idrl";
 import Mouse from "./Competitions/m-Mouse";
 import Edel from "./Competitions/m-Edel";
+import Datamatics from "./Competitions/m-Datamatics";
 
 const MInternal = () => {
   const { compiName } = useParams();
@@ -66,6 +67,8 @@ const MInternal = () => {
     navigate("/competitions/task%20whiz");
   } else if (compiName === "here") {
     navigate("/competitions/here%20hackathon");
+  } else if (compiName === "datamatics") {
+    navigate("/competitions/datamatics%20hackathon");
   } else if (compiName === "ai") {
     navigate("/workshops/artificial%20intelligence");
   } else if (compiName === "ml") {
@@ -300,6 +303,7 @@ const MInternal = () => {
         {compiName === "int'l drone racing" && <Idrl/>}
         {compiName === "micromouse challenge" && <Mouse/>}
         {compiName === "cashflow modelling" && <Edel/>}
+        {compiName === "datamatics hackathon" && <Datamatics />}
       </div>
     ));
   };
