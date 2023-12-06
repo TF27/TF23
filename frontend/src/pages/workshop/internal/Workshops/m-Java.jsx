@@ -139,20 +139,20 @@ const Java = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Krishna Rathi
+            Jainam Shah
             <div
               className="contactNum"
-              onClick={() => (window.location.href = `tel:7014036467`)}
+              onClick={() => (window.location.href = `tel:8369504031`)}
             >
-              +91 70140 36467
+              +91 83695 04031
             </div>
             <div
               className="contactMail"
               onClick={() =>
-                (window.location.href = `mailto:krishna@techfest.org`)
+                (window.location.href = `mailto:jainam@techfest.org`)
               }
             >
-              krishna@techfest.org
+              jainam@techfest.org
             </div>
           </div>
         </div>

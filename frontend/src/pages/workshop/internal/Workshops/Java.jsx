@@ -191,21 +191,21 @@ const Java = () => {
           >
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-                Krishna Rathi
+                Jainam Shah
                 <br />
                 <div
                   className="col-3 contactNum"
-                  onClick={() => (window.location.href = `tel:7014036467`)}
+                  onClick={() => (window.location.href = `tel:8369504031`)}
                 >
-                  +91 70140 36467
+                  +91 83695 04031
                 </div>
                 <div
                   className="col-3 contactMail"
                   onClick={() =>
-                    (window.location.href = `krishna@techfest.org`)
+                    (window.location.href = `jainam@techfest.org`)
                   }
                 >
-                  krishna@techfest.org
+                  jainam@techfest.org
                 </div>
               </div>
             </div>
