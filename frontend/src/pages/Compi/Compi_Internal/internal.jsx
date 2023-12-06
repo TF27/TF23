@@ -118,6 +118,10 @@ function Internal() {
       navigate("/workshops/gesture%20robotics");
     } else if (compiName === "arduino") {
       navigate("/workshops/arduino");
+    } else if (compiName === "java") {
+      navigate("/workshops/java");
+    } else if (compiName === "design") {
+      navigate("/workshops/uI%20uX%20design");
     } else if (compiName === "python") {
       navigate("/workshops/python");
     } else if (compiName === "blockchain") {
