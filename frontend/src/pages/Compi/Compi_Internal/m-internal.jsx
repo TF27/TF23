@@ -101,6 +101,10 @@ const MInternal = () => {
     navigate("/workshops/crypto%20trading%20by%20wazirX"); 
   } else if (compiName === "web3") {
     navigate("/workshops/web%203.0"); 
+  } else if (compiName === "java") {
+    navigate("/workshops/java");
+  } else if (compiName === "design") {
+    navigate("/workshops/uI%20uX%20design");
   } else if (compiName === "csec") {
     navigate("/workshops/cybersecurity"); 
   } else if (compiName === "analytics") {
