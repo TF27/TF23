@@ -30,6 +30,8 @@ import Digitalm from "./Workshops/Digitalm";
 import Ds from "./Workshops/Ds";
 import Quad from "./Workshops/Quad";
 import Bio from "./Workshops/Bio";
+import Uiux from "./Workshops/Uiux";
+import Java from "./Workshops/Java";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -220,6 +222,8 @@ const Internal = () => {
             {cardName === "data science" && <Ds/>}
             {cardName === "quadcopter" && <Quad/>}
             {cardName === "bio analytics" && <Bio/>}
+            {cardName === "uI uX design" && <Uiux/>}
+            {cardName === "java" && <Java/>}
           </div>
         </div>
       </div>

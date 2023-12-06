@@ -168,7 +168,7 @@ const Here = () => {
                 </li>
                 <li>
                   Final Round at IIT Bombay Campus: <br />
-                  28th December 2023
+                  27th & 28th December 2023
                 </li>
               </ul>
               </div>

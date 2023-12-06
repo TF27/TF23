@@ -34,6 +34,8 @@ import Here from "./Competitions/Here";
 import Idrl from "./Competitions/Idrl";
 import Mouse from "./Competitions/Mouse";
 import Edel from "./Competitions/Edel";
+import Datamatics from "./Competitions/Datamatics";
+
 
 function Internal() {
   const { compiName } = useParams();
@@ -70,6 +72,8 @@ function Internal() {
       navigate("/competitions/task%20whiz");
     } else if (compiName === "here") {
       navigate("/competitions/here%20hackathon");
+    } else if (compiName === "datamatics") {
+      navigate("/competitions/datamatics%20hackathon");
     } else if (compiName === "ai") {
       navigate("/workshops/artificial%20intelligence");
     } else if (compiName === "ml") {
@@ -114,6 +118,10 @@ function Internal() {
       navigate("/workshops/gesture%20robotics");
     } else if (compiName === "arduino") {
       navigate("/workshops/arduino");
+    } else if (compiName === "java") {
+      navigate("/workshops/java");
+    } else if (compiName === "design") {
+      navigate("/workshops/uI%20uX%20design");
     } else if (compiName === "python") {
       navigate("/workshops/python");
     } else if (compiName === "blockchain") {
@@ -232,6 +240,7 @@ function Internal() {
             {compiName === "int'l drone racing" && <Idrl />}
             {compiName === "micromouse challenge" && <Mouse />}
             {compiName === "cashflow modelling" && <Edel />}
+            {compiName === "datamatics hackathon" && <Datamatics />}
             <div className={styles.team_reg}>
               {user === null ? (
                 <div>
