@@ -143,13 +143,14 @@ const Internal = () => {
               <div className={styles.statement}>
                 <div className={styles.stat_rect1}></div>
                 <div className={styles.stat_rect2}>
-                  <a
+                  {/* <a
                     href='https://forms.gle/8KvyXtYuCUtSAWpa8'
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Accommodation
-                  </a>
+                  </a> */}
+                  <Link to='/accommodation'>Accommodation</Link>
                 </div>
               </div>
             )}
