@@ -845,3 +845,11 @@ def iftReg(request):
                 return JsonResponse(serializer.data)
         res = {'success': False}
         return JsonResponse(res)
+    
+@api_view(['GET'])
+def faces(request):
+    if request.method == 'GET':
+        faces = Faces.objects.all()
+        serializer = FacesSerializer(faces, many=True)
+        return Response(serializer.data)
+    

@@ -280,3 +280,16 @@ class IFTReg(models.Model):
 
     def __str__(self):
         return self.category.category + " " + self.driver_name
+
+class Faces(models.Model):
+    name = models.CharField(max_length=255, null=True, blank=True)
+    img = models.ImageField(upload_to='faces', null=True, blank=True)
+    category = models.CharField(choices=[
+        ('Exhi', 'Exhi'),
+        ('Lect', 'Lect'),
+    ], max_length=255, null=True, blank=True)
+    designation = models.CharField(max_length=255, null=True, blank=True)
+    company = models.CharField(max_length=255, null=True, blank=True)
+    desc = models.TextField(null=True, blank=True)
+    def __str__(self):
+        return self.name
