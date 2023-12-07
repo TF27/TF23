@@ -6,7 +6,8 @@ const Protected = ({children}) => {
 
     const {user} = UserAuth();
     if( !user) {
-        return <Navigate to='/' />
+        // console.log('I am the protected lord')
+        return <Navigate to='/workshops' />
     }
     return children;
 }

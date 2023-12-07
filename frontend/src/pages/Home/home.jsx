@@ -214,6 +214,11 @@ const Home = () => {
             </a>
           </div>
         </div>
+        <Explore 
+        Heading="Workshops" 
+        data={dataWorkshops} 
+        link="workshops" 
+      />
         <div className={`${styles.titSpn} ${styles.homeTheme}`}>
           <div className={styles.titSpn_rect1}>
             <div className={styles.titSpn_rect2}>Word From Team</div>
@@ -248,11 +253,7 @@ const Home = () => {
         </div>
       </div>
       
-      <Explore 
-        Heading="Workshops" 
-        data={dataWorkshops} 
-        link="workshops" 
-      />
+      
       <Explore 
         Heading="Competitions" 
         data={dataCompetitions} 

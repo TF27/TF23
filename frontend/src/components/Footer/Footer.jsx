@@ -78,6 +78,8 @@ const Footer = () => {
         </div>
         <div className='anounceIt'>
           <Link to='/workshops'>Workshops are Live Now!</Link>
+          <br/>
+          <Link to='/accommodation'>Stay at IIT Bombay</Link>
         </div>
         <div className="socialMedia">
           <li>

@@ -64,6 +64,10 @@ const WorkReg = () => {
   // }
   // setInterval(checkInputValues, 100);
 
+  let paynow = 'https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer'
+
+
+
   const handleSubmit = (event) => {
     setRegsitering(true);
     event.preventDefault();
@@ -74,6 +78,7 @@ const WorkReg = () => {
       .post("/api/workshop_reg/", updatedFormData)
       .then((response) => {
         alert("Registered succesfully!!");
+        // window.open(paynow, '_blank');
         navigate(`/workshops/${cardName}`);
       })
       .catch((error) => {
