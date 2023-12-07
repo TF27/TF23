@@ -526,13 +526,15 @@
     display: flex;
     z-index: 5;
     justify-content: center;
-    margin-top: 108px;
+    margin-top: 88px;
+    flex-direction: column;
   }
   .headUL a{
     text-decoration: none;
     color: white;
-    animation: ohyeah 3s infinite;
+    animation: ohyeah 2s infinite;
     font-size: 24px;
+    font-weight: bold;
   }
 }
 
