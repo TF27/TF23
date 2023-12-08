@@ -518,6 +518,15 @@
   background-image: url('./images/homebg.jpg')
 }
 
+.oDesc{
+  font-size: 24px;
+  font-family: 'Forum', sans-serif;
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: -35px;
+}
+
 @media (max-width: 570px){
   .home{
     background-image: url('./images/homebgm.jpg');

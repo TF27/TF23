@@ -22,7 +22,6 @@ import work2 from "./assets/explore/works2.jpg";
 import work3 from "./assets/explore/works3.jpg";
 import work4 from "./assets/explore/works4.jpg";
 
-
 // import MetaTags from 'react-meta-tags';
 
 // class Component1 extends React.Component {
@@ -43,51 +42,51 @@ import work4 from "./assets/explore/works4.jpg";
 
 const dataWorkshops = [
   {
-    perLink: 'workshops/data to aI by google',
+    perLink: "workshops/data to aI by google",
     image: work1,
     name: "Data to AI by Google",
     posi: "( INR 1699 )",
   },
   {
-    perLink: 'workshops/cloud computing by amazon',
+    perLink: "workshops/cloud computing by amazon",
     image: work2,
     name: "Cloud Computing by Amazon",
     posi: "( INR 1599 )",
   },
   {
-    perLink: 'workshops/ethical hacking',
+    perLink: "workshops/ethical hacking",
     image: work3,
     name: "Ethical Hacking",
     posi: "( INR 1899 )",
   },
   {
-    perLink: 'workshops/python',
+    perLink: "workshops/python",
     image: work4,
     name: "Python",
     posi: "( INR 1490 )",
-  },  
-]
+  },
+];
 const dataCompetitions = [
   {
-    perLink: 'competitions/cozmoclench',
+    perLink: "competitions/cozmoclench",
     image: comp1,
     name: "Cozmoclench",
     posi: "( INR 1,00,000 )",
   },
   {
-    perLink: 'competitions/meshmerize',
+    perLink: "competitions/meshmerize",
     image: comp2,
     name: "Meshmerize",
     posi: "( INR 1,00,000 )",
   },
   {
-    perLink: 'competitions/techfest olympiad',
+    perLink: "competitions/techfest olympiad",
     image: comp3,
     name: "Techfest Olympiad",
     posi: "( INR 40,000 )",
   },
   {
-    perLink: 'competitions/codecode',
+    perLink: "competitions/codecode",
     image: comp4,
     name: "CoDecode",
     posi: "( INR 40,000 )",
@@ -95,25 +94,25 @@ const dataCompetitions = [
 ];
 const dataLectures = [
   {
-    perLink: 'competitions/cozmoclench',
+    perLink: "competitions/cozmoclench",
     image: lec1,
     name: "Late Dr. APJ Abdul Kalam",
     posi: "(Former President)",
   },
   {
-    perLink: 'competitions/meshmerize',
+    perLink: "competitions/meshmerize",
     image: lec2,
     name: "The 14th Dalai Lama",
     posi: "(Nobel Laureate, Peace)",
   },
   {
-    perLink: 'competitions/techfest olympiad',
+    perLink: "competitions/techfest olympiad",
     image: lec3,
     name: "N R Narayana Murty",
     posi: "( Co-Founder of Infosys)",
   },
   {
-    perLink: 'competitions/codecode',
+    perLink: "competitions/codecode",
     image: lec4,
     name: "Zaheer Khan",
     posi: "(Former Indian Cricketer)",
@@ -121,25 +120,25 @@ const dataLectures = [
 ];
 const dataExhibitions = [
   {
-    perLink: 'competitions/cozmoclench',
+    perLink: "competitions/cozmoclench",
     image: exh1,
     name: "Sophia",
     posi: "(Hong Kong)",
   },
   {
-    perLink: 'competitions/meshmerize',
+    perLink: "competitions/meshmerize",
     image: exh2,
     name: "Gravity Industries",
     posi: "(UK)",
   },
   {
-    perLink: 'competitions/techfest olympiad',
+    perLink: "competitions/techfest olympiad",
     image: exh3,
     name: "Virgin Hyperloop",
     posi: "(USA)",
   },
   {
-    perLink: 'competitions/codecode',
+    perLink: "competitions/codecode",
     image: exh4,
     name: "AirCar",
     posi: "(Turkey)",
@@ -154,20 +153,27 @@ const Explore = ({ Heading, data, link }) => {
           <div className={styles.titSpn_rect2}>{Heading}</div>
         </div>
       </div>
+      {Heading == "Workshops" ? <div className={styles.oDesc}>Book a Workshop and get <b>FREE access to ALL events</b> at Techfest like EDM Night, International Robowars, Guest Lectures, International Exhibitions, Summits, VR and Gaming Setups. <b>Limited seats available!</b> </div> : <></>}
       <div className={`row ${styles.cards}`}>
         {data.map((item, index) => {
           return (
-            
-            <div className={`col-lg-3 col-sm-6 col-12 ${styles.oooo}`} key={index}>
-              <Link to={`/${item.perLink}`} >
-              <div className={styles.card}>
-                <div className={styles.card_rect1}>
-                  <div className={styles.card_rect2}>
-                    <img src={item.image} alt={item.name}loading="lazy" />
-                    <div className={styles.cardText}>{item.name}<br/>{item.posi}</div>
+            <div
+              className={`col-lg-3 col-sm-6 col-12 ${styles.oooo}`}
+              key={index}
+            >
+              <Link to={`/${item.perLink}`}>
+                <div className={styles.card}>
+                  <div className={styles.card_rect1}>
+                    <div className={styles.card_rect2}>
+                      <img src={item.image} alt={item.name} loading="lazy" />
+                      <div className={styles.cardText}>
+                        {item.name}
+                        <br />
+                        {item.posi}
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
               </Link>
             </div>
           );
@@ -196,29 +202,28 @@ const Home = () => {
     backgroundAttachment: "fixed",
     width: "100vw",
     overflowX: "hidden",
-
   };
 
   return (
     <div className={styles.home} style={style}>
       <HomeParallax />
       <div style={{ maxWidth: "90%", margin: "auto" }}>
+        <Explore Heading="Workshops" data={dataWorkshops} link="workshops" />
         <div className={styles.titSpn}>
           <div className={styles.titSpn_rect1}>
             <div className={styles.titSpn_rect2}>Title Sponsor</div>
           </div>
           <div className={styles.spnImg}>
             <a href="https://www.marshmclennan.com/">
-              <img src={spimg} alt="Marsh McLennan Global Services India Pvt Ltd" className={styles.mmcImg} />
+              <img
+                src={spimg}
+                alt="Marsh McLennan Global Services India Pvt Ltd"
+                className={styles.mmcImg}
+              />
               {/* <p>Marsh McLennan Global Services India Pvt Ltd</p> */}
             </a>
           </div>
         </div>
-        <Explore 
-        Heading="Workshops" 
-        data={dataWorkshops} 
-        link="workshops" 
-      />
         <div className={`${styles.titSpn} ${styles.homeTheme}`}>
           <div className={styles.titSpn_rect1}>
             <div className={styles.titSpn_rect2}>Word From Team</div>
@@ -227,13 +232,25 @@ const Home = () => {
         <div className={`row ${styles.themeData}`}>
           <div className="col-12 col-lg-4">
             <div className={styles.themeImg}>
-            <iframe src="https://www.youtube.com/embed/0_FBwJi8VBo?si=yaNM1nKy7nydA1XU" title="YouTube video player" frameborder="0" loading="lazy"></iframe>
+              <iframe
+                src="https://www.youtube.com/embed/0_FBwJi8VBo?si=yaNM1nKy7nydA1XU"
+                title="YouTube video player"
+                frameborder="0"
+                loading="lazy"
+              ></iframe>
             </div>
           </div>
           <div className={`col-12 col-lg-8 ${styles.themeText}`}>
-          Welcome to the Official Website of the 27th Edition of Asia's Largest Science and Technology Festival, Techfest 2023-2024! We at Techfest are students of IIT Bombay who have been engaged over the past few months to structure Techfest's 27th edition. With the plethora of events planned this year, we are sure you will have an experience of a lifetime - something that you will never forget, a journey that will lift your spirits. And the starting point is this website! Here, you will find complete information about Techfest 2023-24, so make sure to explore all the pathways available to you. Are you ready to unlock The Mystical Realm?
-
-
+            Welcome to the Official Website of the 27th Edition of Asia's
+            Largest Science and Technology Festival, Techfest 2023-2024! We at
+            Techfest are students of IIT Bombay who have been engaged over the
+            past few months to structure Techfest's 27th edition. With the
+            plethora of events planned this year, we are sure you will have an
+            experience of a lifetime - something that you will never forget, a
+            journey that will lift your spirits. And the starting point is this
+            website! Here, you will find complete information about Techfest
+            2023-24, so make sure to explore all the pathways available to you.
+            Are you ready to unlock The Mystical Realm?
           </div>
         </div>
         <div className={`${styles.titSpn} ${styles.homeTheme}`}>
@@ -244,26 +261,32 @@ const Home = () => {
         <div className={`row ${styles.themeData}`}>
           <div className="col-12 col-lg-4">
             <div className={styles.themeImg}>
-            <iframe src="https://www.youtube.com/embed/_PJYQDTJQ0E?si=WXO2IsZ9l8fYtcON" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+              <iframe
+                src="https://www.youtube.com/embed/_PJYQDTJQ0E?si=WXO2IsZ9l8fYtcON"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              ></iframe>
             </div>
           </div>
           <div className={`col-12 col-lg-8 ${styles.themeText}`}>
-          Teleport to the 27th Edition of Techfest and celebrate the interplay between Magic, Science & Technology. Step into the realm of wonders where the frontiers of imagination are translated into real-world possibilities. From ancient mysticism to cutting-edge innovations, explore the endless spectrum of creativity and ingenuity. Get ready for a Techno-Mystical extravaganza and embark on a miraculous journey of discovery into the unknown!
+            Teleport to the 27th Edition of Techfest and celebrate the interplay
+            between Magic, Science & Technology. Step into the realm of wonders
+            where the frontiers of imagination are translated into real-world
+            possibilities. From ancient mysticism to cutting-edge innovations,
+            explore the endless spectrum of creativity and ingenuity. Get ready
+            for a Techno-Mystical extravaganza and embark on a miraculous
+            journey of discovery into the unknown!
           </div>
         </div>
       </div>
-      
-      
-      <Explore 
-        Heading="Competitions" 
-        data={dataCompetitions} 
-        link="competitions" 
+
+      <Explore
+        Heading="Competitions"
+        data={dataCompetitions}
+        link="competitions"
       />
-      <Explore 
-        Heading="Past Lectures" 
-        data={dataLectures} 
-        link="lectures" 
-      />
+      <Explore Heading="Past Lectures" data={dataLectures} link="lectures" />
       <Explore
         Heading="Past Exhibitions"
         data={dataExhibitions}
