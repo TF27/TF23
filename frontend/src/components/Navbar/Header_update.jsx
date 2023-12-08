@@ -117,7 +117,9 @@ const Header_update = () => {
                 <li>
                   <a href="/twmun">MUN</a>
                 </li>
-
+                <li>
+                  <Link to="/ift">Full Throttle</Link>
+                </li>
                 <li>
                   <Link to="/cyclothon">Cyclothon</Link>
                 </li>
@@ -230,6 +232,9 @@ const Header_update = () => {
             </li> */}
             <li onClick={showMenu}>
               <Link to="/robowars">Robowars</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/ift">Int'l Full Throttle</Link>
             </li>
             <li onClick={showMenu}>
               <Link to="/sustain">Sustain</Link>

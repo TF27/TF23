@@ -119,6 +119,14 @@ const MInternal = () => {
                 </div>
               )}
             </div>
+            <div className={styles.statement}>
+                <div className={styles.stat_rect1}></div>
+                <div className={styles.stat_rect2}>
+                  <Link to='/accomodation'>
+                      Stay @IITB
+                  </Link>
+                </div>
+              </div>
             {data.statement && (
               <div className={styles.statement}>
                 <div className={styles.stat_rect1}></div>
@@ -139,6 +147,7 @@ const MInternal = () => {
                 <h4 style={{ display: "inline" }}>Pay?</h4>
               </a>
             </p> */}
+
           </div>
           <div className={`col-12 col-lg-8 ${styles.rightdata}`}>
             <div className={styles.sponsor}>

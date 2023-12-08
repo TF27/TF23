@@ -140,20 +140,20 @@ const Ui = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Yatharth Manchanda
+            Atharv Apshinge
             <div
               className="contactNum"
-              onClick={() => (window.location.href = `tel:8307139636`)}
+              onClick={() => (window.location.href = `tel:9324589839`)}
             >
-              +91 83071 39636
+              +91 93245 89830
             </div>
             <div
               className="contactMail"
               onClick={() =>
-                (window.location.href = `mailto:yatharth@techfest.org`)
+                (window.location.href = `mailto:atharv@techfest.org`)
               }
             >
-              yatharth@techfest.org
+              atharv@techfest.org
             </div>
           </div>
         </div>

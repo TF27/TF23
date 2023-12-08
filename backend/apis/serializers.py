@@ -159,3 +159,8 @@ class IFTRegSerializer(serializers.ModelSerializer):
     class Meta:
         model = IFTReg
         fields = '__all__'
+
+class FacesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Faces
+        fields = '__all__'

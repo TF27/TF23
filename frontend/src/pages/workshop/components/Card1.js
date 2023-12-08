@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./cardview1.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../../../contexts/AuthContext";
 
 const Card = ({ card }) => {
+  const navigate = useNavigate();
+  const { googleSignIn, user } = UserAuth();
+
   const handleGoogleSignIn = async () => {
     try {
       await googleSignIn();
+      // afterSignInActions();
+      // setTimeout(() => {
+      //   navigate(`${card.name}/register`)
+      // }, 2000)
     } catch (error) {
       console.log(error);
     }
   };
 
-  const { googleSignIn, user } = UserAuth();
+  // useEffect(() => {
+  //   if (user){
+  //     console.log('hola hola')
+  //     // navigate(`${card.name}/register`)
+  //   }
+  // }, [user, navigate, card.name])
+
 
   return (
     <div key={card.id} className="col-lg-3 col-md-4 col-sm-6 col-12">

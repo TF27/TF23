@@ -219,11 +219,16 @@ const Accommodation = () => {
       6. All modes of official communication will be through the Techfest e-mail. Participants are advised to keep track of all folders in their e-mail accounts. <br/>
       </>,
     'CONTACT US': 
-    <div style={{textAlign:'Center', width:'100%', fontSize:'20px'}}>
-      Nivesh Maheshwari <br />
-      Hospitality Manager <br />
-      +91 73576 54007 <br />
-      nivesh@techfest.org
+    <div style={{textAlign:'Center', width:'100%', fontSize:'20px', display: 'flex', justifyContent: 'space-evenly'}}>
+      <div>Himanshu Tanania <br />
+      +91 97846 68915 <br />
+      himanshu1.techfest@gmail.com
+      </div>
+      <div>
+        Ayush Bangar <br/>
+        +91 94629 20670 <br/>
+        ayushbangar.techfest@gmail.com
+      </div>
     </div>,
   };
   
