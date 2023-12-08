@@ -1,5 +1,10 @@
 /* m-accommodation.module.css */
 
+
+.regUp{
+  margin-top: -300px;
+  margin-bottom: 80px;
+}
 .m-accommodation-container {
     display: flex;
     flex-direction: column;
