@@ -853,5 +853,6 @@ def faces(request):
     if request.method == 'GET':
         faces = Faces.objects.all()
         serializer = FacesSerializer(faces, many=True)
+        print(serializer.data)
         return Response(serializer.data)
     

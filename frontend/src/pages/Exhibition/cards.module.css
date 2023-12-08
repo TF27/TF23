@@ -1,0 +1,119 @@
+.card{
+    width: 80%;
+    height: 340px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 28px;
+    overflow-y: hidden;
+    transition: scale 0.5s ease 0s;
+    scale: 1;
+}
+
+.exhiCard{
+    margin-top: 100px;
+}
+
+.cardA{
+    display: flex;
+    justify-content: center;
+}
+
+.plus img{
+    height: 38px;
+    width: 38px;
+}
+.plus{
+    overflow-y: hidden;
+    height: 0px;
+    transition: height 0.5s ease 0s;
+    width: 100%;
+}
+
+.info img{
+    margin-right: 15px;
+    border: 1px solid white;
+    border-radius: 4px;
+    height: 300px;
+    width: 240px;
+    object-fit: cover;
+}
+.desco{
+    bottom: -250px;
+    position: relative;
+    transition: bottom 1s ease 0s;
+}
+.card:hover .infoS{
+    background-color: black;
+    /* bottom: 0px; */
+}
+
+.card:hover{
+    scale: 1.05;
+}
+
+.card:hover .desco{
+    bottom: 0px;
+}
+.card:hover .holao{
+    bottom: 0px;
+}
+
+/* .card:hover .holao{
+    display: hidden;
+} */
+
+.holao{
+    position: relative; 
+    bottom: -200px;
+    transition: bottom 1s ease 0s;
+}
+
+.infoS{
+    position: relative;
+    max-width: 100%;
+    /* top: 220px; */
+    /* bottom: -195px; */
+    padding: 14px;
+    text-align: left;
+    transition: bottom 1s ease 0s;
+}
+.infoS p{
+    margin: 0;
+}
+
+.info{
+    display: flex;
+}
+.info p{
+    text-align: left;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+
+
+@media screen and (max-width: 700px) {
+    .info{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .card{
+        width: 80%;
+        /* height: 40vw; */
+    }
+}
+
+/* @media screen and (max-width: 508px){
+    .card{
+        height: 72vw;
+    }
+} */
+

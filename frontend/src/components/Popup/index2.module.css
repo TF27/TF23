@@ -8,6 +8,7 @@
     right: 0;
     background: rgba(0, 0, 0, 0.3);
     transition: opacity 500ms;
+    z-index: 10000;
   }
   .popup {
     margin: 0 auto;
@@ -20,9 +21,10 @@
     border: 1px solid rgba(0,0,0,1);
     border-radius: 5px;
     width: 80%;
-    height: 88%;
+    height: 60%;
     position: fixed;
-    top: 5%;
+    top: 18%;
+    z-index: 20;
     /* left: 35%; */
     transition: all .5s ease-in-out;
   }
