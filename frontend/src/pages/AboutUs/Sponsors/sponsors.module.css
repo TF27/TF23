@@ -1,0 +1,65 @@
+.yoyohoneysingh {
+    /* Styling for the container */
+    background-size: cover;
+    background-position: center;
+    height: auto; /* Adjust this height as needed */
+    overflow-y: scroll; /* Enable scrolling for content */
+    color: white; /* Text color */
+    padding: 20px; /* Adjust padding as needed */
+    top: 20px;
+  }
+
+.bhaicontainer{
+  background-size: cover;
+    background-position: center;
+    height: 0vh; /* Adjust this height as needed */
+    overflow-y: scroll; /* Enable scrolling for content */
+    color: white; /* Text color */
+    padding: 20px; /* Adjust padding as needed */
+    top: 20px;
+}
+
+.bobby{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 10vh;
+  width: 100vw;
+  margin-top: 5vh;
+  margin-bottom: 15vh;
+}
+
+.singlehead{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 10vh;
+  width: 100vw;
+  margin-top: 20vh;
+  margin-bottom: 5vh;
+}
+
+.single{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 10vh;
+  width: 100vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+  
+.head{
+  position: relative;
+  top:100px;
+}
+
+.title{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
