@@ -13,6 +13,7 @@ export const AuthContextProvider = ({children}) => {
     const googleSignIn = ()  => {
         const provider = new GoogleAuthProvider();
          signInWithPopup(auth, provider)
+         navigate('/workshops');
     }
 
     const logOut = () => {
@@ -23,7 +24,7 @@ export const AuthContextProvider = ({children}) => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
             // console.log('user', currentUser)
-            navigate('/workshops')
+            // navigate('/workshops')
         });
         return ()  => {
             unsubscribe()

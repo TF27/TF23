@@ -22,6 +22,7 @@
     background-attachment: top center;
     background-repeat: no-repeat;
     background-position: center;
+    width: 100vw;
   }
   
   .layer2 {
@@ -41,7 +42,8 @@
     opacity: 1;
     z-index: -1;
     margin-top: 55pt;
-    background-size: auto 151vh;
+    width: 100vw;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
