@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./lecture.css";
 import styles from "./parallax.module.css";
 import ImageOne from "./ImageOne";
+import Speakers from "./speakers.jsx";
 
 import Notify from "../../components/Notify/notify";
 import WorldMap from "./map";
@@ -55,6 +56,10 @@ const Lectures = () => {
       <div className={styles.image}>
         <div className={styles.blackGradienttop} />
         <Notify />
+        <h1 style={{ marginTop: "50px", marginBottom: "20px" }}>
+            Speakers
+          </h1>
+        <Speakers />
         <div>{isMobile ? <MapClick /> : <WorldMap />}</div>
         <OurReach />
         <div className="checkThis">
