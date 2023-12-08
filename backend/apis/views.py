@@ -543,7 +543,8 @@ def workshop_reg_form(request):
                 next_tf_id = str(int(last_tf_id) + 1).zfill(4)
             worksho_id = f"TF-W23{next_tf_id}"
             workshop_reg_serializer.save(worksho_id=worksho_id)
-            payment = Workshop.objects.filter(name=workshop).values('paymentLink')
+            # payment = Workshop.objects.filter(name=workshop).values('paymentLink')
+            payment = Workshop.objects.get(name=workshop).paymentLink
             # compi_reg_serializer.save()
             subject = "Workshop Registration"
             message = f"You have successfully registered for the {workshop_reg_serializer.validated_data.get('workshop')} with email {workshop_reg_serializer.validated_data.get('email')} and name {workshop_reg_serializer.validated_data.get('name')}"
