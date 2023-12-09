@@ -5,6 +5,7 @@ from rest_framework import permissions
 from rest_framework.generics import CreateAPIView
 from apis.serializers import *
 from apis.models import *
+from django.db import transaction
 from django.db.models import Func, F, Value, CharField, IntegerField
 from django.db.models.functions import Cast
 from django.views.decorators.csrf import csrf_exempt
@@ -251,42 +252,34 @@ def team_reg_check(request):
 
 
 @api_view(['POST'])
+@transaction.atomic
 @csrf_exempt
 def create_team(request):
     if request.method == 'POST':
         compi_team_serializer = Compi_TeamSerializer(
             data=request.data, many=False)
+        
         if compi_team_serializer.is_valid():
             # if check_reg(compi_team_serializer) is
             compi = compi_team_serializer.validated_data.get('compi_name')
-            compi1 = str(compi).capitalize()
+            # compi1 = str(compi).capitalize()
             compi_reg_instances = compi_reg.objects.filter(compi=compi)
+
+            emails_to_check = [
+                'team_leader_email', 'parti1_email', 'parti2_email', 'parti3_email'
+            ]
+            for email_field in emails_to_check:
+                email_value = request.data.get(email_field)
+                if email_value and not compi_reg_instances.filter(email=email_value).exists():
+                    res = {'success': False, 'error': 'User not registered'}
+                    return JsonResponse(res, status=400)
+
             team_leader_email = compi_team_serializer.validated_data.get(
                 'team_leader_email')
-            team_leader_name = compi_team_serializer.validated_data.get(
-                'team_leader_name')
-            parti_email1 = compi_team_serializer.validated_data.get(
-                'parti1_email')
-            parti_email2 = compi_team_serializer.validated_data.get(
-                'parti2_email')
-            parti_email3 = compi_team_serializer.validated_data.get(
-                'parti3_email')
-            print(request.data.get('parti1_email'))
             if compi_team.objects.filter(team_leader_email=team_leader_email, compi_name=compi).exists():
                 res = {'success': False, 'error': 'Team already formed'}
                 return JsonResponse(res, status=400)
-            if parti_email1 and not compi_reg_instances.filter(email=request.data.get('parti1_email')).exists():
-                print(2)
-                res = {'success': False, 'error': 'User not registered'}
-                return JsonResponse(res, status=400)
-            if parti_email2 and not compi_reg_instances.filter(email=request.data.get('parti2_email')).exists():
-                print(3)
-                res = {'success': False, 'error': 'User not registered'}
-                return JsonResponse(res, status=400)
-            if parti_email3 and not compi_reg_instances.filter(email=request.data.get('parti3_email')).exists():
-                print(4)
-                res = {'success': False, 'error': 'User not registered'}
-                return JsonResponse(res, status=400)
+
             latest_team = compi_team.objects.filter(
                 compi_name=compi).order_by('-team_id').first()
             next_team_id = '0269'
@@ -294,25 +287,25 @@ def create_team(request):
                 last_team_id = latest_team.team_id[-4:]
                 next_team_id = str(int(last_team_id) + 1).zfill(4)
             team_id = f"{compi.name.capitalize()[:4]}-23{next_team_id}"
-            compi_team_serializer.save(team_id=team_id)
-            # compi_team_serializer.save()
-            subject = f'Techfest, IIT Bombay | Creation of Team successful for {compi1}'
-            message = f'You have successfully created your team with team leader {team_leader_name} and {team_id}. Kindly go through all the rules and FAQs carefully, and keep checking the website for regular updates.'
-            send_mailer = 'noreply@techfest.org'
-            recipient = [compi_team_serializer.validated_data.get(
-                'team_leader_email')]
-            send_mail(subject, message, send_mailer, recipient)
-            subject2 = f'Techfest, IIT Bombay | Added to {team_id} team for the {compi1} competition'
-            message2 = f'You have been successfully added to the team for the {compi1} competition with team leader {team_leader_email} and {team_id}. Kindly go through all the rules and FAQs carefully, and keep checking the website for regular updates.'
-            recipient2 = [compi_team_serializer.validated_data.get('parti1_email'), compi_team_serializer.validated_data.get(
-                'parti2_email'), compi_team_serializer.validated_data.get('parti3_email')]
-            recipient2 = [email for email in recipient2 if email is not None]
-            for rec in recipient2:
-                send_mail(subject2, message2, send_mailer, [rec])
-            return JsonResponse(compi_team_serializer.data)
-        res = {'success': False}
 
-        return JsonResponse(res)
+            compi_team_serializer.save(team_id=team_id)
+
+            # compi_team_serializer.save()
+            subject_team_leader = f'Techfest, IIT Bombay | Creation of Team successful for {compi.name.capitalize()}'
+            message_team_leader = f'You have successfully created your team with team leader {compi_team_serializer.validated_data.get("team_leader_name")} and {team_id}. Kindly go through all the rules and FAQs carefully, and keep checking the website for regular updates.'
+            recipient_team_leader = [team_leader_email]
+            send_mail(subject_team_leader, message_team_leader, 'noreply@techfest.org', recipient_team_leader)
+
+            subject_participants = f'Techfest, IIT Bombay | Added to {team_id} team for the {compi.name.capitalize()} competition'
+            message_participants = f'You have been successfully added to the team for the {compi.name.capitalize()} competition with team leader {team_leader_email} and {team_id}. Kindly go through all the rules and FAQs carefully, and keep checking the website for regular updates.'
+            recipients_participants = [request.data.get('parti1_email'), request.data.get('parti2_email'), request.data.get('parti3_email')]
+            recipients_participants = [email for email in recipients_participants if email is not None]
+            send_mail(subject_participants, message_participants, 'noreply@techfest.org', recipients_participants)
+
+            return JsonResponse(compi_team_serializer.data)
+        
+        res = {'success': False}
+        return JsonResponse(res, status=400)
 
 
 @api_view(['POST'])

@@ -6,8 +6,8 @@ import Cards from "./cards";
 import Parallax from "./parallax";
 
 import fin from "./assets/Back.jpg";
-import robert from './assets/Rober.png'
-import jao from './assets/Jaoa.jpg';
+import robert from './assets/Robert.png'
+import jao from './assets/Joao.jpg';
 import rayan from './assets/rayan1.jpg';
 import auv from './assets/auvinet1.jpg';
 

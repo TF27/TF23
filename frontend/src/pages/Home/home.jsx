@@ -42,7 +42,7 @@ import work4 from "./assets/explore/works4.jpg";
 
 const dataWorkshops = [
   {
-    perLink: "workshops/data to aI by google",
+    perLink: "workshops/data%20to%20aI%20by%20google",
     image: work1,
     name: "Data to AI by Google",
     posi: "( INR 1699 )",
