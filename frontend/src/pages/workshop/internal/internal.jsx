@@ -106,6 +106,16 @@ const Internal = () => {
                     </div>
                   </div>
                 </div>
+              ) : data.closed ? (
+                <div>
+                  <div className={styles.statement}>
+                    <div className={styles.stat_rect1}></div>
+                    <div className={styles.stat_rect2}>
+                      <Link>Closed
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               ) : data.is_registered ? (
                 <div>
                   <div className={styles.statement}>

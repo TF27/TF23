@@ -164,7 +164,7 @@
 .cloudM {
   /* transform: translateX(-50%); */
 }
-.cloudR {
+.cloudRhomeExplore {
   right: 0;
 }
 
@@ -379,6 +379,8 @@
 .homeExplore {
   max-width: 90%;
   margin: auto;
+  z-index: 20;
+  position: relative;
 }
 
 .cardText {
