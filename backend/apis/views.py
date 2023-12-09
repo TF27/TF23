@@ -520,6 +520,8 @@ def workshop_reg_form(request):
         if workshop_reg_serializer.is_valid():
             email = workshop_reg_serializer.validated_data.get('email')
             workshop = workshop_reg_serializer.validated_data.get('workshop')
+            if Workshop.objects.filter(name=workshop, closed=True).exists():
+                return JsonResponse({'error': 'Workshop is closed'}, status=400)
             phone = workshop_reg_serializer.validated_data.get('phoneno')
             # print(sexy_word)
             sexy_word1 = f"{workshop or ''}15Novlolol{email or ''}or19Nov{phone or ''}"
