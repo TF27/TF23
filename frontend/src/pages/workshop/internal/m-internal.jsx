@@ -32,8 +32,9 @@ import Digitalm from "./Workshops/m-Digitalm";
 import Ds from "./Workshops/m-Ds";
 import Quad from "./Workshops/m-Quad";
 import Bio from "./Workshops/m-Bio";
-import Uiux from "./Workshops/m-Uiux";
+// import Uiux from "./Workshops/m-Uiux";
 import Java from "./Workshops/m-Java";
+import Game from "./Workshops/m-Game";
 
 const MInternal = () => {
   const { cardName } = useParams();
@@ -198,8 +199,9 @@ const MInternal = () => {
             {cardName === "data science" && <Ds/>}
             {cardName === "quadcopter" && <Quad/>}
             {cardName === "bio analytics" && <Bio/>}
-            {cardName === "uI uX design" && <Uiux/>}
+            {/* {cardName === "uI uX design" && <Uiux/>} */}
             {cardName === "java" && <Java/>}
+            {cardName === "game development" && <Game/>}
 
           </div>
         </div>
