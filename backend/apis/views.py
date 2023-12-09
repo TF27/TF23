@@ -543,10 +543,12 @@ def workshop_reg_form(request):
                 next_tf_id = str(int(last_tf_id) + 1).zfill(4)
             worksho_id = f"TF-W23{next_tf_id}"
             workshop_reg_serializer.save(worksho_id=worksho_id)
+            # payment = Workshop.objects.filter(name=workshop).values('paymentLink')
+            payment = Workshop.objects.get(name=workshop).paymentLink
             # compi_reg_serializer.save()
             subject = "Workshop Registration"
             message = f"You have successfully registered for the {workshop_reg_serializer.validated_data.get('workshop')} with email {workshop_reg_serializer.validated_data.get('email')} and name {workshop_reg_serializer.validated_data.get('name')}"
-            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {workshop_reg_serializer.validated_data.get('workshop')} Workshop with {workshop_reg_serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. Register for more Workshops at techfest.org/workshops \nThanks and Regards,\nTeam Techfest 2023-24"
+            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {workshop_reg_serializer.validated_data.get('workshop')} Workshop with {workshop_reg_serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure: {payment}. \nThe workshop will be conducted on the Campus of IIT Bombay. By completing the payment, your workshop will be booked and you will get FREE access pass to all events at Techfest including EDM Night, International Robowars, Guest Lectures, International Exhibitions, Summits, VR and Gaming Setups. \nParticipants can book accommodation inside IIT Bombay campus at techfest.org/accommodation\nThanks and Regards,\nTeam Techfest 2023-24"
             from_email = 'noreply@techfest.org'
             recipient_list = [
                 workshop_reg_serializer.validated_data.get('email')]
@@ -766,7 +768,7 @@ def summitRegForm(request):
             # compi_reg_serializer.save()
             subject = "Successful Intl'Summit Registration"
             message = f"You have successfully registered for the {serializer.validated_data.get('summit')} with email {serializer.validated_data.get('email')} and name {serializer.validated_data.get('name')}"
-            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {serializer.validated_data.get('summit')} Workshop with {serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. \nThanks and Regards,\nTeam Techfest 2023-24"
+            # message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {serializer.validated_data.get('summit')} Workshop with {serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. \nThanks and Regards,\nTeam Techfest 2023-24"
             from_email = 'noreply@techfest.org'
             recipient_list = [
                 serializer.validated_data.get('email')]
@@ -845,3 +847,12 @@ def iftReg(request):
                 return JsonResponse(serializer.data)
         res = {'success': False}
         return JsonResponse(res)
+    
+@api_view(['GET'])
+def faces(request):
+    if request.method == 'GET':
+        faces = Faces.objects.all()
+        serializer = FacesSerializer(faces, many=True)
+        print(serializer.data)
+        return Response(serializer.data)
+    

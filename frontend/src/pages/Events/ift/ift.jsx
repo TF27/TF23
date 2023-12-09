@@ -6,32 +6,36 @@ import Cards from "./cards";
 import Parallax from "./parallax";
 
 import fin from "./assets/Back.jpg";
+import robert from './assets/Robert.png'
+import jao from './assets/Joao.jpg';
+import rayan from './assets/rayan1.jpg';
+import auv from './assets/auvinet1.jpg';
 
 const IFT = () => {
   const dataPastD = [
     {
-      name: "Fintech Summit",
-      img: fin,
-      rank: 18,
-      desc: "I am the god of the multiverse, infinity ultron is my bitch",
+      name: "Robert Battle Sanchez",
+      img: robert,
+      rank: 6,
+      desc: "12 time Spanish Nitro Buggy National Champion and unarguably one of the best RC drivers in world",
     },
     {
-      name: "Industry 4.0",
-      img: fin,
-      rank: 18,
-      desc: "I am the god of the multiverse, infinity ultron is my bitch",
+      name: "João Figueiredo",
+      img: jao,
+      rank: 17,
+      desc: "And current portugese buggy champion",
     },
     {
-      name: "Fintech Summit",
-      img: fin,
-      rank: 18,
-      desc: "I am the god of the multiverse, infinity ultron is my bitch",
+      name: "Rayan Medjoubi",
+      img: rayan,
+      rank: 49,
+      desc: "Former french champion",
     },
     {
-      name: "Industry 4.0",
-      img: fin,
-      rank: 18,
-      desc: "I am the god of the multiverse, infinity ultron is my bitch",
+      name: "Patrick jr Auvinet",
+      img: auv,
+      // rank: 18,
+      desc: "Former France champion in 1:6 category",
     },
   ];
 
@@ -49,11 +53,11 @@ const IFT = () => {
           >
             <div className={styles.infoS}>
                 <h4>{data.name}</h4>
-                <p>
+                {data.rank && (<p>
                     World Rank {data.rank}
                     <br/>
                     {data.desc}
-                </p>
+                </p>)}
             </div>
           </div>
         </div>
@@ -80,7 +84,7 @@ const IFT = () => {
       <div className={styles.about}>
         <div>
           <iframe
-            src="https://www.youtube.com/embed/0_FBwJi8VBo?si=yaNM1nKy7nydA1XU"
+            src="https://www.youtube.com/embed/Vu9titeNUGA?si=GBpGJtaH4XNQnfEa"
             title="YouTube video player"
             frameborder="0"
             loading="lazy"

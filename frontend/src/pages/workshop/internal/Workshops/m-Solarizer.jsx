@@ -58,7 +58,7 @@ const Solarizer = () => {
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
           <b>Hands-on workshop where kits will be provided to the participants</b> <br /> <br />
-          Date: 27th-28th December <br /> <br />
+          Date: 28th-29th December <br /> <br />
           Duration: 12-14 hours <br /> <br />
           Venue: IIT Bombay <br />
           </div>

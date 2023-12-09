@@ -34,6 +34,7 @@ import c9 from '../../pages/Compi/assets/c9.jpg';
 import c10 from '../../pages/Compi/assets/c10.jpg';
 
 import exhi_image from './assets/exhi.png'
+import Exhibitions from "./exhi_cards";
 
 const Exhibition =()=> {
 
@@ -60,7 +61,8 @@ const Exhibition =()=> {
 
             <ImageOne/>
            <div className={parallax.exhi}>
-           <div className={parallax.blackGradienttop}/>  
+           <div className={parallax.blackGradienttop}/> 
+           <Exhibitions /> 
             <Notify/>
             <div>{isMobile ? <MapClick /> : <WorldMap />}</div>
             <OurReach />

@@ -48,6 +48,8 @@ const HomeParallax = () => {
         </div>
         <div className={styles.headUL}>
           <Link to='/workshops'>Workshops are Live Now!</Link>
+          <br/>
+          <Link to='/accommodation'>Stay at IIT Bombay</Link>
         </div>
       </div>
       <div className={styles.clouds}>
