@@ -1,0 +1,396 @@
+/* --------------------parallax--------------------- */
+
+.parallax{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+}
+
+.img1, .img2, .img3, .car{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img1{
+    z-index: 1;
+    background-image: url('./assets/Top.png');
+}
+
+.img2{
+    background-image: url('./assets/Back.jpg');
+}
+
+.car{
+    top: 11px;
+    z-index: 1;
+    background-size: contain;
+    background-image: url('./assets/Car.png');
+}
+
+.img3{
+    background-image: url('./assets/ift-d.png');
+}
+
+/*-------------------parallax close--------------------- */
+
+
+/*-------------------cards------------------------------*/
+
+.card{
+    margin-bottom: 35px;
+}
+.compi_card {
+    background: rgba(0, 5, 29, 0.847);
+    font-family: "Forum", sans-serif;
+    padding: 10px;
+    transform: scale(1);
+    aspect-ratio: 1/1.1;
+    overflow: hidden;
+    width: 300px;
+    margin: auto;
+  }
+  
+  .card_img {
+    width: 200px;
+    aspect-ratio: 1/1;
+    object-fit: fill;
+    opacity: 1;
+    border: 1px solid #bb9564;
+    margin: auto;
+  }
+  
+  
+  .card_tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card_title {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+    bottom: 0;
+    transition: 1s ease;
+  }
+  .card_title h3 {
+    color: #ffe381;
+    font-family: "Forum", sans-serif;
+    /* letter-spacing: 0.1em; */
+    padding-top: 5%;
+    margin-bottom: 0px;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+  
+  .card_regexp {
+    position: absolute;
+    left: 8%;
+    bottom: 15px;
+    display: flex;
+    border-top: 1px solid #bb9564;
+    flex-direction: row;
+    justify-content: center;
+    /* max-width: 80%; */
+    margin: auto;
+    text-align: center;
+    width: 85%;
+    top: 88%;
+    height: 10%;
+  }
+  
+  .card_reg {
+    border-right: 1px solid #bb9564;
+    padding-right: 8%;
+    padding-top: 0.4vw;
+    padding-left: 8%;
+    padding-bottom: 0.4vw;
+    color: #ffe381;
+  }
+  .card_exp {
+    border-left: 1px solid #bb9564;
+    padding-right: 4%;
+    padding-top: 0.4vw;
+    padding-left: 8%;
+    padding-bottom: 0.4vw;
+  }
+  
+  @media (max-width: 1100px) {
+    .card_exp {
+      padding-left: 4%;
+    }
+  }
+  @media (max-width: 991px) {
+    .card_exp {
+      padding-left: 8%;
+    }
+  }
+  @media (max-width: 860px) {
+    .card_exp {
+      padding-left: 6%;
+    }
+  }
+  
+  .card_reg {
+    padding-top: 0.2vw;
+    padding-left: 1vw;
+    font-size: 20px;
+  }
+  
+  @media (max-width: 576px) {
+    .card_exp {
+      padding-left: 12%;
+      padding-top: 1.7vw;
+    }
+    .card_reg {
+      padding-top: 1.2vw;
+      padding-left: 0vw;
+      font-size: 20px;
+      padding-right: 10%;
+      /* font-size:px; */
+    }
+  }
+  
+  .card_reg a {
+    color: #ffe381;
+    font-family: "Forum", sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  .card_reg button {
+    color: #ffe381;
+    font-family: "Forum", sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    text-decoration: none;
+    background: none;
+    border: none;
+  }
+  
+  .card_exp a {
+    color: #bb9564;
+    font-family: "Forum", sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    text-decoration: none;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card_rect1 {
+    border: 1px solid #bb9564;
+    position: absolute;
+    width: 86%;
+    height: 97%;
+    left: 7.5%;
+    top: 5px;
+  }
+  
+  .card_rect2 {
+    border: 1px solid #bb9564;
+    left: 5.5%;
+    width: 90%;
+    height: 95%;
+    position: absolute;
+  }
+  
+  .chand {
+    position: absolute;
+    right: 9%;
+    bottom: 55%;
+    height: 20px;
+    width: auto;
+  }
+  /* 
+    .chand2{
+      position: absolute;
+      left: 10%;
+      bottom: 50%;
+      height: 20px;
+      width: auto;
+    } */
+  
+  .espark {
+    position: absolute;
+    left: 15.5%;
+    bottom: 25%;
+    height: 5px;
+    width: auto;
+  }
+  
+  .espark2 {
+    position: absolute;
+    left: 12%;
+    bottom: 89%;
+    height: 25px;
+    width: auto;
+  }
+  
+  .espark3 {
+    position: absolute;
+    left: 88%;
+    bottom: 90%;
+    height: 5px;
+    width: auto;
+  }
+  
+  .espark4 {
+    position: absolute;
+    left: 79%;
+    bottom: 20%;
+    height: 25px;
+    width: auto;
+  }
+  
+  .fspark {
+    position: absolute;
+    left: 18%;
+    bottom: 20%;
+    height: 20px;
+    width: auto;
+  }
+  .fspark2 {
+    position: absolute;
+    left: 10%;
+    bottom: 85%;
+    height: 20px;
+    width: auto;
+  }
+  .fspark3 {
+    position: absolute;
+    left: 86%;
+    bottom: 23%;
+    height: 20px;
+    width: auto;
+  }
+  .fspark4 {
+    position: absolute;
+    left: 83%;
+    bottom: 90%;
+    height: 20px;
+    width: auto;
+  }
+  
+  /* Add hover styles for card_reg and card_exp */
+  .card_reg:hover a {
+    color: #a7e9ff; /* Change the color to blue on hover */
+  }
+  
+  .card_exp:hover a {
+    color: #a7e9ff; /* Change the color to blue on hover */
+  }
+  
+  .card_title div {
+    color: #a7e9ff;
+    font-family: "Forum", sans-serif;
+    letter-spacing: 0.1em;
+    margin-bottom: 0px;
+  }
+
+  /* ----------------cards end------------------ */
+
+
+.titSpn_rect1 {
+    border: #ab8d60 2px solid;
+    width: 268px;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 30px;
+  }
+  
+  .titSpn_rect2 {
+    border: #ab8d60 2px solid;
+    width: 268px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    transform: translate(3px, 3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-family: "Forum", sans-serif;
+  }
+  
+  .about{
+    display: flex;
+    margin:auto;
+    max-width: 88%;
+  }
+
+  .about iframe{
+    border: 1px solid #fff;
+    border-radius: 8px;
+    width: 330px;
+    height: 200px;
+  }
+  .aboutT{
+    text-align: left;
+    margin-left: 20px;
+    font-size: 18px;
+  }
+
+  /* -------------------past drivers----------------------- */
+
+  .pastCards{
+    height: 270px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    overflow-y: hidden;
+    margin-bottom: 35px;
+  }
+
+  .infoS{
+    position: relative;
+    bottom: -79%;
+    text-align: left;
+    transition: bottom 0.5s ease 0s;
+    padding-left: 10px;
+  }
+  .infoS h4{
+    margin-bottom: 0;
+  }
+  .pastCards:hover .infoS{
+    bottom: -55%;
+  }
+
+  @media screen and (max-width: 560px) {
+    .pastCards{
+        width: 300px;
+        margin: auto;
+        margin-bottom: 35px;
+    }    
+    .infoS{
+        bottom: -55%;
+    }
+    .about{
+        flex-direction: column;
+    }
+  }
+
+  /* -----------------past drivers end--------------------- */
+
+  .contact{
+    width: 42%;
+    background-color: #00000082;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    margin: auto;
+    margin-bottom: 88px;
+  }
+  .contact p{
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  .phone{
+    margin-bottom: 20px;
+  }

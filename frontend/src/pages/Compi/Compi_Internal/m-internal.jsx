@@ -31,6 +31,11 @@ import MERNifier from "./Competitions/m-MERNifier";
 import RowBoatics from "./Competitions/m-RowBoatics";
 import Aeromodelling from "./Competitions/m-Aeromodelling";
 import CertiTech from "./Competitions/m-CertiTech";
+import Here from "./Competitions/m-Here";
+import Idrl from "./Competitions/m-Idrl";
+import Mouse from "./Competitions/m-Mouse";
+import Edel from "./Competitions/m-Edel";
+import Datamatics from "./Competitions/m-Datamatics";
 
 const MInternal = () => {
   const { compiName } = useParams();
@@ -44,6 +49,12 @@ const MInternal = () => {
     navigate("/competitions/meshmerize");
   } else if (compiName === "aeromodelling") {
     navigate("/competitions/boeing%20aeromodelling");
+  }  else if (compiName === "cashflow") {
+    navigate("/competitions/cashflow%20modelling");
+  } else if (compiName === "idrl") {
+    navigate("/competitions/int'l%20drone%20racing");
+  }  else if (compiName === "micromouse") {
+    navigate("/competitions/micromouse%20challenge");
   } else if (compiName === "tfo") {
     navigate("/competitions/techfest%20olympiad");
   } else if (compiName === "MERNifier") {
@@ -54,6 +65,10 @@ const MInternal = () => {
     navigate("/competitions/urban-futurism");
   } else if (compiName === "taskwhiz") {
     navigate("/competitions/task%20whiz");
+  } else if (compiName === "here") {
+    navigate("/competitions/here%20hackathon");
+  } else if (compiName === "datamatics") {
+    navigate("/competitions/datamatics%20hackathon");
   } else if (compiName === "ai") {
     navigate("/workshops/artificial%20intelligence");
   } else if (compiName === "ml") {
@@ -76,12 +91,22 @@ const MInternal = () => {
     navigate("/workshops/quadcopter"); 
   } else if (compiName === "webdev") {
     navigate("/workshops/web%20development"); 
-  } else if (compiName === "appdev") {
+  }  else if (compiName === "bioanalytics") {
+    navigate("/workshops/bio%20analytics"); 
+  } else if (compiName === "marketing") {
+    navigate("/workshops/digital%20marketing"); 
+  }  else if (compiName === "appdev") {
     navigate("/workshops/android%20development"); 
   } else if (compiName === "crypto") {
     navigate("/workshops/crypto%20trading%20by%20wazirX"); 
+  } else if (compiName === "gamedev") {
+    navigate("/workshops/gamedev"); 
   } else if (compiName === "web3") {
     navigate("/workshops/web%203.0"); 
+  } else if (compiName === "java") {
+    navigate("/workshops/java");
+  } else if (compiName === "design") {
+    navigate("/workshops/uI%20uX%20design");
   } else if (compiName === "csec") {
     navigate("/workshops/cybersecurity"); 
   } else if (compiName === "analytics") {
@@ -280,6 +305,11 @@ const MInternal = () => {
         {compiName === "rowboatics" && <RowBoatics />}
         {compiName === "boeing aeromodelling" && <Aeromodelling />}
         {compiName === "cerTitech" && <CertiTech />}
+        {compiName === "here hackathon" && <Here/>}
+        {compiName === "int'l drone racing" && <Idrl/>}
+        {compiName === "micromouse challenge" && <Mouse/>}
+        {compiName === "cashflow modelling" && <Edel/>}
+        {compiName === "datamatics hackathon" && <Datamatics />}
       </div>
     ));
   };

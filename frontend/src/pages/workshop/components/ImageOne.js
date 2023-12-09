@@ -20,6 +20,11 @@ const ImageOne = () => {
     <div className={`${parallax.parallaxlayer} ${parallax.layer1}`} style={{ transform: `translateY(${scrollPosition * 0.5}px)`,scrollBehavior:'smooth' }} />
     <div className={`${parallax.parallaxlayer} ${parallax.layer2}`} style={{ transform: `translateY(${scrollPosition * 0.3}px)` }}/>
     <div className={`${parallax.parallaxlayer} ${parallax.layer3}`} />
+    <div className={parallax.exTe}>
+      Get Certified by IIT Bombay's Techfest and strengthen your resume! <br/>
+      Book a workshop and get FREE access to all events and Techfest.<br/>
+      Concert, Night Performances, International Robowars, Guest Lectures, International Exhibtions, VR and Games
+    </div>
   </div>
   )
 };

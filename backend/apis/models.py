@@ -10,6 +10,7 @@ class Compi(models.Model):
         ('2','Compis'),
         ('3','Ideates'),
         ('4','forth'),
+        ('5', 'dummy'),
     ], default=None)
     tag = models.CharField(max_length=100)
     name = models.CharField(max_length=100, primary_key=True)
@@ -208,3 +209,89 @@ class SustainRegWebinar(models.Model):
     phone = models.CharField(blank=True, null=True, max_length=255)
     college = models.CharField(blank=True, null=True, max_length=255)
     country = models.CharField(blank=True, null=True, max_length=255)
+
+class Summits(models.Model):
+    regLink=models.CharField(max_length=255, null=True, blank=True)
+    exploreLink=models.CharField(max_length=255, null=True, blank=True)
+    name = models.CharField(max_length=255, null=True, blank=True)
+    img = models.ImageField(upload_to='summit', null=True, blank=True)
+    desc = models.TextField(null=True, blank=True)
+    def __str__(self):
+        return self.name
+
+class SummitSpeaker(models.Model):
+    ching_id = models.IntegerField(null=True, default=0)
+    name = models.CharField(max_length=255, null=True, blank=True)
+    designation = models.CharField(max_length=255, null=True, blank=True)
+    company = models.CharField(max_length=255, null=True, blank=True)
+    desc = models.TextField(null=True, blank=True)
+    summit = models.CharField(choices=[
+        ('Industry', 'Industry'),
+        ('Fintech', 'Fintech'),
+    ], max_length=255, null=True, blank=True)
+    img = models.ImageField(upload_to='summit_speakers', null=True, blank=True)
+    
+    def __str__(self):
+        return self.name
+
+class SummitReg(models.Model):
+    id = models.AutoField(primary_key=True)
+    summit_id = models.CharField(max_length=50, blank=True, null=True)
+    # summit = models.CharField(choices=[
+    #     ('industry', 'industry'),
+    #     ('fintech', 'fintech'),
+    # ], max_length=255, null=True, blank=True)
+    summitisho = models.ForeignKey(Summits, on_delete=models.CASCADE, default=None)
+    name = models.CharField(max_length=255, null=True, blank=True)
+    email = models.EmailField(max_length=255, null=True, blank=True)
+    phoneno = models.CharField(max_length=255, null=True, blank=True)
+    city = models.CharField(max_length=255, null=True, blank=True)
+    gender = models.CharField(choices=[
+        ('M', 'Male'),
+        ('F', 'Female'),
+        ('O', 'Other'),
+    ], max_length=255, null=True, blank=True)
+    pincode = models.IntegerField(blank=True, null=True)
+    paid = models.BooleanField(default=False)
+    def __str__(self):
+        return self.name
+    
+class IFT(models.Model):
+    ift_id = models.IntegerField(null=True, default=0)
+    category = models.CharField(max_length=100, primary_key=True)
+    img = models.ImageField(upload_to='ift')
+    statement = models.FileField(upload_to='ift/ps', null=True, blank=True)
+    
+    def __str__(self):
+        return self.category
+    
+class IFTReg(models.Model):
+    tf_id = models.CharField(max_length=50, blank=True, null=True)
+    category = models.ForeignKey(IFT, on_delete=models.CASCADE)
+    driver_name = models.CharField(max_length=50, blank=True, null=True)
+    driver_email = models.EmailField(max_length=254, blank=True, null=True)
+    driver_phone = models.CharField(max_length=254, blank=True, null=True)
+    pit_name = models.CharField(max_length=50, blank=True, null=True)
+    pit_email = models.EmailField(max_length=254, blank=True, null=True)
+    pit_phone = models.CharField(max_length=254, blank=True, null=True)
+    pincode = models.IntegerField(blank=True, null=True)
+    address = models.TextField(blank=True, null=True)
+    country = models.CharField(max_length=255, null=True, blank=True)
+
+    def __str__(self):
+        return self.category.category + " " + self.driver_name
+
+class Faces(models.Model):
+    ching_id = models.IntegerField(null=True, blank=True)
+    name = models.CharField(max_length=255, null=True, blank=True)
+    img = models.ImageField(upload_to='faces', null=True, blank=True)
+    category = models.CharField(choices=[
+        ('Exhi', 'Exhi'),
+        ('Lect', 'Lect'),
+    ], max_length=255, null=True, blank=True)
+    designation = models.CharField(max_length=255, null=True, blank=True)
+    company = models.CharField(max_length=255, null=True, blank=True)
+    desc = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name

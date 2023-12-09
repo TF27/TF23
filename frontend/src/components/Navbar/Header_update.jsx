@@ -111,13 +111,15 @@ const Header_update = () => {
                 <li>
                   <Link to="/robowars">Robowars</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/summits">Int'l Summit</Link>
-                </li>
+                </li> */}
                 <li>
                   <a href="/twmun">MUN</a>
                 </li>
-
+                <li>
+                  <Link to="/ift">Full Throttle</Link>
+                </li>
                 <li>
                   <Link to="/cyclothon">Cyclothon</Link>
                 </li>
@@ -225,11 +227,14 @@ const Header_update = () => {
             <li onClick={showMenu}>
               <Link to="/competitions">Competitions</Link>
             </li>
-            <li onClick={showMenu}>
+            {/* <li onClick={showMenu}>
               <Link to="/summits">Int'l Summits</Link>
-            </li>
+            </li> */}
             <li onClick={showMenu}>
               <Link to="/robowars">Robowars</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/ift">Int'l Full Throttle</Link>
             </li>
             <li onClick={showMenu}>
               <Link to="/sustain">Sustain</Link>

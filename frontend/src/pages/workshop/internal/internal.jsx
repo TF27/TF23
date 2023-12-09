@@ -29,6 +29,10 @@ import W3b from "./Workshops/W3b";
 import Digitalm from "./Workshops/Digitalm";
 import Ds from "./Workshops/Ds";
 import Quad from "./Workshops/Quad";
+import Bio from "./Workshops/Bio";
+import Uiux from "./Workshops/Uiux";
+import Java from "./Workshops/Java";
+import Game from "./Workshops/Game";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -142,13 +146,14 @@ const Internal = () => {
               <div className={styles.statement}>
                 <div className={styles.stat_rect1}></div>
                 <div className={styles.stat_rect2}>
-                  <a
+                  {/* <a
                     href='https://forms.gle/8KvyXtYuCUtSAWpa8'
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Accommodation
-                  </a>
+                  </a> */}
+                  <Link to='/accommodation'>Accommodation</Link>
                 </div>
               </div>
             )}
@@ -217,6 +222,10 @@ const Internal = () => {
             {cardName === "digital marketing" && <Digitalm/>}
             {cardName === "data science" && <Ds/>}
             {cardName === "quadcopter" && <Quad/>}
+            {cardName === "bio analytics" && <Bio/>}
+            {cardName === "uI uX design" && <Uiux/>}
+            {cardName === "java" && <Java/>}
+            {cardName === "game development" && <Game/>}
           </div>
         </div>
       </div>

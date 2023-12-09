@@ -31,6 +31,11 @@ import W3b from "./Workshops/m-W3b";
 import Digitalm from "./Workshops/m-Digitalm";
 import Ds from "./Workshops/m-Ds";
 import Quad from "./Workshops/m-Quad";
+import Bio from "./Workshops/m-Bio";
+import Ui from "./Workshops/m-Ui";
+// import Uiux from "./Workshops/m-Uiux";
+import Java from "./Workshops/m-Java";
+import Game from "./Workshops/m-Game";
 
 const MInternal = () => {
   const { cardName } = useParams();
@@ -116,6 +121,14 @@ const MInternal = () => {
                 </div>
               )}
             </div>
+            <div className={styles.statement}>
+                <div className={styles.stat_rect1}></div>
+                <div className={styles.stat_rect2}>
+                  <Link to='/accomodation'>
+                      Stay @IITB
+                  </Link>
+                </div>
+              </div>
             {data.statement && (
               <div className={styles.statement}>
                 <div className={styles.stat_rect1}></div>
@@ -136,6 +149,7 @@ const MInternal = () => {
                 <h4 style={{ display: "inline" }}>Pay?</h4>
               </a>
             </p> */}
+
           </div>
           <div className={`col-12 col-lg-8 ${styles.rightdata}`}>
             <div className={styles.sponsor}>
@@ -194,6 +208,10 @@ const MInternal = () => {
             {cardName === "digital marketing" && <Digitalm/>}
             {cardName === "data science" && <Ds/>}
             {cardName === "quadcopter" && <Quad/>}
+            {cardName === "bio analytics" && <Bio/>}
+            {cardName === "uI uX design" && <Ui/>}
+            {cardName === "java" && <Java/>}
+            {cardName === "game development" && <Game/>}
 
           </div>
         </div>

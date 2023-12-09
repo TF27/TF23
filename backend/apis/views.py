@@ -5,6 +5,9 @@ from rest_framework import permissions
 from rest_framework.generics import CreateAPIView
 from apis.serializers import *
 from apis.models import *
+from django.db import transaction
+from django.db.models import Func, F, Value, CharField, IntegerField
+from django.db.models.functions import Cast
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 from django.http.response import JsonResponse
@@ -211,17 +214,20 @@ def compi_reg_form(request):
                 return JsonResponse({'error': 'Failed'}, status=400)
             if compi_reg.objects.filter(email=email, compi=compi).exists():
                 return JsonResponse({'error': 'A registration with this email for this compi already exists.'}, status=400)
-            last_reg = compi_reg.objects.order_by('-tf_id').first()
-            print('hi i am here')
+            if compi_reg.objects.filter(tf_id='TF-2310000').exists():
+                pass
+            last_reg = compi_reg.objects.order_by('-id').first()
             next_tf_id = '0269'
             if last_reg:
                 last_tf_id = last_reg.tf_id[-4:]
+                print(last_tf_id)
                 next_tf_id = str(int(last_tf_id) + 1).zfill(4)
+                print(next_tf_id)
             tf_id = f"TF-23{next_tf_id}"
             compi_reg_serializer.save(tf_id=tf_id)
             # compi_reg_serializer.save()
             subject = f"Techfest, IIT Bombay | Registration successful for {compi_reg_serializer.validated_data.get('compi')}"
-            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {compi_reg_serializer.validated_data.get('compi')} Workshop with {compi_reg_serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. Register for more Workshops at techfest.org/workshops \n Thanks and Regards, \n Team Techfest 2023-24"
+            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {compi_reg_serializer.validated_data.get('compi')} with {compi_reg_serializer.validated_data.get('email')} as your registered email address.\n Thanks and Regards, \n Team Techfest 2023-24"
             from_email = 'noreply@techfest.org'
             recipient_list = [compi_reg_serializer.validated_data.get('email')]
             try:
@@ -246,42 +252,34 @@ def team_reg_check(request):
 
 
 @api_view(['POST'])
+@transaction.atomic
 @csrf_exempt
 def create_team(request):
     if request.method == 'POST':
         compi_team_serializer = Compi_TeamSerializer(
             data=request.data, many=False)
+        
         if compi_team_serializer.is_valid():
             # if check_reg(compi_team_serializer) is
             compi = compi_team_serializer.validated_data.get('compi_name')
-            compi1 = str(compi).capitalize()
+            # compi1 = str(compi).capitalize()
             compi_reg_instances = compi_reg.objects.filter(compi=compi)
+
+            emails_to_check = [
+                'team_leader_email', 'parti1_email', 'parti2_email', 'parti3_email'
+            ]
+            for email_field in emails_to_check:
+                email_value = request.data.get(email_field)
+                if email_value and not compi_reg_instances.filter(email=email_value).exists():
+                    res = {'success': False, 'error': 'User not registered'}
+                    return JsonResponse(res, status=400)
+
             team_leader_email = compi_team_serializer.validated_data.get(
                 'team_leader_email')
-            team_leader_name = compi_team_serializer.validated_data.get(
-                'team_leader_name')
-            parti_email1 = compi_team_serializer.validated_data.get(
-                'parti1_email')
-            parti_email2 = compi_team_serializer.validated_data.get(
-                'parti2_email')
-            parti_email3 = compi_team_serializer.validated_data.get(
-                'parti3_email')
-            print(request.data.get('parti1_email'))
             if compi_team.objects.filter(team_leader_email=team_leader_email, compi_name=compi).exists():
                 res = {'success': False, 'error': 'Team already formed'}
                 return JsonResponse(res, status=400)
-            if parti_email1 and not compi_reg_instances.filter(email=request.data.get('parti1_email')).exists():
-                print(2)
-                res = {'success': False, 'error': 'User not registered'}
-                return JsonResponse(res, status=400)
-            if parti_email2 and not compi_reg_instances.filter(email=request.data.get('parti2_email')).exists():
-                print(3)
-                res = {'success': False, 'error': 'User not registered'}
-                return JsonResponse(res, status=400)
-            if parti_email3 and not compi_reg_instances.filter(email=request.data.get('parti3_email')).exists():
-                print(4)
-                res = {'success': False, 'error': 'User not registered'}
-                return JsonResponse(res, status=400)
+
             latest_team = compi_team.objects.filter(
                 compi_name=compi).order_by('-team_id').first()
             next_team_id = '0269'
@@ -289,25 +287,25 @@ def create_team(request):
                 last_team_id = latest_team.team_id[-4:]
                 next_team_id = str(int(last_team_id) + 1).zfill(4)
             team_id = f"{compi.name.capitalize()[:4]}-23{next_team_id}"
-            compi_team_serializer.save(team_id=team_id)
-            # compi_team_serializer.save()
-            subject = f'Techfest, IIT Bombay | Creation of Team successful for {compi1}'
-            message = f'You have successfully created your team with team leader {team_leader_name} and {team_id}. Kindly go through all the rules and FAQs carefully, and keep checking the website for regular updates.'
-            send_mailer = 'noreply@techfest.org'
-            recipient = [compi_team_serializer.validated_data.get(
-                'team_leader_email')]
-            send_mail(subject, message, send_mailer, recipient)
-            subject2 = f'Techfest, IIT Bombay | Added to {team_id} team for the {compi1} competition'
-            message2 = f'You have been successfully added to the team for the {compi1} competition with team leader {team_leader_email} and {team_id}. Kindly go through all the rules and FAQs carefully, and keep checking the website for regular updates.'
-            recipient2 = [compi_team_serializer.validated_data.get('parti1_email'), compi_team_serializer.validated_data.get(
-                'parti2_email'), compi_team_serializer.validated_data.get('parti3_email')]
-            recipient2 = [email for email in recipient2 if email is not None]
-            for rec in recipient2:
-                send_mail(subject2, message2, send_mailer, [rec])
-            return JsonResponse(compi_team_serializer.data)
-        res = {'success': False}
 
-        return JsonResponse(res)
+            compi_team_serializer.save(team_id=team_id)
+
+            # compi_team_serializer.save()
+            subject_team_leader = f'Techfest, IIT Bombay | Creation of Team successful for {compi.name.capitalize()}'
+            message_team_leader = f'You have successfully created your team with team leader {compi_team_serializer.validated_data.get("team_leader_name")} and {team_id}. Kindly go through all the rules and FAQs carefully, and keep checking the website for regular updates.'
+            recipient_team_leader = [team_leader_email]
+            send_mail(subject_team_leader, message_team_leader, 'noreply@techfest.org', recipient_team_leader)
+
+            subject_participants = f'Techfest, IIT Bombay | Added to {team_id} team for the {compi.name.capitalize()} competition'
+            message_participants = f'You have been successfully added to the team for the {compi.name.capitalize()} competition with team leader {team_leader_email} and {team_id}. Kindly go through all the rules and FAQs carefully, and keep checking the website for regular updates.'
+            recipients_participants = [request.data.get('parti1_email'), request.data.get('parti2_email'), request.data.get('parti3_email')]
+            recipients_participants = [email for email in recipients_participants if email is not None]
+            send_mail(subject_participants, message_participants, 'noreply@techfest.org', recipients_participants)
+
+            return JsonResponse(compi_team_serializer.data)
+        
+        res = {'success': False}
+        return JsonResponse(res, status=400)
 
 
 @api_view(['POST'])
@@ -538,10 +536,12 @@ def workshop_reg_form(request):
                 next_tf_id = str(int(last_tf_id) + 1).zfill(4)
             worksho_id = f"TF-W23{next_tf_id}"
             workshop_reg_serializer.save(worksho_id=worksho_id)
+            # payment = Workshop.objects.filter(name=workshop).values('paymentLink')
+            payment = Workshop.objects.get(name=workshop).paymentLink
             # compi_reg_serializer.save()
             subject = "Workshop Registration"
             message = f"You have successfully registered for the {workshop_reg_serializer.validated_data.get('workshop')} with email {workshop_reg_serializer.validated_data.get('email')} and name {workshop_reg_serializer.validated_data.get('name')}"
-            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {workshop_reg_serializer.validated_data.get('workshop')} Workshop with {workshop_reg_serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. Register for more Workshops at techfest.org/workshops \nThanks and Regards,\nTeam Techfest 2023-24"
+            message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {workshop_reg_serializer.validated_data.get('workshop')} Workshop with {workshop_reg_serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure: {payment}. \nThe workshop will be conducted on the Campus of IIT Bombay. By completing the payment, your workshop will be booked and you will get FREE access pass to all events at Techfest including EDM Night, International Robowars, Guest Lectures, International Exhibitions, Summits, VR and Gaming Setups. \nParticipants can book accommodation inside IIT Bombay campus at techfest.org/accommodation\nThanks and Regards,\nTeam Techfest 2023-24"
             from_email = 'noreply@techfest.org'
             recipient_list = [
                 workshop_reg_serializer.validated_data.get('email')]
@@ -703,3 +703,149 @@ def proof_upload(request):
             acco.save()
             return JsonResponse({'success': True})
         return JsonResponse({'success': False})
+    
+
+@api_view(['GET'])
+def summitSpeaker(request):
+    if request.method == "GET":
+        try:
+            email = get_user_id(request)
+            summitSpeaker = SummitSpeaker.objects.all()
+            serializer = SummitSpeakerSerializer(
+                summitSpeaker, many=True, context={'user': email})
+            return Response(serializer.data)
+        except:
+            summitSpeaker = SummitSpeaker.objects.all()
+            serializer = SummitSpeakerSerializer(
+                summitSpeaker, many=True, context={'request': request})
+            return Response(serializer.data)
+
+@api_view(['POST'])
+@csrf_exempt
+def summitRegForm(request):
+    if request.method == 'POST':
+        sexy_word = request.data.get('sexy_word')
+        serializer = SummitRegSerializer(
+            data=request.data, many=False)
+        # if(serializer.is_valid()):
+        #     print('hi')
+        # else:
+        #     print(serializer.errors)
+        if serializer.is_valid():
+            # print(serializer)
+            email = serializer.validated_data.get('email')
+            summitisho = serializer.validated_data.get('summitisho')
+            phone = serializer.validated_data.get('phoneno')
+            # print(sexy_word)
+            # print(summitisho)
+            mahito = 'Fintech Summit'
+            if(summitisho == mahito):
+                summitosh = 1
+            else:
+                # print(summitisho)
+                summitosh = 1
+            sexy_word1 = f"{summitosh or ''}30Novlalaland{email or ''}or19NovWeLose{phone or ''}"
+            # print(sexy_word1)
+            if sexy_word != sexy_word1:
+                # print(sexy_word, sexy_word1)
+                return JsonResponse({'error': 'Failed'}, status=400)
+            if SummitReg.objects.filter(email=email, summitisho=summitisho).exists():
+                return JsonResponse({'error': 'A registration with this email for this workshop already exists.'}, status=400)
+            last_reg = SummitReg.objects.order_by('-summit_id').first()
+            next_tf_id = '3369'
+            if last_reg:
+                last_tf_id = last_reg.summit_id[-4:]
+                next_tf_id = str(int(last_tf_id) + 1).zfill(4)
+            summit_id = f"TF-S23{next_tf_id}"
+            serializer.save(summit_id=summit_id)
+            # compi_reg_serializer.save()
+            subject = "Successful Intl'Summit Registration"
+            message = f"You have successfully registered for the {serializer.validated_data.get('summit')} with email {serializer.validated_data.get('email')} and name {serializer.validated_data.get('name')}"
+            # message = f"Greetings from Techfest, IIT Bombay! \n You have been successfully registered in {serializer.validated_data.get('summit')} Workshop with {serializer.validated_data.get('email')} as your registered email address. Click here to complete the payment procedure. The workshop will be conducted on the Campus of IIT Bombay, and by being part of the workshop, participants will get free access to IIT Bombay and can attend all the events of Techfest. \nThanks and Regards,\nTeam Techfest 2023-24"
+            from_email = 'noreply@techfest.org'
+            recipient_list = [
+                serializer.validated_data.get('email')]
+            try:
+                send_mail(subject, message, from_email, recipient_list)
+                return JsonResponse(serializer.data)
+            except:
+                print('hi')
+                return JsonResponse(serializer.data)
+        res = {'success': False}
+        # print(res)
+        return JsonResponse(res)
+    
+@api_view(['GET'])
+def summits(request):
+    if request.method == 'GET':
+        try:
+            email = get_user_id(request)
+            # email = user.email if user else None
+            summit = Summits.objects.all()
+            serializer = SummitsSerializer(
+                summit, many=True, context={'user': email})
+            return Response(serializer.data)
+        except:
+            summit = Summits.objects.all()
+            serializer = SummitsSerializer(
+                summit, many=True, context={'request': request})
+            return Response(serializer.data)
+
+@api_view(['GET'])
+def ift(request):
+    if request.method == 'GET':
+        try: 
+            email = get_user_id(request)
+            ift = IFT.objects.all()
+            serializer = IFTSerializer(
+                ift, many=True, context={'user': email})
+            return Response(serializer.data)
+        except:
+            ift = IFT.objects.all()
+            serializer = IFTSerializer(
+                ift, many=True, context={'request': request})
+            return Response(serializer.data)
+        
+@api_view(['POST'])
+def iftReg(request):
+    if request.method == 'POST':
+        sexy_word = request.data.get('sexy_word')
+        serializer = IFTRegSerializer(
+            data=request.data, many=False)
+        print(serializer.is_valid())
+        if serializer.is_valid():
+            name = serializer.validated_data.get('driver_name')
+            email = serializer.validated_data.get('driver_email')
+            phone = serializer.validated_data.get('driver_phone')
+            category = serializer.validated_data.get('category')
+            sexy_word1 = f"{name or ''}MereMehboob{email or ''}orKissiOrKe{phone or ''}"
+            if sexy_word != sexy_word1:
+                return JsonResponse({'error': 'Failed'}, status=400)
+            if IFTReg.objects.filter(driver_email=email, category=category).exists() or IFTReg.objects.filter(pit_email=email, category=category).exists():
+                return JsonResponse({'error': 'A registration with this email for this category already exists.'}, status=400)
+            last_reg = IFTReg.objects.order_by('-id').first()
+            next_tf_id = '3369'
+            if last_reg:
+                last_tf_id = last_reg.id
+                next_tf_id = str(int(last_tf_id) + 1).zfill(4)
+            id = f"TF-IFT23{next_tf_id}"
+            serializer.save(tf_id=id)
+            subject = "IFT Registration"
+            message = f"Greetings from Techfest, IIT Bombay! \nYou have successfully registered for the {category} with email {email} and name {name}, and {serializer.validated_data.get('pit_email')} and name {serializer.validated_data.get('pit_name')}\nThanks and Regards,\nTeam Techfest 2023-2"
+            from_email = 'noreply@techfest.org'
+            try:
+                send_mail(subject, message, from_email, [email, serializer.validated_data.get('pit_email')])
+                return JsonResponse(serializer.data)
+            except:
+                return JsonResponse(serializer.data)
+        res = {'success': False}
+        return JsonResponse(res)
+    
+@api_view(['GET'])
+def faces(request):
+    if request.method == 'GET':
+        faces = Faces.objects.all()
+        serializer = FacesSerializer(faces, many=True)
+        print(serializer.data)
+        return Response(serializer.data)
+    

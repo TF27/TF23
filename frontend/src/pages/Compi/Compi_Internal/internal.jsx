@@ -30,10 +30,16 @@ import MERNifier from "./Competitions/MERNifier";
 import RowBoatics from "./Competitions/RowBoatics";
 import Aeromodelling from "./Competitions/Aeromodelling";
 import CertiTech from "./Competitions/CertiTech";
+import Here from "./Competitions/Here";
+import Idrl from "./Competitions/Idrl";
+import Mouse from "./Competitions/Mouse";
+import Edel from "./Competitions/Edel";
+import Datamatics from "./Competitions/Datamatics";
 
-const Internal = () => {
+
+function Internal() {
   const { compiName } = useParams();
-  const [ roboCamp, setRoboCamp ] = useState(false);
+  const [roboCamp, setRoboCamp] = useState(false);
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -43,17 +49,31 @@ const Internal = () => {
     } else if (compiName === "mesh") {
       navigate("/competitions/meshmerize");
     } else if (compiName === "aeromodelling") {
-        navigate("/competitions/boeing%20aeromodelling");
+      navigate("/competitions/boeing%20aeromodelling");
     } else if (compiName === "tfo") {
       navigate("/competitions/techfest%20olympiad");
+    }  else if (compiName === "edelweisstokio") {
+      navigate("/competitions/cashflow%20modelling");
     } else if (compiName === "MERNifier") {
       navigate("/competitions/mernifier");
+    }  else if (compiName === "certiTech") {
+      navigate("/competitions/certiTech");
+    } else if (compiName === "idrl") {
+      navigate("/competitions/int'l%20drone%20racing");
     } else if (compiName === "RowBoatics") {
       navigate("/competitions/rowboatics");
+    } else if (compiName === "cashflow") {
+      navigate("/competitions/cashflow%20modelling");
+    } else if (compiName === "micromouse") {
+      navigate("/competitions/micromouse%20challenge");
     } else if (compiName === "uf") {
       navigate("/competitions/urban-futurism");
     } else if (compiName === "taskwhiz") {
       navigate("/competitions/task%20whiz");
+    } else if (compiName === "here") {
+      navigate("/competitions/here%20hackathon");
+    } else if (compiName === "datamatics") {
+      navigate("/competitions/datamatics%20hackathon");
     } else if (compiName === "ai") {
       navigate("/workshops/artificial%20intelligence");
     } else if (compiName === "ml") {
@@ -69,40 +89,50 @@ const Internal = () => {
     } else if (compiName === "aws") {
       navigate("/workshops/cloud%20computing%20by%20amazon");
     } else if (compiName === "tih") {
-        navigate("/competitions/tIH%20-%20ioT");
+      navigate("/competitions/tIH%20-%20ioT");
     } else if (compiName === "sixthsense") {
-      navigate("/workshops/6th%20sense%20robotics"); 
+      navigate("/workshops/6th%20sense%20robotics");
     } else if (compiName === "quadcopter") {
-      navigate("/workshops/quadcopter"); 
+      navigate("/workshops/quadcopter");
+    }  else if (compiName === "bioanalytics") {
+      navigate("/workshops/bio%20analytics");
     } else if (compiName === "webdev") {
-      navigate("/workshops/web%20development"); 
+      navigate("/workshops/web%20development");
     } else if (compiName === "appdev") {
-      navigate("/workshops/android%20development"); 
+      navigate("/workshops/android%20development");
     } else if (compiName === "crypto") {
-      navigate("/workshops/crypto%20trading%20by%20wazirX"); 
+      navigate("/workshops/crypto%20trading%20by%20wazirX");
     } else if (compiName === "web3") {
-      navigate("/workshops/web%203.0"); 
+      navigate("/workshops/web%203.0");
     } else if (compiName === "csec") {
-      navigate("/workshops/cybersecurity"); 
+      navigate("/workshops/cybersecurity");
+    }  else if (compiName === "marketing") {
+      navigate("/workshops/digital%20marketing");
     } else if (compiName === "analytics") {
-      navigate("/workshops/data%20analytics"); 
+      navigate("/workshops/data%20analytics");
     } else if (compiName === "ev") {
-      navigate("/workshops/electric%20vehicles"); 
+      navigate("/workshops/electric%20vehicles");
     } else if (compiName === "solarizer") {
-      navigate("/workshops/solarizer"); 
+      navigate("/workshops/solarizer");
     } else if (compiName === "robotics") {
-      navigate("/workshops/gesture%20robotics"); 
+      navigate("/workshops/gesture%20robotics");
     } else if (compiName === "arduino") {
-      navigate("/workshops/arduino"); 
+      navigate("/workshops/arduino");
+    } else if (compiName === "java") {
+      navigate("/workshops/java");
+    } else if (compiName === "design") {
+      navigate("/workshops/uI%20uX%20design");
+    } else if (compiName === "gamedev") {
+      navigate("/workshops/game%20development");
     } else if (compiName === "python") {
-      navigate("/workshops/python"); 
+      navigate("/workshops/python");
     } else if (compiName === "blockchain") {
-      navigate("/workshops/blockchain"); 
+      navigate("/workshops/blockchain");
     } else if (compiName === "robocap league") {
       setRoboCamp(true);
     }
     // Add more conditions as needed for other compiNames
-}, [navigate, compiName]);
+  }, [navigate, compiName]);
 
   const [data, setData] = useState([]);
   const { googleSignIn, user } = UserAuth();
@@ -174,8 +204,7 @@ const Internal = () => {
                     <img
                       src={data.sponsorImg}
                       alt="Sponsor"
-                      className={styles.sponsorImg}
-                    />
+                      className={styles.sponsorImg} />
                   </h3>
                 </a>
               )}
@@ -209,7 +238,11 @@ const Internal = () => {
             {compiName === "rowboatics" && <RowBoatics />}
             {compiName === "boeing aeromodelling" && <Aeromodelling />}
             {compiName === "certiTech" && <CertiTech />}
-
+            {compiName === "here hackathon" && <Here />}
+            {compiName === "int'l drone racing" && <Idrl />}
+            {compiName === "micromouse challenge" && <Mouse />}
+            {compiName === "cashflow modelling" && <Edel />}
+            {compiName === "datamatics hackathon" && <Datamatics />}
             <div className={styles.team_reg}>
               {user === null ? (
                 <div>
@@ -283,7 +316,7 @@ const Internal = () => {
   const imageList = [backimg1, backimg2];
 
   const top = {
-    backgroundImage: `url(${imageList[0]})`, // Initial background image
+    backgroundImage: `url(${imageList[0]})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
@@ -317,6 +350,6 @@ const Internal = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Internal;

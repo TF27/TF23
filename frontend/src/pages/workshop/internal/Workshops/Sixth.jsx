@@ -73,7 +73,7 @@ const Sixth = () => {
             <div className={styles.info_data}>
             1. <b>Eligibility:</b> Participants will have to register individually for each workshop. <br/>
             2. <b>Payment Instructions:</b> While paying the fees, login with the same credentials with which you had registered on the Techfest Website. Please enter the data correctly for us to process your payment information properly. <br/>
-            3. <b>Prerequisites:</b> A laptop/PC with Microsoft Windows (7 or later & Minimum 4GB RAM), configuration Internet Connectivity (Typically to be able to do video call / conferencing), Notepad & Pen. <br/>
+            3. <b>Prerequisites:</b> A laptop/PC with Minimum 4GB RAM, configuration Internet Connectivity, Notepad & Pen. <br/>
             4. <b>Certificate Criterion:</b> Participants should be present in all the sessions. Failing this, no certificate will be awarded to the participant. Certificate of Training from Techfest, IIT Bombay will be given to all the participants.<br/>
             <br />No Refunds will be entertained <br />
             **Limited number of seats <br/>

@@ -18,3 +18,12 @@ admin.site.register(Robowars)
 admin.site.register(robowar_reg)
 
 admin.site.register(AccoReg)
+
+admin.site.register(Summits)
+admin.site.register(SummitSpeaker)
+admin.site.register(SummitReg)
+
+admin.site.register(IFT)
+admin.site.register(IFTReg)
+
+admin.site.register(Faces)

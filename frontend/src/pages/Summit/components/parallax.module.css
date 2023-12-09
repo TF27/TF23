@@ -15,7 +15,7 @@
 }
 
 .layer1 {
-  background-image: url('../assets/back.png');
+  /* background-image: url('../assets/back.png'); */
   z-index: -1;
   position: relative;
   width: 100vw;
@@ -26,7 +26,7 @@
 }
 
 .layer2 {
-  background-image: url('../assets/mid.png');
+  /* background-image: url('../assets/mid.png'); */
   opacity: 1;
   z-index: 0;
   margin-top: 10%;
@@ -38,14 +38,15 @@
 }
 
 .layer3 {
-  background-image: url('../assets/fore.png');
+  background-image: url('../assets/finhome.jpg');
   opacity: 1;
   z-index: -1;
-  margin-top: 70pt;
-  height: 85vh;
-  background-size: auto 90vh;
+  /* margin-top: 70pt; */
+  height: 112vh;
+  width: 102vw;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
 }
 
 .image {

@@ -9,7 +9,6 @@ import dot from "../Compi/static/card/dot.png";
 import chand from "../Compi/static/card/chand.png";
 import espark from "../Compi/static/card/espark.png";
 import fspark from "../Compi/static/card/fspark.png";
-import WhatsappShareButton from "../../components/share/whatsapp";
 
 // Here is the code
 const Cards = () => {

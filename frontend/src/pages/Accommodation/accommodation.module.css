@@ -15,6 +15,11 @@
   top:2vw;
 }
 
+.regUp{
+  margin-top: -200px;
+  margin-bottom: 200px;
+}
+
 .tab {
   padding: 10px 20px;
   cursor: pointer;
@@ -91,14 +96,14 @@
 .content-rect1 {
   border: #ab8d60 2px solid;
   width: 80vw;
-  height: 70vh;
+  height: 38vh;
   margin: auto;
 }
 
 .content-rect2 {
   border: #ab8d60 2px solid;
   width: 80vw;
-  height: 70vh;
+  height: 101%;
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
   transform: translate(3px, 3px);
@@ -128,6 +133,7 @@
   width: 78vw;
   top: 3vh;
   height: 40vh;
+  margin:auto;
 }
 
 .check-rect1 {
@@ -197,7 +203,7 @@
   width: 40vw;
   height: 10vh;
   margin: auto;
-  margin-bottom: 10vw;
+  /* margin-bottom: 10vw; */
 }
 
 .people-rect2 {
@@ -267,7 +273,7 @@ border: 1px solid rgba(255, 255, 255, 0.6);
   border-top-right-radius: 0px;
   width: 80vw;
   height: max-content;
-  margin-top: 10vh;
+  margin-top: 35px;
   border: 1px solid white;
   /* border-image: linear-gradient(to bottom, #FFFFFF, transparent); */
   overflow: hidden;
@@ -381,7 +387,7 @@ border: 1px solid rgba(255, 255, 255, 0.6);
   .content-rect2 {
     border: #ab8d60 2px solid;
     width: 80vw;
-    height: 60vh;
+    height: 101%;
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
     transform: translate(3px, 3px);
@@ -394,7 +400,7 @@ border: 1px solid rgba(255, 255, 255, 0.6);
   .content-rect1 {
     border: #ab8d60 2px solid;
     width: 80vw;
-    height: 60vh;
+    height: 33vh;
     margin: auto;
   }
   

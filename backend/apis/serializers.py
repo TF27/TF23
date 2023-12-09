@@ -115,3 +115,52 @@ class SustainRegWebinarSerializer(serializers.ModelSerializer):
     class Meta:
         model = SustainRegWebinar
         fields = '__all__'
+
+class SummitsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Summits
+        fields = '__all__'
+
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        user = self.context.get('user')
+        has_paid = False
+        if user:
+            has_paid = SummitReg.objects.filter(email=user, summitisho=instance, paid=True).exists()
+        representation['is_registered'] = SummitReg.objects.filter(email=user, summitisho=instance).exists()
+        return representation
+
+
+class SummitSpeakerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SummitSpeaker
+        fields = '__all__'
+
+class SummitRegSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SummitReg
+        fields = '__all__'
+
+class IFTSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = IFT
+        fields = '__all__'
+
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        user = self.context.get('user')
+        representation['is_registered'] = False
+        if IFTReg.objects.filter(driver_email=user, category=instance).exists() or IFTReg.objects.filter(pit_email=user, category=instance).exists():
+            representation['is_registered'] = True
+        # representation['is_registered'] = IFTReg.objects.filter(driver_email=user, category=instance).exists()
+        return representation
+
+class IFTRegSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = IFTReg
+        fields = '__all__'
+
+class FacesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Faces
+        fields = '__all__'
