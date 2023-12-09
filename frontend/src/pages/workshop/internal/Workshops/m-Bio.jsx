@@ -146,17 +146,17 @@ const Bio = () => {
             Akshat Gupta
             <div
               className="contactNum"
-              onClick={() => (window.location.href = `tel:9619678850`)}
+              onClick={() => (window.location.href = `tel:99964 37175`)}
             >
-              +91 96196 78850
+              +91 99964 37175
             </div>
             <div
               className="contactMail"
               onClick={() =>
-                (window.location.href = `mailto:akshat@techfest.org`)
+                (window.location.href = `mailto:mankirat@techfest.org`)
               }
             >
-              akshat@techfest.org
+              mankirat@techfest.org
             </div>
           </div>
         </div>

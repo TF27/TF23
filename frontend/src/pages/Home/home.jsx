@@ -42,25 +42,25 @@ import work4 from "./assets/explore/works4.jpg";
 
 const dataWorkshops = [
   {
-    perLink: "workshops/data to aI by google",
+    perLink: "google",
     image: work1,
     name: "Data to AI by Google",
     posi: "( INR 1699 )",
   },
   {
-    perLink: "workshops/cloud computing by amazon",
+    perLink: "aws",
     image: work2,
     name: "Cloud Computing by Amazon",
     posi: "( INR 1599 )",
   },
   {
-    perLink: "workshops/ethical hacking",
+    perLink: "hacking",
     image: work3,
     name: "Ethical Hacking",
     posi: "( INR 1899 )",
   },
   {
-    perLink: "workshops/python",
+    perLink: "python",
     image: work4,
     name: "Python",
     posi: "( INR 1490 )",
@@ -80,7 +80,7 @@ const dataCompetitions = [
     posi: "( INR 1,00,000 )",
   },
   {
-    perLink: "competitions/techfest olympiad",
+    perLink: "workshops",
     image: comp3,
     name: "Techfest Olympiad",
     posi: "( INR 40,000 )",
@@ -94,25 +94,25 @@ const dataCompetitions = [
 ];
 const dataLectures = [
   {
-    perLink: "competitions/cozmoclench",
+    perLink: "workshops",
     image: lec1,
     name: "Late Dr. APJ Abdul Kalam",
     posi: "(Former President)",
   },
   {
-    perLink: "competitions/meshmerize",
+    perLink: "workshops",
     image: lec2,
     name: "The 14th Dalai Lama",
     posi: "(Nobel Laureate, Peace)",
   },
   {
-    perLink: "competitions/techfest olympiad",
+    perLink: "workshops",
     image: lec3,
     name: "N R Narayana Murty",
     posi: "( Co-Founder of Infosys)",
   },
   {
-    perLink: "competitions/codecode",
+    perLink: "workshops",
     image: lec4,
     name: "Zaheer Khan",
     posi: "(Former Indian Cricketer)",
@@ -120,25 +120,25 @@ const dataLectures = [
 ];
 const dataExhibitions = [
   {
-    perLink: "competitions/cozmoclench",
+    perLink: "workshops",
     image: exh1,
     name: "Sophia",
     posi: "(Hong Kong)",
   },
   {
-    perLink: "competitions/meshmerize",
+    perLink: "workshops",
     image: exh2,
     name: "Gravity Industries",
     posi: "(UK)",
   },
   {
-    perLink: "competitions/techfest olympiad",
+    perLink: "ml",
     image: exh3,
     name: "Virgin Hyperloop",
     posi: "(USA)",
   },
   {
-    perLink: "competitions/codecode",
+    perLink: "ai",
     image: exh4,
     name: "AirCar",
     posi: "(Turkey)",

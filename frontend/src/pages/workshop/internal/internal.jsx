@@ -32,6 +32,7 @@ import Quad from "./Workshops/Quad";
 import Bio from "./Workshops/Bio";
 import Uiux from "./Workshops/Uiux";
 import Java from "./Workshops/Java";
+import Game from "./Workshops/Game";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -224,6 +225,7 @@ const Internal = () => {
             {cardName === "bio analytics" && <Bio/>}
             {cardName === "uI uX design" && <Uiux/>}
             {cardName === "java" && <Java/>}
+            {cardName === "game development" && <Game/>}
           </div>
         </div>
       </div>

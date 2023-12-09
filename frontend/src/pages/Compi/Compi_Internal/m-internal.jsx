@@ -99,6 +99,8 @@ const MInternal = () => {
     navigate("/workshops/android%20development"); 
   } else if (compiName === "crypto") {
     navigate("/workshops/crypto%20trading%20by%20wazirX"); 
+  } else if (compiName === "gamedev") {
+    navigate("/workshops/gamedev"); 
   } else if (compiName === "web3") {
     navigate("/workshops/web%203.0"); 
   } else if (compiName === "java") {

@@ -122,6 +122,8 @@ function Internal() {
       navigate("/workshops/java");
     } else if (compiName === "design") {
       navigate("/workshops/uI%20uX%20design");
+    } else if (compiName === "gamedev") {
+      navigate("/workshops/game%20development");
     } else if (compiName === "python") {
       navigate("/workshops/python");
     } else if (compiName === "blockchain") {
