@@ -111,7 +111,7 @@ const Internal = () => {
                   <div className={styles.statement}>
                     <div className={styles.stat_rect1}></div>
                     <div className={styles.stat_rect2}>
-                      <Link>Closed
+                      <Link>Sold Out
                       </Link>
                     </div>
                   </div>
