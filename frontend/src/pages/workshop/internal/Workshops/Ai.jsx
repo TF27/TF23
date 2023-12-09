@@ -166,10 +166,7 @@ const Ai = () => {
                 with the same credentials with which you had registered on the
                 Techfest Website. Please enter the data correctly for us to
                 process your payment information properly. <br />
-                3. <b>Prerequisites:</b> A laptop/PC with Microsoft Windows (7
-                or later & Minimum 4GB RAM), configuration Internet Connectivity
-                (Typically to be able to do video call / conferencing), Notepad
-                & Pen. <br />
+                3. <b>Prerequisites:</b> A laptop/PC with Minimum 4GB RAM, configuration Internet Connectivity, Notepad & Pen. <br />
                 4. <b>Certificate Criterion:</b> Participants should be present
                 in all the sessions. Failing this, no certificate will be
                 awarded to the participant. Certificate of Training from
