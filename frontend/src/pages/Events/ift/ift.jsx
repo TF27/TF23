@@ -10,6 +10,12 @@ import robert from './assets/Robert.png'
 import jao from './assets/Joao.jpg';
 import rayan from './assets/rayan1.jpg';
 import auv from './assets/auvinet1.jpg';
+import i1 from "./assets/circuit.jpg";
+import i2 from "./assets/gopro.jpg";
+import i3 from "./assets/ift_collage.jpg";
+import i4 from "./assets/ift_collage3.jpg";
+import i5 from "./assets/professional_presentor.jpg";
+import i6 from "./assets/three.jpg";
 
 const IFT = () => {
   const dataPastD = [
@@ -114,16 +120,12 @@ const IFT = () => {
       <Border text="In Association With" />
       <Border text="Gallery" />
       <Carousel
-        i1={fin}
-        i2={fin}
-        i3={fin}
-        i4={fin}
-        i5={fin}
-        i6={fin}
-        i7={fin}
-        i8={fin}
-        i9={fin}
-        i10={fin}
+        i1={i1}
+        i2={i2}
+        i3={i3}
+        i4={i4}
+        i5={i5}
+        i6={i6}
       />
       <Border text="Contact Us" />
       <div className={styles.contact}>
