@@ -34,6 +34,7 @@ import Uiux from "./Workshops/Uiux";
 import Java from "./Workshops/Java";
 import Game from "./Workshops/Game";
 import Ethack from "./Workshops/Ethack";
+// import Qdrone from "./Workshops/Qdrone.jsx";
 import Qdrone from "./Workshops/Qdrone";
 
 const Internal = () => {

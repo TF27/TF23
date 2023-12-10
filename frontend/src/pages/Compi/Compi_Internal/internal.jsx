@@ -35,7 +35,7 @@ import Idrl from "./Competitions/Idrl";
 import Mouse from "./Competitions/Mouse";
 import Edel from "./Competitions/Edel";
 import Datamatics from "./Competitions/Datamatics";
-
+import Soker from "./Competitions/Soker";
 
 function Internal() {
   const { compiName } = useParams();
@@ -243,6 +243,7 @@ function Internal() {
             {compiName === "micromouse challenge" && <Mouse />}
             {compiName === "cashflow modelling" && <Edel />}
             {compiName === "datamatics hackathon" && <Datamatics />}
+            {compiName === "robosoccer" && <Soker />}
             <div className={styles.team_reg}>
               {user === null ? (
                 <div>
