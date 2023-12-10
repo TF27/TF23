@@ -19,7 +19,7 @@ import comp3 from "./assets/explore/Compi3.jpg";
 import comp4 from "./assets/explore/Compi4.jpg";
 import work1 from "./assets/explore/works1.png";
 import work2 from "./assets/explore/works2.jpg";
-import work3 from "./assets/explore/works3.jpg";
+import work3 from "./assets/explore/works3.jpeg";
 import work4 from "./assets/explore/works4.jpg";
 
 // import MetaTags from 'react-meta-tags';
@@ -54,10 +54,10 @@ const dataWorkshops = [
     posi: "( INR 1599 )",
   },
   {
-    perLink: "hacking",
+    perLink: "quadcopter",
     image: work3,
-    name: "Ethical Hacking",
-    posi: "( INR 1899 )",
+    name: "Quadcopter (slot 2)",
+    posi: "( INR 5990 )",
   },
   {
     perLink: "python",

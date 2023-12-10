@@ -83,7 +83,7 @@ function Internal() {
     } else if (compiName === "chatgpt") {
       navigate("/workshops/chatgpt%20(prompt%20engineering)");
     } else if (compiName === "hacking") {
-      navigate("/workshops/ethical%20hacking");
+      navigate("/workshops/ethical%20hacking%20(slot%202)");
     } else if (compiName === "google") {
       navigate("/workshops/data%20to%20aI%20by%20google");
     } else if (compiName === "aws") {
@@ -93,7 +93,7 @@ function Internal() {
     } else if (compiName === "sixthsense") {
       navigate("/workshops/6th%20sense%20robotics");
     } else if (compiName === "quadcopter") {
-      navigate("/workshops/quadcopter");
+      navigate("/workshops/quadcopter%20(slot%202)");
     }  else if (compiName === "bioanalytics") {
       navigate("/workshops/bio%20analytics");
     } else if (compiName === "webdev") {

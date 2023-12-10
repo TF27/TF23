@@ -34,6 +34,7 @@ import Uiux from "./Workshops/Uiux";
 import Java from "./Workshops/Java";
 import Game from "./Workshops/Game";
 import Ethack from "./Workshops/Ethack";
+import Qdrone from "./Workshops/Qdrone";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -237,6 +238,7 @@ const Internal = () => {
             {cardName === "uI uX design" && <Uiux/>}
             {cardName === "java" && <Java/>}
             {cardName === "ethical hacking (slot 2)" && <Ethack/>}
+            {cardName === "quadcopter (slot 2)" && <Qdrone/>}
             {cardName === "game development" && <Game/>}
           </div>
         </div>
