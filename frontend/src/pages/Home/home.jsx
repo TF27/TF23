@@ -17,7 +17,7 @@ import comp1 from "./assets/explore/Compi1.jpeg";
 import comp2 from "./assets/explore/Compi2.jpeg";
 import comp3 from "./assets/explore/Compi3.jpg";
 import comp4 from "./assets/explore/Compi4.jpg";
-import work1 from "./assets/explore/works1.png";
+import work1 from "./assets/explore/works1.jpg";
 import work2 from "./assets/explore/works2.png";
 import work3 from "./assets/explore/works3.jpeg";
 import work4 from "./assets/explore/works4.jpg";
