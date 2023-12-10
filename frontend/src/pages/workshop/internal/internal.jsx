@@ -33,6 +33,7 @@ import Bio from "./Workshops/Bio";
 import Uiux from "./Workshops/Uiux";
 import Java from "./Workshops/Java";
 import Game from "./Workshops/Game";
+import Ethack from "./Workshops/Ethack";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -235,6 +236,7 @@ const Internal = () => {
             {cardName === "bio analytics" && <Bio/>}
             {cardName === "uI uX design" && <Uiux/>}
             {cardName === "java" && <Java/>}
+            {cardName === "ethical hacking (slot 2)" && <Ethack/>}
             {cardName === "game development" && <Game/>}
           </div>
         </div>
