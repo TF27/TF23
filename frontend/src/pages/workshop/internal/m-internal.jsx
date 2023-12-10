@@ -36,6 +36,8 @@ import Ui from "./Workshops/m-Ui";
 // import Uiux from "./Workshops/m-Uiux";
 import Java from "./Workshops/m-Java";
 import Game from "./Workshops/m-Game";
+import Ethack from "./Workshops/m-Ethack";
+import Qdrone from "./Workshops/m-Qdrone";
 
 const MInternal = () => {
   const { cardName } = useParams();
@@ -222,6 +224,8 @@ const MInternal = () => {
             {cardName === "bio analytics" && <Bio/>}
             {cardName === "uI uX design" && <Ui/>}
             {cardName === "java" && <Java/>}
+            {cardName === "ethical hacking (slot 2)" && <Ethack/>}
+            {cardName === "quadcopter (slot 2)" && <Qdrone/>}
             {cardName === "game development" && <Game/>}
 
           </div>

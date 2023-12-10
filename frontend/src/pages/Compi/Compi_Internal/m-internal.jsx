@@ -36,6 +36,7 @@ import Idrl from "./Competitions/m-Idrl";
 import Mouse from "./Competitions/m-Mouse";
 import Edel from "./Competitions/m-Edel";
 import Datamatics from "./Competitions/m-Datamatics";
+import Soker from "./Competitions/m-Soker";
 
 const MInternal = () => {
   const { compiName } = useParams();
@@ -310,6 +311,7 @@ const MInternal = () => {
         {compiName === "micromouse challenge" && <Mouse/>}
         {compiName === "cashflow modelling" && <Edel/>}
         {compiName === "datamatics hackathon" && <Datamatics />}
+        {compiName === "robosoccer" && <Soker/>}
       </div>
     ));
   };
