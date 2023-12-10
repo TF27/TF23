@@ -32,8 +32,12 @@ import Digitalm from "./Workshops/m-Digitalm";
 import Ds from "./Workshops/m-Ds";
 import Quad from "./Workshops/m-Quad";
 import Bio from "./Workshops/m-Bio";
-import Uiux from "./Workshops/m-Ui";
+import Ui from "./Workshops/m-Ui";
+// import Uiux from "./Workshops/m-Uiux";
 import Java from "./Workshops/m-Java";
+import Game from "./Workshops/m-Game";
+import Ethack from "./Workshops/m-Ethack";
+import Qdrone from "./Workshops/m-Qdrone";
 
 const MInternal = () => {
   const { cardName } = useParams();
@@ -97,7 +101,18 @@ const MInternal = () => {
                     </div>
                   </div>
                 </div>
-              ) : data.is_registered ? (
+              ) : data.closed ? (
+                <div>
+                  <div className={styles.statement}>
+                    <div className={styles.stat_rect1}></div>
+                    <div className={styles.stat_rect2}>
+                      <Link>Sold Out
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ) : 
+              data.is_registered ? (
                 <div>
                   <div className={styles.statement}>
                     <div className={styles.stat_rect1}></div>
@@ -207,8 +222,11 @@ const MInternal = () => {
             {cardName === "data science" && <Ds/>}
             {cardName === "quadcopter" && <Quad/>}
             {cardName === "bio analytics" && <Bio/>}
-            {cardName === "uI uX design" && <Uiux/>}
+            {cardName === "uI uX design" && <Ui/>}
             {cardName === "java" && <Java/>}
+            {cardName === "ethical hacking (slot 2)" && <Ethack/>}
+            {cardName === "quadcopter (slot 2)" && <Qdrone/>}
+            {cardName === "game development" && <Game/>}
 
           </div>
         </div>

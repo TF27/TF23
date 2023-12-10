@@ -36,6 +36,7 @@ import Idrl from "./Competitions/m-Idrl";
 import Mouse from "./Competitions/m-Mouse";
 import Edel from "./Competitions/m-Edel";
 import Datamatics from "./Competitions/m-Datamatics";
+import Soker from "./Competitions/m-Soker";
 
 const MInternal = () => {
   const { compiName } = useParams();
@@ -99,6 +100,8 @@ const MInternal = () => {
     navigate("/workshops/android%20development"); 
   } else if (compiName === "crypto") {
     navigate("/workshops/crypto%20trading%20by%20wazirX"); 
+  } else if (compiName === "gamedev") {
+    navigate("/workshops/gamedev"); 
   } else if (compiName === "web3") {
     navigate("/workshops/web%203.0"); 
   } else if (compiName === "java") {
@@ -308,6 +311,7 @@ const MInternal = () => {
         {compiName === "micromouse challenge" && <Mouse/>}
         {compiName === "cashflow modelling" && <Edel/>}
         {compiName === "datamatics hackathon" && <Datamatics />}
+        {compiName === "robosoccer" && <Soker/>}
       </div>
     ));
   };

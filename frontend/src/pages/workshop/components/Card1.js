@@ -46,7 +46,10 @@ const Card = ({ card }) => {
               <div className={styles.card_reg}>
                 <button onClick={handleGoogleSignIn}>Register</button>
               </div>
-            ) : card.is_registered ? (
+            ) : card.closed ? (
+              <div className={styles.card_reg}>Sold Out</div>
+            )
+            : card.is_registered ? (
               <div className={styles.card_reg}>Registered</div>
             ) : (
               <div className={styles.card_reg}>

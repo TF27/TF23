@@ -32,6 +32,10 @@ import Quad from "./Workshops/Quad";
 import Bio from "./Workshops/Bio";
 import Uiux from "./Workshops/Uiux";
 import Java from "./Workshops/Java";
+import Game from "./Workshops/Game";
+import Ethack from "./Workshops/Ethack";
+// import Qdrone from "./Workshops/Qdrone.jsx";
+import Qdrone from "./Workshops/Qdrone";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -102,6 +106,16 @@ const Internal = () => {
                     <div className={styles.stat_rect1}></div>
                     <div className={styles.stat_rect2}>
                       <Link to={`register`}>Register</Link>
+                    </div>
+                  </div>
+                </div>
+              ) : data.closed ? (
+                <div>
+                  <div className={styles.statement}>
+                    <div className={styles.stat_rect1}></div>
+                    <div className={styles.stat_rect2}>
+                      <Link>Sold Out
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -224,6 +238,9 @@ const Internal = () => {
             {cardName === "bio analytics" && <Bio/>}
             {cardName === "uI uX design" && <Uiux/>}
             {cardName === "java" && <Java/>}
+            {cardName === "ethical hacking (slot 2)" && <Ethack/>}
+            {cardName === "quadcopter (slot 2)" && <Qdrone/>}
+            {cardName === "game development" && <Game/>}
           </div>
         </div>
       </div>
