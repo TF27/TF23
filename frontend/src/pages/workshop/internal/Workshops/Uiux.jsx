@@ -86,9 +86,9 @@ const Uiux = () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Yatharth Manchanda <br/>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8307139636`}>+91 83071 39636</div>
-                    <div className="col-3 contactMail" onClick={() => window.location.href = `yatharth@techfest.org`}>yatharth@techfest.org</div>
+              Atharv Apshinge <br/>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:9324589830`}>+91 93245 89830</div>
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `atharv@techfest.org`}>atharv@techfest.org</div>
                     
               </div>
             </div>
