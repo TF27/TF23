@@ -660,6 +660,7 @@ def acco_reg(request):
     if request.method == 'POST':
         sexy_word = request.data.get('sexy_word')
         acco_reg_serializer = AccoRegSerializer(data=request.data, many=False)
+        # print(acco_reg_serializer)
         if acco_reg_serializer.is_valid():
             name = acco_reg_serializer.validated_data.get('name')
             email = acco_reg_serializer.validated_data.get('email')
@@ -688,8 +689,10 @@ def acco_reg(request):
             try:
                 send_mail(subject, message, from_email, [
                         acco_reg_serializer.validated_data.get('email')])
+                print('with mail')
                 return JsonResponse(acco_reg_serializer.data)
             except:
+                print('without mail')
                 return JsonResponse(acco_reg_serializer.data)
         res = {'success': False}
         return JsonResponse(res)
