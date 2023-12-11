@@ -29,7 +29,7 @@
     background-image: url('../img/accofore.png');
     opacity: 1;
     z-index: 0;
-    margin-top: 10%;
+    margin-top: -10%;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-y:30%;
