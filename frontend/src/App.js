@@ -401,9 +401,11 @@ function App() {
             <Route
               path="/ift/:cardName/register"
               element={
+                <React.Suspense fallback={<div>Loading...</div>}>
                 <Protected>
                   <IFTReg />
                 </Protected>
+                </React.Suspense>
               }
             />
           </Routes>

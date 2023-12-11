@@ -26,9 +26,11 @@
 }
 
 .car{
-    top: 11px;
+    /* top: 11px; */
     z-index: 1;
-    background-size: contain;
+    background-position:right;
+
+    background-size: cover;
     background-image: url('./assets/Car.png');
 }
 
@@ -330,7 +332,7 @@
   .about iframe{
     border: 1px solid #fff;
     border-radius: 8px;
-    width: 330px;
+    width: 310px;
     height: 200px;
   }
   .aboutT{
@@ -393,4 +395,22 @@
   }
   .phone{
     margin-bottom: 20px;
+  }
+
+  .ass img{
+    width: 200px;
+    height: 100px;
+
+  }
+
+  @media (max-width: 560px) {
+    .contact{
+      width: 60%;
+    }
+    .car{
+      background-image: url('./assets/mCard.png');
+    }
+    .img3{
+      background-image: url('./assets/ift-m.png');
+  }
   }

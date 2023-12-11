@@ -63,8 +63,59 @@ const WorkReg = () => {
   //   });
   // }
   // setInterval(checkInputValues, 100);
-
-  let paynow = 'https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer'
+  let paynow;
+  if (cardName ==='bio analytics'){
+    paynow = 'https://www.meraevents.com/event/bio-analytics-workshop-by-techfest-iit-bombay?ucode=organizer'
+  } else if (cardName==='java'){
+    paynow = 'https://www.meraevents.com/event/java-workshop-at-iit-bombay?ucode=organizer'
+  } else if (cardName==='crypto trading by wazirX'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-crypto-trading-workshop-at-techfest?ucode=organizer'
+  } else if (cardName==='cloud computing by amazon'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-amazon-cloud-computing-workshop-at-techfest?ucode=organizer'
+  } else if (cardName==='web development'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-web-dev-workshop-at-techfest?ucode=organizer'
+  } else if (cardName==='blockchain'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-blockchain-workshop-at-techfest?ucode=organizer'
+  } else if (cardName==='machine learning'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-machine-learning-workshop-at-techfest?ucode=organizer'
+  } else if (cardName==='arduino'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-arduino-workshop-at-techfest-copy?ucode=organizer'
+  } else if (cardName==='python'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-pyhton-workshop-at-techfest-copy?ucode=organizer'
+  } else if (cardName==='android development'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-android-workshop-at-techfest?ucode=organizer'
+  } else if (cardName==='cybersecurity'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-cybersecurity-workshop-at-iit-bombay?ucode=organizer'
+  } else if (cardName==='digital marketing'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-digital-marketing-workshop-at-techfest?ucode=organizer'
+  } else if (cardName==='artificial intelligence'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-artificial-intelligence-workshop-at-techfest?ucode=organizer'
+  } else if (cardName==='game development'){
+    paynow = 'https://www.meraevents.com/event/game-development-workshop-at-iit-bombay?ucode=organizer'
+  } else if (cardName==='ethical hacking'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-ethical-hacking-workshop-at-techfest?ucode=organizer'
+  } else if (cardName==='data analytics'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-data-analytics-workshop-at-techfest-copy?ucode=organizer'
+  } else if (cardName==='solarizer'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-solarizer-workshop-at-techfest?ucode=organizer'
+  } else if (cardName==='data to aI by google'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-data-to-ai-workshop-at-techfest?ucode=organizer'
+  } else if (cardName==='electric vehicles'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-electric-vehicles-workshop-at-techfest?ucode=organizer'
+  } else if (cardName==='6th sense robotics'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-6th-sense-robotics-workshop-at-techfest-copy?ucode=organizer'
+  } else if (cardName==='gesture robotics'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-gesture-robotics-workshop-at-techfest?ucode=organizer'
+  } else if (cardName==='chatgpt (prompt engineering)'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-chatgpt-prompt-engineering-workshop?ucode=organizer'
+  } else if (cardName==='web 3.0'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-web-3-0-workshop-at-techfest?ucode=organizer'
+  } else if (cardName==='quadcopter (slot 2)'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-quadcopter-workshop-at-techfest?ucode=organizer'
+  } else if (cardName==='uI uX design'){
+    paynow = 'https://www.meraevents.com/event/ui-ux-design-workshop-at-iit-bombay?ucode=organizer'
+  }
+ 
 
 
 
@@ -78,7 +129,7 @@ const WorkReg = () => {
       .post("/api/workshop_reg/", updatedFormData)
       .then((response) => {
         alert("Registered succesfully!!");
-        // window.open(paynow, '_blank');
+        window.open(paynow, '_blank');
         navigate(`/workshops/${cardName}`);
       })
       .catch((error) => {
