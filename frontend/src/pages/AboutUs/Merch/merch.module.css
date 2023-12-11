@@ -1,0 +1,85 @@
+.overlay{
+    background: rgba(0, 0, 0, 0.299);
+    height: 100%;
+    width: 100vw;
+    padding-bottom: 30vh;
+    background-attachment: fixed;
+}
+
+.m1{
+    font-size: 20px;
+    max-width: 95%;
+    margin:auto;
+}
+
+.titSpn_rect1 {
+    border: #ab8d60 2px solid;
+    width: 350px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+  
+  .titSpn_rect2 {
+    border: #ab8d60 2px solid;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    transform: translate(3px, 3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: "Forum", sans-serif;
+  }
+
+  .titSpn_rect2 img{
+    width: 100%;
+    height: 200px;
+  }
+
+  .b_rect1 {
+    border: #ab8d60 2px solid;
+    width: 160px;
+    height: 40px;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  
+  .b_rect2 {
+    border: #ab8d60 2px solid;
+    width: 160px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    transform: translate(3px, 3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: "Forum", sans-serif;
+  }
+  .b_rect2 a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .merch h1{
+    padding-top: 100px;
+  }
+
+  .bigO{
+    display: flex;
+    justify-content: space-around;
+    max-width: 95%;
+    margin: auto;
+  }
+
+  .price{
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  
