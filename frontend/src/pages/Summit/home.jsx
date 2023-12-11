@@ -107,7 +107,7 @@ function Summit() {
             {/* {data.map((summit, index) => (
               <Card key={index} data={summit} />
             ))} */}
-            {card()}
+            {/* {card()} */}
           </div>
         </div>
       </div>
