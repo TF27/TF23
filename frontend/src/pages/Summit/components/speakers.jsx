@@ -26,7 +26,7 @@ const Speakers = ({ summit }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/api/summitSpeaker", {
+        const response = await axios.get("/api/summitSpeaker/", {
           headers: {
             "X-Email": google_id,
           },
