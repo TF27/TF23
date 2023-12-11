@@ -20,7 +20,7 @@ function Summit() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/api/summits", {
+        const response = await axios.get("/api/summits/", {
           headers: {
             "X-Email": google_id,
           },
@@ -107,7 +107,7 @@ function Summit() {
             {/* {data.map((summit, index) => (
               <Card key={index} data={summit} />
             ))} */}
-            {/* {card()} */}
+            {card()}
           </div>
         </div>
       </div>
