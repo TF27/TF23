@@ -11,7 +11,7 @@ function Summit() {
 
   const handleGoogleSignIn = async () => {
     try {
-      await handleGoogleSignIn();
+      await googleSignIn();
     } catch (error) {
       console.log(error);
     }
