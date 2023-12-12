@@ -30,6 +30,7 @@ import pandas as pd
 from django.core.mail import send_mail, send_mass_mail
 from django.conf import settings
 from django.utils.html import format_html
+from django.core.mail import EmailMessage
 
 
 class NotifyView(APIView):
@@ -44,55 +45,28 @@ class NotifyView(APIView):
 
 def mail_bhejo(request):
     subject = "Get Ready to Soar to New Heights in Competitions at Techfest, IIT Bombay"
-    message = """Greetings from Techfest, IIT Bombay!
-We thoroughly cherished your participation in Techfest Competitions, and we cannot wait to have you back!
-
-It's that time of the year again when innovation, creativity, and technology converge at Techfest, IIT Bombay. We are thrilled to invite you, our valued past participant, to participate in our Ideate Competitions – Atom Quest, Urban Futurism, TechAid, and Dronelog. This is your chance to showcase your skills, ideas, and passion, and win exciting prizes!
-
-Here's a quick overview of the competitions:
-
-1. Atom Quest:
-Prize Money: INR 2,00,000
-Description: The problem statement involves the creation of an intelligent smart home appliance or system with specific characteristics. The objective is to develop a novel smart home technology that offers unique features and functionalities, differentiating it from existing solutions in the market.
-Registration Link: techfest.org/competitions/atom-quest
-
-2. Urban Futurism
-Prize Money: INR 80,000
-Description: Imagine and design the cities of the future. Develop sustainable solutions to urban challenges in transportation, infrastructure, and more.
-Registration Link: techfest.org/competitions/urban-futurism
-
-3. TechAid
-Prize Money: INR 80,000
-Description: The goal is to address specific challenges and barriers faced by differently-abled individuals in their daily lives. In this competition, we challenge participants to think creatively and develop groundbreaking solutions across a spectrum of verticals
-Registration Link: techfest.org/competitions/tech-aid
-
-4. Dronelog
-Prize Money: INR 1,50,000
-Description: Revolutionize Inventory Management with Scalable Drone Technology: Achieve Real-Time Accuracy, Automated Scanning, and Autonomous Movement for Efficient Warehousing using drones
-Registration Link: techfest.org/competitions/dronelog
-
-These competitions are not just about winning prizes; they are about pushing the boundaries of your imagination and innovation. Participating in these events will provide you with a platform to connect with like-minded individuals, gain practical experience, and make a difference in the world through technology.
-
-To register for these competitions and to learn more about the rules, guidelines, and deadlines, please visit our website: techfest.org
-
-Thank you for being a part of the Techfest family, and we can't wait to witness your innovative ideas in action!
-
-Best regards,
-Team Techfest
-"""
-
+    message = """<html>
+    <body>
+        <p>Greetings from Techfest, IIT Bombay!</p>
+        
+        <p>We thoroughly cherished your participation in Techfest Competitions, and we cannot wait to have you back!</p>
+        
+        <!-- Add an image -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png" alt="Techfest Image" style="width:300px;height:200px;">
+        
+        <!-- Bold some lines -->
+        <p><strong>Best regards,</strong></p>
+        <p><strong>Team Techfest</strong></p>
+    </body>
+    </html>
+    """
     from_email = 'noreply@techfest.org'
-    excel = '/home/yat251/Desktop/Coding/TF23/backend/emails.csv'
-    recipient_df = pd.read_csv(excel)
-
-    # Filter out empty cells from the 'Emails' column and convert them to a list
-    recipient_list = recipient_df['Email'].dropna().tolist()
-    i = 0
-    for recipient in recipient_list:
-        print(i)
-        send_mail(subject, message, from_email, [recipient])
-        i += 1
-
+    recipient = 'cuzallis11@gmail.com'
+    email = EmailMessage(subject, message, from_email, [recipient])
+    # send_mail(subject, message, from_email, [recipient])
+    email.content_subtype = "html" 
+    email.send()
+    return HttpResponse("Email sent successfully!")
 
 @parser_classes([JSONParser])
 def get_user(request):

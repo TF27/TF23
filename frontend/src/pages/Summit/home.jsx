@@ -98,16 +98,18 @@ function Summit() {
 
   return (
     <div className={styles.Summit}>
-      <div className={styles.SummitHead}>
-        <h1>International Summits</h1>
-      </div>
-      <div className={styles.SummitCO}>
-        <div className="container">
-          <div className="row">
-            {/* {data.map((summit, index) => (
+      <div className={styles.overlay}>
+        <div className={styles.SummitHead}>
+          <h1>International Summits</h1>
+        </div>
+        <div className={styles.SummitCO}>
+          <div className="container">
+            <div className="row">
+              {/* {data.map((summit, index) => (
               <Card key={index} data={summit} />
             ))} */}
-            {card()}
+              {card()}
+            </div>
           </div>
         </div>
       </div>

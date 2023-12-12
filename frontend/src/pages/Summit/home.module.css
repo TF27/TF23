@@ -1,5 +1,5 @@
 .Summit{
-    background-image: url(./assets/summit_bg.jpg);
+    background-image: url(./assets/bg.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center;
@@ -8,6 +8,14 @@
     position: absolute;
     background-attachment: fixed;
 } 
+
+.overlay{
+    width: 100vw;
+    height: 120vh;
+    padding-top: 1vh;
+    /* top: -20px; */
+    background-color: rgb(38 38 38 / 48%);
+}
 
 .SummitCOO{
     display: flex;
