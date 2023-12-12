@@ -80,14 +80,14 @@ const Fintech = () => {
           <div className={styles.agendasI}>
             <div className={styles.agendasII}>
               <div className={styles.agendasIII}>What is fintech and why is it important?</div>
-              <div className={styles.agendasIII}>What are the different types of fintech?</div>
+              <div className={styles.agendasIII}>Social Impact: Investing for financial Inclusion</div>
             </div>
             <div className={styles.agendasII}>
-              <div className={styles.agendasIII}>What are the benefits of fintech?</div>
-              <div className={styles.agendasIII}>What are the challenges of fintech?</div>
+              <div className={styles.agendasIII}>Fintech & its influence you and the society</div>
+              <div className={styles.agendasIII}>Future of Investments</div>
             </div>
             <div className={styles.agendasII}>
-              <div className={styles.agendasIII}>What is the future of fintech?</div>
+              <div className={styles.agendasIII}>Fintechs and Ethics</div>
               <div className={styles.agendasIII}>What are the best examples of fintech?</div>
             </div>
             <div className={styles.agendasII}>

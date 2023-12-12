@@ -148,13 +148,13 @@ const Here = () => {
                     <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
                     <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
                     Last date of registration:<br/>
-                    6th December 2023<br/><br/>
+                    14th December 2023<br/><br/>
 
                     Round 1 Submission Deadline:<br/>
-                    7th December 2023<br/><br/>
+                    17th December 2023<br/><br/>
 
                     Finalist announcement:<br/>
-                    13th December 2023<br/><br/>
+                    18th December 2023<br/><br/>
 
                     Final Round at IIT Bombay Campus:<br/>
                     27th & 28th December 2023</div>

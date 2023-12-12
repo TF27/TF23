@@ -451,7 +451,7 @@ const MAccommodation = () => {
   const scrollToBottom = () => {
     console.log("Scroll Height:", document.body.scrollHeight);
     window.scrollTo({
-      top: 10000,
+      top: 999999,
       behavior: 'smooth',
     });
   };

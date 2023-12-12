@@ -3,15 +3,14 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { UserAuth } from "../../contexts/AuthContext";
 import styles from "./home.module.css";
-import fin from "./assets/sum1.jpg";
 
 function Summit() {
-  const [dataSummit, setData] = useState([]);
+  const [data, setData] = useState([]);
   const { googleSignIn, user } = UserAuth();
 
   const handleGoogleSignIn = async () => {
     try {
-      await handleGoogleSignIn();
+      await googleSignIn();
     } catch (error) {
       console.log(error);
     }
@@ -21,7 +20,7 @@ function Summit() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/api/summits", {
+        const response = await axios.get("/api/summits/", {
           headers: {
             "X-Email": google_id,
           },
@@ -51,8 +50,8 @@ function Summit() {
   //   },
   // ];
 
-  const Card = ({ data }) => {
-    return (
+  const card = () => {
+    return data.map((data) => (
       <>
         <div className={`${styles.SummitCOO}`}>
           <div className={styles.SummitCard}>
@@ -94,7 +93,7 @@ function Summit() {
           </div>
         </div>
       </>
-    );
+    ));
   };
 
   return (
@@ -105,9 +104,10 @@ function Summit() {
       <div className={styles.SummitCO}>
         <div className="container">
           <div className="row">
-            {dataSummit.map((summit, index) => (
+            {/* {data.map((summit, index) => (
               <Card key={index} data={summit} />
-            ))}
+            ))} */}
+            {card()}
           </div>
         </div>
       </div>

@@ -5,7 +5,8 @@ import styles from "./ift.module.css";
 import Cards from "./cards";
 import Parallax from "./parallax";
 
-import fin from "./assets/Back.jpg";
+import bg from './assets/bg.png';
+import ass from './assets/ass.jpeg';
 import robert from './assets/Robert.png'
 import jao from './assets/Joao.jpg';
 import rayan from './assets/rayan1.jpg';
@@ -83,8 +84,16 @@ const IFT = () => {
     );
   };
 
+  const bgstyles = {
+    backgroundImage: `url(${bg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundAttachment: "fixed",
+    paddingBottom: '30px',
+  };
+
   return (
-    <div>
+    <div style={bgstyles}>
       <Parallax />
       <Border text="About" />
       <div className={styles.about}>
@@ -118,6 +127,9 @@ const IFT = () => {
         </div>
       </div>
       <Border text="In Association With" />
+      <div className={styles.ass}>
+        <a href="https://mrchobbies.in/" target="_blank"><img src={ass} alt='MRC' /></a>
+      </div>
       <Border text="Gallery" />
       <Carousel
         i1={i1}
@@ -130,8 +142,8 @@ const IFT = () => {
       <Border text="Contact Us" />
       <div className={styles.contact}>
             <p>Abhishek Kedare</p>
-            <div className={styles.email} onClick={() => window.location.href = `mailto:atharv@techfest.org`}>atharv@techfest.org</div>
-            <div className={styles.phone} onClick={() => window.location.href = `tel:+91 9324589830`}>+91 93245 89830</div>
+            <div className={styles.email} onClick={() => window.location.href = `mailto:abhishek@techfest.org`}>abhishek@techfest.org</div>
+            <div className={styles.phone} onClick={() => window.location.href = `tel:+91 7558588254`}>+91 75585 88254</div>
           </div>
     </div>
   );
