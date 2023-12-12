@@ -42,7 +42,7 @@
   opacity: 1;
   z-index: -1;
   /* margin-top: 70pt; */
-  height: 112vh;
+  height: 102vh;
   width: 102vw;
   background-size: cover;
   background-repeat: no-repeat;
@@ -71,28 +71,45 @@
     background-position-x: center;
     background-position-y:30%;
   }
-  .layer3{
+  /* .layer3{
     background-size: auto 95vh;
   
-  }
+  } */
   .image{
     top: -31vh;
   }
  
 }
-/*   
+
+@media(max-width: 758px){
+  .layer3{
+    background-image: url('../assets/finm.png');
+  }
+}
+  
 .blackGradientbottom::after{
   content: '';
   position: absolute;
-  bottom: 50px;
+  bottom: -22px;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 30vh;
   background: linear-gradient(to top,rgba(0, 0, 0, 1), rgba(0, 0, 0, .6),transparent);
   pointer-events: none;
   z-index: 1000;
 }
-
+.blackGradientbot::after{
+  content: '';
+  position: absolute;
+  bottom: -71px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to bottom,rgba(0, 0, 0, 1), rgba(0, 0, 0, .6),transparent);
+  pointer-events: none;
+  z-index: 1000;
+}
+/* 
 @media screen and (max-width: 934px) {
   .blackGradientbottom::after{
     bottom: 56px;

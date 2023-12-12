@@ -273,11 +273,11 @@ const Register = () => {
                       required
                     />
                   </div>
-                  <div className={design["yoyo"]}>
+                  {/* <div className={design["yoyo"]}>
 
                   <button className={design["damnbro"]}>Aadhar Card Proof</button>
                   <input className={design["formiInput"]} type="file" id="image" onChange={handleFileChange} required multiple />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

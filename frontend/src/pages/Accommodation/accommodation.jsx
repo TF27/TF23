@@ -419,7 +419,7 @@ const Accommodation = () => {
   const scrollToBottom = () => {
     console.log("Scroll Height:", document.body.scrollHeight);
     window.scrollTo({
-      top: 100000,
+      top: 999999,
       behavior: 'smooth',
     });
   };
