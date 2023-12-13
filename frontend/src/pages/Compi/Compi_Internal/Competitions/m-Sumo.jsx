@@ -4,7 +4,7 @@ import Faq from 'react-faq-component';
 import Whatsapplink from '../../../../components/whatsapp/link';
 import './x.css';
 
-const Race = () => {
+const Sumo = () => {
 
     const [open, setOpen] = useState(false);
 

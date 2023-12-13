@@ -59,7 +59,7 @@ const Speakers = ({ summit }) => {
           <div
             className={styles.card}
             style={{
-              backgroundImage: `url(${data.img})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(${data.img})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
