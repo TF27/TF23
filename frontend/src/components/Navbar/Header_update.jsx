@@ -103,6 +103,9 @@ const Header_update = () => {
             >
               <ul>
                 <li>
+                  <Link to="/summits">Int'l Summit</Link>
+                </li>
+                <li>
                   <Link to="/exhibitions">Exhibitions</Link>
                 </li>
                 <li>
@@ -111,9 +114,7 @@ const Header_update = () => {
                 <li>
                   <Link to="/robowars">Robowars</Link>
                 </li>
-                {/* <li>
-                  <Link to="/summits">Int'l Summit</Link>
-                </li> */}
+
                 <li>
                   <a href="/twmun">MUN</a>
                 </li>
@@ -145,11 +146,7 @@ const Header_update = () => {
         <div className="wnavRight navRow">
           {/* <ul> */}
           <li>
-            <Link
-              to="/accommodation"
-            >
-              Accommodation
-            </Link>
+            <Link to="/accommodation">Accommodation</Link>
           </li>
           <li>
             <Link to="/contactus" className="navContact">
@@ -227,9 +224,9 @@ const Header_update = () => {
             <li onClick={showMenu}>
               <Link to="/competitions">Competitions</Link>
             </li>
-            {/* <li onClick={showMenu}>
+            <li onClick={showMenu}>
               <Link to="/summits">Int'l Summits</Link>
-            </li> */}
+            </li>
             <li onClick={showMenu}>
               <Link to="/robowars">Robowars</Link>
             </li>

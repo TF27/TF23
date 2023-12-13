@@ -30,6 +30,20 @@
   font-family: "Forum", sans-serif;
 }
 
+.ex{
+  position: absolute;
+  top: 60vh;
+  z-index: 30;
+  text-align: center;
+  width: 100vw;
+}
+
+.ex a{
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
 .About p {
   max-width: 90%;
   margin: auto;
