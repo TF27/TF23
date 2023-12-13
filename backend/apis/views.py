@@ -44,7 +44,7 @@ class NotifyView(APIView):
 
 
 def mail_bhejo1(request):
-    subject = "Techfest, IIT Bombay | Invitation to Asia'a Largest Science & Technology Festival"
+    subject = "IIT Bombay's Techfest | Invitation to Asia'a Largest Science & Technology Festival"
     message = """<html>
     <body>
         
@@ -67,7 +67,7 @@ def mail_bhejo1(request):
     from_email = '27thedition@techfest.org'
     recipient = 'apshingeatharv@gmail.com'
 
-    csv_file_path = '/home/yat251/Desktop/Coding/TF/TF23/backend/emails_test.csv'
+    csv_file_path = 'D:/Techfest/Techfest/TF web/TF23/backend/apis/emails_slot5csv.csv'
     df = pd.read_csv(csv_file_path)
     recipient_list = df['Email'].dropna().tolist()
 
@@ -85,7 +85,7 @@ def mail_bhejo1(request):
     return HttpResponse("Email sent successfully!")
 
 def mail_bhejo2(request):
-    subject = "Techfest, IIT Bombay | Invitation to Asia'a Largest Science & Technology Festival"
+    subject = "IIT Bombay's Techfest | Invitation to Asia'a Largest Science & Technology Festival"
     message = """<html>
     <body>
         
@@ -108,7 +108,7 @@ def mail_bhejo2(request):
     from_email = '27thedition@techfest.org'
     recipient = 'apshingeatharv@gmail.com'
 
-    csv_file_path = '/home/yat251/Desktop/Coding/TF/TF23/backend/emails_test.csv'
+    csv_file_path = 'D:/Techfest/Techfest/TF web/TF23/backend/apis/emails_slot6.csv'
     df = pd.read_csv(csv_file_path)
     recipient_list = df['Email'].dropna().tolist()
 
@@ -126,7 +126,7 @@ def mail_bhejo2(request):
     return HttpResponse("Email sent successfully!")
 
 def mail_bhejo3(request):
-    subject = "Techfest, IIT Bombay | Invitation to Asia'a Largest Science & Technology Festival"
+    subject = "IIT Bombay's Techfest | Invitation to Asia'a Largest Science & Technology Festival"
     message = """<html>
     <body>
         
@@ -149,7 +149,7 @@ def mail_bhejo3(request):
     from_email = '27thedition@techfest.org'
     recipient = 'apshingeatharv@gmail.com'
 
-    csv_file_path = '/home/yat251/Desktop/Coding/TF/TF23/backend/emails_test.csv'
+    csv_file_path = 'D:/Techfest/Techfest/TF web/TF23/backend/apis/emails_slot7.csv'
     df = pd.read_csv(csv_file_path)
     recipient_list = df['Email'].dropna().tolist()
 
