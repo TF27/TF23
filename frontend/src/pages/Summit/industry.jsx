@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./fintech.module.css";
 import ImageOne from "./components/ImageOne";
-import bg from "./assets/bg.jpeg";
+import bg from "./assets/indbg.jpg";
 import Speakers from "./components/speakers";
 
 const Fintech = () => {
