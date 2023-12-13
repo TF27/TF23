@@ -102,7 +102,7 @@ function Summit() {
     <div className={styles.Summit}>
       <div className={styles.overlay}>
         <div className={styles.SummitHead}>
-          <h1>International Summits</h1>
+          <h1>INTERNATIONAL SUMMITS</h1>
         </div>
         <div className={styles.SummitCO}>
           <div className="container">
