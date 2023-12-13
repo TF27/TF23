@@ -44,7 +44,7 @@ class NotifyView(APIView):
 
 
 def mail_bhejo(request):
-    subject = "Techfest, IIT Bombay | Invitation to Asia'a Largest Science & Technology Festival"
+    subject = "IIT Bombay's Techfest | Invitation to Asia'a Largest Science & Technology Festival"
     message = """<html>
     <body>
         
