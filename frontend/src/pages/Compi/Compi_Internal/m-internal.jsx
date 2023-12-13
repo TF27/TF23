@@ -37,6 +37,8 @@ import Mouse from "./Competitions/m-Mouse";
 import Edel from "./Competitions/m-Edel";
 import Datamatics from "./Competitions/m-Datamatics";
 import Soker from "./Competitions/m-Soker";
+import Sumo from "./Competitions/m-Sumo";
+import Race from "./Competitions/m-Race";
 
 const MInternal = () => {
   const { compiName } = useParams();
@@ -62,6 +64,12 @@ const MInternal = () => {
     navigate("/competitions/mernifier");
   } else if (compiName === "RowBoatics") {
     navigate("/competitions/rowboatics");
+  }  else if (compiName === "roborace") {
+    navigate("/competitions/roborace");
+  }  else if (compiName === "robosumo") {
+    navigate("/competitions/robosumo");
+  }  else if (compiName === "robosoccer") {
+    navigate("/competitions/robosoccer");
   } else if (compiName === "uf") {
     navigate("/competitions/urban-futurism");
   } else if (compiName === "taskwhiz") {
@@ -312,6 +320,8 @@ const MInternal = () => {
         {compiName === "cashflow modelling" && <Edel/>}
         {compiName === "datamatics hackathon" && <Datamatics />}
         {compiName === "robosoccer" && <Soker/>}
+        {compiName === "robosumo" && <Sumo />}
+        {compiName === "roborace" && <Race />}
       </div>
     ));
   };

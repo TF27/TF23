@@ -36,6 +36,9 @@ import Mouse from "./Competitions/Mouse";
 import Edel from "./Competitions/Edel";
 import Datamatics from "./Competitions/Datamatics";
 import Soker from "./Competitions/Soker";
+import Sumo from "./Competitions/Sumo";
+import Race from "./Competitions/Race";
+
 
 function Internal() {
   const { compiName } = useParams();
@@ -58,6 +61,12 @@ function Internal() {
       navigate("/competitions/mernifier");
     }  else if (compiName === "certiTech") {
       navigate("/competitions/certiTech");
+    }  else if (compiName === "roborace") {
+      navigate("/competitions/roborace");
+    }  else if (compiName === "robosumo") {
+      navigate("/competitions/robosumo");
+    }  else if (compiName === "robosoccer") {
+      navigate("/competitions/robosoccer");
     } else if (compiName === "idrl") {
       navigate("/competitions/int'l%20drone%20racing");
     } else if (compiName === "RowBoatics") {
@@ -244,6 +253,8 @@ function Internal() {
             {compiName === "cashflow modelling" && <Edel />}
             {compiName === "datamatics hackathon" && <Datamatics />}
             {compiName === "robosoccer" && <Soker />}
+            {compiName === "robosumo" && <Sumo />}
+            {compiName === "roborace" && <Race />}
             <div className={styles.team_reg}>
               {user === null ? (
                 <div>
