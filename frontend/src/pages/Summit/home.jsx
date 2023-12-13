@@ -80,7 +80,11 @@ function Summit() {
                     ) : data.is_paid ? (
                       <a href="">Registered</a>
                     ) : data.is_registered ? (
-                      <a href="">Pay Now</a>
+                      data.exploreLink === "fintech" ? (
+                        <a href="https://www.meraevents.com/event/international-fintech-summit?ucode=organizer" target="_blank">Pay Now</a>
+                      ) : (
+                        <a href="https://www.meraevents.com/event/industry-4-0-summit?ucode=organizer" target="_blank">Pay Now</a>
+                      )
                     ) : (
                       <Link to={data.regLink}>Register</Link>
                     )}
