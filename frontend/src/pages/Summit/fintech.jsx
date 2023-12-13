@@ -3,6 +3,7 @@ import styles from "./fintech.module.css";
 import ImageOne from "./components/ImageOne";
 import bg from "./assets/finbg.jpg";
 import Speakers from "./components/speakers";
+import { Link } from "react-router-dom";
 
 const Fintech = () => {
   const bgHaiJi = {
@@ -43,6 +44,13 @@ const Fintech = () => {
     <div className="yoyohoneysingh" style={bgHaiJi}>
       <div className={styles["accommodation-container"]}>
         <ImageOne />
+        <div className={styles.ex}>
+          <div className={styles.titSpn_rect1}>
+            <div className={styles.titSpn_rect2}>
+              <Link to="/summits/fintech/register">Register Now</Link>
+            </div>
+          </div>
+        </div>
         <div className={styles.overlay}>
           <div className={styles.About}>
             <Border text="About" />
@@ -56,23 +64,27 @@ const Fintech = () => {
               worked on consumers' pain points, providing a digital platform for
               entrepreneurs and investors to digitize financially. The
               International Fintech Summit is the ideal meeting place
-              facilitating dialogue with power-packed
-              networking opportunities among C-Level executives, leading
-              industry experts, decision-makers, and policymakers from across
-              the value chain to foster collaboration, discuss current
-              challenges, business opportunities, develop market strategies,
-              share knowledge and identify solutions aimed at shaping the future
-              of Fintech.</p>
-              <p><b>For Students:</b> Lay the foundation for your career
-              through live intellectual discussions with speakers through chat
-              and individual assessments to add to your expertise. Networking
+              facilitating dialogue with power-packed networking opportunities
+              among C-Level executives, leading industry experts,
+              decision-makers, and policymakers from across the value chain to
+              foster collaboration, discuss current challenges, business
+              opportunities, develop market strategies, share knowledge and
+              identify solutions aimed at shaping the future of Fintech.
+            </p>
+            <p>
+              <b>For Students:</b> Lay the foundation for your career through
+              live intellectual discussions with speakers through chat and
+              individual assessments to add to your expertise. Networking
               opportunities with Fintech leaders. Build your career by
               interacting with our honorable speakers, industry professionals
-              and get a certificate of completion. </p>
-              <p><b>For Professionals:</b> Meet influential people and expand your professional network. Get
-              insights about the current state of the industry and the future
-              possibilities. Explore opportunities in the fintech sector.</p>
-            
+              and get a certificate of completion.{" "}
+            </p>
+            <p>
+              <b>For Professionals:</b> Meet influential people and expand your
+              professional network. Get insights about the current state of the
+              industry and the future possibilities. Explore opportunities in
+              the fintech sector.
+            </p>
           </div>
           <div>
             <Border text="Speakers" />
@@ -86,41 +98,36 @@ const Fintech = () => {
                   What is fintech and why is it important?
                 </div>
                 <div className={styles.agendasIII}>
-                The Evolution of Fintech: Unveiling its Historical Milestones and Future Trajectory 
+                  The Evolution of Fintech: Unveiling its Historical Milestones
+                  and Future Trajectory
                 </div>
               </div>
               <div className={styles.agendasII}>
                 <div className={styles.agendasIII}>
-                Fintech & its influence on society
+                  Fintech & its influence on society
                 </div>
+                <div className={styles.agendasIII}>Future of Investments</div>
                 <div className={styles.agendasIII}>
-                Future of Investments
-                </div>
-                <div className={styles.agendasIII}>
-                Inspiring Entrepreneurs: How to build your own Product
+                  Inspiring Entrepreneurs: How to build your own Product
                 </div>
               </div>
               <div className={styles.agendasII}>
                 <div className={styles.agendasIII}>
-                Youth and Fintech Startups
+                  Youth and Fintech Startups
                 </div>
                 <div className={styles.agendasIII}>
-                Social Impact: Investing for financial Inclusion
+                  Social Impact: Investing for financial Inclusion
                 </div>
                 <div className={styles.agendasIII}>
-                Financial Development: India v/s The World
+                  Financial Development: India v/s The World
                 </div>
               </div>
               <div className={styles.agendasII}>
-              <div className={styles.agendasIII}>
-                Fintechs and Ethics
-                </div>
+                <div className={styles.agendasIII}>Fintechs and Ethics</div>
                 <div className={styles.agendasIII}>
-                Fintech & its influence on society
+                  Fintech & its influence on society
                 </div>
-                <div className={styles.agendasIII}>
-                Transformation of India
-                </div>
+                <div className={styles.agendasIII}>Transformation of India</div>
               </div>
             </div>
           </div>
