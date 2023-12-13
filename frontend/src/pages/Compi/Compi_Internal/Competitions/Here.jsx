@@ -156,15 +156,15 @@ const Here = () => {
               <ul>
                 <li>
                   Last date of registration: <br />
-                  6th December 2023
+                  14th December 2023
                 </li>
                 <li>
                   Round 1 Submission Deadline: <br />
-                  7th December 2023
+                  17th December 2023
                 </li>
                 <li>
                   Finalist announcement: <br />
-                  13th December 2023
+                  18th December 2023
                 </li>
                 <li>
                   Final Round at IIT Bombay Campus: <br />

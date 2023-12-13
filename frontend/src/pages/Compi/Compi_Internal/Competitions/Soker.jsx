@@ -192,7 +192,8 @@ const Soker = () => {
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
                 Sajal Sharma<br/>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8449774393`}>+91 84497 74393</div>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:
+                    `}>+91 84497 74393</div>
                     <div className="col-3 contactMail" onClick={() => window.location.href = `sajal.techfest@gmail.com`}>sajal.techfest@gmail.com</div>
               
               </div>

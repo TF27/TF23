@@ -72,6 +72,8 @@ const Cyclothon = React.lazy(() =>
 const IFT = React.lazy(() => import("./pages/Events/ift/ift"));
 const IFTReg = React.lazy(() => import("./pages/Events/ift/reg"));
 
+const Merch = React.lazy(() => import("./pages/AboutUs/Merch/merch.jsx"));
+
 const Tracking_ID = "UA-81222017-2";
 ReactGA.initialize(Tracking_ID);
 
@@ -250,9 +252,25 @@ function App() {
                 </React.Suspense>
               }
             />
+            <Route
+              path="/fintech"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Fintech />
+                </React.Suspense>
+              }
+            />
 
             <Route
               path="/summits/industry"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Industry />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/industry"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Industry />
@@ -408,6 +426,16 @@ function App() {
                 </React.Suspense>
               }
             />
+
+          <Route 
+            path='/merch'
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <Merch />
+              </React.Suspense>
+            }
+          />
+
           </Routes>
 
           <Footer />

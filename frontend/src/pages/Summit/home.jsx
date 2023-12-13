@@ -60,16 +60,18 @@ function Summit() {
                 <div
                   className={styles.CardHead}
                   style={{
-                    background: `url(${data.img})`,
+                    background: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(${data.img})`,
+                    height: "210px",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    height: "210px",
                   }}
                 >
+                  {/* <div className={styles.cOverlay}> */}
                   <div className={styles.CardND}>
                     <div className={styles.CardN}>{data.name}</div>
                     <div className={styles.CardD}>{data.desc}</div>
                   </div>
+                  {/* </div> */}
                 </div>
                 <div className={styles.RegExp}>
                   <div className={styles.Reg}>
@@ -78,7 +80,11 @@ function Summit() {
                     ) : data.is_paid ? (
                       <a href="">Registered</a>
                     ) : data.is_registered ? (
-                      <a href="">Pay Now</a>
+                      data.exploreLink === "fintech" ? (
+                        <a href="https://www.meraevents.com/event/international-fintech-summit?ucode=organizer" target="_blank">Pay Now</a>
+                      ) : (
+                        <a href="https://www.meraevents.com/event/industry-4-0-summit?ucode=organizer" target="_blank">Pay Now</a>
+                      )
                     ) : (
                       <Link to={data.regLink}>Register</Link>
                     )}
@@ -98,16 +104,18 @@ function Summit() {
 
   return (
     <div className={styles.Summit}>
-      <div className={styles.SummitHead}>
-        <h1>International Summits</h1>
-      </div>
-      <div className={styles.SummitCO}>
-        <div className="container">
-          <div className="row">
-            {/* {data.map((summit, index) => (
+      <div className={styles.overlay}>
+        <div className={styles.SummitHead}>
+          <h1>INTERNATIONAL SUMMITS</h1>
+        </div>
+        <div className={styles.SummitCO}>
+          <div className="container">
+            <div className="row">
+              {/* {data.map((summit, index) => (
               <Card key={index} data={summit} />
             ))} */}
-            {card()}
+              {card()}
+            </div>
           </div>
         </div>
       </div>

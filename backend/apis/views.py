@@ -30,6 +30,7 @@ import pandas as pd
 from django.core.mail import send_mail, send_mass_mail
 from django.conf import settings
 from django.utils.html import format_html
+from django.core.mail import EmailMessage
 
 
 class NotifyView(APIView):
@@ -42,57 +43,128 @@ class NotifyView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-def mail_bhejo(request):
-    subject = "Get Ready to Soar to New Heights in Competitions at Techfest, IIT Bombay"
-    message = """Greetings from Techfest, IIT Bombay!
-We thoroughly cherished your participation in Techfest Competitions, and we cannot wait to have you back!
+def mail_bhejo1(request):
+    subject = "IIT Bombay's Techfest | Invitation to Asia'a Largest Science & Technology Festival"
+    message = """<html>
+    <body>
+        
+        <p>Greetings from Techfest, IIT Bombay!</p> <p>Asia’s Largest Science and Technology Festival is thrilled to present the Workshop Series featuring 27 topics, ranging from Data to AI, Quadcopter, UI/UX to Bio-analytics. Explore them all at techfest.org/workshops. Make the best of your trip to IIT Bombay with the latest technical knowledge and strengthen your profile by getting certified by Google, Amazon, Jio, WazirX and IIT Bombay's Techfest!</p>
 
-It's that time of the year again when innovation, creativity, and technology converge at Techfest, IIT Bombay. We are thrilled to invite you, our valued past participant, to participate in our Ideate Competitions – Atom Quest, Urban Futurism, TechAid, and Dronelog. This is your chance to showcase your skills, ideas, and passion, and win exciting prizes!
+        <p>By participating in workshops, you gain entry to a myriad of events—EDM Concert, International Exhibitions, Robowars, Lecture Series, Defense Expo, and more. This edition's highlights feature <b>Akash Ambani</b>, Shri S Somnath (<b>ISRO Chairman</b>), and an electrifying <b>EDM concert</b> with Matisse & Sadko. Don't miss out!</p>
 
-Here's a quick overview of the competitions:
+        <p>Book your accommodation for a comfy stay inside IIT Bombay campus and to enjoy unrestricted access to late-night events and institute entry. Register at techfest.org/accommodation now! Limited seats available.
+        </p>
+        
+        <!-- Add an image -->
+        <img src="https://techfest.org/media/compi/Quadcopter_QR-01_4.jpeg" alt="Techfest Image" style="width:516.75px;height:150px;" style="display: block; margin: auto;"> <br>
+        
+        <!-- Bold some lines -->
+        <strong>Best regards,</strong><br>
+        <strong>Team Techfest 2023-24</strong>
+    </body>
+    </html>
+    """
+    from_email = '27thedition@techfest.org'
+    recipient = 'apshingeatharv@gmail.com'
 
-1. Atom Quest:
-Prize Money: INR 2,00,000
-Description: The problem statement involves the creation of an intelligent smart home appliance or system with specific characteristics. The objective is to develop a novel smart home technology that offers unique features and functionalities, differentiating it from existing solutions in the market.
-Registration Link: techfest.org/competitions/atom-quest
+    csv_file_path = 'D:/Techfest/Techfest/TF web/TF23/backend/apis/emails_slot5csv.csv'
+    df = pd.read_csv(csv_file_path)
+    recipient_list = df['Email'].dropna().tolist()
 
-2. Urban Futurism
-Prize Money: INR 80,000
-Description: Imagine and design the cities of the future. Develop sustainable solutions to urban challenges in transportation, infrastructure, and more.
-Registration Link: techfest.org/competitions/urban-futurism
+    for row in recipient_list:
+        recipient = row
+        email = EmailMessage(subject, message, from_email, [recipient])
+        email.content_subtype = "html" 
+        print(row)
+        email.send()
 
-3. TechAid
-Prize Money: INR 80,000
-Description: The goal is to address specific challenges and barriers faced by differently-abled individuals in their daily lives. In this competition, we challenge participants to think creatively and develop groundbreaking solutions across a spectrum of verticals
-Registration Link: techfest.org/competitions/tech-aid
+    # email = EmailMessage(subject, message, from_email, [recipient])
+    # # send_mail(subject, message, from_email, [recipient])
+    # email.content_subtype = "html" 
+    # email.send()
+    return HttpResponse("Email sent successfully!")
 
-4. Dronelog
-Prize Money: INR 1,50,000
-Description: Revolutionize Inventory Management with Scalable Drone Technology: Achieve Real-Time Accuracy, Automated Scanning, and Autonomous Movement for Efficient Warehousing using drones
-Registration Link: techfest.org/competitions/dronelog
+def mail_bhejo2(request):
+    subject = "IIT Bombay's Techfest | Invitation to Asia'a Largest Science & Technology Festival"
+    message = """<html>
+    <body>
+        
+        <p>Greetings from Techfest, IIT Bombay!</p> <p>Asia’s Largest Science and Technology Festival is thrilled to present the Workshop Series featuring 27 topics, ranging from Data to AI, Quadcopter, UI/UX to Bio-analytics. Explore them all at techfest.org/workshops. Make the best of your trip to IIT Bombay with the latest technical knowledge and strengthen your profile by getting certified by Google, Amazon, Jio, WazirX and IIT Bombay's Techfest!</p>
 
-These competitions are not just about winning prizes; they are about pushing the boundaries of your imagination and innovation. Participating in these events will provide you with a platform to connect with like-minded individuals, gain practical experience, and make a difference in the world through technology.
+        <p>By participating in workshops, you gain entry to a myriad of events—EDM Concert, International Exhibitions, Robowars, Lecture Series, Defense Expo, and more. This edition's highlights feature <b>Akash Ambani</b>, Shri S Somnath (<b>ISRO Chairman</b>), and an electrifying <b>EDM concert</b> with Matisse & Sadko. Don't miss out!</p>
 
-To register for these competitions and to learn more about the rules, guidelines, and deadlines, please visit our website: techfest.org
+        <p>Book your accommodation for a comfy stay inside IIT Bombay campus and to enjoy unrestricted access to late-night events and institute entry. Register at techfest.org/accommodation now! Limited seats available.
+        </p>
+        
+        <!-- Add an image -->
+        <img src="https://techfest.org/media/compi/Quadcopter_QR-01_4.jpeg" alt="Techfest Image" style="width:516.75px;height:150px;" style="display: block; margin: auto;"> <br>
+        
+        <!-- Bold some lines -->
+        <strong>Best regards,</strong><br>
+        <strong>Team Techfest 2023-24</strong>
+    </body>
+    </html>
+    """
+    from_email = '27thedition@techfest.org'
+    recipient = 'apshingeatharv@gmail.com'
 
-Thank you for being a part of the Techfest family, and we can't wait to witness your innovative ideas in action!
+    csv_file_path = 'D:/Techfest/Techfest/TF web/TF23/backend/apis/emails_slot6.csv'
+    df = pd.read_csv(csv_file_path)
+    recipient_list = df['Email'].dropna().tolist()
 
-Best regards,
-Team Techfest
-"""
+    for row in recipient_list:
+        recipient = row
+        email = EmailMessage(subject, message, from_email, [recipient])
+        email.content_subtype = "html" 
+        print(row)
+        email.send()
 
-    from_email = 'noreply@techfest.org'
-    excel = '/home/yat251/Desktop/Coding/TF23/backend/emails.csv'
-    recipient_df = pd.read_csv(excel)
+    # email = EmailMessage(subject, message, from_email, [recipient])
+    # # send_mail(subject, message, from_email, [recipient])
+    # email.content_subtype = "html" 
+    # email.send()
+    return HttpResponse("Email sent successfully!")
 
-    # Filter out empty cells from the 'Emails' column and convert them to a list
-    recipient_list = recipient_df['Email'].dropna().tolist()
-    i = 0
-    for recipient in recipient_list:
-        print(i)
-        send_mail(subject, message, from_email, [recipient])
-        i += 1
+def mail_bhejo3(request):
+    subject = "IIT Bombay's Techfest | Invitation to Asia'a Largest Science & Technology Festival"
+    message = """<html>
+    <body>
+        
+        <p>Greetings from Techfest, IIT Bombay!</p> <p>Asia’s Largest Science and Technology Festival is thrilled to present the Workshop Series featuring 27 topics, ranging from Data to AI, Quadcopter, UI/UX to Bio-analytics. Explore them all at techfest.org/workshops. Make the best of your trip to IIT Bombay with the latest technical knowledge and strengthen your profile by getting certified by Google, Amazon, Jio, WazirX and IIT Bombay's Techfest!</p>
 
+        <p>By participating in workshops, you gain entry to a myriad of events—EDM Concert, International Exhibitions, Robowars, Lecture Series, Defense Expo, and more. This edition's highlights feature <b>Akash Ambani</b>, Shri S Somnath (<b>ISRO Chairman</b>), and an electrifying <b>EDM concert</b> with Matisse & Sadko. Don't miss out!</p>
+
+        <p>Book your accommodation for a comfy stay inside IIT Bombay campus and to enjoy unrestricted access to late-night events and institute entry. Register at techfest.org/accommodation now! Limited seats available.
+        </p>
+        
+        <!-- Add an image -->
+        <img src="https://techfest.org/media/compi/Quadcopter_QR-01_4.jpeg" alt="Techfest Image" style="width:516.75px;height:150px;" style="display: block; margin: auto;"> <br>
+        
+        <!-- Bold some lines -->
+        <strong>Best regards,</strong><br>
+        <strong>Team Techfest 2023-24</strong>
+    </body>
+    </html>
+    """
+    from_email = '27thedition@techfest.org'
+    recipient = 'apshingeatharv@gmail.com'
+
+    csv_file_path = 'D:/Techfest/Techfest/TF web/TF23/backend/apis/emails_slot7.csv'
+    df = pd.read_csv(csv_file_path)
+    recipient_list = df['Email'].dropna().tolist()
+
+    for row in recipient_list:
+        recipient = row
+        email = EmailMessage(subject, message, from_email, [recipient])
+        email.content_subtype = "html" 
+        print(row)
+        email.send()
+
+    # email = EmailMessage(subject, message, from_email, [recipient])
+    # # send_mail(subject, message, from_email, [recipient])
+    # email.content_subtype = "html" 
+    # email.send()
+    return HttpResponse("Email sent successfully!")
 
 @parser_classes([JSONParser])
 def get_user(request):
@@ -660,6 +732,7 @@ def acco_reg(request):
     if request.method == 'POST':
         sexy_word = request.data.get('sexy_word')
         acco_reg_serializer = AccoRegSerializer(data=request.data, many=False)
+        # print(acco_reg_serializer)
         if acco_reg_serializer.is_valid():
             name = acco_reg_serializer.validated_data.get('name')
             email = acco_reg_serializer.validated_data.get('email')
@@ -688,8 +761,10 @@ def acco_reg(request):
             try:
                 send_mail(subject, message, from_email, [
                         acco_reg_serializer.validated_data.get('email')])
+                print('with mail')
                 return JsonResponse(acco_reg_serializer.data)
             except:
+                print('without mail')
                 return JsonResponse(acco_reg_serializer.data)
         res = {'success': False}
         return JsonResponse(res)

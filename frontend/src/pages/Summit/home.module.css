@@ -1,5 +1,5 @@
 .Summit{
-    background-image: url(./assets/summit_bg.jpg);
+    background-image: url(./assets/homebg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center;
@@ -8,6 +8,14 @@
     position: absolute;
     background-attachment: fixed;
 } 
+
+.overlay{
+    width: 100vw;
+    height: 120vh;
+    padding-top: 1vh;
+    /* top: -20px; */
+    background-color: rgb(38 38 38 / 48%);
+}
 
 .SummitCOO{
     display: flex;
@@ -33,6 +41,7 @@
     left: 0;
     border: 1px solid #BB9564;
     transform: translate(5px, 5px);
+    background-color: black;
 }
 
 .CardHead{
@@ -45,6 +54,10 @@
 .SummitHead{
     margin-top: 14vh;
     margin-bottom: 40px;
+}
+
+.cOverlay{
+    background-color: black;
 }
 
 .RegExp{
@@ -76,10 +89,13 @@
     transition: bottom 0.3s ease 0s;
 }
 .CardN{
-    font-size: 28px;
+    font-size: 24px;
+    line-height: 0.8;
+    margin-bottom: 28px;
 }
 .CardD{
     font-size: 16px;
+    line-height: 0.8;
 }
 
 
