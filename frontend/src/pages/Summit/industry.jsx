@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./fintech.module.css";
 import ImageOne from "./components/ImageOne";
 import bg from "./assets/indbg.jpg";
@@ -43,6 +44,13 @@ const Fintech = () => {
     <div className="yoyohoneysingh" style={bgHaiJi}>
       <div className={styles["accommodation-container"]}>
         <ImageOne />
+        <div className={styles.ex}>
+          <div className={styles.titSpn_rect1}>
+            <div className={styles.titSpn_rect2}>
+              <Link to="/summits/industry/register">Register Now</Link>
+            </div>
+          </div>
+        </div>
         <div className={styles.overlay}>
           <div className={styles.About}>
             <Border text="About" />
