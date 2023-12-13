@@ -43,7 +43,7 @@ class NotifyView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-def mail_bhejo(request):
+def mail_bhejo1(request):
     subject = "Techfest, IIT Bombay | Invitation to Asia'a Largest Science & Technology Festival"
     message = """<html>
     <body>
@@ -66,10 +66,104 @@ def mail_bhejo(request):
     """
     from_email = '27thedition@techfest.org'
     recipient = 'apshingeatharv@gmail.com'
-    email = EmailMessage(subject, message, from_email, [recipient])
-    # send_mail(subject, message, from_email, [recipient])
-    email.content_subtype = "html" 
-    email.send()
+
+    csv_file_path = '/home/yat251/Desktop/Coding/TF/TF23/backend/emails_test.csv'
+    df = pd.read_csv(csv_file_path)
+    recipient_list = df['Email'].dropna().tolist()
+
+    for row in recipient_list:
+        recipient = row
+        email = EmailMessage(subject, message, from_email, [recipient])
+        email.content_subtype = "html" 
+        print(row)
+        email.send()
+
+    # email = EmailMessage(subject, message, from_email, [recipient])
+    # # send_mail(subject, message, from_email, [recipient])
+    # email.content_subtype = "html" 
+    # email.send()
+    return HttpResponse("Email sent successfully!")
+
+def mail_bhejo2(request):
+    subject = "Techfest, IIT Bombay | Invitation to Asia'a Largest Science & Technology Festival"
+    message = """<html>
+    <body>
+        
+        <p>Greetings from Techfest, IIT Bombay!</p> <p>Asia’s Largest Science and Technology Festival is thrilled to present the Workshop Series featuring 27 topics, ranging from Data to AI, Quadcopter, UI/UX to Bio-analytics. Explore them all at techfest.org/workshops. Make the best of your trip to IIT Bombay with the latest technical knowledge and strengthen your profile by getting certified by Google, Amazon, Jio, WazirX and IIT Bombay's Techfest!</p>
+
+        <p>By participating in workshops, you gain entry to a myriad of events—EDM Concert, International Exhibitions, Robowars, Lecture Series, Defense Expo, and more. This edition's highlights feature <b>Akash Ambani</b>, Shri S Somnath (<b>ISRO Chairman</b>), and an electrifying <b>EDM concert</b> with Matisse & Sadko. Don't miss out!</p>
+
+        <p>Book your accommodation for a comfy stay inside IIT Bombay campus and to enjoy unrestricted access to late-night events and institute entry. Register at techfest.org/accommodation now! Limited seats available.
+        </p>
+        
+        <!-- Add an image -->
+        <img src="https://techfest.org/media/compi/Quadcopter_QR-01_4.jpeg" alt="Techfest Image" style="width:516.75px;height:150px;" style="display: block; margin: auto;"> <br>
+        
+        <!-- Bold some lines -->
+        <strong>Best regards,</strong><br>
+        <strong>Team Techfest 2023-24</strong>
+    </body>
+    </html>
+    """
+    from_email = '27thedition@techfest.org'
+    recipient = 'apshingeatharv@gmail.com'
+
+    csv_file_path = '/home/yat251/Desktop/Coding/TF/TF23/backend/emails_test.csv'
+    df = pd.read_csv(csv_file_path)
+    recipient_list = df['Email'].dropna().tolist()
+
+    for row in recipient_list:
+        recipient = row
+        email = EmailMessage(subject, message, from_email, [recipient])
+        email.content_subtype = "html" 
+        print(row)
+        email.send()
+
+    # email = EmailMessage(subject, message, from_email, [recipient])
+    # # send_mail(subject, message, from_email, [recipient])
+    # email.content_subtype = "html" 
+    # email.send()
+    return HttpResponse("Email sent successfully!")
+
+def mail_bhejo3(request):
+    subject = "Techfest, IIT Bombay | Invitation to Asia'a Largest Science & Technology Festival"
+    message = """<html>
+    <body>
+        
+        <p>Greetings from Techfest, IIT Bombay!</p> <p>Asia’s Largest Science and Technology Festival is thrilled to present the Workshop Series featuring 27 topics, ranging from Data to AI, Quadcopter, UI/UX to Bio-analytics. Explore them all at techfest.org/workshops. Make the best of your trip to IIT Bombay with the latest technical knowledge and strengthen your profile by getting certified by Google, Amazon, Jio, WazirX and IIT Bombay's Techfest!</p>
+
+        <p>By participating in workshops, you gain entry to a myriad of events—EDM Concert, International Exhibitions, Robowars, Lecture Series, Defense Expo, and more. This edition's highlights feature <b>Akash Ambani</b>, Shri S Somnath (<b>ISRO Chairman</b>), and an electrifying <b>EDM concert</b> with Matisse & Sadko. Don't miss out!</p>
+
+        <p>Book your accommodation for a comfy stay inside IIT Bombay campus and to enjoy unrestricted access to late-night events and institute entry. Register at techfest.org/accommodation now! Limited seats available.
+        </p>
+        
+        <!-- Add an image -->
+        <img src="https://techfest.org/media/compi/Quadcopter_QR-01_4.jpeg" alt="Techfest Image" style="width:516.75px;height:150px;" style="display: block; margin: auto;"> <br>
+        
+        <!-- Bold some lines -->
+        <strong>Best regards,</strong><br>
+        <strong>Team Techfest 2023-24</strong>
+    </body>
+    </html>
+    """
+    from_email = '27thedition@techfest.org'
+    recipient = 'apshingeatharv@gmail.com'
+
+    csv_file_path = '/home/yat251/Desktop/Coding/TF/TF23/backend/emails_test.csv'
+    df = pd.read_csv(csv_file_path)
+    recipient_list = df['Email'].dropna().tolist()
+
+    for row in recipient_list:
+        recipient = row
+        email = EmailMessage(subject, message, from_email, [recipient])
+        email.content_subtype = "html" 
+        print(row)
+        email.send()
+
+    # email = EmailMessage(subject, message, from_email, [recipient])
+    # # send_mail(subject, message, from_email, [recipient])
+    # email.content_subtype = "html" 
+    # email.send()
     return HttpResponse("Email sent successfully!")
 
 @parser_classes([JSONParser])
