@@ -252,9 +252,25 @@ function App() {
                 </React.Suspense>
               }
             />
+            <Route
+              path="/fintech"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Fintech />
+                </React.Suspense>
+              }
+            />
 
             <Route
               path="/summits/industry"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Industry />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/industry"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Industry />
