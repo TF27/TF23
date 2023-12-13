@@ -41,6 +41,7 @@
     left: 0;
     border: 1px solid #BB9564;
     transform: translate(5px, 5px);
+    background-color: black;
 }
 
 .CardHead{
@@ -53,6 +54,10 @@
 .SummitHead{
     margin-top: 14vh;
     margin-bottom: 40px;
+}
+
+.cOverlay{
+    background-color: black;
 }
 
 .RegExp{
@@ -84,10 +89,12 @@
     transition: bottom 0.3s ease 0s;
 }
 .CardN{
-    font-size: 28px;
+    font-size: 24px;
+    line-height: 0.8;
 }
 .CardD{
     font-size: 16px;
+    line-height: 0.8;
 }
 
 

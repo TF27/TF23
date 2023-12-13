@@ -5,7 +5,7 @@ import './x.css';
 import Whatsapplink from '../../../../components/whatsapp/link';
 
 
-const race = () => {
+const Race = () => {
     const [activeCity, setActiveCity] = useState('About');
     const [activeIndex, setActiveIndex] = useState(null);
     const openCity = (cityName) => {

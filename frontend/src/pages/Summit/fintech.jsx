@@ -56,22 +56,23 @@ const Fintech = () => {
               worked on consumers' pain points, providing a digital platform for
               entrepreneurs and investors to digitize financially. The
               International Fintech Summit is the ideal meeting place
-              facilitating multi-stakeholder dialogue with power-packed
+              facilitating dialogue with power-packed
               networking opportunities among C-Level executives, leading
               industry experts, decision-makers, and policymakers from across
               the value chain to foster collaboration, discuss current
               challenges, business opportunities, develop market strategies,
               share knowledge and identify solutions aimed at shaping the future
-              of Fintech. For Students: Lay the foundation for your career
+              of Fintech.</p>
+              <p><b>For Students:</b> Lay the foundation for your career
               through live intellectual discussions with speakers through chat
               and individual assessments to add to your expertise. Networking
               opportunities with Fintech leaders. Build your career by
               interacting with our honorable speakers, industry professionals
-              and get a certificate of completion. For Professionals: Meet
-              influential people and expand your professional network. Get
+              and get a certificate of completion. </p>
+              <p><b>For Professionals:</b> Meet influential people and expand your professional network. Get
               insights about the current state of the industry and the future
-              possibilities. Explore opportunities in the fintech sector.
-            </p>
+              possibilities. Explore opportunities in the fintech sector.</p>
+            
           </div>
           <div>
             <Border text="Speakers" />
@@ -85,28 +86,40 @@ const Fintech = () => {
                   What is fintech and why is it important?
                 </div>
                 <div className={styles.agendasIII}>
-                  What are the different types of fintech?
+                The Evolution of Fintech: Unveiling its Historical Milestones and Future Trajectory 
                 </div>
               </div>
               <div className={styles.agendasII}>
                 <div className={styles.agendasIII}>
-                  What are the benefits of fintech?
+                Fintech & its influence on society
                 </div>
                 <div className={styles.agendasIII}>
-                  What are the challenges of fintech?
-                </div>
-              </div>
-              <div className={styles.agendasII}>
-                <div className={styles.agendasIII}>
-                  What is the future of fintech?
+                Future of Investments
                 </div>
                 <div className={styles.agendasIII}>
-                  What are the best examples of fintech?
+                Inspiring Entrepreneurs: How to build your own Product
                 </div>
               </div>
               <div className={styles.agendasII}>
                 <div className={styles.agendasIII}>
-                  What is fintech and why is it important?
+                Youth and Fintech Startups
+                </div>
+                <div className={styles.agendasIII}>
+                Social Impact: Investing for financial Inclusion
+                </div>
+                <div className={styles.agendasIII}>
+                Financial Development: India v/s The World
+                </div>
+              </div>
+              <div className={styles.agendasII}>
+              <div className={styles.agendasIII}>
+                Fintechs and Ethics
+                </div>
+                <div className={styles.agendasIII}>
+                Fintech & its influence on society
+                </div>
+                <div className={styles.agendasIII}>
+                Transformation of India
                 </div>
               </div>
             </div>
