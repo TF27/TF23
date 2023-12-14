@@ -81,6 +81,13 @@
   margin-bottom: 5vh;
 }
 
+.singlehead img{
+  max-width: 60vw;
+  max-height: 15vw;
+}
+
+
+
 .single{
   position: relative;
   display: flex;
