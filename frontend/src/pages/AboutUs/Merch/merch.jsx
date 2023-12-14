@@ -1,9 +1,10 @@
-import i1 from "./i1.png";
+import black from './black.jpg';
+import white from './white.jpg';
 import styles from "./merch.module.css";
 import bf from './bg.png';
 
 const Merch = () => {
-  const Border = ({ soso, price, blink }) => {
+  const Border = ({ soso, price, pitch, blink }) => {
     return (
       <>
         <div>
@@ -13,12 +14,12 @@ const Merch = () => {
             </div>
           </div>
           <div className={styles.price}>
-            Price: INR {price}
+            Price: INR {price} <span>{pitch}</span>
           </div>
           <div className={styles.b_rect1}>
-            <div className={styles.b_rect2}>
-                <a href={blink} target="_blank">Buy Now</a>
-            </div>
+            
+                <a href={blink} target="_blank"><div className={styles.b_rect2}>Buy Now</div></a>
+            {/* </div> */}
           </div>
         </div>
       </>
@@ -42,13 +43,16 @@ const Merch = () => {
         with our mesmerizing technological festival merch
       </p>
       <div>
-        <div className={styles.bigO}>
-          <Border soso={i1} price={500} blink='hola hoooo'/>
-          <Border soso={i1} price={500} blink='hola hoooo'/>
+        <div className={styles.earlye}>
+          Early Bird Offer
         </div>
         <div className={styles.bigO}>
-          <Border soso={i1} price={500} blink='hola hoooo'/>
-          <Border soso={i1} price={500} blink='hola hoooo'/>
+          <Border soso={black} price={349} pitch={449} blink='https://tshirtsnearme.in/product/techfest23-iit-bombay-black-t-shirt/'/>
+          <Border soso={white} price={349} pitch={449} blink='https://tshirtsnearme.in/product/techfest23-iit-bombay-white-t-shirt-copy/'/>
+        </div>
+        <div className={styles.bigO}>
+          {/* <Border soso={i1} price={500} pitch={600} blink='hola hoooo'/> */}
+          {/* <Border soso={i1} price={500} blink='hola hoooo'/> */}
         </div>
       </div>
       </div>

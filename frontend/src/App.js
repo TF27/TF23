@@ -428,7 +428,7 @@ function App() {
             />
 
           <Route 
-            path='/merch'
+            path='/store'
             element={
               <React.Suspense fallback={<div>Loading...</div>}>
                 <Merch />
