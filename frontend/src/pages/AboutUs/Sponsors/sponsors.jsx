@@ -32,9 +32,9 @@ import maxprotein from './assets/maxprotein.jpg';
 import monster from './assets/Monster Logo.png';
 import teachindia from './assets/tfi .png';
 import boostgrad from './assets/Boostgrad.png';
-import sevanyay from './assets/General Sponsors/Playmaker Labs.jpg';
+import sevanyay from './assets/snu.jpg';
 import playmaker from './assets/General Sponsors/Playmaker Labs.jpg';
-import duolingo from './assets/General Sponsors/duolingo.png';
+import duolingo from './assets/General Sponsors/duolingowhite.jpeg';
 import sydney from './assets/International University Partners/sydney.PNG';
 import taiwan from './assets/International University Partners/Taiwan Logo .png';
 import nus from './assets/International University Partners/nus.png';
@@ -55,7 +55,7 @@ import prep from './assets/Campus Ambassador Partnrs/Prepp in.png';
 import udemy from './assets/Campus Ambassador Partnrs/Udemy.png';
 import uiux from './assets/Campus Ambassador Partnrs/UI UX Global.jpg';
 import cnbc from './assets/media/cnbc.jpeg';
-import cinepolis from './assets/media/cnbc.jpeg';
+import cinepolis from './assets/cine.jpeg';
 import jio from './assets/media/Jio Saavn Logo.png';
 import maha from './assets/media/maha.jpeg';
 import ontv from './assets/media/ONTV LOGO.png';
@@ -70,10 +70,10 @@ import grabon from './assets/grabon.png';
 import camlin from './assets/camlin.jpg';
 import fetchie from './assets/camlin.jpg';
 import toi from './assets/media/toi.jpg';
-import ufo from './assets/media/toi.jpg';
+import ufo from './assets/UFO logo outdoor.png';
 import youth from './assets/media/youth.png';
 import britishcouncil from './assets/BritishCouncil.jpeg';
-import gaana from './assets/media/toi.jpg';
+import gaana from './assets/Gaana_Logo.png';
 import timetechies from './assets/media/timetechies.png';
 
 
@@ -109,49 +109,93 @@ const Sponsors = () => {
     <div className='yoyohoneysingh' style={bgHaiJi}>
       <div className={styles.head}><h1>Title Sponsor</h1></div>
       <div className={styles.singlehead}>
+        <a href='https://www.marshmclennan.com/'>
         <img src={mars}></img>
+        </a>
       </div>
       <div className={styles.title}><h1>Marsh McLennan Global Services India Pvt Ltd</h1></div>
       <div className={styles.title}><h1>Associate Title Sponsor</h1></div>
       <div className={styles.bobby}>
+        <a href='https://www.sbi.co.in/web/home/home'>
         <img src={sbi}></img>
+        </a>
       </div>
       <div className={styles.title}><h1>Powered By</h1></div>
       <div className={styles.bobby}>
+        <a href='http://here.com/'>
         <img src={here}></img>
+        </a>
+        <a href='http://idfcfirstbank.com/'>
         <img src={idfc}></img>
+        </a>
+        <a href='http://unstop.com/'>
         <img src={unstop}></img>
+        </a>
       </div>
       <div className={styles.title}><h1>Competitions Sponsor</h1></div>
       <div className={styles.bobby}>
+        <a href='http://findoc.com/'>
         <img src={findoc}></img>
+        </a>
+        <a href='http://boeing.com/'>
         <img src={boeing}></img>
+        </a>
+        <a href='http://atlassian.com/'>
         <img src={atlassian}></img>
+        </a>
       </div>
       <div className={styles.bobby}>
+        <a href='http://datamatics.com/'>
         <img src={datamatics}></img>
+        </a>
+        <a href='http://tih.iitb.ac.in/'>
         <img src={tih}></img>
+        </a>
+        <a href='http://fetch.ai/'>
         <img src={fetch}></img>
+        </a>
       </div>
       <div className={styles.bobby}>
+      <a href='https://www.edelweisstokio.in/'>
         <img src={edel}></img>
+        </a>
+        <a href='http://airbus.com/'>
         <img src={airbus}></img>
+        </a>
+        <a href='http://atomberg.com/'>
         <img src={atomberg}></img>
+        </a>
       </div>
       <div className={styles.bobby}>
+      
         <img src={olympiad}></img>
+        
+        <a href='http://witblox.com/'>
         <img src={witblox}></img>
+        </a>
+        <a href='https://techradiance.in/'>
         <img src={techrad}></img>
+        </a>
       </div>
       <div className={styles.bobby}>
+      <a href='https://ableducation.com/'>
         <img src={abl}></img>
+        </a>
+        
         <img src={prag}></img>
+        
+        <a href='https://www.robocapleague.com/'>
         <img src={robocap}></img>
+        </a>
       </div>
       <div className={styles.title}><h2>Innovation Partner</h2><h2> Official Tech-Aid Partner</h2></div>
       <div className={styles.bobby}>
+        <a href='http://godrej.com/'>
         <img src={godrej}></img>
+        </a>
+        <a href='https://csi.thenudge.org/'>
         <img src={nudge}></img>
+        </a>
       </div>
       <div className={styles.title}><h1>International Summit Partners</h1></div>
       <div className={styles.bobby2}>
@@ -201,28 +245,28 @@ const Sponsors = () => {
       <div className={styles.single}>
         <img src={toi}></img>
       </div>
-      <div className={styles.single}>
+      <div className={styles.single1}>
         <img src={timetechies}></img>
       </div>
-      <div className={styles.bobby}>
+      <div className={styles.bobby3}>
         <img src={punekar}></img>
         <img src={inshorts}></img>
         <img src={notice}></img>
       </div>
       <div className={styles.title}><h2>Marathi Media Partner</h2><h2></h2></div>
-      <div className={styles.bobby}>
+      <div className={styles.bobby3}>
         <img src={maha}></img>
         <img src={gaana}></img>
         <img src={cnbc}></img>
       </div>
       <div className={styles.title}><h2>Youth Media Partner</h2><h2>PR Partner</h2></div>
-      <div className={styles.bobby}>
+      <div className={styles.bobby3}>
         <img src={youth}></img>
         <img src={jagran}></img>
         <img src={zex}></img>
       </div>
       <div className={styles.title}><h2>Cine-Media partner</h2><h2>Music Streaming Partner</h2><h2>Official Multiplex Partner</h2></div>
-      <div className={styles.bobby}>
+      <div className={styles.bobby3}>
         <img src={ufo}></img>
         <img src={jio}></img>
         <img src={cinepolis}></img>
