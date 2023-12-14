@@ -13,7 +13,7 @@ export const AuthContextProvider = ({children}) => {
     const googleSignIn = ()  => {
         const provider = new GoogleAuthProvider();
          signInWithPopup(auth, provider)
-         navigate('/workshops');
+        //  navigate('/workshops');
     }
 
     const logOut = () => {
