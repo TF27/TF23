@@ -32,9 +32,9 @@ import maxprotein from './assets/maxprotein.jpg';
 import monster from './assets/Monster Logo.png';
 import teachindia from './assets/tfi .png';
 import boostgrad from './assets/Boostgrad.png';
-import sevanyay from './assets/General Sponsors/Playmaker Labs.jpg';
+import sevanyay from './assets/snu.jpg';
 import playmaker from './assets/General Sponsors/Playmaker Labs.jpg';
-import duolingo from './assets/General Sponsors/duolingo.png';
+import duolingo from './assets/General Sponsors/duolingowhite.jpeg';
 import sydney from './assets/International University Partners/sydney.PNG';
 import taiwan from './assets/International University Partners/Taiwan Logo .png';
 import nus from './assets/International University Partners/nus.png';
@@ -70,7 +70,7 @@ import grabon from './assets/grabon.png';
 import camlin from './assets/camlin.jpg';
 import fetchie from './assets/camlin.jpg';
 import toi from './assets/media/toi.jpg';
-import ufo from './assets/media/toi.jpg';
+import ufo from './assets/UFO logo outdoor.png';
 import youth from './assets/media/youth.png';
 import britishcouncil from './assets/BritishCouncil.jpeg';
 import gaana from './assets/media/toi.jpg';
@@ -201,28 +201,28 @@ const Sponsors = () => {
       <div className={styles.single}>
         <img src={toi}></img>
       </div>
-      <div className={styles.single}>
+      <div className={styles.single1}>
         <img src={timetechies}></img>
       </div>
-      <div className={styles.bobby}>
+      <div className={styles.bobby3}>
         <img src={punekar}></img>
         <img src={inshorts}></img>
         <img src={notice}></img>
       </div>
       <div className={styles.title}><h2>Marathi Media Partner</h2><h2></h2></div>
-      <div className={styles.bobby}>
+      <div className={styles.bobby3}>
         <img src={maha}></img>
         <img src={gaana}></img>
         <img src={cnbc}></img>
       </div>
       <div className={styles.title}><h2>Youth Media Partner</h2><h2>PR Partner</h2></div>
-      <div className={styles.bobby}>
+      <div className={styles.bobby3}>
         <img src={youth}></img>
         <img src={jagran}></img>
         <img src={zex}></img>
       </div>
       <div className={styles.title}><h2>Cine-Media partner</h2><h2>Music Streaming Partner</h2><h2>Official Multiplex Partner</h2></div>
-      <div className={styles.bobby}>
+      <div className={styles.bobby3}>
         <img src={ufo}></img>
         <img src={jio}></img>
         <img src={cinepolis}></img>
