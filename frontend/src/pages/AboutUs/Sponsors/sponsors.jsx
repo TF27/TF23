@@ -1,28 +1,28 @@
 import React from 'react';
 import bg from './assets/sponsersbg.png';
 import bob from './assets/bob.png';
-import mars from './assets/mars.png';
+import mars from './assets/MarshMcLennan.jpeg';
 import styles from './sponsors.module.css'; // Import the CSS file
 import sbi from './assets/SBI .jpeg';
 import here from './assets/here.jpg';
 import unstop from './assets/Unstop.jpeg';
 import idfc from './assets/idfc.jpg';
-import abl from './assets/Competition Partners/abl.png';
+import abl from './assets/Competition Partners/abl.jpeg';
 import atlassian from './assets/Competition Partners/Atlassian.png';
 import atomberg from './assets/Competition Partners/Atomberg_logo.jpg';
 import airbus from './assets/Competition Partners/Airbus.png';
 import boeing from './assets/Competition Partners/boeing.jpeg';
 import datamatics from './assets/Competition Partners/Datamatics.jpg';
 import edel from './assets/Competition Partners/edel.png';
-import findoc from './assets/Competition Partners/findoc.png';
+import findoc from './assets/Competition Partners/Findoc.jpeg';
 import olympiad from './assets/Competition Partners/olympiad.jpeg';
 import robocap from './assets/Competition Partners/robocap.png';
 import techrad from './assets/Competition Partners/Techradiance..png';
-import tih from './assets/Competition Partners/TIH logo.png';
+import tih from './assets/Competition Partners/TIH LOGO.png';
 import witblox from './assets/Competition Partners/witblox.png';
 import fetch from './assets/Competition Partners/Fetch.png';
 import prag from './assets/Competition Partners/Pragyakalp.png';
-import godrej from './assets/godrej.jpg';
+import godrej from './assets/GODREJ.png';
 import nudge from './assets/nudge.jpeg';
 import nsdl from './assets/NSDL.png';
 import indoil from './assets/Indian Oil.jpeg';
@@ -30,7 +30,7 @@ import eatsure from './assets/EatSure.jpeg';
 import cocacola from './assets/coca cola.jpg';
 import maxprotein from './assets/maxprotein.jpg';
 import monster from './assets/Monster Logo.png';
-import teachindia from './assets/tfi .png';
+import teachindia from './assets/tfi.png';
 import boostgrad from './assets/Boostgrad.png';
 import sevanyay from './assets/snu.jpg';
 import playmaker from './assets/General Sponsors/Playmaker Labs.jpg';
@@ -43,25 +43,25 @@ import icewrap from './assets/Icewrap.jpeg';
 import mailercloud from './assets/Mailercloud.jpeg';
 import neomedia from './assets/neomedia.png';
 import gmprod from './assets/GM-Productions.png';
-import sankalp from './assets/Campus Ambassador Partnrs/Sankalptaru.png';
-import coding from './assets/Campus Ambassador Partnrs/Coding Ninjas.png';
+import sankalp from './assets/Campus Ambassador Partnrs/Sankalptaru.jpeg';
+import coding from './assets/Campus Ambassador Partnrs/Coding Ninjas.jpeg';
 import college from './assets/Campus Ambassador Partnrs/Collegedunia.png';
-import elearn from './assets/Campus Ambassador Partnrs/ELM.png';
+import elearn from './assets/Campus Ambassador Partnrs/ELM.jpeg';
 import etasha from './assets/Campus Ambassador Partnrs/ETASHA.jpeg';
-import guvi from './assets/Campus Ambassador Partnrs/Guvi.png';
+import guvi from './assets/Campus Ambassador Partnrs/Guvi.jpeg';
 import languify from './assets/Campus Ambassador Partnrs/Languify.jpeg';
-import mohan from './assets/Campus Ambassador Partnrs/mohan.png';
+import mohan from './assets/Campus Ambassador Partnrs/mohan.jpeg';
 import prep from './assets/Campus Ambassador Partnrs/Prepp in.png';
 import udemy from './assets/Campus Ambassador Partnrs/Udemy.png';
 import uiux from './assets/Campus Ambassador Partnrs/UI UX Global.jpg';
 import cnbc from './assets/media/cnbc.jpeg';
 import cinepolis from './assets/cine.jpeg';
-import jio from './assets/media/Jio Saavn Logo.png';
+import jio from './assets/media/Jiosaavan.png';
 import maha from './assets/media/maha.jpeg';
 import ontv from './assets/media/ONTV LOGO.png';
-import punekar from './assets/media/Punekarnews.png';
+import punekar from './assets/media/Punekar news.jpeg';
 import notice from './assets/media/notice.png';
-import inshorts from './assets/media/logo inshorts black.png';
+import inshorts from './assets/media/Inshorts.png';
 import zex from './assets/media/zex.png';
 import jagran from './assets/media/jagranjosh logo.jpg';
 import zouton from './assets/zouton.jpg';
@@ -202,7 +202,7 @@ const Sponsors = () => {
         <img src={mars}></img>
         <img src={nsdl}></img>
       </div>
-      <div className={styles.title}><h2>Industry Summit Partner</h2><h2> Fintech Summit Partner</h2></div>
+      <div className={styles.title2}><h2>Industry Summit Partner</h2><h2> Fintech Summit Partner</h2></div>
       <div className={styles.title}><h1>Official Ozone Title</h1></div>
       <div className={styles.single}>
         <img src={indoil}></img>
@@ -253,16 +253,18 @@ const Sponsors = () => {
         <img src={inshorts}></img>
         <img src={notice}></img>
       </div>
-      <div className={styles.title}><h2>Marathi Media Partner</h2><h2></h2></div>
       <div className={styles.bobby3}>
-        <img src={maha}></img>
         <img src={gaana}></img>
+        <img src={jagran}></img>
         <img src={cnbc}></img>
+      </div>
+      <div className={styles.title}><h2>Marathi Media Partner</h2></div>
+      <div className={styles.single}>
+        <img src={maha}></img>
       </div>
       <div className={styles.title}><h2>Youth Media Partner</h2><h2>PR Partner</h2></div>
       <div className={styles.bobby3}>
         <img src={youth}></img>
-        <img src={jagran}></img>
         <img src={zex}></img>
       </div>
       <div className={styles.title}><h2>Cine-Media partner</h2><h2>Music Streaming Partner</h2><h2>Official Multiplex Partner</h2></div>
