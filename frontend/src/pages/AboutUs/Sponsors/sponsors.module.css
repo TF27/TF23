@@ -133,6 +133,15 @@
   justify-content: space-evenly;
 }
 
+.title2{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: -5vw;
+  margin-bottom: 5vw;
+}
+
 @media (max-width:580px) {
   .bobby{
     position: relative;
