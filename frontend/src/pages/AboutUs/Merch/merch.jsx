@@ -1,5 +1,6 @@
 import black from './black.jpg';
 import white from './white.jpg';
+import hoodi from './hoodi.jpg';
 import styles from "./merch.module.css";
 import bf from './bg.png';
 
@@ -51,7 +52,7 @@ const Merch = () => {
           <Border soso={white} price={349} pitch={449} blink='https://tshirtsnearme.in/product/techfest23-iit-bombay-white-t-shirt-copy/'/>
         </div>
         <div className={styles.bigO}>
-          {/* <Border soso={i1} price={500} pitch={600} blink='hola hoooo'/> */}
+          <Border soso={hoodi} price={649} pitch={699} blink='https://tshirtsnearme.in/product/techfest23-iit-bombay-navy-blue-hoodie/'/>
           {/* <Border soso={i1} price={500} blink='hola hoooo'/> */}
         </div>
       </div>
