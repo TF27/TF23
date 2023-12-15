@@ -14,7 +14,7 @@ import airbus from './assets/Competition Partners/Airbus.png';
 import boeing from './assets/Competition Partners/boeing.jpeg';
 import datamatics from './assets/Competition Partners/Datamatics.jpg';
 import edel from './assets/Competition Partners/edel.png';
-import findoc from './assets/Competition Partners/findoc.png';
+import findoc from './assets/Competition Partners/Findoc.jpeg';
 import olympiad from './assets/Competition Partners/olympiad.jpeg';
 import robocap from './assets/Competition Partners/robocap.png';
 import techrad from './assets/Competition Partners/Techradiance..png';
