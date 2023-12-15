@@ -18,7 +18,7 @@ import findoc from './assets/Competition Partners/Findoc.jpeg';
 import olympiad from './assets/Competition Partners/olympiad.jpeg';
 import robocap from './assets/Competition Partners/robocap.png';
 import techrad from './assets/Competition Partners/Techradiance..png';
-import tih from './assets/Competition Partners/TIH logo.png';
+import tih from './assets/Competition Partners/TIH LOGO.png';
 import witblox from './assets/Competition Partners/witblox.png';
 import fetch from './assets/Competition Partners/Fetch.png';
 import prag from './assets/Competition Partners/Pragyakalp.png';
@@ -73,7 +73,7 @@ import toi from './assets/media/toi.jpg';
 import ufo from './assets/UFO logo outdoor.png';
 import youth from './assets/media/youth.png';
 import britishcouncil from './assets/BritishCouncil.jpeg';
-import gaana from './assets/Gaana_Logo.png';
+import gaana from './assets/gaana.jpg';
 import timetechies from './assets/media/timetechies.png';
 
 
@@ -288,14 +288,17 @@ const Sponsors = () => {
         </a>
       </div>
       <div className={styles.bobby3}>
-      <a href='https://gaana.com/'>
-        <img src={gaana}></img>
-        </a>
         <a href='https://www.jagranjosh.com/'>
         <img src={jagran}></img>
         </a>
         <a href='https://www.cnbc.com/'>
         <img src={cnbc}></img>
+        </a>
+      </div>
+      <div className={styles.title}><h2>Digital Music Partner</h2></div>
+      <div className={styles.single}>
+      <a href='https://gaana.com/'>
+        <img src={gaana}></img>
         </a>
       </div>
       <div className={styles.title}><h2>Marathi Media Partner</h2></div>
