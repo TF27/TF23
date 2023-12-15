@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import Header from "./components/Navbar/Header";
+// import Header from "./components/Navbar/Header";
 import { AuthContextProvider } from "./contexts/AuthContext";
 import ReactGA from "react-ga";
 import Protected from "./contexts/Protected";
