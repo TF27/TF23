@@ -149,8 +149,8 @@ const Header_update = () => {
             <Link to="/accommodation">Accommodation</Link>
           </li>
           <li>
-            <Link to="/contactus" className="navContact">
-              Contact Us
+            <Link to="/store" className="navContact">
+             Store
             </Link>
           </li>
           <li>
