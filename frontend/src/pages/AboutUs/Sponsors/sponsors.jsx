@@ -341,8 +341,12 @@ const Sponsors = () => {
       </div>
       <div className={styles.title}><h2>Official Photography Partner</h2><h2>Official Aftermovie Partner</h2></div>
       <div className={styles.bobby}>
+        <a href='https://instagram.com/gmproductions.in?igshid=OGQ5ZDc2ODk2ZA=='>
         <img src={gmprod}></img>
+        </a>
+        <a href='https://instagram.com/neomediaworks?igshid=OGQ5ZDc2ODk2ZA=='>
         <img src={neomedia}></img>
+        </a>
       </div>
       <div className={styles.title}><h1>Campus Ambassador Partners</h1></div>
       <div className={styles.title}><h2>Title Sponsor</h2></div>
