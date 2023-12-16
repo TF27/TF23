@@ -18,7 +18,7 @@ import findoc from './assets/Competition Partners/Findoc.jpeg';
 import olympiad from './assets/Competition Partners/olympiad.jpeg';
 import robocap from './assets/Competition Partners/robocap.png';
 import techrad from './assets/Competition Partners/Techradiance.jpeg';
-import tih from './assets/Competition Partners/TIH LOGO.png';
+import tih from './assets/Competition Partners/TIH logo.png';
 import witblox from './assets/Competition Partners/witblox.png';
 import fetch from './assets/Competition Partners/Fetch.png';
 import prag from './assets/Competition Partners/Pragyakalp.png';
