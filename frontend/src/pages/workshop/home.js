@@ -7,6 +7,7 @@ function Workshop() {
   return (
     <div style={{height:'120vh'}}  >
       <ImageOne />
+      {/* <div></div> */}
       <ImageTwo/>
     </div> 
   );

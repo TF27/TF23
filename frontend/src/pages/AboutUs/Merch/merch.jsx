@@ -48,8 +48,8 @@ const Merch = () => {
           Early Bird Offer
         </div>
         <div className={styles.bigO}>
-          <Border soso={black} price={349} pitch={449} blink='https://tshirtsnearme.in/product/techfest23-iit-bombay-black-t-shirt/'/>
-          <Border soso={white} price={349} pitch={449} blink='https://tshirtsnearme.in/product/techfest23-iit-bombay-white-t-shirt-copy/'/>
+          <Border soso={black} price={349} pitch={479} blink='https://tshirtsnearme.in/product/techfest23-iit-bombay-black-t-shirt/'/>
+          <Border soso={white} price={349} pitch={479} blink='https://tshirtsnearme.in/product/techfest23-iit-bombay-white-t-shirt-copy/'/>
         </div>
         <div className={styles.bigO}>
           <Border soso={hoodi} price={649} pitch={699} blink='https://tshirtsnearme.in/product/techfest23-iit-bombay-navy-blue-hoodie/'/>

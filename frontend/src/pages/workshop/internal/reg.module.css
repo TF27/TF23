@@ -140,3 +140,7 @@ select:-webkit-autofill:focus {
         height: 120vh;
     }
 }
+
+.head_n h2{
+    text-transform: capitalize;
+}
