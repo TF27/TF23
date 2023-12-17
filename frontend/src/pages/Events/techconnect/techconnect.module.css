@@ -488,7 +488,7 @@
   }
   .themeData {
     font-size: 20px;
-    height: 32vh;
+    /* height: 32vh; */
     max-width: 90%;
     margin: auto;
   }
@@ -557,7 +557,8 @@
     text-align: left;
     padding-left: 20px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    font-size: 22px;
   }
   
   @media (max-width: 993px) {
@@ -586,4 +587,42 @@
       font-size: medium;
     }
   }
+
+  .overlay{
+    width: 100vw;
+    /* height: 120vh; */
+    /* padding-top: 1vh; */
+    background-color: rgba(0, 0, 0, 0.71);
+  }
+
+  .topImg{
+    width: 100vw;
+    object-fit: cover;
+    height: 100vh;
+  }
+
+  .topImg img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+  }
   
+  .topImgOverlay{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0 0 0 / 83%);
+    position: absolute;
+    top: 0vh;
+  }
+  .topText{
+    top: 32vh;
+    position: relative;
+    font-family: auto;
+    color: #93bac7;
+  }
+  .topText h1{
+    font-size: 10vw;
+  }
+  .topText p{
+    font-size: 3vw;
+  }

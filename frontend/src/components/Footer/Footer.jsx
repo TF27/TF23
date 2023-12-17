@@ -111,7 +111,8 @@ const Footer = () => {
         <div className="anounceIt">
           <Link to="/workshops">Workshops are Live Now!</Link>
           <br />
-          <Link to="/accommodation">Stay at IIT Bombay</Link>
+          {/* <a href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer">Stay at IIT Bombay</a> */}
+          <Link to='/accommodation'>Stay at IIT Bombay</Link>
           <br />
           <a href="https://www.instagram.com/techfest_iitbombay/">
             Join us @ IITB

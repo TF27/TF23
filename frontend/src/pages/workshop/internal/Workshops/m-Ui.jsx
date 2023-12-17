@@ -58,7 +58,7 @@ const Ui = () => {
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
           The top 3 products will receive a one-year Spotify subscription. People who attend the workshop get a certificate of completion from UIUX Global. Get access to a Masterclass in UIUX design. Become eligible for a UIUX Global certification scholarship <br />
-          Date: 29th December <br /> <br />
+          Date: 27th December <br /> <br />
           Duration: 6-7 hours <br /> <br />
           Venue: IIT Bombay <br />
           </div>
