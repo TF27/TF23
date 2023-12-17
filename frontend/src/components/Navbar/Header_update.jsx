@@ -122,6 +122,9 @@ const Header_update = () => {
                   <Link to="/ift">Full Throttle</Link>
                 </li>
                 <li>
+                  <Link to="/techconnect">TechConnect</Link>
+                </li>
+                <li>
                   <Link to="/cyclothon">Cyclothon</Link>
                 </li>
                 <li>
@@ -246,6 +249,9 @@ const Header_update = () => {
             </li>
             <li onClick={showMenu}>
               <Link to="/ift">Int'l Full Throttle</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/techconnect">TechConnect</Link>
             </li>
             <li onClick={showMenu}>
               <Link to="/sustain">Sustain</Link>
