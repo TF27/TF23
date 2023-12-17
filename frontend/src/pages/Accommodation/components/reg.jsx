@@ -55,6 +55,8 @@ const Register = () => {
     console.log(formData)
   };
 
+  let paynow = 'https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer';
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setRomeo(true);
@@ -69,7 +71,8 @@ const Register = () => {
       .then((res) => {
         console.log(res);
         alert("Registration Successful!");
-        window.location.href = 'https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer';
+        window.open(paynow, '_blank');
+
       })
       .catch((err) => {
         console.log(err);

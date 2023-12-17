@@ -10,6 +10,6 @@ class RedirectToTechfestMiddleware:
 
         # If the response has a 404 status code, redirect to "techfest.org"
         if response.status_code == 404:
-            return redirect('https://techfest.org')
+            return redirect('https://techfest.org/workshops/')
 
         return response

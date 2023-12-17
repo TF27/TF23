@@ -60,7 +60,7 @@ const SummitReg = () => {
       .then((response) => {
         alert("Registered succesfully!!");
         window.open(paynow, '_blank');
-        navigate(`/summits/${cardName}`);
+        navigate(`/workshops`);
       })
       .catch((error) => {
         console.error("Error:", error);
