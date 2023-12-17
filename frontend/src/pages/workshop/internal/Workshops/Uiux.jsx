@@ -47,7 +47,7 @@ const Uiux = () => {
                 <b>Learn the fundamentals of UIUX design to craft a seamless user experience and build your dream product!</b> <br />
                 The top 3 products will receive a one-year Spotify subscription. People who attend the workshop get a certificate of completion from UIUX Global. Get access to a Masterclass in UIUX design. Become eligible for a UIUX Global certification scholarship <br />
                   <h3>Date: </h3>
-                  <p>29th December</p>
+                  <p>27th December</p>
                   <h3>Venue: </h3>
                   <p>IIT Bombay</p>
                   <h3>Glimpses: <a href="https://www.youtube.com/watch?v=0_FBwJi8VBo" target="_blank"><img src={yt} /></a></h3>

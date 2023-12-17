@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'certificate',
     'tickets',
     'hospi',
+    # 'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [

@@ -146,14 +146,14 @@ const Header_update = () => {
         <div className="wnavRight navRow">
           {/* <ul> */}
           <li>
-            {/* <Link to="/accommodation">Accommodation</Link> */}
-            <a
+            <Link to="/accommodation">Accommodation</Link>
+            {/* <a
               href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer"
               target="_blank"
               rel="noopener noreferrer"
             >
               Accommodation
-            </a>
+            </a> */}
           </li>
           <li>
             <Link to="/store" className="navContact">
@@ -226,14 +226,14 @@ const Header_update = () => {
               <Link to="/workshops">Workshops</Link>
             </li>
             <li onClick={showMenu}>
-              {/* <Link to="/accommodation">Accommodation</Link> */}
-              <a
+              <Link to="/accommodation">Accommodation</Link>
+              {/* <a
                 href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Accommodation
-              </a>
+              </a> */}
             </li>
             <li onClick={showMenu}>
               <Link to="/competitions">Competitions</Link>
