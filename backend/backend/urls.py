@@ -15,7 +15,7 @@ urlpatterns = [
     path('', include('events.urls')),
     path('masser/', include('mass_mailer.urls')),
     path('certificate/', include('certificate.urls')),
-    # path('ticket/', include('tickets.urls'))
+    path('ticket/', include('tickets.urls'))
     # path("administrator/", include("administrator.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

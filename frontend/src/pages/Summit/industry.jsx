@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import styles from "./fintech.module.css";
-import ImageOne from "./components/ImageOne";
+import ImageOne from "./components/ImageTwo";
 import bg from "./assets/indbg.jpg";
 import Speakers from "./components/speakers";
 
@@ -47,7 +47,7 @@ const Fintech = () => {
         <div className={styles.ex}>
           <div className={styles.titSpn_rect1}>
             <div className={styles.titSpn_rect2}>
-            <a href="https://www.meraevents.com/event/international-fintech-summit?ucode=organizer" target="_blank">Register Now</a>
+            <a href="https://www.meraevents.com/event/industry-4-0-summit?ucode=organizer" target="_blank">Register Now</a>
             </div>
           </div>
         </div>
@@ -55,30 +55,18 @@ const Fintech = () => {
           <div className={styles.About}>
             <Border text="About" />
             <p>
-              The rise of Fintech has forever changed the way companies do
-              business. There have never been as many decisions for business
-              people from crowdsourcing to mobile payments as there are now.
-              It's never been less expensive to set up your business as well as
-              to extend it. Fintech has been a boon for the consumer of banking
-              and financial services. It has improved customer satisfaction and
-              worked on consumers' pain points, providing a digital platform for
-              entrepreneurs and investors to digitize financially. The
-              International Fintech Summit is the ideal meeting place
-              facilitating multi-stakeholder dialogue with power-packed
-              networking opportunities among C-Level executives, leading
-              industry experts, decision-makers, and policymakers from across
-              the value chain to foster collaboration, discuss current
-              challenges, business opportunities, develop market strategies,
-              share knowledge and identify solutions aimed at shaping the future
-              of Fintech. For Students: Lay the foundation for your career
-              through live intellectual discussions with speakers through chat
-              and individual assessments to add to your expertise. Networking
-              opportunities with Fintech leaders. Build your career by
-              interacting with our honorable speakers, industry professionals
-              and get a certificate of completion. For Professionals: Meet
-              influential people and expand your professional network. Get
-              insights about the current state of the industry and the future
-              possibilities. Explore opportunities in the fintech sector.
+            Now is the time for digitalization. With scarce resources in our hands, rapid changes in customers and producers' behavior, a comfort-loving generation; E-Commerce is the best option socially, politically, and economically. E-Commerce is booming, even faster than Zomato's posts on their social media handles. And this growth is very promising.
+
+The International Industry Summit aims at discussing the trends that are bringing this change and changing the consumer’s perspective to this new way of shopping. The summit will provide you with a complete outlook on the growth and potential of D2C, B2C, brand marketing, etc.
+
+For Students:
+
+Build your career by interacting with our honorable speakers, industry professionals and get a certificate of completion.
+Connect with CxO’s, innovators, investors, industry professionals, and entrepreneurs and get inspired by their brand-making stories.
+For Professionals:
+
+Learn about the loopholes a company faces, and prepare yourself for upcoming challenges while also growing your industry network
+Discover the trends that will reshape the E-commerce landscape: ML & AI chatbots, ultra personalization, customer experience.
             </p>
           </div>
           <div>
@@ -90,31 +78,31 @@ const Fintech = () => {
             <div className={styles.agendasI}>
               <div className={styles.agendasII}>
                 <div className={styles.agendasIII}>
-                  What is fintech and why is it important?
+               Trends and application of AI in Industry
                 </div>
                 <div className={styles.agendasIII}>
-                  What are the different types of fintech?
-                </div>
-              </div>
-              <div className={styles.agendasII}>
-                <div className={styles.agendasIII}>
-                  What are the benefits of fintech?
-                </div>
-                <div className={styles.agendasIII}>
-                  What are the challenges of fintech?
+                Web 3.0: Role of the semantic web in industry
                 </div>
               </div>
               <div className={styles.agendasII}>
                 <div className={styles.agendasIII}>
-                  What is the future of fintech?
+                Ethical implications and Industry 5.0
                 </div>
                 <div className={styles.agendasIII}>
-                  What are the best examples of fintech?
+                  Leveraging IOT Technology to build a sustainable future
                 </div>
               </div>
               <div className={styles.agendasII}>
                 <div className={styles.agendasIII}>
-                  What is fintech and why is it important?
+                  Digital Transformation and Automation with 5G and IOT
+                </div>
+                <div className={styles.agendasIII}>
+                  Charting a Sustainable Path: Strategies & Steps for a Green Industry
+                </div>
+              </div>
+              <div className={styles.agendasII}>
+                <div className={styles.agendasIII}>
+                Brand specific success stories
                 </div>
               </div>
             </div>
