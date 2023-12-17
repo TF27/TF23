@@ -7,7 +7,7 @@ function Workshop() {
   return (
     <div style={{height:'120vh'}}  >
       <ImageOne />
-      {/* <div></div>Team discount and Early bird offer extended till 10th December! */}
+      {/* <div></div> */}
       <ImageTwo/>
     </div> 
   );
