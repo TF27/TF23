@@ -63,6 +63,7 @@ const WorkshopExplore = React.lazy(() =>
 );
 
 const IC = React.lazy(() => import("./pages/Events/Innovation Challenge/ic"));
+const Techconnect = React.lazy(() => import("./pages/Events/techconnect/techconnect"));
 const RoboReg = React.lazy(() => import("./pages/Robowars/components/Reg"));
 
 const Cyclothon = React.lazy(() =>
@@ -212,6 +213,15 @@ function App() {
                 </React.Suspense>
               }
             />
+
+            <Route
+              path="/techconnect"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Techconnect />
+                </React.Suspense>
+              }
+            />
             <Route
               path="/robowars/:catName/register"
               element={
@@ -245,6 +255,8 @@ function App() {
                 </React.Suspense>
               }
             />
+
+
 
             <Route
               path="/summits/fintech"
