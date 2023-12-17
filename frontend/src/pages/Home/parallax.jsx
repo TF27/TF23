@@ -51,7 +51,7 @@ const HomeParallax = () => {
           <br/>
           <Link to='/accommodation'>Stay at IIT Bombay</Link>
           <br/>
-          <a href="https://www.instagram.com/techfest_iitbombay/">Join us @ EDM Concert</a>
+          <a href="https://www.instagram.com/techfest_iitbombay/">Join us @ IITB</a>
         </div>
       </div>
       <div className={styles.clouds}>

@@ -8,7 +8,7 @@ const Grid = ({cards}) => {
   return (
     <>
       <div className="technorion_cards">
-        <h2 style={{marginTop: '15px'}}>Team discount and Early bird offer extended till 17th December!</h2>
+        <h2 style={{marginTop: '15px'}}>Team discount and Early bird offer extended till 18th December!</h2>
         <div className="container" style={{ maxWidth: "90%" }}>
           <div className="row" style={{paddingBottom: '80px'}}>
           {sortedCards.map((card) => (

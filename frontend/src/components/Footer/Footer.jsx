@@ -114,7 +114,7 @@ const Footer = () => {
           <Link to="/accommodation">Stay at IIT Bombay</Link>
           <br />
           <a href="https://www.instagram.com/techfest_iitbombay/">
-            Join us @ EDM Concert
+            Join us @ IITB
           </a>
         </div>
         <div className="socialMedia">

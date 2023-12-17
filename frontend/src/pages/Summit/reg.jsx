@@ -37,7 +37,7 @@ const SummitReg = () => {
   if (cardName === "fintech") {
     paynow = 'https://www.meraevents.com/event/international-fintech-summit?ucode=organizer';
   } else {
-    paynow = 'https://www.meraevents.com/event/industry-4-0-summit?ucode=organizer';
+    paynow = 'https://www.meraevents.com/event/industry-summit-4-0?ucode=organizer';
   }
 
   const handleChange = (e) => {
