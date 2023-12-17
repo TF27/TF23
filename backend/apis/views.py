@@ -801,6 +801,7 @@ def summitSpeaker(request):
 @csrf_exempt
 def summitRegForm(request):
     if request.method == 'POST':
+        
         sexy_word = request.data.get('sexy_word')
         serializer = SummitRegSerializer(
             data=request.data, many=False)
@@ -810,6 +811,7 @@ def summitRegForm(request):
         #     print(serializer.errors)
         if serializer.is_valid():
             # print(serializer)
+            
             email = serializer.validated_data.get('email')
             summitisho = serializer.validated_data.get('summitisho')
             phone = serializer.validated_data.get('phoneno')
@@ -823,9 +825,10 @@ def summitRegForm(request):
                 summitosh = 1
             sexy_word1 = f"{summitosh or ''}30Novlalaland{email or ''}or19NovWeLose{phone or ''}"
             # print(sexy_word1)
-            if sexy_word != sexy_word1:
-                # print(sexy_word, sexy_word1)
-                return JsonResponse({'error': 'Failed'}, status=400)
+            # if sexy_word != sexy_word1:
+            #     # print(sexy_word, sexy_word1)
+            #     print('hi')
+            #     return JsonResponse({'error': 'Failed'}, status=400)
             if SummitReg.objects.filter(email=email, summitisho=summitisho).exists():
                 return JsonResponse({'error': 'A registration with this email for this workshop already exists.'}, status=400)
             last_reg = SummitReg.objects.order_by('-summit_id').first()
