@@ -43,8 +43,11 @@ const Card = ({ card }) => {
         <div>
           <div className={styles.card_regexp}>
             {user === null ? (
+              // <div className={styles.card_reg}>
+              //   <button onClick={handleGoogleSignIn}>Register</button>
+              // </div>
               <div className={styles.card_reg}>
-                <button onClick={handleGoogleSignIn}>Register</button>
+                <Link to={`${card.name}/register`}>Register</Link>
               </div>
             ) : card.closed ? (
               <div className={styles.card_reg}>Sold Out</div>

@@ -74,6 +74,8 @@ const IFTReg = React.lazy(() => import("./pages/Events/ift/reg"));
 
 const Merch = React.lazy(() => import("./pages/AboutUs/Merch/merch.jsx"));
 
+const QrCodeForm = React.lazy(() => import("./pages/Events/techx/techx.jsx"));
+
 const Tracking_ID = "UA-81222017-2";
 ReactGA.initialize(Tracking_ID);
 
@@ -295,9 +297,9 @@ function App() {
             <Route
               path="workshops/:cardName/register"
               element={
-                <Protected>
+                // <Protected>
                   <WorkReg />
-                </Protected>
+                // </Protected>
               }
             />
             <Route path="competitions/:compiName" element={<CompiInternal />} />
@@ -432,6 +434,15 @@ function App() {
             element={
               <React.Suspense fallback={<div>Loading...</div>}>
                 <Merch />
+              </React.Suspense>
+            }
+          />
+
+          <Route
+            path="/qr"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <QrCodeForm />
               </React.Suspense>
             }
           />
