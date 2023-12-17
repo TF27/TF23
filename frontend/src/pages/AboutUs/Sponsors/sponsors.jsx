@@ -68,7 +68,7 @@ import zouton from './assets/zouton.jpg';
 import abhibus from './assets/AbhiBus.png';
 import grabon from './assets/grabon.png';
 import camlin from './assets/camlin.jpg';
-import fetchie from './assets/camlin.jpg';
+import fetchie from './assets/Campus Ambassador Partnrs/Fetchie.jpg';
 import toi from './assets/media/toi.jpg';
 import ufo from './assets/UFO logo outdoor.png';
 import youth from './assets/media/youth.png';
