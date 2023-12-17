@@ -11,18 +11,18 @@ import Gesture from "./Workshops/m-gesture";
 import DataAnalytics from "./Workshops/m-DataAnalytics";
 // import Python from "./Workshops/m-Python";
 // import Python from './Workshops/m-Python';
-import Pito from './Workshops/m-pito';
+import Pito from "./Workshops/m-pito";
 import Arduino from "./Workshops/m-Arduino";
 import Solarizer from "./Workshops/m-Solarizer";
 import Ai from "./Workshops/m-Ai";
 import Cloud from "./Workshops/m-Cloud";
 import Mi from "./Workshops/m-Mi";
 import Sixth from "./Workshops/m-Sixth";
-import Auto from "./Workshops/m-Auto"; 
-import Crypto from "./Workshops/m-Crypto"; 
-import Block from "./Workshops/m-Block"; 
-import Dta from "./Workshops/m-Dta"; 
-import Chatgpt from "./Workshops/m-Chatgpt"; 
+import Auto from "./Workshops/m-Auto";
+import Crypto from "./Workshops/m-Crypto";
+import Block from "./Workshops/m-Block";
+import Dta from "./Workshops/m-Dta";
+import Chatgpt from "./Workshops/m-Chatgpt";
 import Ethical from "./Workshops/m-Ethical";
 import Android from "./Workshops/m-Android";
 import Webdev from "./Workshops/m-Webdev";
@@ -90,11 +90,19 @@ const MInternal = () => {
             </div>
             <div>
               {user === null ? (
+                // <div>
+                //   <div
+                //     className={styles.statement}
+                //     onClick={handleGoogleSignIn}
+                //   >
+                //     <div className={styles.stat_rect1}></div>
+                //     <div className={styles.stat_rect2}>
+                //       <Link to={`register`}>Register</Link>
+                //     </div>
+                //   </div>
+                // </div>
                 <div>
-                  <div
-                    className={styles.statement}
-                    onClick={handleGoogleSignIn}
-                  >
+                  <div className={styles.statement}>
                     <div className={styles.stat_rect1}></div>
                     <div className={styles.stat_rect2}>
                       <Link to={`register`}>Register</Link>
@@ -106,13 +114,11 @@ const MInternal = () => {
                   <div className={styles.statement}>
                     <div className={styles.stat_rect1}></div>
                     <div className={styles.stat_rect2}>
-                      <Link>Sold Out
-                      </Link>
+                      <Link>Sold Out</Link>
                     </div>
                   </div>
                 </div>
-              ) : 
-              data.is_registered ? (
+              ) : data.is_registered ? (
                 <div>
                   <div className={styles.statement}>
                     <div className={styles.stat_rect1}></div>
@@ -135,13 +141,11 @@ const MInternal = () => {
               )}
             </div>
             <div className={styles.statement}>
-                <div className={styles.stat_rect1}></div>
-                <div className={styles.stat_rect2}>
-                  <Link to='/accomodation'>
-                      Stay @IITB
-                  </Link>
-                </div>
+              <div className={styles.stat_rect1}></div>
+              <div className={styles.stat_rect2}>
+                <Link to="/accomodation">Stay @IITB</Link>
               </div>
+            </div>
             {data.statement && (
               <div className={styles.statement}>
                 <div className={styles.stat_rect1}></div>
@@ -162,7 +166,6 @@ const MInternal = () => {
                 <h4 style={{ display: "inline" }}>Pay?</h4>
               </a>
             </p> */}
-
           </div>
           <div className={`col-12 col-lg-8 ${styles.rightdata}`}>
             <div className={styles.sponsor}>
@@ -183,7 +186,12 @@ const MInternal = () => {
               <h1 className={styles.compi_name}>{data.name}</h1>
               <p>{data.desc}</p>
               <div className={styles.work_prize}>
-                <h4 className={styles.compi_prize}> INR {data.prize}</h4> {data.ex_prize && <span><h5>{data.ex_prize}</h5></span>}
+                <h4 className={styles.compi_prize}> INR {data.prize}</h4>{" "}
+                {data.ex_prize && (
+                  <span>
+                    <h5>{data.ex_prize}</h5>
+                  </span>
+                )}
               </div>
             </div>
             {user === null ? (
@@ -200,7 +208,7 @@ const MInternal = () => {
               <div className={styles.compi_reg}></div>
             )}
             {cardName === "gesture robotics" && <Gesture />}
-            {cardName === "python" && <Pito/>}
+            {cardName === "python" && <Pito />}
             {cardName === "data analytics" && <DataAnalytics />}
             {cardName === "arduino" && <Arduino />}
             {cardName === "solarizer" && <Solarizer />}
@@ -214,20 +222,19 @@ const MInternal = () => {
             {cardName === "data to aI by google" && <Dta />}
             {cardName === "chatgpt (prompt engineering)" && <Chatgpt />}
             {cardName === "ethical hacking" && <Ethical />}
-            {cardName === "android development" && <Android/>}
-            {cardName === "web development" && <Webdev/>}
-            {cardName === "cybersecurity" && <Cybersecurity/>}
-            {cardName === "web 3.0" && <W3b/>}
-            {cardName === "digital marketing" && <Digitalm/>}
-            {cardName === "data science" && <Ds/>}
-            {cardName === "quadcopter" && <Quad/>}
-            {cardName === "bio analytics" && <Bio/>}
-            {cardName === "uI uX design" && <Ui/>}
-            {cardName === "java" && <Java/>}
-            {cardName === "ethical hacking (slot 2)" && <Ethack/>}
-            {cardName === "quadcopter (slot 2)" && <Qdrone/>}
-            {cardName === "game development" && <Game/>}
-
+            {cardName === "android development" && <Android />}
+            {cardName === "web development" && <Webdev />}
+            {cardName === "cybersecurity" && <Cybersecurity />}
+            {cardName === "web 3.0" && <W3b />}
+            {cardName === "digital marketing" && <Digitalm />}
+            {cardName === "data science" && <Ds />}
+            {cardName === "quadcopter" && <Quad />}
+            {cardName === "bio analytics" && <Bio />}
+            {cardName === "uI uX design" && <Ui />}
+            {cardName === "java" && <Java />}
+            {cardName === "ethical hacking (slot 2)" && <Ethack />}
+            {cardName === "quadcopter (slot 2)" && <Qdrone />}
+            {cardName === "game development" && <Game />}
           </div>
         </div>
       </div>
