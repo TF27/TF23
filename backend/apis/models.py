@@ -288,6 +288,7 @@ class Faces(models.Model):
     category = models.CharField(choices=[
         ('Exhi', 'Exhi'),
         ('Lect', 'Lect'),
+        ('Techx','Techx'),
     ], max_length=255, null=True, blank=True)
     designation = models.CharField(max_length=255, null=True, blank=True)
     company = models.CharField(max_length=255, null=True, blank=True)

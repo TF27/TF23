@@ -8,6 +8,7 @@ import bg from "./assets/bg.png";
 import "./technoholix_animation.css";
 import styles from "./technoholix.module.css";
 import about from "./assets/bg.png";
+import Speakers from "./components/speakers";
 
 const Technoholix = () => {
   const bgHaiJi = {
@@ -73,6 +74,7 @@ const Technoholix = () => {
           <h1 style={{ marginTop: "10px", marginBottom: "40px" }}>
             MORE ARTISTS
           </h1>
+          <Speakers />
           
           <div className="contactus">
             <h1 style={{ marginTop: "60px", marginBottom: "40px" }}>
