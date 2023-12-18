@@ -121,6 +121,9 @@ const Header_update = () => {
                   <Link to="/ift">Full Throttle</Link>
                 </li>
                 <li>
+                  <Link to="/robowars-bet">Robowars-bet</Link>
+                </li>
+                <li>
                   <Link to="/cyclothon">Cyclothon</Link>
                 </li>
                 <li>

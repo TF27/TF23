@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "mass_mailer",
     'certificate',
+    'robowarsbet',
 ]
 
 MIDDLEWARE = [

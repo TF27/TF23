@@ -2,8 +2,15 @@
     display: flex;
     align-items: center; /* Center vertically */
     justify-content: center;
-    z-index: 2147483647; 
-    background-color: none;/* Center horizontally */
+    z-index: 2147483647;
+   background-image: url("./img/homebg.jpg");
+
+
+   background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100vw;
+
+
 }
   
 .loading img{
@@ -26,11 +33,11 @@
 
 .tfbg{
     position: fixed;
-    width: 32vw;
+    width: 50vw;
 }
 .bgspined{
     animation: spin 1.5s linear forwards;
-    transform: scale(2);
+    transform: scale(1.5);
     transition: transform 1s ease-in;
 }
 
@@ -63,12 +70,14 @@
     position: fixed;
     right: 0;
     top: 0;
+    z-index: -10;
 }
 
 .cloud1{
     position: fixed;   
     left: -20px;
     top: 0;
+    z-index: -10;
 }
 
 .cloundmoveleft{
@@ -88,4 +97,17 @@
 @keyframes remove {
     0% { opacity: 1; }
     100% { opacity: 0; }
+}
+@media (max-width: 490px) {
+    .loading{
+       background-image: url("./img/homebgm.jpg");
+    }
+    .tfbg{
+        width: 150vw;
+    }
+    .tf{
+        width: 120vw;
+    left: -10vw;
+       
+    }
 }
