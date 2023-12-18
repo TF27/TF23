@@ -419,7 +419,7 @@ const Accommodation = () => {
   const scrollToBottom = () => {
     console.log("Scroll Height:", document.body.scrollHeight);
     window.scrollTo({
-      top: 100000,
+      top: 999999,
       behavior: 'smooth',
     });
   };
@@ -430,12 +430,12 @@ const Accommodation = () => {
       <div className={styles["accommodation-container"]}>
         <ImageOne />
         <div className={styles.regUp}>
-          <div className={styles.titSpn_rect1} onClick={toggleRegistrationForm}>
+          <div className={styles.titSpn_rect1}>
             <button
               className={`${styles.titSpn_rect2} ${styles.registerButton}`}
-              onClick={scrollToBottom}
+              // onClick={scrollToBottom}
             >
-              REGISTER NOW
+              <a href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer" target="_blank" >REGISTER NOW</a>
             </button>
           </div>
         </div>
@@ -474,9 +474,10 @@ const Accommodation = () => {
             <div className={styles.titSpn_rect1}>
               <button
                 className={`${styles.titSpn_rect2} ${styles.registerButton}`}
-                onClick={toggleRegistrationForm}
+                // onClick={toggleRegistrationForm}
               >
-                REGISTER NOW
+                <a href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer" target="_blank" >REGISTER NOW</a>
+                {/* REGISTER NOW */}
               </button>
             </div>
           )}

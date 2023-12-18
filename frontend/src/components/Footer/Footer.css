@@ -80,6 +80,7 @@
 .footLink{
     width: 35%;
     display:flex;
+    align-items: flex-end;
 }
 
 .socialMedia{
@@ -88,6 +89,7 @@
     justify-content: center;
     justify-content: space-around;
     /* margin-right: 3%; */
+    align-items: flex-end;
 }
 
 .footMulti{
@@ -186,4 +188,31 @@
     .footLink{
         justify-content: space-around;
     }
+}
+
+.about{
+    position: absolute;
+    background-color: black;
+    width: 168px;
+    z-index: 2;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+    bottom: 40px;
+    overflow: hidden;
+}
+
+.aboutyo{
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
+    transition: max-height 1s ease, opacity 1s ease, visibility 1s;
+
+}
+.aboutno{
+    opacity: 0;
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: max-height 1s ease, opacity 1s ease, visibility 0s 1s;
 }

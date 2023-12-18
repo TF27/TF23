@@ -54,6 +54,9 @@ INSTALLED_APPS = [
     "mass_mailer",
     'certificate',
     'robowarsbet',
+    'tickets',
+    'hospi',
+    # 'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [
@@ -94,7 +97,7 @@ ROOT_URLCONF = "backend.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / 'templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

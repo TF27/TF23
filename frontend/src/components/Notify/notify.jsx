@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {useLocation} from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import styles from './notify.module.css';
 
@@ -12,6 +12,7 @@ const Notify = () => {
     const locations = location.split('/').filter(segment => segment !== '');
     const parent = locations[0] // gets parent route from array
 
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         username: '',
         email: '',
@@ -41,6 +42,7 @@ const Notify = () => {
         try {
             const response = await axios.post("/api/notify/", formData);
             window.alert("Success: Your data has been submitted!"); // Handle the API response as needed
+            navigate('/workshops')
         } catch (error) {
             console.error(error);
         }

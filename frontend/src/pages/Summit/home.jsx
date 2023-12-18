@@ -3,15 +3,14 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { UserAuth } from "../../contexts/AuthContext";
 import styles from "./home.module.css";
-import fin from "./assets/sum1.jpg";
 
 function Summit() {
-  const [dataSummit, setData] = useState([]);
+  const [data, setData] = useState([]);
   const { googleSignIn, user } = UserAuth();
 
   const handleGoogleSignIn = async () => {
     try {
-      await handleGoogleSignIn();
+      await googleSignIn();
     } catch (error) {
       console.log(error);
     }
@@ -21,7 +20,7 @@ function Summit() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/api/summits", {
+        const response = await axios.get("/api/summits/", {
           headers: {
             "X-Email": google_id,
           },
@@ -51,8 +50,8 @@ function Summit() {
   //   },
   // ];
 
-  const Card = ({ data }) => {
-    return (
+  const card = () => {
+    return data.map((data) => (
       <>
         <div className={`${styles.SummitCOO}`}>
           <div className={styles.SummitCard}>
@@ -61,16 +60,18 @@ function Summit() {
                 <div
                   className={styles.CardHead}
                   style={{
-                    background: `url(${data.img})`,
+                    background: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(${data.img})`,
+                    height: "210px",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    height: "210px",
                   }}
                 >
+                  {/* <div className={styles.cOverlay}> */}
                   <div className={styles.CardND}>
                     <div className={styles.CardN}>{data.name}</div>
                     <div className={styles.CardD}>{data.desc}</div>
                   </div>
+                  {/* </div> */}
                 </div>
                 <div className={styles.RegExp}>
                   <div className={styles.Reg}>
@@ -79,7 +80,11 @@ function Summit() {
                     ) : data.is_paid ? (
                       <a href="">Registered</a>
                     ) : data.is_registered ? (
-                      <a href="">Pay Now</a>
+                      data.exploreLink === "fintech" ? (
+                        <a href="https://www.meraevents.com/event/international-fintech-summit?ucode=organizer" target="_blank">Pay Now</a>
+                      ) : (
+                        <a href="https://www.meraevents.com/event/industry-4-0-summit?ucode=organizer" target="_blank">Pay Now</a>
+                      )
                     ) : (
                       <Link to={data.regLink}>Register</Link>
                     )}
@@ -94,20 +99,23 @@ function Summit() {
           </div>
         </div>
       </>
-    );
+    ));
   };
 
   return (
     <div className={styles.Summit}>
-      <div className={styles.SummitHead}>
-        <h1>International Summits</h1>
-      </div>
-      <div className={styles.SummitCO}>
-        <div className="container">
-          <div className="row">
-            {dataSummit.map((summit, index) => (
+      <div className={styles.overlay}>
+        <div className={styles.SummitHead}>
+          <h1>INTERNATIONAL SUMMITS</h1>
+        </div>
+        <div className={styles.SummitCO}>
+          <div className="container">
+            <div className="row">
+              {/* {data.map((summit, index) => (
               <Card key={index} data={summit} />
-            ))}
+            ))} */}
+              {card()}
+            </div>
           </div>
         </div>
       </div>

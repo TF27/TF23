@@ -103,6 +103,9 @@ const Header_update = () => {
             >
               <ul>
                 <li>
+                  <Link to="/summits">Int'l Summit</Link>
+                </li>
+                <li>
                   <Link to="/exhibitions">Exhibitions</Link>
                 </li>
                 <li>
@@ -111,14 +114,15 @@ const Header_update = () => {
                 <li>
                   <Link to="/robowars">Robowars</Link>
                 </li>
-                {/* <li>
-                  <Link to="/summits">Int'l Summit</Link>
-                </li> */}
+
                 <li>
                   <a href="/twmun">MUN</a>
                 </li>
                 <li>
                   <Link to="/ift">Full Throttle</Link>
+                </li>
+                <li>
+                  <Link to="/techconnect">TechConnect</Link>
                 </li>
                 <li>
                   <Link to="/robowars-bet">Robowars-bet</Link>
@@ -148,15 +152,18 @@ const Header_update = () => {
         <div className="wnavRight navRow">
           {/* <ul> */}
           <li>
-            <Link
-              to="/accommodation"
+            <Link to="/accommodation">Accommodation</Link>
+            {/* <a
+              href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Accommodation
-            </Link>
+            </a> */}
           </li>
           <li>
-            <Link to="/contactus" className="navContact">
-              Contact Us
+            <Link to="/store" className="navContact">
+              Store
             </Link>
           </li>
           <li>
@@ -222,17 +229,24 @@ const Header_update = () => {
               <Link to="/">Home</Link>
             </li> */}
             <li onClick={showMenu}>
-              <Link to="/accommodation">Accommodation</Link>
+              <Link to="/workshops">Workshops</Link>
             </li>
             <li onClick={showMenu}>
-              <Link to="/workshops">Workshops</Link>
+              <Link to="/accommodation">Accommodation</Link>
+              {/* <a
+                href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Accommodation
+              </a> */}
             </li>
             <li onClick={showMenu}>
               <Link to="/competitions">Competitions</Link>
             </li>
-            {/* <li onClick={showMenu}>
+            <li onClick={showMenu}>
               <Link to="/summits">Int'l Summits</Link>
-            </li> */}
+            </li>
             <li onClick={showMenu}>
               <Link to="/robowars">Robowars</Link>
             </li>
@@ -240,10 +254,16 @@ const Header_update = () => {
               <Link to="/ift">Int'l Full Throttle</Link>
             </li>
             <li onClick={showMenu}>
+              <Link to="/techconnect">TechConnect</Link>
+            </li>
+            <li onClick={showMenu}>
               <Link to="/sustain">Sustain</Link>
             </li>
             <li onClick={showMenu}>
               <Link to="/cyclothon">Cyclothon</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/robowars-bet">Robowars-Bet</Link>
             </li>
             <li onClick={showMenu}>
               <Link to="/financialliteracy">SI - Finance</Link>
@@ -256,6 +276,9 @@ const Header_update = () => {
             </li>
             <li onClick={showMenu}>
               <Link to="/exhibitions">Exhibitions</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/store">Store</Link>
             </li>
             {/* <li onClick={showMenu}>
               <Link to="/history">History</Link>

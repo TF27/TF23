@@ -32,6 +32,14 @@ const SummitReg = () => {
     sexy_word: "",
   });
 
+  let paynow;
+
+  if (cardName === "fintech") {
+    paynow = 'https://www.meraevents.com/event/international-fintech-summit?ucode=organizer';
+  } else {
+    paynow = 'https://www.meraevents.com/event/industry-summit-4-0?ucode=organizer';
+  }
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -51,7 +59,8 @@ const SummitReg = () => {
       .post("/api/summitReg/", updatedFormData)
       .then((response) => {
         alert("Registered succesfully!!");
-        navigate(`/summits/${cardName}`);
+        window.open(paynow, '_blank');
+        navigate(`/workshops`);
       })
       .catch((error) => {
         console.error("Error:", error);

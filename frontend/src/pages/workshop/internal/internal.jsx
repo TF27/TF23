@@ -33,6 +33,9 @@ import Bio from "./Workshops/Bio";
 import Uiux from "./Workshops/Uiux";
 import Java from "./Workshops/Java";
 import Game from "./Workshops/Game";
+import Ethack from "./Workshops/Ethack";
+// import Qdrone from "./Workshops/Qdrone.jsx";
+import Qdrone from "./Workshops/Qdrone";
 
 const Internal = () => {
   const { cardName } = useParams();
@@ -56,10 +59,10 @@ const Internal = () => {
   const google_id = user ? user.email : null;
 
   useEffect(() => {
-    if(cardName === "chatgpt"){
+    if (cardName === "chatgpt") {
       navigate("/workshops/chatgpt%20(prompt%20engineering)");
     }
-    if(cardName === "hacking"){
+    if (cardName === "hacking") {
       navigate("/workshops/ethical%20hacking");
     }
   }, [cardName, navigate]);
@@ -95,11 +98,19 @@ const Internal = () => {
             </div>
             <div>
               {user === null ? (
+                // <div>
+                //   <div
+                //     className={styles.statement}
+                //     onClick={handleGoogleSignIn}
+                //   >
+                //     <div className={styles.stat_rect1}></div>
+                //     <div className={styles.stat_rect2}>
+                //       <Link to={`register`}>Register</Link>
+                //     </div>
+                //   </div>
+                // </div>
                 <div>
-                  <div
-                    className={styles.statement}
-                    onClick={handleGoogleSignIn}
-                  >
+                  <div className={styles.statement}>
                     <div className={styles.stat_rect1}></div>
                     <div className={styles.stat_rect2}>
                       <Link to={`register`}>Register</Link>
@@ -111,8 +122,7 @@ const Internal = () => {
                   <div className={styles.statement}>
                     <div className={styles.stat_rect1}></div>
                     <div className={styles.stat_rect2}>
-                      <Link>Closed
-                      </Link>
+                      <Link>Sold Out</Link>
                     </div>
                   </div>
                 </div>
@@ -163,13 +173,21 @@ const Internal = () => {
                   >
                     Accommodation
                   </a> */}
-                  <Link to='/accommodation'>Accommodation</Link>
+                  <Link to="/accommodation">Accommodation</Link>
                 </div>
               </div>
             )}
             <p className={styles.howtopay}>
-            <a href="https://drive.google.com/file/d/1VBgqBtSZlQ3gSKtH6YVKCVGwaOxwCVWo/view?usp=sharing" target="_blank">How to{" "}</a>
-              <a href="https://drive.google.com/file/d/1VBgqBtSZlQ3gSKtH6YVKCVGwaOxwCVWo/view?usp=sharing" target="_blank">
+              <a
+                href="https://drive.google.com/file/d/1VBgqBtSZlQ3gSKtH6YVKCVGwaOxwCVWo/view?usp=sharing"
+                target="_blank"
+              >
+                How to{" "}
+              </a>
+              <a
+                href="https://drive.google.com/file/d/1VBgqBtSZlQ3gSKtH6YVKCVGwaOxwCVWo/view?usp=sharing"
+                target="_blank"
+              >
                 <h4 style={{ display: "inline" }}>Pay?</h4>
               </a>
             </p>
@@ -193,7 +211,12 @@ const Internal = () => {
               <h1 className={styles.compi_name}>{data.name}</h1>
               <p>{data.desc}</p>
               <div className={styles.work_prize}>
-                <h4 className={styles.compi_prize}> INR {data.prize}</h4> {data.ex_prize && <span><h5>{data.ex_prize}</h5></span>}
+                <h4 className={styles.compi_prize}> INR {data.prize}</h4>{" "}
+                {data.ex_prize && (
+                  <span>
+                    <h5>{data.ex_prize}</h5>
+                  </span>
+                )}
               </div>
             </div>
             {user === null ? (
@@ -201,10 +224,9 @@ const Internal = () => {
             ) : data.is_team_registered ? (
               <div className={styles.youhave}>
                 {" "}
-                You have successfully registered with your email <span>
-                  {user.email}
-                </span>{" "}
-                and your team ID is <span>{data.team_id}</span>
+                You have successfully registered with your email{" "}
+                <span>{user.email}</span> and your team ID is{" "}
+                <span>{data.team_id}</span>
               </div>
             ) : (
               <div className={styles.compi_reg}></div>
@@ -214,28 +236,30 @@ const Internal = () => {
             {cardName === "data analytics" && <DataAnalytics />}
             {cardName === "arduino" && <Arduino />}
             {cardName === "solarizer" && <Solarizer />}
-            {cardName === "artificial intelligence" && <Ai/>}
-            {cardName === "cloud computing by amazon" && <Cloud/>}
-            {cardName === "machine learning" && <Mi/>}
-            {cardName === "6th sense" && <Sixth/>}
-            {cardName === "6th sense robotics" && <Sixth/>}
-            {cardName === "electric vehicles" && <Auto/>}
-            {cardName === "crypto trading by wazirX" && <Crypto/>}
-            {cardName === "blockchain" && <Block/>}
-            {cardName === "data to aI by google" && <Dta/>}
-            {cardName === "ethical hacking" && <Ethical/>}
-            {cardName === "chatgpt (prompt engineering)" && <Chatgpt/>}
-            {cardName === "android development" && <Android/>}
-            {cardName === "web development" && <Webdev/>}
-            {cardName === "cybersecurity" && <Cybersecurity/>}
-            {cardName === "web 3.0" && <W3b/>}
-            {cardName === "digital marketing" && <Digitalm/>}
-            {cardName === "data science" && <Ds/>}
-            {cardName === "quadcopter" && <Quad/>}
-            {cardName === "bio analytics" && <Bio/>}
-            {cardName === "uI uX design" && <Uiux/>}
-            {cardName === "java" && <Java/>}
-            {cardName === "game development" && <Game/>}
+            {cardName === "artificial intelligence" && <Ai />}
+            {cardName === "cloud computing by amazon" && <Cloud />}
+            {cardName === "machine learning" && <Mi />}
+            {cardName === "6th sense" && <Sixth />}
+            {cardName === "6th sense robotics" && <Sixth />}
+            {cardName === "electric vehicles" && <Auto />}
+            {cardName === "crypto trading by wazirX" && <Crypto />}
+            {cardName === "blockchain" && <Block />}
+            {cardName === "data to aI by google" && <Dta />}
+            {cardName === "ethical hacking" && <Ethical />}
+            {cardName === "chatgpt (prompt engineering)" && <Chatgpt />}
+            {cardName === "android development" && <Android />}
+            {cardName === "web development" && <Webdev />}
+            {cardName === "cybersecurity" && <Cybersecurity />}
+            {cardName === "web 3.0" && <W3b />}
+            {cardName === "digital marketing" && <Digitalm />}
+            {cardName === "data science" && <Ds />}
+            {cardName === "quadcopter" && <Quad />}
+            {cardName === "bio analytics" && <Bio />}
+            {cardName === "uI uX design" && <Uiux />}
+            {cardName === "java" && <Java />}
+            {cardName === "ethical hacking (slot 2)" && <Ethack />}
+            {cardName === "quadcopter (slot 2)" && <Qdrone />}
+            {cardName === "game development" && <Game />}
           </div>
         </div>
       </div>

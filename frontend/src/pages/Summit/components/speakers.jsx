@@ -26,7 +26,7 @@ const Speakers = ({ summit }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/api/summitSpeaker", {
+        const response = await axios.get("/api/summitSpeaker/", {
           headers: {
             "X-Email": google_id,
           },
@@ -59,7 +59,7 @@ const Speakers = ({ summit }) => {
           <div
             className={styles.card}
             style={{
-              backgroundImage: `url(${data.img})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(${data.img})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

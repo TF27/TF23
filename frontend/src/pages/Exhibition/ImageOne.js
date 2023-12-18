@@ -17,7 +17,7 @@ const ImageOne = () => {
 
   return(
   <div  className={parallax.parallaxcontainer}  >
-    <div className={`${parallax.parallaxlayer} ${parallax.layer1}`} style={{ transform: `translateY(${scrollPosition * 0.5}px)`,scrollBehavior:'smooth' }} />
+    <div className={`${parallax.parallaxlayer} ${parallax.layer1}`} style={{scrollBehavior:'smooth' }} />
     <div className={`${parallax.parallaxlayer} ${parallax.layer2}`} style={{ transform: `translateY(${scrollPosition * 0.3}px)` }}/>
     <div className={`${parallax.parallaxlayer} ${parallax.layer3}`} />
     <div className={parallax.blackGradientbottom}/>

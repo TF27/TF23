@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import Header from "./components/Navbar/Header";
+// import Header from "./components/Navbar/Header";
 import { AuthContextProvider } from "./contexts/AuthContext";
 import ReactGA from "react-ga";
 import Protected from "./contexts/Protected";
@@ -66,6 +66,7 @@ const WorkshopExplore = React.lazy(() =>
 );
 
 const IC = React.lazy(() => import("./pages/Events/Innovation Challenge/ic"));
+const Techconnect = React.lazy(() => import("./pages/Events/techconnect/techconnect"));
 const RoboReg = React.lazy(() => import("./pages/Robowars/components/Reg"));
 
 const Cyclothon = React.lazy(() =>
@@ -74,6 +75,10 @@ const Cyclothon = React.lazy(() =>
 
 const IFT = React.lazy(() => import("./pages/Events/ift/ift"));
 const IFTReg = React.lazy(() => import("./pages/Events/ift/reg"));
+
+const Merch = React.lazy(() => import("./pages/AboutUs/Merch/merch.jsx"));
+
+const QrCodeForm = React.lazy(() => import("./pages/Events/techx/techx.jsx"));
 
 const Tracking_ID = "UA-81222017-2";
 ReactGA.initialize(Tracking_ID);
@@ -219,6 +224,15 @@ function App() {
                 </React.Suspense>
               }
             />
+
+            <Route
+              path="/techconnect"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Techconnect />
+                </React.Suspense>
+              }
+            />
             <Route
               path="/robowars/:catName/register"
               element={
@@ -253,8 +267,18 @@ function App() {
               }
             />
 
+
+
             <Route
               path="/summits/fintech"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Fintech />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/fintech"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Fintech />
@@ -264,6 +288,14 @@ function App() {
 
             <Route
               path="/summits/industry"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Industry />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/industry"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Industry />
@@ -288,9 +320,9 @@ function App() {
             <Route
               path="workshops/:cardName/register"
               element={
-                <Protected>
+                // <Protected>
                   <WorkReg />
-                </Protected>
+                // </Protected>
               }
             />
             <Route path="competitions/:compiName" element={<CompiInternal />} />
@@ -412,11 +444,32 @@ function App() {
             <Route
               path="/ift/:cardName/register"
               element={
+                <React.Suspense fallback={<div>Loading...</div>}>
                 <Protected>
                   <IFTReg />
                 </Protected>
+                </React.Suspense>
               }
             />
+
+          <Route 
+            path='/store'
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <Merch />
+              </React.Suspense>
+            }
+          />
+
+          <Route
+            path="/qr"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <QrCodeForm />
+              </React.Suspense>
+            }
+          />
+
           </Routes>
 
        <Footer />

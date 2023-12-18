@@ -35,6 +35,9 @@ import Idrl from "./Competitions/Idrl";
 import Mouse from "./Competitions/Mouse";
 import Edel from "./Competitions/Edel";
 import Datamatics from "./Competitions/Datamatics";
+import Soker from "./Competitions/Soker";
+import Sumo from "./Competitions/Sumo";
+import Race from "./Competitions/Race";
 
 
 function Internal() {
@@ -58,6 +61,12 @@ function Internal() {
       navigate("/competitions/mernifier");
     }  else if (compiName === "certiTech") {
       navigate("/competitions/certiTech");
+    }  else if (compiName === "roborace") {
+      navigate("/competitions/roborace");
+    }  else if (compiName === "robosumo") {
+      navigate("/competitions/robosumo");
+    }  else if (compiName === "robosoccer") {
+      navigate("/competitions/robosoccer");
     } else if (compiName === "idrl") {
       navigate("/competitions/int'l%20drone%20racing");
     } else if (compiName === "RowBoatics") {
@@ -83,7 +92,7 @@ function Internal() {
     } else if (compiName === "chatgpt") {
       navigate("/workshops/chatgpt%20(prompt%20engineering)");
     } else if (compiName === "hacking") {
-      navigate("/workshops/ethical%20hacking");
+      navigate("/workshops/ethical%20hacking%20(slot%202)");
     } else if (compiName === "google") {
       navigate("/workshops/data%20to%20aI%20by%20google");
     } else if (compiName === "aws") {
@@ -93,7 +102,7 @@ function Internal() {
     } else if (compiName === "sixthsense") {
       navigate("/workshops/6th%20sense%20robotics");
     } else if (compiName === "quadcopter") {
-      navigate("/workshops/quadcopter");
+      navigate("/workshops/quadcopter%20(slot%202)");
     }  else if (compiName === "bioanalytics") {
       navigate("/workshops/bio%20analytics");
     } else if (compiName === "webdev") {
@@ -243,6 +252,9 @@ function Internal() {
             {compiName === "micromouse challenge" && <Mouse />}
             {compiName === "cashflow modelling" && <Edel />}
             {compiName === "datamatics hackathon" && <Datamatics />}
+            {compiName === "robosoccer" && <Soker />}
+            {compiName === "robosumo" && <Sumo />}
+            {compiName === "roborace" && <Race />}
             <div className={styles.team_reg}>
               {user === null ? (
                 <div>

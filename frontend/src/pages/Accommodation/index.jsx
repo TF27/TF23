@@ -7,7 +7,7 @@ const AccommodationInternal = () => {
 
     useEffect(() => {
       const handleResize = () => {
-        setIsMobile(window.innerWidth < 668);
+        setIsMobile(window.innerWidth < 768);
       };
       handleResize();
       // console.log(window.innerWidth)

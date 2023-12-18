@@ -17,9 +17,9 @@ import comp1 from "./assets/explore/Compi1.jpeg";
 import comp2 from "./assets/explore/Compi2.jpeg";
 import comp3 from "./assets/explore/Compi3.jpg";
 import comp4 from "./assets/explore/Compi4.jpg";
-import work1 from "./assets/explore/works1.png";
-import work2 from "./assets/explore/works2.jpg";
-import work3 from "./assets/explore/works3.jpg";
+import work1 from "./assets/explore/works1.jpg";
+import work2 from "./assets/explore/works2.png";
+import work3 from "./assets/explore/works3.jpeg";
 import work4 from "./assets/explore/works4.jpg";
 
 // import MetaTags from 'react-meta-tags';
@@ -42,22 +42,22 @@ import work4 from "./assets/explore/works4.jpg";
 
 const dataWorkshops = [
   {
-    perLink: "google",
+    perLink: "ai",
     image: work1,
-    name: "Data to AI by Google",
-    posi: "( INR 1699 )",
+    name: "Artificial Intelligence",
+    posi: "( INR 1650 )",
   },
   {
-    perLink: "aws",
+    perLink: "java",
     image: work2,
-    name: "Cloud Computing by Amazon",
-    posi: "( INR 1599 )",
+    name: "Java Programming",
+    posi: "( INR 1490 )",
   },
   {
-    perLink: "hacking",
+    perLink: "quadcopter",
     image: work3,
-    name: "Ethical Hacking",
-    posi: "( INR 1899 )",
+    name: "Quadcopter (slot 2)",
+    posi: "( INR 5990 )",
   },
   {
     perLink: "python",

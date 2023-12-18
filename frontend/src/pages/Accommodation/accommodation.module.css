@@ -15,9 +15,14 @@
   top:2vw;
 }
 
+.titSpn_rect2 a{
+  text-decoration: none;
+  color: white;
+}
+
 .regUp{
-  margin-top: -200px;
-  margin-bottom: 200px;
+  margin-top: -280px;
+  margin-bottom: 280px;
 }
 
 .tab {
@@ -215,7 +220,7 @@
   transform: translate(3px, 3px);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   font-size: 20px;
   font-family: "Forum", sans-serif;
   
@@ -226,6 +231,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   width: 25vw;
+  margin: auto;
 }
 .round{
   box-sizing: border-box;
@@ -367,7 +373,7 @@ border: 1px solid rgba(255, 255, 255, 0.6);
     /* justify-content: center; */
     margin: auto;
     position: relative;
-    top: -46px;
+    top: -26px;
     margin-bottom: 28px;
 }
 @media (max-width:1160px) {

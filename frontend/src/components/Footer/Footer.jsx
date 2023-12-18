@@ -13,6 +13,7 @@ import bg from "./footimg.svg";
 
 const Footer = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [showEvents, setShowEvents] = useState(false);
 
   const showMenu = () => {
     setOpenMenu(!openMenu);
@@ -56,7 +57,7 @@ const Footer = () => {
         style={{ backgroundImage: `url(${bg})` }}
       >
         <div className="footLinkO footLink">
-          <div className="footMulti">
+          {/* <div className="footMulti">
             <li>
               <Link to="/history">History</Link>
             </li>
@@ -74,12 +75,48 @@ const Footer = () => {
             <li>
               <Link to="/legals">Legals</Link>
             </li>
-          </div>
+          </div> */}
+          <li>
+            <Link to="/contactus">Contact Us</Link>
+          </li>
+          <li>
+            <Link to="/sponsors">Sponsors</Link>
+          </li>
+          <li onMouseLeave={() => setShowEvents(false)}>
+            <Link onMouseEnter={() => setShowEvents(true)}>About Us</Link>
+
+            <div
+              className={`about ${showEvents ? "aboutyo" : "aboutno"}`}
+              onMouseEnter={() => setShowEvents(true)}
+              onMouseLeave={() => setShowEvents(false)}
+            >
+              <li>
+                <Link to="/history">History</Link>
+              </li>
+              <li>
+                <Link to="/gallery">Gallery</Link>
+              </li>
+              <li>
+                <Link to="/aboutus/media">Media</Link>
+              </li>
+              <li>
+                <Link to="/legals">Legals</Link>
+              </li>
+              <li>
+                <Link to="/recognition">Recognition</Link>
+              </li>
+            </div>
+          </li>
         </div>
-        <div className='anounceIt'>
-          <Link to='/workshops'>Workshops are Live Now!</Link>
-          <br/>
+        <div className="anounceIt">
+          <Link to="/workshops">Workshops are Live Now!</Link>
+          <br />
+          {/* <a href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer">Stay at IIT Bombay</a> */}
           <Link to='/accommodation'>Stay at IIT Bombay</Link>
+          <br />
+          <a href="https://www.instagram.com/techfest_iitbombay/">
+            Join us @ IITB
+          </a>
         </div>
         <div className="socialMedia">
           <li>

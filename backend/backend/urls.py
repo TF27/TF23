@@ -14,6 +14,9 @@ urlpatterns = [
     path('administrator/',include('admins.urls'), name="administrator"),
     path('', include('events.urls')),
     path('masser/', include('mass_mailer.urls')),
+    path('certificate/', include('certificate.urls')),
+    path('ticket/', include('tickets.urls')),
+    path('hospi/', include('hospi.urls')),
     # path("administrator/", include("administrator.urls")),
 
     path('robowars-bet/', include('robowarsbet.urls')),
