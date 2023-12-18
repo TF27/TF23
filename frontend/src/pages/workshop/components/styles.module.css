@@ -3,7 +3,7 @@
     object-fit: contain;
     /* height: 28vh; */
     margin-bottom: -20vh;
-    width: 100vw;
+    width: 80vw;
 }
 
 @media (max-width: 749px) {
@@ -15,4 +15,8 @@
     .head{
         margin-bottom: 12vh;
     }
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.584);
 }

@@ -10,6 +10,7 @@ const Grid = ({cards}) => {
   return (
     <>
       <div className="technorion_cards">
+        <div className={styles.overlay}>
         <div className={styles.head}>
           <img src={head} alt="header"/>
         </div>
@@ -20,6 +21,7 @@ const Grid = ({cards}) => {
               <Card key={card.index} card={card} />
             ))}
           </div>
+        </div>
         </div>
       </div>
     </>
