@@ -27,6 +27,9 @@ import SustainRegtest from "./pages/SI/components/Reg2.jsx";
 import Sustainregwebinar from "./pages/SI/components/Reg1.jsx";
 import SummitReg from "./pages/Summit/reg.jsx";
 
+//robowars betting page
+import Robowarsbet from "./pages/Robowars_bet/Home.jsx";
+
 // const Home= React.lazy(() => import('./pages/Home/home'));
 const Lectures = React.lazy(() => import("./pages/Lectures/index"));
 const Compi = React.lazy(() => import("./pages/Compi/compi"));
@@ -112,6 +115,14 @@ function App() {
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Workshop />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/robowars-bet/"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Robowarsbet />
                 </React.Suspense>
               }
             />
@@ -461,7 +472,7 @@ function App() {
 
           </Routes>
 
-          <Footer />
+       <Footer />
         </AuthContextProvider>
       </Router>
     </div>

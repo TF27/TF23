@@ -125,6 +125,9 @@ const Header_update = () => {
                   <Link to="/techconnect">TechConnect</Link>
                 </li>
                 <li>
+                  <Link to="/robowars-bet">Robowars-bet</Link>
+                </li>
+                <li>
                   <Link to="/cyclothon">Cyclothon</Link>
                 </li>
                 <li>
@@ -258,6 +261,9 @@ const Header_update = () => {
             </li>
             <li onClick={showMenu}>
               <Link to="/cyclothon">Cyclothon</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/robowars-bet">Robowars-Bet</Link>
             </li>
             <li onClick={showMenu}>
               <Link to="/financialliteracy">SI - Finance</Link>
