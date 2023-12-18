@@ -351,14 +351,22 @@ def create_team(request):
             if compi_team.objects.filter(team_leader_email=team_leader_email, compi_name=compi).exists():
                 res = {'success': False, 'error': 'Team already formed'}
                 return JsonResponse(res, status=400)
-
+                
             latest_team = compi_team.objects.filter(
                 compi_name=compi).order_by('-team_id').first()
             next_team_id = '0269'
             if latest_team:
                 last_team_id = latest_team.team_id[-4:]
                 next_team_id = str(int(last_team_id) + 1).zfill(4)
-            team_id = f"{compi.name.capitalize()[:4]}-23{next_team_id}"
+
+            if (compi == 'robosumo'):
+                team_id = f"RoboS-23{next_team_id}"
+            elif ( compi == 'robosoccer'):
+                team_id = f"RoboF-23{next_team_id}"
+            elif (compi == 'roborace'):
+                team_id = f"RoboR-23{next_team_id}"
+            else:
+                team_id = f"{compi.name.capitalize()[:4]}-23{next_team_id}"
 
             compi_team_serializer.save(team_id=team_id)
 
