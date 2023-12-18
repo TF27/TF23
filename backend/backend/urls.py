@@ -18,6 +18,8 @@ urlpatterns = [
     path('ticket/', include('tickets.urls')),
     path('hospi/', include('hospi.urls')),
     # path("administrator/", include("administrator.urls")),
+
+    path('robowars-bet/', include('robowarsbet.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

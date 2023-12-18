@@ -47,7 +47,7 @@ const Fintech = () => {
         <div className={styles.ex}>
           <div className={styles.titSpn_rect1}>
             <div className={styles.titSpn_rect2}>
-            <a href="https://www.meraevents.com/event/industry-4-0-summit?ucode=organizer" target="_blank">Register Now</a>
+            <a href="https://www.meraevents.com/event/industry-summit-4-0?ucode=organizer" target="_blank">Register Now</a>
             </div>
           </div>
         </div>

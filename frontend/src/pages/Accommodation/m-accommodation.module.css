@@ -122,6 +122,11 @@
     text-align: left;
     cursor: pointer;
   }
+
+  .m-titSpn_rect2 a{
+    color: white;
+    text-decoration: none;
+  }
  
   .m-content-rect2::-webkit-scrollbar {
     width: 10px;

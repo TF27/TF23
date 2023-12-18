@@ -1,0 +1,22 @@
+.head img{
+    margin-top: 28vh;
+    object-fit: contain;
+    /* height: 28vh; */
+    margin-bottom: -20vh;
+    width: 80vw;
+}
+
+@media (max-width: 749px) {
+    .head{
+        margin-top: 12vh;
+    }
+}
+@media (max-width: 500px) {
+    .head{
+        margin-bottom: 12vh;
+    }
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.584);
+}
