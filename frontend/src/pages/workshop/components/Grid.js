@@ -14,7 +14,7 @@ const Grid = ({cards}) => {
         <div className={styles.head}>
           <img src={head} alt="header"/>
         </div>
-        <h2 style={{marginTop: '15px'}}>Team discount and Early bird offer extended till 18th December!</h2>
+        <h2 style={{marginTop: '15px'}}>Team discount and Early bird offer extended till 19th December!</h2>
         <div className="container" style={{ maxWidth: "90%" }}>
           <div className="row" style={{paddingBottom: '80px'}}>
           {sortedCards.map((card) => (
