@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import bg from "./assets/bg.png";
+import bg from "./assets/bg.jpeg";
 // import Cards from "./cards";
 // import OurReach from "./ourreach";
 // import Carousel from "../../../components/Carousel/carousel";
 import "./technoholix_animation.css";
 import styles from "./technoholix.module.css";
-import about from "./assets/bg.png";
+import about from "./assets/about.jpeg";
 import Speakers from "./components/speakers";
 
 const Technoholix = () => {
@@ -32,7 +32,7 @@ const Technoholix = () => {
           <div className={styles.topImgOverlay}>
             <div className={styles.topText}>
               <h1>TECHNOHOLIX</h1>
-              <p>EVERYBODY JUMP JUMP!!!</p>
+              <p>Scroll Down to Book Passes!!!</p>
             </div>
           </div>
         </div>
@@ -67,13 +67,13 @@ const Technoholix = () => {
         <div className="difPage">
             <div className="check_rect1"></div>
             <div className="check_rect2">
-            <a href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer">BOOK TICKETS NOW</a>
+            <a href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer" target="_blank">BOOK TICKETS NOW</a>
             </div>
           </div>
         <div className="checkThis">
-          <h1 style={{ marginTop: "10px", marginBottom: "40px" }}>
+          {/* <h1 style={{ marginTop: "10px", marginBottom: "40px" }}>
             MORE ARTISTS
-          </h1>
+          </h1> */}
           <Speakers />
           
           <div className="contactus">
