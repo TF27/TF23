@@ -31,7 +31,7 @@ import cocacola from './assets/coca cola.jpg';
 import maxprotein from './assets/maxprotein.jpg';
 import monster from './assets/Monster Logo.png';
 import teachindia from './assets/tfi.png';
-import boostgrad from './assets/Boostgrad.png';
+import boostgrad from './assets/Boostgrad.jpg';
 import sevanyay from './assets/snu.jpg';
 import playmaker from './assets/General Sponsors/Playmaker Labs.jpg';
 import duolingo from './assets/General Sponsors/duolingowhite.jpeg';
