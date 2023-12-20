@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Data List</title>
+    <style>
+      /* Add your custom styles for the popup here */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>User Data List</h1>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Payment ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Boys</th>
+          <th>Girls</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user_data in user_data_list %}
+        <tr>
+          <td>
+            <a href="#" onclick="showRooms('{{ user_data.payment_id }}')">
+              {{ user_data.payment_id|default:"N/A" }}
+            </a>
+          </td>
+
+          <!-- <td>{{ user_data.payment_id|default:"N/A" }}</td> -->
+          <td>{{ user_data.name|default:"N/A" }}</td>
+          <td>{{ user_data.email|default:"N/A" }}</td>
+          <td>{{ user_data.phone|default:"N/A" }}</td>
+          <td>{{ user_data.boys|default:"N/A" }}</td>
+          <td>{{ user_data.girls|default:"N/A" }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <div id="roomPopup" class="popup">
+      <h2 id="popupTitle">
+        Rooms for Payment ID: <span id="paymentIdPlaceholder"></span>
+      </h2>
+      <ul id="roomList"></ul>
+      <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+      function showRooms(paymentId) {
+        document.getElementById("paymentIdPlaceholder").innerText = paymentId;
+
+        // Make an AJAX request to fetch the rooms associated with the payment ID
+        // Replace the URL with the actual endpoint you'll use to fetch the data
+        const url = `/api/rooms/${paymentId}/`;
+
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            const roomListElement = document.getElementById("roomList");
+            roomListElement.innerHTML = "";
+
+            data.forEach((room) => {
+              const li = document.createElement("li");
+              li.innerText = `Room Number: ${room.room_number}, Hostel: ${room.hostel}`;
+              roomListElement.appendChild(li);
+            });
+
+            document.getElementById("roomPopup").style.display = "block";
+          })
+          .catch((error) => console.error("Error fetching room data:", error));
+      }
+
+      function closePopup() {
+        document.getElementById("roomPopup").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

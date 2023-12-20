@@ -106,6 +106,9 @@ const Header_update = () => {
                   <Link to="/summits">Int'l Summit</Link>
                 </li>
                 <li>
+                  <Link to="/techx">Technoholix</Link>
+                </li>
+                <li>
                   <Link to="/exhibitions">Exhibitions</Link>
                 </li>
                 <li>
@@ -121,12 +124,13 @@ const Header_update = () => {
                 <li>
                   <Link to="/ift">Full Throttle</Link>
                 </li>
+
                 <li>
                   <Link to="/techconnect">TechConnect</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/robowars-bet">Robowars-bet</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/cyclothon">Cyclothon</Link>
                 </li>
@@ -248,10 +252,13 @@ const Header_update = () => {
               <Link to="/summits">Int'l Summits</Link>
             </li>
             <li onClick={showMenu}>
+              <Link to="/techx">Technoholix</Link>
+            </li>
+            <li onClick={showMenu}>
               <Link to="/robowars">Robowars</Link>
             </li>
             <li onClick={showMenu}>
-              <Link to="/ift">Int'l Full Throttle</Link>
+              <Link to="/ift">Full Throttle</Link>
             </li>
             <li onClick={showMenu}>
               <Link to="/techconnect">TechConnect</Link>
@@ -262,9 +269,9 @@ const Header_update = () => {
             <li onClick={showMenu}>
               <Link to="/cyclothon">Cyclothon</Link>
             </li>
-            <li onClick={showMenu}>
+            {/* <li onClick={showMenu}>
               <Link to="/robowars-bet">Robowars-Bet</Link>
-            </li>
+            </li> */}
             <li onClick={showMenu}>
               <Link to="/financialliteracy">SI - Finance</Link>
             </li>
