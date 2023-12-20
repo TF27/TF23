@@ -51,6 +51,11 @@ const Robowars = () => {
   return (
     <div className="competitions" style={bgHaiJi}>
       <ImageOne />
+      <div className={styles.sche}>
+      SCHEDULE:- 8kg matches : 26th December ; 15kg, 30kg and 60kg knockouts : 27th December ; 15kg, 30kg and 60kg Finals : 28th December
+      <br/> <br/>
+      NOTE: Matches on 27th and 28th December will start from 8:30 AM SHARP
+      </div>
       <div className={`${styles.titSpn} ${styles.homeTheme}`}>
         <div className={styles.titSpn_rect1}>
           <div className={styles.titSpn_rect2}>About</div>
