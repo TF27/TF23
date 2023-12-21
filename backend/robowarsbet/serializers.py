@@ -4,7 +4,7 @@ from .models import Match, User, UserMatch
 class MatchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Match
-        fields = ['id','team1_name','team2_name','team1_image','team2_image','match_time','day','winner','points_awarded']  # Add other fields as needed
+        fields = ['id','team1_name','team2_name','team3_name','team1_image','team2_image','team3_image','match_time','day','winner','points_awarded']  # Add other fields as needed
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:

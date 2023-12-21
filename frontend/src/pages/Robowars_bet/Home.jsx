@@ -103,6 +103,7 @@ const Home = () => {
       {Object.keys(matchesByDay).map(day => (
         <div key={day} className={styles['day-section']}>
           <h1>{`Day ${day}`}</h1>
+         
           <div className={styles['cards-container']}>
             {matchesByDay[day].map((match, index) => (
               <Card
@@ -110,8 +111,10 @@ const Home = () => {
                 email = {userEmail}
                 team1={match.team1_name}
                 team2={match.team2_name}
+                team3={match.team3_name}
                 team1_image={match.team1_image}
                 team2_image={match.team2_image}
+                team3_image={match.team3_image}
                 time={match.match_time}
                 winner={match.winner}
                 points={match.points_awarded}
@@ -120,6 +123,7 @@ const Home = () => {
               />
             ))}
           </div>
+       
         </div>
       ))}
     </div>
