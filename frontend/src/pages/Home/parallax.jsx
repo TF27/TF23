@@ -51,7 +51,7 @@ const HomeParallax = () => {
           <br/>
           <a href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer">Stay at IIT Bombay</a>
           <br/>
-          <a href="https://www.instagram.com/techfest_iitbombay/">Join us @ IITB</a>
+          <Link to="/techx">Click to enjoy at TechX</Link>
         </div>
       </div>
       <div className={styles.clouds}>

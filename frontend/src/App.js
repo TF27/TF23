@@ -37,6 +37,7 @@ const Robowars = React.lazy(() => import("./pages/Robowars/robowars"));
 const Accommodation = React.lazy(() => import("./pages/Accommodation/index"));
 const Fintech = React.lazy(() => import("./pages/Summit/fintech"));
 const Industry = React.lazy(() => import("./pages/Summit/industry"));
+const Technoholix = React.lazy(() => import("./pages/Technoholix/technoholix"));
 const Sponsors = React.lazy(() => import("./pages/AboutUs/Sponsors/sponsors"));
 const Exhibition = React.lazy(() => import("./pages/Exhibition/exhi"));
 const Media = React.lazy(() => import("./pages/AboutUs/Media/index"));
@@ -230,6 +231,15 @@ function App() {
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Techconnect />
+                </React.Suspense>
+              }
+            />
+
+            <Route
+              path="/techx"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Technoholix />
                 </React.Suspense>
               }
             />

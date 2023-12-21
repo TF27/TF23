@@ -330,9 +330,9 @@ def create_team(request):
     if request.method == 'POST':
         compi_team_serializer = Compi_TeamSerializer(
             data=request.data, many=False)
-        
+        # print(compi_team_serializer.is_valid())
         if compi_team_serializer.is_valid():
-            # if check_reg(compi_team_serializer) is
+              # if check_reg(compi_team_serializer) is
             compi = compi_team_serializer.validated_data.get('compi_name')
             # compi1 = str(compi).capitalize()
             compi_reg_instances = compi_reg.objects.filter(compi=compi)
@@ -342,23 +342,38 @@ def create_team(request):
             ]
             for email_field in emails_to_check:
                 email_value = request.data.get(email_field)
-                if email_value and not compi_reg_instances.filter(email=email_value).exists():
-                    res = {'success': False, 'error': 'User not registered'}
-                    return JsonResponse(res, status=400)
+                # if email_value and not compi_reg_instances.filter(email=email_value).exists():
+                #     res = {'success': False, 'error': 'User not registered'}
+                #     return JsonResponse(res, status=400)
 
             team_leader_email = compi_team_serializer.validated_data.get(
                 'team_leader_email')
             if compi_team.objects.filter(team_leader_email=team_leader_email, compi_name=compi).exists():
                 res = {'success': False, 'error': 'Team already formed'}
                 return JsonResponse(res, status=400)
-
+                
             latest_team = compi_team.objects.filter(
                 compi_name=compi).order_by('-team_id').first()
             next_team_id = '0269'
             if latest_team:
                 last_team_id = latest_team.team_id[-4:]
                 next_team_id = str(int(last_team_id) + 1).zfill(4)
-            team_id = f"{compi.name.capitalize()[:4]}-23{next_team_id}"
+
+            # print([ord(char) for char in compi])
+            lol = ['robosumo', 'robosoccer', 'roborace']
+                        
+            print(lol[0])
+            compi_str = str(compi)
+            if compi_str == lol[0]:
+                print('hi')
+                team_id = f"RoboS-23{next_team_id}"
+            elif compi_str == 'robosoccer':
+                team_id = f"RoboF-23{next_team_id}"
+            elif compi_str == 'roborace':
+                team_id = f"RoboR-23{next_team_id}"
+            else:
+                print('ji')
+                team_id = f"{compi.name.capitalize()[:4]}-23{next_team_id}"
 
             compi_team_serializer.save(team_id=team_id)
 
@@ -403,7 +418,20 @@ def single_parti(request):
             if latest_team:
                 last_team_id = latest_team.team_id[-4:]
                 next_team_id = str(int(last_team_id) + 1).zfill(4)
-            team_id = f"{compi.name.capitalize()[:4]}-23{next_team_id}"
+
+            compi_str = str(compi)
+            if compi_str == 'robosumo':
+                print('hi')
+                team_id = f"RoboS-23{next_team_id}"
+            elif compi_str == 'robosoccer':
+                team_id = f"RoboF-23{next_team_id}"
+            elif compi_str == 'roborace':
+                team_id = f"RoboR-23{next_team_id}"
+            else:
+                print('ji')
+                team_id = f"{compi.name.capitalize()[:4]}-23{next_team_id}"
+
+            # team_id = f"{compi.name.capitalize()[:4]}-23{next_team_id}"
             compi_team_serializer.save(team_id=team_id, single_parti=True)
             # compi_team_serializer.save()
             subject = f'Techfest, IIT Bombay | Creation of Team successful for {compi1}'

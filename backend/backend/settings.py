@@ -64,7 +64,7 @@ MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
-    'backend.middleware.RedirectToTechfestMiddleware',
+    # 'backend.middleware.RedirectToTechfestMiddleware',
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -86,6 +86,8 @@ CSRF_TRUSTED_ORIGINS = [
     "https://techfest.org",
     "http://localhost:3000",
 ]
+
+CORS_ALLOW_CREDENTIALS = True
 
 # CORS_ALLOW_HEADERS = [
 #     'x-google-uid',
