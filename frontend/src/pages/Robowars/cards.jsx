@@ -84,7 +84,7 @@ const Cards = () => {
                 <div className={styles.card_reg}>Registered</div>
               ) : (
                 <div className={styles.card_reg}>
-                  <Link to={`${data.category}/register`}>Register</Link>
+                  <Link>Closed</Link>
                 </div>
               )}
               <div className={styles.card_exp}>

@@ -243,14 +243,14 @@ function App() {
                 </React.Suspense>
               }
             />
-            <Route
+            {/* <Route
               path="/robowars/:catName/register"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <RoboReg />
                 </React.Suspense>
               }
-            />
+            /> */}
             <Route
               path="/aboutus/media"
               element={
