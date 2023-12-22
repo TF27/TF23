@@ -53,8 +53,10 @@ INSTALLED_APPS = [
     "corsheaders",
     "mass_mailer",
     'certificate',
+    'robowarsbet',
     'tickets',
     'hospi',
+    # 'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [
@@ -84,6 +86,8 @@ CSRF_TRUSTED_ORIGINS = [
     "https://techfest.org",
     "http://localhost:3000",
 ]
+
+CORS_ALLOW_CREDENTIALS = True
 
 # CORS_ALLOW_HEADERS = [
 #     'x-google-uid',

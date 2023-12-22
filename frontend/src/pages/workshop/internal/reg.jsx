@@ -115,6 +115,8 @@ const WorkReg = () => {
     paynow = 'https://www.meraevents.com/event/iit-bombay-quadcopter-workshop-at-techfest?ucode=organizer'
   } else if (cardName==='uI uX design'){
     paynow = 'https://www.meraevents.com/event/ui-ux-design-workshop-at-iit-bombay?ucode=organizer'
+  } else if (cardName==='ethical hacking (slot 2)'){
+    paynow = 'https://www.meraevents.com/event/iit-bombay-ethical-hacking-workshop-at-techfest?ucode=organizer'
   }
  
 

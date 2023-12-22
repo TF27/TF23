@@ -1,0 +1,93 @@
+
+.betting{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 19px;
+    max-width: 92vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(9, 10, 45);
+    border-radius: 8px;
+}
+.bettingcard1 {
+    display: flex;
+    flex-direction: row;
+   
+  }
+  .bettingcard2 {
+    display: flex;
+    flex-direction: row;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
+  .teamcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .teamlogo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .teamname {
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  
+  .vscontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .matchtime {
+    margin-left: 10px;
+    font-style: bold;
+  }
+  
+  .bettinginfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .betamountcontainer,
+  .betpricecontainer {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    width: 80px;
+    padding: 5px;
+    margin-left: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .betbutton {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Add responsive styles here */
+
+  @media(max-width: 450px) {
+    .betting{
+      width: 99vw;
+    }
+  }
+  

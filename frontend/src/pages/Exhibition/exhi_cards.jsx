@@ -53,14 +53,28 @@ const Exhibitions = () => {
           className={`col-lg-4 col-sm-6 col-12 ${styles.cardA}`}
         >
           <div
-            className={styles.card}
-            style={{
-              backgroundImage: `url(${data.img})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-            onClick={() => openPopup(data)}
-          >
+  className={styles.card}
+  style={{
+    backgroundImage: `url(${data.img})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    position: "relative", // Ensure the parent element has a positioning context
+  }}
+  onClick={() => openPopup(data)}
+>
+  {/* Black overlay */}
+  <div
+    className={styles.overlay} // Create a CSS class for overlay styles if not existing
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: "rgba(0, 0, 0, 0.5)", // Adjust opacity here (0.5 for 50% opacity)
+    }}
+  ></div>
+
             {/* <div className={styles.plus}>
                 <img src={plus} alt="plus" />
             </div> */}

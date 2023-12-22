@@ -461,12 +461,12 @@ const MAccommodation = () => {
       <div className={styles["m-accommodation-container"]}>
         <ImageOne />
         <div className={styles.regUp}>
-          <div className={styles["m-titSpn_rect1"]} onClick={scrollToBottom}>
+          <div className={styles["m-titSpn_rect1"]}>
             <button
               className={`${styles["m-titSpn_rect2"]} ${styles.registerButton}`}
-              onClick={toggleRegistrationForm}
+              // onClick={toggleRegistrationForm}
             >
-              REGISTER NOW
+              <a href="https://www.meraevents.com/event/accommodation-at-iit-bombay?ucode=organizer" target="_blank" >REGISTER NOW</a>
             </button>
           </div>
         </div>
@@ -503,9 +503,9 @@ const MAccommodation = () => {
             <div className={styles["m-titSpn_rect1"]}>
               <button
                 className={`${styles["m-titSpn_rect2"]} ${styles.registerButton}`}
-                onClick={toggleRegistrationForm}
+                // onClick={toggleRegistrationForm}
               >
-                REGISTER NOW
+                <a href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer" target="_blank" >REGISTER NOW</a>
               </button>
             </div>
           )}

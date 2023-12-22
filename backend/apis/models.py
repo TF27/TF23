@@ -288,6 +288,7 @@ class Faces(models.Model):
     category = models.CharField(choices=[
         ('Exhi', 'Exhi'),
         ('Lect', 'Lect'),
+        ('Techx','Techx'),
     ], max_length=255, null=True, blank=True)
     designation = models.CharField(max_length=255, null=True, blank=True)
     company = models.CharField(max_length=255, null=True, blank=True)
@@ -295,3 +296,12 @@ class Faces(models.Model):
 
     def __str__(self):
         return self.name
+
+class AppData(models.Model):
+    name = models.CharField(max_length=255, null=True, blank=True)
+    email = models.CharField(max_length=255, null=True, blank=True)
+    phone = models.CharField(max_length=255, null=True, blank=True)
+    visitors = models.CharField(max_length=255, null=True, blank=True)
+
+    def __str__(self):
+        return f'{self.name} - {self.email}'

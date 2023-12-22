@@ -27,6 +27,10 @@ import SustainRegtest from "./pages/SI/components/Reg2.jsx";
 import Sustainregwebinar from "./pages/SI/components/Reg1.jsx";
 import SummitReg from "./pages/Summit/reg.jsx";
 
+//robowars betting page
+import Robowarsbet from "./pages/Robowars_bet/Home.jsx";
+import Register from "./pages/Reg.jsx";
+
 // const Home= React.lazy(() => import('./pages/Home/home'));
 const Lectures = React.lazy(() => import("./pages/Lectures/index"));
 const Compi = React.lazy(() => import("./pages/Compi/compi"));
@@ -34,6 +38,7 @@ const Robowars = React.lazy(() => import("./pages/Robowars/robowars"));
 const Accommodation = React.lazy(() => import("./pages/Accommodation/index"));
 const Fintech = React.lazy(() => import("./pages/Summit/fintech"));
 const Industry = React.lazy(() => import("./pages/Summit/industry"));
+const Technoholix = React.lazy(() => import("./pages/Technoholix/technoholix"));
 const Sponsors = React.lazy(() => import("./pages/AboutUs/Sponsors/sponsors"));
 const Exhibition = React.lazy(() => import("./pages/Exhibition/exhi"));
 const Media = React.lazy(() => import("./pages/AboutUs/Media/index"));
@@ -63,7 +68,9 @@ const WorkshopExplore = React.lazy(() =>
 );
 
 const IC = React.lazy(() => import("./pages/Events/Innovation Challenge/ic"));
-const Techconnect = React.lazy(() => import("./pages/Events/techconnect/techconnect"));
+const Techconnect = React.lazy(() =>
+  import("./pages/Events/techconnect/techconnect")
+);
 const RoboReg = React.lazy(() => import("./pages/Robowars/components/Reg"));
 
 const Cyclothon = React.lazy(() =>
@@ -112,6 +119,14 @@ function App() {
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Workshop />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/robowars-bet/"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Robowarsbet />
                 </React.Suspense>
               }
             />
@@ -222,14 +237,23 @@ function App() {
                 </React.Suspense>
               }
             />
+
             <Route
+              path="/techx"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Technoholix />
+                </React.Suspense>
+              }
+            />
+            {/* <Route
               path="/robowars/:catName/register"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <RoboReg />
                 </React.Suspense>
               }
-            />
+            /> */}
             <Route
               path="/aboutus/media"
               element={
@@ -255,8 +279,6 @@ function App() {
                 </React.Suspense>
               }
             />
-
-
 
             <Route
               path="/summits/fintech"
@@ -310,7 +332,7 @@ function App() {
               path="workshops/:cardName/register"
               element={
                 // <Protected>
-                  <WorkReg />
+                <WorkReg />
                 // </Protected>
               }
             />
@@ -434,31 +456,48 @@ function App() {
               path="/ift/:cardName/register"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
-                <Protected>
-                  <IFTReg />
-                </Protected>
+                  <Protected>
+                    <IFTReg />
+                  </Protected>
                 </React.Suspense>
               }
             />
 
-          <Route 
-            path='/store'
-            element={
-              <React.Suspense fallback={<div>Loading...</div>}>
-                <Merch />
-              </React.Suspense>
-            }
-          />
+            <Route
+              path="/store"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Merch />
+                </React.Suspense>
+              }
+            />
 
-          <Route
-            path="/qr"
-            element={
-              <React.Suspense fallback={<div>Loading...</div>}>
-                <QrCodeForm />
-              </React.Suspense>
-            }
-          />
+            <Route
+              path="/qr"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <QrCodeForm />
+                </React.Suspense>
+              }
+            />
 
+            <Route
+              path="*"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Workshop />
+                </React.Suspense>
+              }
+            />
+
+            <Route
+              path="/reg"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Register />
+                </React.Suspense>
+              }
+            />
           </Routes>
 
           <Footer />

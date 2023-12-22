@@ -140,20 +140,20 @@ const Pito = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Gourish Singhal
+            Pranab Baro
             <div
               className="col-3 contactNum"
-              onClick={() => (window.location.href = `tel:9424873725`)}
+              onClick={() => (window.location.href = `tel:6001512864`)}
             >
-              +91 94248 73725
+              +91 60015 12864
             </div>
             <div
               className="col-3 contactMail"
               onClick={() =>
-                (window.location.href = `mailto:gourish@techfest.org`)
+                (window.location.href = `mailto:pranab.techfest@gmail.com`)
               }
             >
-              gourish@techfest.org
+              pranab.techfest@gmail.com
             </div>
           </div>
         </div>

@@ -1,0 +1,123 @@
+/* .compi_bg{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("./img/robowarsback.jpg");
+    z-index: -100;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.checkThis h1, h2{
+    /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.difPage{
+    display: flex;
+    justify-content: center;
+}
+
+.difPage .check_rect1{
+    height: 40px;
+    width: 300px;
+    border: 1px solid #f8d041;
+    position: absolute;
+}
+
+.difPage .check_rect2{
+    height: 40px;
+    width: 300px;
+    border: 1px solid #f8d041;
+    margin-left: 17px;
+    margin-top: 5px;
+    position: relative;
+    font-size: 21px;
+}
+
+.difPage .check_rect2 *{
+    color: #f8d041;
+}
+
+.difPage a{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Forum', sans-serif;
+}
+
+.world-map-container{
+    margin-top: 15px;
+}
+.tray{
+    display: flex;   /* 2 rows */
+  justify-items: center;
+  column-gap: 40px;
+  row-gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.contactus{
+    padding-bottom: 100px;
+}
+/* @media(max-width:500px){
+    .contactus{
+  padding-bottom: 355px;
+    }
+  } */
+.difPage{
+    margin-top: 0px;
+    height: 50px;
+}
+
+.mobilemap{
+    padding-bottom: 20px;
+}
+
+.Contactbox{
+display: flex;
+justify-content: space-around;
+flex-basis: 1.2em;
+border:3px solid white;
+margin-right: 7vw;
+margin-left: 7vw;
+font-size: large;
+border-radius: 10px;
+height: 100pt;
+align-items: center;
+background-color:rgba(0,0, 0, 0.4);
+}
+@media(max-width: 450px) {
+    .Contactbox{
+        height: 200px;
+        flex-direction: column;
+    }
+}
+
+.pkmkb{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 80%;
+    margin: auto;
+}
+
+.pkmkb img{
+    width: 180px;
+    height: 180px;
+}
+
+.contactus1{
+    padding-bottom: 40px;
+}
+
+@media(max-width: 600px) {
+    .pkmkb{
+        flex-direction: column;
+        align-items: center;
+    }
+}

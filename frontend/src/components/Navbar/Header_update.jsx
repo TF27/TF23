@@ -158,6 +158,9 @@ const Header_update = () => {
                   <Link to="/summits">Int'l Summit</Link>
                 </li>
                 <li>
+                  <Link to="/techx">Technoholix</Link>
+                </li>
+                <li>
                   <Link to="/exhibitions">Exhibitions</Link>
                 </li>
                 <li>
@@ -173,6 +176,13 @@ const Header_update = () => {
                 <li>
                   <Link to="/ift">Full Throttle</Link>
                 </li>
+
+                <li>
+                  <Link to="/techconnect">TechConnect</Link>
+                </li>
+                {/* <li>
+                  <Link to="/robowars-bet">Robowars-bet</Link>
+                </li> */}
                 <li>
                   <Link to="/cyclothon">Cyclothon</Link>
                 </li>
@@ -198,14 +208,14 @@ const Header_update = () => {
         <div className="wnavRight navRow">
           {/* <ul> */}
           <li>
-            {/* <Link to="/accommodation">Accommodation</Link> */}
-            <a
+            <Link to="/accommodation">Accommodation</Link>
+            {/* <a
               href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer"
               target="_blank"
               rel="noopener noreferrer"
             >
               Accommodation
-            </a>
+            </a> */}
           </li>
           <li>
             <Link to="/store" className="navContact">
@@ -293,14 +303,14 @@ const Header_update = () => {
               <Link to="/workshops">Workshops</Link>
             </li>
             <li onClick={showMenu}>
-              {/* <Link to="/accommodation">Accommodation</Link> */}
-              <a
+              <Link to="/accommodation">Accommodation</Link>
+              {/* <a
                 href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Accommodation
-              </a>
+              </a> */}
             </li>
             <li onClick={showMenu}>
               <Link to="/competitions">Competitions</Link>
@@ -309,10 +319,16 @@ const Header_update = () => {
               <Link to="/summits">Int'l Summits</Link>
             </li>
             <li onClick={showMenu}>
+              <Link to="/techx">Technoholix</Link>
+            </li>
+            <li onClick={showMenu}>
               <Link to="/robowars">Robowars</Link>
             </li>
             <li onClick={showMenu}>
-              <Link to="/ift">Int'l Full Throttle</Link>
+              <Link to="/ift">Full Throttle</Link>
+            </li>
+            <li onClick={showMenu}>
+              <Link to="/techconnect">TechConnect</Link>
             </li>
             <li onClick={showMenu}>
               <Link to="/sustain">Sustain</Link>
@@ -320,6 +336,9 @@ const Header_update = () => {
             <li onClick={showMenu}>
               <Link to="/cyclothon">Cyclothon</Link>
             </li>
+            {/* <li onClick={showMenu}>
+              <Link to="/robowars-bet">Robowars-Bet</Link>
+            </li> */}
             <li onClick={showMenu}>
               <Link to="/financialliteracy">SI - Finance</Link>
             </li>
