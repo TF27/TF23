@@ -27,3 +27,5 @@ admin.site.register(IFT)
 admin.site.register(IFTReg)
 
 admin.site.register(Faces)
+
+admin.site.register(AppData)

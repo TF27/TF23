@@ -164,3 +164,9 @@ class FacesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Faces
         fields = '__all__'
+
+
+class AppDataSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AppData
+        fields = '__all__'

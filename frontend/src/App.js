@@ -29,6 +29,7 @@ import SummitReg from "./pages/Summit/reg.jsx";
 
 //robowars betting page
 import Robowarsbet from "./pages/Robowars_bet/Home.jsx";
+import Register from "./pages/Reg.jsx";
 
 // const Home= React.lazy(() => import('./pages/Home/home'));
 const Lectures = React.lazy(() => import("./pages/Lectures/index"));
@@ -67,7 +68,9 @@ const WorkshopExplore = React.lazy(() =>
 );
 
 const IC = React.lazy(() => import("./pages/Events/Innovation Challenge/ic"));
-const Techconnect = React.lazy(() => import("./pages/Events/techconnect/techconnect"));
+const Techconnect = React.lazy(() =>
+  import("./pages/Events/techconnect/techconnect")
+);
 const RoboReg = React.lazy(() => import("./pages/Robowars/components/Reg"));
 
 const Cyclothon = React.lazy(() =>
@@ -277,8 +280,6 @@ function App() {
               }
             />
 
-
-
             <Route
               path="/summits/fintech"
               element={
@@ -331,7 +332,7 @@ function App() {
               path="workshops/:cardName/register"
               element={
                 // <Protected>
-                  <WorkReg />
+                <WorkReg />
                 // </Protected>
               }
             />
@@ -455,34 +456,51 @@ function App() {
               path="/ift/:cardName/register"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
-                <Protected>
-                  <IFTReg />
-                </Protected>
+                  <Protected>
+                    <IFTReg />
+                  </Protected>
                 </React.Suspense>
               }
             />
 
-          <Route 
-            path='/store'
-            element={
-              <React.Suspense fallback={<div>Loading...</div>}>
-                <Merch />
-              </React.Suspense>
-            }
-          />
+            <Route
+              path="/store"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Merch />
+                </React.Suspense>
+              }
+            />
 
-          <Route
-            path="/qr"
-            element={
-              <React.Suspense fallback={<div>Loading...</div>}>
-                <QrCodeForm />
-              </React.Suspense>
-            }
-          />
+            <Route
+              path="/qr"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <QrCodeForm />
+                </React.Suspense>
+              }
+            />
 
+            <Route
+              path="*"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Workshop />
+                </React.Suspense>
+              }
+            />
+
+            <Route
+              path="/reg"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Register />
+                </React.Suspense>
+              }
+            />
           </Routes>
 
-       <Footer />
+          <Footer />
         </AuthContextProvider>
       </Router>
     </div>
