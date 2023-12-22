@@ -3,12 +3,12 @@ import { UserAuth } from "../contexts/AuthContext";
 import { QRCodeSVG } from "qrcode.react";
 
 const Register = () => {
-  const { user, googleSignIn } = UserAuth();
+  const { user, gochaGo } = UserAuth();
   const [isLoading, setIsLoading] = useState(true);
 
   const handleGoogleSignIn = async () => {
     try {
-      await googleSignIn();
+      await gochaGo();
     } catch (error) {
       console.log(error);
     } finally {
