@@ -1,5 +1,5 @@
 import { useContext, createContext, useEffect, useState } from "react";
-import { GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged} from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup, signInWithRedirect, signOut, onAuthStateChanged} from "firebase/auth";
 import {auth} from '../Firebase'
 import { useNavigate } from "react-router-dom";
 
@@ -16,6 +16,11 @@ export const AuthContextProvider = ({children}) => {
         //  navigate('/workshops');
     }
 
+    const gochaGo = () => {
+        const provider = new GoogleAuthProvider();
+        signInWithRedirect(auth, provider)
+    }
+
     const logOut = () => {
         signOut(auth)
     }
@@ -28,11 +33,11 @@ export const AuthContextProvider = ({children}) => {
         });
         return ()  => {
             unsubscribe()
-        }
+        }   
     }, [])
 
     return (
-        <AuthContext.Provider value={{ googleSignIn, logOut, user }}>
+        <AuthContext.Provider value={{ googleSignIn, gochaGo, logOut, user }}>
             {children}
         </AuthContext.Provider>
     )

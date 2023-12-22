@@ -5,6 +5,9 @@ import { UserAuth } from "../../contexts/AuthContext";
 
 import tf from "./tflogo.png";
 import bg from "./navImg.svg";
+import CustomPopup from "../Popup/index2";
+import { QRCodeSVG } from "qrcode.react";
+// import Profile from "../Popup/TicketPopup";
 
 const Header_update = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -52,6 +55,55 @@ const Header_update = () => {
     setPrevScrollY(currentScrollY);
     // console.log(showNavbar);
   };
+  const [popupVisible, setPopupVisible] = useState(false);
+  
+  const closePopup = () => {
+    setPopupVisible(false);
+  };
+  const openPopup = () => {
+    setPopupVisible(true);
+  };
+  // const Profile = () => {
+  //   const { user, googleSignIn } = UserAuth();
+    // const [popupVisible, setPopupVisible] = useState(false);
+  
+    // const openPopup = () => {
+    //   setPopupVisible(true);
+    // };
+  
+    // const closePopup = () => {
+    //   setPopupVisible(false);
+    // };
+  
+  //   useEffect(() => {
+  //     // Assuming you have user data available in the 'user' object
+  //     if (user) {
+  //       openPopup();
+  //     }
+  //   }, [user]);
+  
+  //   return (
+  //     <div>
+  //       {/* Content for the profile page */}
+  //       {/* <h2>Welcome, {user ? user.displayName : "Guest"}</h2> */}
+  
+  //       {/* QR Code Popup */}
+        <CustomPopup
+          title="QR Code Popup"
+          show={popupVisible}
+          onClose={closePopup}
+        >
+          {/* Content\ for the popup */}
+          {user && (
+            <div>
+              <h3>QR Code for User Data</h3>
+              <QRCodeSVG value={user.email} />
+            </div>
+          )}
+        </CustomPopup>
+  //     </div>
+  //   );
+  // };
 
   useEffect(() => {
     // Add scroll event listener when the component mounts
@@ -186,7 +238,7 @@ const Header_update = () => {
             ) : (
               <div onClick={handleGoogleSignIn} className="singin">
                 <div className="logout_rect1">
-                  <div className="logout_rect2">Sign in</div>
+                  <div className="logout_rect2">Register</div>
                 </div>
               </div>
             )}
@@ -207,8 +259,23 @@ const Header_update = () => {
             >
               Sign Out
             </button>
+            <button onClick = {openPopup}>
+              Ticket
+            </button>
           </div>
         )}
+        <CustomPopup
+          title="QR Code Popup"
+          show={popupVisible}
+          onClose={closePopup}
+        >
+          {user && (
+            <div style={{backgroundColor:'grey', paddingBottom: '1vw', paddingTop: '1vw'}}>
+              {/* <h3>QR Code for User Data</h3> */}
+              <QRCodeSVG value={user.email} />
+            </div>
+          )}
+        </CustomPopup>
       </nav>
       <div
         className={`mobNav navfunc ${
