@@ -89,6 +89,7 @@ class HasUserMadeBet(APIView):
         except Match.DoesNotExist:
             return Response({'error': 'Match not found'}, status=status.HTTP_404_NOT_FOUND)
 
+
 def export_users_to_csv(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="user_data.csv"'
@@ -96,7 +97,7 @@ def export_users_to_csv(request):
     writer = csv.writer(response)
     writer.writerow(['Name', 'Email', 'Total Points'])
 
-    users = User.objects.order_by('total_points')  # Retrieve users in descending order of total points
+    users = User.objects.order_by('total_points')  
 
     for user in users:
         writer.writerow([user.name, user.email, user.total_points])

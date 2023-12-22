@@ -406,7 +406,7 @@
 }
 
 .evenLoShow {
-  max-height: 300px; /* Adjust the max-height as needed */
+  max-height: 500px; /* Adjust the max-height as needed */
   opacity: 1;
   visibility: visible;
   transition: max-height 1s ease, opacity 1s ease, visibility 0s;

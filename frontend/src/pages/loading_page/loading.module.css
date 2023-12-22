@@ -5,7 +5,6 @@
     z-index: 2147483647;
    background-image: url("./img/homebg.jpg");
 
-
    background-repeat: no-repeat;
   background-position: center;
   background-size: 100vw;
@@ -101,6 +100,7 @@
 @media (max-width: 490px) {
     .loading{
        background-image: url("./img/homebgm.jpg");
+       background-size: 122vw;
     }
     .tfbg{
         width: 150vw;
@@ -110,4 +110,13 @@
     left: -10vw;
        
     }
+     .cloud1{
+        height: 100vh;
+    }
+    .cloud2{
+        
+      right: 170px;
+      height: 110vh;
+      /* top: -123456778765432px; */
+    } 
 }
