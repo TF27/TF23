@@ -145,13 +145,13 @@ const Exhibition = () => {
             </div>
           </div> */}
           <div className="Contactbox">
-            <div className="Contactbox1">
+            {/* <div className="Contactbox1">
               Gourish Singhal<br></br>
               gourish@techfest.org<br></br>
               <div onClick={() => (window.location.href = `tel:${9424873725}`)}>
                 {9424873725}
               </div>
-            </div>
+            </div> */}
             <div className="Contactbox1">
               Akshat Gupta<br></br>
               akshat@techfest.org<br></br>
