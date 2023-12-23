@@ -1,0 +1,52 @@
+/* src/components/Grid.module.css */
+.grid-container {
+    position: relative;
+    top: 11vh;
+}
+
+.match-section {
+    margin-bottom: 20px;
+}
+
+.match-type {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.match-day {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.add-match-section {
+    margin-top: 20px;
+}
+
+.add-match-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.add-match-form label {
+    margin-bottom: 5px;
+}
+
+.add-match-form input {
+    margin-bottom: 10px;
+}
+
+.add-match-form button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.add-match-form button:hover {
+    background-color: #45a049;
+}
