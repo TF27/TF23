@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./workshop_data.module.css";
-import Faq from "react-faq-component";
-import Whatsapplink from "../../../../components/whatsapp/link";
+// import Faq from "react-faq-component";
+// import Whatsapplink from "../../../../components/whatsapp/link";
 import "./x.css";
 
 const Dta = () => {
@@ -141,20 +141,20 @@ const Dta = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Varun Gupta
+          Akash Jaiswal
             <div
               className="contactNum"
-              onClick={() => (window.location.href = `tel:8655015054`)}
+              onClick={() => (window.location.href = `tel:6390391865`)}
             >
-              +91 86550 15054
+              +91 63903 91865
             </div>
             <div
               className="contactMail"
               onClick={() =>
-                (window.location.href = `mailto:varun@techfest.org`)
+                (window.location.href = `mailto:avhi.techfest@gmail.com`)
               }
             >
-              varun@techfest.org
+              avhi.techfest@gmail.com
             </div>
           </div>
         </div>
