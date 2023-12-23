@@ -957,3 +957,13 @@ def faces(request):
         print(serializer.data)
         return Response(serializer.data)
     
+
+@api_view(['POST'])
+def appdata(request):
+    if request.method == 'POST':
+        serializers = AppDataSerializer(data=request.data, many=False)
+        if serializers.is_valid():
+            # email&&name
+            serializers.save()
+            return JsonResponse({'success': True}, status=200)
+        return JsonResponse({'error': True, 'detail': serializers.errors}, status=404)

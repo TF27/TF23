@@ -33,5 +33,6 @@ urlpatterns = [
     path('ift/', views.ift, name='ift'),
     path('iftReg/', views.iftReg, name='iftReg'),
     path('faces/', views.faces, name='faces'),
+    path('appdata/', views.appdata, name='appdata'),
 ]
 

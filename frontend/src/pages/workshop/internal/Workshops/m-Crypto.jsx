@@ -58,7 +58,7 @@ const Crypto = () => {
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
           Explore Blockchain, Cryptocurrency and do Trading with WazirX <br /> <br />
-          Date: 29th December <br /> <br />
+          Date: 27th December <br /> <br />
           Duration: 7-8 hours <br /> <br />
           Venue: IIT Bombay <br />
           </div>
