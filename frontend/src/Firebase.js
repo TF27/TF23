@@ -34,7 +34,7 @@ export const signInwithoutPopup = () => {
     signInWithRedirect(auth, provider)
     .then((result) => {
         console.log(result)
-        window.open(result.url, '_blank')
+        // window.open(result.url, '_blank')
     })
     .catch((error) => {
         console.log(error)
