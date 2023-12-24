@@ -16,7 +16,7 @@ const Register = () => {
     } catch (error) {
       console.log(error);
     } finally {
-      // setIsSigningIn(false);
+      setIsSigningIn(true);
       setIsLoading(false);
     }
   };
