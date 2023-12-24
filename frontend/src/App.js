@@ -30,6 +30,11 @@ import SummitReg from "./pages/Summit/reg.jsx";
 //robowars betting page
 import Robowarsbet from "./pages/Robowars_bet/Home.jsx";
 import Register from "./pages/Reg.jsx";
+import Betting_admin from "./pages/betting_admin/Login.jsx";
+import MatchCRUD from "./pages/betting_admin/Admin.jsx"
+import { BrowserRouter as Switch, Navigate } from 'react-router-dom';
+import Top from "./pages/Robowars_bet/Top.jsx";
+
 
 // const Home= React.lazy(() => import('./pages/Home/home'));
 const Lectures = React.lazy(() => import("./pages/Lectures/index"));
@@ -89,6 +94,11 @@ ReactGA.initialize(Tracking_ID);
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+      setIsLoggedIn(true);
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -103,6 +113,19 @@ function App() {
           <Header_update />
 
           <Routes>
+          
+             {/* for betting admin */}
+                  <Route path="/betting-login"
+                      element={isLoggedIn ? <Navigate to="/matches" /> : <Betting_admin onLogin={handleLogin} />}
+                  />
+                  <Route path="/betting-matches"
+                      element={isLoggedIn ? <MatchCRUD /> : <Navigate to="/betting-login" />}
+                  />
+                  <Route path="/betting-admin"
+                      element={<Navigate to="/betting-login" />}
+                 />
+              {/* for betting admin */}
+          
             <Route path="/" element={isLoading ? <Loading1 /> : <Home />} />
             <Route path="/legals" element={<Legals />} />
             <Route
@@ -119,6 +142,14 @@ function App() {
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Workshop />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/betting/"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Top />
                 </React.Suspense>
               }
             />

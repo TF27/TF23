@@ -16,6 +16,7 @@ class UserProfile(APIView):
     def post(self, request):
         email = request.data.get('user_email')
         name = request.data.get('name')
+        id = request.data.get('id')
 
         if email is None:
             return Response({'error': 'Email not provided'}, status=status.HTTP_400_BAD_REQUEST)
@@ -29,7 +30,7 @@ class UserProfile(APIView):
                 user.save()
 
             # Calculate and update total_points
-            user_matches = UserMatch.objects.filter(user=user)
+            user_matches = UserMatch.objects.filter(user=user,match__type=id)
             total_points = 0
             for user_match in user_matches:
                 match = user_match.match
@@ -39,7 +40,8 @@ class UserProfile(APIView):
                     total_points += match.points_awarded
 
             # Update the user's total points
-            user.total_points = total_points
+            total_points_field_name = f'total_points_{id}'  # Assuming id is a number
+            setattr(user, total_points_field_name, total_points)
             user.save()
 
             # Serialize and return user data
@@ -47,7 +49,7 @@ class UserProfile(APIView):
             return Response(serializer.data)
         except User.DoesNotExist:
             # User not found, return a response with total_points set to '0'
-            return Response({'total_points': '0'})
+            return Response({'total_points_1': '0','total_points_2': '0','total_points_3': '0'})
 
 class SelectTeam(APIView):
     def post(self, request, match_id):
@@ -90,16 +92,44 @@ class HasUserMadeBet(APIView):
             return Response({'error': 'Match not found'}, status=status.HTTP_404_NOT_FOUND)
 
 
-def export_users_to_csv(request):
+def export_robowars_to_csv(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="user_data.csv"'
 
     writer = csv.writer(response)
     writer.writerow(['Name', 'Email', 'Total Points'])
 
-    users = User.objects.order_by('total_points')  
+    users = User.objects.order_by('total_points_1')  
 
     for user in users:
-        writer.writerow([user.name, user.email, user.total_points])
+        writer.writerow([user.name, user.email, user.total_points_1])
+
+    return response
+
+def export_ift_to_csv(request):
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="user_data.csv"'
+
+    writer = csv.writer(response)
+    writer.writerow(['Name', 'Email', 'Total Points'])
+
+    users = User.objects.order_by('total_points_2')  
+
+    for user in users:
+        writer.writerow([user.name, user.email, user.total_points_2])
+
+    return response
+
+def export_drone_to_csv(request):
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="user_data.csv"'
+
+    writer = csv.writer(response)
+    writer.writerow(['Name', 'Email', 'Total Points'])
+
+    users = User.objects.order_by('total_points_3')  
+
+    for user in users:
+        writer.writerow([user.name, user.email, user.total_points_3])
 
     return response
