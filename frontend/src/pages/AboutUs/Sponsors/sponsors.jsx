@@ -35,6 +35,7 @@ import boostgrad from './assets/Boostgrad.jpg';
 import sevanyay from './assets/snu.jpg';
 import playmaker from './assets/General Sponsors/Playmaker Labs.jpg';
 import duolingo from './assets/General Sponsors/duolingowhite.jpeg';
+import element from './assets/General Sponsors/elements.jpg';
 import sydney from './assets/International University Partners/sydney.PNG';
 import taiwan from './assets/International University Partners/Taiwan Logo .png';
 import nus from './assets/International University Partners/nus.png';
@@ -251,6 +252,9 @@ const Sponsors = () => {
         <a href='https://www.duolingo.com/'>
         <img src={duolingo}></img>
         </a>
+      </div>
+      <div className={styles.single}>
+        <img src={element}></img>
       </div>
       <div className={styles.title}><h1>International University Partners</h1></div>
       <div className={styles.bobby}>

@@ -6,26 +6,32 @@ import styles from './reg.module.css';
 const Register = () => {
   const { user, gochaGo } = UserAuth();
   const [isLoading, setIsLoading] = useState(true);
+  const [isSigningIn, setIsSigningIn] = useState(false);
 
   const handleGoogleSignIn = async () => {
     try {
+      setIsSigningIn(true);
+       // Set signing in to true to prevent multiple calls
       await gochaGo();
     } catch (error) {
       console.log(error);
     } finally {
+      setIsSigningIn(true);
       setIsLoading(false);
     }
   };
 
   useEffect(() => {
-    if (!user) {
-        console.log('no user')
+    if (!user && !isSigningIn) {
+      console.log('no user');
       handleGoogleSignIn();
     } else {
-        console.log('user')
+      // console.log(user);
       setIsLoading(false);
     }
-  }, [user]);
+  }, [user, isSigningIn]);
+
+  const val = user?.email + "&&" + user?.displayName;
 
   return (
     <>
@@ -33,27 +39,27 @@ const Register = () => {
         <p>Loading...</p>
       ) : user ? (
         <>
-        <div className={styles.overlay}>
-          <div className={styles.reg_head}>
-            <div>
-              <img src={user?.photoURL} alt="User" />
-            </div>
-            <div className={styles.head_n}>
+          <div className={styles.overlay}>
+            <div className={styles.reg_head}>
               <div>
-                <h2>{user?.displayName}</h2>
+                <img src={user?.photoURL} alt="User" />
               </div>
-              <hr></hr>
-              <div>Show the QR Code for Verification and Entrace at IIT Bombay</div>
+              <div className={styles.head_n}>
+                <div>
+                  <h2>{user?.displayName}</h2>
+                </div>
+                <hr></hr>
+                <div>Show the QR Code for Verification and Entrance at IIT Bombay</div>
+              </div>
             </div>
-          </div>
           </div>
           <div className={styles.qrc}>
-        <QRCodeSVG value={user.email} size='188' />
-        </div>
+            <QRCodeSVG value={val} size='188' />
+          </div>
         </>
       ) : (
         <div>
-            Loading...
+          Loading...
         </div>
       )}
     </>
