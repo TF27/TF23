@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import style from './card.module.css';
 import { UserAuth } from "../../contexts/AuthContext";
 
-const Card = ({ email, team1, team2, team1_image, team2_image, time, points, winner, matchId, onBet }) => {
+const Card = ({ email, team1, team2, team3,team4, team5, team6, team1_image, team2_image, team3_image,team4_image, team5_image, team6_image,status, time, points, winner, matchId, onBet }) => {
   const [selectedTeam, setSelectedTeam] = useState(null);
   const [betMade, setBetMade] = useState(false); // State to track whether the user has made a bet
   const [userHasBet, setUserHasBet] = useState(false); // State to track whether the user has made a bet on this match
@@ -18,8 +18,6 @@ const Card = ({ email, team1, team2, team1_image, team2_image, time, points, win
     onBet(matchId, selectedTeam, userEmail);
     setBetMade(true);
   };
-
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,52 +39,94 @@ const Card = ({ email, team1, team2, team1_image, team2_image, time, points, win
 
   return (
     <div className={style.betting}>
-    <div className={style.bettingcard}>
-      <div className={style.teamcontainer}>
-        <img src={team1_image} alt={team1} className={style.teamlogo} />
-        <span className={style.teamname}>{team1}</span>
-      </div>
-      <div className={style.vscontainer}>
-        <span className={style.vstext}> <p>&nbsp; VS&nbsp; </p> </span>
-      </div>
-      <div className={style.teamcontainer}>
-        <img src={team2_image} alt={team2} className={style.teamlogo} />
-        <span className={style.teamname}>{team2}</span>
-      </div>
-    </div>
+   
+       <div className={style.bettingcard3}>
+        {/* Team 1 */}
+        {team1 && (
+       <div className={style['match-card-team-container']}>
+       <img src={team1_image} alt="Team 1" className={style['match-card-team-image']} />
+       <p className={style['match-card-team-name']}>{team1}</p>
+   </div>
+        )}
+
+   {/* Team 2 */}
+   {team2 && (
+   <div className={style['match-card-team-container']}>
+       <img src={team2_image} alt="Team 2" className={style['match-card-team-image']} />
+       <p className={style['match-card-team-name']}>{team2}</p>
+   </div>
+   )}
+
+   {/* Team 3 */}
+   {team3 && (
+       <div className={style['match-card-team-container']}>
+           <img src={team3_image} alt="Team 3" className={style['match-card-team-image']} />
+           <p className={style['match-card-team-name']}>{team3}</p>
+       </div>
+   )}
+
+   {/* Team 4 */}
+   {team4 && (
+       <div className={style['match-card-team-container']}>
+           <img src={team4_image} alt="Team 4" className={style['match-card-team-image']}/>
+           <p className={style['match-card-team-name']}>{team4}</p>
+       </div>
+   )}
+
+   {/* Team 5 */}
+   {team5 && (
+       <div className={style['match-card-team-container']}>
+           <img src={team5_image} alt="Team 5" className={style['match-card-team-image']}/>
+           <p className={style['match-card-team-name']}>{team5}</p>
+       </div>
+   )}
+
+   {/* Team 6 */}
+   {team6 && (
+       <div className={style['match-card-team-container']}>
+           <img src={team6_image} alt="Team 6" className={style['match-card-team-image']} />
+           <p className={style['match-card-team-name']}>{team6}</p>
+       </div>
+   )}
+       </div>
 
 
-    <div className={style.bettinginfo}>
+      <div className={style.bettinginfo}>
         <div className={style.betpricecontainer}>
-        {winner !== '' && <p>Winner: {winner === '1' ? team1 : team2}</p>}
+          {winner !== '' && <p>Winner: {winner === '1' ? team1 : winner === '2' ? team2 : team3}</p>}
           <span className={style.matchtime}>Time: {time}</span>
           <span className={style.betprice}>Reward: {points} points</span>
         </div>
-              {winner === '' && (
-        <>
-          {betMade || userHasBet ? (
-            <p>Done</p>
-          ) : (
-            <>
-              <select
-                className={style.teamDropdown}
-                onChange={(e) => setSelectedTeam(e.target.value)}
-                value={selectedTeam}
-              >
-                <option value="">Select a Team</option>
-                <option value="1">{team1}</option>
-                <option value="2">{team2}</option>
-              </select>
-              <button className={style.betbutton} onClick={handleBet}>
-                Bet Now
-              </button>
-            </>
-          )}
-        </>
-      )}
 
+        {winner === '' && (
+          <>
+            {betMade || userHasBet ? (
+              <p>Done</p>
+            ) : (
+              <>
+                <select
+                  className={style.teamDropdown}
+                  onChange={(e) => setSelectedTeam(e.target.value)}
+                  value={selectedTeam}
+                >
+                  <option value="">Select a Team</option>
+                  <option value="1">{team1}</option>
+                  <option value="2">{team2}</option>
+                  {team3 && <option value="3">{team3}</option>}
+                  {team4 && <option value="4">{team4}</option>}
+                  {team5 && <option value="5">{team5}</option>}
+                  {team6 && <option value="6">{team6}</option>}
+                </select>
 
-        {winner!=='' && <p>Completed</p>}
+                <button className={style.betbutton} onClick={handleBet}>
+                  Bet Now
+                </button>
+              </>
+            )}
+          </>
+        )}
+
+        {winner !== '' && <p>Completed</p>}
       </div>
     </div>
   );

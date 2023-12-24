@@ -74,7 +74,7 @@ const Technoholix = () => {
           <div className="check_rect1"></div>
           <div className="check_rect2">
             <a
-              href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer"
+              href="https://www.meraevents.com/event/accommodation-at-iit-bombay?ucode=organizer"
               target="_blank"
             >
               BOOK TICKETS NOW
