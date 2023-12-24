@@ -272,7 +272,7 @@ const Header_update = () => {
           {user && (
             <div style={{backgroundColor:'grey', paddingBottom: '1vw', paddingTop: '1vw'}}>
               {/* <h3>QR Code for User Data</h3> */}
-              <QRCodeSVG value={user.email} />
+              <QRCodeSVG value={user} />
             </div>
           )}
         </CustomPopup>

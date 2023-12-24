@@ -140,20 +140,20 @@ const Android = () => {
         >
           <div className={`${styles.abt_rect1} ${styles.whatd_rect1}`}></div>
           <div className={`${styles.abt_rect2} ${styles.whatd_rect2}`}>
-            Utkarsh Daga
+            Jansi Bhati
             <div
               className="contactNum"
-              onClick={() => (window.location.href = `tel:9636509616`)}
+              onClick={() => (window.location.href = `tel:9054642991`)}
             >
-              +91 96365 09616
+              +91 90546 42991
             </div>
             <div
               className="contactMail"
               onClick={() =>
-                (window.location.href = `mailto:utkarsh@techfest.org`)
+                (window.location.href = `mailto:jansibhati.techfest@gmail.com`)
               }
             >
-              utkarsh@techfest.org
+              jansibhati.techfest@gmail.com
             </div>
           </div>
         </div>

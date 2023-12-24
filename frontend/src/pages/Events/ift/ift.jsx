@@ -4,6 +4,8 @@ import Carousel from "../../../components/Carousel/carousel";
 import styles from "./ift.module.css";
 import Cards from "./cards";
 import Parallax from "./parallax";
+import Whatsapplink from '../../../components/whatsapp/link';
+
 
 import bg from './assets/bg.png';
 import ass from './assets/ass.jpeg';
@@ -92,6 +94,9 @@ const IFT = () => {
     paddingBottom: '30px',
   };
 
+  const walink1 = "https://chat.whatsapp.com/KPIY7EUqnSMIDSvv2kyn0R";
+  const dslink1 = "https://chat.whatsapp.com/KPIY7EUqnSMIDSvv2kyn0R";
+
   return (
     <div style={bgstyles}>
       <Parallax />
@@ -115,6 +120,9 @@ const IFT = () => {
         </div>
       </div>
       <Border text="Resources" />
+      <div className={styles.grouplink} style={{paddingBottom : "3vw"}}>
+        <div className={styles.wabutton }><Whatsapplink walink={walink1} dslink = {dslink1} target="_blank"/></div>
+      </div>
       <Cards />
       <Border text="Past Drivers" />
       <div className={styles.PastD}>

@@ -189,21 +189,21 @@ const Android = () => {
           >
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-                Utkarsh Daga
+                Jansi Bhati
                 <br />
                 <div
                   className="col-3 contactNum"
-                  onClick={() => (window.location.href = `tel:9636509616`)}
+                  onClick={() => (window.location.href = `tel:9054642991`)}
                 >
-                  +91 96365 09616
+                  +91 90546 42991
                 </div>
                 <div
                   className="col-3 contactMail"
                   onClick={() =>
-                    (window.location.href = `utkarsh@techfest.org`)
+                    (window.location.href = `jansibhati.techfest@gmail.com`)
                   }
                 >
-                  utkarsh@techfest.org
+                  jansibhati.techfest@gmail.com
                 </div>
               </div>
             </div>
