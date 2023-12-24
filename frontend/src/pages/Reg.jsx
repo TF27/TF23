@@ -27,6 +27,8 @@ const Register = () => {
     }
   }, [user]);
 
+  const val = user?.email+"&&"+user?.displayName;
+
   return (
     <>
       {isLoading ? (
@@ -48,7 +50,7 @@ const Register = () => {
           </div>
           </div>
           <div className={styles.qrc}>
-        <QRCodeSVG value={user.email} size='188' />
+        <QRCodeSVG value={val} size='188' />
         </div>
         </>
       ) : (
