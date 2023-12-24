@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { UserAuth } from "../contexts/AuthContext";
 import { QRCodeSVG } from "qrcode.react";
+import styles from './reg.module.css';
 
 const Register = () => {
-  const { user, googleSignIn } = UserAuth();
+  const { user, gochaGo } = UserAuth();
   const [isLoading, setIsLoading] = useState(true);
 
   const handleGoogleSignIn = async () => {
     try {
-      await googleSignIn();
+      await gochaGo();
     } catch (error) {
       console.log(error);
     } finally {
@@ -18,8 +19,10 @@ const Register = () => {
 
   useEffect(() => {
     if (!user) {
+        console.log('no user')
       handleGoogleSignIn();
     } else {
+        console.log('user')
       setIsLoading(false);
     }
   }, [user]);
@@ -29,9 +32,29 @@ const Register = () => {
       {isLoading ? (
         <p>Loading...</p>
       ) : user ? (
-        <QRCodeSVG value={user} />
+        <>
+        <div className={styles.overlay}>
+          <div className={styles.reg_head}>
+            <div>
+              <img src={user?.photoURL} alt="User" />
+            </div>
+            <div className={styles.head_n}>
+              <div>
+                <h2>{user?.displayName}</h2>
+              </div>
+              <hr></hr>
+              <div>Show the QR Code for Verification and Entrace at IIT Bombay</div>
+            </div>
+          </div>
+          </div>
+          <div className={styles.qrc}>
+        <QRCodeSVG value={user.email} size='188' />
+        </div>
+        </>
       ) : (
-        <button onClick={handleGoogleSignIn}>Sign in with Google</button>
+        <div>
+            Loading...
+        </div>
       )}
     </>
   );

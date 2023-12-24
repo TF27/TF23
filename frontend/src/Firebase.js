@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithRedirect } from 'firebase/auth'
 
 const firebaseConfig = {
   apiKey: "AIzaSyBLwdqZzqXq3rffq2gIgLAhGnSNIyaKnl4",
@@ -22,6 +22,16 @@ const provider = new GoogleAuthProvider()
 
 export const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
+    .then((result) => {
+        console.log(result)
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+}
+
+export const signInwithoutPopup = () => {
+    signInWithRedirect(auth, provider)
     .then((result) => {
         console.log(result)
     })

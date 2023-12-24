@@ -87,9 +87,9 @@ const Dta= () => {
           <div id="Contact" className={`${styles.info} ${activeCity === 'Contact' ? styles.show : styles.hide}`}>
             <div className={styles.info_tab}>
               <div className={styles.info_data}>
-              Varun Gupta<br/>
-                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:8655015054`}>+91 86550 15054</div>
-                    <div className="col-3 contactMail" onClick={() => window.location.href = `varun@techfest.org`}>varun@techfest.org</div>
+              Akash Jaiswal<br/>
+                    <div className="col-3 contactNum" onClick={() => window.location.href = `tel:6390391865`}>+91 63903 91865</div>
+                    <div className="col-3 contactMail" onClick={() => window.location.href = `vavhi.techfest@gmail.com`}>avhi.techfest@gmail.com</div>
                     
               </div>
             </div>
