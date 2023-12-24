@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 
-const Login = ({ onLogin }) => {
+const Login = ({ setAuthenticated }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -9,12 +9,14 @@ const Login = ({ onLogin }) => {
 
     const handleLogin = () => {
         if (username === 'admin' && password === 'password') {
-            onLogin();
-            Navigate('/betting-matches');
+            setAuthenticated(true);
+           
+            Navigate('/betting-protected-route')
         } else {
             setError('Invalid credentials. Please try again.');
-        }
-    };
+        } 
+        localStorage.setItem('isAuthenticated', 'true');      
+      };
 
     return (
         <div style={{position:'relative',top:'36vh'}}>

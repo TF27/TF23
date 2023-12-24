@@ -160,6 +160,25 @@
   background-color: #45a049;
 }
 
+/* BlinkingText.module.css */
+
+.blinkingText {
+  color: red;
+  font-size: 1.5rem;
+  /* Add any other styles you want for the text here */
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink 1s ease-in-out infinite; /* Adjust the animation duration as needed */
+}
+
+
   
   /* Add responsive styles here */
 

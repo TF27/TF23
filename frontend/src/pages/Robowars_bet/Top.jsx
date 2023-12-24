@@ -9,7 +9,7 @@ const Top = () => {
   const navigate = useNavigate();
 
   const handleClick = (photoId) => {
-    navigate(`/robowars-bet?id=${photoId}`);
+    navigate(`/bet?id=${photoId}`);
   };
 
   return (
