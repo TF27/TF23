@@ -190,7 +190,7 @@ const numericId = parseInt(photoId, 10);
         formData.append(`teams[${index}][image]`, team.image);
       });
 
-      await axios.post('/robowars-bet/add-match/', formData, {
+      await axios.post('/robowars-bet/add-matches/', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
