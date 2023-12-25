@@ -94,7 +94,7 @@ const Home = () => {
             console.log(data.message);
             console.log('Bet successful!');
         } else {
-            console.error('Error placing be:', response.status, response.statusText);
+            console.error('Error placing bet:', response.error, response.statusText);
         }
     } catch (error) {
         console.error('Error placing bet:', error);

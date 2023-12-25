@@ -505,7 +505,7 @@ const MAccommodation = () => {
                 className={`${styles["m-titSpn_rect2"]} ${styles.registerButton}`}
                 // onClick={toggleRegistrationForm}
               >
-                <a href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer" target="_blank" >REGISTER NOW</a>
+                <a href="https://www.meraevents.com/event/accommodation-at-iit-bombay?ucode=organizer" target="_blank" >REGISTER NOW</a>
               </button>
             </div>
           )}
