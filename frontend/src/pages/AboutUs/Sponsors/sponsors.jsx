@@ -299,12 +299,12 @@ const Sponsors = () => {
         <img src={cnbc}></img>
         </a>
       </div>
-      <div className={styles.title}><h2>Digital Music Partner</h2></div>
+      {/* <div className={styles.title}><h2>Digital Music Partner</h2></div>
       <div className={styles.single}>
       <a href='https://gaana.com/'>
         <img src={gaana}></img>
         </a>
-      </div>
+      </div> */}
       <div className={styles.title}><h2>Marathi Media Partner</h2></div>
       <div className={styles.single}>
       <a href='https://maharashtratimes.com/'>
