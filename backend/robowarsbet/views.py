@@ -119,7 +119,7 @@ def add_match(request):
     try:
         data = json.loads(request.body.decode('utf-8'))
         teams_data = data.get('teams', [])
-
+        print(data)
         # Create a new match
         new_match = Match.objects.create(
             type=int(data.get('type')),
@@ -136,6 +136,7 @@ def add_match(request):
         new_match.save()  # Save the match with teams to the database
         return JsonResponse({'message': 'Match added successfully'}, status=201)
     except Exception as e:
+        print(e)
         return JsonResponse({'error': f'Error adding match: {str(e)}'}, status=500)
     
 
