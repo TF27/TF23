@@ -8,7 +8,7 @@ const Login = ({ setAuthenticated }) => {
     const Navigate = useNavigate();
 
     const handleLogin = () => {
-        if (username === 'admin' && password === 'password') {
+        if (username === 'tf@yat' && password === 'mun@tf') {
             setAuthenticated(true);
            
             Navigate('/betting-protected-route')

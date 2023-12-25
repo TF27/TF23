@@ -9,6 +9,7 @@ const Register = () => {
   const [isSigningIn, setIsSigningIn] = useState(false);
 
   const handleGoogleSignIn = async () => {
+    console.log(isSigningIn)
     try {
       setIsSigningIn(true);
        // Set signing in to true to prevent multiple calls
@@ -22,9 +23,10 @@ const Register = () => {
   };
 
   useEffect(() => {
+    console.log(isSigningIn, user)
     if (!user && !isSigningIn) {
       console.log('no user');
-      handleGoogleSignIn();
+      // handleGoogleSignIn();
     } else {
       // console.log(user);
       setIsLoading(false);
@@ -58,8 +60,9 @@ const Register = () => {
           </div>
         </>
       ) : (
-        <div>
-          Loading...
+        <div className={styles.butt}>
+          
+          <button onClick={handleGoogleSignIn}>Register for Fest </button>
         </div>
       )}
     </>

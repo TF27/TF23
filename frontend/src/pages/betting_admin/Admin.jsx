@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from './Card';
 import styles from './admin.module.css';
+import { Link} from 'react-router-dom';
 
 const Admin = ({photoId}) => {
    
@@ -142,7 +143,6 @@ const getTypeLabel = () => {
   }
 };
 
-
     return (
         <div className={styles['grid-container']}>
            <div className={styles.grid}>
@@ -162,6 +162,7 @@ const getTypeLabel = () => {
 
             {/* Add new match form */}
             <h3>Add New Match</h3>
+            <div className={styles.flask}>
             <div className={styles['add-match-section']}>
                 
                 <div className={styles['add-match-form']}>
@@ -236,6 +237,11 @@ const getTypeLabel = () => {
                     {Addbutton && (<button onClick={handleAddMatch}>Add Match</button>)}
                     {!Addbutton && (<h1>Refresh to Add other</h1>)}
                 </div>
+            </div>
+            <div className={styles['export-csv-button-container']}>
+              {/* <button className={styles['export-csv-button']} onClick={handleCSV}>Export CSV</button> */}
+              <Link to={`http://localhost:8000/robowars-bet/export-csv/${numericId}/`}>Export CSV</Link>
+            </div>
             </div>
         </div>
     );
