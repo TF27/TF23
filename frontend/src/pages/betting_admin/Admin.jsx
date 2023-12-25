@@ -2,118 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from './Card';
 import styles from './admin.module.css';
+import { Link} from 'react-router-dom';
 
 const Admin = ({photoId}) => {
    
-//     const numericId = parseInt(photoId, 10);
-//     const [matchesByDay, setMatchesByDay] = useState({});
-//     const [matches, setMatches] = useState({});
-//     const [newMatch, setNewMatch] = useState({
-//         teams: [
-//             { name: '', image: null },
-//             { name: '', image: null },
-//             { name: '', image: null },
-//             { name: '', image: null },
-//             { name: '', image: null },
-//             { name: '', image: null },
-//         ],
-//         type: {numericId},
-//         day: '',
-//         status:'',
-//         match_time: '',
-//         points_awarded: '',
-//         winner: '',
-//     });
-
-    
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       try {
-//         const response = await fetch('/robowars-bet/matches/'); 
-//         const data = await response.json();
-
-//         // Group matches by day
-//         const groupedMatches = {};
-//         data.forEach(match => {
-//           const day = match.day;
-//           if (!groupedMatches[day]) {
-//             groupedMatches[day] = [];
-//           }
-//           groupedMatches[day].push(match);
-//         });
-
-//         setMatchesByDay(groupedMatches);
-        
-//       } catch (error) {
-//         console.error('Error fetching data from the backend:', error);
-//       }
-//     };  
-//     fetchData();
-//   }, [photoId]);
-
-   
-
-//     const handleInputChange = (e) => {
-//         const { name, value } = e.target;
-//         setNewMatch((prevMatch) => ({
-//             ...prevMatch,
-//             [name]: value,
-//         }));
-//     };
-
-//     const handleImageChange = (e, index) => {
-//         const { files } = e.target;
-//         setNewMatch((prevMatch) => {
-//             const newTeams = [...prevMatch.teams];
-//             newTeams[index].image = files[0];
-//             return { ...prevMatch, teams: newTeams };
-//         });
-//     };
-//     const handleTimeChange = (time) => {
-//         setNewMatch({ ...newMatch, match_time: time });
-//       };
-
-//     const handleAddMatch = async () => {
-//         try {
-//             const formData = new FormData();
-//             formData.append('type', newMatch.type);
-//             formData.append('day', newMatch.day);
-//             formData.append('match_time', newMatch.match_time);
-//             formData.append('points_awarded', newMatch.points_awarded);
-//             formData.append('winner', newMatch.winner);
-
-//             newMatch.teams.forEach((team, index) => {
-//                 formData.append(`team${index + 1}_name`, team.name);
-//                 formData.append(`team${index + 1}_image`, team.image);
-//             });
-
-//             await axios.post('http://your-api-url/matches/', formData, {
-//                 headers: {
-//                     'Content-Type': 'multipart/form-data',
-//                 },
-//             });
-
-//             // Fetch updated matches after adding a new match
-//             const response = await axios.get('http://your-api-url/matches/');
-//             setMatches(response.data);
-
-//             // Clear the form
-//             setNewMatch({
-//                 teams: [
-//                     { name: '', image: null },
-//                     { name: '', image: null },
-//                 ],
-//                 type: 1,
-//                 day: 1,
-//                 match_time: '12:00',
-//                 points_awarded: 0,
-//                 winner: '',
-//             });
-//         } catch (error) {
-//             console.error('Failed to add match', error);
-//         }
-//     };
-const numericId = parseInt(photoId, 10);
+  const numericId = parseInt(photoId, 10);
+  const [Addbutton, setAddbutton] = useState(true);
   const [matchesByDay, setMatchesByDay] = useState({});
   const [newMatch, setNewMatch] = useState({
     teams: [
@@ -124,12 +18,13 @@ const numericId = parseInt(photoId, 10);
       { name: '', image: null },
       { name: '', image: null },
     ],
-    type: '',
-    day: '',
-    match_time: '',
-    points_awarded: '',
-    winner: '',
+    type: numericId,
+    status: 'Future',
+    day: '1',
+    match_time: '00:00 AM',
+    points_awarded: 0,
   });
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -171,55 +66,82 @@ const numericId = parseInt(photoId, 10);
       return { ...prevMatch, teams: newTeams };
     });
   };
+  const handleNameChange = (e, index) => {
+    const { value } = e.target;
+    setNewMatch((prevMatch) => {
+        const newTeams = [...prevMatch.teams];
+        newTeams[index].name = value;
+        return { ...prevMatch, teams: newTeams };
+    });
+};
 
-  const handleTimeChange = (time) => {
-    setNewMatch({ ...newMatch, match_time: time });
-  };
+const handleAddMatch = async () => {
+  setAddbutton(false);
+  try {
+    const teamPromises = newMatch.teams.map(async (team) => ({
+      name: team.name,
+      image: team.image ? await convertImageToBase64(team.image) : null,
+    }));
 
-  const handleAddMatch = async () => {
-    try {
-      const formData = new FormData();
-      formData.append('type', newMatch.type);
-      formData.append('status', newMatch.status);
-      formData.append('day', newMatch.day);
-      formData.append('match_time', newMatch.match_time);
-      formData.append('points_awarded', newMatch.points_awarded);
+    const teams = await Promise.all(teamPromises);
 
-      newMatch.teams.forEach((team, index) => {
-        formData.append(`teams[${index}][name]`, team.name);
-        formData.append(`teams[${index}][image]`, team.image);
-      });
+    const matchData = {
+      type: numericId,
+      status: newMatch.status,
+      day: newMatch.day,
+      match_time: newMatch.match_time,
+      winner: newMatch.winner,
+      points_awarded: newMatch.points_awarded,
+      teams: teams,
+    };
 
-      await axios.post('/robowars-bet/add-matches/', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
+    await axios.post('robowars-bet/add-matches/', matchData, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
 
-      // Fetch updated matches after adding a new match
-      const response = await axios.get('/robowars-bet/add-matches/');
-      setMatchesByDay(response.data);
+    // Clear the form
+    setNewMatch({
+      teams: [
+        { name: '', image: null },
+        { name: '', image: null },
+        { name: '', image: null },
+        { name: '', image: null },
+        { name: '', image: null },
+        { name: '', image: null },
+      ],
+      type: numericId,
+      status: 'Future',
+      day: '1',
+      match_time: '00:00 AM',
+      points_awarded: 0,
+    });
+  } catch (error) {
+    console.error('Failed to add match', error);
+  }
+};
+const convertImageToBase64 = (imageFile) => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result.split(',')[1]);
+    reader.onerror = error => reject(error);
+    reader.readAsDataURL(imageFile);
+  });
+};
 
-      // Clear the form
-      setNewMatch({
-        teams: [
-          { name: '', image: null },
-          { name: '', image: null },
-          { name: '', image: null },
-          { name: '', image: null },
-          { name: '', image: null },
-          { name: '', image: null },
-        ],
-        type: '',
-        day: '',
-        match_time: '12:00',
-        points_awarded: 0,
-        winner: '',
-      });
-    } catch (error) {
-      console.error('Failed to add match', error);
-              }
-          };
+const getTypeLabel = () => {
+  switch (numericId) {
+    case 1:
+      return 'Robowars';
+    case 2:
+      return 'IFT';
+    case 3:
+      return 'Drone Racing';
+    default:
+      return 'Unknown Type';
+  }
+};
 
     return (
         <div className={styles['grid-container']}>
@@ -240,11 +162,13 @@ const numericId = parseInt(photoId, 10);
 
             {/* Add new match form */}
             <h3>Add New Match</h3>
+            <div className={styles.flask}>
             <div className={styles['add-match-section']}>
                 
                 <div className={styles['add-match-form']}>
                     {/* Render form inputs */}
                     <div>
+                    <h3>Must fill top two teams</h3>
                         {newMatch.teams.map((team, index) => (
                             <div key={index}>
                                 <label>Team {index + 1} Name:</label>
@@ -252,7 +176,7 @@ const numericId = parseInt(photoId, 10);
                                     type="text"
                                     name={`team${index + 1}_name`}
                                     
-                                    onChange={(e) => handleInputChange(e, index)}
+                                    onChange={(e) => handleNameChange(e, index)}
                                 />
                                 <label>Team {index + 1} Image:</label>
                                 <input
@@ -262,17 +186,23 @@ const numericId = parseInt(photoId, 10);
                                 />
                             </div>
                         ))}
+                        
                        
                     </div>
+                    <p></p>
+                   
+                    <label>Type: {getTypeLabel()}</label>
+                  
                     <div className={styles['add-match-for']}>
+                      
                         <label>Status:</label>
                             <select 
                                 type ="text"
-                                name ="type"
+                                name ="status"
                                 onChange={handleInputChange}
-                                value={newMatch.type}
+                                value={newMatch.status}
                                 >
-                                <option value="">-----</option>
+                             
                                 <option value="Finished">Finished</option>
                                 <option value="Ongoing">Ongoing</option>
                                 <option value="Betting-On">Betting-on</option>
@@ -284,18 +214,17 @@ const numericId = parseInt(photoId, 10);
                             name ="day"
                             onChange={handleInputChange}
                             value={newMatch.day}
-                            >
-                            <option value="">-----</option>
+                            >                         
                             <option value="1">Day 1</option>
                             <option value="2">Day 2</option>
                             <option value="3">Day 3</option>
                         </select>
                         <label>Match Time:</label>
                         <input
-                            type="time"
+                            type="text"
                             name="match_time"
                             value={newMatch.match_time}
-                            onChange={handleTimeChange}
+                            onChange={handleInputChange}
                         />
                         <label>Points Awarded:</label>
                         <input
@@ -305,8 +234,14 @@ const numericId = parseInt(photoId, 10);
                         onChange={handleInputChange}
                         />
                     </div>
-                    <button onClick={handleAddMatch}>Add Match</button>
+                    {Addbutton && (<button onClick={handleAddMatch}>Add Match</button>)}
+                    {!Addbutton && (<h1>Refresh to Add other</h1>)}
                 </div>
+            </div>
+            <div className={styles['export-csv-button-container']}>
+              {/* <button className={styles['export-csv-button']} onClick={handleCSV}>Export CSV</button> */}
+              <Link to={`http://localhost:8000/robowars-bet/export-csv/${numericId}/`}>Export CSV</Link>
+            </div>
             </div>
         </div>
     );
