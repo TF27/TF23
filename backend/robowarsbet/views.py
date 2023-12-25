@@ -5,6 +5,8 @@ from .models import Match, User, UserMatch
 from .serializers import MatchSerializer, UserSerializer
 import csv
 import json
+import base64
+from django.core.files.base import ContentFile
 from django.http import HttpResponse
 from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
@@ -119,19 +121,29 @@ def add_match(request):
     try:
         data = json.loads(request.body.decode('utf-8'))
         teams_data = data.get('teams', [])
-        print(data)
+
         # Create a new match
         new_match = Match.objects.create(
-            type=int(data.get('type')),
-            day= int(data.get('day')),
-            match_time=f"{data.get('match_time')}:00",  # Assuming seconds are always 00
-            points_awarded=int(data.get('points_awarded')),
+            type=data.get('type'),
+            status=data.get('status'),
+            day=int(data.get('day')),
+            match_time=data.get('match_time'),
+            points_awarded=data.get('points_awarded'),
         )
-        for i in range(6):
+
+        # Iterate through teams_data and set team names and images
+        for i, team_data in enumerate(teams_data):
             team_name_key = f'team{i + 1}_name'
             team_image_key = f'team{i + 1}_image'
-            setattr(new_match, team_name_key, teams_data[i].get('name', ''))
-            setattr(new_match, team_image_key, teams_data[i].get('image', ''))
+
+            setattr(new_match, team_name_key, team_data.get('name', ''))
+
+            # Handle image data if present
+            team_image_data = team_data.get('image')
+            if team_image_data:
+                team_image_content = base64.b64decode(team_image_data)
+                team_image_file = ContentFile(team_image_content, name=f'team_{i + 1}_image.jpg')
+                setattr(new_match, team_image_key, team_image_file)
 
         new_match.save()  # Save the match with teams to the database
         return JsonResponse({'message': 'Match added successfully'}, status=201)
@@ -139,7 +151,7 @@ def add_match(request):
         print(e)
         return JsonResponse({'error': f'Error adding match: {str(e)}'}, status=500)
     
-
+    
 class HasUserMadeBet(APIView):
     def get(self, request, user_email, match_id):
         try:
