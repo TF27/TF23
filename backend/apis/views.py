@@ -44,30 +44,37 @@ class NotifyView(APIView):
 
 
 def mail_bhejo1(request):
-    subject = "IIT Bombay's Techfest | Invitation to Asia'a Largest Science & Technology Festival"
+    subject = "IIT Bombay's International Fintech & Industry 4.0 Summit "
     message = """<html>
     <body>
         
-        <p>Greetings from Techfest, IIT Bombay!</p> <p>Asia’s Largest Science and Technology Festival is thrilled to present the Workshop Series featuring 27 topics, ranging from Data to AI, Quadcopter, UI/UX to Bio-analytics. Explore them all at techfest.org/workshops. Make the best of your trip to IIT Bombay with the latest technical knowledge and strengthen your profile by getting certified by Google, Amazon, Jio, WazirX and IIT Bombay's Techfest!</p>
+        <p>Greetings from Techfest, IIT Bombay!</p> <p>With only 2 days to go for the 27th edition of Techfest, here's one of the highlights of the fest - The international summits. This is your opportunity to listen and interact directly with top industry leaders and gain useful insights, motivation and know about their journey towards success! Register at tehfest.org/summits</p>
+        Here's some of our speakers: <br>
+Kavitha Subramanian <strong>(Co-Founder, Upstox)</strong> <br>
+Devie Mohan <strong>(Global top 10 Fintech Influencer)</strong>  	 <br>
+Ashish Singhal <strong>(Co-Founder Coinswitch)</strong>  <br>
+Nilesh Shah <strong>(Managing Director, Kotak Mutual Fund)</strong>  <br>
+Padmaja Chunduru	<strong>(MD & CEO, NSDL)</strong>  <br>
+Ram Kewalramani <strong>(Co-Founder & MD, CredAble)</strong>  <br>
+Sonam Srivastava <strong>(Founder & CEO, Wright Research)</strong>  <br>
+Anup Purohit <strong>(CIO, Wipro)</strong> </p>
 
-        <p>By participating in workshops, you gain entry to a myriad of events—EDM Concert, International Exhibitions, Robowars, Lecture Series, Defense Expo, and more. This edition's highlights feature <b>Akash Ambani</b>, Shri S Somnath (<b>ISRO Chairman</b>), and an electrifying <b>EDM concert</b> with Matisse & Sadko. Don't miss out!</p>
-
-        <p>Book your accommodation for a comfy stay inside IIT Bombay campus and to enjoy unrestricted access to late-night events and institute entry. Register at techfest.org/accommodation now! Limited seats available.
-        </p>
+<p><strong> Registrations open for limited time only!</strong>  <br>
+*The event is free for attendees with accommodation inside IIT Bombay. In this case entry will be on FCFS basis.</p>
+<p>
+Venue: <strong> Ground Floor, Seminar Room 2, VMCC, IIT Bombay</strong>  <br>
+Date: <strong> 26th & 27th December</strong>  <br>
+Time: <strong> 10:30 AM onwards</strong>  </p> 
+ <p>
+ Warm Regards, <br>
+Team Techfest 2023-24 </p>
         
-        <!-- Add an image -->
-        <img src="https://techfest.org/media/compi/Quadcopter_QR-01_4.jpeg" alt="Techfest Image" style="width:516.75px;height:150px;" style="display: block; margin: auto;"> <br>
-        
-        <!-- Bold some lines -->
-        <strong>Best regards,</strong><br>
-        <strong>Team Techfest 2023-24</strong>
-    </body>
     </html>
     """
     from_email = '27thedition@techfest.org'
     recipient = 'apshingeatharv@gmail.com'
 
-    csv_file_path = 'D:/Techfest/Techfest/TF web/TF23/backend/apis/emails_slot5csv.csv'
+    csv_file_path = '/home/yat251/Desktop/Coding/TF/TF23/backend/media/summit_mass1.csv'
     df = pd.read_csv(csv_file_path)
     recipient_list = df['Email'].dropna().tolist()
 
@@ -85,30 +92,37 @@ def mail_bhejo1(request):
     return HttpResponse("Email sent successfully!")
 
 def mail_bhejo2(request):
-    subject = "IIT Bombay's Techfest | Invitation to Asia'a Largest Science & Technology Festival"
+    subject = "IIT Bombay's International Fintech & Industry 4.0 Summit "
     message = """<html>
     <body>
         
-        <p>Greetings from Techfest, IIT Bombay!</p> <p>Asia’s Largest Science and Technology Festival is thrilled to present the Workshop Series featuring 27 topics, ranging from Data to AI, Quadcopter, UI/UX to Bio-analytics. Explore them all at techfest.org/workshops. Make the best of your trip to IIT Bombay with the latest technical knowledge and strengthen your profile by getting certified by Google, Amazon, Jio, WazirX and IIT Bombay's Techfest!</p>
+        <p>Greetings from Techfest, IIT Bombay!</p> <p>With only 2 days to go for the 27th edition of Techfest, here's one of the highlights of the fest - The international summits. This is your opportunity to listen and interact directly with top industry leaders and gain useful insights, motivation and know about their journey towards success! Register at tehfest.org/summits</p>
+        Here's some of our speakers: <br>
+Kavitha Subramanian <strong>(Co-Founder, Upstox)</strong> <br>
+Devie Mohan <strong>(Global top 10 Fintech Influencer)</strong>  	 <br>
+Ashish Singhal <strong>(Co-Founder Coinswitch)</strong>  <br>
+Nilesh Shah <strong>(Managing Director, Kotak Mutual Fund)</strong>  <br>
+Padmaja Chunduru	<strong>(MD & CEO, NSDL)</strong>  <br>
+Ram Kewalramani <strong>(Co-Founder & MD, CredAble)</strong>  <br>
+Sonam Srivastava <strong>(Founder & CEO, Wright Research)</strong>  <br>
+Anup Purohit <strong>(CIO, Wipro)</strong> </p>
 
-        <p>By participating in workshops, you gain entry to a myriad of events—EDM Concert, International Exhibitions, Robowars, Lecture Series, Defense Expo, and more. This edition's highlights feature <b>Akash Ambani</b>, Shri S Somnath (<b>ISRO Chairman</b>), and an electrifying <b>EDM concert</b> with Matisse & Sadko. Don't miss out!</p>
-
-        <p>Book your accommodation for a comfy stay inside IIT Bombay campus and to enjoy unrestricted access to late-night events and institute entry. Register at techfest.org/accommodation now! Limited seats available.
-        </p>
+<p><strong> Registrations open for limited time only!</strong>  <br>
+*The event is free for attendees with accommodation inside IIT Bombay. In this case entry will be on FCFS basis.</p>
+<p>
+Venue: <strong> Ground Floor, Seminar Room 2, VMCC, IIT Bombay</strong>  <br>
+Date: <strong> 26th & 27th December</strong>  <br>
+Time: <strong> 10:30 AM onwards</strong>  </p> 
+ <p>
+ Warm Regards, <br>
+Team Techfest 2023-24 </p>
         
-        <!-- Add an image -->
-        <img src="https://techfest.org/media/compi/Quadcopter_QR-01_4.jpeg" alt="Techfest Image" style="width:516.75px;height:150px;" style="display: block; margin: auto;"> <br>
-        
-        <!-- Bold some lines -->
-        <strong>Best regards,</strong><br>
-        <strong>Team Techfest 2023-24</strong>
-    </body>
     </html>
     """
     from_email = '27thedition@techfest.org'
     recipient = 'apshingeatharv@gmail.com'
 
-    csv_file_path = 'D:/Techfest/Techfest/TF web/TF23/backend/apis/emails_slot6.csv'
+    csv_file_path = '/home/yat251/Desktop/Coding/TF/TF23/backend/media/summit_mass2.csv'
     df = pd.read_csv(csv_file_path)
     recipient_list = df['Email'].dropna().tolist()
 
@@ -124,32 +138,40 @@ def mail_bhejo2(request):
     # email.content_subtype = "html" 
     # email.send()
     return HttpResponse("Email sent successfully!")
+
 
 def mail_bhejo3(request):
-    subject = "IIT Bombay's Techfest | Invitation to Asia'a Largest Science & Technology Festival"
+    subject = "IIT Bombay's International Fintech & Industry 4.0 Summit "
     message = """<html>
     <body>
         
-        <p>Greetings from Techfest, IIT Bombay!</p> <p>Asia’s Largest Science and Technology Festival is thrilled to present the Workshop Series featuring 27 topics, ranging from Data to AI, Quadcopter, UI/UX to Bio-analytics. Explore them all at techfest.org/workshops. Make the best of your trip to IIT Bombay with the latest technical knowledge and strengthen your profile by getting certified by Google, Amazon, Jio, WazirX and IIT Bombay's Techfest!</p>
+        <p>Greetings from Techfest, IIT Bombay!</p> <p>With only 2 days to go for the 27th edition of Techfest, here's one of the highlights of the fest - The international summits. This is your opportunity to listen and interact directly with top industry leaders and gain useful insights, motivation and know about their journey towards success! Register at tehfest.org/summits</p>
+        Here's some of our speakers: <br>
+Kavitha Subramanian <strong>(Co-Founder, Upstox)</strong> <br>
+Devie Mohan <strong>(Global top 10 Fintech Influencer)</strong>  	 <br>
+Ashish Singhal <strong>(Co-Founder Coinswitch)</strong>  <br>
+Nilesh Shah <strong>(Managing Director, Kotak Mutual Fund)</strong>  <br>
+Padmaja Chunduru	<strong>(MD & CEO, NSDL)</strong>  <br>
+Ram Kewalramani <strong>(Co-Founder & MD, CredAble)</strong>  <br>
+Sonam Srivastava <strong>(Founder & CEO, Wright Research)</strong>  <br>
+Anup Purohit <strong>(CIO, Wipro)</strong> </p>
 
-        <p>By participating in workshops, you gain entry to a myriad of events—EDM Concert, International Exhibitions, Robowars, Lecture Series, Defense Expo, and more. This edition's highlights feature <b>Akash Ambani</b>, Shri S Somnath (<b>ISRO Chairman</b>), and an electrifying <b>EDM concert</b> with Matisse & Sadko. Don't miss out!</p>
-
-        <p>Book your accommodation for a comfy stay inside IIT Bombay campus and to enjoy unrestricted access to late-night events and institute entry. Register at techfest.org/accommodation now! Limited seats available.
-        </p>
+<p><strong> Registrations open for limited time only!</strong>  <br>
+*The event is free for attendees with accommodation inside IIT Bombay. In this case entry will be on FCFS basis.</p>
+<p>
+Venue: <strong> Ground Floor, Seminar Room 2, VMCC, IIT Bombay</strong>  <br>
+Date: <strong> 26th & 27th December</strong>  <br>
+Time: <strong> 10:30 AM onwards</strong>  </p> 
+ <p>
+ Warm Regards, <br>
+Team Techfest 2023-24 </p>
         
-        <!-- Add an image -->
-        <img src="https://techfest.org/media/compi/Quadcopter_QR-01_4.jpeg" alt="Techfest Image" style="width:516.75px;height:150px;" style="display: block; margin: auto;"> <br>
-        
-        <!-- Bold some lines -->
-        <strong>Best regards,</strong><br>
-        <strong>Team Techfest 2023-24</strong>
-    </body>
     </html>
     """
     from_email = '27thedition@techfest.org'
     recipient = 'apshingeatharv@gmail.com'
 
-    csv_file_path = 'D:/Techfest/Techfest/TF web/TF23/backend/apis/emails_slot7.csv'
+    csv_file_path = '/home/yat251/Desktop/Coding/TF/TF23/backend/media/summit_mass3.csv'
     df = pd.read_csv(csv_file_path)
     recipient_list = df['Email'].dropna().tolist()
 
@@ -165,6 +187,7 @@ def mail_bhejo3(request):
     # email.content_subtype = "html" 
     # email.send()
     return HttpResponse("Email sent successfully!")
+
 
 @parser_classes([JSONParser])
 def get_user(request):
