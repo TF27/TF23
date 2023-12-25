@@ -6,6 +6,7 @@ const Card = ({ email, team1, team2, team3,team4, team5, team6, team1_image, tea
   const [selectedTeam, setSelectedTeam] = useState(null);
   const [betMade, setBetMade] = useState(false); // State to track whether the user has made a bet
   const [userHasBet, setUserHasBet] = useState(false); // State to track whether the user has made a bet on this match
+  const [isBlinking, setIsBlinking] = useState(false);
 
   const { user } = UserAuth();
   const userEmail = user?.email;
@@ -19,6 +20,16 @@ const Card = ({ email, team1, team2, team3,team4, team5, team6, team1_image, tea
     setBetMade(true);
   };
 
+
+  useEffect(() => {
+    // Set up a timer to toggle the blinking effect every 500 milliseconds
+    const blinkTimer = setInterval(() => {
+      setIsBlinking((prevBlinking) => !prevBlinking);
+    }, 1000);
+
+    // Clear the interval when the component unmounts to avoid memory leaks
+    return () => clearInterval(blinkTimer);
+  }, []);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -98,7 +109,7 @@ const Card = ({ email, team1, team2, team3,team4, team5, team6, team1_image, tea
           <span className={style.betprice}>Reward: {points} points</span>
         </div>
 
-        {winner === '' && (
+        {status === 'Betting-On' && (
           <>
             {betMade || userHasBet ? (
               <p>Done</p>
@@ -126,7 +137,12 @@ const Card = ({ email, team1, team2, team3,team4, team5, team6, team1_image, tea
           </>
         )}
 
-        {winner !== '' && <p>Completed</p>}
+<div className={`${style.blinkingText} ${isBlinking ? style.blink : ''}`}>  
+        {status === 'Future' && <p>Betting will start <br/>30 min before match</p>}
+        {status === 'Ongoing' && <p>Live</p>}
+        
+</div>
+{status === 'Finished' && <p style={{fontSize:'1.5rem'}}>Completed</p>}
       </div>
     </div>
   );

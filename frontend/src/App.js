@@ -30,9 +30,9 @@ import SummitReg from "./pages/Summit/reg.jsx";
 //robowars betting page
 import Robowarsbet from "./pages/Robowars_bet/Home.jsx";
 import Register from "./pages/Reg.jsx";
-import Betting_admin from "./pages/betting_admin/Login.jsx";
-import MatchCRUD from "./pages/betting_admin/Admin.jsx"
-import { BrowserRouter as Switch, Navigate } from 'react-router-dom';
+import Betting_admin_login from "./pages/betting_admin/Login.jsx";
+import Betting_admin from "./pages/betting_admin/Top.jsx"
+import ProtectedRoute from "./pages/betting_admin/ProtectedRoute.jsx";
 import Top from "./pages/Robowars_bet/Top.jsx";
 
 
@@ -94,12 +94,16 @@ ReactGA.initialize(Tracking_ID);
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isAuthenticated, setAuthenticated] = useState(
+    localStorage.getItem('isAuthenticated') === 'true'
+  );
 
-  const handleLogin = () => {
-      setIsLoggedIn(true);
-  };
-
+  // Cleanup localStorage on component unmount
+  // useEffect(() => {
+  //   return () => {
+  //     localStorage.removeItem('isAuthenticated');
+  //   };
+  // }, []);
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -114,18 +118,17 @@ function App() {
 
           <Routes>
           
-             {/* for betting admin */}
-                  <Route path="/betting-login"
-                      element={isLoggedIn ? <Navigate to="/matches" /> : <Betting_admin onLogin={handleLogin} />}
-                  />
-                  <Route path="/betting-matches"
-                      element={isLoggedIn ? <MatchCRUD /> : <Navigate to="/betting-login" />}
-                  />
-                  <Route path="/betting-admin"
-                      element={<Navigate to="/betting-login" />}
-                 />
-              {/* for betting admin */}
-          
+
+          <Route path="/betting-admin-login" element={<Betting_admin_login setAuthenticated={setAuthenticated} />} />       
+          <Route path="/betting-protected-route" element={
+          <ProtectedRoute
+            isAuthenticated={isAuthenticated}
+            setAuthenticated={setAuthenticated}
+          />}
+          />
+        
+
+
             <Route path="/" element={isLoading ? <Loading1 /> : <Home />} />
             <Route path="/legals" element={<Legals />} />
             <Route
@@ -154,7 +157,7 @@ function App() {
               }
             />
             <Route
-              path="/robowars-bet/"
+              path="/bet/"
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Robowarsbet />

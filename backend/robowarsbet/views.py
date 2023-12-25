@@ -4,7 +4,12 @@ from rest_framework import status
 from .models import Match, User, UserMatch
 from .serializers import MatchSerializer, UserSerializer
 import csv
+import json
 from django.http import HttpResponse
+from django.http import JsonResponse
+from django.views.decorators.http import require_http_methods
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_POST
 
 class MatchList(APIView):
     def get(self, request):
@@ -51,29 +56,88 @@ class UserProfile(APIView):
             # User not found, return a response with total_points set to '0'
             return Response({'total_points_1': '0','total_points_2': '0','total_points_3': '0'})
 
+
 class SelectTeam(APIView):
     def post(self, request, match_id):
         try:
             match = Match.objects.get(pk=match_id)
-            selected_team = request.data.get('selected_team')
-            user_email = request.data.get('user_email')
-            user, created = User.objects.get_or_create(email=user_email)
 
-            if created:
-                user.save()
+            # Check if the match status is "Betting-On" before proceeding
+            if match.status == 'Betting-On':
+                selected_team = request.data.get('selected_team')
+                user_email = request.data.get('user_email')
+                user, created = User.objects.get_or_create(email=user_email)
 
-            user_match = UserMatch(user=user, match=match, selected_team=selected_team)
-            user_match.save()
+                if created:
+                    user.save()
 
-            if match.winner is not None and selected_team == match.winner: 
-                user.total_points += match.points_awarded
-                user.save()
+                user_match = UserMatch(user=user, match=match, selected_team=selected_team)
+                user_match.save()
 
-            return Response({'message': 'Team selected successfully'}, status=status.HTTP_201_CREATED)
+                return Response({'message': 'Team selected successfully'}, status=status.HTTP_201_CREATED)
+            else:
+                return Response({'error': 'Betting is not allowed for this match'}, status=status.HTTP_400_BAD_REQUEST)
 
         except Match.DoesNotExist:
             return Response({'error': 'Match not found'}, status=status.HTTP_404_NOT_FOUND)
-        
+
+@csrf_exempt
+@require_http_methods(["PUT"])
+def update_match(request, match_id):
+    try:
+        match = Match.objects.get(pk=match_id)
+    except Match.DoesNotExist:
+        return JsonResponse({"error": "Match not found"}, status=404)
+
+    data = json.loads(request.body.decode('utf-8'))
+    
+    # Update the match fields based on the data received
+    if 'winner' in data:
+        match.winner = int(data['winner'])
+    if 'status' in data:
+        match.status = data['status']
+
+    match.save()
+
+    return JsonResponse({"message": "Match updated successfully"}, status=200)
+
+@csrf_exempt
+@require_http_methods(["DELETE"])
+def delete_match(request, match_id):
+    try:
+        match = Match.objects.get(pk=match_id)
+    except Match.DoesNotExist:
+        return JsonResponse({"error": "Match not found"}, status=404)
+
+    match.delete()
+
+    return JsonResponse({"message": "Match deleted successfully"}, status=200)
+
+@csrf_exempt
+@require_POST
+def add_match(request):
+    try:
+        data = json.loads(request.body.decode('utf-8'))
+        teams_data = data.get('teams', [])
+
+        # Create a new match
+        new_match = Match.objects.create(
+            type=int(data.get('type')),
+            day= int(data.get('day')),
+            match_time=f"{data.get('match_time')}:00",  # Assuming seconds are always 00
+            points_awarded=int(data.get('points_awarded')),
+        )
+        for i in range(6):
+            team_name_key = f'team{i + 1}_name'
+            team_image_key = f'team{i + 1}_image'
+            setattr(new_match, team_name_key, teams_data[i].get('name', ''))
+            setattr(new_match, team_image_key, teams_data[i].get('image', ''))
+
+        new_match.save()  # Save the match with teams to the database
+        return JsonResponse({'message': 'Match added successfully'}, status=201)
+    except Exception as e:
+        return JsonResponse({'error': f'Error adding match: {str(e)}'}, status=500)
+    
 
 class HasUserMadeBet(APIView):
     def get(self, request, user_email, match_id):
