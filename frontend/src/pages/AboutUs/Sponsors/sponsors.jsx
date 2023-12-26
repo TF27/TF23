@@ -76,6 +76,7 @@ import youth from './assets/media/youth.png';
 import britishcouncil from './assets/BritishCouncil.jpeg';
 import gaana from './assets/gaana.jpg';
 import timetechies from './assets/media/timetechies.png';
+import abp from './assets/media/abp.jpg';
 
 
 
@@ -297,6 +298,9 @@ const Sponsors = () => {
         </a>
         <a href='https://www.cnbc.com/'>
         <img src={cnbc}></img>
+        </a>
+        <a href='https://news.abplive.com/'>
+        <img src={abp}></img>
         </a>
       </div>
       {/* <div className={styles.title}><h2>Digital Music Partner</h2></div>
