@@ -22,24 +22,22 @@ const Register = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(isSigningIn, user)
-    if (!user && !isSigningIn) {
-      console.log('no user');
-      // handleGoogleSignIn();
-    } else {
-      // console.log(user);
-      setIsLoading(false);
-    }
-  }, [user, isSigningIn]);
+  // useEffect(() => {
+  //   console.log(isSigningIn, user)
+  //   if (!user && !isSigningIn) {
+  //     // console.log('no user');
+  //     // handleGoogleSignIn();
+  //   } else {
+  //     // console.log(user);
+  //     setIsLoading(false);
+  //   }
+  // }, []);
 
   const val = user?.email + "&&" + user?.displayName;
 
   return (
     <>
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : user ? (
+      {user ? (
         <>
           <div className={styles.overlay}>
             <div className={styles.reg_head}>
