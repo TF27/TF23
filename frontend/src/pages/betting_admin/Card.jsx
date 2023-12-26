@@ -5,6 +5,7 @@ import styles from './card.module.css';
 const MatchCard = ({ match }) => {
     const [updatedWinner, setUpdatedWinner] = useState(match.winner);
     const [updatedStatus, setUpdatedStatus] = useState(match.status);
+    const [Addbutton, setAddbutton] = useState(true);
 
     const handleWinnerChange = (e) => {
         setUpdatedWinner(e.target.value);
@@ -15,6 +16,7 @@ const MatchCard = ({ match }) => {
     };
 
     const handleUpdateMatch = async () => {
+        setAddbutton(false)
         try {
             const response = await fetch(`/robowars-bet/update-matches/${match.id}/`, {
                 method: 'PUT',
@@ -37,6 +39,7 @@ const MatchCard = ({ match }) => {
     };
 
     const handleDeleteMatch = async () => {
+        setAddbutton(false)
         try {
             const response = await fetch(`/robowars-bet/delete-matches/${match.id}/`, {
                 method: 'DELETE',
@@ -123,12 +126,17 @@ const MatchCard = ({ match }) => {
   </div>
 
   <div className={styles['update-section-item']}>
-    <label>Update Winner: {match.winner}</label>
+    {/* <label>Update Winner: {match.winner}</label> */}
+    <label>
+    Update Winner: {match.winner !== "0" && match["team" + match.winner + "_name"]}
+    </label>
+
     <select
       className={styles['match-card-update-input']}
-      value={updatedWinner}
+      value={updatedWinner || "0"}
       onChange={handleWinnerChange}
     >
+        <option value="0">-----</option>
         <option value="1">{match.team1_name}</option>
         <option value="2">{match.team2_name}</option>
         {match.team3_name && <option value="3">{match.team3_name}</option>}
@@ -139,12 +147,15 @@ const MatchCard = ({ match }) => {
   </div>
 
   <div className={styles['button-container']}>
-    <button onClick={handleUpdateMatch} className={styles['update-button']}>
+    {/* <button onClick={handleUpdateMatch} className={styles['update-button']}>
       Update
     </button>
     <button onClick={handleDeleteMatch} className={styles['delete-button']}>
       Delete
-    </button>
+    </button> */}
+    {Addbutton && (<button onClick={handleUpdateMatch} className={styles['update-button']}>Update</button>)}
+    {Addbutton && (<button onClick={handleUpdateMatch} className={styles['delete-button']}>Delete</button>)}
+    {!Addbutton && (<h1>Refresh</h1>)}
     
   </div>
   <p>Don't delete if someone has made bet on the Match</p>

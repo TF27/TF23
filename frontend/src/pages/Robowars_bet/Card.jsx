@@ -104,7 +104,21 @@ const Card = ({ email, team1, team2, team3,team4, team5, team6, team1_image, tea
 
       <div className={style.bettinginfo}>
         <div className={style.betpricecontainer}>
-          {winner !== '' && <p>Winner: {winner === '1' ? team1 : winner === '2' ? team2 : team3}</p>}
+          {/* {winner !== '' && <p>Winner: {winner === '1' ? team1 : winner === '2' ? team2 : team3}</p>} */}
+          {winner !== '' && (
+          <p>
+            Winner: {
+              winner === '0' ? 'Not declared' :
+              winner === '1' ? team1 :
+              winner === '2' ? team2 :
+              winner === '3' ? team3 :
+              winner === '4' ? team4 :
+              winner === '5' ? team5 :
+              winner === '6' ? team6 :
+              'Invalid winner'
+            }
+          </p>
+)}
           <span className={style.matchtime}>Time: {time}</span>
           <span className={style.betprice}>Reward: {points} points</span>
         </div>
