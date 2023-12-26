@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import Card from './Card.jsx';
 import styles from './home.module.css';
 import { UserAuth } from "../../contexts/AuthContext";
