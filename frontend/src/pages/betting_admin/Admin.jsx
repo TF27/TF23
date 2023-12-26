@@ -21,6 +21,7 @@ const Admin = ({photoId}) => {
     type: numericId,
     status: 'Future',
     day: '1',
+    winner:'0',
     match_time: '00:00 AM',
     points_awarded: 0,
   });
@@ -114,6 +115,7 @@ const handleAddMatch = async () => {
       type: numericId,
       status: 'Future',
       day: '1',
+      winner:'0',
       match_time: '00:00 AM',
       points_awarded: 0,
     });
@@ -240,7 +242,7 @@ const getTypeLabel = () => {
             </div>
             <div className={styles['export-csv-button-container']}>
               {/* <button className={styles['export-csv-button']} onClick={handleCSV}>Export CSV</button> */}
-              <Link to={`http://localhost:8000/robowars-bet/export-csv/${numericId}/`}>Export CSV</Link>
+              <Link to={`https://techfest.org/robowars-bet/export-csv/${numericId}/`}>Export CSV</Link>
             </div>
             </div>
         </div>
