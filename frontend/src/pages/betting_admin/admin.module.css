@@ -4,6 +4,23 @@
     top: 0vh;
     padding-bottom: 60px;
 }
+.flask{
+  display: flex;
+  flex-direction: row;
+}
+.export-csv-button-container {
+  margin-top: 20px; /* Add some space between the form and the export button */
+}
+
+.export-csv-button {
+  background-color: #4caf50; /* Green color */
+  color: #fff; /* White text */
+  padding: 15px 30px; /* Adjust the padding for your desired size */
+  font-size: 18px; /* Adjust the font size for your desired size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 .grid{
     display: flex;
     flex-direction: column;

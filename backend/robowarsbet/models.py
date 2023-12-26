@@ -26,7 +26,7 @@ class Match(models.Model):
     status = models.CharField(max_length = 100,choices = status_info,null= True,blank=True)
     type = models.IntegerField(choices = match_type,null =True,blank=True)
     day = models.IntegerField(choices=day_number)
-    match_time = models.TimeField()
+    match_time =models.CharField(max_length=100, blank=True)
     points_awarded = models.IntegerField(default=0)
     winner = models.CharField(max_length=100, blank=True)
 
