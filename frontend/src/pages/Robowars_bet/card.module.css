@@ -188,14 +188,14 @@ input {
 
 @media screen and (max-width: 368px) {
   .bettingcard3 {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
   .match-card-team-container {
-    flex-direction: row;
+    flex-direction: column;
   }
   .match-card-team-image {
     margin-right: 20px;
-    margin-left: -20px;
+    /* margin-left: -20px; */
   }
 }

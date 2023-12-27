@@ -65,7 +65,7 @@ class SelectTeam(APIView):
             match = Match.objects.get(pk=match_id)
 
             # Check if the match status is "Betting-On" before proceeding
-            if match.status == 'Betting-On':
+            if match.status == 'Betting-On' and match.winner == "0":
                 selected_team = request.data.get('selected_team')
                 user_email = request.data.get('user_email')
                 user, created = User.objects.get_or_create(email=user_email)

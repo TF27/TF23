@@ -154,10 +154,12 @@ const MatchCard = ({ match }) => {
       Delete
     </button> */}
     {Addbutton && (<button onClick={handleUpdateMatch} className={styles['update-button']}>Update</button>)}
-    {Addbutton && (<button onClick={handleUpdateMatch} className={styles['delete-button']}>Delete</button>)}
+    {Addbutton && (<button onClick={handleDeleteMatch} className={styles['delete-button']}>Delete</button>)}
     {!Addbutton && (<h1>Refresh</h1>)}
     
   </div>
+  
+  <p>Update status also when updating winner</p>
   <p>Don't delete if someone has made bet on the Match</p>
 </div>
         </div>
