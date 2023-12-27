@@ -23,7 +23,7 @@ const Home = () => {
   useEffect(() => {  
   const fetchUserTotalPoints = async () => {
     try {
-      const response = await fetch('http://localhost:8000/robowars-bet/user/', {
+      const response = await fetch('/robowars-bet/user/', {
         method: 'POST',
           headers: {
               'Content-Type': 'application/json',
@@ -78,7 +78,7 @@ const Home = () => {
   //for doing function on clicking Bet Now button
   const handleBet = async (matchId, selectedTeam, userEmail) => {
     try {
-        const response = await fetch(`http://localhost:8000/robowars-bet/select-team/${matchId}/`, {
+        const response = await fetch(`/robowars-bet/select-team/${matchId}/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

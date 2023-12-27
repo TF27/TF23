@@ -127,6 +127,7 @@ def add_match(request):
             type=data.get('type'),
             status=data.get('status'),
             day=int(data.get('day')),
+            winner=data.get('winner'),
             match_time=data.get('match_time'),
             points_awarded=data.get('points_awarded'),
         )
