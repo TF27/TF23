@@ -123,7 +123,7 @@ const Card = ({ email, team1, team2, team3,team4, team5, team6, team1_image, tea
           <span className={style.betprice}>Reward: {points} points</span>
         </div>
 
-        {status === 'Betting-On' && (
+        {status === 'Betting-On' && winner ==="0" && (
           <>
             {betMade || userHasBet ? (
               <p>Done</p>
@@ -156,7 +156,8 @@ const Card = ({ email, team1, team2, team3,team4, team5, team6, team1_image, tea
         {status === 'Ongoing' && <p>Live</p>}
         
 </div>
-{status === 'Finished' && <p style={{fontSize:'1.5rem'}}>Completed</p>}
+{status === 'Finished' || winner !== "0" && <p style={{fontSize:'1.5rem'}}>Completed</p>}
+<p>Keep refreshing the page</p>
       </div>
     </div>
   );

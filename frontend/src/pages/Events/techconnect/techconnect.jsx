@@ -133,7 +133,7 @@ const Techconnect = () => {
             <div className="difPage">
               <div className="check_rect1"></div>
               <div className="check_rect2">
-                <Link to="/exhibitions">Explore</Link>
+                <a href="https://drive.google.com/file/d/1miTBhXbmFVwhY4lxWNVMTifWTIkh9oX8/view?usp=sharing" target="_blank" rel='noreferrer'>Explore</a>
               </div>
             </div>
             <br />

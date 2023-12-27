@@ -147,9 +147,10 @@ const getTypeLabel = () => {
 
     return (
         <div className={styles['grid-container']}>
+          <h3 style={{color:'red'}}>Delete all the matches after each session of prize distribution to reset points to zero</h3>
            <div className={styles.grid}>
                 {/* Render sections for each type */}
-                <h2 className={styles['match-type']}> Matches</h2>
+                <h1 className={styles['match-type']}> Matches</h1>
                 {Object.keys(matchesByDay).map(day => (
                     <div key={day} className={styles['day-section']}>
                         <h1>{`Day ${day}`}</h1>
