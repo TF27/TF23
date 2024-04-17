@@ -129,7 +129,7 @@ const Header_update = () => {
         >
           <li>
             <Link to="/workshops" onMouseEnter={() => setShowEvents(false)}>
-              Workshops
+              Work
             </Link>
           </li>
           <li>
