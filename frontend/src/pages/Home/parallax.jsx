@@ -46,13 +46,13 @@ const HomeParallax = () => {
           <img src={head} className={styles.head} />
           <img src={headm} className={styles.headm}/>
         </div>
-        <div className={styles.headUL}>
-          <Link to='/workshops'>Workshops are Live Now!</Link>
+        {/* <div className={styles.headUL}>
+          <Link to='/workshops'>!</Link>
           <br/>
           <a href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer">Stay at IIT Bombay</a>
           <br/>
           <Link to="/techx">Click to enjoy at TechX</Link>
-        </div>
+        </div> */}
       </div>
       <div className={styles.clouds}>
         <img
