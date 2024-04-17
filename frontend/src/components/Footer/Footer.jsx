@@ -108,16 +108,16 @@ const Footer = () => {
             </div>
           </li>
         </div>
-        <div className="anounceIt">
-          <Link to="/workshops">Workshops are Live Now!</Link>
-          <br />
+        {/* <div className="anounceIt">
+          <Link to="/workshops">ve Now!</Link>
+          <br /> */}
           {/* <a href="https://www.meraevents.com/event/accommodation-at-iit-bombay-during-techfest-2023-24?ucode=organizer">Stay at IIT Bombay</a> */}
-          <Link to='/accommodation'>Stay at IIT Bombay</Link>
+          {/* <Link to='/accommodation'>Stay at IIT Bombay</Link>
           <br />
           <Link to='/techx'>
             Click to enjoy at TechX
           </Link>
-        </div>
+        </div> */}
         <div className="socialMedia">
           <li>
             <a

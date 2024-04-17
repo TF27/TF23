@@ -26,6 +26,7 @@ import SIrobowars from "./pages/SI/robowars/App.jsx";
 import SustainRegtest from "./pages/SI/components/Reg2.jsx";
 import Sustainregwebinar from "./pages/SI/components/Reg1.jsx";
 import SummitReg from "./pages/Summit/reg.jsx";
+import Lookback from "./pages/Lookback/lookback.jsx";
 
 //robowars betting page
 import Robowarsbet from "./pages/Robowars_bet/Home.jsx";
@@ -136,6 +137,15 @@ function App() {
               element={
                 <React.Suspense fallback={<div>Loading...</div>}>
                   <Cyclothon />
+                </React.Suspense>
+              }
+            />
+
+<Route
+              path="/lookback"
+              element={
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Lookback />
                 </React.Suspense>
               }
             />
