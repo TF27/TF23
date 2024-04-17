@@ -1,6 +1,6 @@
 import React from 'react'
 import bg from './assets/back.jpg'
-import pdfFile from './assets/lookback.pdf';
+import pdfFile from './assets/Lookback_.pdf';
 
 const Lookback = () => {
     const bgHaiJi = {
